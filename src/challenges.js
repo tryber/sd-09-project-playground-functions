@@ -8,33 +8,55 @@ function compareTrue(bool1, bool2) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2
-  return area 
+  let area = (base * height) / 2;
+  return area; 
 }
 
 // Desafio 3
 function splitSentence(string) {
-    let stringSplit = string.split(' ')
-    return stringSplit
+    let stringSplit = string.split(' ');
+    return stringSplit;
 }
 
 // Desafio 4
 function concatName(array) {
-  let newString =`${array[array.length - 1]}, ${array[0]}`
-    return newString
+  let newString =`${array[array.length - 1]}, ${array[0]}`;
+    return newString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosVitorias = wins * 3
-  let pontosEmpates = ties * 1
-  let pontosTotais = pontosVitorias + pontosEmpates
-  return pontosTotais
+  let pontosVitorias = wins * 3;
+  let pontosEmpates = ties * 1;
+  let pontosTotais = pontosVitorias + pontosEmpates;
+  return pontosTotais;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  function findHighestNumber(){
+    let highestNumber = 0;
+    for (let index in array){
+      if (array[index] > highestNumber){
+      highestNumber = array[index]
+      }
+    }
+    return highestNumber
+  } 
+  let highestNumber = findHighestNumber(array);
+  
+  function timesRepeat (parm1){
+    let howManyTimesRepeat = 0
+    for (let index in array){
+      if (array[index] === parm1){
+        howManyTimesRepeat += 1
+      }
+    }
+    return howManyTimesRepeat
+  }
+
+  let howManyTimesRepeat = timesRepeat(highestNumber)
+  return howManyTimesRepeat
 }
 
 // Desafio 7
