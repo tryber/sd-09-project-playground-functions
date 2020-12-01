@@ -14,8 +14,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrigs) {
+  let concatenatedName = [];
+  concatenatedName.push(arrayOfStrigs[arrayOfStrigs.length - 1]);
+  concatenatedName.push(arrayOfStrigs[0]);
+
+  return concatenatedName.join(', ');
 }
 
 // Desafio 5
