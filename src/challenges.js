@@ -10,6 +10,16 @@ function maxNumber(array) {
   return number;
 }
 
+function distanceBetweenTwoPoins(position1, position2) {
+  let distance = 0;
+  if (position1 < position2) {
+    distance = position2 - position1;
+  }else{
+    distance = position1 - position2;
+  }
+  return distance;
+}
+
 // Desafio 1 OK
 function compareTrue(boolean1, boolean2) {
   // seu código aqui
@@ -32,7 +42,7 @@ function splitSentence(string) {
   return arrayString;
 }
 
-// Desafio 4
+// Desafio 4 OK
 function concatName(array) {
   let last = array[array.length - 1];
   let fist = array[0];
@@ -40,13 +50,13 @@ function concatName(array) {
   return novoArray;
 }
 
-// Desafio 5  OK
+// Desafio 5 OK
 function footballPoints(wins, ties) {
   let pointsWins = wins * 3;
   return pointsWins + ties;
 }
 
-// Desafio 6  OK
+// Desafio 6 OK
 function highestCount(arrayNum) {
   let maxNumb = maxNumber(arrayNum);
   let cont = 0;
@@ -59,8 +69,15 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance_1 = distanceBetweenTwoPoins(mouse, cat1);
+  let distance_2 = distanceBetweenTwoPoins(mouse, cat2);
+  if (distance_1 > distance_2) {
+    return 'cat2';
+  }else if(distance_2 > distance_1) {
+    return 'cat1'
+  }
+  return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
@@ -113,4 +130,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
