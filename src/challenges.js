@@ -86,7 +86,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
@@ -103,9 +102,6 @@ function fizzBuzz(array) {
   }
   return result;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 
 // Desafio 9
 function encode(string) {
@@ -129,10 +125,10 @@ function encode(string) {
     if (status == false) {
       result += string[index];
     }
-
   }
   return result;
 }
+
 function decode(string) {
   let result = '';
   let table = {
@@ -154,7 +150,6 @@ function decode(string) {
     if (status == false) {
       result += string[index];
     }
-
   }
   return result;
 }
