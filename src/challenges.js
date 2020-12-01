@@ -19,7 +19,7 @@ function splitSentence(string) {
 let array = [];
 let word = '';
 
-  for (let contador = 0; contador < string.lenght; contador += 1) {
+  for (let contador = 0; contador < string.length; contador += 1) {
     if (string[contador] != '') {
       word += string[contador];
     }else {
@@ -34,7 +34,13 @@ let word = '';
 // Desafio 4
 function concatName(array) {
   // seu código aqui
- 
+
+let string = '';
+
+  for (let contador = 0; contador < array.length; contador += 1) {
+    string += array[contador] + ', ';
+  }
+  return string;
 }
 
 // Desafio 5
