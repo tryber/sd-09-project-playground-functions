@@ -12,7 +12,7 @@ function calcArea(base, height) {
 function splitSentence(text) {
   let currentWord = "";
   let setenceArray = [];
-  for (charIndex in text) {
+  for (let charIndex in text) {
     let char = text[charIndex];
     if (char === " ") {
       setenceArray.push(currentWord);
