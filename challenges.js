@@ -6,7 +6,11 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
+compareTrue();
 
 function calcArea(base, height) {
+  base = 3;
+  height = 4;
   return (base * height) / 2;
 }
+calcArea();
