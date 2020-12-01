@@ -1,5 +1,15 @@
 // Iniciando o segundo projeto VAMOS COM TUDO!!!
 
+function maxNumber(array) {
+  let number = array[0];
+  for (let i = 1; i < array.length; i += 1) {
+    if (number < array[i]) {
+      number = array[i];
+    }
+  }
+  return number;
+}
+
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   // seu código aqui
@@ -104,14 +114,3 @@ module.exports = {
   triangleCheck,
 }
 
-// Abaixo, funções criadas por mim para serem usadas dentro das funções dos desafios e facilitar suas resoluções.
-
-function maxNumber(array) {
-  let number = array[0];
-  for (let i = 1; i < array.length; i += 1) {
-    if (number < array[i]) {
-      number = array[i];
-    }
-  }
-  return number;
-}
