@@ -11,15 +11,19 @@ console.log(compareTrue(false ,false));
 
 // Desafio 2
 function calcArea(base ,height) {
-  return ((base * height) / 2);
+  let area = ((base * height) / 2);
+  return area;
 }
 
 console.log(calcArea(10 ,5));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let strArray = str.split(' ');
+  return strArray;
 }
+
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName() {
