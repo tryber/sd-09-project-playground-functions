@@ -22,10 +22,9 @@ function splitSentence(frase) {
 function concatName(array) {
   let primeiro = array.shift();
   let ultimo = array[array.length -1]
-  array = primeiro + ', ' + ultimo;
+  array = ultimo + ', ' + primeiro;
   return array
 }
-console.log(concatName(['Felipe', 'José', 'Maria', 'Sorin']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
