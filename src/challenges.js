@@ -1,19 +1,17 @@
 // #VQV
 
 // Desafio 1
-function compareTrue( value1, value2 ) {
-  if ( value1 === value2 && value1 >= value2) {
-    return false
+function compareTrue(value1, value2) {
+  if (value1 === value2 && value1 >= value2) {
+    return false;
   } else {
-    return true
+    return true;
   }
-};
+}
 
 // Desafio 2
-calcArea ( 4, 4)
-function calcArea( base, height ) {
+function calcArea(base, height) {
   let calc = (base * height) / 2;
-  console.log( calc );
 }
 
 // Desafio 3
@@ -74,7 +72,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -90,4 +87,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
