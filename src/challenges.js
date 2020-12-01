@@ -1,3 +1,5 @@
+//  Cheguei na NAVE, Trybers!! VAMOS QUE VAMOS!
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
