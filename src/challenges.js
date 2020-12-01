@@ -10,8 +10,10 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  resultado = (base * altura) / 2 
+  resultado = base * height / 2 
+  return resultado
 }
+console.log(calcArea(10, 5));
 
 // Desafio 3
 function splitSentence() {
