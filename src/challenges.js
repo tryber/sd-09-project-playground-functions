@@ -3,9 +3,8 @@
 function compareTrue(value1, value2) {
   if (value1 && value2 === true) {
     return true
-  } else {
-    return false
   }
+  return false
 }
 
 // Desafio 2
@@ -19,8 +18,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`
 }
 
 // Desafio 5
