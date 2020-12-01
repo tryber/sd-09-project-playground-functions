@@ -63,11 +63,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
-  }
-  else if (dist1 < dist2) {
+  } else if (dist1 < dist2) {
     return 'cat1';
-  }
-  return 'cat2';
+  } return 'cat2';
 }
 
 // Desafio 8
@@ -77,7 +75,7 @@ function fizzBuzz(array) {
     if (item % 15 === 0) {
       newArray.push('fizzBuzz');
       continue;
-    } else if (item % 3 === 0){
+    } else if (item % 3 === 0) {
       newArray.push('fizz');
     } else if (item % 5 === 0) {
       newArray.push('Buzz');
@@ -121,7 +119,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   if (array.length === 0) {
-    return "Vazio!"
+    return 'Vazio!';
   }
 
   array.sort();
@@ -137,26 +135,14 @@ function techList(array, name) {
   return newArray;
 }
 
-
 // funcao auxiliar para fuincao 11
-function verificaViabilidade(array) {
-  if (array.length != 11) {
-    return (-1);
-  } else if (array.some(element => element > 9) || array.some(element => element < 0)) {
-    return 1;
-  } else if (verificaRepetido(array) === 1) {
-    return 1;
-  }
-  return 0;
-}
-
 function verificaRepetido(array) {
   let topCounter = 0;
   let counter = 0;
   for (let num of array) {
-    for(let item in array) {
+    for (let item in array) {
       if (num === array[item]) {
-        counter +=1;
+        counter += 1;
       }
     }
     if (counter >= topCounter) {
@@ -170,6 +156,17 @@ function verificaRepetido(array) {
   return 0;
 }
 
+function verificaViabilidade(array) {
+  if (array.length !== 11) {
+    return (-1);
+  } else if (array.some(element => element > 9) || array.some(element => element < 0)) {
+    return 1;
+  } else if (verificaRepetido(array) === 1) {
+    return 1;
+  }
+  return 0;
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
   let verificador = verificaViabilidade(array);
@@ -178,15 +175,15 @@ function generatePhoneNumber(array) {
   } else if (verificador === 1){
     return ('não é possível gerar um número de telefone com esses valores');
   }
-
-  return ('('+array[0]+array[1]+') '+array[2]+array[3]+array[4]+array[5]+array[6]+'-'+array[7]+array[8]+array[9]+array[10])
+  let telefone = '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  return (telefone);
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  check1 = (lineA < lineB + lineC ) && (lineA > Math.abs(lineB - lineC));
-  check2 = (lineB < lineA + lineC ) && (lineB > Math.abs(lineA - lineC));
-  check3 = (lineC < lineA + lineB ) && (lineC > Math.abs(lineA - lineB));
+  let check1 = (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC));
+  let check2 = (lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC));
+  let check3 = (lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB));
   return (check1 && check2 && check3);
 }
 
