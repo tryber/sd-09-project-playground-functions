@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  evaluator_job:
+    runs-on: ubuntu-18.04
+    name: Evaluator job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Evaluator step
+        id: test
+        uses: betrybe/jest-evaluator-action@v3
+        with:
+          repository-test-name: 'betrybe/sd-0x-project-playground-functions-tests'
+          repository-test-branch: 'master'
+      - name: Store evaluation step
+        uses: betrybe/store-evaluation-action@v2
+        with:
+          evaluation-data: ${{ steps.test.outputs.result }}
+          environment: staging
+          pr-number: ${{ github.event.number }}

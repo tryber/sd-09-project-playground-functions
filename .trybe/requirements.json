@@ -1,0 +1,56 @@
+{
+  "requirements": [
+    { 
+      "description": "1 - Usando o operador &&",
+      "bonus": false
+    },
+    { 
+      "description": "2 - Área do triângulo",
+      "bonus": false
+    },
+    { 
+      "description": "3 - Dividindo a frase",
+      "bonus": false
+    },
+    { 
+      "description": "4 - Concatenação de strings",
+      "bonus": false
+    },
+    { 
+      "description": "5 - Pontos no futebol",
+      "bonus": false
+    },
+    { 
+      "description": "6 - Repetição do maior número",
+      "bonus": false
+    },
+    { 
+      "description": "7 - Caça ao rato",
+      "bonus": false
+    },
+    { 
+      "description": "8 - FizzBuzz",
+      "bonus": false
+    },
+    { 
+      "description": "9 - Codifique e Decodifique",
+      "bonus": false
+    },
+    { 
+      "description": "10 - Lista de tecnologias",
+      "bonus": false
+    },
+    { 
+      "description": "11 - Número de telefone",
+      "bonus": true
+    },
+    { 
+      "description": "12 - Condição de existência de um triângulo",
+      "bonus": true
+    },
+    { 
+      "description": "13 - Bem vindo ao Bar da Trybe!",
+      "bonus": true
+    }
+  ]
+}
