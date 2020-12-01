@@ -9,8 +9,6 @@ function compareTrue(value1, value2) {
   return resultado
 }
 
-console.log(compareTrue(true, false))
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
