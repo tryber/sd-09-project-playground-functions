@@ -93,14 +93,85 @@ function fizzBuzz(array) {
   return resultArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let cipencryptedher = "";
+  let cipher = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let i of string) {
+    switch (i) {
+      case "a":
+        encrypted += cipher[i];
+        break;
+
+      case "b":
+        encrypted += cipher["b"];
+        break;
+
+      case "c":
+        encrypted += cipher["c"];
+        break;
+
+      case "d":
+        encrypted += cipher["d"];
+        break;
+
+      case "e":
+        encrypted += cipher["e"];
+        break;
+
+      default:
+        encrypted += i
+        break;
+    }
+  }
+  return encrypted
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let decipher = "";
+  let cipher = {
+    '1': 'a',
+    '2': 'e',
+    '3': 'i',
+    '4': 'o',
+    '5': 'u',
+  };
+
+  for (let i of string) {
+    switch (i) {
+      case "1":
+        decipher += cipher[i];
+        break;
+
+      case "2":
+        decipher += cipher[i];
+        break;
+
+      case "3":
+        decipher += cipher[i];
+        break;
+
+      case "4":
+        decipher += cipher[i];
+        break;
+
+      case "5":
+        decipher += cipher[i];
+        break;
+
+      default:
+        decipher += i
+        break;
+    }
+  }
+  return decipher
 }
 
 // Desafio 10
