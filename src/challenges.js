@@ -16,13 +16,15 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(array) {
-  return array.reverse()
+  let result = [array[array.length - 1]];
+  for (let index = 0; index < array.length - 1; index++) {
+    result.push(array[index]);
+  }
+  return result;
 }
 
 // Desafio 5
-function footballPoints() {
-
-}
+function footballPoints(numWins) {}
 
 // Desafio 6
 function highestCount() {
