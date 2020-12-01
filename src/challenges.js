@@ -1,8 +1,12 @@
 // VAMO NESSA É APENAS O COMEÇO!!!
 // Desafio 1
+let valor1 = true;
+let valor2 = false;
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -85,3 +89,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
+console.log(compareTrue(valor1, valor2));
