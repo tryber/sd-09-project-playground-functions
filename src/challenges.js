@@ -3,7 +3,7 @@ function compareTrue() {
   // seu código aqui
 }
 
-// Desafio 2
+// Desafio 2;
 function calcArea() {
   // seu código aqui
 }
