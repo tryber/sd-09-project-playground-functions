@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(stringsArray) {
   stringsArray = ['teste1', 'teste2', 'teste3', 'teste4'];
-  let result = stringsArray[stringsArray.length -1] + ', ' + stringsArray[0];
+  let result = '${stringsArray[stringsArray.length -1]} ${stringsArray[0]}';
   return result;
 }
 console.log(concatName());
