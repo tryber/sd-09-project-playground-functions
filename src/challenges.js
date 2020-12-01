@@ -1,7 +1,7 @@
 //Começando o projeto 2
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(paramer1, paramer2) {
+  return (paramer1 && paramer2);
 }
 
 // Desafio 2
