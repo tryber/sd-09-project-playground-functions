@@ -80,10 +80,54 @@ function fizzBuzz(arrayFizz) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let result = [];
+  let frase = '';
+  for(let index in palavra){
+    result[index] = palavra[index];
+    console.log('1 for: ' + result);
+  }
+  for (let index in result){
+    if (result[index] === 'a'){
+      result[index] = 1;
+    } else if (result[index] === 'e'){
+      result[index] = 2;
+    } else if (result[index] === 'i'){
+      result[index] = 3;
+    } else if (result[index] === 'o'){
+      result[index] = 4;
+    } else if (result[index] === 'u'){
+      result[index] = 5;
+    }
+  }
+  for (let index in result){
+    frase += result[index];
+  }
+  return frase;
 }
 function decode() {
-  // seu código aqui
+  let result2 = [];
+  let frase2 = '';
+  for(let index in palavra2){
+    result2[index] = palavra2[index];
+    console.log('1 for: ' + result2);
+  }
+  for (let index in result2){
+    if (result2[index] === '1'){
+      result2[index] = 'a';
+    } else if (result2[index] === '2'){
+      result2[index] = 'e';
+    } else if (result2[index] === '3'){
+      result2[index] = 'i';
+    } else if (result2[index] === '4'){
+      result2[index] = 'o';
+    } else if (result2[index] === '5'){
+      result2[index] = 'u';
+    }
+  }
+  for (let index in result2){
+    frase2 += result2[index];
+  }
+  return frase2;
 }
 
 // Desafio 10
