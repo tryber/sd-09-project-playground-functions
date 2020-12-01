@@ -2,7 +2,7 @@
 
 // Desafio 1
 function compareTrue(value1, value2) {
-  return (value1 && value2) ? true : false;
+  return (value1 && value2);
 }
 // console.log(compareTrue(true, true));
 
@@ -32,10 +32,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  highestNumber =  Math.max(...array);
+  let highestNumber =  Math.max(...array);
   let count = 0;
-  
-  for (number in array) {
+
+  for (let number in array) {
     if (highestNumber == array[number]) {
       count += 1;
     }
@@ -49,12 +49,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let whoHadLunch = '';
   let cat1Dist = Math.abs(cat1 - mouse);
   let cat2Dist = Math.abs(cat2 - mouse);
-  
-  if (cat1Dist == cat2Dist) {
+
+  if (cat1Dist === cat2Dist) {
     whoHadLunch = 'os gatos trombam e o rato foge';
-  }else if (cat1Dist < cat2Dist) {
+  } else if (cat1Dist < cat2Dist) {
     whoHadLunch = 'cat1';
-  }else {
+  } else {
     whoHadLunch = 'cat2';
   }
   return whoHadLunch;
@@ -64,12 +64,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let resultString = '';
-  for (number in array) {
+  for (let number in array) {
+    
     if (array[number] % 3 != 0 && array[number] % 5 != 0) {
       resultString = 'bug!';
-    }else if (array[number] % 3 === 0 && array[number] % 5 === 0) {
+    }else {
       resultString = 'fizzBuzz';
-    }else if (array[number] % 3 === 0 && array[number] % 5 != 0) {
+    }
+    
+    if (array[number] % 3 === 0 && array[number] % 5 != 0) {
       resultString = 'fizz';
     }else if (array[number] % 3 != 0 && array[number] % 5 === 0) {
       resultString = 'buzz';
@@ -89,21 +92,21 @@ function encode(string) {
     for (let j = 0; j < 5; j += 1) {
       encrypt = encrypt.replace(letters[i], numbers[i]);
     }
-  }  
+  }
   return encrypt;
 }
 // console.log(encode('Marcuseaio'));
 
 function decode(string) {
-  let letters = ['a', 'e', 'i', 'o', 'u'];
   let numbers = ['1', '2', '3', '4', '5'];
+  let letters = ['a', 'e', 'i', 'o', 'u'];
   let decrypt = string.toLowerCase();
 
   for (let i = 0; i < string.length; i += 1) {
     for (let j = 0; j < 5; j += 1) {
       decrypt = decrypt.replace(numbers[i], letters[i]);
     }
-  }  
+  }
   return decrypt;
 }
 // console.log(decode('M1rc5s'));
