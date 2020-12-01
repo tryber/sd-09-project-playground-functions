@@ -43,9 +43,23 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Challenge Six - Highest popularity counter
+function highestCount(numbersArray) {
+  let higherPopularity = 0;
+  let higher = numbersArray[0];
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] > higher) {
+      higher = numbersArray[index];
+    }
+  }
+
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] === higher) {
+      higherPopularity += 1;
+    }
+  }
+
+  return higherPopularity;
 }
 
 // Desafio 7
