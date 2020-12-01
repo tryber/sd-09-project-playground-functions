@@ -41,14 +41,23 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let result = 0;
-  result += wins * 3 + ties;
+  result += (wins * 3) + ties;
   console.log(result);
   return result;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let higher = 0;
+  let result = 0;
+  for (let index in array) {
+    if (array[index] >= higher) {
+      result += 1;
+      higher = array[index];
+    }
+  }
+  console.log(result);
+  return result;
 }
 
 // Desafio 7
@@ -112,5 +121,6 @@ calcArea(5, 4)
 splitSentence('Go Trybe')
 concatName(['primeira', 'segunda', 'Ultima'])
 footballPoints(3, 1)
+highestCount([9, 1, 2, 3, 9, 5, 7])
 
 // Aooba, não é que tem um segredo no Lession Learned?!
