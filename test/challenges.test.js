@@ -34,3 +34,8 @@ console.log('7° OK');
 assert.deepStrictEqual(challenges.fizzBuzz([2, 15, 7, 9, 45]), ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"])
 assert.deepStrictEqual(challenges.fizzBuzz([2, 14, 7, 9, 45]), ["bug!", "bug!", "bug!", "fizz", "fizzBuzz"])
 console.log('8° OK');
+
+assert.deepStrictEqual(challenges.encode("hi there!"), "h3 th2r2!")
+assert.deepStrictEqual(challenges.decode("h3 th2r2!"), "hi there!")
+console.log('9° OK');
+
