@@ -30,11 +30,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let arrayNovo = [];
+  let stringNova = '';
   let item1 = arrayStrings.shift();
   let item2 = arrayStrings[arrayStrings.length - 1]
-  arrayNovo.push(item2, item1);
-  return arrayNovo;
+  stringNova = (item2 + ', ' + item1);
+  return stringNova;
 }
 
 // Desafio 5
@@ -85,9 +85,9 @@ function fizzBuzz(arrayDeNumeros) {
     mod5 = arrayDeNumeros[index] % 5;
     if (mod3 === 0 && mod5 === 0) {
       fbb.push('fizzBuzz');
-    } else if (mod3 === 0 && mod5 !== 0){
+    } else if (mod3 === 0 && mod5 !== 0) {
       fbb.push('fizz');
-    } else if (mod3 !== 0 && mod5 === 0){
+    } else if (mod3 !== 0 && mod5 === 0) {
       fbb.push('buzz');
     } else {
       fbb.push('bug!');
@@ -100,7 +100,7 @@ function fizzBuzz(arrayDeNumeros) {
 function encode(stringEncode) {
   let result = '';
   for (let index = 0; index < stringEncode.length; index += 1) {
-    switch (stringEncode[index]){
+    switch (stringEncode[index]) {
       case 'a':
         result += 1;
         break;
@@ -125,7 +125,7 @@ function encode(stringEncode) {
 function decode(stringDecode) {
   let result = '';
   for (let index = 0; index < stringDecode.length; index += 1) {
-    switch (stringDecode[index]){
+    switch (stringDecode[index]) {
       case '1':
         result += 'a';
         break;
