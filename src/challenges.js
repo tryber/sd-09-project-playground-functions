@@ -28,9 +28,11 @@ function concatName(array) {
   // seu código aquig
   let saveArray = array;
   let result = saveArray.split(' ');
-  let concat = (result[0] + result[(result.length - 1)]);
+  let concat = (result[0] + ' ' + result[(result.length - 1)]);
   return concat;
 }
+
+console.log (concatName('pedro, joao, johnatas, bernardo, issac'));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -43,42 +45,46 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNumber) {
   // seu código aqui
-  let number1 = arrayNumber[0];
-  let number2 = 0;
+  let bigNumber = arrayNumber[0];
+  let sweepNumber = 0;
   let result = 0;
   for (let count = 0; count < arrayNumber.length; count += 1) {
-    number2 = arrayNumber[count];
-    if (number2 > number1) {
-      number1 = number2;
+    sweepNumber = arrayNumber[count];
+    if (sweepNumber > bigNumber) {
+      bigNumber = sweepNumber;
     }
   }
+  
   for (let count = 0; count < arrayNumber.length; count += 1) {
-    if (number1 === arrayNumber[count]) {
+    if (bigNumber === arrayNumber[count]) {
       result += 1;
     }
   }
   return result;
 }
 
+//console.log (highestCount([1,9,7,6,8,9,3,5,9,8,6,9]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let count2 = cat2;
-
   for (let count = (cat1 + 1); count <= mouse; count += 1) {
     count2 -= 1;
-    if(count == mouse && count2 == mouse) {
+    if (count === mouse && count2 === mouse) {
       return ('os gatos trombam e o rato foge');
-    } else if (count == mouse) {
+    } else if (count === mouse) {
       return ('cat1');
-    } else if (count2 == mouse) {
+    } else if (count2 === mouse) {
       return ('cat2');
     }
   }
 }
 
+
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
 }
 
