@@ -16,12 +16,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(vetor) {
-  //return `${vetor[vetor.length - 1]}, ${vetor[0]}.`
+  // return `${vetor[vetor.length - 1]}, ${vetor[0]}.`
   let resposta = vetor[vetor.length - 1];
   let resposta2 = vetor[0];
   return (resposta +', ' + resposta2);
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -50,10 +49,10 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
-  if(distanciaCat1 < distanciaCat2){
-    return 'Cat2'
-  }else if (distanciaCat2 < distanciaCat1){
+  if(Math.abs(distanciaCat1) < Math.abs(distanciaCat2)){
     return 'Cat1'
+  }else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)){
+    return 'Cat2'
   }else {
     return 'Os gatos se trombam e o rato foge'
   }
