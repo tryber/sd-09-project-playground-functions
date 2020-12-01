@@ -84,26 +84,53 @@ function fizzBuzz(arrayNums) {
 function encode(phrase) {
   arrayPhrase = phrase.split('');
   for (let index in arrayPhrase){
-    if (arrayPhrase[index] === 'a') {
-        arrayPhrase[index] = 1;
-    }
-    else if (arrayPhrase[index] === 'e') {
-        arrayPhrase[index] = 2;
-    }
-    else if (arrayPhrase[index] === 'i') {
-        arrayPhrase[index] = 3;
-    }
-    else if (arrayPhrase[index] === 'o') {
-        arrayPhrase[index] = 4;
-    }
-    else if (arrayPhrase[index] === 'u') {
-        arrayPhrase[index] = 5;
+    switch (arrayPhrase[index]) {
+      case 'a':
+        arrayPhrase[index] = '1';
+        break;
+      case 'e':
+        arrayPhrase[index] = '2';
+        break;
+      case 'i':
+        arrayPhrase[index] = '3';
+        break;
+      case 'o':
+        arrayPhrase[index] = '4';
+        break;
+      case 'u':
+        arrayPhrase[index] = '5';
+        break;
+      default:
+        break;
     }
   }
   return arrayPhrase.join('');
 }
+
 function decode() {
-  // seu código aqui
+  arrayPhrase = phrase.split('');
+  for (let index in arrayPhrase){
+    switch (arrayPhrase[index]) {
+    case '1':
+      arrayPhrase[index] = 'a';
+      break;
+    case '2':
+      arrayPhrase[index] = 'e';
+      break;
+    case '3':
+      arrayPhrase[index] = 'i';
+      break;
+    case '4':
+      arrayPhrase[index] = 'o';
+      break;
+    case '5':
+      arrayPhrase[index] = 'u';
+      break;
+    default:
+      break;
+    }
+  }
+  return arrayPhrase.join('');
 }
 
 // Desafio 10
