@@ -100,9 +100,26 @@ function fizzBuzz(inputArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let dictionary = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+  let output = '';
+  for (let charIndex in text) {
+    let char = text[charIndex];
+    if (char in dictionary) {
+      output += dictionary[char];
+    } else {
+      output += char;
+    }
+  }
+  return output;
 }
+
 function decode() {
   // seu código aqui
 }
