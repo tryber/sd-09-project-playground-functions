@@ -109,12 +109,12 @@ const code = {
   u: 5,
 };
 const code2 = {
-  1: 'a',
-  2: 'e',
-  3: 'i',
-  4: 'o',
-  5: 'u',
-}
+  1: "a",
+  2: "e",
+  3: "i",
+  4: "o",
+  5: "u",
+};
 
 function encode(message) {
   // seu código aqui
@@ -154,8 +154,14 @@ function decode(message) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let answer = []
+  let helper = tech.sort();
+  for (let index = 0; index < tech.length; index += 1) {
+    answer.push({ tech: helper[index], name: name });
+  }
+  return answer;
 }
 
 // Desafio 11
