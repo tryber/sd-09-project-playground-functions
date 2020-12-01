@@ -40,7 +40,7 @@ function concatName(arrayNomes) {
   }
   return nomes;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (3 * wins) + ties
@@ -83,12 +83,12 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Distance > cat1Distance) {
     hunte = 'cat1';
   } else {
-    hunte = 'os gatos se trombam e o rato foge'
+    hunte = 'os gatos trombam e o rato foge'
   }
   return hunte;
 }
 
-console.log(catAndMouse(6, 3, 7))
+console.log(catAndMouse(5, 2, 7))
 
 // Desafio 8
 function fizzBuzz() {
