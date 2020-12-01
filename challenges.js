@@ -1,10 +1,9 @@
-function compareTrue(a,b){
-    if(a===true && b===true){
-        return true;
-    }else{
-        return false;
-    }
+function compareTrue(a, b) {
+  if(a === true && b === true) {
+    return true;
+  };
+  return false;
 };
-function calcArea(height,base){
-    return (base*height)/2;
-};console.log(calcArea(10,5));
+function calcArea(height, base){
+  return (base*height)/2;
+};
