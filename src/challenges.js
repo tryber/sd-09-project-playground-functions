@@ -114,23 +114,23 @@ function encode(frase) {
 
 function decode(frase) {
   let code = ""
-  for(let index = 0; index < frase.length; index += 1){
-    if(frase[index] == "1"){
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index] == "1") {
       code += "a"
     }
-    else if(frase[index] == "2"){
+    else if (frase[index] == "2") {
       code += "e"
     }
-    else if(frase[index] == "3"){
+    else if (frase[index] == "3") {
       code += "i"
     }
-    else if(frase[index] == "4"){
+    else if (frase[index] == "4") {
       code += "o"
     }
-    else if(frase[index] == "5"){
+    else if (frase[index] == "5") {
       code += "u"
     }
-    else{
+    else {
       code += frase[index]
     }
   }
@@ -139,19 +139,69 @@ function decode(frase) {
 
 // Desafio 10
 function techList(tech, name) {
-let result = []
+  let result = []
 
-for(let index=0; index < tech.length; index += 1){
-    result.push({tech: tech[index], name: name})
-}
-return result
+  for (let index = 0; index < tech.length; index += 1) {
+    result.push({ tech: tech[index], name: name })
+  }
+  return result
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbearray) {
+  let numberphone = ""
+  if (numbearray.length !== 11) {
+    numberphone += "Array com tamanho incorreto"
+    return numberphone
+  }
+  else if (maxrepeat(numbearray) == false) {
+    numberphone += "Array com tamanho incorreto numeros repetidos"
+    return numberphone
+  }
+
+  for (let index = 0; index < numbearray.length; index += 1) {
+    if (numbearray[index] < 0 || numbearray[index] > 9) {
+      numberphone += "não é possível gerar um número de telefone com esses valores"
+      break
+    }
+    else if (index == 0) {
+      numberphone += "(" + numbearray[index]
+    }
+    else if (index == 1) {
+      numberphone += numbearray[index] + ") "
+    }
+    else if (index == 6) {
+      numberphone += numbearray[index] + "-"
+    }
+    else {
+      numberphone += numbearray[index]
+    }
+  }
+  return numberphone
+}
+function maxrepeat(numbers) {
+
+  let maxrepeat = -10
+  for (let index = 0; index < numbers.length; index += 1) {
+    let repeat = 0
+    for (let position = 0; position < numbers.length; position += 1) {
+      if (numbers[index] == numbers[position]) {
+        repeat += 1
+      }
+    }
+    if (repeat > maxrepeat) {
+      maxrepeat = repeat
+    }
+  }
+  if (maxrepeat >= 3) {
+    return false
+  }
+  else {
+    return true
+  }
 }
 
+console.log(generatePhoneNumber([5, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
@@ -161,6 +211,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
 
 
 module.exports = {
@@ -179,3 +230,8 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+
+//auxiliares
+
+
