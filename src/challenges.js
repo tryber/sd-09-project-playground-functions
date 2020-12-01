@@ -3,13 +3,12 @@
 
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
-    console.log(true)
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
-compareTrue(false, true);
 
 // Desafio 2
 function calcArea() {
