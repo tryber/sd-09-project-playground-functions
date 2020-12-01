@@ -31,8 +31,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length - 1] + ", " + arrayString[0];
+  return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
+
+let arrayString = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(arrayString));
 
 // Desafio 5
 function footballPoints() {
