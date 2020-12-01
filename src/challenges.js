@@ -60,12 +60,14 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let answer = "";
-  if (cat1 === cat2 && cat1 === mouse) {
-    answer = "os gatos trombam e o rato foge";
-  } else if (cat1 < cat2) {
+  let d1 = Math.abs(cat1 - mouse);
+  let d2 = Math.abs(cat2 - mouse);
+  if (d1 < d2) {
     answer = "cat1";
-  } else if (cat1 > cat2) {
+  } else if (d1 > d2) {
     answer = "cat2";
+  } else {
+    answer = "os gatos trombam e o rato foge";
   }
   return answer;
 }
