@@ -19,6 +19,8 @@ function splitSentence(string) {
   let arrayString = string.split(" ");
   return arrayString;
 }
+const result = arrayString = string.split(" ");
+console.log(result);
 
 // Desafio 4
 function concatName(frase) {
