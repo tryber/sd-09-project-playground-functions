@@ -20,7 +20,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let newString = `${array[array.length -1]} ${array[0]}`;
+  let newString = `${array[array.length - 1]} ${array[0]}`;
   return newString;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -70,17 +70,13 @@ function fizzBuzz(array) {
 
     if (divisibleBy3 === 0 && divisibleBy5 === 0) {
       console.log('fizzBuzz');
-    }
-
-    if (divisibleBy3 !== 0 && divisibleBy5 !== 0) {
+    } else if (divisibleBy3 !== 0 && divisibleBy5 !== 0) {
       console.log('bug!');
     }
 
     if (divisibleBy3 === 0 && divisibleBy5 !== 0) {
       console.log('fizz');
-    }
-
-    if (divisibleBy3 !== 0 && divisibleBy5 === 0) {
+    } else if (divisibleBy3 !== 0 && divisibleBy5 === 0) {
       console.log('buzz');
     }
   }
