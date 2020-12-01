@@ -24,14 +24,18 @@ return arrayFrase
 } splitSentence('go Trybe')
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString = []) {
   // seu código aqui
-}
+ return (arrayString[arrayString.length - 1] + ',', arrayString[0])
+} concatName(['ovos', 'leite', 'pizza'])
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  // seu código aqui\
+  wins = wins * 3
+  return totalPontos = wins + ties
+} footballPoints(4,3)
+
 
 // Desafio 6
 function highestCount() {
