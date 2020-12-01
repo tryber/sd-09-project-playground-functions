@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let count2 = cat2;
 
-  for (let count = cat1; count <= mouse; count += 1) {
+  for (let count = (cat1 + 1); count <= mouse; count += 1) {
     count2 -= 1;
     if(count == mouse && count2 == mouse) {
       return ('os gatos trombam e o rato foge');
@@ -76,8 +76,6 @@ function catAndMouse(mouse, cat1, cat2) {
     }
   }
 }
-
-console.log(catAndMouse(10, 0, 18));
 
 // Desafio 8
 function fizzBuzz() {
