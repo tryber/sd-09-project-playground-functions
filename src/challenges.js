@@ -84,11 +84,18 @@ return "bug!"
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// solução encontrada no stackoverflow
+function encode(string) {
+  let trocaLetras = { a: "1", e: "2", i: "3", o: "4", u: "5"};
+  let resultado = "";
+  resultado = string.replace(/[aeiou]/gi, (m) => trocaLetras[m]);
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let trocaLetras = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
+  let resultado = "";
+  resultado = string.replace(/[12345]/gi, (m) => trocaLetras[m]);
+  return resultado;
 }
 
 // Desafio 10
