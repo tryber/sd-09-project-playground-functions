@@ -69,7 +69,7 @@ function highestCount(numbers) {
 function distanceCalculator(cat, mouse) {
   let distance = cat - mouse
   if (distance < 0) {
-    distance = distance * -1
+    distance *= -1
   }
   return distance
 }
