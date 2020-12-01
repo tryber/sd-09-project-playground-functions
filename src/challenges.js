@@ -2,7 +2,7 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } 
+  }
   return false;
 }
 
@@ -17,8 +17,8 @@ function splitSentence(string) {
   let arrayString = [];
   let stringComposta = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] != ' ') {
-      stringComposta = stringComposta + string[index];
+    if (string[index] !== ' ') {
+      stringComposta += string[index];
     } else {
       arrayString.push(stringComposta);
       stringComposta = '';
@@ -76,8 +76,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let fbb = [];
+  let mod3 = 0;
+  let mod5 = 0;
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    mod3 = arrayDeNumeros[index] % 3;
+    mod5 = arrayDeNumeros[index] % 5;
+    if (mod3 === 0 && mod5 === 0) {
+      fbb.push('fizzBuzz');
+    } else if (mod3 === 0 && mod5 !== 0){
+      fbb.push('fizz');
+    } else if (mod3 !== 0 && mod5 === 0){
+      fbb.push('buzz');
+    } else {
+      fbb.push('bug!');
+    }
+  }
+  return fbb
 }
 
 // Desafio 9
