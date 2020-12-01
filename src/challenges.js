@@ -67,24 +67,40 @@ function highestCount(array) {
       greatest = element
     }
   }
-  /* return array[repetitionArray.indexOf(greatest)] */
 
-  /***********************************************
-  * Retorna o elemento que mais se repete no array
-  ************************************************/
+  // return array[repetitionArray.indexOf(greatest)]
+  // Retorna o elemento que mais se repete no array
 
   return greatest
 }
 // console.log(highestCount([9, 3, 3, 3, 9, 9, 9]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
+  let diffCat1 = Math.abs(mouse - cat1)
+  let diffCat2 = Math.abs(mouse - cat2)
+
+  if (diffCat1 === diffCat2) {
+    return 'Os gatos trombam e o rato foge'
+  } else if (diffCat1 > diffCat2) {
+    return 'cat2'
+  } else {
+    return 'cat1'
+  }
 }
+// console.log(catAndMouse(-4, -5, -6))
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  for(element of array) {
+    if (element % 3 && element % 5) {
+      return 'fizzBuzz'
+    } else if (
+
+    )
+  }
 }
 
 // Desafio 9
