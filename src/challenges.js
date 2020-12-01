@@ -138,7 +138,6 @@ function techList(array, name) {
 // funcao auxiliar para fuincao 11
 function verificaRepetido(array) {
   let topCounter = 0;
-  let counter = 0;
   for (let num of array) {
     for (let item in array) {
       if (num === array[item]) {
@@ -197,7 +196,7 @@ function hydrate(string) {
   for (let item of numbers) {
     soma += item;
   }
-  if (soma > 1){
+  if (soma > 1) {
     return (`${soma} copos de água`);
   }
   return (`${soma} copo de água`);
