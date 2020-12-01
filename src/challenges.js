@@ -33,16 +33,16 @@ function footballPoints(wins, ties) {
 function highestCount(valueArray) {
   const maxValue = valueArray.sort()
   let count = 0
-  for (let i = 0; i < valueArray.length; i++) {
-    if(valueArray[i] === maxValue) {
-      count++
+  for (let i = 0; i < valueArray.length; i += 1) {
+    if (valueArray[i] === maxValue) {
+      count += 1
     }
   }
   return count
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
