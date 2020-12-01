@@ -21,7 +21,7 @@ function distanceBetweenTwoPoins(position1, position2) {
 }
 
 function isDivisibleBy(dividend, divider) {
-  if (dividend % divider == 0) {
+  if (dividend % divider === 0) {
     return true;
   }
   return false;
@@ -91,12 +91,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let answers = ['fizz', 'buzz', 'fizzBuzz'];
   for (let i in array) {
-    if (isDivisibleBy(array[i], 3) && isDivisibleBy(array[i], 5)) {
-      return 'fizzBuzz';
+    if (isDivisibleBy(i, 3) && isDivisibleBy(i, 5)) {
+      return answers[2];
     } else if (isDivisibleBy(array[i], 3)) {
-      return 'fizz';
+      return answers[0];
     } else if (isDivisibleBy(array[i], 5)) {
-      return 'buzz';
+      return answers[1];
     }
   }
   return 'bug';
