@@ -77,20 +77,30 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 function encode(frase) {
   let fraseArray = frase.toLowerCase().split('');
 
-  for(let i in fraseArray) {
-    if(fraseArray[i] === 'a') fraseArray[i] = 1;
-    if(fraseArray[i] === 'e') fraseArray[i] = 2;
-    if(fraseArray[i] === 'i') fraseArray[i] = 3;
-    if(fraseArray[i] === 'o') fraseArray[i] = 4;
-    if(fraseArray[i] === 'u') fraseArray[i] = 5;
+  for (let i in fraseArray) {
+    if (fraseArray[i] === 'a') fraseArray[i] = 1;
+    if (fraseArray[i] === 'e') fraseArray[i] = 2;
+    if (fraseArray[i] === 'i') fraseArray[i] = 3;
+    if (fraseArray[i] === 'o') fraseArray[i] = 4;
+    if (fraseArray[i] === 'u') fraseArray[i] = 5;
   }
   return fraseArray.join('');
 }
 console.log(encode('hi there'))
 
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let fraseArray = frase.toLowerCase().split('');
+
+  for (let i in fraseArray) {
+    if (fraseArray[i] === '1') fraseArray[i] = 'a';
+    if (fraseArray[i] === '2') fraseArray[i] = 'e';
+    if (fraseArray[i] === '3') fraseArray[i] = 'i';
+    if (fraseArray[i] === '4') fraseArray[i] = 'o';
+    if (fraseArray[i] === '5') fraseArray[i] = 'u';
+  }
+  return fraseArray.join('');
 }
+console.log(decode('h3 th2r2'))
 
 // Desafio 10
 function techList() {
