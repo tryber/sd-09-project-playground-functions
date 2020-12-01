@@ -16,3 +16,7 @@ console.log('3° OK');
 assert.deepStrictEqual(challenges.concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']), 'Paolillo, Lucas')
 assert.deepStrictEqual(challenges.concatName(['teste', 'ze', 'api', 'passou']), 'passou, teste')
 console.log('4° OK');
+
+assert.deepStrictEqual(challenges.footballPoints(4, 7), 19)
+assert.deepStrictEqual(challenges.footballPoints(9, 9), 36)
+console.log('5° OK');
