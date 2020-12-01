@@ -63,7 +63,6 @@ function highestCount(arrayOfNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let whoCatchesIt;
-  let closerToMouse;
   let distance1;
   let distance2;
 
@@ -79,11 +78,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distance1 > distance2){
     return cat2;
-  } else if{
+  } else if (distance2 > distance1){
     return cat1;
   } else {
     return('os gatos trombam e o rato foge')
-
   }
 
  }
