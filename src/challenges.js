@@ -14,14 +14,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let arrayPalavras = [];
-  let palavra = "";
+  let palavra = '';
 
   for (let index = 0; index <= frase.length; index += 1) {
-    if (frase[index] !== " " && index !== frase.length) {
+    if (frase[index] !== ' ' && index !== frase.length) {
       palavra += frase[index];
     } else {
       arrayPalavras.push(palavra);
-      palavra = "";
+      palavra = '';
     }
   }
   return arrayPalavras;
@@ -34,7 +34,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
