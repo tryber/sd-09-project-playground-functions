@@ -1,3 +1,4 @@
+// VAMO NESSA É APENAS O COMEÇO!!
 // Desafio 1
 function compareTrue() {
   // seu código aqui
@@ -66,7 +67,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +82,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
