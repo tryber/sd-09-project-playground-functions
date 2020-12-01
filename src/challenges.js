@@ -38,11 +38,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  
-  let ultimoItem = array[(array.length-1)];
+  let ultimoItem = array[(array.length - 1)];
   let primeiroItem = array[0];
-
-  return (ultimoItem + ', ' + primeiroItem);
+  let stringPronta = (ultimoItem + ', ' + primeiroItem);
+  return stringPronta;
 }
 
 // Desafio 5
