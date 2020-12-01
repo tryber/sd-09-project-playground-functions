@@ -48,7 +48,7 @@ function getHigherNumber(numbers) {
   return higherNumberFromNow
 }
 
-function getTimesHigherNumber(numbers,numberToCount) {
+function getTimesHigherNumber(numbers, numberToCount) {
   let timesHigherNumberFromNow = 0
   for (index in numbers) {
     if (numbers[index] === numberToCount) {
@@ -60,7 +60,7 @@ function getTimesHigherNumber(numbers,numberToCount) {
 
 function highestCount(numbers) {
   let higherNumber = getHigherNumber(numbers)
-  let timesHigherNumber = getTimesHigherNumber(numbers,higherNumber)
+  let timesHigherNumber = getTimesHigherNumber(numbers, higherNumber)
   console.log(`O maior numero foi ${higherNumber} e ele aparece ${timesHigherNumber} vezes`)
   return timesHigherNumber
 }
