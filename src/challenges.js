@@ -2,8 +2,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -25,7 +24,7 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return 3 * wins + 1 * ties 
+  return (3 * wins) + (1 * ties) 
 }
 
 // Desafio 6
@@ -34,8 +33,18 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  function distanceTwoPoints(a,b) {
+    quadrado = (a-b)**2;
+    return Math.sqrt(quadrado);
+}
+if (distanceTwoPoints(mouse, cat1) < distanceTwoPoints(mouse, cat2)){
+    return 'cat1';
+} else if (distanceTwoPoints(mouse, cat1) > distanceTwoPoints (mouse, cat2)) {
+    return 'cat2';
+} else {
+    return "os gatos trombam e o rato foge"
+} 
 }
 
 // Desafio 8
