@@ -15,8 +15,8 @@ function calcArea(base, height) {
 console.log(calcArea(10, 5));
 
 // Desafio 3
-let splitedArray = [];
 function splitSentence(stringToSplit) {
+  let splitedArray = [];
   splitedArray = stringToSplit.split(' ');
   return splitedArray;
 }
@@ -24,17 +24,20 @@ console.log(splitSentence('go Trybe'));
 
 // Desafio 4: Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 // Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
-let string = [];
+
 function concatName(firstAndLastIndex) {
+  let string = [];
   string = firstAndLastIndex[firstAndLastIndex.length - 1] + ', ' + firstAndLastIndex[0];
   return string;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalScore = (wins * 3) + (ties * 1);
+  return totalScore;
 }
+console.log(footballPoints(3, 1));
 
 // Desafio 6
 function highestCount() {
