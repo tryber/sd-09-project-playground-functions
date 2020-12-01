@@ -15,8 +15,20 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let storage = '';
+  for (let index in string) {
+    if (string[index] === ' ') {
+      array.push(storage);
+      storage = '';
+    } else {
+      storage = storage + string[index];
+    }
+  }
+  array.push(storage);
+  console.log(array);
+  return array;
 }
 
 // Desafio 4
@@ -92,5 +104,6 @@ module.exports = {
 
 compareTrue(true, true)
 calcArea(5, 4)
+splitSentence('Go Trybe')
 
 // Aooba, não é que tem um segredo no Lession Learned?
