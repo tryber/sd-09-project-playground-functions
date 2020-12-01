@@ -1,4 +1,10 @@
-// Desafio 1 - This function receives two booleans and returns true if both are true and false if not.
+ /**
+  * Desafio 1 - This function receives two booleans 
+  * and returns true if both are true and false if not.
+  * 
+  * By Pablo P Fernandes
+  */
+
 function compareTrue(boolOne, boolTwo) {
   if(boolOne && boolTwo) {
     return true;
