@@ -12,12 +12,26 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
-  return area;s
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let sentenceArray = sentence.split('');
+  let sentenceSplited = [];
+  let positionCount = 0;
+
+  for (let index in sentenceArray) {
+    if (sentenceArray[index] !== ' ') {
+      if (sentenceSplited[positionCount] === undefined) {
+        sentenceSplited[positionCount] = '';
+      };
+      sentenceSplited[positionCount] += sentenceArray[index];
+    } else {
+      positionCount += 1;
+    };
+  };
+  return sentenceSplited;
 }
 
 // Desafio 4
@@ -93,3 +107,4 @@ module.exports = {
 
 console.log(compareTrue(false, false));
 console.log(calcArea(20, 30));
+console.log(splitSentence('go Trybe vamos que vamos'));
