@@ -73,17 +73,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let arrayPhrase = [];
+  // let arrayPhrase = [];
 
   for (let key in arrayNumbers) {
-    if ((arrayNumbers[key] % 3 ===  0) && (arrayNumbers[key] % 5 === 0)) {
-      arrayPhrase.push('fizzBuzz');
+    if ((arrayNumbers[key] % 3 === 0) && (arrayNumbers[key] % 5 === 0)) {
+      arrayNumbers[key] = 'fizzBuzz';
     } else if (arrayNumbers[key] % 3 === 0) {
-      arrayPhrase.push('fizz');
+      arrayNumbers[key] = 'fizz';
     } else if (arrayNumbers[key] % 5 === 0) {
-      arrayPhrase.push('buzz');
+      arrayNumbers[key] = 'buzz';
     } else {
-      arrayPhrase.push('bug!');
+      arrayNumbers[key] = 'bug!';
     }
   }
 
