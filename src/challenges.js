@@ -67,8 +67,20 @@ return "os gatos trombam e o rato foge"
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let numbers = [1,2,3,4,5,6,7,8,9];
+function fizzBuzz(numbers) {
+  for(let contador3=0;contador3<=numbers.lenght;contador3++){
+if(numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0){
+  return "fizz"
+}else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !=0) {
+  return "buzz"
+} else if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 === 0) {
+  return "fizzBuzz"
+} else {
+return "bug!"
+}
+  }
+ 
 }
 
 // Desafio 9
