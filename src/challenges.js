@@ -3,7 +3,9 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if(value1 && value2 === true) {
     return true
-  } 
+  } else {
+    
+  }
 }
 
 // Desafio 2
