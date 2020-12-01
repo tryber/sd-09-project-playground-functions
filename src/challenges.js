@@ -57,16 +57,18 @@ function highestCount(array) {
   let n = array.length;
   let counter = 0;
   for (let index = 0; index < n; index += 1){
-    if (array[index] > higher){
+    let number = array[index];
+    if (number > higher){
       higher = array[index];
     }
   }
   for ( let index = 0; index < n; index += 1){
-    if (higher = array[index]){
+      let number = array[index]
+    if (higher === number){
       counter += 1;
     }    
-  }
-  return counter;
+  }    
+  return counter;    
 }
 
 // Desafio 7
