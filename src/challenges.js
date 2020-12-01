@@ -4,9 +4,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 2
@@ -16,14 +14,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let phrase = " ";
-  phrase = string.split(" ");
+  let phrase = ' ';
+  phrase = string.split(' ');
   return phrase;
 }
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length - 1] + ", " + arrayString[0];
+  return arrayString[arrayString.length-1] + ', ' + arrayString[0];
 }
 
 // Desafio 5
