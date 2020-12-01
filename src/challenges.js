@@ -17,7 +17,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   // seu código aqui
   let stringArray = []
-  stringArray = string.split(" ")
+  stringArray = string.split(' ')
   return stringArray
 }
 
@@ -73,8 +73,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
-splitSentence()
 
 module.exports = {
   calcArea,
