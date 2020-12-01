@@ -65,20 +65,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(values) {
-  let valuesBuzz = [];
-  for (let index in valuesFizz){
-    if (valuesFizz[index] % 3 == 0 && valuesFizz[index] % 5 != 0){
-      valuesBuzz[index] = 'Fizz';
-    } else if (valuesFizz[index] % 3 != 0 && valuesFizz[index] % 5 == 0){
-      valuesBuzz[index] = 'Buzz';
-    } else if (valuesFizz[index] % 3 == 0 && valuesFizz[index] % 5 == 0){
-      valuesBuzz[index] = 'FizzBuzz';
-    } else {
-      valuesBuzz[index] = 'Bug!'; 
-    } 
-  }
-
-  return valuesBuzz;
+  let sequence = [];
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
+        sequence.push('fizzBuzz');
+      } else if (numbers[index] % 5 == 0) {
+        sequence.push('buzz');
+      } else if (numbers[index] % 3 == 0) {
+        sequence.push('fizz');
+      }else {
+        sequence.push('bug!');
+      }
+    }
+  return sequence;
 }
 
 // Desafio 9
@@ -142,8 +141,67 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let container = '';
+  if (number.length === 11) {
+      for (let i = 0; i < number.length; i++) {
+          switch(true) {
+              case i == 0:
+              container += '('+number[i];
+              break;
+
+              case i == 1:
+              container += number[i]+')';
+              break;
+
+              case i == 2:
+              container += ' '+number[i];
+              break;
+
+              case i == 3:
+              container += number[i];
+              break;
+
+              
+              case i == 4:
+              container += number[i];
+              break;
+
+              case i == 5:
+              container += number[i];
+              break;
+
+
+              case i == 6:
+              container += number[i]+'-';
+              break;
+
+
+              case i == 7:
+              container += number[i];
+              break;
+
+
+              case i == 8:
+              container += number[i];
+              break;
+
+
+              case i == 9:
+              container += number[i];
+              break;
+
+
+              case i == 10:
+              container += number[i];
+              break;
+          }
+      }
+  }
+  else {
+      return 'Array com tamanho incorreto.'
+  }
+  return container
 }
 
 // Desafio 12
@@ -156,8 +214,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(pedido) {
+  let total = pedido.split(' ');
+  let counter = 0;
+  for (let i = 0; i < total.length; i++) {
+      if (total[i] > 0) {
+          counter += parseInt(total[i]) 
+      }
+  }
+  return counter + ' copos de agua'
 }
 
 
