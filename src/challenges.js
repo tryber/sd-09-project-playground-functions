@@ -3,8 +3,8 @@ function compareTrue(numB1, numB2) {
   // seu código
   if (numB1 && numB2 > 0) {
     return true;
-  }
-}console.log(compareTrue(2, 2));
+  }return false;
+}console.log(compareTrue(0, 0));
 
 // Desafio 2
 function calcArea(base, altura) {
