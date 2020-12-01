@@ -94,13 +94,6 @@ function catAndMouse(cat1, cat2, mouse) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  for(element of array) {
-    if (element % 3 && element % 5) {
-      return 'fizzBuzz'
-    } else if (
-
-    )
-  }
 }
 
 // Desafio 9
