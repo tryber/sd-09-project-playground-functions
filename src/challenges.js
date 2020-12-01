@@ -1,3 +1,4 @@
+// Project Playground Functions - by Felipe Pimentel
 // Desafio 1
 function compareTrue() {
   // seu código aqui
