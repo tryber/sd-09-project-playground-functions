@@ -64,13 +64,22 @@ function highestCount(numbers) {
         }
     }
   return dicionario[maiorN];
-
   // seu código aqui
 }
-console.log(highestCount(teste))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
+  let difCat1Mouse = Math.abs(cat1 - mouse)
+  let difCat2Mouse = Math.abs(cat2 - mouse)
+  if (difCat1Mouse < difCat2Mouse){
+    return console.log('cat1')
+  }
+  else if (difCat2Mouse < difCat1Mouse){
+    return console.log('cat2')
+  }
+  else{
+    return console.log("os gatos trombam e o rato foge")
+  }
   // seu código aqui
 }
 
