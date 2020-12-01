@@ -24,9 +24,9 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName(words) {
   // seu código aquig
-  let saveArray = array;
+  let saveArray = words;
   let result = saveArray.split(' ');
   let concat = (result[0] + ' ' + result[(result.length - 1)]);
   return concat;
@@ -64,20 +64,17 @@ function highestCount(arrayNumber) {
 
 console.log (highestCount([1,9,7,6,8,9,3,5,9,8,6,9]));
 
-// Desafio 7 OK (codeclimate)
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let count2 = cat2;
-  for (let count = (cat1 + 1); count <= mouse; count += 1) {
-    count2 -= 1;
-    if (count === mouse && count2 === mouse) {
-      return ('os gatos trombam e o rato foge');
-    } else if (count === mouse) {
-      return ('cat1');
-    } else if (count2 === mouse) {
-      return ('cat2');
-    }
+  let numberCat1 = Math.abs(cat1 - mouse);
+  let numberCat2 = Math.abs(cat2 - mouse);
+  if (numberCat1 === numberCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (numberCat1 < numberCat2) {
+      return 'cat1';
   }
+  return 'cat2';
 }
 
 // Desafio 8
