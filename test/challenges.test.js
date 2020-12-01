@@ -24,3 +24,9 @@ console.log('5° OK');
 assert.deepStrictEqual(challenges.highestCount([9, 1, 2, 3, 9, 5, 7]), 2)
 assert.deepStrictEqual(challenges.highestCount([9, 1, 2, 3, 9, 5, 7, 7, 3, 8, 7, 4, 12, 12, 8, 12]), 3)
 console.log('6° OK');
+
+assert.deepStrictEqual(challenges.catAndMouse(5, 9, 1), 'os gatos trombam e o rato foge')
+assert.deepStrictEqual(challenges.catAndMouse(-5, -9, -1), 'os gatos trombam e o rato foge')
+assert.deepStrictEqual(challenges.catAndMouse(-5, -4, 9), 'cat1')
+assert.deepStrictEqual(challenges.catAndMouse(-5, 9, -1), 'cat2')
+console.log('7° OK');
