@@ -1,27 +1,40 @@
-//Vamo Que Vamo
-// Desafio 1
 function compareTrue(valor1, valor2) {
   
   if(valor1 === true && valor2 === true) {
     return true;
-  } else ( valor1 != valor2) 
-    return false;
+  } else {return false}     
   }
 
   let verdadeiro = true;
   let falso = false;
 
-console.log(compareTrue(verdadeiro, falso ))
+console.log(compareTrue(verdadeiro, verdadeiro ))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+ let area;
+ 
+ area = (base * height) /2;
+
+ return area
+
 }
+console.log(calcArea(10,20))
+
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  
+  let convertArray;
+  convertArray = string.split(" ")
+   return convertArray
 }
+
+let teste3 = 'go trybe'
+console.log(splitSentence(teste3));
+
+
 
 // Desafio 4
 function concatName() {
