@@ -6,16 +6,20 @@ function compareTrue(value1, value2) {
 }
 // console.log(compareTrue(false,false));
 
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 // console.log(calcArea(100, 50));
 
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  return phrase.split(' ');
 }
+// console.log(splitSentence('Go Trybe'));
+
 
 // Desafio 4
 function concatName() {
