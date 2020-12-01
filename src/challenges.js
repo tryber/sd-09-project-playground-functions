@@ -1,4 +1,14 @@
-// rafaelrnascimento2006-project-playground-functions
+// Minhas funções
+function biggestNumber(numbers) {
+  let biggest = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > biggest) {
+      biggest = numbers[index];
+    }
+  }
+  return biggest;
+}
 
 // Desafio 1
 function compareTrue(value1, value2) {
@@ -32,19 +42,8 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let total = 0;
 
-  function biggestNumber() {
-    let biggest = 0;
-
-    for (let index = 0; index < array.length; index += 1) {
-      if (array[index] > biggest) {
-        biggest = array[index];
-      }
-    }
-    return biggest;
-  }
-
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === biggestNumber()) {
+    if (array[index] === biggestNumber(array)) {
       total += 1;
     }
   }
