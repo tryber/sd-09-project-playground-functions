@@ -13,8 +13,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentense) {
+  let array = [];
+  let frase = '';
+  for (const index in sentense) {
+   
+    if (sentense[index] !== ' ') {
+      frase = frase + sentense[index];
+    
+    } else if (sentense[index] === ' ') {
+      array.push(frase);
+      frase = '';
+    }  
+  }
+  array.push(frase);
+  return array;
 }
 
 // Desafio 4
