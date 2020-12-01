@@ -60,13 +60,11 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let answer = "";
-  let d1 = cat1 - mouse;
-  let d2 = cat2 - mouse;
   if (cat1 === cat2 && cat1 === mouse){
     answer = "os gatos trombam e o rato foge";
-  } else if (d1 < d2) {
+  } else if (cat1 < cat2) {
     answer = "cat1";
-  } else if (d1 > d2) {
+  } else if (cat1 > cat2) {
     answer = "cat2";
   }
   return answer;
@@ -75,6 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
+
 }
 
 // Desafio 9
