@@ -65,7 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
     return 'cat1';
-  } return 'cat2';
+  } 
+  return 'cat2';
 }
 
 // Desafio 8
@@ -78,7 +79,7 @@ function fizzBuzz(array) {
     } else if (item % 3 === 0) {
       newArray.push('fizz');
     } else if (item % 5 === 0) {
-      newArray.push('Buzz');
+      newArray.push('buzz');
     } else {
       newArray.push('bug!');
     }
@@ -172,7 +173,7 @@ function generatePhoneNumber(array) {
   let verificador = verificaViabilidade(array);
   if (verificador === -1) {
     return ('Array com tamanho incorreto.');
-  } else if (verificador === 1){
+  } else if (verificador === 1) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
   let telefone = '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
@@ -188,8 +189,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // extrai todos os digitos com o match / \d /g e transforma eles de string para numero com map(Number)
+  let numbers = string.match(/\d+/g).map(Number);
+  let soma = 0;
+  for (let item of numbers) {
+    soma += item;
+  }
+  return (soma+' copos de água');
 }
 
 
