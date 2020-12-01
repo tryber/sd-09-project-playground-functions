@@ -12,20 +12,22 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-//Used the split method contained in the documentation <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split>
+// Used the split method contained in the documentation <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split>
 function splitSentence(phrase) {
   let words = phrase.split(' ');
   return words;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameList) {
+  let firstAndLast = nameList[nameList.length - 1] + ', ' + nameList[0];
+  return firstAndLast;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let score = wins * 3 + ties;
+  return score;
 }
 
 // Desafio 6
