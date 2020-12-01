@@ -1,6 +1,19 @@
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+/* Desafio 1: JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
+
+Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
+
+Retorne true se ambos os valores são verdadeiros;
+Retorne false se um ou ambos os parâmetros forem falsos.
+Faça a função utilizando o operador &&.*/
+
+function compareTrue(bool1, bool2) {
+  if (bool1 === true && bool2 === true) {
+    return true
+  } else if (bool1 === false || bool2 === false) {
+    return false
+  } else {
+    return 'Insira um valor booleano para ser validado!'
+  }
 }
 
 // Desafio 2
