@@ -25,7 +25,6 @@ function concatName(vetor) {
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
-
 }
 
 // Desafio 6
@@ -50,16 +49,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
   if(Math.abs(distanciaCat1) < Math.abs(distanciaCat2)){
-    return 'Cat1'
+    return 'cat1'
   }else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)){
-    return 'Cat2'
+    return 'cat2'
   }else {
-    return 'Os gatos se trombam e o rato foge'
+    return 'os gatos trombam e o rato foge'
   }
 }
 
 // Desafio 8
-let vetor = [2, 15, 7, 9, 45];
+let vetor = [9, 25];
 function fizzBuzz(array) {
   let newArray = [];
   for (let index in array){
@@ -70,12 +69,13 @@ function fizzBuzz(array) {
     }else if (array[index]%5 == 0){
       newArray[index] = 'buzz'
     } else {
-      newArray[index] = 'bug'
+      newArray[index] = 'bug!'
     }
   }
   return newArray
 }
 console.log(fizzBuzz(vetor))
+
 // Desafio 9
 function encode() {
   // seu código aqui
