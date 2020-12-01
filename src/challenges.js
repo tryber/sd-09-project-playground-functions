@@ -11,8 +11,10 @@ function compareTrue() {
 }
 
 // Desafio 2
+let base = 30;
+let height = 20;
 function calcArea() {
-  // seu código aqui
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -90,3 +92,4 @@ module.exports = {
   triangleCheck,
 };
 console.log(compareTrue(valor1, valor2));
+console.log(calcArea(base, height));
