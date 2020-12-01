@@ -15,7 +15,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(go trybe) {
+function splitSentence(go, trybe) {
   return ['go' , 'trybe']
 }
 
@@ -26,9 +26,11 @@ return arrayName[arrayName.length-1] + ',' + arrayName[0];
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
+let totalWins = wins*3;
+let totalTies = ties*1;
+let resultTables = totalWins + totalTies;
+return resultTables;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
