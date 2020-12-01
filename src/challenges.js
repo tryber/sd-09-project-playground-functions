@@ -37,7 +37,7 @@ function highestCount(nums) {
         maior = nums[i]
     } else{
     }
-  }  
+  }
   for(let i = 0; i < nums.length; i += 1){
     let contagem = 0
     if(nums[i] == maior){
@@ -46,7 +46,7 @@ function highestCount(nums) {
     }
   }
 }
-return contagem
+  return contagem
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
