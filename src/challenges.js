@@ -10,25 +10,25 @@
 // compareTrue(true, true);
 
 // Desafio 2
-//Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
 
-//Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
-function calcArea(base, height) {
-  let triangle = []
-  triangle = ((base * height)/2);
-  return triangle
-}
-console.log(calcArea(10, 5))
+// function calcArea(base, height) {
+//   let triangle = []
+//   triangle = ((base * height)/2);
+//   return triangle
+// }
+// console.log(calcArea(10, 5))
 
 // // Desafio 3
-// function splitSentence() {
-//   // seu código aqui
-// }
+function splitSentence(splitSentence) {
+  let string = splitSentence
+  return console.log(string.split(' '))
+}
+splitSentence('go Trybe')
 
 // // Desafio 4
-// function concatName() {
-//   // seu código aqui
-// }
+
+//function concatName() {
+ 
 
 // // Desafio 5
 // function footballPoints() {
