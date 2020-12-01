@@ -14,3 +14,9 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 calcArea();
+
+function splitSentence(nomeCompleto) {
+    nomeCompleto = 'Renan de Oliveira Costa';
+    return nomeCompleto.split([' ']);
+}
+console.log(splitSentence());
