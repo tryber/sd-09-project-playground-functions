@@ -27,10 +27,11 @@ console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(firstAndLast) {
-  let result = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
+  let result = [];
+  result = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
   return result;
 }
-console.log(concatName(['Fernanda','Cajueiro','Machado']));
+console.log(concatName(['Fernanda' ,'Cajueiro' ,'Machado']));
 
 // Desafio 5
 function footballPoints() {
