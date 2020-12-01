@@ -22,15 +22,19 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName([array]) {
-  var primeiro = array[0];
-  var ultimo = [array.length-1]
-  return primeiro;
-  return ultimo;
+  let primeiro = array[0];
+  let ultimo = array.length-1;
+  return primeiro, ultimo;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let wins;
+    let ties;
+    let pointsWin= 3;
+    let pointsTie= 1;
+    let totalPoints= (wins*pointsWin) + (ties*pointsTie);
+    return totalPoints;
 }
 
 // Desafio 6
