@@ -1,6 +1,6 @@
 // Challenge 1 - This function receives two booleans 
-//  and returns true if both are true and false if not.
-//  By Pablo P Fernandes
+// and returns true if both are true and false if not.
+// By Pablo P Fernandes
 function compareTrue(boolOne, boolTwo) {
   if (boolOne && boolTwo) {
     return true;
@@ -13,9 +13,18 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Challenge Three - Split a sentence into an array
+function splitSentence(sentence) {
+  words = [];
+  wordCharacters = '';
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] === ' ' && index != 0) {
+      words.push(wordCharacters);
+    } else {
+      wordCharacters += sentence[index];
+    }
+  }
+  return words;
 }
 
 // Desafio 4
