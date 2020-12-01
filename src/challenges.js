@@ -1,6 +1,5 @@
 // VAMO NESSA É APENAS O COMEÇO!!!
 // Desafio 1
-
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
@@ -20,13 +19,15 @@ function splitSentence(meuNome) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let concatenando = arrayString[arrayString.length - 1];
+  concatenando += ", " + arrayString[0];
+  return concatenando;
 }
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  // return wins * 3;
 }
 
 // Desafio 6
@@ -91,3 +92,4 @@ module.exports = {
 console.log(compareTrue(true, false));
 console.log(calcArea(30, 20));
 console.log(splitSentence("Gabriel Castro"));
+console.log(concatName(["xurubita", "lucas", "thiago", "white"]));
