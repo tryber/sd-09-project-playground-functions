@@ -19,16 +19,19 @@
 // console.log(calcArea(10, 5))
 
 // // Desafio 3
-function splitSentence(splitSentence) {
-  let string = splitSentence
-  return console.log(string.split(' '))
-}
-splitSentence('go Trybe')
+// function splitSentence(splitSentence) {
+//   let string = splitSentence
+//   return console.log(string.split(' '))
+// }
+// splitSentence('go Trybe')
 
 // // Desafio 4
 
-//function concatName() {
- 
+function concatName(arraySTR) {
+  let string = arraySTR.reverse(' ')
+  return console.log(string)
+}
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 
 // // Desafio 5
 // function footballPoints() {
