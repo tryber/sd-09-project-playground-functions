@@ -27,16 +27,23 @@
 
 // // Desafio 4
 
-function concatName(arraySTR) {
-  let string = arraySTR.reverse(' ')
-  return console.log(string)
-}
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
+// function concatName(arraySTR) {
+//   let string = arraySTR.reverse(' ')
+//   return console.log(string)
+// }
+// concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
 
 // // Desafio 5
-// function footballPoints() {
-//   // seu código aqui
-// }
+// Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
+
+// Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+function footballPoints(wins, ties) {
+  let totalPoints = (wins*3) + ties;
+  return console.log(totalPoints)
+}
+footballPoints(10, 5)
+
+
 
 // // Desafio 6
 // function highestCount() {
