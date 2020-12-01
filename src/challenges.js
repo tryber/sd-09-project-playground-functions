@@ -19,7 +19,7 @@ console.log(`A área do triângulo é: ${calcArea(10, 0)}`);
 
 // Desafio 3
 function splitSentence(string) {
-  novaString = string.split(' ');
+  let novaString = string.split(' ');
   return novaString;
 }
 let string = 'go Trybe';
