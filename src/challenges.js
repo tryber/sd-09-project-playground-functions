@@ -32,15 +32,18 @@ function highestCount(arrayOfNumbers) {
   let highest;
   let count = 0;
   for(let index in arrayOfNumbers){
-    if(index === 0){
+    if(index == 0){
       highest = arrayOfNumbers[index];
     }else if(arrayOfNumbers[index] > highest){
       highest = arrayOfNumbers[index];
     }
   }
   for(let index in arrayOfNumbers){
-
+    if(highest == arrayOfNumbers[index]){
+      count += 1;
+    }
   }
+  return count;
 }
 
 // Desafio 7
