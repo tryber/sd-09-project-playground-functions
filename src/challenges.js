@@ -19,9 +19,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(a) {
-  b = a.length - 1
-  return a[0], a[b]
+function concatName(nome1) {
+  nome2 = nome1.length - 1
+  return nome1[0], nome2
 }
 
 // Desafio 5
@@ -49,8 +49,26 @@ function highestCount(nums) {
 return contagem
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse > cat1){
+    let distancia1 = mouse - cat1;
+  } else{
+    let distancia1 = cat1 - mouse;
+  }
+
+  if (mouse > cat2){
+    let distancia2 = mouse - cat2;
+  } else{
+    let distancia2 = cat2 - mouse;
+  }
+
+  if(distancia1 > distancia2){
+    return cat1;
+  } else if(distancia2 > distancia1){
+    return cat2;
+  } else{
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
