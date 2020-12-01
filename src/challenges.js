@@ -1,4 +1,4 @@
-// Challenge 1 - This function receives two booleans 
+// Challenge 1 - This function receives two booleans
 // and returns true if both are true and false if not.
 // By Pablo P Fernandes
 function compareTrue(boolOne, boolTwo) {
@@ -18,7 +18,7 @@ function splitSentence(sentence) {
   let words = [];
   let wordCharacters = '';
   for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] === ' ' && index != 0) {
+    if (sentence[index] === ' ' && index !== 0) {
       words.push(wordCharacters);
     } else {
       wordCharacters += sentence[index];
