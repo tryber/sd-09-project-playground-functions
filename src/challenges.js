@@ -51,10 +51,9 @@ function highestCount(numbers) {
   }
 return contnumber
 }
-console.log(highestCount([0,0,0]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   }else{
@@ -77,7 +76,7 @@ function catAndMouse() {
     }
   }
 }
-
+console.log (catAndMouse(0, 3, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
