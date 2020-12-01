@@ -4,21 +4,25 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true
   }
-  else {
-    return false
-  }
+  return false
 }
-console.log(compareTrue(true, true))
+// console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  base = Number(base)
+  height = Number(height)
+  return base * height / 2
 }
+// console.log(calcArea(5, 98))
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  return str.split(" ")
 }
+// console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName() {
