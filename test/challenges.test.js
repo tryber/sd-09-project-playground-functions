@@ -30,3 +30,7 @@ assert.deepStrictEqual(challenges.catAndMouse(-5, -9, -1), 'os gatos trombam e o
 assert.deepStrictEqual(challenges.catAndMouse(-5, -4, 9), 'cat1')
 assert.deepStrictEqual(challenges.catAndMouse(-5, 9, -1), 'cat2')
 console.log('7° OK');
+
+assert.deepStrictEqual(challenges.fizzBuzz([2, 15, 7, 9, 45]), ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"])
+assert.deepStrictEqual(challenges.fizzBuzz([2, 14, 7, 9, 45]), ["bug!", "bug!", "bug!", "fizz", "fizzBuzz"])
+console.log('8° OK');
