@@ -34,8 +34,8 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-let numeros = [1,3,2,3,3,4,4,5,3];
 function highestCount(numeros) {
+  let numeros = [1,3,2,3,3,4,4,5,3];
   let maior = 0;
   let repeticao = 0;
   for (let contador=0;contador<=numeros.lenght;contador++){
@@ -67,8 +67,8 @@ return "os gatos trombam e o rato foge"
 
 
 // Desafio 8
-let numbers = [1,2,3,4,5,6,7,8,9];
 function fizzBuzz(numbers) {
+  let numbers = [1,2,3,4,5,6,7,8,9];
   for(let contador3=0;contador3<=numbers.lenght;contador3++){
 if(numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0){
   return "fizz"
