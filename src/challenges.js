@@ -70,8 +70,6 @@ function fizzBuzz(array) {
   return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 function encode() {
   // seu código aqui
