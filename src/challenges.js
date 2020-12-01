@@ -53,7 +53,7 @@ function highestCount(numbers) {
   }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2) ){
     return 'cat2';
   } else if (Math.abs(mouse - cat2) > Math.abs(mouse - cat1)) {
@@ -124,7 +124,7 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   let order = tech.sort();
   let result = [];
  
