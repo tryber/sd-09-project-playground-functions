@@ -2,7 +2,7 @@
 // Desafio 1
 let valor1 = true;
 let valor2 = false;
-function compareTrue(valor1, valor2) {
+function compareTrue() {
   if (valor1 === true && valor2 === true) {
     return true;
   } else {
