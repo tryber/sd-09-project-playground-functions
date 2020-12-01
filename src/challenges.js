@@ -1,7 +1,7 @@
 //Vamo Que Vamo!!!
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === b){
+  if (a === true && b === true){
     return true;
   }else{
     return false;
@@ -9,13 +9,13 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   return(base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  
+function splitSentence(frase) {
+  return frase.split(' ')
 }
 
 // Desafio 4
