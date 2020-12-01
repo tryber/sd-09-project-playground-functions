@@ -27,8 +27,6 @@ function splitSentence(sentence) {
   return arraySentence
 }
 
-console.log(splitSentence('go Trybe'));
-
 // Desafio 4
 function concatName(arrayNomes) {
   let nomes = [];
@@ -42,17 +40,11 @@ function concatName(arrayNomes) {
   return nomes;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (3 * wins) + ties
   return points;
 }
-
-let vitorias = 3;
-let empates = 1;
-console.log(footballPoints(vitorias, empates))
 
 // Desafio 6
 
@@ -71,8 +63,6 @@ function highestCount(array) {
   }
   return numberOfRepeat;
 }
-
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 3, 3]))
 
 // Desafio 7
 function catAndMouse() {
