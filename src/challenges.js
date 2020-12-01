@@ -81,9 +81,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(cat2 - mouse);
   switch (true) {
     case (distanceCat1 > distanceCat2):
-      return distanceCat2;
+      return 'cat2';
     case (distanceCat2 > distanceCat1):
-      return distanceCat1;
+      return 'cat1';
     default:
       return 'os gatos trombam e o rato foge';
   }
