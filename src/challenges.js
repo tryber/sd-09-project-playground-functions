@@ -1,4 +1,3 @@
-
 function highestFinder(numbersArray) {
   let higher = numbersArray[0];
   for (let index = 0; index < numbersArray.length; index += 1) {
@@ -31,6 +30,10 @@ function splitSentence(sentence) {
   for (let index = 0; index < sentence.length; index += 1) {
     if (sentence[index] === ' ' && index !== 0) {
       words.push(wordCharacters);
+      wordCharacters = '';
+    } else if (index === (sentence.length -1)){
+      wordCharacters += sentence[index];
+      words.push(wordCharacters);
     } else {
       wordCharacters += sentence[index];
     }
@@ -41,7 +44,7 @@ function splitSentence(sentence) {
 // Challenge Four - Concatenation of strings
 function concatName(stringArray) {
   let stringConcat = '';
-  stringConcat = stringArray[Array.length - 1];
+  stringConcat = stringArray[stringArray.length - 1];
   stringConcat += ', ';
   stringConcat += stringArray[0];
   return stringConcat;
@@ -82,23 +85,24 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Challenge Eight - FizzBuzz Calculator
 function fizzBuzz(numbersArray) {
-  let fizzBuzzString = '';
+  let fizzBuzzStrings = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
     switch (true) {
-      case (!(numbersArray[index]%5 || numbersArray[index]%3)):
-        fizzBuzzString.push('fizzbuzz');
-        continue;
-      case (!(numbersArray[index]%5)):
-        fizzBuzzString.push('buzz');
-        continue;
-      case (!(numbersArray[index]%3)):
-        fizzBuzzString.push('fizz');
-        continue;
+      case (!(numbersArray[index] % 5 || numbersArray[index] % 3)):
+        fizzBuzzStrings.push('fizzbuzz');
+        break;
+      case (!(numbersArray[index] % 5)):
+        fizzBuzzStrings.push('buzz');
+        break;
+      case (!(numbersArray[index] % 3)):
+        fizzBuzzStrings.push('fizz');
+        break;
       default:
-        fizzBuzzString.push('bug!');
-        continue;
+        fizzBuzzStrings.push('bug!');
+        break;
     }
   }
+  return fizzBuzzStrings
 }
 
 // Desafio 9
