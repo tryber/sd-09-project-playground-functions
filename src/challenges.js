@@ -91,7 +91,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let cipencryptedher = "";
+  let encrypted = "";
   let cipher = {
     a: 1,
     e: 2,
