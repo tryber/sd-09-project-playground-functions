@@ -4,7 +4,7 @@ function compareTrue(numB1, numB2) {
   if (numB1 && numB2 > 0) {
     return true;
   } return false;
-}console.log(compareTrue(0, 0));
+}
 
 // Desafio 2
 function calcArea(base, altura) {
@@ -12,19 +12,24 @@ function calcArea(base, altura) {
   let area = 0;
   area = (base * altura) / 2;
   return area;
-}console.log(calcArea(2, 2));
+}
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-
-}
+let array = [];
+function splitSentence(word) {
+  array = word.split(' ');
+  return array;
+  }//console.log(array('18 36'));
+  
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomeInicioFim) {
+  //let retorno = nomeInicioFim[0]
+  return nomeInicioFim= nomeInicioFim[0] + ' e ' + nomeInicioFim[nomeInicioFim.length -1];
+}console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//var nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'] ;
+//console.log(nomes[0], nomes[nomes.length -1]);
 
-}
 
 // Desafio 5
 function footballPoints() {
