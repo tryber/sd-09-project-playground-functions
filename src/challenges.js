@@ -158,7 +158,7 @@ function techList(tech, name) {
   if (result.length == 0) {
     return 'Vazio!'
   }
-  return result
+  return result.sort()
 }
 
 console.log(techList([]))
