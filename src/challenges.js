@@ -1,12 +1,10 @@
 // #VQV
 
 // Desafio 1
-function compareTrue( value1, value2) {
-  if ((valor1 === true) && (valor2 === false)) {
+function compareTrue(value1, value2) {
+  if ((value1 === true) && (value2 === false)) {
     return true;
-  } else {
-    return false;
-}
+  } return false;
 }
 
 // Desafio 2
@@ -16,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  
+  //seu código aqui
 }
 
 // Desafio 4
