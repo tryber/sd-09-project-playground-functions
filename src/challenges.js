@@ -22,6 +22,7 @@ function concatName(vetor) {
   return (resposta +', ' + resposta2);
 }
 
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
@@ -29,8 +30,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = 0;
+  let cont = 0;
+  for (let index in array){
+    if (maiorNumero < array[index]){
+      maiorNumero = array[index]
+    }
+  }
+  for (let index2 in array){
+    if (maiorNumero === array[index2]){
+      cont += 1
+    }
+  }
+  return cont
 }
 
 // Desafio 7
