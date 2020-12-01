@@ -113,7 +113,20 @@ function decode(phrase) {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  let order = tech.sort();
+  let result = [];
+ 
+  if (tech.length > 0) {
+    for (let key in order) {
+      let object = {};
+      object.tech = order[key];
+      object.name = name;
+      result.push(object);
+    }
+  } else {
+    result = 'Vazio!';
+  }
+  return result;
 }
 
 // Desafio 11
