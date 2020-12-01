@@ -1,3 +1,4 @@
+/** RAFAEL GERONIMO | TRYBE | #VQV */
 // Desafio 1
 function compareTrue() {
   // seu código aqui
