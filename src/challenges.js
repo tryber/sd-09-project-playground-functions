@@ -17,13 +17,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(arraySource) {
-  newArray = arraySource.split(' ');
+  let newArray = arraySource.split(' ');
   return newArray;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arraySource) {
+  let newArray = [];
+  newArray.push(arraySource[arraySource.length-1],arraySource[0]);
+  return newArray;
 }
 
 // Desafio 5
