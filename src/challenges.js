@@ -38,19 +38,33 @@ function concatName(ahei) {
   let lastFirst = ahei[ahei.length-1] + ', ' + ahei[0];
   return lastFirst;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   return ((wins*3)+ties);
 }
-console.log(footballPoints(5, 3));
+//console.log(footballPoints(5, 3));
 
 // Desafio 6
-function highestCount() {
+function highestCount(aheiNumbers) {
   // seu código aqui
+  let maior = [0, 0];
+  for (index = 0; index < aheiNumbers.length; index += 1) {
+    if (aheiNumbers[index] >= aheiNumbers[(aheiNumbers.length-1)-index] && aheiNumbers[index] >= maior[0]) {
+        if (aheiNumbers[index] === maior[0]) {
+          maior[0] = aheiNumbers[index];
+          maior[1] += 1; 
+        } else {
+          maior[0] = aheiNumbers[index];
+          maior[1] = 1;
+        }
+    }
+  }
+  return maior[1];
 }
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
