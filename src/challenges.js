@@ -1,22 +1,22 @@
 // #VQV
 
 // Desafio 1
-function compareTrue(value1, value2) {
-  if (value1 === value2 && value1 >= value2) {
-    return false;
-  } else {
+function compareTrue( value1, value2) {
+  if (value1 && value2 !== true) {
     return true;
-  }
+  } else {
+    return false;
+}
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let calc = (base * height) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  
 }
 
 // Desafio 4
