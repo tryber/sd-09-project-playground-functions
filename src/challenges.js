@@ -23,7 +23,7 @@ function splitSentence(string) {
       array.push(storage);
       storage = '';
     } else {
-      storage = storage + string[index];
+      storage += string[index];
     }
   }
   array.push(storage);
@@ -33,9 +33,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let result = `${array[0]}, ${array[array.length - 1]}`;
-  console.log(result);
-  return result;
+  let seiLaEu = `${array[0]}, ${array[array.length - 1]}`;
+  console.log(seiLaEu);
+  return seiLaEu;
 }
 
 // Desafio 5
