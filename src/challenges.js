@@ -7,59 +7,56 @@ function compareTrue(firstValue, secondValue) {
  }
  else {
    return false
+  }
  }
-}
 
 // Desafio 2
 function calcArea(value1, value2) {
   return value1 * value2/2
-}
+ }
 
 // Desafio 3
 function splitSentence(sentence) {
   return sentence.split(' ')
-}
+ }
 
 // Desafio 4
-function concatName(name) {
-  container = name.split(' ').reverse()
-  for(i = 0; i < container.length; i++) {
-      if (i == 0) {
+function concatName(names) {
+   container = names.split(' ').reverse()
+   for(i = 0; i < container.length; i++) {
+       if (i == 0) {
            y += container[i]+', '
-      }
-      else if (i == container.length -1) {
+       }
+       else if (i == container.length -1) {
           y += container[i]
-      }
-  }
-  return y
-}
+       }
+   }
+   return y
+ }
 
 // Desafio 5
-function footballPoints() {
-  let winspoints = wins *3;
-  let tiespoints = ties;
-  let totalPoints;
+function footballPoints(wins, ties) {
+   let winspoints = wins *3;
+   let tiespoints = ties;
+   let totalPoints;
    return totalPoints = winspoints + tiespoints;
 }
 
 // Desafio 6
 function highestCount(numbers) {
-
-var contador = 0;
-var comparador;
-
-    comparador = numbers[0];
-  for (i = 0; i < n.length; i++) {
-    if (comparador < n[i]) {
-        comparador = n[i]
+  let bigger = numbers[0];
+  let bigger2 = 0;
+  for (let counter = 0; counter < numbers.length; counter += 1) {
+     if (bigger < numbers[counter]) {
+       bigger = numbers[counter];
+     }
+  }
+  for (let index in numbers) {
+    if (bigger === numbers[index]) {
+      bigger2 += 1;
     }
-    for (i = 0; i < n.length; i++) {
-        if (comparador == n[i]) {
-            contador++
-        }
-    }
-}
-return contador
+  }
+  return bigger2;
   }
 
 // Desafio 7
@@ -73,11 +70,45 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let encodePhrase = '';
+
+  for (let key in word) {
+    if (word[key] === 'a') {
+      encodePhrase += '1';
+    } else if (word[key] === 'e') {
+      encodePhrase += '2';
+    } else if (word[key] === 'i') {
+      encodePhrase += '3';
+    } else if (word[key] === 'o') {
+      encodePhrase += '4';
+    } else if (word[key] === 'u') {
+      encodePhrase += '5';
+    } else {
+      encodePhrase += word[key];
+    }
+  }
+  return encodePhrase;
 }
-function decode() {
-  // seu código aqui
+function decode(word2) {
+  let decodePhrase = '';
+
+  for (let key in word2) {
+    if (word2[key] === '1') {
+      decodePhrase += 'a';
+    } else if (word2[key] === '2') {
+      decodePhrase += 'e';
+    } else if (word2[key] === '3') {
+      decodePhrase += 'i';
+    } else if (word2[key] === '4') {
+      decodePhrase += 'o';
+    } else if (word2[key] === '5') {
+      decodePhrase += 'u';
+    } else {
+      decodePhrase += word2[key];
+    }
+  } 
+  return decodePhrase;
 }
 
 // Desafio 10
@@ -91,8 +122,12 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
