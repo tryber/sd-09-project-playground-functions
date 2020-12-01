@@ -23,8 +23,9 @@ function splitSentence(string) {
 function concatName(array) {
   let firstIndex = array.shift();
   let lastIndex = array.pop();
-  return lastIndex + ', ' + firstIndex;
+  return `${lastIndex}, ${firstIndex}`;
 }
+
 
 // Desafio 5
 function footballPoints() {
