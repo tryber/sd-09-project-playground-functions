@@ -2,10 +2,10 @@
 function compareTrue(arg, arg2) {
   if ((arg === true) && (arg2 === true)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
+console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea() {
