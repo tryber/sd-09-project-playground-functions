@@ -14,7 +14,7 @@ function distanceBetweenTwoPoins(position1, position2) {
   let distance = 0;
   if (position1 < position2) {
     distance = position2 - position1;
-  }else{
+  } else {
     distance = position1 - position2;
   }
   return distance;
@@ -70,11 +70,11 @@ function highestCount(arrayNum) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance_1 = distanceBetweenTwoPoins(mouse, cat1);
-  let distance_2 = distanceBetweenTwoPoins(mouse, cat2);
-  if (distance_1 > distance_2) {
+  let distance1 = distanceBetweenTwoPoins(mouse, cat1);
+  let distance2 = distanceBetweenTwoPoins(mouse, cat2);
+  if (distance1 > distance2) {
     return 'cat2';
-  }else if(distance_2 > distance_1) {
+  } else if (distance2 > distance1) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
