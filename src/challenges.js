@@ -152,7 +152,8 @@ function decode(phraseNumbers) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array = []){
+  let n1 = array.length;
+  if (n1 == 0){
     return 'Vazio!';
   } else {
       let array2 = array.sort();
@@ -168,6 +169,7 @@ function techList(array, name) {
       return array3;
   }
 }
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
