@@ -24,10 +24,10 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(stringArray) {
   // seu código aqui
+  let arrayToReturn
   let firstItem = stringArray.shift()
   let lastItem = stringArray.pop()
-  let arrayToReturn = []
-  arrayToReturn.concat(lastItem, firstItem)
+  arrayToReturn.push(lastItem, firstItem)
   return arrayToReturn
 }
 
