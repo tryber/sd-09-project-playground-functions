@@ -22,7 +22,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(name) {
-  return name[0] + ", " + name[name.length - 1]
+  return name[name.length - 1] + ", " + name[0]
 }
 
 // Desafio 5
