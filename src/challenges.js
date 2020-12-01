@@ -25,8 +25,8 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
+  let received=[];
   for (i in array){
-    let received=[];
     if (i==0 | i==array.length-1){
       received.push=array[i];
     }
