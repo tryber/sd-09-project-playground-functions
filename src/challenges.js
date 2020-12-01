@@ -99,9 +99,21 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nomeTech,name) {
+  let ordem = nomeTech.sort();
+  let skills = ["Javascript","HTML","CSS"];
+  if (nomeTech.length === 0) {
+    return "Vazio!"
+  }
+  for (let techName of ordem) {
+    skills.push({
+      tech: techName,
+      name: name,
+    });
+  }
+  return skills;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
