@@ -83,6 +83,7 @@ function fizzBuzz(arrayPassed) {
       arrayFizzBuzz.push("bug!")
     }
   }
+  return arrayFizzBuzz;
   console.log(arrayFizzBuzz);
 }
 let arrayNumbers = [2, 15, 7, 9, 45];
