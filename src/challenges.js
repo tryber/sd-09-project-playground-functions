@@ -1,8 +1,12 @@
-// Projeto desenvolvido por Igor Marcos Riegel (igmriegel - github) #VQV :D 
+/* Projeto desenvolvido por Igor Marcos Riegel (igmriegel - github) #VQV :D */
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  if (bool1 && bool2){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
