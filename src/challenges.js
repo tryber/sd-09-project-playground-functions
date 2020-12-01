@@ -1,8 +1,12 @@
 // Iniciando o segundo projeto VAMOS COM TUDO!!!
 
 // Desafio 1
-function compareTrue() {
+function compareTrue(boolean1, boolean2) {
   // seu código aqui
+  if (boolean1 & boolean2) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
