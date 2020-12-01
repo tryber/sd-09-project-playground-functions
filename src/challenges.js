@@ -44,8 +44,25 @@ let string = '';
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+let pontos = 0;
+
+function pontosWins(wins) {
+  let pontosWins = 0;
+  pontosWins = wins * 3;
+  return pontosWins;
+}
+  
+function pontosTies(ties) {
+  let pontosTies = 0;
+  pontosTies = ties * 1;
+  return pontosTies;
+}
+
+pontos = pontosWins(wins) + pontosTies(ties);
+  
+return pontos;
 }
 
 // Desafio 6
