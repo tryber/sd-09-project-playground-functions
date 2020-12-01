@@ -20,7 +20,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + array[0];
+  let newString = array[array.length -1] + ' ' + array[0];
+  return newString;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -63,23 +64,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let resultString = '';
-  for (let number in array) {
-
-    if (array[number] % 3 !== 0 && array[number] % 5 !== 0) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
       console.log('bug!');
     } else {
       console.log('fizzBuzz');
     }
 
-    if (array[number] % 3 === 0 && array[number] % 5 !== 0) {
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
       console.log('fizz');
-    } else if (array[number] % 3 !== 0 && array[number] % 5 === 0) {
+    } else if (array[index] % 3 !== 0 && array[index] % 5 === 0) {
       console.log('buzz');
-    }    
+    }
   }
 }
-// fizzBuzz([2, 15, 7, 9, 45]);
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
