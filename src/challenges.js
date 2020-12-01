@@ -6,7 +6,6 @@ function compareTrue(value1, value2) {
 }
   return false;
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, heigth) {
@@ -14,11 +13,12 @@ function calcArea(base, heigth) {
   area = (base * heigth) / 2;
   return area;
 }
-//console.log(calcArea(4 , 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let result = '';
+  result = string.split(" ");
+  return result;
 }
 
 // Desafio 4
