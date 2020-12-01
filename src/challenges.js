@@ -55,9 +55,24 @@ let empates = 1;
 console.log(footballPoints(vitorias, empates))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(array) {
+  let biggestNumber = 0;
+  let numberOfRepeat = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if(array[index] > biggestNumber) {
+      biggestNumber = array[index]
+    }
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === biggestNumber) {
+      numberOfRepeat += 1
+    }
+  }
+  return numberOfRepeat;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 3, 3]))
 
 // Desafio 7
 function catAndMouse() {
