@@ -1,12 +1,12 @@
-//Começando o projeto 2
+// Começando o projeto 2
 // Desafio 1
 function compareTrue(paramer1, paramer2) {
-  return (paramer1 && paramer2);
+  return paramer1 && paramer2;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -67,7 +67,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -83,4 +82,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
