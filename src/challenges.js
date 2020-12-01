@@ -56,33 +56,31 @@ function highestCount(numbersArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let diffCat1 = 0;
-  let diffCat2 = 0;
-  let phrase = '';
+  // let diffCat1 = 0;
+  // let diffCat2 = 0;
+  // let phrase = '';
 
-  if (mouse > cat1) {
-    diffCat1 = mouse - cat1;
+  // if (mouse > cat1) {
+  //   diffCat1 = mouse - cat1;
+  // } else {
+  //   diffCat1 = cat1 - mouse;
+  // }
+
+  // if (mouse > cat2) {
+  //   diffCat2 = mouse - cat2;
+  // } else {
+  //   diffCat2 = cat2 - mouse;
+  // }
+
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
   } else {
-    diffCat1 = cat1 - mouse;
+    return 'Os gatos trombam e o rato foge';
   }
-
-  if (mouse > cat2) {
-    diffCat2 = mouse - cat2;
-  } else {
-    diffCat2 = cat2 - mouse;
-  }
-
-  if (diffCat1 < diffCat2) {
-    phrase = 'cat1';
-  } else if (diffCat1 > diffCat2) {
-    phrase = 'cat2';
-  } else {
-    phrase = 'Os gatos trombam e o rato foge';
-  }
-
-  return `Cat1 ${diffCat1}, Cat2 ${diffCat2} = ${phrase}`;
 }
-console.log(catAndMouse(1, 0, 2));
+// console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8
