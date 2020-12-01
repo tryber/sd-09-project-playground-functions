@@ -6,7 +6,7 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   } 
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -20,7 +20,7 @@ function splitSentence(string) {
   // seu código aqui
   return string.split([' ']);
 }
-
+console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName() {
