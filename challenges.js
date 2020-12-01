@@ -1,7 +1,7 @@
 function compareTrue(bool1, bool2) {
   bool1 = true;
   bool2 = true;
-  if ((bool1 === true) && (bool2 === true)) {
+  if (bool1 === true && bool2 === true) {
     return true;
   }
   return false;
@@ -16,7 +16,7 @@ function calcArea(base, height) {
 calcArea();
 
 function splitSentence(nomeCompleto) {
-    nomeCompleto = 'Renan de Oliveira Costa';
-    return nomeCompleto.split([' ']);
+  nomeCompleto = 'Renan de Oliveira Costa';
+  return nomeCompleto.split([' ']);
 }
-console.log(splitSentence());
+splitSentence();
