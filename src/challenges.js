@@ -39,7 +39,7 @@ function highestCount(param) {
   let high = 0;
   let count = 0;
   for (let index = 0; index < param.length; index += 1) {
-    if(param[index] > high) {
+    if (param[index] > high) {
       high = param[index];
       count = 1;
     } else if (param[index] === high) {
