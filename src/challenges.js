@@ -49,8 +49,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let biggerNumber = 0;
+  let countBuggerNumber = 0;
+  
+  for (let index in numbers) {
+    if (numbers[index] === biggerNumber) {
+      countBuggerNumber += 1;
+    }
+    if(numbers[index] > biggerNumber) {
+      biggerNumber = numbers[index];
+      countBuggerNumber = 1;
+    }
+    
+  }
+
+  return countBuggerNumber;
 }
 
 // Desafio 7
@@ -109,8 +123,9 @@ module.exports = {
   triangleCheck,
 }
 
-console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
 console.log(calcArea(20, 30));
 console.log(splitSentence('go Trybe vamos que vamos'));
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(10, 5));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
