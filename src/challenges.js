@@ -33,9 +33,27 @@ function footballPoints(wins, ties) {
   return (3*wins+ties);
 }
 
+// funcao auxiliar para 6
+function findHigher(array){
+  let auxNum = 0;
+  for ( let item of array){
+    if (item >= auxNum){
+      auxNum = item;
+    }
+  }
+  return auxNum;
+}
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highest = findHigher(array);
+  let counter = 0;
+  for ( let item of array){
+    if (highest === item){
+      counter +=1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
