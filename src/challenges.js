@@ -5,13 +5,13 @@ function compareTrue(valor1, valor2) {
   } else {
     return false;
   }
-}   console.log(compareTrue(3, 3));
+}   console.log(compareTrue(3, 4));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
-
+function calcArea(base, heigth) {
+      return ((base * heigth) / 2);
+} 
+        console.log(calcArea(10, 5));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
