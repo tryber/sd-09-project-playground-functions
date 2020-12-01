@@ -157,17 +157,21 @@ function ascOrder(array) {
 }
 
 function techList(array, name) {
-  array = ascOrder(array);
-  let output = [];
-  for (let index in array) {
-    let tech = array[index];
-    let obj = {
-      tech: tech,
-      name: name
-    };
-    output.push(obj);
+  if (array.length > 0) {
+    array = ascOrder(array);
+    let output = [];
+    for (let index in array) {
+      let tech = array[index];
+      let obj = {
+        tech: tech,
+        name: name
+      };
+      output.push(obj);
+    }
+    return output;
+  } else {
+    return 'Vazio!';
   }
-  return output;
 }
 
 // Desafio 11
