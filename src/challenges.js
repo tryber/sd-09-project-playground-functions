@@ -85,24 +85,74 @@ function catAndMouse(cat1, cat2, mouse) {
     return 'Os gatos trombam e o rato foge'
   } else if (diffCat1 > diffCat2) {
     return 'cat2'
-  } else {
-    return 'cat1'
   }
+  return 'cat1'
 }
 // console.log(catAndMouse(-4, -5, -6))
 
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
+  const myArray = []
+  for (element of array) {
+    if (element % 3 === 0 && element % 5 === 0) {
+      myArray.push('fizzBuzz')
+    } else if (element % 3 === 0) {
+      myArray.push('fizz')
+    } else if (element % 5 === 0) {
+      myArray.push('buzz')
+    } else {
+      myArray.push('bug!')
+    }
+  }
+  return myArray
 }
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  let newString = ''
+  for (let element of str) {
+    if (element === 'a') {
+      newString += '1'
+    } else if (element === 'e') {
+      newString += '2'
+    } else if (element === 'i') {
+      newString += '3'
+    } else if (element === 'o') {
+      newString += '4'
+    } else if (element === 'u') {
+      newString += '5'
+    } else {
+      newString += element
+    }
+  }
+  return newString
 }
-function decode() {
+// console.log(encode('hi there!'))
+
+function decode(str) {
   // seu código aqui
+  let newString = ''
+  for (let element of str) {
+    if (element === '1') {
+      newString += 'a'
+    } else if (element === '2') {
+      newString += 'e'
+    } else if (element === '3') {
+      newString += 'i'
+    } else if (element === '4') {
+      newString += 'o'
+    } else if (element === '5') {
+      newString += 'u'
+    } else {
+      newString += element
+    }
+  }
+  return newString
 }
+// console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList() {
