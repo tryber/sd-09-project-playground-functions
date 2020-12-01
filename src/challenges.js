@@ -1,3 +1,4 @@
+// Projeto 02!!!! o/ Vamos que vamos...
 // Desafio 1
 function compareTrue() {
   // seu código aqui
