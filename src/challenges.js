@@ -51,9 +51,13 @@ function highestCount(array) {
   let higher = 0;
   let result = 0;
   for (let index in array) {
-    if (array[index] >= higher) {
-      result += 1;
+    if (array[index] > higher) {
       higher = array[index];
+    }
+  }
+  for (let index2 in array) {
+    if (array[index2] === higher) {
+      result += 1;
     }
   }
   console.log(result);
@@ -61,8 +65,8 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
 }
 
 // Desafio 8
@@ -121,6 +125,6 @@ calcArea(5, 4)
 splitSentence('Go Trybe')
 concatName(['primeira', 'segunda', 'Ultima'])
 footballPoints(3, 1)
-highestCount([9, 1, 2, 3, 9, 5, 7])
+highestCount([9, 1, 2, 41, 3, 9, 5, 7, 9, 41, 17, 41])
 
 // Aooba, não é que tem um segredo no Lession Learned?!
