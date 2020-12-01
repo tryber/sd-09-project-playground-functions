@@ -142,17 +142,21 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(number) {
-  function createPhoneNumber(numbers){
-    let number = '(###) ###-####'
-    
-    for(let i = 0; i < numbers.length; i++) {
-      number = number.replace('#', numbers[i])
-    }
-  return number
+function generatePhoneNumber(numbers) {
+  let phoneFormatt = '(xx) xxxxx-xxxx'
+  for (let y = 0; y < numbers.length; y++) {
+  if (numbers.length != 11) {
+      return 'Array com tamanho incorreto'
   }
-
-  
+  else if (numbers[y] < 0) {
+          return 'não é possível gerar um número de telefone com esses valores'
+  }
+}
+  for (let i = 0; i < numbers.length; i++) {
+    phoneFormatt=phoneFormatt.replace('x', numbers[i])
+    
+  }
+  return phoneFormatt
 }
 
 // Desafio 12
