@@ -1,3 +1,4 @@
+//Segundo Projecto  de Frederico Canoeira #VQV
 // Desafio 1
 function compareTrue() {
   // seu código aqui
