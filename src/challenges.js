@@ -82,11 +82,25 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(frase) {
+  for (let i = 0; i < frase.length; i++){
+    frase = frase.replace('a' , '1');
+    frase = frase.replace('e' , '2');
+    frase = frase.replace('i' , '3');
+    frase = frase.replace('o' , '4');
+    frase = frase.replace('u' , '5');
+  }
+  return frase
 }
 function decode() {
-  
+  for (let i = 0; i < frase.length; i++){
+    frase = frase.replace('1' , 'a');
+    frase = frase.replace('2' , 'e');
+    frase = frase.replace('3' , 'i');
+    frase = frase.replace('4' , 'o');
+    frase = frase.replace('5' , 'u');
+  }
+  return frase
 }
 
 // Desafio 10
