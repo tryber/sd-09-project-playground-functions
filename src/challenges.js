@@ -5,14 +5,12 @@ function compareTrue(param1, param2) {
     return true;
   }
   return false;
-
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   return ((base * height) / 2);
-
 }
 
 // Desafio 3
@@ -29,12 +27,14 @@ function splitSentence(str) {
     }
   }
   return subPalavras;
-
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrs) {
   // seu código aqui
+  let concatenado = arrs[arrs.length - 1]
+  concatenado += ', ' + arrs[0];
+  return concatenado; 
 }
 
 // Desafio 5
