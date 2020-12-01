@@ -4,7 +4,10 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  return a && b ? true : false;
+  if (a && b) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
