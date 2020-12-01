@@ -21,9 +21,17 @@ function calcArea(base, height) {
 console.log(calcArea(10, 5));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  let sentence = [];
+
+  for(i = 0; i < str.length; i += 1) {
+    str[i] = sentence.push(str[i])
+  }
+  return sentence;
 }
+
+console.log(splitSentence('Eae mundão'));
 
 // Desafio 4
 function concatName() {
