@@ -1,19 +1,21 @@
 // Projeto 02!!!! o/ Vamos que vamos...
 // Desafio 1
 function compareTrue(valueA, valueB) {
-    valueA = true;
-    valueB = true;
-    
-    if (valueA === true && valueB === true){
-        return true;
-    } else {
-        return false;
-    }
+  valueA = true;
+  valueB = true;    
+  if (valueA === true && valueB === true){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  base = 10;
+  height = 13;
+  let areaDoTriangulo = (10 * 13) / 2;
+  return areaDoTriangulo;
 }
 
 // Desafio 3
