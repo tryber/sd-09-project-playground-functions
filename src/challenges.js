@@ -1,13 +1,12 @@
-//Projeto 2 
+// Projeto 2
 
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
-  };
-};
+  }
+  return false;
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -35,8 +34,11 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameToConcat) {
+  let nameConcatened = '';
+  nameConcatened += nameToConcat[nameToConcat.length - 1] + ', ' + nameToConcat[0];
+
+  return nameConcatened;
 }
 
 // Desafio 5
@@ -108,3 +110,4 @@ module.exports = {
 console.log(compareTrue(false, false));
 console.log(calcArea(20, 30));
 console.log(splitSentence('go Trybe vamos que vamos'));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
