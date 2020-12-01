@@ -26,13 +26,15 @@ function concatName(stringArray) {
   // seu código aqui
   let firstItem = stringArray.shift()
   let lastItem = stringArray.pop()
-  let stringConcat = lastItem + ', ' + firstItem
+  let stringConcat = `${lastItem}, ${firstItem}`
   return stringConcat
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = (wins * 3) + ties
+  return points
 }
 
 // Desafio 6
