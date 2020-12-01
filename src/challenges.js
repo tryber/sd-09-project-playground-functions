@@ -3,8 +3,8 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if (value1 === true && value2 === true) {
     return true;
-  } 
-    return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -28,8 +28,8 @@ function concatName(array) {
   // seu código aquig
   let saveArray = array;
   let result = saveArray.split(' ');
-
-  return (result[0], result[(result.length - 1)]);
+  let concat = (result[0] + result[(result.length - 1)]);
+  return concat;
 }
 
 // Desafio 5
@@ -52,7 +52,7 @@ function highestCount(arrayNumber) {
       number1 = number2;
     }
   }
-  for (count = 0; count < arrayNumber.length; count += 1) {
+  for (let count = 0; count < arrayNumber.length; count += 1) {
     if (number1 === arrayNumber[count]) {
       result += 1;
     }
@@ -61,9 +61,23 @@ function highestCount(arrayNumber) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let count2 = cat2;
+
+  for (let count = cat1; count <= mouse; count += 1) {
+    count2 -= 1;
+    if(count == mouse && count2 == mouse) {
+      return ('os gatos trombam e o rato foge');
+    } else if (count == mouse) {
+      return ('cat1');
+    } else if (count2 == mouse) {
+      return ('cat2');
+    }
+  }
 }
+
+console.log(catAndMouse(10, 0, 18));
 
 // Desafio 8
 function fizzBuzz() {
