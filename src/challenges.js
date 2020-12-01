@@ -55,6 +55,10 @@ function highestCount(numbersArray) {
 
 
 // Desafio 7
+function subtrNumber(number1, number2) {
+  return (number1 < number2) ? number2 - number1 : number1 - number2;
+}
+
 function catAndMouse(mouse, cat1, cat2) {
   let phrase = '';
   let diffCat1 = subtrNumber(mouse, cat1);
@@ -80,10 +84,6 @@ function catAndMouse(mouse, cat1, cat2) {
   // }
 
   return phrase;
-}
-
-function subtrNumber(number1, number2) {
-  return (number1 < number2) ? number2 - number1 : number1 - number2;
 }
 // console.log(catAndMouse(1, 0, 2));
 
