@@ -3,9 +3,8 @@ function compareTrue(bool1, bool2) {
   bool2 = false;
   if ((bool1 === true) && (bool2 === true)) {
     return true;
-  }
-  else {
-    return false;
+  } else {
+      return false;
   }
 }
 console.log(compareTrue());
