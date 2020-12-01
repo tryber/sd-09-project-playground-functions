@@ -3,19 +3,13 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true
 
-  } else {
-    return false
-
-}}
+} return false
+}
 
 
-// FAIL
-// Desafio 2
+// Desafio 2 - Verificação
 function calcArea(base, height) {
-  /* if (((base * height) / 2) <=  ) {
-    return true
-
-  } */
+  return (base * height) / 2
 
 }
 
@@ -38,9 +32,10 @@ function footballPoints(wins, ties) {
 
 }
 
-// Desafio 6 -- Verificação
+// Desafio 6 -- PASS
 function highestCount(param) {
-  let ultimoNumero = param.sort((a, b) => a - b)[param.length - 1]
+  let numerosOrdenados = param.sort((a, b) => a - b)
+  let ultimoNumero = numerosOrdenados[param.length - 1]
   let qtdNumerosRepetidos = 0;
 
   //console.log( 'numero mais alto = ' + ultimoNumero )
