@@ -10,9 +10,12 @@ let result = compareTrue(4, 9);
 console.log(result);
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return (base * height) / 2
   // seu código aqui
 }
+let area = calcArea(4, 7)
+console.log("A área deste triângulo é de, " + area)
 
 // Desafio 3
 function splitSentence() {
