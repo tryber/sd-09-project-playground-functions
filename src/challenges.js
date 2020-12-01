@@ -151,7 +151,7 @@ function generatePhoneNumber(numArray) {
           countNumbers += 1;
           index += 1;
         }
-      } else {
+      } else if (numArray[index] < 0) {
         checkNumbers = false;
         break;
       }
