@@ -49,7 +49,7 @@ function highestCount(array) {
       higherNumber = array[i];
       count = 1;
     } else if (higherNumber === array[i]) {
-      count++;
+      count += 1;
     }
   }
 
