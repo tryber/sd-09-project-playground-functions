@@ -45,6 +45,7 @@ function highestNumber(array) {
     }
   return highest;
 }
+
 let highest = highestNumber(array);
 
 function highestCount(array) {
@@ -73,8 +74,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let index = 0
+  for (index = 0; index < array.length; index ++) {
+    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+        array[index] = "fizzBuzz";
+    } else if (array[index] % 3 == 0) {
+      array[index] = "fizz";
+    } else if (array[index] % 5 == 0) {
+      array[index] = "buzz";
+    } else {
+    array[index] = "bug";
+    }
+  }
 }
+return array;
 
 // Desafio 9
 function encode() {
