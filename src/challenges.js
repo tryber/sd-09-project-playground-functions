@@ -9,13 +9,14 @@ function compareTrue(boolean1, boolean2) {
 }
 
 // Desafio 2
-function calcArea(base, heig) {
+function calcArea(base, height) {
   // seu código aqui
+  return base * height / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  // seu código aqui  
 }
 
 // Desafio 4
