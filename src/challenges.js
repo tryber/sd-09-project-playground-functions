@@ -1,6 +1,10 @@
 // Desafio 1 
-function compareTrue() {
-  
+function compareTrue(operador1,operador2) {
+    if (operador1 === true && operador2 === true){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Desafio 2
