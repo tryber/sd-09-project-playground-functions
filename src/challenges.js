@@ -54,14 +54,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function selectFizzBuzz(value) {
-      if (value % 3 === 0) {
-      return 'fizz'
+  if (value % 3 === 0) {
+    return 'fizz'
     } else if (value % 5 === 0) {
-      return 'buzz'
-    } else if (value % 3 === 0 && value % 5 === 0) {
-      return 'fizzBuzz'
-    } else {
-      return 'bug!'
+    return 'buzz'
+  } else if (value % 3 === 0 && value % 5 === 0) {
+    return 'fizzBuzz'
+  } else {
+    return 'bug!'
     }
 }
 
@@ -69,7 +69,7 @@ function selectFizzBuzz(value) {
 function fizzBuzz(valueArray) {
   const resultArray = []
   for (let i = 0; i < valueArray.length; i += 1) {
-     resultArray.push(selectFizzBuzz(valueArray[i]))
+    resultArray.push(selectFizzBuzz(valueArray[i]))
   }
   return resultArray
 }
