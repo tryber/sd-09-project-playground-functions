@@ -8,19 +8,22 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base * height / 2);
+  let area = base * (height / 2);
   return area;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  splitedSentence = sentence.split(" ");
+  let splitedSentence = sentence.split(' ');
   return splitedSentence;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let arrayLastFisrt = [];
+  arrayLastFisrt.push((arrayStrings.slice(0, 1)).join(''));
+  arrayLastFisrt.unshift((arrayStrings.slice(arrayStrings.length - 1, arrayStrings.length).join('')));
+  return arrayLastFisrt[0] + ', ' + arrayLastFisrt[1];
 }
 
 // Desafio 5
