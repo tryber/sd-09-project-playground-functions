@@ -1,19 +1,19 @@
 //Teste
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true){
+  if (bool1 === true && bool2 === true) {
     return true;
-  } else {
+  } 
     return false;
   }
 }
-console.log(compareTrue(true , false));
+console.log(compareTrue(true, false));
 
 // Desafio 2
-function calcArea(base , height) {
-  return (base * height)/2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
-console.log(calcArea(3 , 8));
+console.log(calcArea(3, 8));
 
 // Desafio 3
 function splitSentence() {
