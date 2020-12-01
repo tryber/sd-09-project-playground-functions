@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(boolUm, boolDois) {
-  if (boolUm == true && boolDois == true){
-    return console.log(true);
+  if (boolUm === true && boolDois === true) {
+    return true;
   } else {
-    return console.log(false);
+    return false;
   }
 }
 
@@ -19,8 +19,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeString) {
+  let nome = '';
+  nome += arrayDeString[arrayDeString.length - 1] + ', ' + arrayDeString[0];
+  return nome;
 }
 
 // Desafio 5
