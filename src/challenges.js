@@ -48,7 +48,7 @@ function highestCount(numbers) {
       return prev + 1
     }
     return prev
-  },0)
+  }, 0)
 }
 
 // Desafio 7
@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  return numbers.map(number => {
+  return numbers.map((number) => {
     if (number % 3 === 0 && number % 5 === 0) {
       return 'fizzBuzz'
     }
@@ -103,8 +103,37 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+/**
+ *
+ * @param {String[]} technologies
+ * @param {String} name
+ */
+function techList(technologies, name) {
+  if (!technologies.length) return []
+  for (let i = 0; i < technologies.length; i++) {
+    for (let j = i + 1; j < technologies.length; j++) {
+      const result = compareStringsLength(technologies[i], technologies[j])
+      if (result > 0) {
+        const techAuxiliar = technologies[i]
+        technologies[i] = technologies[j]
+        technologies[j] = techAuxiliar
+      }
+    }
+  }
+  return technologies.map(tech => ({ tech, name }))
+}
+/**
+ * @return {-1 | 0 | 1}
+ * @param {string} word1
+ * @param {string} word2
+ */
+function compareStringsLength(word1, word2) {
+  const lessWord = word1.length > word2.length ? word2.length : word1.length
+  for (let i = 0; i < lessWord; i++) {
+    if(word2[i] < word1[i]) return 1
+    else if(word1[i] < word2[i]) return -1
+  }
+  return 0
 }
 
 // Desafio 11

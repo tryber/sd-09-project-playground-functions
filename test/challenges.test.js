@@ -39,3 +39,27 @@ assert.deepStrictEqual(challenges.encode("hi there!"), "h3 th2r2!")
 assert.deepStrictEqual(challenges.decode("h3 th2r2!"), "hi there!")
 console.log('9° OK');
 
+assert.deepStrictEqual(challenges.techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'), [
+  {
+    tech: "CSS",
+    name: "Lucas"
+  },
+  {
+    tech: "HTML",
+    name: "Lucas"
+  },
+  {
+    tech: "JavaScript",
+    name: "Lucas"
+  },
+  {
+    tech: "Jest",
+    name: "Lucas"
+  },
+  {
+    tech: "React",
+    name: "Lucas"
+  }
+])
+console.log('10° OK');
+
