@@ -51,11 +51,10 @@ function highestCount(arrayOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 - mouse > cat2 - mouse) {
     return 'cat1';
-  } else if(cat2 - mouse > cat1 - mouse) {
+  } else if (cat2 - mouse > cat1 - mouse) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -77,25 +76,12 @@ function fizzBuzz(arrayOfNumbers) {
 // Desafio 9
 function encode(sentence) {
   let newWord = sentence;
-  for (let index in sentence) {
-    switch (sentence[index]) {
-      case 'a':
-        newWord = newWord.replace('a', '1');
-        break;
-      case 'e':
-        newWord = newWord.replace('e', '2');
-        break;
-      case 'i':
-        newWord = newWord.replace('i', '3');
-        break;
-      case 'o':
-        newWord = newWord.replace('o', '4');
-        break;
-      case 'u':
-        newWord = newWord.replace('u', '5');
-        break;
-    }
-  }
+  newWord = newWord.replace('a', '1');
+  newWord = newWord.replace('e', '2');
+  newWord = newWord.replace('i', '3');
+  newWord = newWord.replace('o', '4');
+  newWord = newWord.replace('u', '5');
+
   return newWord;
 }
 
