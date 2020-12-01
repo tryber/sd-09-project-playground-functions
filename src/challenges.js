@@ -1,17 +1,15 @@
 // Daniel
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  // seu código aqui
   if (bool1 && bool2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  return base*heigth/2;
 }
 
 // Desafio 3
