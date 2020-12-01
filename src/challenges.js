@@ -93,15 +93,13 @@ function fizzBuzz(array) {
   for (let i in array) {
     if (isDivisibleBy(array[i], 3) && isDivisibleBy(array[i], 5)) {
       answers.push('fizzBuzz');
-      continue;
     } else if (isDivisibleBy(array[i], 3)) {
       answers.push('fizz');
-      continue;
     } else if (isDivisibleBy(array[i], 5)) {
       answers.push('buzz');
-      continue;
+    }else{
+      answers.push('bug!');
     }
-    answers.push('bug!');
   }
   return answers;
 }
