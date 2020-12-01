@@ -65,13 +65,14 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let difCat1 = Math.abs(mouse - cat1);
   let difCat2 = Math.abs(mouse - cat2);
+  let batida = '';
   switch (true) {
     case difCat1 < difCat2:
       return 'cat1';
     case difCat2 < difCat1:
       return 'cat2';
     default:
-      let batida = 'os gatos trombam e o rato foge';
+      batida = 'os gatos trombam e o rato foge';
   }
   return batida;
 }
@@ -101,6 +102,7 @@ function fizzBuzz(arrNumber) {
 // Desafio 9
 function encode() {
   // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
