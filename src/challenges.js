@@ -1,13 +1,14 @@
 // #VQV turma 09!
 // Desafio 1
-function compareTrue(value1,value2) {
-  let result = value1 == true && value2 == true;
+function compareTrue(value1, value2) {
+  let result = value1 === true && value2 === true;
   return result;
-};
+}
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangleArea = (base * height) / 2;
+  return triangleArea;
 }
 
 // Desafio 3
