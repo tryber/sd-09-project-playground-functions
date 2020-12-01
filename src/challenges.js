@@ -31,9 +31,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highestCount) {
+function highestCount(number) {
   let highestrepeat = -999999999
-  for (let index = 0; index < highestCount.length; index += 1) {
+  for (let index = 0; index < number.length; index += 1) {
     repeat = 0
     for (let position = 0; position < highestCount.length; position += 1) {
       if (highestCount[index] == highestCount[position]) {
@@ -47,10 +47,26 @@ function highestCount(highestCount) {
   return highestrepeat
 }
 
+console.log(highestCount([2, 2, 2, 2, 4, 3, 5, 5]))
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  let distcat1 = mouse - cat1
+  let distcat2 = mouse - cat2
+  let result
+
+  if(cat1 == cat2){
+  result = "os gatos trombam e o rato foge"
+  }
+  else if(distcat1 < distcat2){
+    result = "cat1"
+  }
+  else if(distcat1 > distcat2){
+    result = "cat2"
+  }
+  return result
 }
+console.log(catAndMouse())
 
 // Desafio 8
 function fizzBuzz() {
