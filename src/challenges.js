@@ -5,38 +5,73 @@ function compareTrue(param1, param2) {
 
   } else {
     return false
-    
+
   }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2
+  
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(texto) {  
+  if (typeof(texto) === `string` ) {
+    return texto.split(' ')
+
+  } else console.log('não é string')
+    
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param) {
+  return ( `${param[0]}, ${param[param.length -1]}`)
+  
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (`\nPONTUAÇÃO\n` + `Vitórias: ` + wins * 3 + `pontos` + '\nEmpates: ' + ties + `pontos` )
+
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(param) {
+  let ultimoNumero = param.sort((a, b) => a - b)[param.length - 1]
+  let qtdNumerosRepetidos = 0;
+
+  for (let i = 0; i <= ultimoNumero; i++ ) {
+    if (param[i] === ultimoNumero) {
+      qtdNumerosRepetidos += 1
+
+    }
+  }
+
+  return qtdNumerosRepetidos
+  
 }
 
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  let gato1Distancia, gato2Distancia;
+
+  for (let i = mouse;i <= cat1; i += 1) {
+    if (mouse <= cat1) gato1Distancia += 1;
+
+    console.log(gato1Distancia)
+    
+  }
+  
+  /* for para gato 2
+
+  compara distancia entre gato 1
+  compara distancia entre gato 2
+
+  conta quantos passos existem para alcançar o rato
+   */
 }
 
 // Desafio 8
