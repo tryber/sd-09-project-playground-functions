@@ -23,7 +23,7 @@ function splitSentence(string) {
       array.push(storage);
       storage = '';
     } else {
-      storage = storage += string[index];
+      storage = storage + string[index];
     }
   }
   array.push(storage);
