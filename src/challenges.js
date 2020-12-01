@@ -7,8 +7,6 @@ function compareTrue(value1, value2) {
   } else {
     return false;
   }
-  
-  return compareTrue;
 }
 
 // Desafio 2
@@ -21,7 +19,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   string.split(',')
 
-  return string;
+  return splitSentence;
 }
 
 // Desafio 4
