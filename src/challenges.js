@@ -20,16 +20,13 @@ function splitSentence(go, trybe) {
 }
 
 // Desafio 4
-function concatName(arrayNpme) {
+function concatName(arrayNome) {
 return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let totalWins = wins*3;
-let totalTies = ties*1;
-let resultTables = totalWins + totalTies;
-return resultTables;
+return wins *3 + ties
 }
 // Desafio 6
 function highestCount() {
