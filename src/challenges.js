@@ -93,6 +93,7 @@ function isNumberCharecter(number) {
 
 function swapVowelNumber(vowel) {
   let number;
+
   switch (vowel) {
     case 'a':
       number = '1';
@@ -113,120 +114,144 @@ function swapVowelNumber(vowel) {
   return number;
 }
 
-  function swapNumberVowel(number) {
-    if (number === '1') {
+function swapNumberVowel(number) {
+  switch (number) {
+    case '1':
       return 'a';
-    }
-    if (number === '2') {
+    case '2':
       return 'e';
-    }
-    if (number === '3') {
+    case '3':
       return 'i';
-    }
-    if (number === '4') {
+    case '4':
       return 'o';
-    }
-    if (number === '5') {
+    case '5':
       return 'u';
+    default:
+      break;
+  }
+}
+
+function encode(string) {
+  string = string.split("");
+
+  for (let i in string) {
+    if (isVowel(string[i])) {
+      string[i] = swapVowelNumber(string[i]);
+    }
+  }
+  return string.join("");
+}
+
+console.log(encode("hello world!"));
+
+function decode(string) {
+  string = string.split("");
+
+  for (let i in string) {
+    if (isNumberCharecter(string[i])) {
+      string[i] = swapNumberVowel(string[i]);
+    }
+  }
+  return string.join("");
+}
+console.log(decode(encode("hello world!")));
+// Desafio 10
+function techList(techArray, name) {
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  let listOfObjects = [];
+  techArray = techArray.sort();
+
+  for (let i in techArray) {
+    let techObject = {
+      tech: techArray[i],
+      name: name,
+    };
+
+    listOfObjects.push(techObject);
+  }
+
+  return listOfObjects
+}
+
+// Desafio 11
+function generatePhoneNumber(numberArray) {
+  if (numberArray.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let i in numberArray) {
+    if (numberArray[i] < 0 || numberArray[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  function encode(string) {
-    string = string.split("");
+  let repeatCounter = 0;
 
-    for (let i in string) {
-      if (isVowel(string[i])) {
-        string[i] = swapVowelNumber(string[i]);
+  for (let i in numberArray) {
+    for (let j = i; j < numberArray.length; j++) {
+      if (numberArray[j] === numberArray[i]) {
+        repeatCounter++;
       }
-    }
-    return string.join("");
-  }
-
-  function decode(string) {
-    string = string.split("");
-
-    for (let i in string) {
-      if (isNumberCharecter(string[i])) {
-        string[i] = swapNumberVowel(string[i]);
-      }
-    }
-    return string.join("");
-  }
-
-  // Desafio 10
-  function techList(techArray, name) {
-    if (techArray.length === 0) {
-      return 'Vazio!';
-    }
-
-    let listOfObjects = [];
-    techArray = techArray.sort();
-
-    for (let i in techArray) {
-      let techObject = {
-        tech: techArray[i],
-        name: name,
-      };
-
-      listOfObjects.push(techObject);
-    }
-
-    return listOfObjects
-  }
-
-  // Desafio 11
-  function generatePhoneNumber(numberArray) {
-    if (numberArray.length != 11) {
-      return 'Array com tamanho incorreto.';
-    }
-
-    for (let i in numberArray) {
-      if (numberArray[i] < 0 || numberArray[i] > 9) {
+      if (repeatCounter >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
+    repeatCounter = 0;
+  }
+  numberArray = numberArray.join("")
+  return ('(' + numberArray.slice(0, 2) + ')' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
+}
 
-    let repeatCounter = 0;
+// Desafio 12
+function checkSumRule(lineA, lineB, lineC) {
+  return (lineA < (lineB + lineC))
+}
 
-    for (let i in numberArray) {
-      for (let j = i; j < numberArray.length; j++) {
-        if (numberArray[j] === numberArray[i]) {
-          repeatCounter++;
-        }
-        if (repeatCounter >= 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
-        }
-      }
-      repeatCounter = 0;
+function checkSubRule(lineA, lineB, lineC) {
+  return (lineA > Math.abs(lineB - lineC))
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let checks = [];
+
+  checks.push(checkSumRule(lineA, lineB, lineC));
+  checks.push(checkSumRule(lineB, lineC, lineA));
+  checks.push(checkSumRule(lineC, lineA, lineB));
+
+  checks.push(checkSubRule(lineA, lineB, lineC));
+  checks.push(checkSubRule(lineB, lineC, lineA));
+  checks.push(checkSubRule(lineC, lineA, lineB));
+
+  for (i in checks) {
+    if (!checks[i]) {
+      return false;
     }
-    numberArray = numberArray.join("")
-    return ('(' + numberArray.slice(0, 2) + ')' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
   }
 
-  // Desafio 12
-  function triangleCheck() {
-    // seu código aqui
-  }
+  return true;
+}
 
-  // Desafio 13
-  function hydrate() {
-    // seu código aqui
-  }
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    generatePhoneNumber,
-    techList,
-    highestCount,
-    hydrate,
-    splitSentence,
-    triangleCheck,
-  }
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
