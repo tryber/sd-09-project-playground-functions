@@ -41,7 +41,7 @@ console.log(footballPoints(2, 1));
 
 // Desafio 6
 function highestCount(numbersArray) {
-  // let 
+  // seu código aqui
 }
 
 // Desafio 7
