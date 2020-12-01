@@ -20,7 +20,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(nameList) {
-  let firstAndLast = '${nameList[nameList.length - 1]}, ${nameList[0]}';
+  let firstAndLast = `${nameList[nameList.length - 1]}, ${nameList[0]}`;
   return firstAndLast;
 }
 
@@ -33,24 +33,38 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestNumber(numberList) {
   let highest = 0;
-  for (let index in numberList) {
-  highest = highest < numberList[index] ? numberList[index] : highest;
+    for (let index in numberList) {
+      if (highest < numberList[index]) {
+        highest = numberList[index];
+    }
   }
-  return highest; 
+  return highest;
 }
 
 function highestCount(numberList) {
   let countMode = 0;
   let highest = highestNumber(numberList);
   for (let index in numberList) {
-    countMode = highest == numberList[index] ? countMode += 1 : countMode;
+    if (highest === numberList[index]) {
+      countMode += 1;
+    }
   }
   return countMode;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let message = '';
+  let cat1Distance = mouse - cat1;
+  let cat2Distance = mouse - cat2;
+  if (cat1Distance < cat2Distance) {
+    message = 'cat1';
+  } else if (cat1Distance > cat2Distance) {
+    message = 'cat2';
+  } else {
+    message = 'os gatos trombam e o rato foge';
+  }
+  return message;
 }
 
 // Desafio 8
