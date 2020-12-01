@@ -74,11 +74,10 @@ function fizzBuzz(array) {
       array[i] = 'fizzbuzz';
     } else if (array[i] % 5 === 0) {
       array[i] = 'buzz';
-    } else if (array[i] % 3 === 0){
+    } else if (array[i] % 3 === 0) {
       array[i] = 'fizz';
-    } else {
-      array[i] = 'bug!'
     }
+    array[i] = 'bug!'
   }
 
   return array;
