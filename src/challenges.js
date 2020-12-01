@@ -34,12 +34,28 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;  
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  count = 0;
+  for(let number in array){
+    if (array[number] === highestNumber(array)){
+      count += 1;
+    }
+  }
+  return count;
+}
+
+function highestNumber(array) {
+  highestN = array[0]
+  for(let number in array) {
+    if (array[number] > highestN) {
+      highestN = array[number];
+     } 
+  }
+  return highestN;
 }
 
 // Desafio 7
