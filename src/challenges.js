@@ -124,12 +124,14 @@ function decode(sentence) {
 // Desafio 10
 function techList(techArray, nameOfStudent) {
   let listToLearn = [];
+  
   if (techArray.length !== 0) {
     for (let index in techArray) {
-      listToLearn.push({
+      let format = {
         tech: techArray[index],
         name: nameOfStudent,
-      });
+      }
+      listToLearn.push(format);
     }
     return listToLearn;
   }
