@@ -97,7 +97,7 @@ function fizzBuzz(array) {
       answers.push('fizz');
     } else if (isDivisibleBy(array[i], 5)) {
       answers.push('buzz');
-    }else{
+    } else {
       answers.push('bug!');
     }
   }
