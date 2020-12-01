@@ -1,9 +1,13 @@
 //Projeto 2 
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-}
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  };
+};
 
 // Desafio 2
 function calcArea() {
@@ -85,3 +89,5 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+console.log(compareTrue(false, false));
