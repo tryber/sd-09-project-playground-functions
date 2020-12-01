@@ -94,7 +94,7 @@ function catAndMouse(cat1, cat2, mouse) {
 function fizzBuzz(array) {
   // seu código aqui
   const myArray = []
-  for (element of array) {
+  for (let element of array) {
     if (element % 3 === 0 && element % 5 === 0) {
       myArray.push('fizzBuzz')
     } else if (element % 3 === 0) {
@@ -112,52 +112,62 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(str) {
   // seu código aqui
-  let newString = ''
+  let encodingString = ''
   for (let element of str) {
     if (element === 'a') {
-      newString += '1'
+      encodingString += '1'
     } else if (element === 'e') {
-      newString += '2'
+      encodingString += '2'
     } else if (element === 'i') {
-      newString += '3'
+      encodingString += '3'
     } else if (element === 'o') {
-      newString += '4'
+      encodingString += '4'
     } else if (element === 'u') {
-      newString += '5'
+      encodingString += '5'
     } else {
-      newString += element
+      encodingString += element
     }
   }
-  return newString
+  return encodingString
 }
 // console.log(encode('hi there!'))
 
 function decode(str) {
   // seu código aqui
-  let newString = ''
+  let decodingString = ''
   for (let element of str) {
     if (element === '1') {
-      newString += 'a'
+      decodingString += 'a'
     } else if (element === '2') {
-      newString += 'e'
+      decodingString += 'e'
     } else if (element === '3') {
-      newString += 'i'
+      decodingString += 'i'
     } else if (element === '4') {
-      newString += 'o'
+      decodingString += 'o'
     } else if (element === '5') {
-      newString += 'u'
+      decodingString += 'u'
     } else {
-      newString += element
+      decodingString += element
     }
   }
-  return newString
+  return decodingString
 }
 // console.log(decode('h3 th2r2!'))
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  array = array.sort()
+  myArray = []
+  for (let element of array) {
+    let object = {}
+    object.tech = element
+    object.name = name
+    myArray.push(object)
+  }
+  return myArray
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Neves'))
 
 // Desafio 11
 function generatePhoneNumber() {
