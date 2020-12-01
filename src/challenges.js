@@ -46,19 +46,12 @@ function footballPoints(wins, ties) {
 // Challenge Six - Highest popularity counter
 function highestCount(numbersArray) {
   let higherPopularity = 0;
-  let higher = numbersArray[0];
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] > higher) {
-      higher = numbersArray[index];
-    }
-  }
-
+  let higher = highestFinder(numbersArray);
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] === higher) {
       higherPopularity += 1;
     }
   }
-
   return higherPopularity;
 }
 
@@ -116,4 +109,14 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
+}
+
+function highestFinder(numbersArray) {
+  let higher = numbersArray[0];
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] > higher) {
+      higher = numbersArray[index];
+    }
+  }
+  return higher;
 }
