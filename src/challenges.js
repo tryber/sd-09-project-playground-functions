@@ -129,7 +129,7 @@ function decode(sentence) {
 function techList(techArray, nameOfStudent) {
   let listToLearn = [];
   if (techArray.length !== 0) {
-    for (let index in techArray) {
+    for (let index = 0; index < techArray.length; index += 1) {
       let format = {
         tech: techArray[index],
         name: nameOfStudent,
