@@ -12,8 +12,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Used the split method contained in the documentation <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split>
+function splitSentence(phrase) {
+  let words = phrase.split(' ');
+  return words;
 }
 
 // Desafio 4
