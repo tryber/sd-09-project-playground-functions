@@ -89,16 +89,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let answers = [];
   for (let i in array) {
-    if (isDivisibleBy(i, 3) && isDivisibleBy(i, 5)) {
-      return 'fizzBuzz';
+    if (isDivisibleBy(array[i], 3) && isDivisibleBy(array[i], 5)) {
+      answers.push('fizzBuzz');
+      continue;
     } else if (isDivisibleBy(array[i], 3)) {
-      return 'fizz';
+      answers.push('fizz');
+      continue;
     } else if (isDivisibleBy(array[i], 5)) {
-      return 'buzz';
+      answers.push('buzz');
+      continue;
     }
+    answers.push('bug!');
   }
-  return 'bug';
+  return answers;
 }
 
 // Desafio 9
