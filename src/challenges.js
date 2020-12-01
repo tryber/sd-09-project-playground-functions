@@ -4,14 +4,17 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true){
     return true;
   } else {
-    return false
+    return false;
   }
 }
-
+let teste = false;
+let teste2 = true;
+console.log(compareTrue(teste, teste2));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  console.log(base*height/2);
 }
+
 
 // Desafio 3
 function splitSentence() {
