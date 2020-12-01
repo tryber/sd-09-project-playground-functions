@@ -190,7 +190,7 @@ function generatePhoneNumber(numbearray) {
       numberphone += numbearray[index] + ") "
     }
     else if (index == 6) {
-      numberphone += numbearray[index] + "-"
+      numberphone += numbearray[index] + " - "
     }
     else {
       numberphone += numbearray[index]
