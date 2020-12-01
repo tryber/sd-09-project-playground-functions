@@ -1,7 +1,7 @@
 // #VQV - LRLODI
 // Desafio 1
 function compareTrue( value1, value2 ) {
-  if ( value1=== true && value2 === true ) {
+  if ( value1 === true && value2 === true ) {
     return true;
   }
   return false;
@@ -43,21 +43,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayOfNumbers) {
-  let highestNumber;
+
+  let highestNumber = 0;
   let counter = 0;
+
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (arrayOfNumbers[index] > index){
+    if (arrayOfNumbers[index] > highestNumber){
       highestNumber = arrayOfNumbers[index];
     }
+  }
     for (let index = 0 ; index < arrayOfNumbers.length; index += 1) {
       if(arrayOfNumbers[index] === highestNumber){
         counter += 1;
       }
     }
-  }
   return counter;
 }
-highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse() {
