@@ -34,7 +34,7 @@ function concatName(array) {
   let switched=received[0];
   received[0]=received[1];
   switched.push=received[0];
-  return received.join();
+  return received.join(', ');
 }
 
 // Desafio 5
