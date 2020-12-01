@@ -18,8 +18,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let arraySentence = [];
-  for(let index = 0; index < sentence.length; index += 1) {
-    if(sentence[index] !== ' ') {
+  for (let index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] !== ' ') {
       arraySentence.push(sentence[index])
     }
   }
@@ -32,22 +32,27 @@ console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName(arrayNomes) {
   let nomes = [];
-  for(let index = arrayNomes.length - 1; index >= 0; index -= 1) {
+  for (let index = arrayNomes.length - 1; index >= 0; index -= 1) {
     if (arrayNomes[index] === arrayNomes[arrayNomes.length - 1]) {
       nomes.push(arrayNomes[index])
     } else if (arrayNomes[index] === arrayNomes[0]) {
       nomes.push(arrayNomes[index])
     }
   }
-  
   return nomes;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (3 * wins) + ties
+  return points;
 }
+
+let vitorias = 3;
+let empates = 1;
+console.log(footballPoints(vitorias, empates))
 
 // Desafio 6
 function highestCount() {
