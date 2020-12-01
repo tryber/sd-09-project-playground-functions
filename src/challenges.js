@@ -1,4 +1,4 @@
-//Challenge 1 - This function receives two booleans 
+// Challenge 1 - This function receives two booleans 
 //  and returns true if both are true and false if not.
 //  By Pablo P Fernandes
 function compareTrue(boolOne, boolTwo) {
@@ -10,7 +10,7 @@ function compareTrue(boolOne, boolTwo) {
 
 // Challenge Two - Triangle area
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
