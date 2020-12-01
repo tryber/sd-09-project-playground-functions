@@ -50,13 +50,30 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2) ){
+    return 'cat2';
+  } else if (Math.abs(mouse - cat2) > Math.abs(mouse - cat1)) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFizz) {
+  let arrayBuzz = [];
+  for (let index in arrayFizz){
+    if (arrayFizz[index] % 3 == 0 && arrayFizz[index] % 5 != 0){
+      arrayBuzz[index] = 'fizz';
+    } else if (arrayFizz[index] % 3 != 0 && arrayFizz[index] % 5 == 0){
+      arrayBuzz[index] = 'buzz';
+    } else if (arrayFizz[index] % 3 == 0 && arrayFizz[index] % 5 == 0){
+      arrayBuzz[index] = 'fizzBuzz';
+    } else {
+      arrayBuzz[index] = 'bug!'; 
+    } 
+  }
 }
 
 // Desafio 9
