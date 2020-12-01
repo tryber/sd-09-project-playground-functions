@@ -20,8 +20,8 @@ function splitSentence(go, trybe) {
 }
 
 // Desafio 4
-function concatName(arrayName) {
-return arrayName[arrayName.length-1] + ',' + arrayName[0];
+function concatName(arrayNpme) {
+return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
 }
 
 // Desafio 5
