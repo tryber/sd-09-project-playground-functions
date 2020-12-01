@@ -14,25 +14,28 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return words = phrase.split(' ');
+  let words = phrase.split(' ');
+  return words;
 }
 
 // Desafio 4
 function concatName(names) {
   let firstAndLast = '';
-  return firstAndLast = firstAndLast.concat(`${names[names.length - 1]}, ${names[0]}`);
+  firstAndLast = firstAndLast.concat(`${names[names.length - 1]}, ${names[0]}`);
+  return firstAndLast;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return points = (wins * 3) + ties;
+  let points = (wins * 3) + ties; 
+  return points;
 }
 
 // Desafio 6
 function highestCount(numbers) {
   let count = 0;
-  let highestNumber = numbers.reduce(function (a , b) {
-    return Math.max(a , b)
+  let highestNumber = numbers.reduce(function (a, b) {
+    return Math.max(a, b)
   })
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === highestNumber) {
@@ -50,26 +53,25 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (cat1Dist > cat2Dist) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let fizzBuzz = [];
+  let fizzBuzzResult = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      fizzBuzz = fizzBuzz.concat('fizzBuzz');
-    } else if (numbers[index] % 3 !==0 && numbers[index] % 5 === 0) {
-      fizzBuzz = fizzBuzz.concat('buzz');
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 !==0) {
-      fizzBuzz = fizzBuzz.concat('fizz');
+      fizzBuzzResult = fizzBuzzResult.concat('fizzBuzz');
+    } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
+      fizzBuzzResult = fizzBuzzResult.concat('buzz');
+    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+      fizzBuzzResult = fizzBuzzResult.concat('fizz');
     } else {
-      fizzBuzz = fizzBuzz.concat('bug!');
+      fizzBuzzResult = fizzBuzzResult.concat('bug!');
     }
   }
-  return fizzBuzz;
+  return fizzBuzzResult;
 }
 
 // Desafio 9
