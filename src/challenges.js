@@ -3,24 +3,20 @@ function compareTrue(numBoole1, numBoole2) {
   // seu código
   if (numBoole1 && numBoole2 > 0) {
     return true;
-  }else if ( numBoole1 && numBoole2 < 0){
+  } else if (numBoole1 && numBoole2 < 0) {
     return false;
   }
-
-}
-
-console.log(compareTrue(2, 2));
+}console.log(compareTrue(2, 2));
 
 // Desafio 2
 function calcArea(base, altura) {
   // seu código aqui
+  let area = 0;
   area = (base * altura) / 2;
 
   return area;
 
-}
-
-console.log(calcArea(2, 2));
+}console.log(calcArea(2, 2));
 
 // Desafio 3
 function splitSentence() {
