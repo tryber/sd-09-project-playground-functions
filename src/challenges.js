@@ -21,10 +21,11 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let ultimo;
-  let valor = [];
+  let concatenador = '';
   ultimo = array.length - 1;
-  valor.push (array[ultimo],array[0]);
-  return valor;
+  concatenador = array[ultimo];
+  concatenador += ', ' + array[0];
+  return concatenador;
 }
 
 // Desafio 5
