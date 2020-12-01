@@ -29,15 +29,15 @@ function splitSentence(sentence) {
   let wordCharacters = '';
   for (let index = 0; index < sentence.length; index += 1) {
     switch (true) {
-      case (sentence[index] === ' ' && index !== 0):
+      case (sentence[index] === ' ' && wordCharacters !== ''):
         words.push(wordCharacters);
         wordCharacters = '';
         break;
-      case (index === (sentence.length -1)):
+      case (index === (sentence.length - 1) && sentence[index] !== ' '):
         wordCharacters += sentence[index];
         words.push(wordCharacters);
-        break
-      default:
+        break;
+      case (sentence[index] !== ' '):
         wordCharacters += sentence[index];
         break;
     }
