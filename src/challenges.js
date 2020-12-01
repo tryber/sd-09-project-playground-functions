@@ -28,14 +28,18 @@ function splitSentence(sentence) {
   let words = [];
   let wordCharacters = '';
   for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] === ' ' && index !== 0) {
-      words.push(wordCharacters);
-      wordCharacters = '';
-    } else if (index === (sentence.length -1)){
-      wordCharacters += sentence[index];
-      words.push(wordCharacters);
-    } else {
-      wordCharacters += sentence[index];
+    switch (true) {
+      case (sentence[index] === ' ' && index !== 0):
+        words.push(wordCharacters);
+        wordCharacters = '';
+        break;
+      case (index === (sentence.length -1)):
+        wordCharacters += sentence[index];
+        words.push(wordCharacters);
+        break
+      default:
+        wordCharacters += sentence[index];
+        break;
     }
   }
   return words;
