@@ -36,11 +36,13 @@ function highestCount(arrayNums) {
   let highterNum = arrayNums[0];
   let highterNumRepeat = 0;
   for (let numberIndex in arrayNums) {
-    if (arrayNums[numberIndex] > highterNum) {
+    if (arrayNums[numberIndex] > highterNum)
+    {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
     }
-    else if (arrayNums[numberIndex] === highterNum) {
+    else if (arrayNums[numberIndex] === highterNum)
+    {
       highterNumRepeat += 1;
     }
   }
@@ -51,10 +53,12 @@ function highestCount(arrayNums) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs((cat1 - mouse));
   let distanceCat2 = Math.abs((cat2 - mouse));
-  if (distanceCat1 === distanceCat2) {
+  if (distanceCat1 === distanceCat2)
+  {
     return 'os gatos trombam e o rato foge';
   }
-  else if (distanceCat1 < distanceCat2) {
+  else if (distanceCat1 < distanceCat2)
+  {
     return 'cat1';
   }
   return 'cat2';
@@ -82,33 +86,29 @@ function fizzBuzz(arrayNums) {
 
 // Desafio 9
 function encode(phrase) {
-  arrayPhrase = phrase.split('');
-  for (let index in arrayPhrase){
-    switch (arrayPhrase[index]) {
-      case 'a':
-        arrayPhrase[index] = '1';
-        break;
-      case 'e':
-        arrayPhrase[index] = '2';
-        break;
-      case 'i':
-        arrayPhrase[index] = '3';
-        break;
-      case 'o':
-        arrayPhrase[index] = '4';
-        break;
-      case 'u':
-        arrayPhrase[index] = '5';
-        break;
-      default:
-        break;
+  let arrayPhrase = phrase.split('');
+  for (let index in arrayPhrase) {
+    if (arrayPhrase[index] === 'a') {
+        arrayPhrase[index] = 1;
+    }
+    else if (arrayPhrase[index] === 'e') {
+        arrayPhrase[index] = 2;
+    }
+    else if (arrayPhrase[index] === 'i') {
+        arrayPhrase[index] = 3;
+    }
+    else if (arrayPhrase[index] === 'o') {
+        arrayPhrase[index] = 4;
+    }
+    else if (arrayPhrase[index] === 'u') {
+        arrayPhrase[index] = 5;
     }
   }
   return arrayPhrase.join('');
 }
 
 function decode() {
-  arrayPhrase = phrase.split('');
+  let arrayPhrase = phrase.split('');
   for (let index in arrayPhrase){
     switch (arrayPhrase[index]) {
     case '1':
@@ -134,8 +134,23 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayNamesAndTechs, name) {
+  let arrayTech = [];
+  if (arrayNamesAndTechs != null) {
+    arrayNamesAndTechs.sort();
+    for (let index in arrayNamesAndTechs) {
+      arrayTech.push(
+        techObject = {
+        tech: arrayNamesAndTechs[index],
+        name: name
+      }
+      )
+    }
+    return arrayTech;
+  }
+  else {
+    return arrayTech;
+  }
 }
 
 // Desafio 11
