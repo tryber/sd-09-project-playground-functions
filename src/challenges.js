@@ -5,9 +5,9 @@
   if(valorOne === true && valorTwo === true) {
     return true;
   } else {
-  return false; 
+    return false;
   }
-}
+  }
 
 // Desafio 2
 function calcArea() {
