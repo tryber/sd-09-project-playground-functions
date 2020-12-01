@@ -26,8 +26,8 @@ function splitSentence(stringSentence) {
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
+let result = [];
 function concatName(firstAndLast) {
-  let result = [];
   result = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
   return result;
 }
