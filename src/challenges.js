@@ -74,12 +74,52 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let newWord = sentence;
+  for(let index in sentence){
+    switch (sentence[index]) {
+      case 'a':
+        newWord = newWord.replace('a', '1');
+        break;
+      case 'e':
+        newWord = newWord.replace('e', '2');
+        break;
+      case 'i':
+        newWord = newWord.replace('i', '3');
+        break;
+      case 'o':
+        newWord = newWord.replace('o', '4');
+        break;
+      case 'u':
+        newWord = newWord.replace('u', '5');
+        break;
+    }
+  }
+  return newWord;
 }
 
-function decode() {
-  // seu código aqui
+function decode(sentence) {
+  let oldWord = sentence;
+  for(let index in sentence){
+    switch(sentence[index]) {
+      case '1':
+        oldWord = oldWord.replace('1', 'a');
+        break;
+      case '2':
+        oldWord = oldWord.replace('2', 'e');
+        break;
+      case '3':
+        oldWord = oldWord.replace('3', 'i');
+        break;
+      case '4':
+        oldWord = oldWord.replace('4', 'o');
+        break;
+      case '5':
+        oldWord = oldWord.replace('5', 'u');
+        break;
+    }
+  }
+  return oldWord;
 }
 
 // Desafio 10
