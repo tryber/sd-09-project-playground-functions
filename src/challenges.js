@@ -53,7 +53,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let newArray = [];
+  for (let index in numbers) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (numbers[index] % 5 === 0) {
+      newArray.push('buzz');
+    } else if (numbers[index] % 3 === 0 ) {
+      newArray.push('fizz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
