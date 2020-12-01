@@ -23,8 +23,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let helper = array[array.length - 1],
+    holder = array[0],
+    answer = helper + ", " + holder;
+  return answer;
 }
 
 // Desafio 5
