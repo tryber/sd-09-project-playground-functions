@@ -79,7 +79,7 @@ function fizzBuzz(arrayFizz) {
 }
 
 // Desafio 9
-function encode() {
+function encode(palavra) {
   let result = [];
   let frase = '';
   for(let index in palavra){
@@ -104,7 +104,7 @@ function encode() {
   }
   return frase;
 }
-function decode() {
+function decode(palavra2) {
   let result2 = [];
   let frase2 = '';
   for(let index in palavra2){
