@@ -35,14 +35,17 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(ahei) {
   // seu código aqui
-  return console.log(ahei[ahei.length-1], ahei[0]);
+  let lastFirst = ahei[ahei.length-1] + ', ' + ahei[0];
+  return lastFirst;
 }
-//concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return ((wins*3)+ties);
 }
+console.log(footballPoints(5, 3));
 
 // Desafio 6
 function highestCount() {
