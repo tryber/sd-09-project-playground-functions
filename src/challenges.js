@@ -3,9 +3,7 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if(value1 && value2 === true) {
     return true
-  } else {
-    return false
-  }
+  } 
 }
 
 // Desafio 2
@@ -36,16 +34,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
+function highestCount() {
   // seu código aqui
-  let repeat = 0;
-  for (let index = 0; index < arrayNumbers; index += 1) {
-    if(arrayNumbers[index] > arrayNumbers.length - index {
-      
-    }
-  } 
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
@@ -147,3 +138,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
