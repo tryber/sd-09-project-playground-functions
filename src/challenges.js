@@ -81,20 +81,19 @@ function highestCount(array) {
   // seu código aqui
 
 let somaNumero = 0;
-let somaMaior = 0;
+ let maiorNumero = 0;
 
   for (let contador = 0; contador < array.length; contador += 1) {
-    for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
-      if (array[contadorNumero] === array[contador]) {
-        somaNumero += 1;
-      }
+    if (array[contador] > maiorNumero) {
+      maiorNumero = array[contador];
     }
-    if (somaNumero > somaMaior) {
-      somaMaior = somaNumero;
-    }
-    somaNumero = 0;
   }
-  return somaMaior;
+  for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
+    if (maiorNumero === array[contadorNumero]) {
+      somaNumero += 1;
+    }
+  }
+  return somaNumero;
 }
 
 // Desafio 7
