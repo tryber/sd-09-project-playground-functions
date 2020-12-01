@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
     return 'cat1';
-  } 
+  }
   return 'cat2';
 }
 
@@ -75,7 +75,6 @@ function fizzBuzz(array) {
   for (let item of array) {
     if (item % 15 === 0) {
       newArray.push('fizzBuzz');
-      continue;
     } else if (item % 3 === 0) {
       newArray.push('fizz');
     } else if (item % 5 === 0) {
@@ -176,7 +175,7 @@ function generatePhoneNumber(array) {
   } else if (verificador === 1) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
-  let telefone = '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  let telefone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]} - ${array[7]}${array[8]}${array[9]}${array[10]}`
   return (telefone);
 }
 
@@ -196,9 +195,8 @@ function hydrate(string) {
   for (let item of numbers) {
     soma += item;
   }
-  return (soma+' copos de água');
+  return (`${soma} copos de água`);
 }
-
 
 module.exports = {
   calcArea,
