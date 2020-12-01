@@ -61,8 +61,13 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(cat1);
   cat2 = Math.abs(cat2);
   mouse = Math.abs(mouse);
-
-  if ((cat1 - mouse) === (cat2 - mouse)) {
+  if (mouse === 0 || cat1 === 0 || cat2 === 0) {
+    cat1 +=1;
+    cat2 += 2;
+    mouse += 1;
+  }
+  
+  if ((mouse - cat1) === (mouse - cat2)) {
     return 'os gatos trombam e o rato foge'
   } else if ((cat1 - mouse) < (cat2 - mouse)) {
     return 'cat1';
@@ -71,6 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
+console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
