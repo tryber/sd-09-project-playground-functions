@@ -74,6 +74,8 @@ function fizzBuzz(arrayFizz) {
       arrayBuzz[index] = 'bug!'; 
     } 
   }
+
+  return arrayBuzz;
 }
 
 // Desafio 9
