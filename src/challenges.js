@@ -72,11 +72,9 @@ function fizzBuzz(array) {
       console.log('fizzBuzz');
     } else if (divisibleBy3 !== 0 && divisibleBy5 !== 0) {
       console.log('bug!');
-    }
-
-    if (divisibleBy3 === 0 && divisibleBy5 !== 0) {
+    } else if (divisibleBy3 === 0 && divisibleBy5 !== 0) {
       console.log('fizz');
-    } else if (divisibleBy3 !== 0 && divisibleBy5 === 0) {
+    } else {
       console.log('buzz');
     }
   }
