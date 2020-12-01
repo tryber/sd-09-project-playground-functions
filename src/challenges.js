@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(boolUm, boolDois) {
+  let trueOrFalse = false;
   if (boolUm === true && boolDois === true) {
-    return true;
-  } else {
-    return false;
+    trueOrFalse = true;
+    return trueOrFalse;
   }
 }
 
