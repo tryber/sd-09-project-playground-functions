@@ -122,8 +122,18 @@ function decode(sentence) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, nameOfStudent) {
+  let listToLearn = [];
+  if (techArray.length !== 0) {
+    for (let index in techArray) {
+      listToLearn.push({
+        tech: techArray[index],
+        name: nameOfStudent,
+      });
+    }
+    return listToLearn;
+  }
+  return 'Vazio!';
 }
 
 // Desafio 11
