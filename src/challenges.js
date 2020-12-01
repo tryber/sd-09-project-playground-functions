@@ -38,12 +38,12 @@ function highestCount(numeros) {
   numeros.sort();
   let maior = 0;
   let repeticao = 0;
-  for (let contador=0;contador<=numeros.length;contador++){
+  for (let contador=0;contador<numeros.length;contador++){
 if (numeros[contador]>maior){
   maior = numeros[contador];
 }
   }
-  for (let contador2=0;contador2<=numeros.length;contador2++){
+  for (let contador2=0;contador2<numeros.length;contador2++){
     if(contador2===maior){
       repeticao += 1;
     }
