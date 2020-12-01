@@ -67,18 +67,19 @@ return "os gatos trombam e o rato foge"
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  numbers = [1,2,3,4,5,6,7,8,9];
-  for(let contador3=0;contador3<=numbers.length;contador3++){
+  let retorno = [];
+  for(let contador3=0;contador3<numbers.length;contador3++){
 if(numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0){
-  return "fizz"
+  retorno.push("fizz");
 }else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !=0) {
-  return "buzz"
+  retorno.push ("buzz")
 } else if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 === 0) {
-  return "fizzBuzz"
+  retorno.push ("fizzBuzz")
 } else {
-return "bug!"
+retorno.push ("bug!")
 }
   }
+  return retorno;
  
 }
 
