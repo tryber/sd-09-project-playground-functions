@@ -9,13 +9,13 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(name) {
+  return name.split(' ')
 }
 
 // Desafio 4
@@ -24,8 +24,8 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + 1 * ties 
 }
 
 // Desafio 6
