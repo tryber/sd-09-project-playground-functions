@@ -10,7 +10,7 @@ function compareTrue(boolean1 , boolean2) {
 // Desafio 2
 function calcArea(base , height) {
   let resultCalc = (base * height) / 2
-  return console.log(resultCalc)
+  return resultCalc
 }
 
 // Desafio 3
