@@ -19,7 +19,7 @@ function calcArea(base, height) {
   // seu código aqui
 }
 
-calcArea(5 , 4)
+calcArea(5, 4)
 
 // Desafio 3
 function splitSentence() {
