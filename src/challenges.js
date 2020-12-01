@@ -13,7 +13,7 @@ function calcArea(base, height) {
   resultado = base * height / 2 
   return resultado
 }
-console.log(calcArea(10, 5));
+
 
 // Desafio 3
 function splitSentence() {
