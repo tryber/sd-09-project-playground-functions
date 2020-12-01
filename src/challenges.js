@@ -11,11 +11,13 @@ console.log(compareTrue(true, true))
 function calcArea(base, height) {
   return (base * height) / 2;
 }
+console.log(calcArea(2, 3))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(param) {
+  return param.split(' ')
 }
+console.log(splitSentence('go Trybe'))
 
 // Desafio 4
 function concatName() {
