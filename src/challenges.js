@@ -23,7 +23,8 @@ console.log(splitSentence('go Trybe'))
 function concatName(param) {
   let last = [...param].pop();
   let first = [...param].shift();
-  return last + ', ' + first;
+  let newArr = [last, first];
+  return newArr.join(', ').toString();
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
