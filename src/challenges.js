@@ -43,18 +43,26 @@ function highestCount(array) {
         higherNumber = array[index];
       }
     }
-    let vezesRepetido = 0;
-    for (let index2 in array) {
-      if(array[index2] === higherNumber) {
-        vezesRepetido += 1;
-      }
+  let vezesRepetido = 0;
+  for (let index2 in array) {
+    if(array[index2] === higherNumber) {
+      vezesRepetido += 1;
     }
+  }
   return vezesRepetido;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Position = Math.abs(cat1 - mouse);
+  let cat2Position = Math.abs(cat2 - mouse);
+  if (cat1Position === cat2Position) {
+    return "os gatos trombam e o rato foge";
+  } else if (cat1Position < cat2Position) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
 
 // Desafio 8
