@@ -30,7 +30,7 @@ function splitSentence( string ) {
 
 // Desafio 4
 function concatName(array) {
-  let finalArray = array[0], ${array[array.length - 1]};
+  let finalArray = array[0] + array[array.length - 1];
   return finalArray;
 }
 
@@ -57,6 +57,7 @@ function highestCount(arrayOfNumbers) {
   }
   return counter;
 }
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse() {
