@@ -175,7 +175,7 @@ function generatePhoneNumber(array) {
   } else if (verificador === 1) {
     return ('não é possível gerar um número de telefone com esses valores');
   }
-  let telefone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]} - ${array[7]}${array[8]}${array[9]}${array[10]}`
+  let telefone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   return (telefone);
 }
 
@@ -189,7 +189,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  // extrai todos os digitos com o match / \d /g e transforma eles de string para numero com map(Number)
+  // extrai todos os digitos com o match / \d /g 
+  //transforma eles de string para numero com map(Number)
+
   let numbers = string.match(/\d+/g).map(Number);
   let soma = 0;
   for (let item of numbers) {
