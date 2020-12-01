@@ -3,9 +3,8 @@
 function compareTrue(bool1, bool2) {
   if(bool1 === true && bool2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -59,8 +58,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzz = [];
+  for(let index = 0; index < numbers.length; index += 1){
+  	if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
+    	fizzBuzz = fizzBuzz.concat("fizzBuzz");
+    } else if (numbers[index] % 3 != 0 && numbers[index] === 0){
+    	fizzBuzz = fizzBuzz.concat("buzz");
+    } else if (numbers[index] % 3 === 0 && numbers[index] != 0) {
+    	fizzBuzz = fizzBuzz.concat("fizz");
+    } else {
+    	fizzBuzz = fizzBuzz.concat("bug!");
+    }
+  }
+  return fizzBuzz;
 }
 
 // Desafio 9
