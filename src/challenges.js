@@ -33,7 +33,7 @@ function concatName(stringArray) {
   stringConcat = stringArray[Array.length - 1];
   stringConcat += ', ';
   stringConcat += stringArray[0];
-  return stringArray;
+  return stringConcat;
 }
 
 // Desafio 5
