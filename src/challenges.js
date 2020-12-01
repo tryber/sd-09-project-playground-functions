@@ -27,8 +27,8 @@ console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(firstAndLast) {
-  let result = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
-  return result;
+  let challengeResult = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
+  return challengeResult;
 }
 console.log(concatName(['Fernanda', 'Cajueiro', 'Machado']));
 
@@ -40,8 +40,8 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(2, 1));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbersArray) {
+  // let 
 }
 
 // Desafio 7
