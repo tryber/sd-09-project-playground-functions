@@ -1,26 +1,27 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  compare = value1 && value2;
+  let compare = value1 && value2;
   return compare;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base*height)/2;
+  let area = (base * height)/2;
   return area;
 }
-console.log(compareTrue(false, true));
-console.log(calcArea(4, 8));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let splits = string.split(' ');
+  return splits;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayNames) {
+  let phrase = arrayNames[arrayNames.length -1] + ', ' + arrayNames[0];
+  return phrase;
 }
-
+console.log(concatName(['raphael', 'abdoraldo', 'felipe', 'rogerio']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
