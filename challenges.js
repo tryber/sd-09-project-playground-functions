@@ -6,4 +6,7 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
-compareTrue();
+
+function calcArea(base, height) {
+  return (base * height) / 2;
+}
