@@ -16,13 +16,15 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(vetor) {
-  return `${vetor[vetor.length - 1]}, ${vetor[0]}.`
+  //return `${vetor[vetor.length - 1]}, ${vetor[0]}.`
+  let resposta = vetor[vetor.length - 1];
+  let resposta2 = vetor[0];
+  return (resposta +', ' + resposta2);
 }
-
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  
 }
 
 // Desafio 6
