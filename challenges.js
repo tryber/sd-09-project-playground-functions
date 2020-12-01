@@ -9,11 +9,8 @@ function compareTrue(bool1, bool2) {
 compareTrue();
 
 function calcArea(base, height) {
-  base = 3;
-  height = 4;
   return (base * height) / 2;
 }
-calcArea();
 
 function splitSentence(nomeCompleto) {
   nomeCompleto = 'Renan de Oliveira Costa';
