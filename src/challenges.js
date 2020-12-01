@@ -78,13 +78,14 @@ function distanceBetween(element1, element2) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (distanceBetween(mouse, cat1) == distanceBetween(mouse, cat2)) {
-    return 'os gatos trombam e o gato foge';
+    return 'os gatos trombam e o rato foge';
   }else if (distanceBetween(mouse, cat1) > distanceBetween(mouse, cat2)) {
     return 'cat2';
   }else {
     return 'cat1';
   }
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -102,6 +103,9 @@ function fizzBuzz(array) {
   }
   return result;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 
 // Desafio 9
 function encode(string) {
@@ -218,5 +222,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'Rafael'));
