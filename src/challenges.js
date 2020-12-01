@@ -21,7 +21,7 @@ function splitSentence(go trybe) {
 
 // Desafio 4
 function concatName(arrayNome) {
-return `${arrayNome[arrayNome.length-1]}, ${arrayNome[0]}`;
+return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
 }
 
 // Desafio 5
