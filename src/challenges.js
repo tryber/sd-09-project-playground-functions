@@ -1,7 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+unction compareTrue(values1, values2) {
+  if (values1 === true && values2 === true){
+    return true;
+  } 
+ return false;
 }
+  console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea() {
@@ -9,9 +13,13 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+let array = 'go trybe'
+function splitSentence(string) {
+   let divisor = string.split(' ');
+   console.log(divisor);
+   return string;
+  }
+  console.log(splitSentence(array));
 
 // Desafio 4
 function concatName() {
