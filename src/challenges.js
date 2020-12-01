@@ -70,42 +70,42 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(word) {
+function encode(newphrase) {
   let encodePhrase = '';
 
-  for (let key in word) {
-    if (word[key] === 'a') {
+  for (let key in newphrase) {
+    if (newphrase[key] === 'a') {
       encodePhrase += '1';
-    } else if (word[key] === 'e') {
+    } else if (newphrase[key] === 'e') {
       encodePhrase += '2';
-    } else if (word[key] === 'i') {
+    } else if (newphrase[key] === 'i') {
       encodePhrase += '3';
-    } else if (word[key] === 'o') {
+    } else if (newphrase[key] === 'o') {
       encodePhrase += '4';
-    } else if (word[key] === 'u') {
+    } else if (newphrase[key] === 'u') {
       encodePhrase += '5';
     } else {
-      encodePhrase += word[key];
+      encodePhrase += newphrase[key];
     }
   }
   return encodePhrase;
 }
-function decode(word2) {
+function decode(phrase) {
   let decodePhrase = '';
 
-  for (let key in word2) {
-    if (word2[key] === '1') {
+  for (let key in phrase) {
+    if (phrase[key] === '1') {
       decodePhrase += 'a';
-    } else if (word2[key] === '2') {
+    } else if (phrase[key] === '2') {
       decodePhrase += 'e';
-    } else if (word2[key] === '3') {
+    } else if (phrase[key] === '3') {
       decodePhrase += 'i';
-    } else if (word2[key] === '4') {
+    } else if (phrase[key] === '4') {
       decodePhrase += 'o';
-    } else if (word2[key] === '5') {
+    } else if (phrase[key] === '5') {
       decodePhrase += 'u';
     } else {
-      decodePhrase += word2[key];
+      decodePhrase += phrase[key];
     }
   } 
   return decodePhrase;
