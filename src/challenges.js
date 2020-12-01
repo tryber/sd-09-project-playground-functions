@@ -16,12 +16,12 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let phrase = ' ';
   phrase = string.split(' ')
-  return phrase; 
+  return phrase;
 }
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.lenght-1] + ", " + arrayString[0];
+  return arrayString[arrayString.lenght - 1] + ', ' + arrayString[0];
 }
 
 // Desafio 5
