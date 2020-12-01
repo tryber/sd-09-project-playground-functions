@@ -100,15 +100,35 @@ let maiorNumero = 0;
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 
-let distancia1 = mouse - cat1;
-let distancia2 = mouse - cat2;
+function catFunct1(mouse, cat1) {
 
+let distancia1 = 0;
 
-  if (distancia1 < distancia2) {
+  if (mouse < cat1){
+    distancia1 = cat1 - mouse;
+  } else if (mouse > cat1) {
+    distancia1 = mouse - cat1;
+  }
+  return distancia1;
+}
+
+function catFunct2(mouse, cat2) {
+
+let distancia2 = 0;
+
+  if (mouse < cat2){
+    distancia2 = cat2 - mouse;
+  } else if (mouse > cat2) {
+    distancia2 = mouse - cat2;
+  }
+  return distancia2;
+}
+
+  if (catFunct1(mouse, cat1) < catFunct2(mouse, cat2)) {
     return 'cat1';
-  } else if (distancia2 < distancia1) {
+  } else if (catFunct1(mouse, cat1) > catFunct2(mouse, cat2)) {
     return 'cat2';
-  } else if (distancia1 === distancia2) {
+  } else if (catFunct1(mouse, cat1) === catFunct2(mouse, cat2)) {
     return 'Os gatos trombam e o rato foge'
   }
 }
@@ -134,7 +154,7 @@ let retornoArray = [];
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
 }
 function decode() {
