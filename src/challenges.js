@@ -43,7 +43,7 @@ function highestCount(arrayNumbers) {
   }
   return counter;
 }
-console.log(highestCount([2, 3, 1, 3, 3, 1, 3, 5]));
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
