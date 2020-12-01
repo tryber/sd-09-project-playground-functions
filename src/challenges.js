@@ -16,9 +16,22 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let  array = [];
+  let separacao = '';
+  for(i = 0; i < string.length; i = i + 1) {
+    if(string[i] != ' ') {
+      separacao = separacao + string[i];
+    }else {
+      array.push(separacao);
+      separacao = '';
+    } 
+  }
+  array.push(separacao);
+  return array;
 }
+       
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
 function concatName() {
