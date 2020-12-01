@@ -25,7 +25,7 @@ function splitSentence(str) {
   // seu código aqui
   let sentence = [];
 
-  for(i = 0; i < str.length; i += 1) {
+  for(let i = 0; i < str.length; i += 1) {
     str[i] = sentence.push(str[i])
   }
   return sentence;
@@ -34,9 +34,25 @@ function splitSentence(str) {
 console.log(splitSentence('Eae mundão'));
 
 // Desafio 4
-function concatName() {
+function concatName(arr) {
   // seu código aqui
+  let str1 = '';
+  let str2 = '';
+
+  let frase = '';
+
+  for(let iten1 = 0; iten1 < arr.length; iten1 += 1) {
+    for(let iten2 = arr.length - 1; iten2 >= 0; iten2 -= 1) {
+  
+      str1 = arr[iten2];
+    }
+    str2 = arr[iten1];
+  }
+  frase = str2 + ', ' + str1;
+  return frase;
 }
+
+console.log(concatName(['Lucas', 'Bola', 'Silva']))
 
 // Desafio 5
 function footballPoints() {
