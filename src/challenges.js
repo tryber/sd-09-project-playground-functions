@@ -2,8 +2,9 @@
 
 // Desafio 1
 function compareTrue(value1, value2) {
-  return ((value1 === true) && (value2 === true)) ? true : false;
+  return ((value1 === true) && (value2 === true));
 }
+// console.log(compareTrue(false,false));
 
 // Desafio 2
 function calcArea() {
