@@ -28,18 +28,19 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(arrayNomes) {
+function concatName(array) {
   let nomes = [];
-  for (let index = arrayNomes.length - 1; index >= 0; index -= 1) {
-    if (arrayNomes[index] === arrayNomes[arrayNomes.length - 1]) {
-      nomes += arrayNomes[index]
+  for (let index = array.length - 1; index >= 0; index -= 1) {
+    if (array[index] === array[array.length - 1]) {
+      nomes += array[index]
       nomes += ', '
-    } else if (arrayNomes[index] === arrayNomes[0]) {
-      nomes += arrayNomes[index]
+    } else if (array[index] === array[0]) {
+      nomes += array[index]
     }
   }
   return nomes;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo', 'Alves']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -99,7 +100,7 @@ function fizzBuzz(array) {
     } else if (array[index] % 5 === 0) {
       arrayFizzBuzz.push('buzz')
     } else {
-      arrayFizzBuzz.push('bug')
+      arrayFizzBuzz.push('bug!')
     }
   }
   return arrayFizzBuzz;
