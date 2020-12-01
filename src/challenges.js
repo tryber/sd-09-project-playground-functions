@@ -156,10 +156,13 @@ function decode(message) {
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let answer = []
+  let answer = [];
   let helper = tech.sort();
   for (let index = 0; index < tech.length; index += 1) {
     answer.push({ tech: helper[index], name: name });
+  }
+  if (answer === []) {
+    answer = "Vazio!";
   }
   return answer;
 }
