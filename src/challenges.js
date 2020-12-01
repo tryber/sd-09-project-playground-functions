@@ -75,7 +75,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
-  let fraseArray = frase.toLowerCase().split('');
+  let fraseArray = frase.split('');
 
   for (let i in fraseArray) {
     if (fraseArray[i] === 'a') fraseArray[i] = 1;
@@ -89,7 +89,7 @@ function encode(frase) {
 console.log(encode('hi there'))
 
 function decode(frase) {
-  let fraseArray = frase.toLowerCase().split('');
+  let fraseArray = frase.split('');
 
   for (let i in fraseArray) {
     if (fraseArray[i] === '1') fraseArray[i] = 'a';
