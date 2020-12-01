@@ -23,16 +23,19 @@ function splitSentence(string) {
 console.log(splitSentence('Go trybe'));
 
 // Desafio 4
-function concatName() {
+function concatName(string) {
   // seu código aqui
+  let lastFirst = string.pop()
+  return lastFirst + ', ' + string[0]
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  score = (wins * 3) + ties;
+  let score = (wins * 3) + ties;
   return score;
 }
+
 
 // Desafio 6
 function highestCount() {
