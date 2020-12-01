@@ -1,9 +1,10 @@
 // Projeto 2!!
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  return (value1 && value2) ? true : false;
 }
+// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -18,9 +19,10 @@ function splitSentence(string) {
 // console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]} ${array[0]}`;
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
