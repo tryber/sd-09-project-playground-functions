@@ -3,14 +3,14 @@ function compareTrue(bol1, bol2) {
   // seu código aqui
   if (bol1 && bol2) {
     return true
-  } else {
-    return false
   }
+  return false  
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) / 2
 }
 
 // Desafio 3
@@ -70,7 +70,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
