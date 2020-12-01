@@ -27,9 +27,13 @@ function splitSentence(sentence) {
   return words;
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Challenge Four - Concatenation of strings
+function concatName(stringArray) {
+  let stringConcat = '';
+  stringConcat = stringArray[Array.length - 1];
+  stringConcat += ', ';
+  stringConcat += stringArray[0];
+  return stringArray;
 }
 
 // Desafio 5
