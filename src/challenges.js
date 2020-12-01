@@ -11,11 +11,13 @@ function compareTrue(valor1, valor2) {
 function calcArea(base, height) {
   let areaT = 0;
   areaT = (base * height)/2;
+  return areaT
 }
 
 // Desafio 3
 function splitSentence(string) {
   let splitvar = string.split(' ');
+  return splitvar
 }
 
 // Desafio 4
@@ -93,9 +95,29 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode(string) {
-  var code = 
-}
+function encode(letter) {
+  let letters = split(letter);
+  let newL = [];
+  for(let i = 0; i <= letters.length; i += 1) {
+    switch (letters[i]) {
+      case 'a': 
+        'a' = 1;
+        break;
+      case 'e':
+        'e' = 2;
+        break;
+      case 'i':
+        'i' = 3;
+        break;
+      case 'o':
+        'o' = 4;
+      case 'u':
+        'u' = 5;
+        break;
+    }
+    
+  }
+
 function decode() {
   // seu código aqui
 }
