@@ -25,7 +25,7 @@ function splitSentence( string ) {
       tempArray = '';
     }
   }
-  return finalArray
+  return finalArray;
 }
 
 // Desafio 4
@@ -33,7 +33,7 @@ function concatName(array) {
 
   let finalArray = [];
   finalArray.push(array[0]);
-  finalArray.push(array[array.length - ]);
+  finalArray.push(array[array.length - 1]);
   return finalArray;
 }
 
