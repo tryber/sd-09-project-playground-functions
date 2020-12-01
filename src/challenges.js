@@ -1,10 +1,10 @@
-// Segundo Projecto  de Frederico Canoeira #VQV
-// Desafio 
+// Segundo Projecto de Frederico Canoeira #VQV
+// Desafio
 function compareTrue(number1, number2) {
   if (number1 % 2 === 0 && number2 % 2 !== 0) {
-    return true;
-  } 
-    return false;
+  return true;
+  }
+  return false;
 }
 let result = compareTrue(4, 9);
 console.log(result);
