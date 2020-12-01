@@ -30,7 +30,7 @@ function splitSentence( string ) {
 
 // Desafio 4
 function concatName(array) {
-  let finalArray = array[0], ' ', ${array[array.length - 1]};
+  let finalArray = array[0], ${array[array.length - 1]};
   return finalArray;
 }
 
@@ -47,12 +47,15 @@ function highestCount(arrayOfNumbers) {
   let counter = 0;
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
     if (arrayOfNumbers[index] > index){
-      highestNumber = arrayOfNumbers;
+      highestNumber = arrayOfNumbers[index];
     }
     for (let index = 0 ; index < arrayOfNumbers.length; index += 1) {
-      if(arrayOfNumbers[index] === highestNumber)
+      if(arrayOfNumbers[index] === highestNumber){
+        counter += 1;
+      }
     }
   }
+  return counter;
 }
 
 // Desafio 7
