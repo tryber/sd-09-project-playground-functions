@@ -44,8 +44,34 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(3, 2))
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  const repetitionArray = numberCounter(array)
+  let greatest = 0
+  for (let element of repetitionArray) {
+    if (element > greatest) {
+      greatest = element
+    }
+  }
+  //Retorna o elemento que mais se repete no array
+  //return array[repetitionArray.indexOf(greatest)]
+  return greatest
+}
+// console.log(highestCount([9, 3, 3, 3, 9, 9, 9]))
+
+function numberCounter(array) {
+  const repetitionArray = []
+  let counter = 0
+  for (let element of array) {
+    for (let arrayIndex = 0; arrayIndex < array.length; arrayIndex += 1) {
+      if (element === array[arrayIndex]) {
+        counter += 1
+      }
+    }
+    repetitionArray.push(counter)
+    counter = 0
+  } 
+  return repetitionArray 
 }
 
 // Desafio 7
