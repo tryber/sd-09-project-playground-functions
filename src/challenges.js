@@ -77,12 +77,12 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (diffCat1 > diffCat2) {
     phrase = 'cat2';
   } else {
-    phrase = 'Os gatos trombam e o rato foge.';
+    phrase = 'Os gatos trombam e o rato foge';
   }
 
-  return phrase;
+  return `Cat1 ${diffCat1}, Cat2 ${diffCat2} = ${phrase}`;
 }
-// console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8
