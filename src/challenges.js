@@ -50,8 +50,6 @@ function highestCount(array) {
 
 }
 
-highestCount([9, 1, 2, 3, 9, 5, 7])
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
@@ -77,11 +75,56 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let array = []
+  
+  // 1º Parte: Verificar se a letra é minuscula, realizar a troca se necessário e por fim criar o array.
+  for (let index = 0 ; index < string.length ; index += 1){
+    if(string[index] === string.toUpperCase()) {
+      array.push(string[index])
+    } else if (string[index] === 'a') {
+      array.push(1)
+    } else if (string[index] === 'e') {
+      array.push(2)
+    } else if (string[index] === 'i') {
+      array.push(3)
+    } else if (string[index] === 'o') {
+      array.push(4)
+    } else if (string[index] === 'u') {
+      array.push(5)
+    } else {
+      array.push(string[index])
+    }
+  }
+
+  array = array.join("")
+
+  console.log(array)
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let array = []
+  
+  // 1º Parte: Verificar se é um número, se sim, retornar a letra.
+  for (let index = 0 ; index < string.length ; index += 1){
+    if(string[index] == '1') {
+      array.push('a')
+    } else if (string[index] === '2') {
+      array.push('e')
+    } else if (string[index] === '3') {
+      array.push('i')
+    } else if (string[index] === '4') {
+      array.push('o')
+    } else if (string[index] === '5') {
+      array.push('u')
+    } else {
+      array.push(string[index])
+    }
+  }
+
+  array = array.join("")
+
+  console.log(array)
 }
 
 // Desafio 10
