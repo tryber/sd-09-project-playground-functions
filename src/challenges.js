@@ -1,10 +1,11 @@
 //Bruno Brolesi
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstValue, secondValue) {
+  return (firstValue && secondValue);
 }
 
+console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea() {
   // seu código aqui
