@@ -42,12 +42,24 @@ function highestCount(array) {
   }
   return count;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let whoHadLunch = '';
+  let cat1Dist = Math.abs(cat1 - mouse);
+  let cat2Dist = Math.abs(cat2 - mouse);
+  
+  if (cat1Dist == cat2Dist) {
+    whoHadLunch = 'os gatos trombam e o rato foge';
+  }else if (cat1Dist < cat2Dist) {
+    whoHadLunch = 'cat1';
+  }else {
+    whoHadLunch = 'cat2';
+  }
+  return whoHadLunch;
 }
+// console.log(catAndMouse(0, 10, -5));
 
 // Desafio 8
 function fizzBuzz() {
