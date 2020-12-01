@@ -13,15 +13,15 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   return sentence.split(' ');
 }
-console.log(splitSentence("go, trybe"));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array.reverse()
 }
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
 }
 
 // Desafio 6
