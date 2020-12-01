@@ -47,7 +47,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestCount(array) {
   let biggestNumber = 0;
   let numberOfRepeat = 0;
@@ -65,9 +64,30 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = 0;
+  let cat2Distance = 0;
+  if(mouse > cat1){
+    cat1Distance = mouse - cat1;
+  } else {
+    cat1Distance = cat1 - mouse;
+  }
+  if(mouse > cat2){
+    cat2Distance = mouse - cat2;
+  } else {
+    cat2Distance = cat2 - mouse;
+  }
+  if(cat1Distance > cat2Distance) {
+    hunte = 'cat2';
+  } else if (cat2Distance > cat1Distance) {
+    hunte = 'cat1';
+  } else {
+    hunte = 'os gatos se trombam e o rato foge'
+  }
+  return hunte;
 }
+
+console.log(catAndMouse(6, 3, 7))
 
 // Desafio 8
 function fizzBuzz() {
