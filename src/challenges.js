@@ -12,10 +12,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(streng) {
+  let rel=[];
+  let guarda='';
+  for (let x=0; x<streng.length; x++) {
+    if (streng[x]!==' ') {
+      guarda=guarda+streng[x];
+    }
+    if (streng[x] === ' ' || x === streng.length-1) {
+      rel.push(guarda);
+      guarda='';
+    }
+  }
+  return rel;
 }
-
+console.log(splitSentence('hudson carlos'));
 // Desafio 4
 function concatName() {
   // seu código aqui
