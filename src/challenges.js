@@ -4,8 +4,7 @@
 function compareTrue(value1, value2) {
   if ((value1 === true) && (value2 === true)) {
     return (true);
-  }
-  else {
+  } else {
     return (false);
   }
 }
@@ -21,8 +20,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  let newArray = [array[0] , array[array.length -1]];
+function concatName(array) {
+  let newArray = [array [0], array [array.length -1]];
   return newArray;
 }
 
