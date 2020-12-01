@@ -14,12 +14,12 @@ compareTrue(true, true)
 
 // Desafio 2
 function calcArea(base, height) {
-  console.log(`Area do triangulo é ${(base * height)/2}`)
-  return (base * height)/2
+  console.log(`Area do triangulo é ${(base * height) / 2}`)
+  return (base * height) / 2
   // seu código aqui
 }
 
-calcArea(5,4)
+calcArea(5 , 4)
 
 // Desafio 3
 function splitSentence() {
