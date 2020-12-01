@@ -100,8 +100,18 @@ let somaNumero = 0;
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 
+let distancia1 = mouse - cat1;
+let distancia2 = mouse - cat2;
+
+
+  if (distancia1 > distancia2) {
+    return 'Primeiro gato pega o rato.';
+  } else if (distancia2 > distancia1) {
+    return 'Segundo gato pega o rato.';
+  } else if (distancia1 === distancia2) {
+    return 'Os gatos trombam e o rato foge.'
+  }
 }
-console.log(catAndMouse(2, 5, 6));
 
 // Desafio 8
 function fizzBuzz() {
