@@ -125,24 +125,32 @@ function encode(message) {
 }
 
 function decode(message) {
-  let encoder= {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5
-  };
-  let encodedMessage = '';
+  let messageDecoded = '';
 
   for (let index in message) {
-    if (message[index] === '1' || message[index] === '2' || message[index] === '3' || message[index] === '4' || message[index] === '5') {
-      encodedMessage += encoder[message[index]];
-    } else {
-      encodedMessage += message[index];
+    let char = message[index]
+    switch (char) {
+      case '1':
+        messageDecoded += 'a';
+        break;
+      case '2':
+        messageDecoded += 'e';
+        break;
+      case '3':
+        messageDecoded += 'i';
+        break;
+      case '4':
+        messageDecoded += 'o';
+        break;
+      case '5':
+        messageDecoded += 'u';
+        break;
+      default:
+        messageDecoded += message[index];
     }
   }
 
-  return encodedMessage;
+  return messageDecoded;
 }
 
 // Desafio 10
