@@ -19,11 +19,8 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(vd3) {
-  return vd3.split( );
+  return vd3.split(" ");
 }
-let vd4 = ['julio', 'henrique','thosi'];
-//let teste2 = teste[teste.length-1] + ', ' + teste[0];
-
 
 // Desafio 4
 function concatName(vd4) {
