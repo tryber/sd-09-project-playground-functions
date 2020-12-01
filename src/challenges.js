@@ -1,6 +1,6 @@
-// Desafio 1 
-function compareTrue(operador1,operador2) {
-    if (operador1 === true && operador2 === true){
+// Desafio 1
+function compareTrue(operador1, operador2) {
+  if (operador1 === true && operador2 === true){
         return true;
     } else {
         return false;
@@ -8,7 +8,7 @@ function compareTrue(operador1,operador2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let area= (base*height)/2
 return area;
 }
@@ -28,7 +28,7 @@ function concatName(arrayRetorno) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let pontos= (wins*3) + ties;
     return pontos;
 }
@@ -52,7 +52,7 @@ if (numeros[contador]>maior){
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   mouse = 10;
   cat1 = 6;
   cat2 = 4;
@@ -99,7 +99,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(nomeTech,name) {
+function techList(nomeTech, name) {
   let ordem = nomeTech.sort();
   let skills = ["Javascript","HTML","CSS"];
   if (nomeTech.length === 0) {
