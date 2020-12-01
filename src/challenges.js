@@ -19,8 +19,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(stringsArray) {
   stringsArray = ['teste1', 'teste2', 'teste3', 'teste4'];
-  lastIndex = stringsArray.length -1;
-  return stringsArray[lastIndex] + ', ' + stringsArray[0];  
+  return stringsArray[stringsArray.length -1] + ', ' + stringsArray[0];
 }
 
 // Desafio 5
