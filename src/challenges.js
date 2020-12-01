@@ -28,7 +28,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numberArray) {
   let highestNumberIndex = 0;
-  let counter;
+  let counter = 0;
 
   for (let i in numberArray) {
     if (numberArray[highestNumberIndex] < numberArray[i]) {
@@ -41,6 +41,8 @@ function highestCount(numberArray) {
 
   return counter;
 }
+
+console.log(highestCount([5, 9, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
