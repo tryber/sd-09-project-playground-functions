@@ -1,3 +1,5 @@
+// Projeto desenvolvido por Igor Marcos Riegel (igmriegel - github) #VQV :D 
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
