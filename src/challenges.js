@@ -19,8 +19,8 @@ function splitSentence(value) {
 // Desafio 4
 function concatName(value) {
   const newArray = []
-  newArray.append(value[value.length - 1])
-  newArray.append(value[0])
+  newArray.push(value[value.length - 1])
+  newArray.push(value[0])
   return newArray.join(' ')
 }
 
@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(valueArray) {
-  const maxValue = valueArray.sort()
+  const maxValue = valueArray.sort()[valueArray.length - 1]
   let count = 0
   for (let i = 0; i < valueArray.length; i += 1) {
     if (valueArray[i] === maxValue) {
@@ -43,20 +43,22 @@ function highestCount(valueArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) < (cat2 - mouse)) {
+  const mouseCat1Distance = Math.abs(cat1 - mouse)
+  const mouseCat2Distance = Math.abs(cat2 - mouse)
+  if (mouseCat1Distance < mouseCat2Distance) {
     return 'cat1'
-  } else if ((cat2 - mouse) < (cat1 - mouse)) {
+  } else if (mouseCat2Distance < mouseCat1Distance) {
     return 'cat2'
-  } else if ((mouse - cat1) === (mouse - cat2)) {
+  } else if (mouseCat1Distance === mouseCat2Distance) {
     return 'os gatos trombam e o rato foge'
   }
   return 'fails'
 }
 
 function selectFizzBuzz(value) {
-  if (value % 3 === 0) {
+  if (value % 3 === 0 && value % 5 !== 0) {
     return 'fizz'
-  } else if (value % 5 === 0) {
+  } else if (value % 5 === 0 && value % 3 !== 0) {
     return 'buzz'
   } else if (value % 3 === 0 && value % 5 === 0) {
     return 'fizzBuzz'
