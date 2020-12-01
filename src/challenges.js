@@ -13,13 +13,24 @@ function calcArea(base , height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let defArray = [];
+  let tempArray = [];
+  for (let index = 0 ; index < string.length ; index += 1){
+    tempArray.push(string[index]);
+    if(string[index] === ' '){
+      defArray.push(tempArray);
+      tempArray = [];
+    }
+  }
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let resultArray = [];
+    resultArray.push(array[0]);
+    resultArray.push(array[array.length - 1])
+    return resultArray;
 }
 
 // Desafio 5
