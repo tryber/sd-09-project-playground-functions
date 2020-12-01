@@ -49,9 +49,9 @@ function highestCount(arrayNums) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanceCat1 = Math.abs((cat1 - mouse));
-  distanceCat2 = Math.abs((cat2 - mouse));
-  if (distanceCat1 === distanceCat2){
+  let distanceCat1 = Math.abs((cat1 - mouse));
+  let distanceCat2 = Math.abs((cat2 - mouse));
+  if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
   else if (distanceCat1 < distanceCat2) {
@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNums) {
   let arrayResponse = [];
   for (let numIndex in arrayNums) {
-    if ((arrayNums[numIndex]) % 3 === 0 && (arrayNums[numIndex]) % 5 === 0) {
+    if (((arrayNums[numIndex]) % 3 === 0) && ((arrayNums[numIndex]) % 5 === 0)) {
       arrayResponse[numIndex] = 'fizzBuzz';
     }
     else if ((arrayNums[numIndex]) % 5 === 0) {
@@ -81,8 +81,26 @@ function fizzBuzz(arrayNums) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  arrayPhrase = phrase.split('');
+  for (let index in arrayPhrase){
+    if (arrayPhrase[index] === 'a') {
+        arrayPhrase[index] = 1;
+    }
+    else if (arrayPhrase[index] === 'e') {
+        arrayPhrase[index] = 2;
+    }
+    else if (arrayPhrase[index] === 'i') {
+        arrayPhrase[index] = 3;
+    }
+    else if (arrayPhrase[index] === 'o') {
+        arrayPhrase[index] = 4;
+    }
+    else if (arrayPhrase[index] === 'u') {
+        arrayPhrase[index] = 5;
+    }
+  }
+  return arrayPhrase.join('');
 }
 function decode() {
   // seu código aqui
