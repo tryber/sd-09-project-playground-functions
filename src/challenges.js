@@ -14,14 +14,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let arrayPalavras = [];
-  let palavra = "";
+  let palavra = '';
 
   for (let index = 0; index <= frase.length; index += 1) {
-    if (frase[index] !== " " && index !== frase.length) {
+    if (frase[index] !== ' ' && index !== frase.length) {
       palavra += frase[index];
     } else {
       arrayPalavras.push(palavra);
-      palavra = "";
+      palavra = '';
     }
   }
   return arrayPalavras;
@@ -34,7 +34,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
@@ -63,11 +63,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Position = Math.abs(cat1 - mouse);
   let cat2Position = Math.abs(cat2 - mouse);
   if (cat1Position === cat2Position) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (cat1Position < cat2Position) {
-    return "cat1";
+    return 'cat1';
   }
-  return "cat2";
+  return 'cat2';
 }
 
 // Desafio 8
@@ -75,9 +75,6 @@ function fizzBuzz(array) {
   let fizzBuzzArray = [];
   for (let number of array) {
     switch (true) {
-      case number % 3 !== 0 && number % 5 !== 0:
-        fizzBuzzArray.push('bug!');
-        break;
       case number % 3 === 0 && number % 5 === 0:
         fizzBuzzArray.push('fizzBuzz');
         break;
@@ -87,6 +84,8 @@ function fizzBuzz(array) {
       case number % 5 === 0:
         fizzBuzzArray.push('buzz');
         break;
+      default:
+        fizzBuzzArray.push("bug!");
     }
   }
   return fizzBuzzArray;
