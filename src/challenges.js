@@ -32,8 +32,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
   // seu código aqui
+let indexOfLastWord = arrayString.length - 1;
+  let lastString = arrayString[indexOfLastWord];
+  return lastString + ', ' + arrayString[0];
 }
 
 // Desafio 5
