@@ -53,9 +53,6 @@ if (numeros[contador]>maior){
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = 10;
-  cat1 = 6;
-  cat2 = 4;
 if((mouse-cat1)<(mouse-cat2)){
 return "cat1";
 } else if ((mouse-cat1)>(mouse-cat2)){
