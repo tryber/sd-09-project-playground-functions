@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
@@ -95,4 +95,16 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
+}
+
+// Abaixo, funções criadas por mim para serem usadas dentro das funções dos desafios e facilitar suas resoluções.
+
+function maxNumber(array) {
+  let number = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (number < array[i]) {
+      number = array[i];
+    }
+  }
+  return number;
 }
