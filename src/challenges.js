@@ -1,7 +1,14 @@
 // Projeto 02!!!! o/ Vamos que vamos...
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valueA, valueB) {
+    valueA = true;
+    valueB = true;
+    
+    if (valueA === true && valueB === true){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Desafio 2
