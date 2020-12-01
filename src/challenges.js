@@ -1,5 +1,5 @@
 //Teste
-// Desafio 1
+// Desafio 1 OK
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true;
@@ -8,7 +8,7 @@ function compareTrue(bool1, bool2) {
   }
 console.log(compareTrue(true, true));
 
-// Desafio 2
+// Desafio 2 OK
 function calcArea(base, height) {
   return (base * height) / 2;
 }
@@ -22,15 +22,16 @@ function splitSentence(string) {
 const result = arrayString = string.split(" ");
 console.log(result);
 
-// Desafio 4
+// Desafio 4 OK
 function concatName(frase) {
   let answer = (frase[frase.length-1] + ", " + frase[0]);
   return answer;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = (wins*3)+ties;
+  return result;
 }
 
 // Desafio 6
@@ -92,4 +93,3 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
