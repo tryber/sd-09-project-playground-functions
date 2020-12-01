@@ -114,9 +114,25 @@ let distancia2 = mouse - cat2;
 }
 
 // Desafio 8
-function fizzBuzz() {
+
+let asd = [2, 15, 7, 9, 45];
+function fizzBuzz(array) {
   // seu código aqui
 
+let retornoArray = [];
+  
+  for (let contador = 0; contador < array.length; contador += 1) {
+    if (array[contador] % 5 === 0 && array[contador] % 3 === 0) {
+      retornoArray.push('fizzBuzz');
+    } else if (array[contador] % 5 === 0){
+      retornoArray.push('buzz');
+    } else if (array[contador] % 3 === 0) {
+      retornoArray.push('fizz');
+    } else {
+      retornoArray.push('bug!');
+    }
+  }
+  return retornoArray;
 }
 
 // Desafio 9
