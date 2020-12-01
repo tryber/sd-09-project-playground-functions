@@ -107,19 +107,19 @@ function encode(string) {
         break;
 
       case "b":
-        encrypted += cipher["b"];
+        encrypted += cipher[i];
         break;
 
       case "c":
-        encrypted += cipher["c"];
+        encrypted += cipher[i];
         break;
 
       case "d":
-        encrypted += cipher["d"];
+        encrypted += cipher[i];
         break;
 
       case "e":
-        encrypted += cipher["e"];
+        encrypted += cipher[i];
         break;
 
       default:
