@@ -102,6 +102,20 @@ function decode(string) {
   return string
 }
 
+/**
+ * @return {-1 | 0 | 1}
+ * @param {string} word1
+ * @param {string} word2
+ */
+function compareStringsLength(word1, word2) {
+  const lessWord = word1.length > word2.length ? word2.length : word1.length
+  for (let i = 0; i < lessWord; i += 1) {
+    if (word2[i] < word1[i]) return 1
+    else if (word1[i] < word2[i]) return -1
+  }
+  return 0
+}
+
 // Desafio 10
 /**
  *
@@ -110,8 +124,8 @@ function decode(string) {
  */
 function techList(technologies, name) {
   if (!technologies.length) return 'Vazio!'
-  for (let i = 0; i < technologies.length; i++) {
-    for (let j = i + 1; j < technologies.length; j++) {
+  for (let i = 0; i < technologies.length; i += 1) {
+    for (let j = i + 1; j < technologies.length; j += 1) {
       const result = compareStringsLength(technologies[i], technologies[j])
       if (result > 0) {
         const techAuxiliar = technologies[i]
@@ -122,23 +136,38 @@ function techList(technologies, name) {
   }
   return technologies.map(tech => ({ tech, name }))
 }
+
 /**
- * @return {-1 | 0 | 1}
- * @param {string} word1
- * @param {string} word2
+ * @param {number} number
+ * @param {number[]} arrayNumbers
+ * @return {boolean}
  */
-function compareStringsLength(word1, word2) {
-  const lessWord = word1.length > word2.length ? word2.length : word1.length
-  for (let i = 0; i < lessWord; i++) {
-    if(word2[i] < word1[i]) return 1
-    else if(word1[i] < word2[i]) return -1
+function numberRepeatMoreOrThan3(number, arrayNumbers) {
+  let counter = 0
+  for (const numberOfArray of arrayNumbers) {
+    if (number === numberOfArray) {
+      counter += 1
+    }
+    if (counter >= 3) {
+      return true
+    }
   }
-  return 0
+  return false
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+/**
+ * @param {number[]} numbers
+ */
+function generatePhoneNumber(numbers) {
+  if (numbers.length > 11) return 'Array com tamanho incorreto.'
+  if (!numbers.every(number => !numberRepeatMoreOrThan3(number, numbers))) {
+    return 'não é possível gerar um número de telefone com esses valores'
+  }
+  if (!numbers.every(number => number >= 0 && number <= 9)) {
+    return 'não é possível gerar um número de telefone com esses valores'
+  }
+  return `(${numbers.slice(0, 2).join('')}) ${numbers.slice(2, 7).join('')}-${numbers.slice(7, 11).join('')}`
 }
 
 // Desafio 12

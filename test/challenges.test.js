@@ -64,3 +64,10 @@ assert.deepStrictEqual(challenges.techList(["React", "Jest", "HTML", "CSS", "Jav
 ])
 console.log('10° OK');
 
+assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]), "Array com tamanho incorreto.")
+assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 1]), "não é possível gerar um número de telefone com esses valores")
+assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]), "não é possível gerar um número de telefone com esses valores")
+assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 10, 9, 2, 1]), "não é possível gerar um número de telefone com esses valores")
+assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]), '(12) 34567-8901')
+console.log('11° OK');
+
