@@ -14,8 +14,9 @@ return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  string.split(" ");
+  return string;
 }
 
 // Desafio 4
