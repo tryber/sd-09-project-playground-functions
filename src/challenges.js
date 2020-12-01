@@ -12,11 +12,24 @@ function compareTrue(param1, param2) {
 function calcArea(base, height) {
   // seu código aqui
   return ((base * height) / 2);
+
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  let subPalavras = [];
+  let subWord = '';
+  for (let index = 0; index <= str.length; index += 1) {
+    if ((str[index] !== ' ') && (index <= str.length - 1)) {
+      subWord += str[index];
+    } else {
+      subPalavras.push(subWord);
+      subWord = '';
+    }
+  }
+  return subPalavras;
+
 }
 
 // Desafio 4
