@@ -1,17 +1,20 @@
 // Project Playground Functions
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === 'true' && value2 === 'true') {
-    return 'true';
-  } else {
-    return 'false';
-  }
+  if (value1 === true && value2 === true) {
+    return true;
 }
+  return false;
+}
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let area = 0;
+  area = (base * heigth) / 2;
+  return area;
 }
+//console.log(calcArea(4 , 2));
 
 // Desafio 3
 function splitSentence() {
