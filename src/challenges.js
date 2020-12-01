@@ -17,18 +17,30 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(array) {
   let result = [array[array.length - 1]];
-  for (let index = 0; index < array.length - 1; index++) {
+  for (let index = 0; index < array.length - 1; index += 1) {
     result.push(array[index]);
   }
   return result;
 }
 
 // Desafio 5
-function footballPoints(numWins) {}
+function footballPoints(wins, ties) {
+  return ((wins * 3) + (ties * 1));
+}
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let repeat = 0;
+  let count = 0;
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] > count) {
+      count = array[index];
+    }
+    if (count === array[index]) {
+      repeat += 1;
+    }
+  }
+  return repeat;
 }
 
 // Desafio 7
