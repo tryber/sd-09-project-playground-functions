@@ -28,6 +28,7 @@ function concatName(stringArray) {
   let lastItem = stringArray.pop()
   let stringConcat = lastItem + ', ' + firstItem
   return stringConcat
+}
 
 // Desafio 5
 function footballPoints() {
