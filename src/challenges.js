@@ -6,6 +6,8 @@ function compareTrue(value1, value2) {
     return (true);
   } else if ((value1 === false) || (value2 === false)) {
     return (false);
+  } else {
+    return ("error");
   }
 }
 
