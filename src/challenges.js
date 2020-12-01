@@ -21,18 +21,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(x) {
-  var y = [];
-  container = x.split(' ').reverse()
-  for(i = 0; i < container.length; i++) {
-      if (i == 0) {
-           y += container[i]+', '
-      }
-      else if (i == container.length -1) {
-          y += container[i]
-      }
+function concatName(phrase) {
+  let result = [];
+  for (let key in phrase) {
+    result = phrase[phrase.length-1] + ', ' + phrase[0];
   }
-  return y
+  return result;
 }
 
 // Desafio 5
@@ -44,142 +38,103 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(n) {
-  var contador = 0;
-  var comparador;
+function highestCount(numbers) {
+  let bigger = numbers[0];
+  let bigger2 = 0;
 
-    comparador = numberArray[0];
-  for (i = 0; i < n.length; i++) {
-    if (comparador < n[i]) {
-        comparador = n[i]
-    }
-    for (i = 0; i < n.length; i++) {
-        if (comparador == n[i]) {
-            contador++
-        }
-    }
+  for (let counter = 0; counter < numbers.length; counter += 1) {
+     if (bigger < numbers[counter]) {
+       bigger = numbers[counter];
+     }
 }
 return contador
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1 , cat2) {
- let retorno = '';
- let counterCat1 = 0, counterCat2 = 0;
 
-for (let i = 0; i < Math.abs(cat1 - mouse); i++) {
-  counterCat1 = i + 1;
-  for (let i = 0; i < Math.abs(cat2 - mouse); i++) {
-      counterCat2 = i + 1;
-  }
+  let result = ''; 
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+
+  if (positionCat1 < positionCat2) {
+      result = 'cat1';
+    } else if (positionCat2 < positionCat1) {
+      result ='cat2';
+    } else {
+      result = 'os gatos trombam e o rato foge';
+    }
+  return result;
 }
 
-if (counterCat1 < counterCat2) {
-  return 'Cat1 has catch the mouse';
-}
-
-else if (counterCat2 < counterCat1) {
-return 'Cat2 has catch the mouse';
-}
-
-else {
-  return 'Os gatos trombam e o rato foge'
-}
-
-}
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
-  let test = [];
-
-  for (let i = 0; i < arrayNumbers.length; i++) {
-    test[i] = 'Bug'
-if ((arrayNumbers[i] % 3 === 0) && (arrayNumbers[i] % 5 === 0)) {
-test[i] = `Posicion ${i} FizzBuzz`;
-} 
-else if (arrayNumbers[i] % 3 === 0) {
-   test[i] = `Posicion ${i} Fizz`;
-}
-else if (arrayNumbers[i] % 5 === 0) {
-   test[i] = `Posicion ${i} Buzz`
-}
-}
-
-return test
+function fizzBuzz(numbers) {
+  let x = [];
+ 
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
+        x.push('fizzBuzz');
+      } else if (numbers[index] % 5 == 0) {
+        x.push('buzz');
+      } else if (numbers[index] % 3 == 0) {
+        x.push('fizz');
+      }else {
+        x.push('bug!');
+      }
+    }
+  return x;
 }
 
 // Desafio 9
-function encode(a) {
-  let b = [];
-  let phrase = a.split('');
-  for (let i = 0; i < phrase.length; i++){
-      b += phrase[i]; 
-  for(let i = 0; i < phrase.length; i++) {
-      switch (phrase[i]) {
-          case '1':
-          phrase[i] = 'a'
-          break;
-
-          case '2':
-          phrase[i] = 'e'
-          break;
-
-          case '3':
-          phrase[i] = 'i'
-          break;
-
-          case '4':
-          phrase[i] = 'o'
-          break;
-
-          case '5':
-          phrase[i] = 'u'
-          break;
-      }
+function encode(word) {
+  let functionString = '';
+  for (let key in word) {
+    if (word[key] === 'a') {
+      functionString += '1';
+    } else if (word[key] === 'e') {
+      functionString += '2';
+    } else if (word[key] === 'i') {
+      functionString += '3';
+    } else if (word[key] === 'o') {
+      functionString += '4';
+    } else if (word[key] === 'u') {
+      functionString += '5';
+    } else {
+      functionString += word[key];
+    }
   }
+  return functionString;
 }
-  return b
-}
-function decode(a) {
-  let b = [];
-  let phrase = a.split('');
-  for (let i = 0; i < phrase.length; i++){
-      b += phrase[i]; 
-  for(let i = 0; i < phrase.length; i++) {
-      switch (phrase[i]) {
-          case '1':
-          phrase[i] = 'a'
-          break;
 
-          case '2':
-          phrase[i] = 'e'
-          break;
-
-          case '3':
-          phrase[i] = 'i'
-          break;
-
-          case '4':
-          phrase[i] = 'o'
-          break;
-
-          case '5':
-          phrase[i] = 'u'
-          break;
-      }
-  }
-}
-  return b
+function decode(word) {
+  let decodeString = '';
+  for (let key in word) {
+    if (word2[key] =String) {
+      decodeString += 'a';
+    } else if (word[key] === '2') {
+      decodeString += 'e';
+    } else if (word[key] === '3') {
+      decodeString += 'i';
+    } else if (word[key] === '4') {
+      decodeString += 'o';
+    } else if (word[key] === '5') {
+      decodeString += 'u';
+    } else {
+      decodeString += word[key];
+    }
+  } 
+  return decodeString;
 }
 
 // Desafio 10
-function techList(techs, name) {
+function techList(tech, name) {
     
-  let techB = techs.sort();
+  let techB = tech.sort();
 
   let techD = [];
-  if (techs.length > 0) {
-  for (let i = 0; i < techs.length; i++ ) {
+  if (tech.length > 0) {
+  for (let i = 0; i < tech.length; i++ ) {
      let tech = techB[i]
       techD.push({
           tech,
@@ -196,71 +151,34 @@ else {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  let container = '';
+  let number = '(xxx) xxxx-xxxx';
+
   if (number.length === 11) {
-      for (let i = 0; i < number.length; i++) {
-          switch(true) {
-              case i == 0:
-              container += '('+number[i];
-              break;
 
-              case i == 1:
-              container += number[i]+')';
-              break;
-
-              case i == 2:
-              container += ' '+number[i];
-              break;
-
-              case i == 3:
-              container += number[i];
-              break;
-
-              
-              case i == 4:
-              container += number[i];
-              break;
-
-              case i == 5:
-              container += number[i];
-              break;
-
-
-              case i == 6:
-              container += number[i]+'-';
-              break;
-
-
-              case i == 7:
-              container += number[i];
-              break;
-
-
-              case i == 8:
-              container += number[i];
-              break;
-
-
-              case i == 9:
-              container += number[i];
-              break;
-
-
-              case i == 10:
-              container += number[i];
-              break;
-          }
-      }
+    for(let i = 0; i < numbers.length; i++) {
+        number = number.replace('x', numbers[i])
+    }
+ 
+    return number
   }
   else {
       return 'não é possível gerar um número de telefone com esses valores'
   }
-  return container
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu 
+function triangleCheck(lineA, lineB, lineC) {
+  switch(true) {
+    case lineA < lineB + lineC:
+    case lineB < lineA + lineC:
+    case lineC < lineA + lineB:
+      return true;
+      break;
+
+    default:
+      return false;
+      break;
+  }
 }
 
 // Desafio 13
