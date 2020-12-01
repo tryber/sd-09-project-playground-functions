@@ -1,12 +1,16 @@
-// PASS
+// Desafio 1 - PASS
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true
 
-  } else false
-}
+  } else {
+    return false
+
+}}
+
 
 // FAIL
+// Desafio 2
 function calcArea(base, height) {
   /* if (((base * height) / 2) <=  ) {
     return true
@@ -15,38 +19,47 @@ function calcArea(base, height) {
 
 }
 
-// PASS
+// Desafio 3 - PASS
 function splitSentence(texto) {
   if ( typeof (texto) === "string") {
     return texto.split(' ')
-}
-}
 
-// PASS
+}}
+
+// Desafio 4 - PASS
 function concatName(param) {
   return (`${param[param.length -1]}, ${param[0]}`)
 
 }
 
-// Verificar
+// Desafio 5 - PASS
 function footballPoints(wins, ties) {
   return (wins * 3) + ties
 
 }
 
-// Desafio 6
+// Desafio 6 -- Verificação
 function highestCount(param) {
   let ultimoNumero = param.sort((a, b) => a - b)[param.length - 1]
   let qtdNumerosRepetidos = 0;
 
-  console.log( 'numero mais alto = ' + ultimoNumero )
+  //console.log( 'numero mais alto = ' + ultimoNumero )
+
+  if (ultimoNumero === 0) {
+    for (key in param) {
+      //console.log(param[key])
+      if (param[key] === ultimoNumero) {
+        ++qtdNumerosRepetidos
+}}
+
+    //console.log( 'quantidade de números 0 = ' + qtdNumerosRepetidos )
+  } else {
 
   for (let i = 0; i <= ultimoNumero; i++ ) {
     if (param[i] === ultimoNumero) {
       qtdNumerosRepetidos += 1
 
-    }
-  }
+}}}
 
   return qtdNumerosRepetidos
 
@@ -54,6 +67,7 @@ function highestCount(param) {
 
 //console.log( highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9]) )
 //console.log( highestCount([9, 1, 2, 3, 9, 5, 7]) )
+//console.log( highestCount([0,0,0,0]) )
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
