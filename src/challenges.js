@@ -97,6 +97,7 @@ function fizzBuzz(numberArray) {
 // Desafio 9
 function encode(letter) {
   let letters = split(letter);
+  console.log(letters);
   let newL = [];
   for(let i = 0; i <= letters.length; i += 1) {
     switch (letters[i]) {
@@ -124,7 +125,17 @@ function decode() {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  function listaTech (tecnologia, name) {
+    let resultado = [];
+    for (let i in tecnologia) {
+      let objeto = {
+        tecnologia: tecnologia[i],
+        nome: name
+      }
+      console.log(objeto)
+      resultado.push(objeto);
+    }
+  }
 }
 
 // Desafio 11
