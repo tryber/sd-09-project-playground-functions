@@ -141,8 +141,32 @@ function decode(text) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function ascOrder(array) {
+  for (cycles = array.length - 1; cycles > 0; cycles -= 1) {
+    for (currentIndex = 0; currentIndex < cycles; currentIndex += 1) {
+      let nextIndex = currentIndex + 1;
+      if (array[currentIndex] > array[nextIndex]) {
+        let first = array[nextIndex];
+        array[nextIndex] = array[currentIndex];
+        array[currentIndex] = first;
+      }
+    }
+  }
+  return array;
+}
+
+function techList(array, name) {
+  array = ascOrder(array);
+  let output = [];
+  for (let index in array) {
+    let tech = array[index];
+    let obj = {
+      tech: tech,
+      name: name
+    };
+    output.push(obj);
+  }
+  return output;
 }
 
 // Desafio 11
