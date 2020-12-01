@@ -2,14 +2,14 @@
 // Desafio 1
 function compareTrue(num1, num2) {
   // seu código aqui
-  if(num1 === num2 && num2 === num1) {
+  if (num1 == num2 && num2 == num1) {
     return true;
   } else {
     return false;
   }
 }
 
-console.log(compareTrue(2, 1));
+console.log(compareTrue(1, 1));
 
 // Desafio 2
 function calcArea(base, height) {
