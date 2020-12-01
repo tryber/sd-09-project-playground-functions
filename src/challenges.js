@@ -62,7 +62,7 @@ console.log(catAndMouse(5, 2, 3))
 
 // Desafio 8
 function fizzBuzz(param) {
-  let newArr = [];  
+  let newArr = [];
   for (let index = 0; index < param.length; index += 1) {
     switch (true) {
       case param[index] % 3 !== 0 && param[index] % 5 !== 0:
