@@ -38,8 +38,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let higherNumber = 0
+  let timesHigherNumber = 0
+  for (index in numbers) {
+    if (numbers[index] > higherNumber) {
+      higherNumber = numbers[index]
+    }
+  }
+  for (index in numbers) {
+    if (numbers[index] === higherNumber) {
+      timesHigherNumber += 1
+    }
+  }
+  console.log(`O maior numero foi ${higherNumber} e ele aparece ${timesHigherNumber} vezes`)
+  return timesHigherNumber
 }
 
 // Desafio 7
