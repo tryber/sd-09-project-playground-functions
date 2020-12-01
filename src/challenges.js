@@ -164,7 +164,7 @@ function techList(tech, name) {
 }
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
-,"Lucas"))
+  , "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber(numbearray) {
@@ -222,9 +222,21 @@ function maxrepeat(numbers) {
 
 console.log(generatePhoneNumber([5, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
+    return false
+  }
+  else if (lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)) {
+    return false
+  }
+  else if (lineC > (lineA + lineB) || lineC < Math.abs(lineA - lineB)){
+    return false
+  }
+  else{
+    return true
+  }
 }
+
 
 // Desafio 13
 function hydrate() {
