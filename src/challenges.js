@@ -77,15 +77,30 @@ function fizzBuzz(arrayNumbers) {
     let mod5 = arrayNumbers[index] % 5 === 0;
     let mod3 = arrayNumbers[index] % 3 === 0;
 
-    if (mod3 && mod5) {
-      arrayNumbers[index] = 'fizzBuzz';
-    } else if (mod3) {
-      arrayNumbers[index] = 'fizz';
-    } else if (mod5) {
-      arrayNumbers[index] = 'buzz';
-    } else {
-      arrayNumbers[index] = 'bug!';
+    switch (true) {
+      case mod3 && mod5:
+        arrayNumbers[index] = 'fizzBuzz';
+        break;
+      case mod3:
+        arrayNumbers[index] = 'fizz';
+        break;
+      case mod5:
+        arrayNumbers[index] = 'buzz';
+        break;
+      default:
+        arrayNumbers[index] = 'bug!';
+        break;
     }
+
+    // if (mod3 && mod5) {
+    //   arrayNumbers[index] = 'fizzBuzz';
+    // } else if (mod3) {
+    //   arrayNumbers[index] = 'fizz';
+    // } else if (mod5) {
+    //   arrayNumbers[index] = 'buzz';
+    // } else {
+    //   arrayNumbers[index] = 'bug!';
+    // }
   }
 
   return arrayNumbers;
