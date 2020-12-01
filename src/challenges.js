@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  // seu código aqui
   if (valor1 === true && valor2 === true) {
     return true;
   }
@@ -8,20 +7,24 @@ function compareTrue(valor1, valor2) {
 }
 
 // Desafio 2
-function calcArea(base,high) {
-  // seu código aqui
-  area = base * high / 2;
+function calcArea(base, high) {
+  let area;
+  area = (base * high) / 2;
   return (area);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let ultimo;
+  let valor = '';
+  ultimo = (array.length) - 1 ;
+  valor = array[0] + ' ' + array[ultimo];
+  return valor
 }
 
 // Desafio 5
