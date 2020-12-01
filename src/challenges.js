@@ -1,7 +1,7 @@
 /** RAFAEL GERONIMO | TRYBE | #VQV */
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if(bool1 === true && bool2 === true) {
+  if (bool1 === true && bool2 === true) {
     return true;
   }
   return false;
@@ -14,27 +14,31 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let words = [];
   return words = phrase.split(' ');
 }
 
 // Desafio 4
 function concatName(names) {
-  let firstAndLast = "";
-  return firstAndLast = firstAndLast.concat(names[names.length -1] + ', ' + names[0]);
+  let firstAndLast = '';
+  return firstAndLast = firstAndLast.concat(`${names[names.length - 1]} , ${names[0]}`);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = 0;
-  return points = wins * 3 + ties;
+  return points = (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(numbers) {
   let count = 0;
-  let highestNumber = numbers.reduce(function(a, b) {return Math.max(a, b)})
-  for(let index = 0; index < numbers.length; index += 1){if(numbers[index] === highestNumber){count += 1}}
+  let highestNumber = numbers.reduce(function (a , b) {
+    return Math.max(a , b)
+  })
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === highestNumber) {
+      count += 1
+    }
+  }
   return count;
 }
 
@@ -42,27 +46,27 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Dist = Math.max(mouse, cat1) - Math.min(mouse, cat1);
   let cat2Dist = Math.max(mouse, cat2) - Math.min(mouse, cat2);
-  if(cat1Dist < cat2Dist){
-  	return "cat1";
-  } else if(cat1Dist > cat2Dist) {
-  	return "cat2";
+  if (cat1Dist < cat2Dist) {
+    return 'cat1';
+  } else if (cat1Dist > cat2Dist) {
+    return 'cat2';
   } else {
-  	return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzz = [];
-  for(let index = 0; index < numbers.length; index += 1){
-  	if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
-    	fizzBuzz = fizzBuzz.concat("fizzBuzz");
-    } else if (numbers[index] % 3 != 0 && numbers[index] % 5 === 0){
-    	fizzBuzz = fizzBuzz.concat("buzz");
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
-    	fizzBuzz = fizzBuzz.concat("fizz");
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      fizzBuzz = fizzBuzz.concat('fizzBuzz');
+    } else if (numbers[index] % 3 !==0 && numbers[index] % 5 === 0) {
+      fizzBuzz = fizzBuzz.concat('buzz');
+    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 !==0) {
+      fizzBuzz = fizzBuzz.concat('fizz');
     } else {
-    	fizzBuzz = fizzBuzz.concat("bug!");
+      fizzBuzz = fizzBuzz.concat('bug!');
     }
   }
   return fizzBuzz;
@@ -70,54 +74,54 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(phrase) {
-  let encoded = "";
-  for(let index = 0; index < phrase.length; index += 1){
-  	switch (phrase[index]){
-    	case 'a':
-      	encoded = encoded.concat('1');
+  let encoded = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+      case 'a':
+        encoded = encoded.concat('1');
         break;
       case 'e':
-      	encoded = encoded.concat('2');
+        encoded = encoded.concat('2');
         break;
       case 'i':
-      	encoded = encoded.concat('3');
+        encoded = encoded.concat('3');
         break;
       case 'o':
-      	encoded = encoded.concat('4');
+        encoded = encoded.concat('4');
         break;
       case 'u':
-      	encoded = encoded.concat('5');
+        encoded = encoded.concat('5');
         break;
-      default: 
-      	encoded = encoded.concat(phrase[index]);
-      	break;
+      default:
+        encoded = encoded.concat(phrase[index]);
+        break;
     }
   }
   return encoded;
 }
 
 function decode(phrase) {
-	let decoded = "";
-  for(let index = 0; index < phrase.length; index += 1){
-  	switch (phrase[index]){
-    	case '1':
-      	decoded = decoded.concat('a');
+  let decoded = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+      case '1':
+        decoded = decoded.concat('a');
         break;
       case '2':
-      	decoded = decoded.concat('e');
+        decoded = decoded.concat('e');
         break;
       case '3':
-      	decoded = decoded.concat('i');
+        decoded = decoded.concat('i');
         break;
       case '4':
-      	decoded = decoded.concat('o');
+        decoded = decoded.concat('o');
         break;
       case '5':
-      	decoded = decoded.concat('u');
+        decoded = decoded.concat('u');
         break;
-      default: 
-      	decoded = decoded.concat(phrase[index]);
-      	break;
+      default:
+        decoded = decoded.concat(phrase[index]);
+        break;
     }
   }
   return decoded;
