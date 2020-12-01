@@ -104,17 +104,69 @@ let arrayFizBuzz = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayFizBuzz));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(str) {
+  let array = str.split('');
+  for (index in array){
+    if (array[index] === 'a') {
+      array[index] = 1;
+    } else if (array[index] === 'e') {
+      array[index] = 2;
+    } else if (array[index] === 'i') {
+      array[index] = 3;
+    } else if (array[index] === 'o') {
+      array[index] = 4;
+    } else if (array[index] === 'u') {
+      array[index] = 5;
+    }
+  }
+  str = array.join('');
+  return str;
 }
 
-// Desafio 10
-function techList() {
-  // seu código aqui
+function decode(str) {
+  let array = str.split('');
+  for (index in array){
+    if (array[index] === '1') {
+      array[index] = 'a';
+    } else if (array[index] === '2') {
+      array[index] = 'e';
+    } else if (array[index] === '3') {
+      array[index] = 'i';
+    } else if (array[index] === '4') {
+      array[index] = 'o';
+    } else if (array[index] === '5') {
+      array[index] = 'u';
+    }
+  }
+  str = array.join('');
+  return str;
 }
+
+let phrase = 'hi there!';
+phrase = encode(phrase);
+console.log(phrase);
+phrase = decode(phrase);
+console.log(phrase);
+
+// Desafio 10
+function techList(array ,name) {
+  let arrayTech = [];
+  if (array.length != 0){
+    for (index in array){
+      let object = {
+        tech: array[index],
+        name: name,
+      };
+      arrayTech.push(object);
+    }
+    return arrayTech;
+  } else {
+    return 'Vazio!';
+  }
+}
+
+let arrayTechList = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(arrayTechList, 'Felipe'));
 
 // Desafio 11
 function generatePhoneNumber() {
