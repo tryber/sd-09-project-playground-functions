@@ -4,7 +4,7 @@ function compareTrue(bol1, bol2) {
   if (bol1 && bol2) {
     return true
   }
-  return false  
+  return false
 }
 
 // Desafio 2
@@ -14,8 +14,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let stringArray = []
+  stringArray = string.split(" ")
+  return stringArray
 }
 
 // Desafio 4
@@ -70,6 +73,8 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
+splitSentence()
 
 module.exports = {
   calcArea,
