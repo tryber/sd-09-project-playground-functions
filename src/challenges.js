@@ -13,14 +13,14 @@ function calcArea(base, height) {
   // seu código aqui
   base = Number(base)
   height = Number(height)
-  return base * height / 2
+  return (base * height) / 2
 }
 // console.log(calcArea(5, 98))
 
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  return str.split(" ")
+  return str.split(' ')
 }
 // console.log(splitSentence("go Trybe"))
 
@@ -29,7 +29,7 @@ function concatName(myArray) {
   // seu código aqui
   let firstElement = myArray[0]
   let lastElement = myArray[myArray.length - 1]
-  return (lastElement + ', ' + firstElement)
+  return `${lastElement}, ${firstElement}`
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
@@ -38,27 +38,12 @@ function footballPoints(wins, ties) {
   // seu código aqui
   // win = 3 & tie = 1
   let totalPoints = Number()
-  totalPoints = wins * 3 + ties
+  totalPoints = (wins * 3) + ties
   return totalPoints
 }
 // console.log(footballPoints(3, 2))
 
 // Desafio 6
-function highestCount(array) {
-  // seu código aqui
-  const repetitionArray = numberCounter(array)
-  let greatest = 0
-  for (let element of repetitionArray) {
-    if (element > greatest) {
-      greatest = element
-    }
-  }
-  //Retorna o elemento que mais se repete no array
-  //return array[repetitionArray.indexOf(greatest)]
-  return greatest
-}
-// console.log(highestCount([9, 3, 3, 3, 9, 9, 9]))
-
 function numberCounter(array) {
   const repetitionArray = []
   let counter = 0
@@ -70,9 +55,28 @@ function numberCounter(array) {
     }
     repetitionArray.push(counter)
     counter = 0
-  } 
-  return repetitionArray 
+  }
+  return repetitionArray
 }
+
+function highestCount(array) {
+  // seu código aqui
+  const repetitionArray = numberCounter(array)
+  let greatest = 0
+  for (let element of repetitionArray) {
+    if (element > greatest) {
+      greatest = element
+    }
+  }
+
+  /*************************************************
+  * Retorna o elemento que mais se repete no array
+  * return array[repetitionArray.indexOf(greatest)]
+  **************************************************/
+
+  return greatest
+}
+// console.log(highestCount([9, 3, 3, 3, 9, 9, 9]))
 
 // Desafio 7
 function catAndMouse() {
