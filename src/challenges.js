@@ -83,3 +83,5 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+//Aooba, não é que tem um segredo no Lession Learned?
