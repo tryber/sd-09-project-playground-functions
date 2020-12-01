@@ -63,10 +63,9 @@ return contador
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  var mouse = 7;
-let retorno = '';
-let counterCat1 = 0, counterCat2 = 0;
+function catAndMouse(mouse, cat1 , cat2) {
+ let retorno = '';
+ let counterCat1 = 0, counterCat2 = 0;
 
 for (let i = 0; i < Math.abs(cat1 - mouse); i++) {
   counterCat1 = i + 1;
@@ -74,15 +73,19 @@ for (let i = 0; i < Math.abs(cat1 - mouse); i++) {
       counterCat2 = i + 1;
   }
 }
+
 if (counterCat1 < counterCat2) {
   return 'Cat1 has catch the mouse';
 }
+
 else if (counterCat2 < counterCat1) {
 return 'Cat2 has catch the mouse';
 }
+
 else {
   return 'Os gatos trombam e o rato foge'
 }
+
 }
 
 // Desafio 8
@@ -100,8 +103,8 @@ else if (arrayNumbers[i] % 3 === 0) {
 else if (arrayNumbers[i] % 5 === 0) {
    test[i] = `Posicion ${i} Buzz`
 }
-
 }
+
 return test
 }
 
@@ -250,7 +253,7 @@ function generatePhoneNumber(number) {
       }
   }
   else {
-      return 'Array com tamanho incorreto.'
+      return 'não é possível gerar um número de telefone com esses valores'
   }
   return container
 }
@@ -269,7 +272,7 @@ function hydrate(pedido) {
           counter += parseInt(total[i]) 
       }
   }
-  return counter + ' copos de agua'
+  return counter + ' copos de água'
 }
 
 
