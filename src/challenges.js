@@ -92,12 +92,34 @@ function fizzBuzz() {
   return newArray;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// objeto para ajudar o desafio 9
+const correspondencia = {
+  a:1,
+  e:2,
+  i:3,
+  o:4,
+  u:5
 }
-function decode() {
-  // seu código aqui
+// funcao auxiliar replaceAll
+function replaceAll(string, busca, troca){
+  newString = string.split(busca).join(troca);
+  return newString;
+}
+
+// Desafio 9
+function encode(string) {
+  
+  for (let item in correspondencia){
+    string = replaceAll(string, item, correspondencia[item]);
+  }
+  return string;
+}
+
+function decode(string) {
+  for (let item in correspondencia){
+    string = replaceAll(string, correspondencia[item], item);
+  }
+  return string;
 }
 
 // Desafio 10
