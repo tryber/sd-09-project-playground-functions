@@ -9,8 +9,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  let currentWord = "";
+  let setenceArray = [];
+  for (charIndex in text) {
+    let char = text[charIndex];
+    if (char === " ") {
+      setenceArray.push(currentWord);
+      currentWord = "";
+    } else {
+      currentWord += char;
+    }
+  }
+  return setenceArray;
 }
 
 // Desafio 4
