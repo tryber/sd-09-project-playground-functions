@@ -76,25 +76,10 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode() {
   // seu código aqui
-  let vowels = {
-    1: a,
-    2: e,
-    3: i,
-    4: o,
-    5: u,
-  }
-  for (let index = 0; index = string.length; index += 1) {
-    for (let key in vowels) {
-      if (string[index] === vowels[key]) {
-        string[index] = key
-      }
-    }
-  }
-    }
+}
 
-console.log('hi thara');
 
 function decode() {
   // seu código aqui
@@ -103,12 +88,9 @@ function decode() {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  let newObj = {
-  }
   let newArray = []
-
   for (let index = 0; index < array.length; index += 1) {
-    if(array[index] < array) {
+    if (array[index] < array) {
         let outro = {
           tech: array[index],
           name: name
@@ -119,8 +101,19 @@ function techList(array, name) {
         return 'Vazio!'
     }
   }
+  newArray.sort(function(a, b) {
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    }
+    return 0;
+});
   return newArray;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Layo'))
 
 // Desafio 11
 function generatePhoneNumber() {
