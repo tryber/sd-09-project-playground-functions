@@ -6,12 +6,12 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ### 🗒 ANTES DE COMEÇAR A DESENVOLVER:
 
-1. Clone o repositório
+1. Clone o repositório (X)
   * `git clone https://github.com/tryber/sd-09-project-playground-functions.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-09-project-playground-functions`
 
-2. Crie uma branch a partir da branch `master`
+2. Crie uma branch a partir da branch `master` (X)
   * Verifique que você está na branch `master`
     * Exemplo: `git branch`
   * Se não estiver, mude para a branch `master`
