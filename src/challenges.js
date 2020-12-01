@@ -20,7 +20,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ' , ' + array[0];
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
