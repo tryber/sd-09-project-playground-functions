@@ -36,17 +36,10 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(array) {
-  let nomes = [];
-  for (let index = array.length - 1; index >= 0; index -= 1) {
-    if (array[index] === array[array.length - 1]) {
-      nomes += array[index]
-      nomes += ', '
-    } else if (array[index] === array[0]) {
-      nomes += array[index]
-    }
-  }
-  return nomes;
+  let nome = `${array[array.length - 1]}, ${array[0]}`
+  return nome;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
