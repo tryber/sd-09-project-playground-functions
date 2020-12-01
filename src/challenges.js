@@ -1,20 +1,18 @@
 // Desafio iniciado por Maximilian Kaden
 
 // Desafio 1
-let valor1 = true
-let valor2 = true
-
-compareTrue(valor1, valor2)
 
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true){ 
-    console.log("Retornou true")
+  if (valor1 === true && valor2 === true) {
+    console.log('Retornou true')
     return true
   } else {
-    console.log("Retornou false")
+    console.log('Retornou false')
     return false
   }
 }
+
+compareTrue(true, true)
 
 // Desafio 2
 function calcArea() {
