@@ -21,10 +21,7 @@ console.log(splitSentence('go Trybe'))
 
 // Desafio 4
 function concatName(param) {
-  let last = [...param].pop();
-  let first = [...param].shift();
-  let newArr = [last, first];
-  return newArr.join(', ').toString();
+  return `${param[param.length - 1]}, ${param[0]}`;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -64,9 +61,26 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(5, 2, 3))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(param) {
+  let arr = [];  
+  for (index = 0; index < param.length; index += 1) {
+    if ((param[index] % 5 === 0) && (param[index] % 3 === 0)) {
+      arr.push('fizzBuzz');
+    } else {
+      if (param[index] % 3 === 0) {
+        arr.push('fizz');
+      } else if (param[index] % 5 === 0) {
+        arr.push('buzz');
+      } else if ((param[index] % 5) || (param[index] % 3 != 0)) {
+        arr.push('bug!');
+      }
+    }
+  }
+
+  return arr;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 
 // Desafio 9
 function encode() {
