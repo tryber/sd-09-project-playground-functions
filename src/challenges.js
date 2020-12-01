@@ -7,7 +7,7 @@ function compareTrue(bool1, bool2) {
 }
 
 // Desafio 2
-function calcArea(base , height) {
+function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
@@ -24,7 +24,6 @@ function splitSentence(string) {
       } else {
         array[arrayIndex] += string[index];
       }
-      
     }
   }
   return array;
@@ -137,8 +136,48 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numArray) {
+  let checkNumbers = true;
+  let countNumbers;
+  if (numArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else {
+    let arrayTest = numArray.slice();
+    numArray.sort();
+    for (let index in numArray) {
+      if (numArray[index] >= 0 && index < numArray.length - 1) {
+        countNumbers = 1;
+        while (numArray[index] === numArray[index + 1]) {
+          countNumbers += 1;
+          index += 1;
+        }
+      } else {
+        checkNumbers = false;
+        break;
+      }
+    }
+    if (!checkNumbers || countNumbers >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      let phoneNumber = ['(' , ')' , ' ' , '-' ];
+      let DDD = [];
+      let firstPart = [];
+      let lastPart = [];
+      for (let index in arrayTest) {
+        if (index < 2) {
+          DDD.push(arrayTest[index]);
+        } else if (index < 7) {
+          firstPart.push(arrayTest[index]);
+        } else {
+          lastPart.push(arrayTest[index]);
+        }
+      }
+      phoneNumber.splice(1 , 0 , DDD.join(''));
+      phoneNumber.splice(4 , 0 , firstPart.join(''));
+      phoneNumber.splice(10 , 0 , lastPart.join(''));
+      return phoneNumber.join('');
+    }
+  }
 }
 
 // Desafio 12
