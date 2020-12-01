@@ -44,10 +44,51 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(5, 5));
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+//Função que verifica maior número em um array
+function maxNumberIn(array) {
+  let bigger = array[0];
+  for (let index = 1; index < array.length; index += 1) {
+    if (array[index] > bigger) {
+      bigger = array[index];
+    }
+  }
+  return bigger;
 }
+
+//Função que retorna o numero mais repetido da array
+function numberThatAppearsMostIn(array) {
+  let repeated = 0;
+  let counter = 0;
+  let repeatedIndex = 0;
+  for (let index in array) {
+    let number = array[index];
+    for (let index2 in array) {
+      if (number === array[index2]) {
+        counter++;
+      }
+    }
+    if (counter > repeated) {
+      repeated = counter;
+      repeatedIndex = index;
+    }
+    counter = 0;
+  }
+  return array[repeatedIndex];
+}
+
+// Desafio 6
+function highestCount(array) {
+  let bigger = array[0];
+  for (let index = 1; index < array.length; index += 1) {
+    if (array[index] > bigger) {
+      bigger = array[index];
+    }
+  }
+  return bigger;
+}
+let array = [2, 8, 1, 8, 15, 5, 15, 7]
+console.log(highestCount(array))
+
 
 // Desafio 7
 function catAndMouse() {
