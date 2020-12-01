@@ -53,7 +53,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumbers) {
   let array = [];
   let input;
       for (let index in arrayNumbers) {
