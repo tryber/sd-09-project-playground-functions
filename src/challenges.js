@@ -35,7 +35,7 @@ function splitSentence(phrase) {
       word = '';
     }
   }
-  return cwordsSplited;
+  return wordsSplited;
 }
 
 // Desafio 4
@@ -65,7 +65,10 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (dist2 < 0){
     dist2 = (dist2 * -1);
   }
-  if (dist1 < dist2){
+
+  if (dist1 === dist2){
+    return 'os gatos trombam e o rato foge';
+  }else if (dist1 < dist2){
     return 'cat1';
   } else {
     return 'cat2';
