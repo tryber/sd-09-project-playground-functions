@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function getHigherNumber(numbers) {
   let higherNumberFromNow = 0
-  for (index in numbers) {
+  for (let index in numbers) {
     if (numbers[index] > higherNumberFromNow) {
       higherNumberFromNow = numbers[index]
     }
@@ -50,7 +50,7 @@ function getHigherNumber(numbers) {
 
 function getTimesHigherNumber(numbers, numberToCount) {
   let timesHigherNumberFromNow = 0
-  for (index in numbers) {
+  for (let index in numbers) {
     if (numbers[index] === numberToCount) {
       timesHigherNumberFromNow += 1
     }
