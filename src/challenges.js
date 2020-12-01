@@ -15,8 +15,9 @@ return area;
 
 // Desafio 3
 function splitSentence(string) {
-  string.split(" ");
-  return string;
+  let frase = " "
+  frase = string.split(" ");
+  return frase;
 }
 
 // Desafio 4
