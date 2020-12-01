@@ -1,8 +1,12 @@
 //  Cheguei na NAVE, Trybers!! VAMOS QUE VAMOS!
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+  function compareTrue(valorOne, valorTwo) {
+  if(valorOne === true && valorTwo === true) {
+    return true;
+  } else {
+  return false; 
+  }
 }
 
 // Desafio 2
