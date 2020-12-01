@@ -111,7 +111,6 @@ function encode(message) {
     o: 4,
     u: 5
   };
-  let arrayEncoded = [];
   let encodedMessage = '';
 
   for (let index in message) {
@@ -124,13 +123,45 @@ function encode(message) {
 
   return encodedMessage;
 }
+
 function decode() {
-  // seu código aqui
+  let encoder= {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+  let encodedMessage = '';
+
+  for (let index in message) {
+    if (message[index] === '1' || message[index] === '2' || message[index] === '3' || message[index] === '4' || message[index] === '5') {
+      encodedMessage += encoder[message[index]];
+    } else {
+      encodedMessage += message[index];
+    }
+  }
+
+  return encodedMessage;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(list, name) {
+  list = list.sort();
+  let stack = {
+    tech: '',
+    name: ''
+  };
+  let arrayStacks = [];
+
+  for (let index in list) {
+    arrayStacks.push({
+      tech: list[index],
+      name: name
+    })
+  }
+  
+  return arrayStacks;
 }
 
 // Desafio 11
@@ -175,3 +206,9 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(5, 2, 8));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(encode('hi there!'));
+// console.log(encode('h3 th2r2!'));
+
+let techListArray = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let name = 'Lucas';
+
+console.log(techList(techListArray, name));
