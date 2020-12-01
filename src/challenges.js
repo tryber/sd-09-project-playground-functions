@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if(boolean1 === true && boolean2 === true) {
+  if (boolean1 === true && boolean2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 console.log(compareTrue(false, true))
 
@@ -16,8 +15,11 @@ console.log(calcArea(30, 20))
 
 // Desafio 3
 function splitSentence(string) {
-  
+  let array = [];
+  array = (string.split(' '));
+  return array
 }
+console.log(splitSentence('Vamos nessa'))
 
 // Desafio 4
 function concatName() {
