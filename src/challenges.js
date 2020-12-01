@@ -81,8 +81,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzzBug = [];
+
+  for (let index in numbers) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      fizzBuzzBug[index] = 'fizzBuzz';
+    }
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+      fizzBuzzBug[index] = 'fizz';
+    }
+    if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
+      fizzBuzzBug[index] = 'buzz';
+    }
+    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0) {
+      fizzBuzzBug[index] = 'bug';
+    }
+  }
+
+  return fizzBuzzBug;
 }
 
 // Desafio 9
@@ -138,3 +155,4 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(10, 5));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(5, 2, 8));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
