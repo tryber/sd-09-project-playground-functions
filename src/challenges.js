@@ -138,8 +138,13 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+let result = []
+
+for(let index=0; index < tech.length; index += 1){
+    result.push({tech: tech[index], name: name})
+}
+return result
 }
 
 // Desafio 11
