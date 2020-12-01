@@ -18,8 +18,7 @@ function splitSentence(sentense) {
   let frase = '';
   for (const index in sentense) {
     if (sentense[index] !== ' ') {
-      frase = frase + sentense[index];
-
+      frase += sentense[index];
     } else if (sentense[index] === ' ') {
       array.push(frase);
       frase = '';
