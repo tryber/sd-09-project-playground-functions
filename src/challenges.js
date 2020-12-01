@@ -42,20 +42,17 @@ function highestCount(numberArray) {
   return counter;
 }
 
-console.log(highestCount([5, 9, 2, 3, 9, 5, 7]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanceMouseCat1 = Math.abs(mouse - cat1);
-  distanceMouseCat2 = Math.abs(mouse - cat2);
+  let distanceMouseCat1 = Math.abs(mouse - cat1);
+  let distanceMouseCat2 = Math.abs(mouse - cat2);
 
   if (distanceMouseCat1 < distanceMouseCat2) {
     return ('cat1');
   } else if (distanceMouseCat1 > distanceMouseCat2) {
     return ('cat2');
-  } else {
-    return ('os gatos trombam e o rato foge');
   }
+    return ('os gatos trombam e o rato foge');
 }
 
 // Desafio 8
@@ -63,7 +60,7 @@ function fizzBuzz(numberArray) {
   let strings = [];
 
   for (let i in numberArray) {
-    number = numberArray[i];
+    let number = numberArray[i];
 
     if (number % 3 === 0 && number % 5 === 0) {
       strings.push('fizzBuzz');
