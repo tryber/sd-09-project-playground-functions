@@ -123,8 +123,19 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+
+  array.sort();
+  let newArray = [];
+  let newObject = {};
+
+  for (let item of array){
+    newObject.tech = item;
+    newObject.name = name;
+    newArray.push(newObject);
+    newObject = {};
+    }
+  return newArray;
 }
 
 // Desafio 11
