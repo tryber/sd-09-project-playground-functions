@@ -30,7 +30,10 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  let qntPontos = 0;
+  wins *= 3;
+  qntPontos += wins + ties;
+  return qntPontos;
 }
 
 // Desafio 6
