@@ -66,8 +66,24 @@ return pontos;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+
+let somaNumero = 0;
+let somaMaior = 0;
+
+  for (let contador = 0; contador < array.length; contador += 1) {
+    for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
+      if (array[contadorNumero] === array[contador]) {
+        somaNumero += 1;
+      }
+    }
+    if (somaNumero > somaMaior) {
+      somaMaior = somaNumero;
+    }
+    somaNumero = 0;
+  }
+  return somaMaior;
 }
 
 // Desafio 7
