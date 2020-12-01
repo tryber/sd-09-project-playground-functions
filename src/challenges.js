@@ -36,13 +36,11 @@ function highestCount(arrayNums) {
   let highterNum = arrayNums[0];
   let highterNumRepeat = 0;
   for (let numberIndex in arrayNums) {
-    if (arrayNums[numberIndex] > highterNum)
-    {
+    if (arrayNums[numberIndex] > highterNum) {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
     }
-    else if (arrayNums[numberIndex] === highterNum)
-    {
+    else if (arrayNums[numberIndex] === highterNum) {
       highterNumRepeat += 1;
     }
   }
@@ -53,12 +51,10 @@ function highestCount(arrayNums) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs((cat1 - mouse));
   let distanceCat2 = Math.abs((cat2 - mouse));
-  if (distanceCat1 === distanceCat2)
-  {
+  if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
-  else if (distanceCat1 < distanceCat2)
-  {
+  else if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
   return 'cat2';
@@ -89,25 +85,25 @@ function encode(phrase) {
   let arrayPhrase = phrase.split('');
   for (let index in arrayPhrase) {
     if (arrayPhrase[index] === 'a') {
-        arrayPhrase[index] = 1;
+      arrayPhrase[index] = 1;
     }
     else if (arrayPhrase[index] === 'e') {
-        arrayPhrase[index] = 2;
+      arrayPhrase[index] = 2;
     }
     else if (arrayPhrase[index] === 'i') {
-        arrayPhrase[index] = 3;
+      arrayPhrase[index] = 3;
     }
     else if (arrayPhrase[index] === 'o') {
-        arrayPhrase[index] = 4;
+      arrayPhrase[index] = 4;
     }
     else if (arrayPhrase[index] === 'u') {
-        arrayPhrase[index] = 5;
+      arrayPhrase[index] = 5;
     }
   }
   return arrayPhrase.join('');
 }
 
-function decode() {
+function decode(phrase) {
   let arrayPhrase = phrase.split('');
   for (let index in arrayPhrase){
     switch (arrayPhrase[index]) {
