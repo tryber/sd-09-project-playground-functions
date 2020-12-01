@@ -4,9 +4,9 @@ function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true;
   } 
-    return false;
-}
-console.log(compareTrue(true, false));
+  return false;
+  }
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -16,13 +16,13 @@ console.log(calcArea(3, 8));
 
 // Desafio 3
 function splitSentence(string) {
-  let arrayString = string.split("");
+  let arrayString = string.split(" ");
   return arrayString;
 }
 
 // Desafio 4
 function concatName(frase) {
-  let answer = (frase[frase.length-1] + ', ' + frase[0]);
+  let answer = (frase[frase.length-1] + ", " + frase[0]);
   return answer;
 }
 
