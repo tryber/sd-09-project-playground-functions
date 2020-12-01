@@ -29,13 +29,13 @@ function concatName(array) {
   let switched=[];
   for (i in array){
     if (i==0){
-      received.push=array[i];
+      received.push(array[i]);
     } else if (i==array.length-1){
-      received.push=array[i];
+      received.push(array[i]);
     }
   }
-  switched.push=received[1];
-  switched.push=received[0];
+  switched.push(received[1]);
+  switched.push(received[0]);
   let result=switched.join(',');
   return result;
 }
@@ -81,8 +81,14 @@ function catAndMouse(cat1,cat2,mouse) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let results= [];
+  for (i in numbers){
+    if (numbers[i]%3=0 && numbers[i]%5=0){
+      results.push('fizzBuzz')
+    }
+  }
 }
 
 // Desafio 9
