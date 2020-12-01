@@ -32,12 +32,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  return [stringArray[stringArray.length - 1], stringArray[0]];
+  let newString = stringArray[stringArray.length - 1] + ', ' + stringArray[0];
+  return newString;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins , ties) {
+  let points = 3 * wins + ties;
+  return points;
 }
 
 // Desafio 6
