@@ -46,6 +46,7 @@ function highestCount(highestCount) {
   }
   return highestrepeat
 }
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
