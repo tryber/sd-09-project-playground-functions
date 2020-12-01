@@ -94,11 +94,41 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(word) {
   // seu código aqui
+  let wordArray=word.split('');
+  for (i in wordArray){
+    if(wordArray[i]=='a'){
+      wordArray[i]=1;
+    } else if (wordArray[i]=='e'){
+      wordArray[i]=2;
+    } else if (wordArray[i]=='i'){
+      wordArray[i]=3;
+    } else if (wordArray[i]=='o'){
+      wordArray[i]=4;
+    } else if (wordArray[i]=='u'){
+      wordArray[i]=5;
+    }
+  }
+  return wordArray.join('');
 }
-function decode() {
+function decode(word) {
   // seu código aqui
+  let wordArray=word.split('');
+  for (i in wordArray){
+    if(wordArray[i]==1){
+      wordArray[i]='a';
+    } else if (wordArray[i]==2){
+      wordArray[i]='e';
+    } else if (wordArray[i]==3){
+      wordArray[i]='i';
+    } else if (wordArray[i]==4){
+      wordArray[i]='o';
+    } else if (wordArray[i]==5){
+      wordArray[i]='u';
+    }
+  }
+  return wordArray.join('');
 }
 
 // Desafio 10
