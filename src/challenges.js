@@ -31,9 +31,26 @@ function footballPoints(wins , ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = ''
+  let result = 0
+  for (let index = 0 ; index < array.length ; index += 1) {
+    if (maior < array[index]) {
+      maior = array[index]
+    }
+  }
+  console.log(maior)
+    
+  for (let index = 0 ; index < array.length ; index += 1) {
+    if (maior === array[index]) {
+      result = result + 1
+    }
+  }
+  console.log(result)
+
 }
+
+highestCount([9, 1, 2, 3, 9, 5, 7])
 
 // Desafio 7
 function catAndMouse() {
@@ -71,6 +88,20 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+}
+
+// Extra Functions
+
+
+function biggestElement(array) {
+  let maior = ''
+  
+  for (let index = 0 ; index < array.length ; index += 1) {
+    if (maior < array[index]) {
+      maior = array[index]
+    }
+  }
+  console.log(maior)
 }
 
 
