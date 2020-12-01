@@ -61,19 +61,19 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let d1 = cat1 - mouse;
   let d2 = cat2 - mouse;
+  let answer = "";
   if (d1 < d2) {
-    return "cat1";
+    answer = "cat1";
+  } else if (d1 > d2) {
+    answer = "cat2";
+  } else {
+    answer = "os gatos trombam e o rato foge";
   }
-  if (d1 > d2) {
-    return "cat2";
-  }
-  if (d1 === d2) {
-    return "os gatos trombam e o rato foge";
-  }
+  return answer;
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
 }
 
