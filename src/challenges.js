@@ -29,13 +29,33 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = 3 * wins + ties
+
+  return totalPoints
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let mostAparisons = 0
+  let currentAparisons
+  let mostCommon
+
+  for (let i in array) {
+    currentAparisons = 0
+
+    for (let j in array) {
+      if (array[i] === array[j]) {
+        currentAparisons++
+      }
+    }
+
+    if (currentAparisons > mostAparisons) {
+      mostCommon = array[i]
+      mostAparisons = currentAparisons
+    }
+  }
+  return mostAparisons
 }
 
 // Desafio 7
