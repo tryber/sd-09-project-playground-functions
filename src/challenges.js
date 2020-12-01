@@ -15,13 +15,27 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let word = '';
+  phrase += ' ';
+  let n = phrase.length;
+  let wordsSplited = [];
+  for(let index = 0; index < n; index += 1){
+    phrase += ' ';
+    let letter = phrase.charAt(index);
+    if (letter != ' ') {
+      word += letter;
+    } else {
+      wordsSplited.push(word);
+      word = '';
+    }
+  }
+  return console.log(wordsSplited);
 }
 
 // Desafio 4
