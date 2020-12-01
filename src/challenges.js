@@ -15,8 +15,8 @@ function calcArea(base, height) {
 
 // Challenge Three - Split a sentence into an array
 function splitSentence(sentence) {
-  words = [];
-  wordCharacters = '';
+  let words = [];
+  let wordCharacters = '';
   for (let index = 0; index < sentence.length; index += 1) {
     if (sentence[index] === ' ' && index != 0) {
       words.push(wordCharacters);
