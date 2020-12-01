@@ -1,66 +1,78 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-    let answer
+  let answer;
 
-    bool1 === true && bool1 === bool2 ? answer = true : answer = false
+  bool1 === true && bool1 === bool2 ? (answer = true) : (answer = false);
 
-    return answer
+  return answer;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2
+  let area = (base * height) / 2;
 
-  return area
+  return area;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  let resultArray = sentence.split(' ') 
-  
-  return resultArray
+  let resultArray = sentence.split(" ");
+
+  return resultArray;
 }
 
 // Desafio 4
 function concatName(array) {
-  let resultString = `${array[0]}, ${array[array.length - 1]}`
+  let resultString = `${array[0]}, ${array[array.length - 1]}`;
 
-  return resultString
+  return resultString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = 3 * wins + ties
+  let totalPoints = 3 * wins + ties;
 
-  return totalPoints
+  return totalPoints;
 }
 
 // Desafio 6
 function highestCount(array) {
-  let mostAparisons = 0
-  let currentAparisons
-  let mostCommon
+  let mostAparisons = 0;
+  let currentAparisons;
+  let mostCommon;
 
   for (let i in array) {
-    currentAparisons = 0
+    currentAparisons = 0;
 
     for (let j in array) {
       if (array[i] === array[j]) {
-        currentAparisons++
+        currentAparisons++;
       }
     }
 
     if (currentAparisons > mostAparisons) {
-      mostCommon = array[i]
-      mostAparisons = currentAparisons
+      mostCommon = array[i];
+      mostAparisons = currentAparisons;
     }
   }
-  return mostAparisons
+  return mostAparisons;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  let distCat1 = Math.abs(cat1 - mouse)
+  let distCat2 = Math.abs(cat2 - mouse)
+  let result = 'os gatos trombam e o rato foge'
+
+  if (distCat1 < distCat2) {
+    result = 'cat1'
+  }
+
+  if (distCat2 < distCat1) {
+    result = 'cat2'
+  }
+
+  return result
 }
 
 // Desafio 8
