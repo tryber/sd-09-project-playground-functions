@@ -41,7 +41,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let n = array.length;
-  let phrase = array[0] + ', ' + array[(n-1)]
+  let phrase = array[n-1] + ', ' + array[0]
   return phrase;
 }
 
