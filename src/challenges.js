@@ -170,11 +170,11 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]
 function generatePhoneNumber(numbearray) {
   let numberphone = ""
   if (numbearray.length !== 11) {
-    numberphone += "Array com tamanho incorreto"
+    numberphone += "Array com tamanho incorreto."
     return numberphone
   }
   else if (maxrepeat(numbearray) == false) {
-    numberphone += "Array com tamanho incorreto numeros repetidos"
+    numberphone += "não é possível gerar um número de telefone com esses valores"
     return numberphone
   }
 
