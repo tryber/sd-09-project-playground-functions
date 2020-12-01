@@ -1,3 +1,10 @@
+/*
+Projeto 2 - Playground Functions!
+
+Tiago Yoneda
+https://github.com/tiago-yoneda
+*/
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
