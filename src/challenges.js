@@ -1,7 +1,10 @@
-// Cleber Teixeira - Começando o Projeto!
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true){
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
 
 // Desafio 2
