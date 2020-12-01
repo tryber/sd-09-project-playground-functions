@@ -108,6 +108,13 @@ const code = {
   o: 4,
   u: 5,
 };
+const code2 = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+}
 
 function encode(message) {
   // seu código aqui
@@ -127,19 +134,15 @@ function encode(message) {
   }
   return answer;
 }
-
 function decode(message) {
   // seu código aqui
   let answer = "";
   let helper;
   for (let index = 0; index < message.length; index += 1) {
     helper = true;
-    console.log(message[index]);
-    for (let counter in code) {
-      console.log(Object.values(code[counter]))
-      if (message[index] == Object.values(code[counter])) {
-        console.log("entrei aqui?");
-        answer += Object.keys(code[counter]);
+    for (let counter in code2) {
+      if (message[index] === counter) {
+        answer += code2[counter];
         helper = false;
       }
     }
@@ -149,7 +152,6 @@ function decode(message) {
   }
   return answer;
 }
-// console.log(decode(encode("hi there!")));
 
 // Desafio 10
 function techList() {
