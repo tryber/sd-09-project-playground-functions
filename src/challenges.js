@@ -27,7 +27,7 @@ console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(firstAndLast) {
-  let challengeResult = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
+  let challengeResult = `${firstAndLast[firstAndLast.length - 1]}, ${firstAndLast[0]}`;
   return challengeResult;
 }
 console.log(concatName(['Fernanda', 'Cajueiro', 'Machado']));
