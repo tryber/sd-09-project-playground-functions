@@ -101,7 +101,7 @@ function encode(sentence) {
 
 function decode(sentence) {
   let oldWord = sentence;
-  for (let index in sentence) {
+  for (let index = 0; index < sentence.length; index += 1) {
     switch(sentence[index]) {
       case '1':
         oldWord = oldWord.replace('1', 'a');
@@ -117,6 +117,8 @@ function decode(sentence) {
         break;
       case '5':
         oldWord = oldWord.replace('5', 'u');
+        break;
+      default:
         break;
     }
   }
