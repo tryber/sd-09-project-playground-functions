@@ -3,7 +3,7 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if (value1 === true && value2 === true) {
     return true;
-  } 
+    }
     return false;
 }
 // Desafio 2
@@ -13,9 +13,23 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
-}
+  let auxiliarString = '', size =  string.length -1;
+  let arrayString = [];
+  for(let index = 0; index < string.length; index+=1) {
+    if(string[index] != ' '){
+      auxiliarString = auxiliarString + string[index];
+          } else if(string[index] === ' ') {
+                  arrayString.push(auxiliarString);
+                  auxiliarString = '';
+        }
+           if(index === size) {
+           arrayString.push(auxiliarString);
+      }
+    }
+    return arrayString;
+  }
 
 // Desafio 4
 function concatName() {
@@ -69,6 +83,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+console.log(splitSentence('go trybe'));
 module.exports = {
   calcArea,
   catAndMouse,
