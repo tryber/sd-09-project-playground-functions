@@ -143,69 +143,16 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  let container = '';
-  if (number.length === 11) {
-      for (let i = 0; i < number.length; i++) {
-          switch(true) {
-              case i == 0:
-              container += '('+number[i];
-              break;
-
-              case i == 1:
-              container += number[i]+')';
-              break;
-
-              case i == 2:
-              container += ' '+number[i];
-              break;
-
-              case i == 3:
-              container += number[i];
-              break;
-
-              
-              case i == 4:
-              container += number[i];
-              break;
-
-              case i == 5:
-              container += number[i];
-              break;
-
-
-              case i == 6:
-              container += number[i]+'-';
-              break;
-
-
-              case i == 7:
-              container += number[i];
-              break;
-
-
-              case i == 8:
-              container += number[i];
-              break;
-
-
-              case i == 9:
-              container += number[i];
-              break;
-
-
-              case i == 10:
-              container += number[i];
-              break;
-          }
-      }
+  function createPhoneNumber(numbers){
+    let number = '(###) ###-####'
+    
+    for(let i = 0; i < numbers.length; i++) {
+      number = number.replace('#', numbers[i])
+    }
+  return number
   }
-  else if (numbers[i] < 0 || numbers[i] > 9) {
-    return "não é possível gerar um número de telefone com esses valores"
-  }
-  else {
-      return 'Array com tamanho incorreto.'
-  }
-  return container
+
+  
 }
 
 // Desafio 12
