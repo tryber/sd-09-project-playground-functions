@@ -89,14 +89,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let answers = ['fizz', 'buzz', 'fizzBuzz'];
   for (let i in array) {
     if (isDivisibleBy(i, 3) && isDivisibleBy(i, 5)) {
-      return answers[2];
+      return 'fizzBuzz';
     } else if (isDivisibleBy(array[i], 3)) {
-      return answers[0];
+      return 'fizz';
     } else if (isDivisibleBy(array[i], 5)) {
-      return answers[1];
+      return 'buzz';
     }
   }
   return 'bug';
