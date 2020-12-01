@@ -144,8 +144,23 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phoneFormatt = '(xx) xxxxx-xxxx'
+  let phoneFormatt = '(xx) xxxxx-xxxx'
+  let comparador = numbers[0]
+  let counter = 0;
   for (let y = 0; y < numbers.length; y++) {
-  if (numbers.length != 11) {
+  if (numbers[y] === comparador) {
+      comparador = numbers[y];
+      counter = 0;
+      for(let x = 0; x < numbers.length; x++) {
+          if (comparador === numbers[x]) {
+              counter++;
+              if (counter === 3) {
+                  return 'não é possível gerar um número de telefone com esses valores'
+              }
+          }
+      }
+  }
+  else if (numbers.length != 11) {
       return 'Array com tamanho incorreto'
   }
   else if (numbers[y] < 0) {
