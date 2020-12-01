@@ -50,7 +50,7 @@ function concatName(stringArray) {
 // Challenge Five - Football Points Counter
 function footballPoints(wins, ties) {
   let points = 0;
-  points = (wins * 3) + ties
+  points = (wins * 3) + ties;
   return points;
 }
 
@@ -66,9 +66,18 @@ function highestCount(numbersArray) {
   return higherPopularity;
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Challenge seven - Cat and mouse porsuit
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+  switch (true) {
+    case (distanceCat1 > distanceCat2):
+      return distanceCat2;
+    case (distanceCat2 > distanceCat1):
+      return distanceCat1;
+    default:
+      return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
