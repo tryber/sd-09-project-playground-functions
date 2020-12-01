@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     phrase = 'cat1';
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     phrase = 'cat2';
-  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+  } else {
     phrase = 'os gatos trombam e o rato foge';
   }
 
