@@ -20,7 +20,7 @@ let array = [];
 let word = '';
 
   for (let contador = 0; contador < string.length; contador += 1) {
-    if (string[contador] != '') {
+    if (string[contador] != ' ') {
       word += string[contador];
     }else {
       array.push(word);
@@ -35,13 +35,24 @@ let word = '';
 function concatName(array) {
   // seu código aqui
 
-let string = '';
+ let string = '';
 
-  for (let contador = 0; contador < array.length; contador += 1) {
-    string += array[contador] + ', ';
-  }
-  return string;
-}
+ function primeiroItem(array){
+   let primeiroItem = '';
+   primeiroItem += array[array.length - 1];
+   return primeiroItem;
+ }
+ 
+ function segundoItem(array){
+   let segundoItem = '';
+   segundoItem += array[0];
+   return segundoItem;
+ }
+ 
+ string = (primeiroItem(array) + ', ' + segundoItem(array));
+ 
+ return string;
+ }
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -87,9 +98,11 @@ let somaMaior = 0;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+
 }
+console.log(catAndMouse(2, 5, 6));
 
 // Desafio 8
 function fizzBuzz() {
