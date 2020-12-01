@@ -1,3 +1,14 @@
+
+function highestFinder(numbersArray) {
+  let higher = numbersArray[0];
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] > higher) {
+      higher = numbersArray[index];
+    }
+  }
+  return higher;
+}
+
 // Challenge 1 - This function receives two booleans
 // and returns true if both are true and false if not.
 // By Pablo P Fernandes
@@ -111,12 +122,3 @@ module.exports = {
   triangleCheck,
 }
 
-function highestFinder(numbersArray) {
-  let higher = numbersArray[0];
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] > higher) {
-      higher = numbersArray[index];
-    }
-  }
-  return higher;
-}
