@@ -1,9 +1,8 @@
 // Desafio 1
-function compareTrue(x ,y) {
-  if(x == true && y == true) {
+function compareTrue(x, y) {
+  if (x === true && y === true) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -21,7 +20,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let primeiro = array.shift();
-  let ultimo = array[array.length -1]
+  let ultimo = array[array.length - 1]
   array = ultimo + ', ' + primeiro;
   return array;
 }
@@ -36,31 +35,49 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let maior = Math.max(...array);
   let contador = 0;
-  for(let i in array) {
-   if(array[i] == maior) {
-     contador++;
-   } 
+  for (let i in array) {
+    if (array[i] === maior) {
+      contador++;
+    }
   }
   return contador
 }
 
 // Desafio 7
-function catAndMouse(posMouse, posCat1, posCat2) {
-  if(posCat1 === posCat2) return "os gatos trombam e o rato foge";
-  if(Math.abs(posCat1 - posMouse) < Math.abs(posCat2 - posMouse)) return "cat1"
-  if(Math.abs(posCat1 - posMouse) > Math.abs(posCat2 - posMouse)) return "cat2"
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return "cat1";
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return "cat2";
+  if (cat1 === cat2) return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse(20, 16, 15));
+console.log(catAndMouse(5, 10, 20));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fizzBuzzArray = [];
+  for (let i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 != 0) {
+      fizzBuzzArray.push("fizz");
+    }
+    if (array[i] % 5 === 0 && array[i] % 3 != 0) {
+      fizzBuzzArray.push("buzz");
+    }
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      fizzBuzzArray.push("fizzBuzz");
+    }
+    if (array[i] % 3 != 0 && array[i] % 5 != 0) {
+      fizzBuzzArray.push("bug!");
+    }
+  }
+  return fizzBuzzArray;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
