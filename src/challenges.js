@@ -10,13 +10,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(text) {
-  let currentWord = "";
+  let currentWord = '';
   let setenceArray = [];
   for (let charIndex in text) {
     let char = text[charIndex];
     if (char === " ") {
       setenceArray.push(currentWord);
-      currentWord = "";
+      currentWord = '';
     } else {
       currentWord += char;
     }
