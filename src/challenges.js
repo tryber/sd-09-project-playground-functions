@@ -42,8 +42,7 @@ function highestCount(numbers) {
 
   for (let index in numbers) {
     let checkNumber = numbers[index];
-
-    for(let index2 in numbers) {
+    for (let index2 in numbers) {
       if (checkNumber === numbers[index2]) {
         countNumber += 1;
       }
