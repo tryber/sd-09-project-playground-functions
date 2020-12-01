@@ -69,16 +69,10 @@ function catAndMouse(cat1,cat2,mouse) {
   // seu código aqui
   let cat1D = 0;
   let cat2D = 0;
-  for (i in cat1) {
-    if (i==mouse) {
-      cat1D=cat-i;
-    }
-  }
-  for (j in cat2) {
-    if (j==mouse) {
-      cat2D=cat-j;
-    }
-  }
+  
+  cat1D=Math.abs(mouse-cat1);
+  cat2D=Math.abs(mouse-cat2);
+
   if (cat1D==cat2D){
     return 'os gatos trombam e o rato foge';
   } else if (cat1D<cat2D){
