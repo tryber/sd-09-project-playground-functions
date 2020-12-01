@@ -31,8 +31,6 @@ function splitSentence(string) {
   }
   return myArray;
 }
-console.log(splitSentence("go Trybe"));
-
 
 // Desafio 4
 function concatName(array) {
