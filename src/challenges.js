@@ -48,8 +48,21 @@ return points;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbArray) {
   // seu código aqui
+  let bigOne = 0;
+  let counter = 0;
+  for (i in numbArray){
+    if (bigOne < numbArray[i]){
+        bigOne = numbArray[i];
+    }
+  }
+  for (j in numbArray){
+    if (bigOne == numbArray[j]){
+        counter++;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
