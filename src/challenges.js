@@ -12,8 +12,11 @@ let teste2 = true;
 console.log(compareTrue(teste, teste2));
 // Desafio 2
 function calcArea(base, height) {
-  console.log(base*height/2);
+  return((base*height)/2);
 }
+let base1 = 4;
+let altura = 4;
+console.log(calcArea(base1, altura));
 
 
 // Desafio 3
