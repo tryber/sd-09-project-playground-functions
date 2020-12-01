@@ -5,13 +5,13 @@
   if(valorOne === true && valorTwo === true) {
     return true;
   } else {
-  return false; 
+    return false; 
   }
-  }
+}
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  return (base * altura) /2
 }
 
 // Desafio 3
