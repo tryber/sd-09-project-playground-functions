@@ -80,9 +80,25 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Challenge Eight - FizzBuzz Calculator
+function fizzBuzz(numbersArray) {
+  let fizzBuzzString = '';
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    switch (true) {
+      case (!(numbersArray[index]%5 || numbersArray[index]%3)):
+        fizzBuzzString.push('fizzbuzz');
+        continue;
+      case (!(numbersArray[index]%5)):
+        fizzBuzzString.push('buzz');
+        continue;
+      case (!(numbersArray[index]%3)):
+        fizzBuzzString.push('fizz');
+        continue;
+      default:
+        fizzBuzzString.push('bug!');
+        continue;
+    }
+  }
 }
 
 // Desafio 9
