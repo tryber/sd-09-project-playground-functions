@@ -78,7 +78,7 @@ function fizzBuzz(array) {
   let answer = [];
   let fizz = false;
   let buzz = false;
-  for (let index in array) {
+  for (let index = 0; index < array.length; index += 1) {
     fizz = false;
     buzz = false;
     if (array[index] % 3 === 0) {
@@ -101,12 +101,55 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+const code = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
+
+function encode(message) {
   // seu código aqui
+  let answer = "";
+  let helper;
+  for (let index = 0; index < message.length; index += 1) {
+    helper = true;
+    for (let counter in code) {
+      if (message[index] === counter) {
+        answer += code[counter];
+        helper = false;
+      }
+    }
+    if (helper) {
+      answer += message[index];
+    }
+  }
+  return answer;
 }
-function decode() {
+
+function decode(message) {
   // seu código aqui
+  let answer = "";
+  let helper;
+  for (let index = 0; index < message.length; index += 1) {
+    helper = true;
+    console.log(message[index]);
+    for (let counter in code) {
+      console.log(Object.values(code[counter]))
+      if (message[index] == Object.values(code[counter])) {
+        console.log("entrei aqui?");
+        answer += Object.keys(code[counter]);
+        helper = false;
+      }
+    }
+    if (helper) {
+      answer += message[index];
+    }
+  }
+  return answer;
 }
+// console.log(decode(encode("hi there!")));
 
 // Desafio 10
 function techList() {
