@@ -39,8 +39,9 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let n = array.length;
+  return array[0] + ', ' + array[(n-1)];
 }
 
 // Desafio 5
