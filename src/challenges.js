@@ -5,11 +5,13 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
+  return;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let triangle = ((base * height) / 2);
+  return triangle;
 }
 
 // Desafio 3
