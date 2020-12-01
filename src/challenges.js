@@ -1,17 +1,20 @@
 // Desafio 1
 function compareTrue(numBoole1, numBoole2) {
   // seu código
-  if (numBoole1  && numBoole2 > 0) {
+  if (numBoole1 && numBoole2 > 0) {
     return true;
-  }else {
+  }else if ( numBoole1 && numBoole2 < 0){
     return false;
   }
 
-}console.log(compareTrue(2,2));
+}
+
+console.log(compareTrue(2, 2));
 
 // Desafio 2
 function calcArea() {
   // seu código aqui
+
 }
 
 // Desafio 3
