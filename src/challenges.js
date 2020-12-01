@@ -51,13 +51,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = mouse - cat1;
+  let dist2 = mouse - cat2;
+  if (dist1 < 0){
+    dist1 = (dist1 * -1);
+  } else if (dist2 < 0){
+    dist2 = (dist2 * -1);
+  }
+  if (dist1 < dist2){
+    return console.log('cat1');
+  } else {
+    return console.log('cat2')
+  }
 }
 
 // Desafio 8
