@@ -29,7 +29,7 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   let qntPontos = 0;
   wins *= 3;
   qntPontos += wins + ties;
