@@ -1,3 +1,7 @@
+/* Projeto: Playground Functions;
+   Aluno: Julio Henrique Thosi;
+   Turma: 09; */
+   
 // Desafio 1
 function compareTrue() {
   // seu código aqui
