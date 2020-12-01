@@ -25,14 +25,23 @@ function splitSentence(str) {
 // console.log(splitSentence("go Trybe"))
 
 // Desafio 4
-function concatName() {
+function concatName(myArray) {
   // seu código aqui
+  let firstElement = myArray[0]
+  let lastElement = myArray[myArray.length - 1]
+  return (lastElement + ', ' + firstElement)
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  // win = 3 & tie = 1
+  let totalPoints = Number()
+  totalPoints = wins * 3 + ties
+  return totalPoints
 }
+// console.log(footballPoints(3, 2))
 
 // Desafio 6
 function highestCount() {
