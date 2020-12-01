@@ -9,14 +9,14 @@ function compareTrue(boolean1 , boolean2) {
 
 // Desafio 2
 function calcArea(base , height) {
-  
   let result = (base * height) / 2
   return console.log(result)
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" " , )
+  return console.log(array)
 }
 
 // Desafio 4
