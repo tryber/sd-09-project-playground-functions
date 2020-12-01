@@ -1,7 +1,10 @@
-//Hello World
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolUm, boolDois) {
+  if (boolUm == true && boolDois == true){
+    return console.log(true);
+  } else {
+    return console.log(false);
+  }
 }
 
 // Desafio 2
