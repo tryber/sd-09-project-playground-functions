@@ -53,13 +53,13 @@ function catAndMouse(cat1, cat2, mouse) {
   let distcat2 = mouse - cat2
   let result
 
-  if(cat1 == cat2){
-  result = "os gatos trombam e o rato foge"
+  if (cat1 == cat2) {
+    result = "os gatos trombam e o rato foge"
   }
-  else if(distcat1 < distcat2){
+  else if (distcat1 < distcat2) {
     result = "cat1"
   }
-  else if(distcat1 > distcat2){
+  else if (distcat1 > distcat2) {
     result = "cat2"
   }
   return result
@@ -69,17 +69,17 @@ function catAndMouse(cat1, cat2, mouse) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = []
-  for(let index=0; index < numbers.length; index += 1){
-    if(numbers[index]%3 == 0 && numbers[index]%5 == 0){
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
       result.push("fizzBuzz")
     }
-    else if(numbers[index]%3 == 0){
+    else if (numbers[index] % 3 == 0) {
       result.push("fizz")
     }
-    else if(numbers[index]%5 == 0){
+    else if (numbers[index] % 5 == 0) {
       result.push("buzz")
     }
-    else{
+    else {
       result.push("bug!")
     }
   }
@@ -88,8 +88,30 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let code = ""
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index] == "a") {
+      code += "1"
+    }
+    else if (frase[index] == "e") {
+      code += "2"
+    }
+    else if (frase[index] == "i") {
+      code += "3"
+    }
+    else if (frase[index] == "o") {
+      code += "4"
+    }
+    else if (frase[index] == "u") {
+      code += "5"
+    }
+    else {
+      code += frase[index]
+    }
+  }
+  return code
 }
+
 function decode() {
   // seu código aqui
 }
