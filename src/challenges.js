@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(valeu1, value2) {
+function compareTrue(value1, value2) {
   let resultado = ' ';
   if (value1 === true && value2 === true) {
     resultado = true
@@ -9,7 +9,7 @@ function compareTrue(valeu1, value2) {
   return resultado
 }
 
-compareTrue(true, false)
+console.log(compareTrue(true, false))
 
 // Desafio 2
 function calcArea() {
