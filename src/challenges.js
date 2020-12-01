@@ -81,7 +81,7 @@ function highestCount(array) {
   // seu código aqui
 
 let somaNumero = 0;
- let maiorNumero = 0;
+let maiorNumero = 0;
 
   for (let contador = 0; contador < array.length; contador += 1) {
     if (array[contador] > maiorNumero) {
@@ -105,17 +105,18 @@ let distancia2 = mouse - cat2;
 
 
   if (distancia1 > distancia2) {
-    return 'Primeiro gato pega o rato.';
+    return 'cat1';
   } else if (distancia2 > distancia1) {
-    return 'Segundo gato pega o rato.';
+    return 'cat2';
   } else if (distancia1 === distancia2) {
-    return 'Os gatos trombam e o rato foge.'
+    return 'Os gatos trombam e o rato foge'
   }
 }
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+
 }
 
 // Desafio 9
