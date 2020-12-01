@@ -75,7 +75,7 @@ function fizzBuzz(arrayOfNumbers) {
 
 // Desafio 9
 function encode(sentence) {
-  for (let index in sentence) {
+  for (let index = 0; index < sentence.length; index+=1) {
     switch (sentence[index]) {
       case 'a':
         sentence = sentence.replace('a', '1');
@@ -91,6 +91,8 @@ function encode(sentence) {
         break;
       case 'u':
         sentence = sentence.replace('u', '5');
+        break;
+      default:
         break;
     }
   }
@@ -124,7 +126,6 @@ function decode(sentence) {
 // Desafio 10
 function techList(techArray, nameOfStudent) {
   let listToLearn = [];
-  
   if (techArray.length !== 0) {
     for (let index in techArray) {
       let format = {
