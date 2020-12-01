@@ -13,14 +13,18 @@ console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 console.log(calcArea(3, 5));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let stringSentence = '';
+let arraySentence = [];
+function splitSentence(stringSentence) {
+  arraySentence = stringSentence.split(' ');
+  return arraySentence;
 }
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName() {
