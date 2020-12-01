@@ -56,28 +56,12 @@ function highestCount(numbersArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // let diffCat1 = 0;
-  // let diffCat2 = 0;
-  // let phrase = '';
-
-  // if (mouse > cat1) {
-  //   diffCat1 = mouse - cat1;
-  // } else {
-  //   diffCat1 = cat1 - mouse;
-  // }
-
-  // if (mouse > cat2) {
-  //   diffCat2 = mouse - cat2;
-  // } else {
-  //   diffCat2 = cat2 - mouse;
-  // }
-
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     return 'cat2';
   } else {
-    return 'Os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 }
 // console.log(catAndMouse(1, 0, 2));
