@@ -20,12 +20,12 @@ function splitSentence(go trybe) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayName) {
+return arrayName[arrayName.length-1] + ',' + arrayName[0];
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
 }
 
