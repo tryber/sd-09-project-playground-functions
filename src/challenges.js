@@ -23,7 +23,7 @@ function splitSentence(phrase) {
   return result;
 }
 
-// Desafio 4
+// Desafio 4 Ok (concatenação do ', ' dando erro no codeclimate)
 function concatName(words) {
   // seu código aqui
   return (words[(words.length - 1)] + ', ' + words[0]);
@@ -40,17 +40,15 @@ function footballPoints(wins, ties) {
 // Desafio 6 OK (Refatorar) Olhar For in
 function highestCount(arrayNumber) {
   // seu código aqui
-  let bigNumber = arrayNumber[0];
-  let sweepNumber = 0;
+  let maxNumber = 0;
   let result = 0;
-  for (let count = 0; count < arrayNumber.length; count += 1) {
-    sweepNumber = arrayNumber[count];
-    if (sweepNumber > bigNumber) {
-      bigNumber = sweepNumber;
+  for (let key in arrayNumber) {
+    if (arrayNumber[key] > maxNumber) {
+      maxNumber = arrayNumber[key];
     }
   }
-  for (let count = 0; count < arrayNumber.length; count += 1) {
-    if (bigNumber === arrayNumber[count]) {
+  for (let key in arrayNumber) {
+    if (arrayNumber[key] === maxNumber) {
       result += 1;
     }
   }
@@ -65,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (numberCat1 === numberCat2) {
     return 'os gatos trombam e o rato foge';
   } else if (numberCat1 < numberCat2) {
-      return 'cat1';
+    return 'cat1';
   }
   return 'cat2';
 }
@@ -91,7 +89,7 @@ function fizzBuzz(array) {
 // Desafio 9 Ok
 function encode(texto) {
   // seu código aqui
-  let transLettersNumbers = texto;
+  let transLettersNumbers = texto.split('');
   for (let count = 0; count < transLettersNumbers.length; count += 1) {
     if (transLettersNumbers[count] === 'a') {
       transLettersNumbers[count] = 1;
