@@ -1,17 +1,16 @@
 
 // Desafio 1
-function compareTrue(value1 , value2) {
-  if(value1 == true && value2 == true){
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
     return true
-  }else{
-    return false
   }
+  return false
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  let area = (base*altura)/2;
-    return area
+  let area = (base * altura)/2;
+  return area
 }
 
 // Desafio 3
@@ -20,15 +19,25 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(frase) {
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let contagemWins = 0;
+let contagemTies = 0;
+let valorTotal = 0;
+function footballPoints(wins, ties) {
+  for (cont = 0; cont<wins; cont+=1) {
+    contagemWins = contagemWins+ 3
+  }
+  for (index = 0; index<ties; index+=1){
+    contagemTies = contagemTies + 1
+  }
+  valorTotal = contagemWins + contagemTies;
+  return valorTotal
 }
-
+console.log(footballPoints(1,1));
 // Desafio 6
 function highestCount() {
   // seu código aqui
