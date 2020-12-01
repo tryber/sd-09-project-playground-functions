@@ -32,14 +32,15 @@ function concatName(arrayNomes) {
   let nomes = [];
   for (let index = arrayNomes.length - 1; index >= 0; index -= 1) {
     if (arrayNomes[index] === arrayNomes[arrayNomes.length - 1]) {
-      nomes.push(arrayNomes[index])
+      nomes += arrayNomes[index]
+      nomes += ', '
     } else if (arrayNomes[index] === arrayNomes[0]) {
-      nomes.push(arrayNomes[index])
+      nomes += arrayNomes[index]
     }
   }
   return nomes;
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (3 * wins) + ties
