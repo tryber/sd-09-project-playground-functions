@@ -21,6 +21,7 @@ function splitSentence(go, trybe) {
 
 // Desafio 4
 function concatName(arrayName) {
+let arrayName = [];
 return arrayName[arrayName.length-1] + ',' + arrayName[0];
 }
 
@@ -33,7 +34,7 @@ return resultTables;
 }
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  // seu código aqui  
 }
 
 // Desafio 7
