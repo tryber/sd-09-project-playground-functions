@@ -38,22 +38,34 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function getHigherNumber(numbers) {
+  let higherNumberFromNow = 0
+  for (index in numbers) {
+    if (numbers[index] > higherNumberFromNow) {
+      higherNumberFromNow = numbers[index]
+    }
+  }
+  return higherNumberFromNow
+}
+
+function getTimesHigherNumber(numbers,numberToCount) {
+  let timesHigherNumberFromNow = 0
+  for (index in numbers) {
+    if (numbers[index] === numberToCount) {
+      timesHigherNumberFromNow += 1
+    }
+  }
+  return timesHigherNumberFromNow
+}
+
 function highestCount(numbers) {
-  let higherNumber = 0
-  let timesHigherNumber = 0
-  for (index in numbers) {
-    if (numbers[index] > higherNumber) {
-      higherNumber = numbers[index]
-    }
-  }
-  for (index in numbers) {
-    if (numbers[index] === higherNumber) {
-      timesHigherNumber += 1
-    }
-  }
+  let higherNumber = getHigherNumber(numbers)
+  let timesHigherNumber = getTimesHigherNumber(numbers,higherNumber)
   console.log(`O maior numero foi ${higherNumber} e ele aparece ${timesHigherNumber} vezes`)
   return timesHigherNumber
 }
+
+highestCount([2,2,5,5,5,5,5,5])
 
 // Desafio 7
 function catAndMouse() {
