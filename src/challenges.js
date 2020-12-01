@@ -35,9 +35,13 @@ let arrayNames = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(arrayNames));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins ,ties) {
+  let points = 0;
+  points = (wins * 3) + ties;
+  return points;
 }
+
+console.log(footballPoints(5 ,3));
 
 // Desafio 6
 function highestCount() {
