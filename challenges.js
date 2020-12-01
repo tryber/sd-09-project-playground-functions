@@ -5,4 +5,4 @@ function compareTrue(bool1, bool2) {
     return true;
   }
 }
-compareTrue;
+compareTrue();
