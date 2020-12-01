@@ -180,8 +180,7 @@ function generatePhoneNumber(numbearray) {
 
   for (let index = 0; index < numbearray.length; index += 1) {
     if (numbearray[index] < 0 || numbearray[index] > 9) {
-      numberphone += "não é possível gerar um número de telefone com esses valores"
-      break
+      return "não é possível gerar um número de telefone com esses valores"
     }
     else if (index == 0) {
       numberphone += "(" + numbearray[index]
