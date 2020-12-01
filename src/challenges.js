@@ -15,13 +15,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(go, trybe) {
+function splitSentence(go trybe) {
   return ['go' , 'trybe']
 }
 
 // Desafio 4
 function concatName(arrayNome) {
-return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
+return `${arrayNome[arrayNome.length-1]}, ${arrayNome[0]}`;
 }
 
 // Desafio 5
