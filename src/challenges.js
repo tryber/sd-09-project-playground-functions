@@ -14,9 +14,12 @@ function splitSentence(text) {
   let setenceArray = [];
   for (let charIndex in text) {
     let char = text[charIndex];
-    if (char === " ") {
+    if (char === ' ') {
       setenceArray.push(currentWord);
       currentWord = '';
+    } else if (charIndex == text.length - 1) {
+      currentWord += char;
+      setenceArray.push(currentWord);
     } else {
       currentWord += char;
     }
