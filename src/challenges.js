@@ -22,12 +22,12 @@ function splitSentence(sentence) {
     arraySentence.push(sentence[index])
   }
   
-  let arrayLast = [];
+  let arrayFinal = [];
   for (let index = 0; index < arraySentence.length; index += 1) {
     if(arraySentence[index] !== ' ') {
-      arrayLast += arraySentence[index] 
+      arrayFinal += arraySentence[index] 
     } else if (arraySentence[index] === ' ') {
-      arrayLast.push(arraySentence[index])
+      arrayFinal += ', '
     }
   }
   // seu código aqui
