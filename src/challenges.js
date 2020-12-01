@@ -26,8 +26,9 @@ return arrayFrase
 // Desafio 4
 function concatName(arrayString = []) {
   // seu código aqui
- return (arrayString[arrayString.length - 1] + ',', arrayString[0])
+ return contrario = (arrayString[arrayString.length - 1] + ',' + ' ' + arrayString[0])
 } concatName(['ovos', 'leite', 'pizza'])
+console.log(contrario)
 
 // Desafio 5
 function footballPoints(wins, ties) {
