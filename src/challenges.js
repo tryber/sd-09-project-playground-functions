@@ -3,11 +3,10 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
-  if (param1 === true && param2 === true){
+  if (param1 === true && param2 === true) {
     return true;
-  } else {
+  } 
     return false;
-  }
 }
 
 // Desafio 2
@@ -17,9 +16,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  return string.split([' ']);
 }
+
 
 // Desafio 4
 function concatName() {
