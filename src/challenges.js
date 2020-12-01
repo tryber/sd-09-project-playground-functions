@@ -42,7 +42,7 @@ function highestCount(number) {
     }
   }
   for (let index = 0; index < number.length; index += 1) {
-    if(number[index] == highestnumber){
+    if (number[index] == highestnumber) {
       repeat += 1
     }
   }
@@ -53,8 +53,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distcat1 = mouse - cat1
-  let distcat2 = mouse - cat2
+  let distcat1 = Math.abs(mouse - cat1)
+  let distcat2 = Math.abs(mouse - cat2)
   let result
 
   if (cat1 == cat2) {
@@ -68,6 +68,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result
 }
+
+console.log(catAndMouse(2, 3, 4))
+
 
 
 // Desafio 8
