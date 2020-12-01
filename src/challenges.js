@@ -23,8 +23,8 @@ function concatName(array) {
   let ultimo;
   let valor = '';
   ultimo = (array.length) - 1 ;
-  valor = array[0] + ' ' + array[ultimo];
-  return valor
+  valor = array[ultimo] + ' ' + array[0];
+  return valor;
 }
 
 // Desafio 5
