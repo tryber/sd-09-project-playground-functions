@@ -18,14 +18,18 @@ let area = calcArea(4, 7)
 console.log(area)
 
 // Desafio 3
-function splitSentence() {
+let j =[]
+function splitSentence([] ) {
   // seu código aqui
+  
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+
 }
+let onit = 
+console.log  ()
 
 // Desafio 5
 function footballPoints() {
