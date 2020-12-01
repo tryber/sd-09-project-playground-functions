@@ -19,13 +19,21 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   let arraySentence = [];
   for (let index = 0; index < sentence.length; index += 1) {
-    if (sentence[index] !== ' ') {
-      arraySentence.push(sentence[index])
+    arraySentence.push(sentence[index])
+  }
+  
+  let arrayLast = [];
+  for (let index = 0; index < arraySentence.length; index += 1) {
+    if(arraySentence[index] !== ' ') {
+      arrayLast += arraySentence[index] 
+    } else if (arraySentence[index] === ' ') {
+      arrayLast.push(arraySentence[index])
     }
   }
   // seu código aqui
-  return arraySentence
+  return arrayFinal;
 }
+console.log(splitSentence('go trybe'))
 
 // Desafio 4
 function concatName(array) {
@@ -40,7 +48,7 @@ function concatName(array) {
   }
   return nomes;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo', 'Alves']))
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -110,6 +118,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
