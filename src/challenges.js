@@ -72,22 +72,39 @@ function catAndMouse(cat1, cat2, mouse) {
   let difCat1Mouse = Math.abs(cat1 - mouse)
   let difCat2Mouse = Math.abs(cat2 - mouse)
   if (difCat1Mouse < difCat2Mouse){
-    return console.log('cat1')
+    return 'cat1'
   }
   else if (difCat2Mouse < difCat1Mouse){
-    return console.log('cat2')
+    return 'cat2'
   }
   else{
-    return console.log("os gatos trombam e o rato foge")
+    return "os gatos trombam e o rato foge"
   }
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayN) {
+  let bzfz = []
+  for (i in arrayN){
+    if (arrayN[i] % 3 == 0 && !(arrayN[i] % 5 == 0)){
+      bzfz.push("fizz")
+    }
+    else if (arrayN[i] % 5 == 0 && !(arrayN[i] % 3 == 0)){
+      bzfz.push("buzz")
+    }
+    else if (arrayN[i] % 3 == 0 && arrayN[i] % 5 == 0){
+      bzfz.push("fizzbuzz")
+    }
+    else if (!(arrayN[i] % 3 == 0) && !(arrayN[i] % 5 == 0)){
+      bzfz.push('bug!')
+    }
+  }
+  return bzfz
   // seu código aqui
 }
-
+let n1t = [2, 15, 7, 9, 45]
+console.log(fizzBuzz(n1t))
 // Desafio 9
 function encode() {
   // seu código aqui
