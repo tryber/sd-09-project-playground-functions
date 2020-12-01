@@ -51,21 +51,27 @@ function highestCount(numberList) {
   }
   return countMode;
 }
+console.log(highestCount([2,4,5,6,6]));
 
 // Desafio 7
+// Used this explanation <https://medium.com/@migcoder/reflection-get-variable-name-in-javascript-64ed595701eb> to figure out how to display a variable name
 function catAndMouse(mouse, cat1, cat2) {
+  let positions = {
+    mouse,
+    cat1,
+    cat2,
+  }
   let message = '';
-  let cat1Distance = mouse - cat1;
-  let cat2Distance = mouse - cat2;
-  if (cat1Distance < cat2Distance) {
+  if (positions.mouse - positions.cat1 < positions.mouse - positions.cat2) {
     message = 'cat1';
-  } else if (cat1Distance > cat2Distance) {
+  } else if (positions.mouse - positions.cat1 > positions.mouse - positions.cat2) {
     message = 'cat2';
   } else {
     message = 'os gatos trombam e o rato foge';
   }
   return message;
 }
+console.log(catAndMouse(10,5,2));
 
 // Desafio 8
 function fizzBuzz(numberList) {
