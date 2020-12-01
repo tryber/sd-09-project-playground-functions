@@ -6,11 +6,9 @@ function compareTrue(value1, value2) {
   value1 = true;
   value2 = true;
 
-  if(value1 === true && value2 === true) {
+  if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 2
