@@ -33,7 +33,6 @@ function splitSentence(sentence) {
   // seu código aqui
   return arrayFinal;
 }
-console.log(splitSentence('go trybe'))
 
 // Desafio 4
 function concatName(array) {
@@ -48,7 +47,6 @@ function concatName(array) {
   }
   return nomes;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -165,8 +163,6 @@ function decode(array) {
   // seu código aqui
   return decoding
 }
-console.log(encode('hi there!'))
-console.log(decode(encode('hi there!')))
 
 // Desafio 10
 function techList() {
