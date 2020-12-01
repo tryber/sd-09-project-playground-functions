@@ -5,8 +5,8 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
-  return compareTrue;
 }
+return compareTrue;
 
 // Desafio 2
 function calcArea(base, height) {
@@ -16,12 +16,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let string = 'go Trybe';
   string.split(',')
-
-  return string;
 }
-
+return splitSentence
 // Desafio 4
 function concatName() {
   // seu código aqui
