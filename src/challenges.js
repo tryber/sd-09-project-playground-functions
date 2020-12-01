@@ -15,16 +15,16 @@ function calcArea(base, heigth) {
 // Desafio 3
 function splitSentence(stringToSplit) {
   let stringSplitted = [];
-  let stringToBePushed = "";
+  let stringToBePushed = '';
   for (const iterator of stringToSplit) {
-    if (iterator === " ") {
+    if (iterator === ' ') {
       stringSplitted.push(stringToBePushed);
-      stringToBePushed = "";
+      stringToBePushed = '';
     } else {
       stringToBePushed += iterator;
     }
   }
-  if (stringToBePushed != "") {
+  if (stringToBePushed !== '') {
     stringSplitted.push(stringToBePushed);
   }
   return stringSplitted;
