@@ -18,9 +18,12 @@ console.log(`A área do triângulo é: ${calcArea(10, 50)}`);
 console.log(`A área do triângulo é: ${calcArea(10, 0)}`);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  novaString = string.split(' ');
+  return novaString;
 }
+let string = 'go Trybe';
+console.log(splitSentence(string));
 
 // Desafio 4
 function concatName() {
