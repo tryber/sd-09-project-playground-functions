@@ -104,9 +104,9 @@ let distancia1 = mouse - cat1;
 let distancia2 = mouse - cat2;
 
 
-  if (distancia1 > distancia2) {
+  if (distancia1 < distancia2) {
     return 'cat1';
-  } else if (distancia2 > distancia1) {
+  } else if (distancia2 < distancia1) {
     return 'cat2';
   } else if (distancia1 === distancia2) {
     return 'Os gatos trombam e o rato foge'
@@ -114,8 +114,6 @@ let distancia2 = mouse - cat2;
 }
 
 // Desafio 8
-
-let asd = [2, 15, 7, 9, 45];
 function fizzBuzz(array) {
   // seu código aqui
 
