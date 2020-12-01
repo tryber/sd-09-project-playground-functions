@@ -84,7 +84,7 @@ return "bug!"
 }
 
 // Desafio 9
-// solução encontrada no stackoverflow
+// solução encontrada no stackoverflow.
 function encode(string) {
   let trocaLetras = { a: "1", e: "2", i: "3", o: "4", u: "5"};
   let resultado = "";
