@@ -36,7 +36,7 @@ function concatName(array) {
   }
   switched.push=received[1];
   switched.push=received[0];
-  let result=switched.join(', ');
+  let result=switched.join(',');
   return result;
 }
 
