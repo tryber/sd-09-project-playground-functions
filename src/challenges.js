@@ -6,16 +6,22 @@ function compareTrue(valor1, valor2) {
   return valor1 && valor2;
 }
 console.log(compareTrue(firstValue,secondValue));
+//
 // Desafio 2
-
+let base1 = 10
+let altura = 8
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
+console.log(calcArea(base1, altura));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let stringExemplo = "Hello world!";
+
+function splitSentence(string) {
+  return string.split(" ");
 }
+console.log(splitSentence(stringExemplo));
 
 // Desafio 4
 function concatName() {
