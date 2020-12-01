@@ -30,7 +30,7 @@ function concatName(array) {
   return novoArray;
 }
 
-// Desafio 5
+// Desafio 5  ok
 function footballPoints(wins, ties) {
   let pointsWins = wins * 3;
   return pointsWins + ties;
@@ -45,6 +45,7 @@ function highestCount(arrayNum) {
       cont += 1;
     }
   }
+  return cont;
 }
 
 // Desafio 7
