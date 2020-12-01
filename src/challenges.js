@@ -17,7 +17,7 @@ function splitSentence(text) {
     if (char === ' ') {
       setenceArray.push(currentWord);
       currentWord = '';
-    } else if (charIndex == text.length - 1) {
+    } else if (charIndex === text.length - 1) {
       currentWord += char;
       setenceArray.push(currentWord);
     } else {
@@ -28,8 +28,10 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(inputArray) {
+  let firstItem = inputArray[0];
+  let lastItem = inputArray[inputArray.length - 1];
+  return `${lastItem}, ${firstItem}`
 }
 
 // Desafio 5
