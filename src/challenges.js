@@ -21,17 +21,10 @@ function splitSentence(sentence) {
  }
 
 // Desafio 4
-function concatName(names) {
-   container = names.split(' ').reverse()
-   for(i = 0; i < container.length; i++) {
-       if (i == 0) {
-           y += container[i]+', '
-       }
-       else if (i == container.length -1) {
-          y += container[i]
-       }
-   }
-   return y
+function concatName(nameString) {
+  let name = '';
+  name += nameString[nameString.length - 1] + ', ' + nameString[0];
+  return name;
  }
 
 // Desafio 5
@@ -65,8 +58,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(values) {
+  let valuesBuzz = [];
+  for (let index in valuesFizz){
+    if (valuesFizz[index] % 3 == 0 && valuesFizz[index] % 5 != 0){
+      valuesBuzz[index] = 'Fizz';
+    } else if (valuesFizz[index] % 3 != 0 && valuesFizz[index] % 5 == 0){
+      valuesBuzz[index] = 'Buzz';
+    } else if (valuesFizz[index] % 3 == 0 && valuesFizz[index] % 5 == 0){
+      valuesBuzz[index] = 'FizzBuzz';
+    } else {
+      valuesBuzz[index] = 'Bug!'; 
+    } 
+  }
+
+  return valuesBuzz;
 }
 
 // Desafio 9
