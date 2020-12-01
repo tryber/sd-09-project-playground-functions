@@ -128,24 +128,25 @@ function swapNumberVowel(number) {
 }
 
 function encode(string) {
+  string = string.split("");
+
   for (let i in string) {
     if (isVowel(string[i])) {
-      console.log(string[i]);
       string[i] = swapVowelNumber(string[i]);
-      console.log(string[i]);
     }
   }
-
-  return string;
+  return string.join("");
 }
 
 function decode(string) {
+  string = string.split("");
+
   for (let i in string) {
     if (isNumberCharecter(string[i])) {
       string[i] = swapNumberVowel(string[i]);
     }
   }
-  return string;
+  return string.join("");
 }
 
 // Desafio 10
@@ -170,9 +171,35 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numberArray) {
+  if (numberArray.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let i in numberArray) {
+    if (numberArray[i] < 0 || numberArray[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  let repeatCounter = 0;
+
+  for (let i in numberArray) {
+    for (let j = i; j < numberArray.length; j++) {
+      if (numberArray[j] === numberArray[i]) {
+        repeatCounter++;
+      }
+      if (repeatCounter >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+    repeatCounter = 0;
+  }
+
+  return ('(' + numberArray.slice(0, 2) + ')' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
