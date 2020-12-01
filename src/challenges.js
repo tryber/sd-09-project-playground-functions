@@ -52,9 +52,11 @@ if (numeros[contador]>maior){
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-if((mouse-cat1)<(mouse-cat2)){
+  let distanciaGato1= mouse-cat1;
+  let distanciaGato2= mouse-cat2;
+if(distanciaGato1<distanciaGato2){
 return "cat1";
-} else if ((mouse-cat1)>(mouse-cat2)){
+} else if (distanciaGato2<distanciaGato1){
 return "cat2";
 }else{
 return "os gatos trombam e o rato foge"
