@@ -20,8 +20,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nome1) {
-  nome2 = nome1.length - 1
-  return nome1[0], nome2
+  index = nome1.length - 1
+  return nome1[index], nome1[0] 
 }
 
 // Desafio 5
@@ -32,14 +32,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(nums) {
   let maior = nums[0];
+  let contagem = 0
   for(let i = 0; i < nums.length; i += 1){
     if(nums[i] > maior){
         maior = nums[i]
     } else{
     }
   }
+
+
   for(let i = 0; i < nums.length; i += 1){
-    let contagem = 0
+    contagem = 0
     if(nums[i] == maior){
         contagem += 1
     } else{
@@ -47,20 +50,20 @@ function highestCount(nums) {
   }
   return contagem
 }
-  
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = 0, distancia2 = 0
   if (mouse > cat1){
-    let distancia1 = mouse - cat1;
+    distancia1 = mouse - cat1;
   } else{
-    let distancia1 = cat1 - mouse;
+    distancia1 = cat1 - mouse;
   }
 
   if (mouse > cat2){
-    let distancia2 = mouse - cat2;
+    distancia2 = mouse - cat2;
   } else{
-    let distancia2 = cat2 - mouse;
+    distancia2 = cat2 - mouse;
   }
 
   if(distancia1 > distancia2){
