@@ -12,29 +12,31 @@ function compareTrue(param1, param2) {
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2
-  
+
 }
 
 // Desafio 3
-function splitSentence(texto) {  
+function splitSentence(texto) {
   if (typeof(texto) === `string` ) {
     return texto.split(' ')
 
   } else console.log('não é string')
-    
+
 }
 
 // Desafio 4
 function concatName(param) {
-  return ( `${param[0]}, ${param[param.length -1]}`)
-  
+  return ( `${param[param.length -1]}, ${param[0]}`)
+
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (`\nPONTUAÇÃO\n` + `Vitórias: ` + wins * 3 + `pontos` + '\nEmpates: ' + ties + `pontos` )
+  return (`Vitórias: ${wins * 3} pontos\nEmpates: ${ties} pontos`)
 
 }
+
+
 
 // Desafio 6
 function highestCount(param) {
@@ -48,23 +50,25 @@ function highestCount(param) {
     }
   }
 
-  return qtdNumerosRepetidos
-  
+  console.log(qtdNumerosRepetidos)
+
+  //return qtdNumerosRepetidos
+
 }
 
+highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9])
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
-  let gato1Distancia, gato2Distancia;
+  let gato1Distancia = 0, gato2Distancia = 0;
 
   for (let i = mouse;i <= cat1; i += 1) {
-    if (mouse <= cat1) gato1Distancia += 1;
+    if (i >= cat1) gato1Distancia += 1;
 
     console.log(gato1Distancia)
     
   }
-  
+   
   /* for para gato 2
 
   compara distancia entre gato 1
@@ -73,6 +77,8 @@ function catAndMouse(mouse, cat1, cat2) {
   conta quantos passos existem para alcançar o rato
    */
 }
+
+catAndMouse(3, 5)
 
 // Desafio 8
 function fizzBuzz() {
