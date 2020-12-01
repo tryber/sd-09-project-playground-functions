@@ -152,19 +152,22 @@ function decode(phraseNumbers) {
 
 // Desafio 10
 function techList(array, name) {
-  let array2 = array.sort();
-  let array3 = [];
-  let n = array.length;
-  for (let index = 0; index < n; index += 1){
-    let object = {
-      tech: array2[index],
-      name: name
-    }
-    array3.push(object);
+  if (array = []){
+    return 'Vazio!';
+  } else {
+      let array2 = array.sort();
+      let array3 = [];
+      let n = array.length;
+      for (let index = 0; index < n; index += 1){
+        let object = {
+          tech: array2[index],
+          name: name
+        }
+        array3.push(object);
+      }
+      return array3;
   }
-  return array3;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
