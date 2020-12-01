@@ -1,14 +1,14 @@
 // Projeto 02!!!! o/ Vamos que vamos...
-// Desafio 1
+// Desafio 1 - Usando o operador logico &&.
 function compareTrue(valueA, valueB) {
- if (valueA === true && valueB === true){
+  if (valueA === true && valueB === true){
     return true;
   }
   return false
 }
 compareTrue(true, false);
 
-// Desafio 2
+// Desafio 2 - Calcular a area do triangulo.
 function calcArea(base, height) {
   let areaDoTriangulo = (base * height) / 2;
   return areaDoTriangulo;
@@ -35,10 +35,33 @@ function highestCount() {
   // seu código aqui
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 - Caça ao rato.
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceFromCat1;
+  let distanceFromCat2;
+  if ( mouse > cat1){
+    distanceFromCat1 = mouse - cat1;
+  }
+  else if (mouse < cat1){
+    distanceFromCat1 = cat1 - mouse;
+  }
+  if ( mouse > cat2){
+    distanceFromCat2 = mouse - cat1;
+  }
+  else if (mouse < cat2){
+    distanceFromCat2 = cat2 - mouse;
+  }
+  if (distanceFromCat1 < distanceFromCat2){
+    return 'cat1';
+  }
+  else if (distanceFromCat1 > distanceFromCat2){
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+
 }
+catAndMouse(3,9,17);
 
 // Desafio 8
 function fizzBuzz() {
