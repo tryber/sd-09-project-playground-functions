@@ -23,15 +23,12 @@ console.log(calcArea(10, 5));
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  let sentence = [];
+  let sentence = str;
 
-  for(let i = 0; i < str.length; i += 1) {
-    str[i] = sentence.push(str[i])
-  }
-  return sentence;
+  return sentence.split(" ");
+  
 }
-
-console.log(splitSentence('Eae mundão'));
+console.log(splitSentence('Eae mundo'));
 
 // Desafio 4
 function concatName(arr) {
@@ -52,15 +49,13 @@ function concatName(arr) {
   return frase;
 }
 
-console.log(concatName(['Lucas', 'Bola', 'Silva']))
+console.log(concatName(['Lucas', 'Bola', 'Silva']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let totalPoints; 
+  let totalPoints = wins * 3 + ties; 
 
-  
- 
   return totalPoints;
 
 }
