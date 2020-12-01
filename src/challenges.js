@@ -56,15 +56,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(valueArray) {
   const resultArray = []
-  for(let i = 0; i < valueArray.length; i += 1) {
+  for (let i = 0; i < valueArray.length; i += 1) {
     if (valueArray[i] % 3 === 0) {
-      resultArray.push("fizz")
+      resultArray.push('fizz')
     } else if (valueArray[i] % 5 === 0) {
-      resultArray.push("buzz")
+      resultArray.push('buzz')
     } else if (valueArray[i] % 3 === 0 && valueArray[i] % 5 === 0) {
-      resultArray.push("fizzBuzz")
+      resultArray.push('fizzBuzz')
     } else {
-      resultArray.push("bug!")
+      resultArray.push('bug!')
     }
   }
   return resultArray
