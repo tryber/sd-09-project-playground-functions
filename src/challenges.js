@@ -32,20 +32,24 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(number) {
-  let highestrepeat = -999999999
+  let highestnumber = -9999
+  let repeat = 0
   for (let index = 0; index < number.length; index += 1) {
-    repeat = 0
-    for (let position = 0; position < highestCount.length; position += 1) {
-      if (highestCount[index] == highestCount[position]) {
-        repeat += 1
+    for (let position = 0; position < number.length; position += 1) {
+      if (number[index] > highestnumber) {
+        highestnumber = number[index]
       }
     }
-    if (repeat > highestrepeat) {
-      highestrepeat = repeat
+  }
+  for (let index = 0; index < number.length; index += 1) {
+    if(number[index] == highestnumber){
+      repeat += 1
     }
   }
-  return highestrepeat
+  return repeat
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
