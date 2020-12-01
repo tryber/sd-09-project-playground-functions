@@ -22,7 +22,7 @@ function splitSentence(string) {
     if (string[letter] === ' ') {
       myArray.push(myNewString);
       myNewString = '';
-    } else if (letter == (string.length - 1)) {
+    } else if (Number(letter) === Number(string.length - 1)) {
       myNewString += string[letter];
       myArray.push(myNewString);
     } else {
@@ -31,12 +31,15 @@ function splitSentence(string) {
   }
   return myArray;
 }
+console.log(splitSentence("go Trybe"));
+
 
 // Desafio 4
 function concatName(array) {
   let ultimoItem = array[(array.length - 1)];
   let primeiroItem = array[0];
-  let stringPronta = (ultimoItem + ', ' + primeiroItem);
+  let separador = ', ';
+  let stringPronta = (ultimoItem + separador + primeiroItem);
   return stringPronta;
 }
 
