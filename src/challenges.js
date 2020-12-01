@@ -1,6 +1,10 @@
-// Desafio 1 - teste para commit
-function compareTrue() {
-  // seu código aqui
+// Desafio 1 - This function receives two booleans and returns true if both are true and false if not.
+function compareTrue(boolOne, boolTwo) {
+  if(boolOne && boolTwo) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
