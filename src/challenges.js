@@ -144,7 +144,6 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phoneFormatt = '(xx) xxxxx-xxxx'
-  let phoneFormatt = '(xx) xxxxx-xxxx'
   let comparador = numbers[0]
   let counter = 0;
   for (let y = 0; y < numbers.length; y++) {
