@@ -2,9 +2,8 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
 
 // Desafio 2
@@ -30,13 +29,18 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let arrayNovo = [];
+  let item1 = arrayStrings.shift();
+  let item2 = arrayStrings[arrayStrings.length - 1]
+  arrayNovo.push(item2, item1);
+  return arrayNovo;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPontos = ((wins * 3) + ties);
+  return totalPontos;
 }
 
 // Desafio 6
