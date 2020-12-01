@@ -1,15 +1,16 @@
+// Projeto
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
-    console.log(true);
+  if (value1 === true && value2 === true) {
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
