@@ -1,4 +1,4 @@
-//Bora pra cima de mais um projeto :)
+// Bora pra cima de mais um projeto :)
 // Desafio 1
 function compareTrue(value1, value2) {
   return value1 === true && value2 === true
@@ -15,9 +15,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  return `${vetor[vetor.length - 1]}, ${vetor[0]}.`
 }
+
 
 // Desafio 5
 function footballPoints() {
