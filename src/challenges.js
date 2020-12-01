@@ -44,14 +44,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arr) {
-  // seu código aqui
-  let high = -1, count = 0;
+function descobreMaior(arr) {
+  let high = -1;
   for (let index in arr) {
     if (arr[index] > high) {
       high = arr[index];
     }
   }
+  return high;
+}
+function highestCount(arr) {
+  // seu código aqui
+  let high = descobreMaior(arr);
+  let count = 0;
   for (let index in arr) {
     if (arr[index] === high) {
       count += 1;
@@ -59,6 +64,7 @@ function highestCount(arr) {
   }
   return count;
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -102,7 +108,7 @@ function fizzBuzz(arrNumber) {
 // Desafio 9
 function encode() {
   // seu código aqui
-  
+
 }
 function decode() {
   // seu código aqui
