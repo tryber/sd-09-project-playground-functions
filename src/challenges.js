@@ -156,9 +156,46 @@ let retornoArray = [];
 // Desafio 9
 function encode(string) {
   // seu código aqui
+let fraseFinal = '';
+
+  for (let contador = 0; contador < string.length; contador += 1) {
+    if (string[contador] === 'a') {
+      fraseFinal += '1';
+    } else if (string[contador] === 'e') {
+      fraseFinal += '2';
+    } else if (string[contador] === 'i') {
+      fraseFinal += '3'
+    } else if (string[contador] === 'o') {
+      fraseFinal += '4';
+    } else if (string[contador] === 'u') {
+      fraseFinal += '5'
+    } else {
+      fraseFinal += string[contador];
+    }
+  }
+return fraseFinal;
 }
-function decode() {
+
+function decode(string) {
   // seu código aqui
+  let fraseFinal = '';
+
+  for (let contador = 0; contador < string.length; contador += 1) {
+    if (string[contador] === '1') {
+      fraseFinal += 'a';
+    } else if (string[contador] === '2') {
+      fraseFinal += 'e';
+    } else if (string[contador] === '3') {
+      fraseFinal += 'i'
+    } else if (string[contador] === '4') {
+      fraseFinal += 'o';
+    } else if (string[contador] === '5') {
+      fraseFinal += 'u'
+    } else {
+      fraseFinal += string[contador];
+    }
+  }
+return fraseFinal;
 }
 
 // Desafio 10
