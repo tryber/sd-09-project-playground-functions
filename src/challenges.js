@@ -26,7 +26,7 @@ function concatName(namesArray) {
   // seu código aqui
   let received=[];
   let switched=[];
-  for (i in array){
+  for (i in namesArray){
     if (i==0){
       received.push(namesArray[i]);
     } else if (i==namesArray.length-1){
