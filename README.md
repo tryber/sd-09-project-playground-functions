@@ -83,7 +83,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ---
 
-**1 - Usando o operador &&**
+**1 - Usando o operador &&** :heavy_check_mark:
 -
 JavaScript possui um operador lógico `&&`, o qual recebe dois valores e retorna `true` se ambos os valores são verdadeiros, e retorna `false` se algum dos valores não o for.
 
@@ -94,19 +94,19 @@ Considerando isso, crie uma função chamada `compareTrue` que, ao receber dois 
 
 Faça a função utilizando o operador `&&`.
 
-**2 - Área do triângulo** 
+**2 - Área do triângulo** :heavy_check_mark:
 -
 Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
 
 Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
 
-**3 - Dividindo a frase**
+**3 - Dividindo a frase** :heavy_check_mark:
 -
 Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
 Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['go', 'Trybe']`.
 
-**4 - Concatenação de strings**
+**4 - Concatenação de strings** :heavy_check_mark:
 -
 Escreva uma função com o nome `concatName` que, ao receber uma array de strings, retorne uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`, independente do tamanho da array.
 
