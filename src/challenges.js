@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
+    console.log('Desafio 1 Ta indo');
     return true;
   }
   return false;
@@ -8,7 +9,9 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  let calc = (base * height) / 2;
+  console.log('desafio 2 ' + calc)
+  return calc;
 }
 
 // Desafio 3
@@ -86,5 +89,8 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+compareTrue(true, true)
+calcArea(5, 4)
 
 // Aooba, não é que tem um segredo no Lession Learned?
