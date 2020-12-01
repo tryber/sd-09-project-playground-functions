@@ -5,13 +5,14 @@
   if(valorOne === true && valorTwo === true) {
     return true;
   } else {
-    return false;
+  return false; 
   }
   }
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * altura)/2
+function calcArea() {
+  // seu código aqui
+}
 
 // Desafio 3
 function splitSentence() {
