@@ -3,7 +3,7 @@ function compareTrue(numB1, numB2) {
   // seu código
   if (numB1 && numB2 > 0) {
     return true;
-  }return false;
+  } return false;
 }console.log(compareTrue(0, 0));
 
 // Desafio 2
