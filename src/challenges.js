@@ -74,8 +74,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function getFizzBuzz(number) {
+  let remainderBy3 = number % 3;
+  let remainderBy5 = number % 5;
+  let output = '';
+  if ((remainderBy3 === 0) && (remainderBy5 === 0)) {
+    output = 'fizzBuzz';
+  } else if (remainderBy3 === 0) {
+    output = 'fizz';
+  } else if (remainderBy5 === 0) {
+    output = 'buzz';
+  } else {
+    output = 'bug!';
+  }
+  return output;
+}
+
+function fizzBuzz(inputArray) {
+  for (let index in inputArray) {
+    let number = inputArray[index];
+    let resultStr = getFizzBuzz(number);
+    inputArray[index] = resultStr;
+  }
+  return inputArray;
 }
 
 // Desafio 9
