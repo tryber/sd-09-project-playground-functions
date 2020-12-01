@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceMouseCat1 > distanceMouseCat2) {
     return ('cat2');
   }
-    return ('os gatos trombam e o rato foge');
+  return ('os gatos trombam e o rato foge');
 }
 
 // Desafio 8
@@ -77,17 +77,96 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function isVowel(character) {
+  if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
+    return true;
+  }
+  return false;
 }
 
-function decode() {
-  // seu código aqui
+function isNumberCharecter(number) {
+  if (number === '1' || number === '2' || number === '3' || number === '4' || number === '5') {
+    return true;
+  }
+  return false;
+}
+
+function swapVowelNumber(vowel) {
+  if (vowel === 'a') {
+    return '1';
+  }
+  if (vowel === 'e') {
+    return '2';
+  }
+  if (vowel === 'i') {
+    return '3';
+  }
+  if (vowel === 'o') {
+    return '4';
+  }
+  if (vowel === 'u') {
+    return '5';
+  }
+}
+
+function swapNumberVowel(number) {
+  if (number === '1') {
+    return 'a';
+  }
+  if (number === '2') {
+    return 'e';
+  }
+  if (number === '3') {
+    return 'i';
+  }
+  if (number === '4') {
+    return 'o';
+  }
+  if (number === '5') {
+    return 'u';
+  }
+}
+
+function encode(string) {
+  for (let i in string) {
+    if (isVowel(string[i])) {
+      console.log(string[i]);
+      string[i] = swapVowelNumber(string[i]);
+      console.log(string[i]);
+    }
+  }
+
+  return string;
+}
+
+function decode(string) {
+  for (let i in string) {
+    if (isNumberCharecter(string[i])) {
+      string[i] = swapNumberVowel(string[i]);
+    }
+  }
+  return string;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  let listOfObjects = [];
+  techArray = techArray.sort();
+
+  for (let i in techArray) {
+    let techObject = {
+      tech: techArray[i],
+      name: name,
+    };
+
+    listOfObjects.push(techObject);
+  }
+
+  return listOfObjects
 }
 
 // Desafio 11
