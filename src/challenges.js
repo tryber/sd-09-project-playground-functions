@@ -75,14 +75,26 @@ function fizzBuzz(arrayOfNumbers) {
 
 // Desafio 9
 function encode(sentence) {
-  let newWord = sentence;
-  newWord = newWord.replace('a', '1');
-  newWord = newWord.replace('e', '2');
-  newWord = newWord.replace('i', '3');
-  newWord = newWord.replace('o', '4');
-  newWord = newWord.replace('u', '5');
-
-  return newWord;
+  for (let index in sentence) {
+    switch (sentence[index]) {
+      case 'a':
+        sentence = sentence.replace('a', '1');
+        break;
+      case 'e':
+        sentence = sentence.replace('e', '2');
+        break;
+      case 'i':
+        sentence = sentence.replace('i', '3');
+        break;
+      case 'o':
+        sentence = sentence.replace('o', '4');
+        break;
+      case 'u':
+        sentence = sentence.replace('u', '5');
+        break;
+    }
+  }
+  return sentence;
 }
 
 function decode(sentence) {
