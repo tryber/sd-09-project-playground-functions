@@ -1,8 +1,7 @@
 // VAMO NESSA É APENAS O COMEÇO!!!
 // Desafio 1
-let valor1 = true;
-let valor2 = false;
-function compareTrue() {
+
+function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
   } else {
@@ -13,13 +12,13 @@ function compareTrue() {
 // Desafio 2
 let base = 30;
 let height = 20;
-function calcArea() {
+function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(meuNome) {
+  return meuNome.split(" ");
 }
 
 // Desafio 4
@@ -91,5 +90,6 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
-console.log(compareTrue(valor1, valor2));
-console.log(calcArea(base, height));
+console.log(compareTrue(true, false));
+console.log(calcArea(30, 20));
+console.log(splitSentence("Gabriel Castro"));
