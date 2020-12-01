@@ -34,8 +34,8 @@ function concatName(array) {
       received.push=array[i];
     }
   }
-  switched.push=received[0];
   switched.push=received[1];
+  switched.push=received[0];
   let result=switched.join(', ');
   return result;
 }
