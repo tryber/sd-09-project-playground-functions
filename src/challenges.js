@@ -52,7 +52,7 @@ if (numeros[contador]>maior){
 }
 
 // Desafio 7
-function catAndMouse(cat1,cat2,mouse) {
+function catAndMouse(mouse,cat1,cat2) {
   mouse = 10;
   cat1 = 6;
   cat2 = 4;
