@@ -34,12 +34,9 @@ function concatName(arrayString) {
   return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
 
-let arrayString = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(arrayString));
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
