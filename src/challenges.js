@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+    let answer
+
+    bool1 === true && bool1 === bool2 ? answer = true : answer = false
+
+    return answer
 }
 
 // Desafio 2
