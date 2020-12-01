@@ -17,7 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let separator = ' '
+  let separator = ' ';
   let stringSeparated = string.split(separator);
   return stringSeparated;
 }
@@ -25,27 +25,37 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayStrings) {
   // seu código aqui
-  for (let index = 0; index < arrayStrings, index += 1) {
-  
-  }
+  return arrayStrings[arrayStrings.length -1] + ', ' + arrayStrings[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let result = (wins * 3) + ties
-  return result
+  let result = (wins * 3) + ties;
+  return result;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+  let repeat = 0;
+  for (let index = 0; index < arrayNumbers; index += 1) {
+    if(arrayNumbers[index] > arrayNumbers.length - index {
+      
+    }
+  } 
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  if ((mouse - cat1) < (mouse - cat2)) {
+    return 'cat1';
+  } else if ((mouse - cat2) < (mouse - cat1)) {
+    return 'cat2';
+  } else (cat1 === cat2) 
+    return 'os gatos trombam e o rato foge';
+  }
 
 // Desafio 8
 function fizzBuzz() {
