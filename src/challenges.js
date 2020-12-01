@@ -61,15 +61,23 @@ function highestCount(numbers) {
       biggerNumber = numbers[index];
       countBuggerNumber = 1;
     }
-    
   }
 
   return countBuggerNumber;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+
+  if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  }
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+  return 'Os gatos trombam e o rato foge.'
 }
 
 // Desafio 8
@@ -129,3 +137,4 @@ console.log(splitSentence('go Trybe vamos que vamos'));
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(10, 5));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(catAndMouse(5, 2, 8));
