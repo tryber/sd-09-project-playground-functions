@@ -1,3 +1,4 @@
+// Cleber Teixeira - Começando o Projeto!
 // Desafio 1
 function compareTrue() {
   // seu código aqui
