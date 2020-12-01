@@ -33,9 +33,9 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestNumber(numberList) {
   let highest = 0;
-    for (let index in numberList) {
-      if (highest < numberList[index]) {
-        highest = numberList[index];
+  for (let index in numberList) {
+    if (highest < numberList[index]) {
+      highest = numberList[index];
     }
   }
   return highest;
@@ -68,8 +68,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberList) {
+  let answer = [];
+  for (let index in numberList) {
+    if (numberList[index] % 3 === 0 && numberList[index] % 5 === 0) {
+      answer.push('fizzBuzz');
+    } else if (numberList[index] % 3 === 0) {
+      answer.push('fizz');
+    } else if (numberList[index] % 5 === 0) {
+      answer.push('buzz');
+    } else {
+      answer.push('bug!');
+    }
+  }
+  return answer;
 }
 
 // Desafio 9
