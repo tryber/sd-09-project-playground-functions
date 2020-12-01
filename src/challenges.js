@@ -1,9 +1,15 @@
 //MAIS UM DESAFIO PARA SUPERAR
 
 // Desafio 1
-function compareTrue() {
+function compareTrue(firstItem, secondItem) {
   // seu código aqui
+  if (firstItem && secondItem) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea() {
