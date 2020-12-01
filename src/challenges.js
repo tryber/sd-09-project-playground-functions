@@ -1,16 +1,13 @@
 // Segundo Projecto  de Frederico Canoeira #VQV
-// Desafio 1
-
+// Desafio 
 function compareTrue(number1, number2) {
   if (number1 % 2 === 0 && number2 % 2 !== 0) {
     return true;
-  } else {
+  } 
     return false;
-  }
-   
 }
 let result = compareTrue(4, 9);
-  console.log(result);
+console.log(result);
 
 // Desafio 2
 function calcArea() {
