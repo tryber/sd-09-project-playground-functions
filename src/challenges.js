@@ -1,20 +1,21 @@
 // #VQV
 
 // Desafio 1
-function compareTrue( num1, num2 ) {
-  if ( num1 === num2 && num1 >= num2) {
+function compareTrue( value1, value2 ) {
+  if ( value1 === value2 && value1 >= value2) {
     return false
   } else {
     return true
   }
 };
-// console.log(compareTrue( 9, 11 ));
 
 // Desafio 2
+calcArea ( 4, 4)
 function calcArea( base, height ) {
   let calc = (base * height) / 2;
+  console.log( calc );
 }
-console.log(calc( 4, 4));
+
 // Desafio 3
 function splitSentence() {
   // seu código aqui
