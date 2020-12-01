@@ -47,9 +47,9 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return "cat1";
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return "cat2";
-  if (cat1 === cat2) return "os gatos trombam e o rato foge";
+  else return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse(5, 10, 20));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -103,9 +103,10 @@ function decode(frase) {
 console.log(decode('h3 th2r2'))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTec, name) {
+  
 }
+console.log()
 
 // Desafio 11
 function generatePhoneNumber() {
