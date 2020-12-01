@@ -14,14 +14,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let arrayPalavras = [];
-  let palavra = '';
+  let palavra = "";
 
   for (let index = 0; index <= frase.length; index += 1) {
-    if (frase[index] !== ' ' && index !== frase.length) {
+    if (frase[index] !== " " && index !== frase.length) {
       palavra += frase[index];
     } else {
       arrayPalavras.push(palavra);
-      palavra = '';
+      palavra = "";
     }
   }
   return arrayPalavras;
@@ -34,28 +34,28 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
+function highestNumber(array) {
+  let highestN = array[0];
+  for (let number in array) {
+    if (array[number] > highestN) {
+      highestN = array[number];
+    }
+  }
+  return highestN;
+}
+
 function highestCount(array) {
-  count = 0;
-  for(let number in array){
-    if (array[number] === highestNumber(array)){
+  let count = 0;
+  for (let number in array) {
+    if (array[number] === highestNumber(array)) {
       count += 1;
     }
   }
   return count;
-}
-
-function highestNumber(array) {
-  highestN = array[0]
-  for(let number in array) {
-    if (array[number] > highestN) {
-      highestN = array[number];
-     } 
-  }
-  return highestN;
 }
 
 // Desafio 7
