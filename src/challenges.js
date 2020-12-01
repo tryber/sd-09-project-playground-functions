@@ -15,7 +15,7 @@ function calcArea(base, height) {
   // seu código aqui
 }
 let area = calcArea(4, 7)
-console.log("A área deste triângulo é de, " + area)
+console.log(area)
 
 // Desafio 3
 function splitSentence() {
