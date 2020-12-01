@@ -25,14 +25,9 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(words) {
-  // seu código aquig
-  let saveArray = words;
-  let result = saveArray.split(' ');
-  let concat = (result[0] + ' ' + result[(result.length - 1)]);
-  return concat;
+  // seu código aqui
+  return (words[(words.length - 1)] + ', ' + words[0]);
 }
-
-console.log(concatName('pedro, joao, johnatas, bernardo, issac'));
 
 // Desafio 5 OK
 function footballPoints(wins, ties) {
@@ -42,7 +37,7 @@ function footballPoints(wins, ties) {
   return totalNumber;
 }
 
-// Desafio 6 OK (condeclimate)
+// Desafio 6 OK (Refatorar) Olhar For in
 function highestCount(arrayNumber) {
   // seu código aqui
   let bigNumber = arrayNumber[0];
@@ -62,9 +57,7 @@ function highestCount(arrayNumber) {
   return result;
 }
 
-console.log (highestCount([1,9,7,6,8,9,3,5,9,8,6,9]));
-
-// Desafio 7
+// Desafio 7 OK
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let numberCat1 = Math.abs(cat1 - mouse);
@@ -77,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
-// Desafio 8
+// Desafio 8 Ok (refatorar)
 function fizzBuzz(array) {
   // seu código aqui
   let result = [];
@@ -95,9 +88,7 @@ function fizzBuzz(array) {
   return result;
 }
 
-console.log(fizzBuzz([1,9,15,7,30]));
-
-// Desafio 9
+// Desafio 9 Ok
 function encode(texto) {
   // seu código aqui
   let transLettersNumbers = texto;
