@@ -57,16 +57,33 @@ function highestCount(numbersArray) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let phrase = '';
+  let diffCat1 = subtrNumber(mouse, cat1);
+  let diffCat2 = subtrNumber(mouse, cat2);
 
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    phrase = 'cat1';
-  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-    phrase = 'cat2';
-  } else {
-    phrase = 'os gatos trombam e o rato foge';
+  switch (true) {
+    case diffCat1 < diffCat2:
+      phrase = 'cat1';
+      break;
+    case diffCat1 > diffCat2:
+      phrase = 'cat2';
+      break;
+    default:
+      phrase = 'os gatos trombam e o rato foge';
+      break;
   }
+  // if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+  //   phrase = 'cat1';
+  // } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+  //   phrase = 'cat2';
+  // } else {
+  //   phrase = 'os gatos trombam e o rato foge';
+  // }
 
   return phrase;
+}
+
+function subtrNumber(number1, number2) {
+  return (number1 < number2) ? number2 - number1 : number1 - number2;
 }
 // console.log(catAndMouse(1, 0, 2));
 
@@ -91,21 +108,11 @@ function fizzBuzz(arrayNumbers) {
         arrayNumbers[index] = 'bug!';
         break;
     }
-
-    // if (mod3 && mod5) {
-    //   arrayNumbers[index] = 'fizzBuzz';
-    // } else if (mod3) {
-    //   arrayNumbers[index] = 'fizz';
-    // } else if (mod5) {
-    //   arrayNumbers[index] = 'buzz';
-    // } else {
-    //   arrayNumbers[index] = 'bug!';
-    // }
   }
 
   return arrayNumbers;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
 // Desafio 9
