@@ -76,16 +76,50 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-}
+  let vowels = {
+    1: a,
+    2: e,
+    3: i,
+    4: o,
+    5: u,
+  }
+  for (let index = 0; index = string.length; index += 1) {
+    for (let key in vowels) {
+      if (string[index] === vowels[key]) {
+        string[index] = key
+      }
+    }
+  }
+    }
+
+console.log('hi thara');
+
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  let newObj = {
+  }
+  let newArray = []
+
+  for (let index = 0; index < array.length; index += 1) {
+    if(array[index] < array) {
+        let outro = {
+          tech: array[index],
+          name: name
+        }
+        newArray.push(outro)
+    } 
+    else { 
+        return 'Vazio!'
+    }
+  }
+  return newArray;
 }
 
 // Desafio 11
