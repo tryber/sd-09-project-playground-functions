@@ -26,15 +26,18 @@ function splitSentence(phrase) {
 function concatName(array) {
   // seu código aqui
   let received=[];
+  let switched=[];
   for (i in array){
-    if (i==0 | i==array.length-1){
+    if (i==0){
+      received.push=array[i];
+    } else if (i==array.length-1){
       received.push=array[i];
     }
   }
-  let switched=received[0];
-  received[0]=received[1];
   switched.push=received[0];
-  return switched.join(', ');
+  switched.push=received[1];
+  let result=switched.join(', ');
+  return result;
 }
 
 // Desafio 5
