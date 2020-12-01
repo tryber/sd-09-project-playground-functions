@@ -23,13 +23,16 @@ function splitSentence(string) {
 function concatName(arrayS) {
   let primaryString = arrayS[0];
   let lastString = arrayS[arrayS.length - 1];
-  let result = primaryString + ', ' + lastString;
+  let result = lastString + ', ' + primaryString;
   return result;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  pointsWins = wins * 3;
+  pointsTies = ties * 1;
+  totPoints = wins + ties;
+  return totPoints;
 }
 
 // Desafio 6
