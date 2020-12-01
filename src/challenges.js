@@ -6,16 +6,17 @@ if (value1, value2 === true){
 }
 return false;
 }
-console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let finalArray = string[0] + ' ' + string[string.length - 1];
+  return finalArray;
 }
 
 // Desafio 4
