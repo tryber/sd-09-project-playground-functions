@@ -1,3 +1,4 @@
+// Playground Functions - Henrique Brito Elias
 // Desafio 1
 function compareTrue() {
   // seu código aqui
