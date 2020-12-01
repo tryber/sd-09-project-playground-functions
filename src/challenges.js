@@ -6,8 +6,8 @@ function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     console.log('Retornou true')
     return true
-  };
-    return false
+  }
+  return false
 }
 
 compareTrue(true, true)
