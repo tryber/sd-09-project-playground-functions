@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(2, 1));
 
 // Desafio 6
-function highestCount(numbersArray) {
+function highestCount() {
   // seu código aqui
 }
 
