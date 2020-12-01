@@ -21,10 +21,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName([array]) {
-  let primeiro = array[0];
-  let ultimo = array.length-1;
-  return primeiro, ultimo;
+let lista = ["a","b","c"];
+function concatName(arrayRetorno) {
+  lista= arrayRetorno = arrayRetorno[arrayRetorno.length-1] + ", " + arrayRetorno[0];
+  return lista;
 }
 
 // Desafio 5
