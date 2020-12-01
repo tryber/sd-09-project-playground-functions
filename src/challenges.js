@@ -23,7 +23,7 @@ function splitSentence(string) {
       array.push(storage);
       storage = '';
     } else {
-      storage = storage + string[index];
+      storage = storage += string[index];
     }
   }
   array.push(storage);
@@ -32,8 +32,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let result = `${array[0]}, ${array[array.length - 1]}`;
+  console.log(result);
+  return result;
 }
 
 // Desafio 5
@@ -105,5 +107,6 @@ module.exports = {
 compareTrue(true, true)
 calcArea(5, 4)
 splitSentence('Go Trybe')
+concatName(['primeira', 'segunda', 'Ultima'])
 
 // Aooba, não é que tem um segredo no Lession Learned?
