@@ -32,15 +32,15 @@ function footballPoints(wins, ties) {
 function highestCount(arrayOfNumbers) {
   let highest;
   let count = 0;
-  for(let index in arrayOfNumbers){
-    if(index == 0){
+  for (let index in arrayOfNumbers) {
+    if (index == 0) {
       highest = arrayOfNumbers[index];
-    }else if(arrayOfNumbers[index] > highest){
+    } else if (arrayOfNumbers[index] > highest) {
       highest = arrayOfNumbers[index];
     }
   }
-  for(let index in arrayOfNumbers){
-    if(highest == arrayOfNumbers[index]){
+  for (let index in arrayOfNumbers) {
+    if (highest == arrayOfNumbers[index]) {
       count += 1;
     }
   }
@@ -49,25 +49,25 @@ function highestCount(arrayOfNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(cat1 - mouse > cat2 - mouse){
+  if (cat1 - mouse > cat2 - mouse) {
     return 'cat1';
-  }else if(cat2 - mouse > cat1 - mouse){
+  } else if(cat2 - mouse > cat1 - mouse) {
     return 'cat2';
-  }else{
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
-  for(let index in arrayOfNumbers){
-    if(arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0){
+  for (let index in arrayOfNumbers) {
+    if (arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0) {
       arrayOfNumbers[index] = 'fizzBuzz';
-    }else if(arrayOfNumbers[index] % 3 === 0){
+    } else if (arrayOfNumbers[index] % 3 === 0) {
       arrayOfNumbers[index] = 'fizz';
-    }else if(arrayOfNumbers[index] % 5 === 0){
+    } else if (arrayOfNumbers[index] % 5 === 0) {
       arrayOfNumbers[index] = 'buzz';
-    }else{
+    } else {
       arrayOfNumbers[index] = 'bug!';
     }
   }
@@ -77,7 +77,7 @@ function fizzBuzz(arrayOfNumbers) {
 // Desafio 9
 function encode(sentence) {
   let newWord = sentence;
-  for(let index in sentence){
+  for (let index in sentence) {
     switch (sentence[index]) {
       case 'a':
         newWord = newWord.replace('a', '1');
@@ -101,7 +101,7 @@ function encode(sentence) {
 
 function decode(sentence) {
   let oldWord = sentence;
-  for(let index in sentence){
+  for (let index in sentence) {
     switch(sentence[index]) {
       case '1':
         oldWord = oldWord.replace('1', 'a');
