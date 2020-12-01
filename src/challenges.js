@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distcat2 = Math.abs(mouse - cat2)
   let result
 
-  if (cat1 == cat2) {
+  if (distcat2 == distcat1) {
     result = "os gatos trombam e o rato foge"
   }
   else if (distcat1 < distcat2) {
@@ -147,12 +147,21 @@ function decode(frase) {
 // Desafio 10
 function techList(tech, name) {
   let result = []
-
   for (let index = 0; index < tech.length; index += 1) {
-    result.push({ tech: tech[index], name: name })
+    result.push(
+      {
+        tech: tech[index],
+        name: name
+      }
+    )
+  }
+  if (result.length == 0) {
+    return 'Vazio!'
   }
   return result
 }
+
+console.log(techList([]))
 
 // Desafio 11
 function generatePhoneNumber(numbearray) {
