@@ -56,11 +56,10 @@ function highestCount(array) {
     if (contador > var1) {
       var1 = contador;
       maiorNumero = array[index];
-      numeroDeVezes = repeticao
+      numeroDeVezes = repeticao;
     }
   }
-  resultado.push(numeroDeVezes,maiorNumero);
-  return resultado
+  return numeroDeVezes;
 }
 
 // Desafio 7
