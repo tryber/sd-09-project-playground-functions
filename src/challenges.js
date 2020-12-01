@@ -23,20 +23,20 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName(namesArray) {
   // seu código aqui
   let received=[];
   let switched=[];
   for (i in array){
     if (i==0){
-      received.push(array[i]);
-    } else if (i==array.length-1){
-      received.push(array[i]);
+      received.push(namesArray[i]);
+    } else if (i==namesArray.length-1){
+      received.push(namesArray[i]);
     }
   }
   switched.push(received[1]);
   switched.push(received[0]);
-  let result=switched.join(',');
+  let result=switched.join(', ');
   return result;
 }
 
