@@ -17,8 +17,11 @@ function splitSentence(value) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(value) {
+  const newArray = []
+  newArray.append(value[value.length - 1])
+  newArray.append(value[0])
+  return newArray.join(' ')
 }
 
 // Desafio 5
