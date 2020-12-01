@@ -94,13 +94,13 @@ function fizzBuzz(numbersArray) {
   let fizzBuzzStrings = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
     switch (true) {
-      case (!(numbersArray[index] % 5 || numbersArray[index] % 3)):
-        fizzBuzzStrings.push('fizzbuzz');
+      case ((numbersArray[index] % 5 === 0 && numbersArray[index] % 3 === 0)):
+        fizzBuzzStrings.push('fizzBuzz');
         break;
-      case (!(numbersArray[index] % 5)):
+      case ((numbersArray[index] % 5 === 0)):
         fizzBuzzStrings.push('buzz');
         break;
-      case (!(numbersArray[index] % 3)):
+      case ((numbersArray[index] % 3 === 0)):
         fizzBuzzStrings.push('fizz');
         break;
       default:
@@ -112,8 +112,7 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringToEncode) {
 }
 function decode() {
   // seu código aqui
