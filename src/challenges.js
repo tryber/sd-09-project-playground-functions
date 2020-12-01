@@ -6,8 +6,8 @@ https://github.com/tiago-yoneda
 */
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  return ( bool1 && bool2);
 }
 
 // Desafio 2
