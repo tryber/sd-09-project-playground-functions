@@ -103,13 +103,35 @@ function fizzBuzz(arrayN) {
   return bzfz
   // seu código aqui
 }
-let n1t = [2, 15, 7, 9, 45]
-console.log(fizzBuzz(n1t))
+
 // Desafio 9
-function encode() {
+function encode(phrase1) {
+  let new_phrase1 = "";
+  let vogais = {'a':1, 'e':2, 'i':3, 'o':4, 'u':5}
+  for (i in phrase1){
+    if (phrase1[i] in vogais){
+      new_phrase1+= vogais[phrase1[i]]
+    }
+    else{
+      new_phrase1 += phrase1[i]
+    }
+  }
+  return new_phrase1
   // seu código aqui
 }
-function decode() {
+
+function decode(phrase2) {
+  let new_phrase2 = "";
+  let vogais = {1:'a', 2:'e', 3:'i', 'o':4, 'u':5}
+  for (i in phrase2){
+    if (phrase2[i] in vogais){
+      new_phrase2+= vogais[phrase2[i]]
+    }
+    else{
+      new_phrase2 += phrase2[i]
+    }
+  }
+  return new_phrase2
   // seu código aqui
 }
 
