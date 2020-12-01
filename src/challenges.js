@@ -53,8 +53,8 @@ if (numeros[contador]>maior){
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaGato1= mouse-cat1;
-  let distanciaGato2= mouse-cat2;
+  let distanciaGato1= Math.abs(mouse-cat1);
+  let distanciaGato2= Math.abs(mouse-cat2);
   let retorno1= [];
 if(distanciaGato1<distanciaGato2){
 retorno1= "cat1";
