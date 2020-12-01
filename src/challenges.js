@@ -26,7 +26,10 @@ function concatName(array) {
   // seu código aqui
   let str1 = array[0];
   let str2 = array[array.length - 1];
-  let str3 = array[]
+  let str3 = str2 + ', ' + str1;
+  
+  return str3;
+
 }
 
 // Desafio 5
@@ -60,6 +63,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+  let novoArray = [];
+    for (let index = 0; index < array.length; index += 1) {
+        if ((array[index] % 3 == 0) && (array[index] % 5 == 0)) {
+            novoArray.push('fizzBuzz');
+        } else if (array[index] % 3 == 0) {
+            novoArray.push('fizz');
+        } else if (array[index] % 5 == 0) {
+            novoArray.push('buzz');
+        } else {
+            novoArray.push('bug!');
+        }
+    }
+    return novoArray;
 }
 
 // Desafio 9
