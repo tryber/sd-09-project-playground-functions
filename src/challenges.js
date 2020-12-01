@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(x ,y) {
-  if(x == 5 && y == 3) {
+  if(x == true && y == true) {
     return true;
   }
   else {
@@ -9,8 +9,8 @@ function compareTrue(x ,y) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return base * height / 2;
 }
 
 // Desafio 3
