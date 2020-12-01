@@ -24,11 +24,9 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(stringArray) {
   // seu código aqui
-  let arrayToReturn
   let firstItem = stringArray.shift()
   let lastItem = stringArray.pop()
-  arrayToReturn.push(lastItem, firstItem)
-  return arrayToReturn
+  return lastItem + ', ' + firstItem
 }
 
 // Desafio 5
