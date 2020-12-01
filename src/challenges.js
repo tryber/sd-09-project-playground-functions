@@ -24,18 +24,9 @@ function concatName() {
 }
 
 // Desafio 5
-let contagemWins = 0;
-let contagemTies = 0;
-let valorTotal = 0;
 function footballPoints(wins, ties) {
-  for (cont = 0; cont < wins; cont += 1) {
-    contagemWins += 3
-  }
-  for (index = 0; index < ties; index += 1) {
-    contagemTies += 1
-  }
-  valorTotal = contagemWins + contagemTies;
-  return valorTotal
+  let total = wins *3 + ties;
+  return total
 }
 
 // Desafio 6
