@@ -20,6 +20,13 @@ function distanceBetweenTwoPoins(position1, position2) {
   return distance;
 }
 
+function isDivisibleBy(dividend, divider) {
+  if (dividend % divider == 0) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 1 OK
 function compareTrue(boolean1, boolean2) {
   // seu código aqui
@@ -68,7 +75,7 @@ function highestCount(arrayNum) {
   return cont;
 }
 
-// Desafio 7
+// Desafio 7 OK
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = distanceBetweenTwoPoins(mouse, cat1);
   let distance2 = distanceBetweenTwoPoins(mouse, cat2);
@@ -81,8 +88,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let answers = ['fizz', 'buzz', 'fizzBuzz'];
+  for (let i in array) {
+    if (isDivisibleBy(array[i], 3) && isDivisibleBy(array[i], 5)) {
+      return 'fizzBuzz';
+    } else if (isDivisibleBy(array[i], 3)) {
+      return 'fizz';
+    } else if (isDivisibleBy(array[i], 5)) {
+      return 'buzz';
+    }
+  }
+  return 'bug';
 }
 
 // Desafio 9
