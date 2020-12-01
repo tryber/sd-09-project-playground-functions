@@ -85,18 +85,62 @@ function fizzBuzz(array) {
         fizzBuzzArray.push('buzz');
         break;
       default:
-        fizzBuzzArray.push("bug!");
+        fizzBuzzArray.push('bug!');
     }
   }
   return fizzBuzzArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = '';
+  for (let letter of string) {
+    switch (letter) {
+      case 'a':
+        encodedString += '1';
+        break;
+      case 'e':
+        encodedString += '2';
+        break;
+      case 'i':
+        encodedString += '3';
+        break;
+      case 'o':
+        encodedString += '4';
+        break;
+      case 'u':
+        encodedString += '5';
+        break;
+      default:
+        encodedString += letter;
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decodedString = "";
+  for (let letter of string) {
+    switch (letter) {
+      case "1":
+        decodedString += "a";
+        break;
+      case "2":
+        decodedString += "e";
+        break;
+      case "3":
+        decodedString += "i";
+        break;
+      case "4":
+        decodedString += "o";
+        break;
+      case "5":
+        decodedString += "u";
+        break;
+      default:
+        decodedString += letter;
+    }
+  }
+  return decodedString;
 }
 
 // Desafio 10
