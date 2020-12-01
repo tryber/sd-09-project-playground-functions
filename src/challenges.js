@@ -109,7 +109,7 @@ function decode(string) {
  * @param {String} name
  */
 function techList(technologies, name) {
-  if (!technologies.length) return []
+  if (!technologies.length) return 'Vazio!'
   for (let i = 0; i < technologies.length; i++) {
     for (let j = i + 1; j < technologies.length; j++) {
       const result = compareStringsLength(technologies[i], technologies[j])
