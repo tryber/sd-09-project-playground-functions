@@ -31,7 +31,7 @@ function concatName(arrayS) {
 function footballPoints(wins, ties) {
   pointsWins = wins * 3;
   pointsTies = ties * 1;
-  totPoints = wins + ties;
+  totPoints = pointsWins + pointsTies;
   return totPoints;
 }
 
