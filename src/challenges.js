@@ -1,7 +1,11 @@
 // Playground Functions - Henrique Brito Elias
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstValue, secondValue) {
+  if (firstValue === true && secondValue === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
