@@ -25,12 +25,12 @@ function splitSentence(arraySource) {
 function concatName(arraySource) {
   let newArray = [];
   newArray.push(arraySource[arraySource.length - 1], arraySource[0]);
-  return newArray;
+  return newArray.join(', ');
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (3 * wins + ties);
+  return (3 * wins) + ties;
 }
 
 // funcao auxiliar para 6
@@ -74,16 +74,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let newArray = []
   for (let item of array) {
-    if (item%15 === 0) {
+    if (item % 15 === 0) {
       newArray.push('fizzBuzz');
-    }
-    else if (item%3 === 0){ 
+      continue;
+    } else if (item % 3 === 0){
       newArray.push('fizz');
-    }
-    else if (item%5 === 0) {
+    } else if (item % 5 === 0) {
       newArray.push('Buzz');
-    }
-    else {
+    } else {
       newArray.push('bug!');
     }
   }
@@ -122,6 +120,10 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
+  if (array.length === 0) {
+    return "Vazio!"
+  }
+
   array.sort();
   let newArray = [];
   let newObject = {};
@@ -135,9 +137,49 @@ function techList(array, name) {
   return newArray;
 }
 
+
+// funcao auxiliar para fuincao 11
+function verificaViabilidade(array) {
+  if (array.length != 11) {
+    return (-1);
+  } else if (array.some(element => element > 9) || array.some(element => element < 0)) {
+    return 1;
+  } else if (verificaRepetido(array) === 1) {
+    return 1;
+  }
+  return 0;
+}
+
+function verificaRepetido(array) {
+  let topCounter = 0;
+  let counter = 0;
+  for (let num of array) {
+    for(let item in array) {
+      if (num === array[item]) {
+        counter +=1;
+      }
+    }
+    if (counter >= topCounter) {
+      topCounter = counter;
+    }
+    counter = 0;
+  }
+  if (topCounter >= 3) {
+    return 1;
+  }
+  return 0;
+}
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let verificador = verificaViabilidade(array);
+  if (verificador === -1) {
+    return ('Array com tamanho incorreto.');
+  } else if (verificador === 1){
+    return ('não é possível gerar um número de telefone com esses valores');
+  }
+
+  return ('('+array[0]+array[1]+') '+array[2]+array[3]+array[4]+array[5]+array[6]+'-'+array[7]+array[8]+array[9]+array[10])
 }
 
 // Desafio 12
