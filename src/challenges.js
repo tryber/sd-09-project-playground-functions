@@ -31,10 +31,7 @@ function splitSentence( string ) {
 // Desafio 4
 function concatName(array) {
 
-  let finalArray = [];
-  finalArray.push(array[0]);
-  finalArray.push(array[array.length - 1]);
-  return finalArray;
+  let finalArray = `${array[0]}, ${array[array.length - 1]}`
 }
 
 // Desafio 5
@@ -64,8 +61,12 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let whoCatchesIt;
+  let closerToMouse;
+
+  closerToMouse = math.abs(mouse)
+  
 }
 
 // Desafio 8
