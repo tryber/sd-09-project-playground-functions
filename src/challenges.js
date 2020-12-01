@@ -33,13 +33,14 @@ function splitSentence(str) {
 function concatName(arrs) {
   // seu código aqui
   let concatenado = arrs[arrs.length - 1]
-  concatenado += ', ' + arrs[0];
-  return concatenado; 
+  concatenado += `, ${arrs[0]}`;
+  return concatenado;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
