@@ -26,17 +26,18 @@ function splitSentence(stringSentence) {
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-let result = [];
 function concatName(firstAndLast) {
-  result = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
+  let result = firstAndLast[firstAndLast.length - 1] + ', ' + firstAndLast[0];
   return result;
 }
 console.log(concatName(['Fernanda', 'Cajueiro', 'Machado']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + (ties)
+  return points;
 }
+console.log(footballPoints(2, 1));
 
 // Desafio 6
 function highestCount() {
