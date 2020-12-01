@@ -103,6 +103,8 @@ function fizzBuzz(array) {
   return result;
 }
 
+console.log(fizzBuzz([7, 9]));
+
 // Desafio 9
 function encode(string) {
   let result = '';
@@ -114,7 +116,6 @@ function encode(string) {
     u: 5,
   };
   for (let index in string) {
-    string = string.toLowerCase();
     let status = false;
     for (let item in table) {
       if (string[index] == item) {
@@ -139,7 +140,6 @@ function decode(string) {
     5: 'u',
   };
   for (let index in string) {
-    string = string.toLowerCase();
     let status = false;
     for (let item in table) {
       if (string[index] == item) {
@@ -178,11 +178,15 @@ function sortArrayObjects(array) {
 
 // Desafio 10
 function techList(technologies, name) {
-  let tecno = [];
-  for (let index in technologies) {
-    tecno.push(createNewTec(technologies[index],name));
+  if (technologies.length == 0) {
+    return 'Vazio!';
+  }else {
+    let tecno = [];
+    for (let index in technologies) {
+      tecno.push(createNewTec(technologies[index],name));
+    }
+    return sortArrayObjects(tecno);
   }
-  return sortArrayObjects(tecno);
 }
 
 // Desafio 11
