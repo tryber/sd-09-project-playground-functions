@@ -2,7 +2,7 @@
 // iniciando
 function compareTrue(valor1, valor2) {
   let resposta = false;
-  if(valor1 === true && valor2 === true) {
+  if (valor1 === true && valor2 === true) {
     resposta = true;
   }
   return resposta;
