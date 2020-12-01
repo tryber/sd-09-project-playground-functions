@@ -40,6 +40,8 @@ function splitSentence(sentence) {
       case (sentence[index] !== ' '):
         wordCharacters += sentence[index];
         break;
+      default:
+        break;
     }
   }
   return words;
