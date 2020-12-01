@@ -1,47 +1,45 @@
-// Desafio 1
+// PASS
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true
 
-  } else {
-    return false
-
-  }
+  } else false
 }
 
-// Desafio 2
+// FAIL
 function calcArea(base, height) {
-  return (base * height) / 2
+  /* if (((base * height) / 2) <=  ) {
+    return true
+
+  } */
 
 }
 
-// Desafio 3
+// PASS
 function splitSentence(texto) {
-  if (typeof(texto) === `string` ) {
+  if ( typeof (texto) === "string") {
     return texto.split(' ')
-
-  } else console.log('não é string')
-
+}
 }
 
-// Desafio 4
+// PASS
 function concatName(param) {
-  return ( `${param[param.length -1]}, ${param[0]}`)
+  return (`${param[param.length -1]}, ${param[0]}`)
 
 }
 
-// Desafio 5
+// Verificar
 function footballPoints(wins, ties) {
-  return (`Vitórias: ${wins * 3} pontos\nEmpates: ${ties} pontos`)
+  return (wins * 3) + ties
 
 }
-
-
 
 // Desafio 6
 function highestCount(param) {
   let ultimoNumero = param.sort((a, b) => a - b)[param.length - 1]
   let qtdNumerosRepetidos = 0;
+
+  console.log( 'numero mais alto = ' + ultimoNumero )
 
   for (let i = 0; i <= ultimoNumero; i++ ) {
     if (param[i] === ultimoNumero) {
@@ -50,13 +48,12 @@ function highestCount(param) {
     }
   }
 
-  console.log(qtdNumerosRepetidos)
-
-  //return qtdNumerosRepetidos
+  return qtdNumerosRepetidos
 
 }
 
-highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9])
+//console.log( highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9]) )
+//console.log( highestCount([9, 1, 2, 3, 9, 5, 7]) )
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -65,10 +62,10 @@ function catAndMouse(mouse, cat1, cat2) {
   for (let i = mouse;i <= cat1; i += 1) {
     if (i >= cat1) gato1Distancia += 1;
 
-    console.log(gato1Distancia)
-    
+    //console.log(gato1Distancia)
+
   }
-   
+
   /* for para gato 2
 
   compara distancia entre gato 1
@@ -78,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
    */
 }
 
-catAndMouse(3, 5)
+//catAndMouse(3, 5)
 
 // Desafio 8
 function fizzBuzz() {
