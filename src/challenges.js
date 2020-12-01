@@ -138,6 +138,7 @@ function techList(array, name) {
 // funcao auxiliar para fuincao 11
 function verificaRepetido(array) {
   let topCounter = 0;
+  let counter = 0;
   for (let num of array) {
     for (let item in array) {
       if (num === array[item]) {
