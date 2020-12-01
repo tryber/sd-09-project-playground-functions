@@ -68,14 +68,16 @@ function highestCount(numbArray) {
 // Desafio 7
 function catAndMouse(cat1,cat2,mouse) {
   // seu código aqui
+  if (cat1==cat2){
+    return 'os gatos trombam e o rato foge';
+  }
   for (i in mouse) {
     if (i==cat1) {
-      if (cat1==cat2){
-        return 'os gatos trombam e o rato foge';
-      }
       return 'cat1';
+      break;
     } else if (i==cat2){
       return 'cat2';
+      break;
     }
   }
 }
@@ -85,7 +87,7 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let results= [];
   for (i in numbers){
-    if (numbers[i]%3=0 && numbers[i]%5=0){
+    if (numbers[i]%3=0){
       results.push('fizzBuzz')
     }
   }
