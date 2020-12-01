@@ -33,14 +33,41 @@ function concatName(arrayN) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let points = 0;
+  for (i= 1; i<= wins; i++){
+    points += 3
+  }
+  for (j = 1; j<= ties; j++){
+    poins += 1
+  }
+  return points
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
+let teste = [9, 1, 2, 3, 9, 5, 7];
+function highestCount(numbers) {
+  let dicionario ={};
+  let maiorN = 1;
+  for (i in numbers){
+        if (!(numbers[i] in dicionario)) {
+            dicionario[numbers[i]] = 1
+        }
+        else {
+            dicionario[numbers[i]] += 1
+        }
+    }
+  for (j in dicionario){
+        if (j > maiorN){
+            maiorN = j
+        }
+    }
+  return dicionario[maiorN];
+
   // seu código aqui
 }
+console.log(highestCount(teste))
 
 // Desafio 7
 function catAndMouse() {
