@@ -30,13 +30,15 @@ function splitSentence(string) {
   array.push(separacao);
   return array;
 }
-       
-console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrs) {
+  let concatenando = arrs[arrs.length -1]
+  concatenando = concatenando +  ', ' + arrs[0];
+  return concatenando
 }
+
+
 
 // Desafio 5
 function footballPoints() {
