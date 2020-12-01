@@ -41,12 +41,13 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let n = array.length;
-  return array[0] + ', ' + array[(n-1)];
+  return console.log(array[0] + ', ' + array[(n-1)]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
+  return console.log(points);
 }
 
 // Desafio 6
