@@ -20,8 +20,12 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  return array.join('');
+  let primeiro = array.shift();
+  let ultimo = array[array.length -1]
+  array = primeiro + ', ' + ultimo;
+  return array
 }
+console.log(concatName(['Felipe', 'José', 'Maria', 'Sorin']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -29,8 +33,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = Math.max(...array);
+  let contador = 0;
+  for(let i in array) {
+   if(array[i] == maior) {
+     contador++;
+   } 
+  }
+  return contador
 }
 
 // Desafio 7
