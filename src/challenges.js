@@ -23,8 +23,18 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  for (i in array){
+    let received=[];
+    if (i==0 | i==array.length-1){
+      received.push=array[i];
+    }
+  }
+  let switched=received[0];
+  received[0]=received[1];
+  switched.push=received[0];
+  return received.join();
 }
 
 // Desafio 5
