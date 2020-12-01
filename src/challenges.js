@@ -1,3 +1,4 @@
+//#VQV - LRLODI
 // Desafio 1
 function compareTrue() {
   // seu código aqui
