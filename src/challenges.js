@@ -246,7 +246,7 @@ function hydrate(string) {
 
   output = `${quantity} ${phrase}`
 
-  console.log(output)
+  return output
 }
 
 hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")
