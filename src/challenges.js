@@ -160,9 +160,53 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
+  let tel;
+  let invalid = 0
+  let ddd = '';
+  let part1 = '';
+  let part2 = '';
+  if (numbers.length !== 11) {
+    tel = 'Array com tamanho incorreto';
+  } else {
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (numbers[index] < 0 || numbers[index] > 9 ) {
+        invalid += 1;
+      } else {
+        for (let index = 0; index < numbers.length; index += 1) {
+          let count = numbers[index];
+          let repeat = 0;
+          for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+            if (numbers[index2] === count) {
+              repeat += 1 
+            }
+            if (repeat > 2) {
+              invalid += 1
+            }
+          }
+        }
+      }
+    }
+    if (invalid > 0) {
+      tel = "não é possível gerar um número de telefone com esses valores";
+    } else {
+      for (let index = 0; index < numbers.length; index += 1) {
+        if(index === 0 || index ===1) {
+          ddd += `${numbers[index]}`
+        } else if (index > 1 && index < 7) {
+          part1 += `${numbers[index]}`
+        } else {
+          part2 += `${numbers[index]}`
+        }
+      }
+      tel = `(${ddd}) ${part1}-${part2}`
+    }
+  }
+  
   // seu código aqui
+  return tel
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]))
 
 // Desafio 12
 function triangleCheck() {
@@ -191,8 +235,6 @@ function hydrate(bebidas) {
   }
   return sugestion;
 }
-console.log(hydrate("1 cachaça"))
-
 
 module.exports = {
   calcArea,
