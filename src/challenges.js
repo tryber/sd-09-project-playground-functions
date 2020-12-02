@@ -16,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let resultArray = sentence.split(" ");
+  let resultArray = sentence.split(' ');
 
   return resultArray;
 }
@@ -30,7 +30,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = 3 * wins + ties;
+  let totalPoints = (3 * wins) + ties;
 
   return totalPoints;
 }
@@ -58,14 +58,14 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
-  let result = "os gatos trombam e o rato foge";
+  let result = 'os gatos trombam e o rato foge';
 
   if (distCat1 < distCat2) {
-    result = "cat1";
+    result = 'cat1';
   }
 
   if (distCat2 < distCat1) {
-    result = "cat2";
+    result = 'cat2';
   }
 
   return result;
@@ -77,13 +77,13 @@ function fizzBuzz(array) {
 
   for (let i of array) {
     if (i % 3 === 0 && i % 5 === 0) {
-      resultArray.push("fizzBuzz");
+      resultArray.push('fizzBuzz');
     } else if (i % 3 === 0) {
-      resultArray.push("fizz");
+      resultArray.push('fizz');
     } else if (i % 5 === 0) {
-      resultArray.push("buzz");
+      resultArray.push('buzz');
     } else {
-      resultArray.push("bug!");
+      resultArray.push('bug!');
     }
   }
   return resultArray;
@@ -91,7 +91,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let encrypted = "";
+  let encrypted = '';
   let cipher = {
     a: 1,
     e: 2,
@@ -102,23 +102,23 @@ function encode(string) {
 
   for (let i of string) {
     switch (i) {
-      case "a":
+      case 'a':
         encrypted += cipher[i];
         break;
 
-      case "e":
+      case 'e':
         encrypted += cipher[i];
         break;
 
-      case "i":
+      case 'i':
         encrypted += cipher[i];
         break;
 
-      case "o":
+      case 'o':
         encrypted += cipher[i];
         break;
 
-      case "u":
+      case 'u':
         encrypted += cipher[i];
         break;
 
@@ -131,34 +131,34 @@ function encode(string) {
 }
 
 function decode(string) {
-  let decipher = "";
+  let decipher = '';
   let cipher = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u",
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
 
   for (let i of string) {
     switch (i) {
-      case "1":
+      case '1':
         decipher += cipher[i];
         break;
 
-      case "2":
+      case '2':
         decipher += cipher[i];
         break;
 
-      case "3":
+      case '3':
         decipher += cipher[i];
         break;
 
-      case "4":
+      case '4':
         decipher += cipher[i];
         break;
 
-      case "5":
+      case '5':
         decipher += cipher[i];
         break;
 
@@ -182,7 +182,7 @@ function techList(array, name) {
     });
   }
 
-  return resultArray.length === 0 ? "Vazio!" : resultArray;
+  return resultArray.length === 0 ? 'Vazio!' : resultArray;
 }
 
 // Desafio 11
@@ -201,13 +201,13 @@ function generatePhoneNumber(array) {
     }
 
     if (reps >= 3 || i < 0 || i > 9) {
-      result = "não é possível gerar um número de telefone com esses valores";
+      result = 'não é possível gerar um número de telefone com esses valores';
       isValid = false;
     }
   }
 
   if (array.length !== 11) {
-    result = "Array com tamanho incorreto.";
+    result = 'Array com tamanho incorreto.';
     isValid = false;
   }
 
@@ -234,25 +234,24 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let reg = /\d+/g
-  let resultArray = string.match(reg)
-  let phrase = 'copos de água'
-  let quantity = 0
-  let output
+  let reg = /\d+/g;
+  let resultArray = string.match(reg);
+  let phrase = 'copos de água';
+  let quantity = 0;
+  let output;
 
   for (let i of resultArray) {
-    quantity += parseInt(i)
+    quantity += parseInt(i);
   }
 
   if (quantity === 1) {
-    phrase = 'copo de água'
+    phrase = 'copo de água';
   }
 
-  output = `${quantity} ${phrase}`
+  output = `${quantity} ${phrase}`;
 
-  return output
+  return output;
 }
-
 
 module.exports = {
   calcArea,
