@@ -1,6 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return (value1 === true && value2 === true) ?true :false;
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -13,10 +17,10 @@ function splitSentence(string) {
   let array = [];
   let word = '';
   for (let index in string) {
-    if (string[index] == ' ') {
+    if (string[index] === ' ') {
       array.push(word);
       word = '';
-    } else if (index == string.length-1){
+    } else if (index === string.length-1){
       word += string[index];
       array.push(word);
     } else {
@@ -40,7 +44,7 @@ function footballPoints(wins, ties) {
 // Função retorna maior do array
 function biggerInArray(array) {
   let bigger = null;
-  if (array.length == 0) {
+  if (array.length === 0) {
     console.log('Array Vazio');
   } else {
     bigger = array[0];
@@ -58,7 +62,7 @@ function highestCount(array) {
   let bigger = biggerInArray(array);
   let count = 0;
   for (let index in array) {
-      if (array[index] == bigger) {
+      if (array[index] === bigger) {
         count++;
       }
   }
@@ -77,7 +81,7 @@ function distanceBetween(element1, element2) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (distanceBetween(mouse, cat1) == distanceBetween(mouse, cat2)) {
+  if (distanceBetween(mouse, cat1) === distanceBetween(mouse, cat2)) {
     return 'os gatos trombam e o rato foge';
   } else if (distanceBetween(mouse, cat1) > distanceBetween(mouse, cat2)) {
     return 'cat2';
@@ -90,13 +94,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
-    if (!(array[index] % 3 == 0) && !(array[index] % 5 == 0)) {
+    if (!(array[index] % 3 === 0) && !(array[index] % 5 === 0)) {
       result.push('bug!');
-    } else if ((array[index] % 3 == 0) && (array[index] % 5 == 0)) {
+    } else if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
       result.push('fizzBuzz');
-    } else if (array[index] % 3 == 0) {
+    } else if (array[index] % 3 === 0) {
       result.push('fizz');
-    } else if (array[index] % 5 == 0) {
+    } else if (array[index] % 5 === 0) {
       result.push('buzz');
     }
   }
@@ -116,7 +120,7 @@ function encode(string) {
   for (let index in string) {
     let status = false;
     for (let item in table) {
-      if (string[index] == item) {
+      if (string[index] === item) {
         result += table[item];
         status = true;
       }
@@ -140,12 +144,12 @@ function decode(string) {
   for (let index in string) {
     let status = false;
     for (let item in table) {
-      if (string[index] == item) {
+      if (string[index] === item) {
         result += table[item];
         status = true;
       }
     }
-    if (status == false) {
+    if (status === false) {
       result += string[index];
     }
   }
@@ -176,7 +180,7 @@ function sortArrayObjects(array) {
 
 // Desafio 10
 function techList(technologies, name) {
-  if (technologies.length == 0) {
+  if (technologies.length === 0) {
     return 'Vazio!';
   } else {
     let tecno = [];
@@ -191,7 +195,7 @@ function techList(technologies, name) {
 function counterArray(array, value) {
   let count = 0;
   for (let index in array) {
-    if (array[index] == value) {
+    if (array[index] === value) {
       count++;
     }
   }
@@ -212,13 +216,13 @@ function generatePhoneNumber(array) {
     } 
   }
   for (let index in array) {
-    if (index == 0) {
+    if (index === 0) {
       phoneNumber = '(' + array[index];
-    } else if (index == 1) {
+    } else if (index === 1) {
       phoneNumber += array[index] + ')';
-    } else if (index == 2) {
+    } else if (index === 2) {
       phoneNumber += ' ' + array[index];
-    } else if (index == 7) {
+    } else if (index === 7) {
       phoneNumber += '-' + array[index];
     } else {
       phoneNumber += array[index];
@@ -261,7 +265,7 @@ function addArray(array) {
   }
   for (let item in array) {
     for (let number in numbers) {
-      if (array[item] == number) {
+      if (array[item] === number) {
         add += numbers[number];
       }
     }
