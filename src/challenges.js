@@ -6,7 +6,7 @@ function compareTrue(number1, number2) {
   }
   return false
 }
-//console.log(compareTrue(true, true))
+// console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -16,20 +16,16 @@ let area = calcArea(4, 7)
 console.log(area)
 
 // Desafio 3
-let lodo = "Lucas, Marcio, oliveira, Carlos"
-function splitSentence(lodo) {
-  //for (let cont = 0; cont <= arr.length; cont += 1) {
-  let div = lodo.split(" ");
-  console.log(div)
-  return lodo
+function splitSentence(frase) {
+  return frase.split(" ");
 }
-//arrayNome[arrayNome.length -1] + "," + arrayName[0]
+console.log(splitSentence("go trybe"));
+
 // Desafio 4
 function concatName(names) {
-  let concat = names.length
-  return `${names.length[-1]} , ${names[0]}`
-
+  return `${names[names.length - 1]} , ${names[0]}`
 }
+console.log(concatName("Long, live , Trybers"))
 
 // Desafio 5
 function footballPoints() {
