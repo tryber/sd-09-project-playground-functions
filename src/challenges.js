@@ -142,7 +142,7 @@ function decode(param) {
 console.log(decode('h3 th2r2!'))
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   let myArr = [];
   if (tech.length === 0) {
     return 'Vazio!';
@@ -156,6 +156,7 @@ function techList() {
   }
   return myArr;
 }
+console.log(tecnologias(['React', 'Jest', 'HTML', 'CSS', 'Javascript'], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
