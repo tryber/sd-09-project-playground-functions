@@ -79,7 +79,7 @@ function fizzBuzz() {
   for (const multiplo of array3) {
     if ((multiplo % 3 === 0) && (multiplo % 5 !== 0)) {
       array.push('Fizz');
-    } else if ((multiplo % 5 === 0)&& (multiplo % 3 !== 0)) {
+    } else if ((multiplo % 5 === 0) && (multiplo % 3 !== 0)) {
       array.push('buzz');
     } else if ((multiplo % 3 === 0) && (multiplo % 5 === 0)) {
       array.push('fizzBuzz');
