@@ -57,7 +57,7 @@ function highestCount(meuArray) {
 
     for (let index = 0; index < meuArray.length; index += 1) {
         if (meuArray[index] > maiorNumero) {
-            maiorNumero = params[index]
+            maiorNumero = meuArray[index]
         }
     };
 
@@ -74,9 +74,21 @@ let repeteMaiorNumero = [9, 1, 2, 3, 9, 5, 7, 9, 9, 9];
 console.log(highestCount(repeteMaiorNumero));
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(rato, gato1, gato2) {
+    if ((gato1 - rato) > gato2) {
+        return 'cat1'
+    } else if ((gato2 - rato) > gato1) {
+        return 'cat2'
+    } else if (gato1 === gato2) {
+        return 'os gatos trombam e o rato foge'
+    };
 }
+
+let rato = 3;
+let gato1 = 2;
+let gato2 = 1;
+
+console.log(catAndMouse(rato, gato1, gato2));
 
 // Desafio 8
 function fizzBuzz() {
