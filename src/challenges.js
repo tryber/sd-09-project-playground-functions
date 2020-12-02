@@ -83,12 +83,31 @@ function fizzBuzz(numbers) {
  * @param {String} string
  */
 function encode(string) {
-  string = string.replace(/a/g, '1')
-  string = string.replace(/e/g, '2')
-  string = string.replace(/i/g, '3')
-  string = string.replace(/o/g, '4')
-  string = string.replace(/u/g, '5')
-  return string
+  let encryptedString = ''
+  for (const i in string) {
+    switch (string[i]) {
+      case 'a':
+        encryptedString += '1'
+        break;
+      case 'e':
+        encryptedString += '2'
+        break;
+      case 'i':
+        encryptedString += '3'
+        break;
+      case 'o':
+        encryptedString += '4'
+        break;
+      case 'u':
+        encryptedString += '5'
+        break;
+
+      default:
+        encryptedString += string[i]
+        break;
+    }
+  }
+  return encryptedString
 }
 /**
  * @param {String} string
@@ -124,7 +143,8 @@ function compareStringsLength(word1, word2) {
  */
 function techList(technologies, name) {
   if (!technologies.length) return 'Vazio!'
-  const sortedTechnologies = technologies.sort((first, second) => compareStringsLength(first, second))
+  const sortedTechnologies =
+    technologies.sort((first, second) => compareStringsLength(first, second))
   return sortedTechnologies.map(tech => ({ tech, name }))
 }
 
