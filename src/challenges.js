@@ -20,7 +20,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;  
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -64,35 +64,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
-    let divisibleBy3 = (array[index] % 3);
-    let divisibleBy5 = (array[index] % 5);
-
-    switch (divisibleBy3 === 0 && divisibleBy5 === 0) {
-      case true:
-        console.log('fizzBuzz');
-        break;
-    }
-
-    switch (divisibleBy3 !== 0 && divisibleBy5 !== 0) {
-      case true:
-        console.log('bug!');
-        break;
-    }
-
-    switch (divisibleBy3 === 0 && divisibleBy5 !== 0) {
-      case true:
+    switch (true) {
+      case ((array[index] % 3) === 0 && (array[index] % 5) !== 0):
         console.log('fizz');
         break;
-    }
-
-    switch (divisibleBy3 === 0 && divisibleBy5 !== 0) {
-      case true:
+      case ((array[index] % 3) !== 0 && (array[index] % 5) === 0):
+        console.log('fizz');
+        break;
+      case ((array[index] % 3) === 0 && (array[index] % 5) === 0):
         console.log('fizzBuzz');
+        break;
+      default:
+        console.log('bug!');
         break;
     }
   }
 }
-fizzBuzz([2, 15, 7, 9, 45]);
+// fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
