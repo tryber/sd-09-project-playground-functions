@@ -56,22 +56,17 @@ console.log(concatName(arrayNomes));
 console.log(highestCount(array));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let mouse = 0;
-let cat1 = 0;
-let cat2 = 0;
-let cats = 0;
-for(let cat2 in cat1) {
-  if(cat2 > cat1) {
-  cat +=1;
-  return "Cat2";
-  
+let distanciaCat1 = cat1 - mouse;
+let distanciaCat2 = cat2 - mouse;
 
-} else if(cats === mouse ) {
-  return "os gatos trombam e o rato foge"
+if( distanciaCat2 > distanciaCat1) {
+    return 'Cat2';
 
+  }else (distanciaCat1 === distanciaCat2); {
+    return 'os gatos trombam e o rato foge'
+  }
 }
-}
-
+console.log(catAndMouse(5,7,15))
 
 // Desafio 8
 function fizzBuzz() {
@@ -122,5 +117,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
 }
