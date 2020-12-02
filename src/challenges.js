@@ -37,7 +37,7 @@ function highestCount(array) {
   let higherNum = 0;
   let count = 0;
   for (index in array){
-    if (array[index] > higherNum){
+    if (array[index] >= higherNum){
       count = 0;
       higherNum = array[index];
       for (indexTwo in array){
@@ -198,9 +198,9 @@ function hydrate(str) {
     numberOfWater += parseInt(numberOfDrinks[index]);
   }
   if ( numberOfWater == 1){
-    str =  numberOfWater + ' copo de água.';
+    str =  numberOfWater + ' copo de água';
   } else {
-    str =  numberOfWater + ' copos de água.';
+    str =  numberOfWater + ' copos de água';
   }
   return str;
 }
