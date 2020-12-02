@@ -134,9 +134,17 @@ return nova2
 }decode("h3 th2r2!")
 
 // Desafio 10
-function techList() {
+function techList(arrayTechs = [], name) {
   // seu código aqui
-}
+  arrayFinal = []
+  for (contador = 0; contador < arrayTechs.length; contador += 1){
+    arrayFinal.push(obj = {
+      tech: arrayTechs[contador],
+      name: name,
+    })
+  }
+}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
+console.log(arrayFinal)
 
 // Desafio 11
 function generatePhoneNumber() {
