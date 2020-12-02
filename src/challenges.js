@@ -22,9 +22,7 @@ function splitSentence(stringToSplit) {
 }
 console.log(splitSentence('go Trybe'));
 
-// Desafio 4: Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
-// Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
-
+// Desafio 4
 function concatName(firstAndLastIndex) {
   let string = [];
   string = firstAndLastIndex[firstAndLastIndex.length - 1] + ', ' + firstAndLastIndex[0];
@@ -40,14 +38,31 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(3, 1));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(highestCountArray) {
+  let biggestNumber = 0;
+  for (let biggestNumber in highestCoun) {
+    if ()
+  }
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) > (cat2 - mouse)) {
+    let getsTheMouse = 'cat2';
+    return getsTheMouse;
+    console.log(getsTheMouse);
+  } else if ((cat1 - mouse) < (cat2 - mouse)) {
+    let getsTheMouse = 'cat1';
+    return getsTheMouse;
+    console.log(getsTheMouse);
+  } else {
+    return 'os gatos se trombam e o gato foge';
+    console.log('os gatos trombam e o rato foge');
+  }
+  
 }
+console.log(catAndMouse(1, -2, -2));
 
 // Desafio 8
 function fizzBuzz() {
