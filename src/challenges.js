@@ -170,9 +170,50 @@ function techList(array, name) {
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Neves'))
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function greatestValue(array) {
+  let greatest = 0
+  for (let element of array) {
+    if (element > greatest) {
+      greatest = element
+    }
+  }
+  return greatest
 }
+
+function lowestValue(array) {
+  let lowest = 0
+  for (let element of array) {
+    if (element < lowest) {
+      lowest = element
+    }
+  }
+  return lowest
+}
+
+function phoneNumberMaker(array) {
+  let phoneNumber = ''
+  for (let element of array) {
+    phoneNumber += element
+  }
+  return phoneNumber
+}
+
+function generatePhoneNumber(array) {
+  // seu código aqui
+  let maxNumber = greatestValue(array)
+  let minNumber = lowestValue(array)
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  } else if (maxNumber !== 9 || minNumber !== 0 || highestCount(array) >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores'
+  }
+  const phoneNumber = phoneNumberMaker(array)
+  const phoneNumberPart1 = phoneNumber.slice(0, 2)
+  const phoneNumberPart2 = phoneNumber.slice(2, 7)
+  const phoneNumberPart3 = phoneNumber.slice(7, 12)
+  return `(${phoneNumberPart1}) ${phoneNumberPart2}-${phoneNumberPart3}`
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
