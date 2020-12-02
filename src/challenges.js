@@ -40,8 +40,11 @@ let indexOfLastWord = arrayString.length - 1;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let score = 0;
+  score = (3 * wins ) + (1 * ties);
+  return score;
 }
 
 // Desafio 6
@@ -86,6 +89,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+console.log(footballPoints(3,2));
 module.exports = {
   calcArea,
   catAndMouse,
