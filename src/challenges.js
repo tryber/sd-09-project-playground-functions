@@ -117,60 +117,58 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(phrase) {
-  let newPhrase = '';
+  let phraseEncode = '';
 
-  for (let index = 0; index < phrase.length; index += 1) {
-    // console.log(phrase[index]);
-    switch (phrase[index]) {
+  for (let indexE = 0; indexE < phrase.length; indexE += 1) {
+    switch (phrase[indexE]) {
       case 'a':
-        newPhrase += '1';
+        phraseEncode += '1';
         break;
       case 'e':
-        newPhrase += '2';
+        phraseEncode += '2';
         break;
       case 'i':
-        newPhrase += '3';
+        phraseEncode += '3';
         break;
       case 'o':
-        newPhrase += '4';
+        phraseEncode += '4';
         break;
       case 'u':
-        newPhrase += '5';
+        phraseEncode += '5';
         break;
       default:
-        newPhrase += phrase[index];
+        phraseEncode += phrase[index];
         break;
     }
   }
-  return newPhrase;
+  return phraseEncode;
 }
 function decode(phrase) {
-  let newPhrase = '';
+  let phraseDecode = '';
 
-  for (let index = 0; index < phrase.length; index += 1) {
-    // console.log(phrase[index]);
-    switch (phrase[index]) {
+  for (let indexD = 0; indexD < phrase.length; indexD += 1) {
+    switch (phrase[indexD]) {
       case '1':
-        newPhrase += 'a';
+        phraseDecode += 'a';
         break;
       case '2':
-        newPhrase += 'e';
+        phraseDecode += 'e';
         break;
       case '3':
-        newPhrase += 'i';
+        phraseDecode += 'i';
         break;
       case '4':
-        newPhrase += 'o';
+        phraseDecode += 'o';
         break;
       case '5':
-        newPhrase += 'u';
+        phraseDecode += 'u';
         break;
       default:
-        newPhrase += phrase[index];
+        phraseDecode += phrase[index];
         break;
     }
   }
-  return newPhrase;
+  return phraseDecode;
 }
 // console.log(decode(encode('hi there!')));
 
