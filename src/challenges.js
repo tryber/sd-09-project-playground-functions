@@ -46,21 +46,55 @@ function footballPoints(wins, ties) {
   score = (3 * wins ) + (1 * ties);
   return score;
 }
-
-// Desafio 6
-function highestCount(numbers) {
-  // seu código aqui
+function excludeRepetitions(numbers){
   let auxiliarArray = [];
+  let conditionAdd = true;
   auxiliarArray.push(numbers[0]);
   for (let index = 0; index < numbers.length; index +=1) {
     for(let indexAux = 0; indexAux < auxiliarArray.length; indexAux +=1 ) {
-      if (numbers[index] !== auxiliarArray[indexAux]){
-        auxiliarArray.push(numbers[index]);
-      }
+      if (numbers[index] === auxiliarArray[indexAux]){
+        conditionAdd = false;
+      } 
     }
+    if (conditionAdd === true) {
+      auxiliarArray.push(numbers[index]);
+    }
+    conditionAdd = true;
   }
   return auxiliarArray;
+
 }
+function foundBigger(vector){
+  let bigger =0 
+  bigger = vector[0];
+  for(let index = 0; index < vector.length; index += 1){
+    if(vector[index] > bigger) {
+      bigger = vector[index];
+    }
+  }
+  return bigger
+}
+// Desafio 6
+function highestCount(numbers) {
+  // seu código aqui
+  let numbersNoRepeated = [];
+  numbersNoRepeated = excludeRepetitions(numbers);
+  let count = [];
+  let biggestNumber = 0;
+  let counter = 0;
+  for (let index = 0; index < numbersNoRepeated.length; index +=1){
+      for (let index2 = 0; index2 < numbers.length; index2 +=1 ) {
+        if(numbersNoRepeated[index] == numbers[index2]){
+          counter += 1;
+        }
+      }
+      count.push(counter);
+      counter=0;
+    }
+
+    return foundBigger(count);
+  }
+
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
