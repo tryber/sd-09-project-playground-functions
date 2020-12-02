@@ -29,8 +29,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstIndex = array[0];
+  let lastIndex = array[array.length-1];
+  let newArray = [lastIndex, firstIndex];
+  return newArray;
 }
 
 // Desafio 5
