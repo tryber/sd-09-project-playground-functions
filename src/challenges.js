@@ -53,13 +53,15 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let closerCat;
+  let distance1 = Math.abs((cat1 - mouse));
+  let distance2 = Math.abs((cat2 - mouse));
 
-  if ((cat1 - mouse) < (cat2 - mouse)) {
-    closerCat = "cat1";
-  } else if ((cat2 - mouse) < (cat1 - mouse)) {
-    closerCat = "cat2";
-  } else if ((cat1 - mouse) === (cat2 - mouse)) {
-    closerCat = "os gatos trombam e o rato foge";
+  if (distance1 < distance2) {
+    closerCat = 'cat1';
+  } else if (distance2 < distance1) {
+    closerCat = 'cat2';
+  } else if (distance1 === distance2) {
+    closerCat = 'os gatos trombam e o rato foge';
   }
   return closerCat;
 }
