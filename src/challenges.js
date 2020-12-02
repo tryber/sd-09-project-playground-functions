@@ -17,22 +17,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let arraySentence = [];
-  for (let index = 0; index < sentence.length; index += 1) {
-    arraySentence.push(sentence[index])
-  }
-  
-  let arrayFinal = [];
-  let count = 0;
-  for (let index = 0; index < arraySentence.length; index += 1) {
-    if(arraySentence[index] !== ' ') {
-      arrayFinal[count] += arraySentence[index] 
-    } else if (arraySentence[index] === ' ') {
-      count += 1
-    }
-  }
-  // seu código aqui
-  return arrayFinal;
+  let arrayResultado = sentence.split(' ')
+  return arrayResultado;
 }
 console.log(splitSentence("go Trybe"))
 
