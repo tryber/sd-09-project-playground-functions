@@ -25,25 +25,19 @@ console.log(splitSentence(stringExemplo));
 
 // Desafio 4
 let numeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove']
-let reverse = reverseArray(numeros);
-
-function reverseArray(textArray) {
-  return textArray.reverse();
-}
 
 function concatName(stringArray){
-  
-  return stringArray.concat();
+  let reverse = stringArray.reverse()
+
+  return reverse.concat();
 }
-console.log(concatName(reverse));
+console.log(concatName(numeros));
 
 // Desafio 5
-let vic= 3  
-let emp = 4
 function footballPoints(wins, ties) {
   let vitorias = wins * 3;
   let empate = ties * 1
-  
+
   return vitorias + empate;
 }
 
