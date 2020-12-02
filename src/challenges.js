@@ -87,12 +87,59 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param) {
+  let numEncode = '';  
+  for (let index = 0; index < param.length; index += 1) {
+    switch (param[index]) {
+      case 'a':
+        numEncode += 1;
+        break;
+      case 'e':
+        numEncode += 2;
+        break;
+      case 'i':
+        numEncode += 3;
+        break;
+      case 'o':
+        numEncode += 4;
+        break;
+      case 'u':
+        numEncode += 5;
+        break;
+      default:
+        numEncode += param[index];
+    }
+  }
+  return numEncode;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'))
+
+function decode(param) {
+  let numDecode = '';
+  for (let index = 0; index < param.length; index += 1) {
+    switch (param[index]) {
+      case '1':
+        numDecode += 'a';
+        break;
+      case '2':
+        numDecode += 'e';
+        break;
+      case '3':
+        numDecode += 'i';
+        break;
+      case '4':
+        numDecode += 'o';
+        break;
+      case '5':
+        numDecode += 'u';
+        break;
+      default:
+        numDecode += param[index];
+    }
+  }
+  return numDecode;
 }
+console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList() {
