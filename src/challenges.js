@@ -75,16 +75,16 @@ function fizzBuzz(numeros = []) {
   divisiveis = []
   for (contador = 0; contador < numeros.length; contador += 1){
     if (numeros[contador] % 3 === 0 && numeros[contador] % 5 > 0){
-      divisiveis.push('fizz')
+      divisiveis.push("fizz")
     } else if (numeros[contador] % 5 === 0 && numeros[contador] % 3 > 0){
-      divisiveis.push('buzz')
+      divisiveis.push("buzz")
     } else if (numeros[contador] % 5 === 0 && numeros[contador] % 3 === 0){
-      divisiveis.push('fizzBuzz')
+      divisiveis.push("fizzBuzz")
     } else if (numeros[contador] % 5 > 0 && numeros[contador] % 3 > 0) {
-      divisiveis.push('bug!')
+      divisiveis.push("bug!")
     }
-  } return divisiveis
-
+  } 
+  return divisiveis
 }fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
