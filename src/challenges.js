@@ -52,9 +52,9 @@ function highestCount(array) {
       if (array[index] === array[secondaryIndex]) {
         repeatCount += 1;
       }
-      if (repeatCount > maxCount) {
-        maxCount = repeatCount;
-      }
+    }
+    if (repeatCount > maxCount) {
+      maxCount = repeatCount;
     }
     repeatCount = 0;
   }
