@@ -14,31 +14,38 @@ function compareTrue( value1, value2 ) {
 function calcArea( base , height ) {
   // seu código aqui
   let valueArea = ( base * height ) / 2;
+
   return valueArea;
 
 }
 
-calcArea(10, 5);
-
 // Desafio 3
 function splitSentence( phrase ) {
   // seu código aqui
-  let array = phrase.split("");
+  let array = phrase.split( " " );
 
   return array;
 
 }
 
-splitSentence("Arroz e feijao e bom");
-
 // Desafio 4
-function concatName() {
+function concatName( arrayString ) {
   // seu código aqui
+  for ( let index = 0; index < arrayString.lenght; index += 1 ) {
+    while (index === 0 || index < varr.length - 1) {
+      console.log(arrayString[index]);
+
+      break;
+    }
+  }
 }
+let varr = ["arroz", "feijao", "macarrao"];
+concatName(varr);
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
+
 }
 
 // Desafio 6
