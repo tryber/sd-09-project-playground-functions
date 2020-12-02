@@ -175,6 +175,9 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
+  if (number !== 11) {
+    return "Array com tamanho incorreto.";
+  }
   let ddd = `(${ number[0]}` + `${number[1] })`;
   let num =  ` ${ number[2]}` + `${number[3]}` + `${number[4]}` + `${number[5]}` + `${number[6]}` + '-'+ `${number[7]}` + `${number[8]}` + `${number[9]}` + `${number[10] }`;
   let tel = ddd + num;
