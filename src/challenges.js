@@ -182,7 +182,7 @@ function generatePhoneNumber(number) {
         helper += 1;
       }
     }
-    if (helper >= 3 || number[index] < 0) {
+    if (helper >= 3 || number[index] < 0 || number[index] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     }
     if (index === 2) {
