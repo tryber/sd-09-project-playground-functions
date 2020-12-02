@@ -160,7 +160,7 @@ function numberRepeatMoreOrThan3(number, arrayNumbers) {
  * @param {number[]} numbers
  */
 function generatePhoneNumber(numbers) {
-  if (numbers.length > 11) return 'Array com tamanho incorreto.'
+  if (numbers.length !== 11) return 'Array com tamanho incorreto.'
   if (!numbers.every(number => !numberRepeatMoreOrThan3(number, numbers))) {
     return 'não é possível gerar um número de telefone com esses valores'
   }
