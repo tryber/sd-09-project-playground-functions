@@ -12,10 +12,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(projetoJS) {
-  projetoJS = ['Function', 'Array', 'For'];
+function splitSentence(string) {
+  const arrayString = string.split(' ');
+  return arrayString;
 }
-
+console.log(splitSentence('Tree Of Savior'))
 // Desafio 4
 function concatName() {
   // seu código aqui
