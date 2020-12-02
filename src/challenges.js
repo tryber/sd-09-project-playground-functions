@@ -4,7 +4,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else {
+  } else if {
     return false;
   }
 }
@@ -25,24 +25,24 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ');
-}
-
-// Outro jeito de resolver o desafio 3: 
-function splitSentence(string) {
   let stringArray = [];
   let temporary = '';
-  for (let key in string){
+  for (let key in string) {
     if (string[key] === ' ') {
       stringArray.push(temporary);
       temporary = '';
     } else {
-      temporary += string[key]; 
+      temporary += string[key];
     }
   }
   stringArray.push(temporary);
   return stringArray;
 }
+
+// Outro jeito de resolver o desafio 3:
+// function splitSentence(string) {
+//   return string.split(' ');
+// }
 
 // console.log(splitSentence('Go Trybe'));
 // --------------------------------------------------------------------
@@ -68,9 +68,24 @@ function footballPoints(wins, ties) {
 // --------------------------------------------------------------------
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numArray) {
+  let counter = 0;
+  let highestNum = 0;
+  for (let key in numArray) {
+    if (numArray[key] > highestNum) {
+      highestNum = numArray[key]
+    }
+  }
+  for (let key2 in numArray) {
+    if (numArray[key2] === highestNum) {
+      counter += 1;
+    } 
+  }
+  return counter;
 }
+
+// console.log(highestCount([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
+// --------------------------------------------------------------------
 
 // Desafio 7
 function catAndMouse() {
