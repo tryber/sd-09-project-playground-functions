@@ -121,9 +121,10 @@ function techList(array, name) {
 
   if (array.length === 0) {
     return 'Vazio!';
-  } else {
-    return arrayList;
   }
+  
+  return arrayList;
+  
 }
 // techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcus');
 // 'React', 'Jest', 'HTML', 'CSS', 'JavaScript'
