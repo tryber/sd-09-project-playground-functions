@@ -188,7 +188,7 @@ function hydrate(bebidas) {
     }
   }
   if(sum === 1) {
-    sugestion = sum + 'copo de água'
+    sugestion = sum + ' copo de água'
   } else {
     sugestion = sum + 'copos de água'
   }
