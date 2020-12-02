@@ -42,9 +42,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let capture = '';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     capture = 'cat1';
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+  }
+  if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     capture = 'cat2';
-  } else if (Math.abs(cat2 - mouse) === Math.abs(cat1 - mouse)) {
+  }
+  if (Math.abs(cat2 - mouse) === Math.abs(cat1 - mouse)) {
     capture = 'os gatos trombam e o rato foge';
   }
   return capture;
@@ -54,14 +56,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(entry) {
   let divisibles = [];
   for (let index = 0; index < entry.length; index += 1) {
+    divisibles.push('bug!');
+  }
+  for (let index = 0; index < entry.length; index += 1) {
+    if (entry[index] % 3 === 0) {
+      divisibles[index] = 'fizz';
+    }
+    if (entry[index] % 5 === 0) {
+      divisibles[index] = 'buzz';
+    }
     if (entry[index] % 15 === 0) {
-      divisibles.push('fizzBuzz');
-    } else if (entry[index] % 3 === 0) {
-      divisibles.push('fizz');
-    } else if (entry[index] % 5 === 0) {
-      divisibles.push('buzz');
-    } else {
-      divisibles.push('bug!');
+      divisibles[index] = 'fizzBuzz';
     }
   }
   return divisibles;
