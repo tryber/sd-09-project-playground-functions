@@ -164,7 +164,7 @@ function numberequal11(arrayNumber) {
 }
 function numberLess0(arrayNumber) {
   for (let key of arrayNumber) {
-    if (key < 0) {
+    if (key < 0 || key > 9) {
       return false;
     }
   }
@@ -202,7 +202,7 @@ function generatePhoneNumber(arrayNumber) {
     let finalNumbers = stringNumber.slice(7, 12);
     return `(${inittialNumbers}) ${middlesNumbers}-${finalNumbers}`;
   }
-  return 'array com tamanho incorreto';
+  return 'Array com tamanho incorreto';
 }
 
 // Desafio 12
