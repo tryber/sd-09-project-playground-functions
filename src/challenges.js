@@ -236,9 +236,10 @@ function generatePhoneNumber(number) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
-    return 'true';
+  if (lineA + lineB > lineC && lineC > Math.abs(lineB - lineA) && lineA + lineC > lineB && lineB > Math.abs(lineA - lineC) && lineB + lineC > lineA && lineA > Math.abs(lineB - lineC)) {
+    return true;
   }
+  return false;
 }
 
 // Desafio 13
