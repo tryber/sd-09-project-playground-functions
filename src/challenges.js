@@ -143,7 +143,18 @@ console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  let myArr = [];
+  if (tech.length === 0) {
+    return 'Vazio!';
+  }
+  tech.sort();
+  for (let index = 0; index < tech.length; index += 1) {
+    let myList = {};
+    myList.tech = tech[index];
+    myList.name = name;
+    myArr.push(myList);
+  }
+  return myArr;
 }
 
 // Desafio 11
