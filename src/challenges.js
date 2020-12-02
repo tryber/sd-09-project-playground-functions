@@ -9,25 +9,45 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+
+function handleIfEnding(context) {
+  if (context.currentChar.index === context.lastIndex) {
+    context.currentWord += context.currentChar.value;
+    context.textArray.push(context.currentWord);
+  } else {
+    context.currentWord += context.currentChar.value;
+  }
+  return context;
+}
+
+function handleChar(context) {
+  if (context.currentChar.value === ' ') {
+    context.textArray.push(context.currentWord);
+    context.currentWord = '';
+  } else {
+    context = handleIfEnding(context);
+  }
+  return context;
+}
+
 function splitSentence(text) {
-  let currentWord = '';
-  let textArray = [];
-  let lastIndex = (text.length - 1).toString();
+  let context = {
+    currentWord: '',
+    textArray: [],
+    currentChar: {
+      index: null,
+      value: null,
+    },
+    lastIndex: (text.length - 1).toString(),
+  }
   for (let charIndex in text) {
     if (Object.prototype.hasOwnProperty.call(text, charIndex)) {
-      let char = text[charIndex];
-      if (char === ' ') {
-        textArray.push(currentWord);
-        currentWord = '';
-      } else if (charIndex === lastIndex) {
-        currentWord += char;
-        textArray.push(currentWord);
-      } else {
-        currentWord += char;
-      }
+      context.currentChar.index = charIndex;
+      context.currentChar.value = text[charIndex];
+      context = handleChar(context);
     }
   }
-  return textArray;
+  return context.textArray;
 }
 
 // Desafio 4
@@ -238,23 +258,23 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(text) {
   // Referência para o código (MDN web docs):
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
-
+  
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
   let cupsText = 'copo';
-
+  
   for (let index in numbersInText) {
     if (Object.prototype.hasOwnProperty.call(numbersInText, index)) {
       let number = parseInt(numbersInText[index], 10);
       totalWater += number;
     }
   }
-
+  
   if (totalWater > 1) {
     cupsText += 's'
   }
-
+  
   return `${totalWater} ${cupsText} de água`;
 }
 
