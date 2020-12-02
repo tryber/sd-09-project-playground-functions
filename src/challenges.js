@@ -12,7 +12,7 @@ function compareTrue(param1, param2) {
 // let ana = true
 // let luiza = false
 // console.log(compareTrue(ana, luiza));
-// ---------------------------------------------------------------
+// --------------------------------------------------------------------
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,17 +21,27 @@ function calcArea(base, height) {
 }
 
 // console.log(calcArea(5,4));
-// ---------------------------------------------------------------
+// --------------------------------------------------------------------
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let returnArray = []
+  for (let key in string) {
+    stringArray += string[key];
+  }
+  return returnArray;
 }
 
+console.log(splitSentence('Go Trybe'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  let concatenatedName = stringArray[stringArray.length - 1] + ', ' + stringArray[0] + '.';
+  return concatenatedName;
 }
+
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// --------------------------------------------------------------------
 
 // Desafio 5
 function footballPoints() {
