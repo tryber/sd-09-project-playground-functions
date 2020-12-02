@@ -161,7 +161,7 @@ function encode(string) {
   return string;
 }
 
-console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
 
 function decode() {
