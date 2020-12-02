@@ -212,8 +212,7 @@ function verifyNumber(number) {
   return isRight90;
 }
 
-function comparNumber(number, index) {
-  let volta = false;
+function comparNumber(number, index, volta) {
   let cont = 0;
   for (let index2 of number) {
     if (index === index2) {
@@ -229,7 +228,10 @@ function comparNumber(number, index) {
 function quantidyNumber(number) {
   let volta = false;
   for (let index of number) {
-    volta = comparNumber(number, index);
+    volta = comparNumber(number, index, volta);
+    if (index < 0 || index > 9) {
+      volta = true;
+    }
   }
   return volta;
 }
