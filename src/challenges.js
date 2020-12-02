@@ -32,15 +32,13 @@ function splitSentence( phrase ) {
 function concatName( arrayString ) {
   // seu código aqui
   for ( let index = 0; index < arrayString.lenght; index += 1 ) {
-    while (index === 0 || index < varr.length - 1) {
-      console.log(arrayString[index]);
+    while (index === 0 || index < arrayString.length - 1) {
+      return arrayString[index];
 
       break;
     }
   }
 }
-let varr = ["arroz", "feijao", "macarrao"];
-concatName(varr);
 
 // Desafio 5
 function footballPoints() {
