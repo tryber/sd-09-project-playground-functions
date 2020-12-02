@@ -166,9 +166,8 @@ function techList(array, name) {
       output.push(obj);
     }
     return output;
-  } else {
-    return 'Vazio!';
-  }
+  } 
+  return 'Vazio!';
 }
 
 // Desafio 11
