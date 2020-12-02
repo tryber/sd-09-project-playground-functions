@@ -134,11 +134,11 @@ function switchLetter(letter, objectChar) {
 function encode(phrase) {
   let newEncode = '';
   let objectEncode = {
-    'a': '1',
-    'e': '2',
-    'i': '3',
-    'o': '4',
-    'u': '5'
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
   };
 
   for (let index = 0; index < phrase.length; index += 1) {
@@ -151,11 +151,11 @@ function encode(phrase) {
 function decode(phrase) {
   let newDecode = '';
   let objectDecode = {
-    '1': 'a',
-    '2': 'e',
-    '3': 'i',
-    '4': 'o',
-    '5': 'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
   };
 
   for (let index = 0; index < phrase.length; index += 1) {
