@@ -17,7 +17,7 @@ function calcArea(base, heigth) {
 // Desafio 3
 function splitSentence(string) {
   let result = '';
-  result = string.split('   ');
+  result = string.split(' ');
   return result;
 }
 
@@ -27,9 +27,10 @@ function concatName(arrayStrings) {
   let last = '';
   first = arrayStrings[0];
   last = arrayStrings[arrayStrings.length - 1];
-  return [last , first];
+  let newArray = [last , first]
+  return newArray;
 }
-
+console.log(concatName(['Ana', 'maria', 'joana']))
 // Desafio 5
 function footballPoints(wins, ties) {
   let result = 0
