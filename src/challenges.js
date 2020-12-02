@@ -33,9 +33,9 @@ concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + ties;
-  return console.log(totalPoints);
+  return totalPoints;
 }
-footballPoints(10, 5);
+console.log(footballPoints(10, 5));
 
 // Desafio 6
 function highestCount(arrayNumbers) {
@@ -54,22 +54,21 @@ function highestCount(arrayNumbers) {
       sumRepeated = numbers[key];
     }
   }
-  return console.log(sumRepeated);
+  return sumRepeated;
 }
-highestCount([9, 1, 2, 3, 9, 5, 7])
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
   if (cat1 > cat2) {
-    console.log(cat1);
+    return cat1;
   } else if (cat1 < cat2) {
-    console.log(cat2);
+    return cat2;
   } else {
-    console.log('os gatos trombam e o rato foge')
+    return 'os gatos trombam e o rato foge'
   }
-  return console.log
 }
-catAndMouse(10, 10)
+console.log(catAndMouse(10, 10))
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
