@@ -128,11 +128,11 @@ function decode(frase) {
 function techList(tecnologias, name) {
   let techOrdenada = tecnologias.sort();
   let listaDeObjetos = [];
-  
+
   for (const NomeTech of techOrdenada) {
     let obj = {
       tech: NomeTech,
-      name: name,
+      name: name
     };
     listaDeObjetos.push(obj);
   }
