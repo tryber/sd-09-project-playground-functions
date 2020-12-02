@@ -2,34 +2,29 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true
-
-} return false
+  } return false
 }
 
 
 // Desafio 2 - Verificação
 function calcArea(base, height) {
   return (base * height) / 2
-
 }
 
 // Desafio 3 - PASS
 function splitSentence(texto) {
-  if ( typeof (texto) === "string") {
+  if (typeof (texto) === "string") {
     return texto.split(' ')
-
 }}
 
 // Desafio 4 - PASS
 function concatName(param) {
   return (`${param[param.length -1]}, ${param[0]}`)
-
 }
 
 // Desafio 5 - PASS
 function footballPoints(wins, ties) {
   return (wins * 3) + ties
-
 }
 
 // Desafio 6 -- PASS
@@ -53,11 +48,9 @@ function highestCount(param) {
   for (let i = 0; i <= ultimoNumero; i++ ) {
     if (param[i] === ultimoNumero) {
       qtdNumerosRepetidos += 1
-
 }}}
 
   return qtdNumerosRepetidos
-
 }
 
 //console.log( highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9]) )
@@ -66,12 +59,15 @@ function highestCount(param) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1Distancia = 0, gato2Distancia = 0;
+  let posicaoRato = mouse
+  let posicaoGato1 = cat1
+  let posicaoGato2 = cat2
 
-  for (let i = mouse;i <= cat1; i += 1) {
-    if (i >= cat1) gato1Distancia += 1;
-
-    //console.log(gato1Distancia)
+  if (posicaoRato === posicaoGato1) return "cat1"
+  if (posicaoRato === posicaoGato2) return "cat2"
+  if (posicaoRato === posicaoGato1 && posicaoRato === posicaoGato2) return "os gatos trombam e o rato foge"
+  
+  posicaoGato1 > posicaoGato2 ? "cat2" : "cat1"
 
   }
 
