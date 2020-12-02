@@ -143,13 +143,20 @@ function generatePhoneNumber(numArray) {
     return 'Array com tamanho incorreto.';
   } else {
     let arrayTest = numArray.slice();
+    let a;
+    let b;
     numArray.sort();
-    for (let index in numArray) {
-      if (numArray[index] >= 0 && index < numArray.length - 1) {
+    for (let index = 0; index < numArray.length - 1; index += 1) {
+      if (numArray[index] >= 0) {
         countNumbers = 1;
+        a = numArray[index];
+        b = numArray[index + 1];
         while (numArray[index] === numArray[index + 1]) {
           countNumbers += 1;
           index += 1;
+        }
+        if (countNumbers >= 3) {
+          break;
         }
       } else if (numArray[index] < 0) {
         checkNumbers = false;
