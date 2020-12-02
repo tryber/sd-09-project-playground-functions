@@ -64,6 +64,18 @@ function repeatMore(array) {
   return qntRepeat;
 }
 
+function validationNumber(telNumber) {
+  if (telNumber.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (let i in telNumber) {
+    if (telNumber[i] < 0 || telNumber[i] > 9 || repeatMore(telNumber) > 2) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  return true;
+}
+
 // Desafio 1 OK
 function compareTrue(boolean1, boolean2) {
   // seu código aqui
@@ -212,19 +224,30 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  if (number.length !== 11) {
-    return "Array com tamanho incorreto.";
-  }
-  for (let i in number) {
-    if (number[i] < 0 || number[i] > 9 || repeatMore(number) > 2) {
-      return "não é possível gerar um número de telefone com esses valores";
+  if (validationNumber(number)) {
+    let ddd = [];
+    let fourthFist = [];
+    let fourthLast = [];
+    for (let i in number) {
+      if (i < 2) {
+        ddd.push(number[i]);
+      } else if (i < 6) {
+        fourthFist.push(number[i]);
+      } else {
+        fourthLast.push(number[i]);
+      }
     }
+    let telNumber = `(${ddd.join('')})` + ' ' + `${fourthFist.join('')}` + '-' + `${fourthLast.join('')}`;
+    return telNumber
   }
-  let ddd = `(${ number[0]}` + `${number[1] })`;
-  let num =  ` ${ number[2]}` + `${number[3]}` + `${number[4]}` + `${number[5]}` + `${number[6]}` + '-'+ `${number[7]}` + `${number[8]}` + `${number[9]}` + `${number[10] }`;
-  let tel = ddd + num;
-  return tel;
+  return validationNumber(number);
+  // let ddd = `(${number[0]}` + `${number[1]})`;
+  // let num =  ` ${number[2]}` + `${number[3]}` + `${number[4]}` + `${number[5]}` + `${number[6]}` + '-'+ `${number[7]}` + `${number[8]}` + `${number[9]}` + `${number[10]}`;
+  // let tel = ddd + num;
+  // return tel;
 }
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(arr))
 
 // Desafio 12
 function triangleCheck() {
