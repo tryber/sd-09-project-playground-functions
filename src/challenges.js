@@ -170,8 +170,8 @@ function createNewTec(technology, name) {
 
 // Função retorna array ordenado
 function sortArrayObjects(array) {
-  for (let index = 0;index < array.length - 1;index++) {
-    for (let index2 = index + 1;index2 < array.length;index2++){
+  for (let index = 0;index < array.length - 1;index += 1) {
+    for (let index2 = index + 1;index2 < array.length;index2 += 1){
       if (array[index].tech > array[index2].tech) {
         let aux = createNewTec(array[index2].tech, array[index2].name);
         array[index2] = array[index];
@@ -256,16 +256,16 @@ function triangleCheck(lineA, lineB, lineC) {
 function addArray(array) {
   let add = 0;
   let numbers = {
-    '0': 0,
-    '1': 1,
-    '2': 2,
-    '3': 3,
-    '4': 4,
-    '5': 5,
-    '6': 6,
-    '7': 7,
-    '8': 8,
-    '9': 9,
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
   }
   for (let item in array) {
     for (let number in numbers) {
@@ -279,8 +279,8 @@ function addArray(array) {
 
 // Função retorna true se caractere é numero e false se não for
 function isNumeral(caractere) {
-  for (let number = 1;number <= 9;number++) {
-    if (caractere == number) {
+  for (let number = 1;number <= 9;number += 1) {
+    if (Number(caractere) === number) {
       return true;
     }
   }
@@ -297,13 +297,13 @@ function hydrate(string) {
     }
   }
   if (addArray(count) > 1) {
-    frase = addArray(count) + ' copos de água';
+    frase = `${addArray(count)} copos de água`;
   } else {
-    frase = addArray(count) + ' copo de água';
+    frase = `${addArray(count)} copo de água`;
   }
   return frase;
 }
-
+ 
 
 module.exports = {
   calcArea,
