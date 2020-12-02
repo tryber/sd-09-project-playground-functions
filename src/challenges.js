@@ -22,22 +22,30 @@ function splitSentence(string) {
   let novaString = string.split(' ');
   return novaString;
 }
-let string = 'go Trybe';
-console.log(splitSentence(string));
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(words) {
-  // seu código aqui
   let ultimoPalavra = words.pop();
   return `${ultimoPalavra}, ${words[0]}`;
 }
-let words = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(words));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitorias = 0;
+  let empate = 0;
+  let pontos = 0;
+  if(wins === true){
+    vitorias = 3;
+  } else if (ties === true) {
+    empate = 1;
+  } else {
+    return false;
+  }
+  return pontos = vitorias + empate;
 }
+console.log(footballPoints(true, true));
 
 // Desafio 6
 function highestCount(numeros) {
