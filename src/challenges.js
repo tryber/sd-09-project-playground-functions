@@ -182,14 +182,14 @@ function techList(array, name) {
     });
   }
 
-  return resultArray.length === 0 ? 'Vazio!' : resultArray;
+  return resultArray.length === 0 ? "Vazio!" : resultArray;
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let reps;
-  let isValid;
+  let isValid = true;
   let result;
+  let reps;
 
   for (let i of array) {
     reps = 0;
@@ -213,14 +213,12 @@ function generatePhoneNumber(array) {
 
   if (isValid === true) {
     result = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-    return result;
-  } else {
-    return result;
   }
+  return result;
 }
 
 // Desafio 12
-function compareNum (a, b) {
+function compareNum(a, b) {
   if (a == b) return 0;
   if (a < b) return -1;
   if (a > b) return 1;
@@ -231,7 +229,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let linesSorted = lines.sort(compareNum);
   let sum = Math.abs(linesSorted[1] + linesSorted[0]);
 
-  return linesSorted[2] < sum ? true : false
+  return linesSorted[2] < sum ? true : false;
 }
 
 // Desafio 13
