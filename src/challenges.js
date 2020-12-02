@@ -8,8 +8,8 @@ function compareTrue(param1, param2) {
   }
 }
 let teste = false;
-let teste2 = true;
-// console.log(compareTrue(teste, teste2));
+let teste2 = false;
+console.log(compareTrue(teste, teste2));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -17,20 +17,22 @@ function calcArea(base, height) {
 }
 let base1 = 4;
 let altura = 4;
-// console.log(calcArea(base1, altura));
+console.log(calcArea(base1, altura));
 
 
 // Desafio 3
-function splitSentence(frase) {  
-  let array = frase.split(' ');
+function splitSentence(separateString) {  
+  let array = separateString.split(' ');
   return array;
 }
-// console.log(splitSentence('Henrique Gabriel de Moura'));
+console.log(splitSentence('Henrique Gabriel de Moura'));
 
 // Desafio 4
-function concatName(){
-  
+function concatName(concatenacao){
+  let newArray = concatenacao.pop();  
+  return(newArray + ', ' + concatenacao[0]);    
 }
+console.log(concatName(['Napolitana', 'Escarola', 'Atum']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,10 +43,17 @@ let empate = 8;
 console.log(footballPoints(vitoria, empate))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(repeat) {
+  let array = [repeat];
+  let maiorNum = 0;
+  let quantMaior = 0;
+    for(index = 0; index < array.length; index +=1){
+      if(array[index] > 0){
+        
+      }
+    }
 }
-
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
