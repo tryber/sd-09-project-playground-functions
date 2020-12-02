@@ -86,11 +86,11 @@ function highestCount( arrayNumbers ) {
 function catAndMouse( mouse, cat1, cat2 ) {
   // seu código aqui
   if ( cat1 - mouse < cat2 - mouse ){
-    console.log("cat1");
+    return "cat1";
   } else if (mouse - cat2 < mouse - cat1){
-    console.log("cat2");
+    return "cat2";
   } else {
-    console.log("os gatos trombam e o rato foge");
+    return "os gatos trombam e o rato foge" ;
   }
 }
 
