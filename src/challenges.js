@@ -73,8 +73,8 @@ function countNumber(number, counter) {
 }
 
 function getHighestNumber(numberObject, highestNumber) {
-  if (number.index === '0' || number.value > highestNumber) {
-    highestNumber = number.value;
+  if (numberObject.index === '0' || numberObject.value > highestNumber) {
+    highestNumber = numberObject.value;
   }
   return highestNumber;
 }
