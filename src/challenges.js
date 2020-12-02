@@ -162,10 +162,7 @@ function techList(array, name) {
     let output = [];
     for (let index in array) {
       let tech = array[index];
-      let obj = {
-        tech: tech,
-        name: name,
-      };
+      let obj = {tech, name};
       output.push(obj);
     }
     return output;
