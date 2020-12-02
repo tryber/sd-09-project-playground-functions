@@ -116,63 +116,41 @@ function fizzBuzz(arrayNumbers) {
 
 
 // Desafio 9
-function encode(phrase) {
-  let newPhrase = '';
+// Procurei ajuda para esse exercício, e achei mas com soluções mais complexas, aproveitando apenas a idéia de objeto.
+// https://dev.to/thepracticaldev/daily-challenge-254-the-vowel-code-1046
+function switchLetter(letter, objectChar){
+  let newLetter = '';
 
-  for (let index in phrase) {
-    switch (phrase[index]) {
-      case 'a':
-        newPhrase += '1';
-        break;
-      case 'e':
-        newPhrase += '2';
-        break;
-      case 'i':
-        newPhrase += '3';
-        break;
-      case 'o':
-        newPhrase += '4';
-        break;
-      case 'u':
-        newPhrase += '5';
-        break;
-      default:
-        newPhrase += phrase[index];
-        break;
+  for (let index in objectChar) {
+    if (letter === index) {
+      newLetter = objectChar[index];
     }
   }
-  return newPhrase;
+
+  return (newLetter != '') ? newLetter : letter;
 }
-console.log(encode('hi there!'));
-function decode(phrase) {
-  let newPhrase = '';
+
+function encode(phrase) {
+  let newEncode = '';
+  let objectEncode = {'a': 1, 'e': 2, 'i': 3, 'o': 4, 'u': 5};
 
   for (let index = 0; index < phrase.length; index += 1) {
-    // console.log(phrase[index]);
-    switch (phrase[index]) {
-      case '1':
-        newPhrase += 'a';
-        break;
-      case '2':
-        newPhrase += 'e';
-        break;
-      case '3':
-        newPhrase += 'i';
-        break;
-      case '4':
-        newPhrase += 'o';
-        break;
-      case '5':
-        newPhrase += 'u';
-        break;
-      default:
-        newPhrase += phrase[index];
-        break;
-    }
+    newEncode += switchLetter(phrase[index], objectEncode);
   }
-  return newPhrase;
+  return newEncode;
 }
-console.log(decode(encode('H4w 1r2 y45 t4d1y?')));
+// console.log(encode('hi there!'));
+
+function decode(phrase) {
+  let newDecode = '';
+  let objectDecode = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'};
+
+  for (let index = 0; index < phrase.length; index += 1) {
+    newDecode += switchLetter(phrase[index], objectDecode);
+  }
+  return newDecode;
+}
+// console.log(decode('H4w 1r2 y45 t4d1y?'));
 
 
 // Desafio 10
