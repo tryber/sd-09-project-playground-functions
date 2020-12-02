@@ -136,13 +136,12 @@ function decode(stringDecode) {
 function techList(nameOfTechnologies, name) {
   if (nameOfTechnologies.length > 0) {
   let arrayTechAndNames = [];
-  for (let index in nameOfTechnologies){
-    let eachName = {
-      tech:`${nameOfTechnologies[index]}`,
-      name: `${name}`
+  for (let properties in nameOfTechnologies){
+    let eachName = { 
     }
-
-  arrayTechAndNames.push(eachName)
+    eachName.tech = nameOfTechnologies[properties],
+    eachName.name = name 
+    arrayTechAndNames.push(eachName)
   }
   return arrayTechAndNames
 } else {
