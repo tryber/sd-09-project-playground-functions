@@ -171,15 +171,15 @@ function numberLess0(arrayNumber) {
   return true;
 }
 function verificationNumber(arrayNumber) {
-  let repeatNumber = 0
-  for (let count = 0; count < arrayNumber.lenth; count += 1) {
+  let repeatNumber;
+  for (let count of arrayNumber) {
     repeatNumber = 0;
-    for (let count2 = 0; count2 < arrayNumber.length; count2 += 1) {
-      if (arrayNumber[count] === arrayNumber[count2]) {
+    for (let count2 of arrayNumber) {
+      if (count === count2) {
         repeatNumber += 1;
       }
     }
-    if (repeatNumber > 2) {
+    if (repeatNumber >= 3) {
       return false;
     }
   }
