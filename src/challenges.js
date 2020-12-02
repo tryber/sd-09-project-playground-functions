@@ -181,7 +181,6 @@ function techList(tech, name) {
   if (objectTech.length === 0) {
     return 'Vazio!';
   }
-  
   return objectTech;
 }
 console.log(techList([], 'Nathália'));
