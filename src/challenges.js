@@ -104,8 +104,6 @@ function fizzBuzz(numbers) {
   return arrayToReturn
 }
 
-fizzBuzz([9,8,15,3,6])
-
 // Desafio 9
 function encode() {
   // seu código aqui
