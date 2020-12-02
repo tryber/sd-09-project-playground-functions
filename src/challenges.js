@@ -180,7 +180,7 @@ function verificationNumber(arrayNumber) {
       }
     }
     if (repeatNumber > 2) {
-      return false
+      return false;
     }
   }
   return true;
