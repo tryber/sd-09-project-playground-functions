@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat1 > distanciaCat2) {
+  } else {
     return 'cat2';
   }
 
