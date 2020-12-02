@@ -3,7 +3,7 @@ function compareTrue(bool1, bool2) {
   let answer = false;
 
   if (bool1 === true && bool1 === bool2) {
-    answer = true
+    answer = true;
   }
 
   return answer;
@@ -32,7 +32,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (3 * wins) + ties;
+  let totalPoints = 3 * wins + ties;
 
   return totalPoints;
 }
@@ -92,35 +92,34 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function createCipherObj (type) {
-  let cipher
-  
-if (type === 'encode') {
-cipher = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
+function createCipherObj(type) {
+  let cipher;
+
+  if (type === 'encode') {
+    cipher = {
+      a: 1,
+      e: 2,
+      i: 3,
+      o: 4,
+      u: 5,
+    };
   }
 
+  if (type === 'decode') {
+    cipher = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
+    };
   }
-
-if (type === 'decode'){
-  cipher = {
-    '1': 'a',
-    '2': 'e',
-    '3': 'i',
-    '4': 'o',
-    '5': 'u'
-  }
-}
-return cipher
+  return cipher;
 }
 
 function encode(string) {
+  let cipher = createCipherObj('encode');
   let encrypted = '';
-  let cipher = createCipherObj('encode')
 
   for (let i of string) {
     switch (i) {
@@ -153,8 +152,8 @@ function encode(string) {
 }
 
 function decode(string) {
+  let cipher = createCipherObj('decode');
   let decipher = '';
-  let cipher = createCipherObj('decode')
 
   for (let i of string) {
     switch (i) {
@@ -185,8 +184,6 @@ function decode(string) {
   }
   return decipher;
 }
-
-console.log(decode('h3 th2r2'))
 
 // Desafio 10
 function techList(array, name) {
@@ -237,30 +234,30 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function compareNum(a, b) {
-  let output = 0
+  let output = 0;
 
   if (a < b) {
-    output = -1
+    output = -1;
   }
 
   if (a > b) {
-    output = 1
+    output = 1;
   }
 
-  return output
+  return output;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
   let lines = [lineA, lineB, lineC];
   let linesSorted = lines.sort(compareNum);
   let sum = Math.abs(linesSorted[1] + linesSorted[0]);
-  let result = false
+  let result = false;
 
   if (linesSorted[2] < sum) {
-    result = true
+    result = true;
   }
 
-  return result
+  return result;
 }
 
 // Desafio 13
