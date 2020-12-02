@@ -34,8 +34,7 @@ function highestCount(valueArray) {
     if (valueArray[index] > highestValue) {
       highestValue = valueArray[index];
       highestValueCount = 1;
-    }
-    else if (valueArray[index] === highestValue) {
+    } else if (valueArray[index] === highestValue) {
       highestValueCount += 1;
     }
   }
