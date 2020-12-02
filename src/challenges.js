@@ -18,10 +18,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(stringsArray) {
-  stringsArray = ['teste1', 'teste2', 'teste3', 'teste4, '];
-  return stringsArray[stringsArray.length -1].concat(stringsArray[0]);
+  stringsArray = ['teste1', 'teste2', 'teste3', 'teste4'];
+  return `${stringsArray[stringsArray.length -1]}${', '}${stringsArray[0]}`;
 }
-console.log(concatName());
 
 // Desafio 5
 function footballPoints() {
