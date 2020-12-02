@@ -189,12 +189,17 @@ function triangleCheck(lineA ,lineB , lineC) {
 
 // Desafio 13
 function hydrate(str) {
-  let digit = /\d+/;
-  let numberOfDrinks = str.match(digit);
-  if ( numberOfDrinks == 1){
-    str =  numberOfDrinks + ' copo de água.';
+  let digit = /\d+/g;
+  let numberOfDrinks = '';
+  let numberOfWater = 0;
+  numberOfDrinks = str.match(digit);
+  for (index in numberOfDrinks){
+    numberOfWater += parseInt(numberOfDrinks[index]);
+  }
+  if ( numberOfWater == 1){
+    str =  numberOfWater + ' copo de água.';
   } else {
-    str =  numberOfDrinks + ' copos de água.';
+    str =  numberOfWater + ' copos de água.';
   }
   return str;
 }
