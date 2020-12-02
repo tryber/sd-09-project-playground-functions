@@ -64,7 +64,7 @@ function highestCount(arrayNumbers) {
 console.log(highestCount([9, 1, 2, 3, 5, 5, 7]));
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let moveCat1 = Math.abs(mouse - cat1)
   let moveCat2 = Math.abs(mouse - cat2)
 
@@ -76,7 +76,7 @@ function catAndMouse(cat1, cat2, mouse) {
     return 'cat1'
 }
 }
-console.log(catAndMouse(2, 0, 1));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
