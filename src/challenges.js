@@ -81,72 +81,59 @@ function fizzBuzz(arrayNums) {
 }
 
 // Desafio 9
-function encode(phrase) {
-  let arrayPhrase = phrase.split('');
-  for (let index in arrayPhrase) {
-    if (arrayPhrase[index] === 'a') {
-      arrayPhrase[index] = 1;
-    }
-    else if (arrayPhrase[index] === 'e') {
-      arrayPhrase[index] = 2;
-    }
-    else if (arrayPhrase[index] === 'i') {
-      arrayPhrase[index] = 3;
-    }
-    else if (arrayPhrase[index] === 'o') {
-      arrayPhrase[index] = 4;
-    }
-    else if (arrayPhrase[index] === 'u') {
-      arrayPhrase[index] = 5;
+function encode(phrase){
+  baseCopy = codeBase(phrase);
+  for (let index in baseCopy.arrayPhrase){
+    if (baseCopy.arrayPhrase[index] in baseCopy){
+      baseCopy.arrayPhrase[index] = baseCopy[baseCopy.arrayPhrase[index]];
     }
   }
-  return arrayPhrase.join('');
+  return baseCopy.arrayPhrase.join('');
 }
 
 function decode(phrase) {
-  let arrayPhrase = phrase.split('');
-  for (let index in arrayPhrase){
-    switch (arrayPhrase[index]) {
-    case '1':
-      arrayPhrase[index] = 'a';
-      break;
-    case '2':
-      arrayPhrase[index] = 'e';
-      break;
-    case '3':
-      arrayPhrase[index] = 'i';
-      break;
-    case '4':
-      arrayPhrase[index] = 'o';
-      break;
-    case '5':
-      arrayPhrase[index] = 'u';
-      break;
-    default:
-      break;
+  baseCopy = codeBase(phrase);
+  for (let index in baseCopy.arrayPhrase){
+    if (baseCopy.arrayPhrase[index] in (Object.keys(baseCopy))){
+      baseCopy.arrayPhrase[index] = Object.keys(baseCopy).slice(baseCopy.arrayPhrase[index] -1 , baseCopy.arrayPhrase[index]);
     }
   }
-  return arrayPhrase.join('');
+  return baseCopy.arrayPhrase.join('');
+}
+
+function codeBase(phrase){
+  objectReference = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5
+  }
+  objectReference['arrayPhrase'] = phrase.split('');
+  return objectReference;
 }
 
 // Desafio 10
 function techList(arrayNamesAndTechs, name) {
-  let arrayTech = [];
   if (arrayNamesAndTechs != null) {
-    arrayNamesAndTechs.sort();
-    for (let index in arrayNamesAndTechs) {
-      arrayTech.push(
-        techObject = {
-        tech: arrayNamesAndTechs[index],
-        name: name
-      }
-      )
-    }
-    return arrayTech;
+    return techObjectCreator(arrayNamesAndTechs);
   }
   else {
-    return arrayTech;
+    return 'Vazio!';
   }
+}
+function techObjectCreator(arrayNamesAndTechs){
+  let arrayTech = [];
+  arrayNamesAndTechs.sort();
+  for (let index in arrayNamesAndTechs) {
+    arrayTech.push(
+      techObject = {
+      tech: arrayNamesAndTechs[index],
+      name: name
+    }
+    )
+  }
+  return arrayTech;
 }
 
 // Desafio 11
