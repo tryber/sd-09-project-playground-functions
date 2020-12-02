@@ -3,12 +3,10 @@ function compareTrue(value1, value2) {
   // seu código aqui
   let result;
 
-  if (value1 === true && value2 === true)
-  {
+  if (value1 === true && value2 === true)   {
     result = true;
   }
-    else
-    {
+    else     {
     result = false;
     }
   return (result);
