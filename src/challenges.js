@@ -52,11 +52,11 @@ function highestCount(array) {
   let result = 0;
   for (let index in array) {
     if (array[index] > higher) {
-      higher = array[index];
+      high = array[index];
     }
   }
   for (let index2 in array) {
-    if (array[index2] === higher) {
+    if (array[index2] === high) {
       result += 1;
     }
   }
@@ -89,7 +89,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
 }
 
 // Desafio 9
