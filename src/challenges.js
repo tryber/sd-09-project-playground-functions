@@ -19,7 +19,11 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(stringsArray) {
   stringsArray = [];
-  return `${stringsArray[stringsArray.length -1]}, ${stringsArray[0]}`;
+  let firstIndex = stringsArray[stringsArray.length -1];
+  let separator = ', ';
+  let lastIndex = stringsArray[0];
+  let concatenated = firstIndex + separator + lastIndex; 
+  return concatenated;
 }
 
 // Desafio 5
