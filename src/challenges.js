@@ -90,14 +90,46 @@ function fizzBuzz(array) {
     return newArray
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(stringEncode) {
+  let stringEncoded = ''
+    for (let index in stringEncode){
+      if (stringEncode[index] === 'a'){
+        stringEncoded += '1'
+      } else if (stringEncode[index] === 'e'){
+        stringEncoded += '2'
+      } else if (stringEncode[index] === 'i'){
+        stringEncoded += '3'
+      } else if (stringEncode[index] === 'o'){
+        stringEncoded += '4'
+      } else if (stringEncode[index] === 'u'){
+        stringEncoded += '5'
+      } else {
+        stringEncoded += stringEncode[index]
+      }
+    }
+    return stringEncoded
+  }
+
+
+function decode(stringDecode) {
+  let stringDecoded = ''
+  for (let index in stringDecode){
+    if (stringDecode[index] === '1'){
+      stringDecoded += 'a'
+    } else if (stringDecode[index] === '2'){
+      stringDecoded += 'e'
+    } else if (stringDecode[index] === '3'){
+      stringDecoded += 'i'
+    } else if (stringDecode[index] === '4'){
+      stringDecoded += 'o'
+    } else if (stringDecode[index] === '5'){
+      stringDecoded += 'u'
+    } else {
+      stringDecoded += stringDecode[index]
+    }
+  }
+  return stringDecoded
 }
 
 // Desafio 10
