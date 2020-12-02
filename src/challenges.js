@@ -142,6 +142,8 @@ function techList(arrayTechs = [], name) {
       tech: arrayTechs[contador],
       name: name,
     })
+  } if (arrayTechs === []){
+    return 'Vazio!'
   }
 }techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
 console.log(arrayFinal)
