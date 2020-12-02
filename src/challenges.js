@@ -28,14 +28,14 @@ console.log(concatName(['Long', 'live', 'trybers']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let score = wins * 3 + ties
- return score
+  let score = (wins *= 3) + ties
+  return score
 }
 console.log(footballPoints(5, 4))
 
 // Desafio 6
 function highestCount() {
-// seu código aqui highestCount(wins,ties) {let score= (wins*3 + ties return sccore}
+// seu código aqui 
 }
 
 // Desafio 7
