@@ -192,6 +192,11 @@ function hydrate(qtdBebidas) {
       valores = valores + parseInt(qtd, 10);
     }
   }
+
+  if (valores === 1) {
+    return `${valores} copo de água`;
+  }
+
   return `${valores} copos de água`;
 }
 
