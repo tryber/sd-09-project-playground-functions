@@ -234,7 +234,7 @@ function generatePhoneNumber(number) {
   return validationNumber(number);
 }
 
-// Desafio 12
+// Desafio 12 OK
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA + lineB > lineC && lineC > Math.abs(lineB - lineA) && lineA + lineC > lineB && lineB > Math.abs(lineA - lineC) && lineB + lineC > lineA && lineA > Math.abs(lineB - lineC)) {
     return true;
@@ -243,10 +243,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let sum = 0;
+  let num = string.replace(/[^0-9]/g,'');
+  for (let i in num.split('')) {
+    sum += parseInt(num[i]);
+  }
+  return `${sum} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
