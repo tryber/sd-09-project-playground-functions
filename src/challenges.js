@@ -24,9 +24,20 @@ function splitSentence(string) {
 console.log(splitSentence(stringExemplo));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let numeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove']
+let reverse = reverseArray(numeros);
+
+function reverseArray(textArray) {
+  return textArray.reverse();
 }
+
+function concatName(stringArray){
+  
+  return stringArray.concat();
+}
+console.log(concatName(reverse));
+
+
 
 // Desafio 5
 function footballPoints() {
