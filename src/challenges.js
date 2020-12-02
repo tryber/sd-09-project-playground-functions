@@ -6,16 +6,17 @@ function compareTrue(param1, param2) {
 }
 
 
-// Desafio 2 - Verificação
+// Desafio 2 - PASS
 function calcArea(base, height) {
   return (base * height) / 2
 }
 
 // Desafio 3 - PASS
 function splitSentence(texto) {
-  if (typeof (texto) === "string") {
+  if (typeof (texto) === 'string') {
     return texto.split(' ')
-}}
+  } return 0
+}
 
 // Desafio 4 - PASS
 function concatName(param) {
@@ -59,28 +60,46 @@ function highestCount(param) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let posicaoRato = mouse
-  let posicaoGato1 = cat1
-  let posicaoGato2 = cat2
+  let distanciaGato1 = 0
+  let distanciaGato2 = 0
 
-  if (posicaoRato === posicaoGato1) return "cat1"
-  if (posicaoRato === posicaoGato2) return "cat2"
-  if (posicaoRato === posicaoGato1 && posicaoRato === posicaoGato2) return "os gatos trombam e o rato foge"
-  
-  posicaoGato1 > posicaoGato2 ? "cat2" : "cat1"
-
+  if (mouse === cat1 && mouse === cat2) return "os gatos trombam e o rato foge"
+  if (mouse === cat1 && mouse != cat2) return "cat1"
+  if (mouse === cat2 && mouse != cat1) return "cat2"
+  if (mouse > cat1) {
+    for (let i = mouse; i > cat1; i = i - 1) {
+      distanciaGato1 += 1;
+    }
+  } else if (mouse < cat1) {
+    for (let i = mouse; i < cat1; i = i + 1) {
+      distanciaGato1 += 1;
+    }
   }
+  //console.log('Distancia do Gato 1: ' + distanciaGato1)
+  if (mouse > cat2) {
+    for (let i = mouse; i > cat2; i = i - 1) {
+      distanciaGato2 += 1;
+    }
+  } else if (mouse < cat2) {
+    for (let i = mouse; i < cat2; i = i + 1) {
+      distanciaGato2 += 1;
+    }
+  }
+  //console.log('Distancia do Gato 2: ' + distanciaGato2)
+  if (distanciaGato1 > distanciaGato2) {
+      return "cat2"
+  } else if (distanciaGato2 > distanciaGato1) {
+      return "cat1"
+  } else if (distanciaGato1 === distanciaGato2) {
+      return "os gatos trombam e o rato foge"
+  }
+}
 
-  /* for para gato 2
 
-  compara distancia entre gato 1
-  compara distancia entre gato 2
-
-  conta quantos passos existem para alcançar o rato
-   */
-
-
-//catAndMouse(3, 5)
+//console.log( catAndMouse(4, 5, 1) )
+//console.log( catAndMouse(1, 0, 2) ) //precisar ser igual
+//console.log( catAndMouse(10, 4, 22) )
+//console.log( catAndMouse(0, 3, 2) )
 
 // Desafio 8
 function fizzBuzz() {
