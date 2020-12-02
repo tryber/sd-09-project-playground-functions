@@ -27,12 +27,13 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let returnArray = []
   for (let key in string) {
-    stringArray += string[key];
+    returnArray += string[key];
   }
   return returnArray;
 }
 
-console.log(splitSentence('Go Trybe'));
+// console.log(splitSentence('Go Trybe'));
+// --------------------------------------------------------------------
 
 // Desafio 4
 function concatName(stringArray) {
