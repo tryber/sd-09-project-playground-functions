@@ -82,20 +82,67 @@ function fizzBuzz(arraynumbers) {
     } else if (arraynumbers[index] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
     } else if (arraynumbers[index] % 5 === 0) {
-      arrayFizzBuzz.push('buzz'); 
+      arrayFizzBuzz.push('buzz');
     } else {
-     arrayFizzBuzz.push('bug!');
+      arrayFizzBuzz.push('bug!');
     }
   }
   return arrayFizzBuzz;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let strEnc = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === string[index].toLowerCase()) {
+      switch (string[index]) {
+        case 'a':
+          strEnc += 1;
+          break;
+        case 'e':
+          strEnc += 2;
+          break;
+        case 'i':
+          strEnc += 3;
+          break;
+        case 'o':
+          strEnc += 4;
+          break;
+        case 'u':
+          strEnc += 5;
+          break;
+        default:  
+          strEnc += string[index];
+      }
+    }
+  }
+return strEnc;
 }
+
 function decode() {
-  // seu código aqui
+  let strEnc = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case '1':
+        strEnc += 'a';
+        break;
+      case '2':
+        strEnc += 'e';
+        break;
+      case '3':
+        strEnc += 'i';
+        break;
+      case '4':
+        strEnc += 'o';
+        break;
+      case '5':
+        strEnc += 'u';
+        break;
+      default:  
+        strEnc += string[index];
+      }
+  }
+return strEnc;
 }
 
 // Desafio 10
