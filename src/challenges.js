@@ -20,7 +20,6 @@ function splitSentence(sentence) {
   let arrayResultado = sentence.split(' ')
   return arrayResultado;
 }
-console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName(array) {
@@ -91,7 +90,6 @@ function fizzBuzz(array) {
   }
   return arrayFizzBuzz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(array) {
@@ -160,7 +158,6 @@ function techList(array, name) {
     }  
   return list;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Johne'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -190,11 +187,11 @@ function hydrate(bebidas) {
   if(sum === 1) {
     sugestion = sum + ' copo de água'
   } else {
-    sugestion = sum + 'copos de água'
+    sugestion = sum + ' copos de água'
   }
   return sugestion;
 }
-console.log(hydrate("1 cachaça, 5 cervejas, e 1 copo de vinho"))
+console.log(hydrate("1 cachaça"))
 
 
 module.exports = {
