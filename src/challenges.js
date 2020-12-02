@@ -52,9 +52,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArray) {
+  let resultArray = []
+  for (let fizzKey in numberArray) {
+    if (numberArray[fizzKey] % 3 === 0 && numberArray[fizzKey] % 5 === 0) {
+      resultArray.push('fizzBuzz');
+    } else if (numberArray[fizzKey] % 3 === 0) {
+        resultArray.push('fizz');
+    } else if (numberArray[fizzKey] % 5 === 0) {
+        resultArray.push('buzz');
+    } else {
+        resultArray.push('bug!');
+    }
+  }
+  return resultArray
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
 function encode() {
