@@ -9,7 +9,7 @@ function compareTrue(value1, value2) {
   }
     else
     {
-    resut = false;
+    result = false;
     }
   return (result);
 }
