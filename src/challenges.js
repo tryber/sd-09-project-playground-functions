@@ -126,16 +126,34 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function getFizzBuzz(number) {
-  let remainderBy3 = number % 3;
-  let remainderBy5 = number % 5;
+function getFizzOrBuzz(remainders) {
   let output = '';
-  if ((remainderBy3 === 0) && (remainderBy5 === 0)) {
-    output = 'fizzBuzz';
-  } else if (remainderBy3 === 0) {
+  if (remainders.by3 === 0) {
     output = 'fizz';
-  } else if (remainderBy5 === 0) {
+  } else {
     output = 'buzz';
+  }
+  return output;
+}
+
+function getFizzBuzz(remainders) {
+  let output = '';
+  if ((remainders.by3 === 0) && (remainders.by5 === 0)) {
+    output = 'fizzBuzz';
+  } else {
+    output = getFizzOrBuzz(remainders);
+  }
+  return output;
+}
+
+function checkForFizzBuzz(number) {
+  let remainders = {
+    by3: number % 3,
+    by5: number % 5,
+  }
+  let output = '';
+  if ((remainders.by3 === 0) || (remainders.by5 === 0)) {
+    output = getFizzBuzz(remainders);
   } else {
     output = 'bug!';
   }
@@ -146,7 +164,7 @@ function fizzBuzz(inputArray) {
   for (let index in inputArray) {
     if (Object.prototype.hasOwnProperty.call(inputArray, index)) {
       let number = inputArray[index];
-      let resultStr = getFizzBuzz(number);
+      let resultStr = checkForFizzBuzz(number);
       inputArray[index] = resultStr;
     }
   }
