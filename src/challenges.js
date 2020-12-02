@@ -30,7 +30,7 @@ function splitSentence(streng) {
 // Desafio 4
 function concatName(array) {
   let nome = [];
-  nome.push(array[array.length - 1],array[0]); 
+  nome.push(array[array.length - 1], array[0]);
   return nome;
 }
 
@@ -42,16 +42,16 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNum) {
   let cont = 0;
-  let maior='';
-  for(let x = 0;x < arrayNum.length;x += 1){
-    if (x === 0){
+  let maior ='';
+  for (let x = 0; x < arrayNum.length; x += 1) {
+    if (x === 0) {
       maior = arrayNum[x];
     }
-    if (maior < arrayNum[x]){
+    if (maior < arrayNum[x]) {
       maior = arrayNum[x];
       cont = 0;
     }
-    if (maior === arrayNum[x]){
+    if (maior === arrayNum[x]) {
       cont += 1;
     }
   }
