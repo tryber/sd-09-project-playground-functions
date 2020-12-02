@@ -210,17 +210,16 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let triangle = false;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    triangle = true;
+    return true;
   }
   if (lineB < lineA + lineC && Math.abs(lineA - lineC)) {
-    triangle = true;
+    return true;
   }
   if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
-    triangle = true;
+    return true;
   }
-  return triangle;
+  return false
 }
 
 // Desafio 13
