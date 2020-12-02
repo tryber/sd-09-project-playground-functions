@@ -94,26 +94,24 @@ function fizzBuzz(arraynumbers) {
 function encode(string) {
   let strEnc = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === string[index].toLowerCase()) {
-      switch (string[index]) {
-        case 'a':
-          strEnc += 1;
-          break;
-        case 'e':
-          strEnc += 2;
-          break;
-        case 'i':
-          strEnc += 3;
-          break;
-        case 'o':
-          strEnc += 4;
-          break;
-        case 'u':
-          strEnc += 5;
-          break;
-        default:
-          strEnc += string[index];
-      }
+    switch (string[index]) {
+      case 'a':
+        strEnc += 1;
+        break;
+      case 'e':
+        strEnc += 2;
+        break;
+      case 'i':
+        strEnc += 3;
+        break;
+      case 'o':
+        strEnc += 4;
+        break;
+      case 'u':
+        strEnc += 5;
+        break;
+      default:
+        strEnc += string[index];
     }
   }
   return strEnc;
