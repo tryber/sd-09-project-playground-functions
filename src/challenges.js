@@ -239,12 +239,18 @@ function hydrate(text) {
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
+  let cupsText = 'copo';
+
   for (let index in numbersInText) {
     let number = parseInt(numbersInText[index]);
     totalWater += number;
   }
+  
+  if (totalWater > 1) {
+    cupsText += 's'
+  }
 
-  return `${totalWater} copos de água`;
+  return `${totalWater} ${cupsText} de água`;
 }
 
 module.exports = {
