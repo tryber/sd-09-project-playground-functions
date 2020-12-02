@@ -116,9 +116,10 @@ function fizzBuzz(arrayNumbers) {
 
 
 // Desafio 9
-// Procurei ajuda para esse exercício, e achei mas com soluções mais complexas, aproveitando apenas a idéia de objeto.
+// Procurei ajuda para esse exercício, e achei mas com soluções mais 
+// complexas, aproveitando apenas a idéia de objeto.
 // https://dev.to/thepracticaldev/daily-challenge-254-the-vowel-code-1046
-function switchLetter(letter, objectChar){
+function switchLetter(letter, objectChar) {
   let newLetter = '';
 
   for (let index in objectChar) {
@@ -132,7 +133,13 @@ function switchLetter(letter, objectChar){
 
 function encode(phrase) {
   let newEncode = '';
-  let objectEncode = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' };
+  let objectEncode = {
+    'a': '1',
+    'e': '2',
+    'i': '3',
+    'o': '4',
+    'u': '5'
+  };
 
   for (let index = 0; index < phrase.length; index += 1) {
     newEncode += switchLetter(phrase[index], objectEncode);
@@ -143,7 +150,13 @@ function encode(phrase) {
 
 function decode(phrase) {
   let newDecode = '';
-  let objectDecode = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
+  let objectDecode = {
+    '1': 'a',
+    '2': 'e',
+    '3': 'i',
+    '4': 'o',
+    '5': 'u'
+  };
 
   for (let index = 0; index < phrase.length; index += 1) {
     newDecode += switchLetter(phrase[index], objectDecode);
