@@ -105,9 +105,26 @@ let gato2 = 200;
 console.log(catAndMouse(rato, gato1, gato2));
 
 // Desafio 8
-function fizzBuzz() {
-    // seu código aqui
+function fizzBuzz(buzzArray) {
+    let arrayFizzBuzz = []
+
+    for (let index = 0; index < buzzArray.length; index += 1) {
+        if ((buzzArray[index] % 3) === 0 && (buzzArray[index] % 5) === 0) {
+            arrayFizzBuzz.push('fizzBuzz')
+        } else if ((buzzArray[index] % 3) === 0) {
+            arrayFizzBuzz.push('fizz')
+        } else if ((buzzArray[index] % 5) === 0) {
+            arrayFizzBuzz.push('buzz')
+        } else if ((buzzArray[index] % 3) !== 0 && (buzzArray[index] % 5) !== 0) {
+            arrayFizzBuzz.push('bug!')
+        }
+
+    }
+    return arrayFizzBuzz;
 }
+let multiplos = [2, 5, 15, 7, 9, 45];
+console.log(fizzBuzz(multiplos));
+
 
 // Desafio 9
 function encode() {
