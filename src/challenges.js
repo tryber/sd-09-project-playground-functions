@@ -15,10 +15,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(go trybe) {
-  return ['go' , 'trybe']
+function splitSentence(frase) {
+  let array = frase.split(' ');
+  return array;
 }
-
+console.log(splitSentence('Kamila Vanessa Ribeiro'));
 // Desafio 4
 function concatName(arrayNome) {
 return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
