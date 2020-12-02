@@ -2,15 +2,10 @@
 function compareTrue(boolean1, boolean2) {
   if (boolean1 && boolean2 === true) {
     return true;
-  } return false;
-}
-function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true) {
-    return true;
   }
   return false;
 }
-
+console.log(compareTrue(true, false));
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -18,7 +13,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(projetoJS) {
-  projetoJS = ["Function", "Array", "For"];
+  projetoJS = ['Function', 'Array', 'For'];
 }
 
 // Desafio 4
