@@ -75,21 +75,32 @@ console.log(highestCount(repeteMaiorNumero));
 
 // Desafio 7
 function catAndMouse(rato, gato1, gato2) {
-    let cat1Distance = (gato1 - rato);
-    let cat2Distance = (gato2 - rato);
+    let cat1Distance = 0;
+    let cat2Distance = 0;
+    if (rato > gato1) {
+        cat1Distance = (rato - gato1);
+    } else {
+        cat1Distance = (gato1 - rato);
+    }
+
+    if (rato > gato2) {
+        cat2Distance = (rato - gato2);
+    } else {
+        cat2Distance = (gato2 - rato);
+    }
 
     if (cat1Distance > cat2Distance) {
-        return 'cat1';
-    } else if (cat2Distance > cat1Distance) {
         return 'cat2';
+    } else if (cat2Distance > cat1Distance) {
+        return 'cat1';
     } else if (cat1Distance === cat2Distance) {
         return 'os gatos trombam e o rato foge';
     };
 }
 
-let rato = 8;
-let gato1 = 3;
-let gato2 = 0;
+let rato = -200;
+let gato1 = -1200;
+let gato2 = 200;
 
 console.log(catAndMouse(rato, gato1, gato2));
 
