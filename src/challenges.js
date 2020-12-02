@@ -26,9 +26,9 @@ console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName(arraySTR) {
   let string = arraySTR.reverse(' ');
-  return console.log(string);
+  return string;
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
