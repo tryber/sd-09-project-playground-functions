@@ -145,8 +145,25 @@ function decode(codedWord) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  // receive an array and a string
+  // if array is empty, return 'Vazio!'
+  // sort the array
+  // put each name and array index in an object sorted by the array index
+  // put all objects in one array ordered by the latter sorted array
+  if (tech.length === 0) {
+    let answer = 'Vazio!';
+    return answer;
+  }
+  tech.sort();
+  let arrayReturn = [];
+  for (let index in tech) {
+    let objectTech = new Object();
+    objectTech['tech'] = tech[index];
+    objectTech['name'] = name;
+    arrayReturn.push(objectTech);
+  }
+  return arrayReturn;
 }
 
 // Desafio 11
