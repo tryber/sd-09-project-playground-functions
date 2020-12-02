@@ -223,7 +223,11 @@ function hydrate(drinks) {
       helper += parseInt(drinks[index], 10);
     }
   }
-  answer += helper + " copos de água";
+  if(helper === 1){
+    answer += helper + " copo de água";
+  } else {
+    answer += helper + " copos de água";
+  }
   return answer;
 }
 
