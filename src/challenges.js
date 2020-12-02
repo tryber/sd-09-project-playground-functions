@@ -2,11 +2,11 @@
 function compareTrue(firstValue, secondValue) {
   if (firstValue === true && secondValue === true) {
     return true;
-  } else {
+  }
     return false;
   }
-}
-console.log(compareTrue());
+
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea() {
