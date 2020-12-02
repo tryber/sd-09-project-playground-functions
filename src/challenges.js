@@ -18,12 +18,10 @@ function splitSentence(string) {
   for (let index in string) {
     if (string[index] === ' ') {
       arrayIndex += 1;
+    } else if (array[arrayIndex] === undefined) {
+      array[arrayIndex] = string[index];
     } else {
-      if (array[arrayIndex] === undefined) {
-        array[arrayIndex] = string[index];
-      } else {
         array[arrayIndex] += string[index];
-      }
     }
   }
   return array;
@@ -31,13 +29,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  let newString = stringArray[stringArray.length - 1] + ', ' + stringArray[0];
+  let newString = `${stringArray[stringArray.length - 1]}, ${stringArray[0]}`;
   return newString;
 }
 
 // Desafio 5
-function footballPoints(wins , ties) {
-  let points = 3 * wins + ties;
+function footballPoints(wins, ties) {
+  let points = (3 * wins) + ties;
   return points;
 }
 
@@ -54,7 +52,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse , cat1 , cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos trombam e o rato foge'
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
@@ -127,7 +125,7 @@ function techList(arrayTech, name) {
     for (let index in arrayTech) {
       newArray[index] = {
         tech: arrayTech[index],
-        name: name
+        name: name,
       };
     }
     return newArray;
@@ -136,8 +134,7 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-// Desafio 11
-function checkValidNumber (numArray) {
+function checkValidNumber(numArray) {
   let check = false;
   for (let index in numArray) {
     if (numArray[index] < 0 || numArray[index] > 9) {
@@ -147,7 +144,7 @@ function checkValidNumber (numArray) {
   return check;
 }
 
-function checkRepeatedNumbers (arrayTest) {
+function checkRepeatedNumbers(arrayTest) {
   let check = false;
   let numArray = arrayTest.slice();
   numArray.sort();
@@ -165,19 +162,19 @@ function checkRepeatedNumbers (arrayTest) {
   return check;
 }
 
-function checkRepeatedAndValidNumbers (numArray) {
+function checkRepeatedAndValidNumbers(numArray) {
   let check = false;
-  if (checkValidNumber (numArray)) {
+  if (checkValidNumber(numArray)) {
     check = true
   }
-  if (checkRepeatedNumbers (numArray)) {
+  if (checkRepeatedNumbers(numArray)) {
     check = true;
   }
   return check;
 }
 
-function phoneNumber (arrayTest) {
-  let phoneNumber = ['(' , ')' , ' ' , '-' ];
+function phoneNumberCreator(arrayTest) {
+  let phoneNumber = ['(', ')', ' ', '-'];
   let DDD = [];
   let firstPart = [];
   let lastPart = [];
@@ -190,24 +187,23 @@ function phoneNumber (arrayTest) {
       lastPart.push(arrayTest[index]);
     }
   }
-  phoneNumber.splice(1 , 0 , DDD.join(''));
-  phoneNumber.splice(4 , 0 , firstPart.join(''));
-  phoneNumber.splice(10 , 0 , lastPart.join(''));
+  phoneNumber.splice(1, 0, DDD.join(''));
+  phoneNumber.splice(4, 0, firstPart.join(''));
+  phoneNumber.splice(10, 0, lastPart.join(''));
   return phoneNumber.join('');
 }
 
-function generatePhoneNumber(numArray) {
+function generatePhoneNumber (numArray) {
   if (numArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (checkRepeatedAndValidNumbers(numArray)) {
     return 'não é possível gerar um número de telefone com esses valores'
-  } else {
-    return (phoneNumber(numArray));
   }
+  return (phoneNumberCreator(numArray));
 }
 
 // Desafio 12
-function triangleCheck(lineA , lineB , lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
   } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
