@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
   return totalNumber;
 }
 
-// Desafio 6 OK (Refatorar) Olhar For in
+// Desafio 6 OK (Refatorar)
 function highestCount(arrayNumber) {
   // seu código aqui
   let maxNumber = 0;
@@ -72,25 +72,29 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let result = [];
-  for (let count = 0; count < array.length; count += 1) {
-    if ((array[count] % 3) === 0 && (array[count] % 5) === 0) {
-      result.push('fizzBuzz');
-    } else if ((array[count] % 3) === 0 && (array[count] % 5) !== 0) {
-      result.push('fizz');
-    } else if ((array[count] % 3) !== 0 && (array[count] % 5) === 0) {
-      result.push('buzz');
-    } else if ((array[count] % 3) !== 0 && (array[count] % 5) !== 0) {
-      result.push('bug!');
-    }
+  for (let count of array) {
+    switch (true) {
+      case count % 3 === 0 && count % 5 === 0:
+        result.push('fizzBuzz');
+        break;
+      case count % 3 === 0:
+        result.push('fizz');
+        break;
+      case count % 5 === 0:
+        result.push('buzz');
+        break;
+      default:
+        result.push('bug!');
+        break;
+    }  
   }
   return result;
 }
 
-// Desafio 9 Ok
-function encode(texto) {
+// Desafio 9
+function encode(transLettersNumbers) {
   // seu código aqui
-  let transLettersNumbers = texto.split('');
-  for (let count = 0; count < transLettersNumbers.length; count += 1) {
+   for (let count in transLettersNumbers) {
     if (transLettersNumbers[count] === 'a') {
       transLettersNumbers[count] = 1;
     } else if (transLettersNumbers[count] === 'e') {
