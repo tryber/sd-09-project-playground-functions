@@ -82,7 +82,7 @@ function catAndMouse(cat1, cat2, mouse) {
   let diffCat2 = Math.abs(mouse - cat2)
 
   if (diffCat1 === diffCat2) {
-    return 'Os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge'
   } else if (diffCat1 > diffCat2) {
     return 'cat2'
   }
@@ -158,7 +158,7 @@ function decode(str) {
 function techList(array, name) {
   // seu código aqui
   array = array.sort()
-  myArray = []
+  let myArray = []
   for (let element of array) {
     let object = {}
     object.tech = element
@@ -167,7 +167,7 @@ function techList(array, name) {
   }
   return myArray
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Neves'))
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Neves'))
 
 // Desafio 11
 function generatePhoneNumber() {
