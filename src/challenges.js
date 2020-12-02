@@ -128,10 +128,10 @@ function decode(string) {
  * @return {[string, string]}
  */
 function changePositionArray(fisrtString, secondString) {
-  if (fisrtString > secondString)
+  if (fisrtString > secondString) {
     return [secondString, fisrtString]
-  else
-    return [fisrtString, secondString]
+  }
+  return [fisrtString, secondString]
 }
 
 /**
