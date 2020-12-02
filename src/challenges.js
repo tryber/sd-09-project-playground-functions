@@ -167,7 +167,7 @@ function generatePhoneNumber(numbers) {
   let part1 = '';
   let part2 = '';
   if (numbers.length !== 11) {
-    tel = 'Array com tamanho incorreto';
+    tel = 'Array com tamanho incorreto.';
   } else {
     for (let index = 0; index < numbers.length; index += 1) {
       if (numbers[index] < 0 || numbers[index] > 9 ) {
@@ -206,7 +206,7 @@ function generatePhoneNumber(numbers) {
   // seu código aqui
   return tel
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
