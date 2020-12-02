@@ -74,7 +74,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let array = [];
+
+  for (const multiplo of array3) {
+    if ((multiplo % 3 === 0) && (multiplo % 5 !== 0)) {
+      array.push('Fizz');
+    } else if ((multiplo % 5 === 0)&& (multiplo % 3 !== 0)) {
+      array.push('buzz');
+    } else if ((multiplo % 3 === 0) && (multiplo % 5 === 0)) {
+      array.push('fizzBuzz');
+    } else if ((multiplo % 3 !== 0) && (multiplo % 5 !== 0)) {
+      array.push('bug!');
+    }
+  }
+  return array;
 }
 
 // Desafio 9
