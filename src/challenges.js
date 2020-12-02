@@ -27,9 +27,9 @@ console.log(splitSentence(stringExemplo));
 let numeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove']
 
 function concatName(stringArray){
-  let reverse = stringArray.reverse()
-
-  return reverse.concat(',');
+  let reverse = stringArray.reverse();
+  let concaterna = reverse.concat();
+  return concaterna;
 }
 console.log(concatName(numeros));
 
