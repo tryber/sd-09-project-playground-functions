@@ -155,20 +155,19 @@ function decode(string) {
       case vowels[4]:
         decodeArray.push('u');
         break;
-      default:
-        decodeArray.push(array[i]);
+      default: decodeArray.push(array[i]);
     }
   }
   let encodeString = decodeArray.join('');
   return encodeString;
 }
 
-// Desafio 10
+// Desafio 10 OK
 function techList(array, name) {
   let list = [];
   for (i in array.sort()) {
-    list.push({tech: array[i], name: name})
-  }
+    list.push( {tech: array[i], name: name} );
+  } 
   if (list.length === 0) {
     return 'Vazio!';
   }
