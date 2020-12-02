@@ -215,8 +215,71 @@ return lista;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
+
+let telefone = '';
+
+function repita(array) {
+
+let repitaNumero = 0;
+let repitaMaior = 0;
+
+  for (let contador1 = 0; contador1 < array.length; contador1 += 1) {
+    for (let contador2 = 0; contador2 < array.length; contador2 += 1) {
+      if (array[contador1] === array[contador2]) {
+        repitaNumero += 1;
+      }
+    }
+    if (repitaNumero > repitaMaior) {
+      repitaMaior = repitaNumero;
+    }
+    repitaNumero = 0;
+  }
+return repitaMaior;
+}
+
+function numeroMenorMaior(array) {
+
+let arrayTrueFalse = false;
+
+  for (let contador = 0; contador < array.length; contador += 1) {
+    if (array[contador] < 0 || array[contador] > 9) {
+      arrayTrueFalse = true;
+    }
+  }
+return arrayTrueFalse;
+}
+
+function telefoneNumero(array) {
+
+let ddd = '';
+let primeiroNumero = '';
+let segundoNumero = '';
+
+  for (let dddContador = 0; dddContador < 2; dddContador += 1) {
+    ddd += array[dddContador];
+  }
+  for (let primeiroNumeroContador = 2; primeiroNumeroContador < 7; primeiroNumeroContador += 1) {
+    primeiroNumero += array[primeiroNumeroContador];
+  }
+  for (let segundoNumeroContador = 7; segundoNumeroContador < 11; segundoNumeroContador += 1) {
+    segundoNumero += array[segundoNumeroContador];
+  }
+  let telefone = '(' + ddd + ')' + ' ' + primeiroNumero + '-' + segundoNumero;
+return telefone;
+}
+
+  if (array.length > 11) {
+      return 'Array com tamanho incorreto';
+  } else if (repita(array) >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+  } else if (numeroMenorMaior(array) === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    telefone = telefoneNumero(array);
+  }
+return telefone;
 }
 
 // Desafio 12
