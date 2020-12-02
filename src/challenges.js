@@ -1,28 +1,28 @@
    // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 === true && valor2 === true) {
+  if (valor1 === true && valor2 === true) {
     return true;
   } else {
     return false;
   }
-}   
-  console.log(compareTrue(true, true));
+}
+console.log(compareTrue(true, true));
 
 
 // Desafio 2
 function calcArea(base, heigth) {
-    return ((base * heigth) / 2);
+  return ((base * heigth) / 2);
 }
-     console.log(calcArea(10, 5));
+console.log(calcArea(10, 5));
 
 
 // Desafio 3
 let array = 'go trybe';
 function splitSentence(string) {
-let divisor = string.split(' ');
+  let divisor = string.split(' ');
   return divisor;
-} 
-  console.log(splitSentence(array));
+}
+console.log(splitSentence(array));
 
 //Desafio 4
 
@@ -53,7 +53,7 @@ function highestCount() {
       contador += 1;
     }
   } return contador;
-}  
+}
       console.log(highestCount());*/
 }
 // Desafio 7
@@ -95,7 +95,7 @@ function hydrate() {
 }
 
 
-module.exports = { 
+module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
