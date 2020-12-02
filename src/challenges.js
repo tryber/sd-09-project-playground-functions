@@ -86,8 +86,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distancia1 = cat1 - mouse;
-  let distancia2 = cat2 - mouse;
+  let distancia1 = (cat1 - mouse) * -1;
+  let distancia2 = (cat2 - mouse) * -1;
 
   if (distancia1 < distancia2) {
     return "O gato 1 vai alcançar o rato.";
@@ -98,7 +98,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(3, 4, 5));
+console.log(catAndMouse(-3, 4, 5));
 
 // Desafio 8
 function fizzBuzz() {
