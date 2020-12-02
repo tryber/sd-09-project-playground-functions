@@ -93,7 +93,7 @@ function fizzBuzz(array) {
     if (!(array[index] % 3 == 0) && !(array[index] % 5 == 0)) {
       result.push('bug!');
     }else if ((array[index] % 3 == 0) && (array[index] % 5 == 0)) {
-      result.push('fizzbuzz');
+      result.push('fizzBuzz');
     }else if (array[index] % 3 == 0) {
       result.push('fizz');
     }else if (array[index] % 5 == 0) {
