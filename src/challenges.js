@@ -20,7 +20,7 @@ function splitSentence(texto) {
 
 // Desafio 4 - PASS
 function concatName(param) {
-  return (`${param[param.length -1]}, ${param[0]}`)
+  return (`${param[param.length - 1]}, ${param[0]}`)
 }
 
 // Desafio 5 - PASS
@@ -37,10 +37,10 @@ function highestCount(param) {
   // console.log( 'numero mais alto = ' + ultimoNumero )
 
   if (ultimoNumero === 0) {
-    for (key in param) {
+    for (let key in param) {
       // console.log(param[key])
       if (param[key] === ultimoNumero) {
-        ++qtdNumerosRepetidos
+        qtdNumerosRepetidos += 1
       }
     }
     // console.log('quantidade de números 0 = ' + qtdNumerosRepetidos)
@@ -56,7 +56,7 @@ function highestCount(param) {
 
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9]))
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-// console.log(highestCount([0,0,0,0]))
+console.log(highestCount([0,0,0,0]))
 
 // Desafio 7 - PASS
 function catAndMouse(mouse, cat1, cat2) {
@@ -77,21 +77,21 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   // console.log('Distancia do Gato 1: ' + distanciaGato1)
   if (mouse > cat2) {
-    for (let i = mouse; i > cat2; i = i - 1) {
+    for (let i = mouse; i > cat2; i -= 1) {
       distanciaGato2 += 1;
     }
   } else if (mouse < cat2) {
-    for (let i = mouse; i < cat2; i = i + 1) {
+    for (let i = mouse; i < cat2; i += 1) {
       distanciaGato2 += 1;
     }
   }
   // console.log('Distancia do Gato 2: ' + distanciaGato2)
   if (distanciaGato1 > distanciaGato2) {
-      return "cat2"
+    return 'cat2'
   } else if (distanciaGato2 > distanciaGato1) {
-      return "cat1"
+    return 'cat1'
   } else if (distanciaGato1 === distanciaGato2) {
-      return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   }
 }
 
