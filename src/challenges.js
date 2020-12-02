@@ -36,11 +36,13 @@ function highestCount(arrayNums) {
   let highterNum = arrayNums[0];
   let highterNumRepeat = 0;
   for (let numberIndex in arrayNums) {
-    if (arrayNums[numberIndex] > highterNum) {
+    if (arrayNums[numberIndex] > highterNum)
+    {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
     }
-    else if (arrayNums[numberIndex] === highterNum) {
+    else if (arrayNums[numberIndex] === highterNum)
+    {
       highterNumRepeat += 1;
     }
   }
@@ -117,14 +119,15 @@ function codeBase(phrase) {
 // Desafio 10
 function techList(arrayNamesAndTechs, name) {
   if (arrayNamesAndTechs.length > 0) {
-    return techObjectCreator(arrayNamesAndTechs, name); }
-  else {
-    return 'Vazio!'; }
+    let object = techObjectCreator(arrayNamesAndTechs, name);
+    return object;
+  }
+  return 'Vazio!';
 }
 function techObjectCreator(arrayNamesAndTechs, nameReceived) {
   let arrayTech = [];
   arrayNamesAndTechs.sort();
-  for (let index in arrayNamesAndTechs) {
+  for (let index = 0; index < arrayTech.length; i += 1) {
     arrayTech.push(
       techObject = {
       tech: arrayNamesAndTechs[index],
