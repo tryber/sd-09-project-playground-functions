@@ -51,7 +51,6 @@ function highestCount(numberList) {
   }
   return countMode;
 }
-console.log(highestCount([2,4,5,6,6]));
 
 // Desafio 7
 // Used this explanation <https://medium.com/@migcoder/reflection-get-variable-name-in-javascript-64ed595701eb> to figure out how to display a variable name
@@ -71,9 +70,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return message;
 }
-console.log(catAndMouse(10,5,2));
 
 // Desafio 8
+// switch  if() to switch()
 function fizzBuzz(numberList) {
   let answer = [];
   for (let index in numberList) {
@@ -91,11 +90,58 @@ function fizzBuzz(numberList) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let loweredWord = word.toLowerCase();
+  let codedWord = '';
+  for (let index in loweredWord) {
+    switch (loweredWord[index]) {
+      default:
+        codedWord += loweredWord[index];
+        break;
+      case 'a':
+        codedWord += '1';
+        break;
+      case 'e':
+        codedWord += '2';
+        break;
+      case 'i':
+        codedWord += '3';
+        break;
+      case 'o':
+        codedWord += '4';
+        break;
+      case 'u':
+        codedWord += '5';
+    }
+  }
+  return codedWord;
 }
-function decode() {
-  // seu código aqui
+
+function decode(codedWord) {
+  let loweredWord = codedWord.toLowerCase();
+  let decodedWord = '';
+  for (let index in loweredWord) {
+    switch (loweredWord[index]) {
+      default:
+        decodedWord += loweredWord[index];
+        break;
+      case '1':
+        decodedWord += 'a';
+        break;
+      case '2':
+        decodedWord += 'e';
+        break;
+      case '3':
+        decodedWord += 'i';
+        break;
+      case '4':
+        decodedWord += 'o';
+        break;
+      case '5':
+        decodedWord += 'u';
+    }
+  }
+  return decodedWord;
 }
 
 // Desafio 10
