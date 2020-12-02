@@ -26,9 +26,13 @@ let string = 'go Trybe';
 console.log(splitSentence(string));
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let ultimoPalavra = array.pop();
+  return ultimoPalavra + ', ' + array[0];
 }
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(array));
 
 // Desafio 5
 function footballPoints() {
@@ -43,7 +47,7 @@ function highestCount(array) {
     if (array[index] > maiorNum) {
       maiorNum = array[index];
     }
-  } for (let index2 = 0; index2 < array.length; index2++) {
+  } for (let index2 = 0; index2 < array.length; index2 += 1) {
     if (array[index2] === maiorNum) {
       contador += 1;
     }
