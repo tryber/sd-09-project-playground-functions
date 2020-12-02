@@ -63,19 +63,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNums) {
   let arrayResponse = [];
-  for (let numIndex in arrayNums) {
-    if (((arrayNums[numIndex]) % 3 === 0) && ((arrayNums[numIndex]) % 5 === 0)) {
-      arrayResponse[numIndex] = 'fizzBuzz';
+  for (let index in arrayNums) {
+    let word = '';
+    if ((arrayNums[index]) % 3 === 0) {
+      word += 'fizz';
     }
-    else if ((arrayNums[numIndex]) % 5 === 0) {
-      arrayResponse[numIndex] = 'buzz';
+    if ((arrayNums[index]) % 5 === 0) {
+      word += 'buzz';
     }
-    else if ((arrayNums[numIndex]) % 3 === 0) {
-      arrayResponse[numIndex] = 'fizz';
+    if (word == '') {
+      word = 'bug!';
     }
-    else {
-      arrayResponse[numIndex] = 'bug!';
-    }
+    arrayResponse.push(word);
   }
   return arrayResponse;
 }
@@ -116,16 +115,15 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techObjectCreator(arrayNamesAndTechs, nameReceived){
+function techObjectCreator(arrayNamesAndTechs, nameReceived) {
   let arrayTech = [];
   arrayNamesAndTechs.sort();
-  for (let index in arrayNamesAndTechs) {
-    arrayTech.push(
-      techObject = {
+  for (let index = 0; index < arrayTech.length; index += 1 ){
+    let techObject = {
       tech: arrayNamesAndTechs[index],
       name: nameReceived,
-      }
-    );
+    };
+    arrayTech.push(techObject);
   }
   return arrayTech;
 }
@@ -134,9 +132,7 @@ function techList(arrayNamesAndTechs, name) {
   if (arrayNamesAndTechs.length > 0) {
     return techObjectCreator(arrayNamesAndTechs, name);
   }
-  else {
-    return 'Vazio!';
-  }
+  return 'Vazio!';
 }
 
 // Desafio 11
