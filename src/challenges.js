@@ -165,7 +165,7 @@ function decode(string) {
 function techList(array, name) {
   if (array.length !== 0) {
     let list = [];
-    for (i in array.sort()) {
+    for (let i in array.sort()) {
       list.push({ tech: array[i] , name: name });
     }
     return list;
@@ -174,8 +174,11 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let ddd = `(${ number[0]}` + `${number[1] })`;
+  let num =  ` ${ number[2]}` + `${number[3]}` + `${number[4]}` + `${number[5]}` + `${number[6]}` + '-'+ `${number[7]}` + `${number[8]}` + `${number[9]}` + `${number[10] }`;
+  let tel = ddd + num;
+  return tel;
 }
 
 // Desafio 12
