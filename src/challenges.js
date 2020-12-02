@@ -9,7 +9,7 @@ function compareTrue(param1, param2) {
 }
 let teste = false;
 let teste2 = true;
-console.log(compareTrue(teste, teste2));
+// console.log(compareTrue(teste, teste2));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -17,26 +17,31 @@ function calcArea(base, height) {
 }
 let base1 = 4;
 let altura = 4;
-console.log(calcArea(base1, altura));
+// console.log(calcArea(base1, altura));
 
 
-// Desafio 3 Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-// Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+// Desafio 3
 function splitSentence(frase) {  
   let array = frase.split(' ');
   return array;
 }
-console.log(splitSentence('Henrique Gabriel de Moura'));
+// console.log(splitSentence('Henrique Gabriel de Moura'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+// function concatName(exemplo1) {
+//   let exemplo1 = exemplo1.pop();
+//   return(exemplo1[0] + exemplo1.pop);
+// }
+// let frutas = ['banana' , 'maça' , 'manga'];
+// // console.log(concatName(frutas));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+return (wins*3) + ties
 }
+let vitoria = 7;
+let empate = 8;
+console.log(footballPoints(vitoria, empate))
 
 // Desafio 6
 function highestCount() {
