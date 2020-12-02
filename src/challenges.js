@@ -137,7 +137,7 @@ function decode(numString) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array === [] || name === '') {
+  if (array.length === 0) {
     return 'Vazio!';
   };
   let infoList = array.sort();
@@ -148,7 +148,6 @@ function techList(array, name) {
       name: name,
     });
   };
-
   return techObject;
 }
 
