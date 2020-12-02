@@ -78,56 +78,38 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function isVowel(character) {
-  if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
-    return true;
-  }
-  return false;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  return vowels.includes(character);
 }
 
-function isNumberCharecter(number) {
-  if (number === '1' || number === '2' || number === '3' || number === '4' || number === '5') {
-    return true;
-  }
-  return false;
+function isNumberCharacter(character) {
+  let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  return numbers.includes(character);
 }
 
 function swapVowelNumber(vowel) {
-  let number;
-
-  switch (vowel) {
-    case 'a':
-      number = '1';
-      break;
-    case 'e':
-      number = '2';
-      break;
-    case 'i':
-      number = '3';
-      break;
-    case 'o':
-      number = '4';
-      break;
-    case 'u':
-      number = '5';
-      break;
+  let vowelNumberPair = {
+    vowels = ['a', 'e', 'i', 'o', 'u'],
+    numbers = ['1', '2', '3', '4', '5'],
   }
-  return number;
+  for (let i in vowelNumberPair.vowels) {
+    if (vowel === vowelNumberPair.vowels[i]) {
+      return vowelNumberPair.numbers[i];
+    }
+  }
 }
 
 function swapNumberVowel(number) {
-  switch (number) {
-    case '1':
-      return 'a';
-    case '2':
-      return 'e';
-    case '3':
-      return 'i';
-    case '4':
-      return 'o';
-    case '5':
-      return 'u';
-    default:
-      break;
+
+  let vowelNumberPair = {
+    vowels = ['a', 'e', 'i', 'o', 'u'],
+    numbers = ['1', '2', '3', '4', '5'],
+  }
+
+  for (let i in vowelNumberPair.numbers) {
+    if (vowel === vowelNumberPair.vowels[i]) {
+      return vowelNumberPair.vowels[i];
+    }
   }
 }
 
@@ -148,7 +130,7 @@ function decode(string) {
   string = string.split("");
 
   for (let i in string) {
-    if (isNumberCharecter(string[i])) {
+    if (isNumberCharacter(string[i])) {
       string[i] = swapNumberVowel(string[i]);
     }
   }
@@ -213,6 +195,7 @@ function checkSumRule(lineA, lineB, lineC) {
 function checkSubRule(lineA, lineB, lineC) {
   return (lineA > Math.abs(lineB - lineC))
 }
+
 function triangleCheck(lineA, lineB, lineC) {
   let checks = [];
 
