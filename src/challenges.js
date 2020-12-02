@@ -59,12 +59,23 @@ function highestCount(number) {
   return qtdVezes;
 }
 console.log(highestCount(array));
-// Desafio 7
-function catAndMouse() {
+
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  if (distancia1 < distancia2) {
+    return 'cat1';
+  }
+  else if (distancia2 < distancia1){
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
+
 // Desafio 8
+
 function fizzBuzz(fizzbug) {
   // seu código aqui
   let result = [];
@@ -81,7 +92,6 @@ function fizzBuzz(fizzbug) {
   }
   return result;
 }
-
 
 
 // Desafio 9
