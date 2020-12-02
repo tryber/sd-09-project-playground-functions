@@ -249,7 +249,10 @@ function hydrate(string) {
   for (let i in num.split('')) {
     sum += parseInt(num[i]);
   }
-  return `${sum} copos de água`;
+  if (sum > 1) {
+    return `${sum} copos de água`;
+  }
+  return `${sum} copo de água`;
 }
 
 module.exports = {
