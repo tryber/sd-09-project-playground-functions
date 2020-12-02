@@ -80,10 +80,10 @@ function fizzBuzz(numeros = []) {
       divisiveis.push('buzz')
     } else if (numeros[contador] % 5 === 0 && numeros[contador] % 3 === 0){
       divisiveis.push('fizzBuzz')
-    } else {
+    } else if (numeros[contador] % 5 > 0 && numeros[contador] % 3 > 0) {
       divisiveis.push('bug!')
     }
-  } console.log(divisiveis)
+  } return divisiveis
 
 }fizzBuzz([2, 15, 7, 9, 45])
 
