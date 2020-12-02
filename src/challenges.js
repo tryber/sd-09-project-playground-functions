@@ -150,7 +150,7 @@ function techList(array, name) {
     for (let tec of array.sort()) {
       let techObject = {
         tech: undefined,
-        name
+        name,
       };
       techObject.tech = tec;
       arrayTechObjects.push(techObject);
@@ -161,26 +161,6 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let numero = '(';
-  if (checkNumbers(array)) {
-    if (array.length === 11) {
-      for (let number in array) {
-        if (number === '1') {
-          numero += array[number] + ') ';
-        } else if (number === '6') {
-          numero += array[number] + '-';
-        } else {
-          numero += array[number];
-        }
-      }
-      return numero;
-    }
-    return 'Array com tamanho incorreto.';
-  }
-  return 'não é possível gerar um número de telefone com esses valores';
-}
-
 function checkNumbers(array) {
   let validate = true;
   for (let number in array) {
@@ -194,10 +174,30 @@ function checkNumbers(array) {
       validate = false;
     }
     if (array[number] < 0 || array[number] > 9) {
-      validate = false
+      validate = false;
     }
   }
   return validate;
+}
+
+function generatePhoneNumber(array) {
+  let numero = '(';
+  if (array.length === 11) {
+    if (checkNumbers(array)) {
+      for (let number in array) {
+        if (number === "1") {
+          numero += `${array[number]}) `;
+        } else if (number === "6") {
+          numero += `${array[number]}-`;
+        } else {
+          numero += array[number];
+        }
+      }
+      return numero;
+    }
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
