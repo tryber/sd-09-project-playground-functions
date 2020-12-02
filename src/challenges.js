@@ -68,13 +68,13 @@ function catAndMouse(mouse ,cat1 ,cat2) {
   let result = '';
   if ((cat1 - mouse) < (cat2 - mouse)){
     result = 'cat1';
-    return console.log(result);
+    return result;
   }else if ((cat1 - mouse) > (cat2 - mouse)){
     result = 'cat2';
-    return console.log(result);
+    return result;
   } else {
     result = 'os gatos trombam e o rato foge'
-    return console.log(result);
+    return result;
   }
 }
 
