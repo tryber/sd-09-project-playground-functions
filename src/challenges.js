@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  if(value1 && value2 === true) {
+  if (value1 && value2 === true) {
     return true
   } else {
     return false
@@ -40,13 +40,13 @@ function highestCount(array) {
   // seu código aqui
   let numberMax = 0;
   let count = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > numberMax) {
-      numberMax = array[index];
+  for (let key = 0; key < array.length; key += 1) {
+    if (array[key] > numberMax) {
+      numberMax = array[key];
     }
   }
-  for (let index = 0; index < array.length; index += 1) {
-      if (numberMax === array[index]) {
+  for (let key = 0; key < array.length; key += 1) {
+      if (numberMax === array[key]) {
         count +=1
       }
   }
@@ -71,12 +71,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = []
-  for (let index = 0; index < array.length; index +=1) {
-    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+  for (let key = 0; key < array.length; key +=1) {
+    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
       newArray.push('fizzBuzz');
-    } else if (array[index] % 5 === 0) {
+    } else if (array[key] % 5 === 0) {
       newArray.push('buzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (array[key] % 3 === 0) {
       newArray.push('fizz');
     } else {
       newArray.push('bug!');
@@ -88,30 +88,54 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let vowels = {
-    a: 1,
+  let newString = '';
+  let vowels = { 
+    a: 1, 
     e: 2,
     i: 3,
     o: 4,
     u: 5,
+  };
+  for (let key in string) {
+    if (string[key] === 'a' || string[key] === 'e' || string[key] === 'i' || string[key] === 'o'|| string[key] === 'u') {
+      newString += vowels[string[key]];
+  } else {
+    newString += string[key];
   }
-  for (let index = 0; index < string.length; index += 1) {}
 }
-
+return newString;
+}
 
 function decode() {
   // seu código aqui
+  let newString = '';
+  let vowels = { 
+    1: a, 
+    2: e,
+    3: i,
+    4: o,
+    5: u,
+  };
+  for (let key in string) {
+    if (string[key] === '1' || string[key] === '2' || string[key] === '3' || string[key] === '4'|| string[key] === '5') {
+      newString += vowels[string[key]];
+  } else {
+    newString += string[key];
+  }
 }
+return newString;
+}
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
   let newArray = []
   let string = 'Vazio!'
-  for (let index = array.length; index > array.length; index -= 1) {
-    if (array[index] < array.length) {
+  for (let key = array.length; key > array.length; key -= 1) {
+    if (array[key] < array.length) {
         let outro = {
-          tech: array[index],
+          tech: array[key],
           name: name
         }
         newArray.push(outro)
