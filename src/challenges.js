@@ -176,6 +176,7 @@ function triangleCheck() {
 function hydrate(bebidas) {
   let sum = 0;
   let aux = 0;
+  let sugestion;
   for (let index = 0; index < bebidas.length; index += 1) {
     if (isNaN(bebidas[index]) == false) {
       if(bebidas[index] == ' ') {
@@ -186,7 +187,11 @@ function hydrate(bebidas) {
       }
     }
   }
-  let sugestion = `${sum} copos de água`
+  if(sum === 1) {
+    sugestion = sum + 'copo de água'
+  } else {
+    sugestion = sum + 'copos de água'
+  }
   return sugestion;
 }
 console.log(hydrate("1 cachaça, 5 cervejas, e 1 copo de vinho"))
