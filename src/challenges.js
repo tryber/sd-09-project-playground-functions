@@ -84,8 +84,8 @@ function fizzBuzz(numbers) {
  */
 function encode(string) {
   let encryptedString = ''
-  for (const i in string) {
-    switch (string[i]) {
+  for (const char of string) {
+    switch (char) {
       case 'a':
         encryptedString += '1'
         break;
@@ -103,7 +103,7 @@ function encode(string) {
         break;
 
       default:
-        encryptedString += string[i]
+        encryptedString += char
         break;
     }
   }
