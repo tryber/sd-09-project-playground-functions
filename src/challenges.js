@@ -45,9 +45,15 @@ function concatName(stringArray) {
 // --------------------------------------------------------------------
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = 0;
+  totalPoints += wins * 3;
+  totalPoints += ties;
+  return totalPoints;
 }
+
+// console.log(footballPoints(5, 3));
+// --------------------------------------------------------------------
 
 // Desafio 6
 function highestCount() {
