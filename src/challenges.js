@@ -1,8 +1,10 @@
 // Desafio 1 teste
 function compareTrue(bool1, bool2) {
-  let answer;
+  let answer = false;
 
-  bool1 === true && bool1 === bool2 ? (answer = true) : (answer = false);
+  if (bool1 === true && bool1 === bool2) {
+    answer = true
+  }
 
   return answer;
 }
@@ -48,7 +50,7 @@ function highestCount(array) {
 
   for (let i of array) {
     if (i === biggest) {
-      aparissons++;
+      aparissons += 1;
     }
   }
   return aparissons;
@@ -73,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  resultArray = [];
+  let resultArray = [];
 
   for (let i of array) {
     if (i % 3 === 0 && i % 5 === 0) {
@@ -175,7 +177,7 @@ function techList(array, name) {
   let sortArray = array.sort();
   let resultArray = [];
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     resultArray.push({
       tech: sortArray[i],
       name: name,
@@ -196,7 +198,7 @@ function generatePhoneNumber(array) {
 
     for (let j of array) {
       if (i === j) {
-        reps++;
+        reps += 1;
       }
     }
 
@@ -219,7 +221,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function compareNum(a, b) {
-  if (a == b) return 0;
+  if (a === b) return 0;
   if (a < b) return -1;
   if (a > b) return 1;
 }
