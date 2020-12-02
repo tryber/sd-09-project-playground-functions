@@ -55,9 +55,23 @@ console.log(concatName(arrayNomes));
 }
 console.log(highestCount(array));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let mouse = 0;
+let cat1 = 0;
+let cat2 = 0;
+let cats = 0;
+for(let cat2 in cat1) {
+  if(cat2 > cat1) {
+  cat +=1;
+  return "Cat2";
+  
+
+} else if(cats === mouse ) {
+  return "os gatos trombam e o rato foge"
+
 }
+}
+
 
 // Desafio 8
 function fizzBuzz() {
