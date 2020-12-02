@@ -203,22 +203,13 @@ function criateNumber(number) {
   return numero;
 }
 
+
 function verifyNumber(number) {
   let isRight90 = false;
-  for (let index of number) {
-    if ((index > 9) || (index < 0)) {
-      isRight90 = true;
-    }
+  if (number.length !== 11) {
+    isRight90 = true;
   }
   return isRight90;
-}
-
-function quantidyNumber(number) {
-  let volta = false;
-  for (let index of number) {
-    volta = comparNumber(number, index);
-  }
-  return volta;
 }
 
 function comparNumber(number, index) {
@@ -235,6 +226,15 @@ function comparNumber(number, index) {
   return volta
 }
 
+function quantidyNumber(number) {
+  let volta = false;
+  for (let index of number) {
+    volta = comparNumber(number, index);
+  }
+  return volta;
+}
+
+
 function generatePhoneNumber(number) {
   // seu código aqui
   let show = '';
@@ -245,6 +245,7 @@ function generatePhoneNumber(number) {
   }
   return show;
 }
+
 
 // Desafio 12
 function triangleCheck() {
