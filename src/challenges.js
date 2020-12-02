@@ -233,9 +233,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let reg = /\d+/g
+  let resultArray = string.match(reg)
+  let phrase = 'copos de água'
+  let quantity = 0
+  let output
+
+  for (let i of resultArray) {
+    quantity += parseInt(i)
+  }
+
+  output = `${quantity} ${phrase}`
+
+  console.log(output)
 }
+
+hydrate("1 cachaça, 5 cervejas e 1 copo de vinho")
 
 module.exports = {
   calcArea,
