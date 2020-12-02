@@ -58,15 +58,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let vetor = [9, 25];
 function fizzBuzz(array) {
   let newArray = [];
   for (let index in array){
-    if (array[index]%3 == 0 && array[index]%5 == 0){
+    if (array[index]%3 === 0 && array[index]%5 === 0){
       newArray[index] = 'fizzBuzz'
-    }else if (array[index]%3 == 0){
+    }else if (array[index]%3 === 0){
       newArray[index] = 'fizz'
-    }else if (array[index]%5 == 0){
+    }else if (array[index]%5 === 0){
       newArray[index] = 'buzz'
     } else {
       newArray[index] = 'bug!'
@@ -75,11 +74,10 @@ function fizzBuzz(array) {
   return newArray
 }
 
-
 // Desafio 9
 function encode(frase) {
   let newCode = '';
-  for (let index in frase){
+  for (index in frase){
     switch (frase[index]){
       case 'a': 
         newCode += 1;
@@ -103,10 +101,9 @@ function encode(frase) {
   return newCode
 }
 
-
 function decode(frase) {
   let oldCode = '';
-  for (let index in frase){
+  for (index in frase){
     switch (frase[index]){
       case '1': 
         oldCode += 'a';
