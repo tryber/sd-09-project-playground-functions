@@ -136,10 +136,11 @@ function decode(stringDecode) {
 function techList(nameOfTechnologies, name) {
   if (nameOfTechnologies.length > 0) {
   let arrayTechAndNames = [];
-  for (let properties in nameOfTechnologies){
+  let nameSort = nameOfTechnologies.sort()
+  for (let properties in nameSort){
     let eachName = { 
     }
-    eachName.tech = nameOfTechnologies[properties],
+    eachName.tech =nameSort[properties],
     eachName.name = name 
     arrayTechAndNames.push(eachName)
   }
@@ -148,6 +149,7 @@ function techList(nameOfTechnologies, name) {
   return 'Vazio!'
 }
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
