@@ -164,20 +164,28 @@ function techList(array, name) {
 function checkNumbers(array) {
   let validate = true;
   for (let number in array) {
-    let count = 0;
-    for (let num in array) {
-      if (array[num] === array[number]) {
-        count += 1;
-      }
-    }
-    if (count >= 3) {
-      validate = false;
-    }
-    if (array[number] < 0 || array[number] > 9) {
-      validate = false;
-    }
+   let count = countRepeatedNumbers(array, number);
+   validate = validateNumbers(array[number], count);
   }
   return validate;
+}
+
+function validateNumbers (num, count) {
+  let validate = true;
+  if (count >= 3 || num < 0 || num > 9) {
+    validate = false;
+  }
+  return validate;
+}
+
+function countRepeatedNumbers (numeros, number) {
+  let count = 0;
+  for (let num in array) {
+    if (numeros[num] === numeros[number]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 function generatePhoneNumber(array) {
