@@ -230,8 +230,8 @@ function ascOrder(array) {
 function techList(array, name) {
   let output = 'Vazio!';
   if (array.length > 0) {
-    array = ascOrder(array);
     output = [];
+    array = ascOrder(array);
     for (let index in array) {
       if (Object.prototype.hasOwnProperty.call(array, index)) {
         let tech = array[index];
@@ -266,25 +266,34 @@ function countItem(item, counter) {
   return counter;
 }
 
-function validateItem(item, itemCount) {
+function invalidItem(item, itemCount) {
   return ((itemCount > 2) || (item < 0) || (item > 9));
+}
+
+function checkOutput(output, hasInvalidItems) {
+  if (hasInvalidItems === true) {
+    output = 'não é possível gerar um número de telefone com esses valores';
+  }
+  return output;
 }
 
 function handlePhoneArray(array) {
   let output = '';
   let counter = {};
+  let hasInvalidItems = false;
   for (let index in array) {
     if (Object.prototype.hasOwnProperty.call(array, index)) {
       let item = array[index];
       counter = countItem(item, counter);
-      if (validateItem(item, counter[item])) {
-        output = 'não é possível gerar um número de telefone com esses valores';
-        break;
+      if (invalidItem(item, counter[item])) {
+        // output = 'não é possível gerar um número de telefone com esses valores';
+        // break;
+        hasInvalidItems = true;
       }
       output += getIndexFormat(index) + item;
     }
   }
-  return output;
+  return checkOutput(output, hasInvalidItems);
 }
 
 function generatePhoneNumber(array) {
