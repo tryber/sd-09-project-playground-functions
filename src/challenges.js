@@ -238,23 +238,23 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(text) {
   // Referência para o código (MDN web docs):
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
-  
+
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
   let cupsText = 'copo';
-  
+
   for (let index in numbersInText) {
     if (Object.prototype.hasOwnProperty.call(numbersInText, index)) {
       let number = parseInt(numbersInText[index], 10);
       totalWater += number;
     }
   }
-  
+
   if (totalWater > 1) {
     cupsText += 's'
   }
-  
+
   return `${totalWater} ${cupsText} de água`;
 }
 
