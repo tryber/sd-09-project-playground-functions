@@ -175,20 +175,6 @@ function techList(array, name) {
 }
 
 // Desafio 11
-
-function breakFlow(repeatCounter, item) {
-  return ((repeatCounter > 2) || (item < 0) || (item > 9));
-}
-
-function updateCounter(status) {
-  if (status.currentElement === status.lastElement) {
-    status.repeatCounter += 1;
-  } else {
-    status.repeatCounter = 0;
-  }
-  return status.repeatCounter;
-}
-
 function getIndexFormat(index) {
   let output = '';
   let formats = {
@@ -202,23 +188,30 @@ function getIndexFormat(index) {
   return output;
 }
 
+function countItem(item, counter) {
+  if (item in counter) {
+    counter[item] += 1;
+  } else {
+    counter[item] = 1;
+  }
+  return counter;
+}
+
+function validateItem(item, itemCount) {
+  return ((itemCount > 2) || (item < 0) || (item > 9));
+}
+
 function handlePhoneArray(array) {
   let output = '';
-  let status = {
-    repeatCounter: 0,
-    lastElement: '',
-    currentElement: ''
-  };
-
+  let counter = {};
   for (let index in array) {
-    status.currentElement = array[index];
-    status.repeatCounter = updateCounter(status);
-    if (breakFlow(status.repeatCounter, status.currentElement)) {
+    item = array[index];
+    counter = countItem(item, counter);
+    if (validateItem(item, counter[item])) {
       output = 'não é possível gerar um número de telefone com esses valores';
       break;
     }
-    output += getIndexFormat(index) + status.currentElement;
-    status.lastElement = status.currentElement;
+    output += getIndexFormat(index) + item;
   }
   return output;
 }
@@ -232,12 +225,6 @@ function generatePhoneNumber(array) {
   }
   return output;
 }
-
-// let test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// let test = [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0];
-// let test = [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 1];
-let test = [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 10];
-console.log(generatePhoneNumber(test));
 
 // Desafio 12
 function triangleCheck() {
