@@ -87,7 +87,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
+// Desafio 8 OK
 function fizzBuzz(array) {
   let answers = [];
   for (let i in array) {
@@ -105,12 +105,62 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let array = string.split('');
+  let encodeArray = [];
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  for (let i = 0; i < array.length; i += 1) {
+    switch(array[i]) {
+      case vowels[0]:
+        encodeArray.push(1);
+        break;
+      case vowels[1]:
+        encodeArray.push(2);
+        break;
+      case vowels[2]:
+        encodeArray.push(3);
+        break;
+      case vowels[3]:
+        encodeArray.push(4);
+        break;
+      case vowels[4]:
+        encodeArray.push(5);
+        break;
+      default:
+        encodeArray.push(array[i]);
+    }
+  }
+  return encodeArray.join();
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let array = string.split('');
+  let encodeArray = [];
+  let vowels = ['1', '2', '3', '4', '5']
+  for (let i = 0; i < array.length; i += 1) {
+    switch(array[i]) {
+      case vowels[0]:
+        encodeArray.push('a');
+        break;
+      case vowels[1]:
+        encodeArray.push('e');
+        break;
+      case vowels[2]:
+        encodeArray.push('i');
+        break;
+      case vowels[3]:
+        encodeArray.push('o');
+        break;
+      case vowels[4]:
+        encodeArray.push('u');
+        break;
+      default:
+        encodeArray.push(array[i]);
+    }
+  }
+  return encodeArray.join();
 }
+
 
 // Desafio 10
 function techList() {
