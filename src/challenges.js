@@ -215,6 +215,8 @@ return lista;
 }
 
 // Desafio 11
+
+let asd = [0, 1, 2, 3];
 function generatePhoneNumber(array) {
   // seu código aqui
 
@@ -270,7 +272,7 @@ let segundoNumero = '';
 return telefone;
 }
 
-  if (array.length > 11) {
+  if (array.length != 11) {
       return 'Array com tamanho incorreto';
   } else if (repita(array) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -281,10 +283,11 @@ return telefone;
   }
 return telefone;
 }
-
+console.log(generatePhoneNumber(asd));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
+
 }
 
 // Desafio 13
