@@ -24,8 +24,8 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(nomeInicioFim) {
-//  `${nomeInicioFim[nomeInicioFim.length - 1]},`;
-  return inicioEfim = `${nomeInicioFim[nomeInicioFim.length - 1]}, ` + nomeInicioFim[0];
+  let inicioEfim = `${nomeInicioFim[nomeInicioFim.length - 1]}, ` + nomeInicioFim[0];
+  return inicioEfim;
 }console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
