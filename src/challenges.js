@@ -15,27 +15,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
+function splitSentence() {
   // seu código aqui
-  let divisor = [];
-  for(let i = 0; i < frase.length; i ++) {
-    if (frase[i] !== ' ') {
-      divisor += frase[i]
-    } else {
-      divisor.push(frase[i])
-    }
-  }
-  return divisor
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayHere) {
   // seu código aqui
+  return arrayHere[arrayHere.length - 1] + ', ' + arrayHere[0]
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let victoryPoints = wins * 3
+  return ties + victoryPoints
 }
 
 // Desafio 6
