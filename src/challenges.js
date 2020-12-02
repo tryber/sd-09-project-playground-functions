@@ -38,6 +38,7 @@ function highestCount(array) {
   let count = 0;
   for (index in array){
     if (array[index] > higherNum){
+      count = 0;
       higherNum = array[index];
       for (indexTwo in array){
         if (higherNum === array[indexTwo]){
