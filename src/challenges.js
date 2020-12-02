@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 teste
 function compareTrue(bool1, bool2) {
   let answer;
 
