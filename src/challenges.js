@@ -57,8 +57,6 @@ function fizzBuzz(entry) {
   let divisibles = [];
   for (let index = 0; index < entry.length; index += 1) {
     divisibles.push('bug!');
-  }
-  for (let index = 0; index < entry.length; index += 1) {
     if (entry[index] % 3 === 0) {
       divisibles[index] = 'fizz';
     }
