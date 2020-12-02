@@ -109,7 +109,7 @@ function fizzBuzz(arrNumber) {
 function encode(stri) {
   // seu código aqui
   let voltaStr = '';
-  let str = stri.toLowerCase()
+  let str = stri;
   for (let index = 0; index < str.length; index += 1){
     switch (str[index]){
       case 'a':
@@ -138,7 +138,7 @@ function encode(stri) {
 function decode(stri) {
   // seu código aqui
   let voltaStr = '';
-  let str = stri.toLowerCase()
+  let str = stri;
   for (let index = 0; index < str.length; index += 1){
     switch (str[index]){
       case '1':
@@ -163,6 +163,7 @@ function decode(stri) {
   }
   return voltaStr
 }
+
 
 // Desafio 10
 function techList() {
