@@ -101,14 +101,7 @@ function fizzBuzz(inputArray) {
 }
 
 // Desafio 9
-function encode(text) {
-  let dictionary = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
+function translate(text, dictionary) {
   let output = '';
   for (let charIndex in text) {
     let char = text[charIndex];
@@ -121,6 +114,17 @@ function encode(text) {
   return output;
 }
 
+function encode(text) {
+  let dictionary = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return translate(text, dictionary);
+}
+
 function decode(text) {
   let dictionary = {
     1: 'a',
@@ -129,16 +133,7 @@ function decode(text) {
     4: 'o',
     5: 'u',
   };
-  let output = '';
-  for (let charIndex in text) {
-    let char = text[charIndex];
-    if (char in dictionary) {
-      output += dictionary[char];
-    } else {
-      output += char;
-    }
-  }
-  return output;
+  return translate(text, dictionary);
 }
 
 // Desafio 10
