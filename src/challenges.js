@@ -42,14 +42,14 @@ function highestCount(array) {
   let biggest = array[0];
   let aparissons = 0;
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > biggest) {
-      biggest = array[i];
+  for (let i of array) {
+    if (i > biggest) {
+      biggest = i;
     }
   }
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === biggest) {
+  for (let i of array) {
+    if (i === biggest) {
       aparissons += 1;
     }
   }
@@ -77,12 +77,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultArray = [];
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+  for (let i of array) {
+    if (i % 3 === 0 && i % 5 === 0) {
       resultArray.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
+    } else if (i % 3 === 0) {
       resultArray.push('fizz');
-    } else if (array[i] % 5 === 0) {
+    } else if (i % 5 === 0) {
       resultArray.push('buzz');
     } else {
       resultArray.push('bug!');
@@ -160,9 +160,6 @@ function decode(string) {
   return decipher;
 }
 
-console.log(encode('hi there'));
-console.log(decode('h1 th2r2'));
-
 // Desafio 10
 function techList(array, name) {
   let sortArray = array.sort();
@@ -184,11 +181,11 @@ function generatePhoneNumber(array) {
   let result;
   let reps;
 
-  for (let i = 0; i < array.length; i += 1) {
+  for (let i of array) {
     reps = 0;
 
-    for (let j = 0; j < array.length; i += 1) {
-      if (array[i] === array[j]) {
+    for (let j of array) {
+      if (i === j) {
         reps += 1;
       }
     }
