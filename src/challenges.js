@@ -33,8 +33,7 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
- 
+  // seu código aqui 
 }
 
 // Desafio 7
