@@ -9,7 +9,7 @@ function compareTrue(firstItem, secondItem) {
     return false;
   }
 }
-console.log(compareTrue(false, false));
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,7 +22,8 @@ console.log(calcArea(5, 5));
 // Desafio 3
 function splitSentence(arraySplit) {
   // seu código aqui
-  return arraySplit.split(" ");
+  let divisor = arraySplit.split(" ");
+  return divisor;
 }
 
 console.log(splitSentence("vamos com tudo!! todos somos trybe"));
