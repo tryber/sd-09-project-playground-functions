@@ -1,5 +1,5 @@
 // Desafio 1
-
+let varr = ["arroz", "feijao", "macarrao"];
 function compareTrue( value1, value2 ) {
   // seu código aqui
   if ( value1 === true && value2 === true ) {
@@ -32,13 +32,17 @@ function splitSentence( phrase ) {
 function concatName( arrayString ) {
   // seu código aqui
   for ( let index = 0; index < arrayString.lenght; index += 1 ) {
-    while (index === 0 || index < arrayString.length - 1) {
-      return arrayString[index];
+    while (index === 0 || index === arrayString.length - 1) {
+      console.log(arrayString[index]);
 
       break;
     }
   }
 }
+
+
+
+concatName(varr);
 
 // Desafio 5
 function footballPoints() {
