@@ -132,7 +132,7 @@ function techList(tecnologias, name) {
   for (const NomeTech of techOrdenada) {
     let obj = {
       tech: NomeTech,
-      name: name,
+      name,
     };
     listaDeObjetos.push(obj);
   }
