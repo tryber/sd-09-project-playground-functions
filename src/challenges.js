@@ -31,8 +31,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  return arrayNumbers;
 }
 
 // Desafio 7
@@ -94,3 +94,4 @@ console.log(calcArea(30, 20));
 console.log(splitSentence("Gabriel Castro"));
 console.log(concatName(["xurubita", "lucas", "thiago", "white"]));
 console.log(footballPoints(4, 2));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
