@@ -65,10 +65,33 @@ function catAndMouse(cat1, cat2) {
   }
   
 }
+function fizz(number) {
+  if (number%3 === 0){
+    return true;
+  }
+}
 
+function buzz (number) {
+  if (number%5 === 0){
+    return true;
+  }
+}
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+      if (buzz(numbers[index]) === true && fizz(numbers[index]) === true) {
+          arrayFizzBuzz.push('fizzBuzz');
+      } else if (buzz(numbers[index]) === true) {
+        arrayFizzBuzz.push('buzz');
+      } else if (fizz(numbers[index]) === true) {
+        arrayFizzBuzz.push('fizz');
+      } else {
+        arrayFizzBuzz.push('bug!');
+      }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
