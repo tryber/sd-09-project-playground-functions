@@ -145,7 +145,17 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  if(numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let phoneNumber = `(${numbers[0]}${numbers[1]}) `;
+  for(let index = 2; index < numbers.length; index += 1) {
+    phoneNumber = phoneNumber.concat(`${numbers[index]}`)
+    if(index === 6) {
+      phoneNumber = phoneNumber.concat('-');
+    }
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
