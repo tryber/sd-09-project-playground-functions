@@ -123,26 +123,14 @@ function cipherCases(index, type) {
 
   switch (index) {
     case 'a':
-    case '1':
-      encryptedChar = cipher[index];
-      break;
-
     case 'e':
-    case '2':
-      encryptedChar = cipher[index];
-      break;
-
     case 'i':
-    case '3':
-      encryptedChar = cipher[index];
-      break;
-
     case 'o':
-    case '4':
-      encryptedChar = cipher[index];
-      break;
-
     case 'u':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
     case '5':
       encryptedChar = cipher[index];
       break;
