@@ -167,9 +167,22 @@ function decode(phrase) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let objectTech = [];
+
+  tech.sort();
+
+  for (let index in tech) {
+    objectTech.push({
+      'tech': tech[index],
+      'name': name,
+    });
+  }
+
+  return objectTech;
 }
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Nathália'));
+
 
 // Desafio 11
 function generatePhoneNumber() {
