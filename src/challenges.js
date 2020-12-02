@@ -14,10 +14,11 @@ console.log(compareTrue(true, false));
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height) / 2;
+  let result = (base * height) / 2;
+  return result;
 }
 
-console.log(calcArea(5, 5));
+console.log(calcArea(5, 10));
 
 // Desafio 3
 function splitSentence(arraySplit) {
@@ -62,7 +63,7 @@ console.log(footballPoints(10, 3));
 // Desafio 6
 
 function highestCount(arrayRepet) {
-  let maiorNumero = arrayRepet[0];
+  let maiorNumero = arrayRepet;
   let contaMaiorNumero = 0;
   // seu código aqui
   for (let index = 0; index < arrayRepet.length; index += 1) {
@@ -80,7 +81,7 @@ function highestCount(arrayRepet) {
   }
 }
 
-console.log(highestCount());
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
