@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array3) {
   let array = [];
 
   for (const multiplo of array3) {
