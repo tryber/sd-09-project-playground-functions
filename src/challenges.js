@@ -20,7 +20,7 @@ function concatName(array) {
   for (let index = 0; index < array.length - 1; index += 1) {
     result.push(array[index]);
   }
-  return result;
+  return result.join();
 }
 
 // Desafio 5
@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let repeat = 0;
   let count = 0;
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] > count) {
       count = array[index];
     }
@@ -79,9 +79,29 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+let java = {
+  tech: 'javascript',
+  nome: 'Felipe'
 }
+let react = {
+  tech: 'react',
+  nome: 'Felipe'
+}
+let python = {
+  tech: 'python',
+  nome: 'Felipe'
+}
+let nodejs = {
+  tech: 'nodejs',
+  nome: 'Felipe'
+}
+function techList(array){
+  for (let key in array) {
+
+  }
+}
+
+techList([java, react, python, nodejs]);
 
 // Desafio 11
 function generatePhoneNumber() {
