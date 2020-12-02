@@ -6,7 +6,6 @@ function compareTrue(number1, number2) {
   }
   return false
 }
-// console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -25,7 +24,7 @@ console.log(splitSentence(`go trybe`));
 function concatName(names) {
   return `${names[names.length - 1]} , ${names[0]}`
 }
-console.log(concatName(`Long, live , Trybers`))
+// console.log(concatName(`Long, live , Trybers`))
 
 // Desafio 5
 function footballPoints() {
