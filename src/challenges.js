@@ -1,55 +1,60 @@
- // Desafio 1
+   // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 === true && valor2 === true) {
+ /* if(valor1 === true && valor2 === true) {
     return true;
   } else {
     return false;
   }
-}   console.log(compareTrue(true, true));
+}   console.log(compareTrue(true, true));*/
+}
 
 // Desafio 2
 function calcArea(base, heigth) {
-      return ((base * heigth) / 2);
-} 
-        console.log(calcArea(10, 5));
+/*      return ((base * heigth) / 2);
+}
+        console.log(calcArea(10, 5));*/
+}
 
 // Desafio 3
 let array = 'go trybe';
 function splitSentence(string) {
 let divisor = string.split(' ');
-console.log(divisor);
-  return string;
+  return divisor;
 } 
   console.log(splitSentence(array));
 
 //Desafio 4
 
-let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-function concatName() {
+let arrays = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(nomes) {
 let firstName = nomes[0];
 let lastName = nomes[nomes.length - 1];
 let finalResult = lastName + ', ' + firstName;
   return finalResult;
 }
-        console.log(concatName());
+        console.log(concatName(arrays));
 
 // Desafio 5
 function footballPoints(wins,ties) {
-let empate = 1;
-let vitoria = 3;
-let total = vitoria + empate;
-
-  if(wins === vitoria && ties === empate) {
-  } 
+let totalWins = wins * 3;
+let totalTies = ties * 1;
+let total = totalWins + totalTies;
       return total;
 }
-      console.log(footballPoints());
+      console.log(footballPoints(5,2));
 
 // Desafio 6
+/*let numbers = [9, 1, 2, 3, 9, 5, 7];
+let contador = 0;*/
 function highestCount() {
-  // seu código aqui
-}  /*/*/
-
+ /* for (let i = 0; i < numbers.length; i += 1) {
+    if(numbers[i] === contador) {
+      contador += 1;
+    }
+  } return contador;
+}  
+      console.log(highestCount());*/
+}
 // Desafio 7
 function catAndMouse() {
   // seu código a*/qui
