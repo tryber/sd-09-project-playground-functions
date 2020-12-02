@@ -9,7 +9,6 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-
 function handleIfEnding(context) {
   if (context.currentChar.index === context.lastIndex) {
     context.currentWord += context.currentChar.value;
@@ -64,34 +63,62 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function countNumber(number, counter) {
+  if (!(number in counter)) {
+    counter[number] = 1;
+  } else {
+    counter[number] += 1;
+  }
+  return counter;
+}
+
+function getHighestNumber(numberObject, highestNumber) {
+  if (number.index === '0' || number.value > highestNumber) {
+    highestNumber = number.value;
+  }
+  return highestNumber;
+}
+
 function highestCount(inputArray) {
   let counter = {};
   let highestNumber;
   for (let index in inputArray) {
     if (Object.prototype.hasOwnProperty.call(inputArray, index)) {
-      let number = inputArray[index];
-      if (!(number in counter)) {
-        counter[number] = 1;
-      } else {
-        counter[number] += 1;
+      let number = {
+        index,
+        value: inputArray[index],
       }
-      if (index === '0' || number > highestNumber) {
-        highestNumber = number;
-      }
+      counter = countNumber(number.value, counter);
+      highestNumber = getHighestNumber(number, highestNumber);
     }
   }
   return counter[highestNumber];
 }
 
 // Desafio 7
+function catObject(catName, catPosition, mousePosition) {
+  return {
+    name: catName, 
+    distance: Math.abs(catPosition - mousePosition),
+  }
+}
+
+function getClosestCat(first, second) {
+  let closest = '';
+  if (first.position < second.position) {
+    closest = first;
+  } else {
+    closest = second;
+  }
+  return closest.name;
+}
+
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = Math.abs(cat1 - mouse);
-  let cat2Distance = Math.abs(cat2 - mouse);
+  cat1 = catObject('cat1', cat1, mouse);
+  cat2 = catObject('cat2', cat2, mouse);
   let output = '';
-  if (cat1Distance < cat2Distance) {
-    output = 'cat1';
-  } else if (cat1Distance > cat2Distance) {
-    output = 'cat2';
+  if (cat1.position != cat2.position) {
+    output = getClosestCat(cat1, cat2);
   } else {
     output = 'os gatos trombam e o rato foge';
   }
