@@ -46,8 +46,9 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
-  else 'os gatos trombam e o rato foge';
+  else return 'os gatos trombam e o rato foge';
 }
+console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -61,12 +62,14 @@ function fizzBuzz(array) {
     }
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       fizzBuzzArray.push('fizzBuzz');
-    } else {
-      fizzBuzzArray.push('bug!');
+    }
+    if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
+      fizzBuzzArray.push('bug');
     }
   }
   return fizzBuzzArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
@@ -113,21 +116,21 @@ function generatePhoneNumber(arrayNumb) {
     arrayNumb.splice(10, 0, '-');
   }
 
-  let newArr = [];
-  let indice = arrayNumb.indexOf(9); // volta -1(false) ou 0(true)
-  while(indice != -1) { // -1 = false 
-    newArr.push(indice); // empurrando indices para novo array
-    indice = arrayNumb.indexOf(9, indice +1); // (developer.mozilla)
-  } 
-  if(newArr.length > 2) return 'não é possível gerar um número de telefone com esses valores';
-
+  let count = 0;
   for(let i in arrayNumb) {
-    if(arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
+    if (arrayNumb[i] == arrayNumb[i]) {
+      count++;
+    }
   }
-  
-  return arrayNumb.join('');
+
+  for (let i in arrayNumb) {
+    if (arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  return arrayNumb.join('');  
 }
-console.log(generatePhoneNumber([1, 2, 9, 9, 5, 6, 7, 8, 9, 0, 1]));
+
+console.log(generatePhoneNumber([3, 1, 9, 7, 5, 6, 7, 8, 5, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
