@@ -40,37 +40,43 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(10, 5));
 
 // Desafio 6
-function highestCount(arrayNumbers) {
-  let numbers = [];
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    let value = arrayNumbers[index];
-    if (numbers[value] === undefined) {
-      numbers[value] = 1;
-    } else {
-      numbers[value] += 1;
+function greatestValue(arrayNumbers) {
+  let greatest = 0
+  for (let element of arrayNumbers) {
+    if (element > greatest) {
+      greatest = element
     }
   }
-  let sumRepeated = 0;
-  for (let key in numbers) {
-    if (sumRepeated < numbers[key]) {
-      sumRepeated = numbers[key];
-    }
-  }
-  return sumRepeated;
+  return greatest
 }
-highestCount([9, 1, 2, 3, 9, 5, 7]);
+
+function highestCount(arrayNumbers) {
+  let greatestNumber = greatestValue(arrayNumbers)
+  let greatestCounter = 0
+  for (let element of arrayNumbers) {
+    if (element === greatestNumber) {
+      greatestCounter += 1
+    }
+  }
+  return greatestCounter
+}
+
+console.log(highestCount([9, 1, 2, 3, 5, 5, 7]));
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  if (cat1 > cat2) {
-    return cat1;
-  } else if (cat1 < cat2) {
-    return cat2;
-  } else {
+function catAndMouse(cat1, cat2, mouse) {
+  let moveCat1 = Math.abs(mouse - cat1)
+  let moveCat2 = Math.abs(mouse - cat2)
+
+  if (moveCat1 === moveCat2) {
     return 'os gatos trombam e o rato foge'
-  }
+  } else if (moveCat1 > moveCat2) {
+    return 'cat2'
+  } else {
+    return 'cat1'
 }
-console.log(catAndMouse(10, 10))
+}
+console.log(catAndMouse(-10, 10, 0))
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
