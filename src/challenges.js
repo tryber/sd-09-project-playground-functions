@@ -106,12 +106,62 @@ function fizzBuzz(arrNumber) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stri) {
   // seu código aqui
-
+  let voltaStr = '';
+  let str = stri.toLowerCase()
+  for (let index = 0; index < str.length; index += 1){
+    switch (str[index]){
+      case 'a':
+        voltaStr += 1;
+        break;
+      case 'e':
+        voltaStr += 2;
+        break;
+      case 'i':
+        voltaStr += 3;
+        break;
+      case 'o':
+        voltaStr += 4;
+        break;
+      case 'u':
+        voltaStr += 5;
+        break;
+      default:
+        voltaStr += str[index];
+        break;
+    }
+  }
+  return voltaStr
 }
-function decode() {
+
+function decode(stri) {
   // seu código aqui
+  let voltaStr = '';
+  let str = stri.toLowerCase()
+  for (let index = 0; index < str.length; index += 1){
+    switch (str[index]){
+      case '1':
+        voltaStr += 'a';
+        break;
+      case '2':
+        voltaStr += 'e';
+        break;
+      case '3':
+        voltaStr += 'i';
+        break;
+      case '4':
+        voltaStr += 'o';
+        break;
+      case '5':
+        voltaStr += 'u';
+        break;
+      default:
+        voltaStr += str[index];
+        break;
+    }
+  }
+  return voltaStr
 }
 
 // Desafio 10
