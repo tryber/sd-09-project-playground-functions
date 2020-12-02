@@ -1,32 +1,37 @@
 // Desafio 1
 function compareTrue( value1 , value2 ) {
-    if ( valor1 === true && valor2 === true ) {
-        return true;
-    } else {
-        return false;
-    }
+  if ( value1 === true && value2 === true ) {
+      return true;
 }
+      return false;
+}
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea( base , height) {
-    let area = (base * height)/2
-    return area
+function calcArea(base , height) {
+  return ((base * height) / 2);
 }
+console.log(calcArea(4, 5));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringArray) {
+  for (var index = 0; index < stringArray.length; index += 1){
+      var splitText = stringArray.split(" ")
+      return splitText;
+  }
 }
+console.log(splitSentence('Go trybe'));
+
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties)
 }
+console.log(footballPoints(6, 6))
 
 // Desafio 6
 function highestCount() {
