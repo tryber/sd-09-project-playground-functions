@@ -77,11 +77,14 @@ function fizzBuzz(myArray) {
   for (let element in myArray) {
     if (myArray[element] % 3 === 0 && myArray[element] % 5 === 0) {
       myNewArray.push('fizzBuzz');
-    } else if (myArray[element] % 3 === 0) {
+    } 
+    if (myArray[element] % 3 === 0) {
       myNewArray.push('fizz');
-    } else if (myArray[element] % 5 === 0) {
+    } 
+    if (myArray[element] % 5 === 0) {
       myNewArray.push('buzz');
-    } else if (myArray[element] % 3 !== 0 && myArray[element] % 5 !== 0) {
+    } 
+    if (myArray[element] % 3 !== 0 && myArray[element] % 5 !== 0) {
       myNewArray.push('bug!');
     }
   }
