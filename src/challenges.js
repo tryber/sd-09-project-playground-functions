@@ -106,19 +106,19 @@ function encode(string) {
         encrypted += cipher[i];
         break;
 
-      case "b":
-        encrypted += cipher[i];
-        break;
-
-      case "c":
-        encrypted += cipher[i];
-        break;
-
-      case "d":
-        encrypted += cipher[i];
-        break;
-
       case "e":
+        encrypted += cipher[i];
+        break;
+
+      case "i":
+        encrypted += cipher[i];
+        break;
+
+      case "o":
+        encrypted += cipher[i];
+        break;
+
+      case "u":
         encrypted += cipher[i];
         break;
 
