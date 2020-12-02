@@ -80,7 +80,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (mouCat2 > mouCat1) {
     console.log('cat1')
-  } else if (mouCat1 === mouCat2) {
+  } else 
+  if (mouCat1 === mouCat2) {
     console.log('os gatos trombam e o rato foge')
   } else {
     console.log('cat2')
@@ -89,6 +90,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
+
 }
 
 // Desafio 9
@@ -143,6 +145,6 @@ splitSentence('Go Trybe')
 concatName(['primeira', 'segunda', 'Ultima'])
 footballPoints(3, 1)
 highestCount([9, 1, 2, 41, 3, 9, 5, 7, 9, 41, 17, 41])
-catAndMouse(7, 6, 8)
+catAndMouse(7, 8, 8)
 
 // Aooba, não é que tem um segredo no Lession Learned?!
