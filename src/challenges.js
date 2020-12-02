@@ -130,7 +130,7 @@ function techList(arrayTech, name) {
 
   let techOrdenada = arrayTech.sort();
   let listaDeObjetos = [];
-  
+
   for (const NomeTech of techOrdenada) {
     let obj = {
       tech: NomeTech,
