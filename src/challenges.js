@@ -121,18 +121,31 @@ function decode(string) {
   return string
 }
 
+/* Apos ver o codigo do Renato Feitosa me veio a ideia de refatorar esta parte */
 /**
- * @return {-1 | 0 | 1}
- * @param {string} word1
- * @param {string} word2
+ * @param {string} fisrtString
+ * @param {string} secondString
+ * @return {[string, string]}
  */
-function compareStringsLength(word1, word2) {
-  const lessWord = word1.length > word2.length ? word2.length : word1.length
-  for (let i = 0; i < lessWord; i += 1) {
-    if (word2[i] < word1[i]) return 1
-    else if (word1[i] < word2[i]) return -1
+function changePositionArray(fisrtString, secondString) {
+  if (fisrtString > secondString)
+    return [secondString, fisrtString]
+  else
+    return [fisrtString, secondString]
+}
+
+/**
+ * @param {string[]} strings
+ */
+function ascOrderArrayString(strings) {
+  for (let i = 0; i < strings.length; i += 1) {
+    for (let j = i + 1; j < strings.length; j += 1) {
+      const [firstString, secondString] = changePositionArray(strings[i], strings[j])
+      strings[i] = firstString
+      strings[j] = secondString
+    }
   }
-  return 0
+  return strings
 }
 
 // Desafio 10
@@ -143,8 +156,7 @@ function compareStringsLength(word1, word2) {
  */
 function techList(technologies, name) {
   if (!technologies.length) return 'Vazio!'
-  const sortedTechnologies =
-    technologies.sort((first, second) => compareStringsLength(first, second))
+  const sortedTechnologies = ascOrderArrayString(technologies)
   return sortedTechnologies.map(tech => ({ tech, name }))
 }
 
