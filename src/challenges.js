@@ -17,9 +17,14 @@ function splitSentence(string) {
   let aux = 0;
   for (let index in string) {
     if (!array[aux]) {
-        array[aux] = '';
+      array[aux] = '';
     }
-    string[index] === ' ' ? aux += 1 : array[aux] += string[index];
+    if (string[index] === ' ') {
+      aux += 1;
+    }
+    else {
+      array[aux] += string[index];
+    }
   }
   return array;
 }
