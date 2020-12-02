@@ -170,8 +170,8 @@ function createNewTec(technology, name) {
 
 // Função retorna array ordenado
 function sortArrayObjects(array) {
-  for (let index = 0;index < array.length - 1;index += 1) {
-    for (let index2 = index + 1;index2 < array.length;index2 += 1){
+  for (let index = 0; index < array.length - 1; index += 1) {
+    for (let index2 = index + 1; index2 < array.length; index2 += 1){
       if (array[index].tech > array[index2].tech) {
         let aux = createNewTec(array[index2].tech, array[index2].name);
         array[index2] = array[index];
@@ -184,15 +184,17 @@ function sortArrayObjects(array) {
 
 // Desafio 10
 function techList(technologies, name) {
+  let result = null;
   if (technologies.length === 0) {
-    return 'Vazio!';
+    result = 'Vazio!';
   } else {
     let tecno = [];
     for (let index in technologies) {
       tecno.push(createNewTec(technologies[index], name));
     }
-    return sortArrayObjects(tecno);
+    result = sortArrayObjects(tecno);
   }
+  return result;
 }
 
 // Funcão retorna quantidade de vezes que value aparece no array
