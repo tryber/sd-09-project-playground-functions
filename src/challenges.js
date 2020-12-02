@@ -111,15 +111,15 @@ function encode(string) {
         case 'u':
           strEnc += 5;
           break;
-        default:  
+        default:
           strEnc += string[index];
       }
     }
   }
-return strEnc;
+  return strEnc;
 }
 
-function decode() {
+function decode(string) {
   let strEnc = '';
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
@@ -138,11 +138,11 @@ function decode() {
       case '5':
         strEnc += 'u';
         break;
-      default:  
+      default:
         strEnc += string[index];
-      }
+    }
   }
-return strEnc;
+  return strEnc;
 }
 
 // Desafio 10
