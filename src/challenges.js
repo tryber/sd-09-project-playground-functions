@@ -142,8 +142,51 @@ function techList(techArray, nameOfStudent) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  let number;
+  if (arrayNumber.length === 11) {
+    for (let index = 0; index < arrayNumber.length; index += 1) {
+      if (!(validateNumber(arrayNumber[index]) && repeats(arrayNumber[index], arrayNumber, 0))) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+    return format(arrayNumber);
+  }
+  return 'Array com tamanho incorreto.';
+}
+
+function format(arrayNumber) {
+  let number = '';
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (number.length === 0) {
+      number += '(';
+      number += arrayNumber[index];
+    }else if (number.length === 3) {
+      number += ') ';
+      number += arrayNumber[index];
+    }else if (number.length === 10) {
+      number += '-';
+      number += arrayNumber[index];
+    }else{
+      number += arrayNumber[index];
+    }
+  }
+  return number;
+}
+
+function validateNumber(number) {
+  return (number >= 0) && (number <=9)
+}
+
+function repeats(number, array, qtty) {
+
+  for (let index in array) {
+    array[index] === number?qtty += 1:null;
+  }
+  if (qtty === 3) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 12
