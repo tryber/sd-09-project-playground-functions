@@ -54,22 +54,24 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
-  let distcat1 = cat1 - mouse;
-  let distcat2 = cat2 - mouse;
+function catAndMouse(mouse, cat1, cat2 ) {
+  let distcat1 = 0, distcat2 = 0;
+  distcat1 = cat1 - mouse;
+  distcat2 = cat2 - mouse;
   if (distcat1 < 0) {
-    distcat1 = distcat1 * -1;
+    distcat1 *= -1;
   }
   if (distcat2 < 0) {
-    distcat2 = distcat2 * -1;
+    distcat2 *= -1;
   }
-  if (distcat1 > distcat2) {
+  if (distcat1 < distcat2) {
     return 'cat1';
-  } else if (distcat2 > distcat1) {
+  } else if (distcat2 < distcat1) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
+console.log(catAndMouse(0,3,2));
 
 // Desafio 8
 function fizzBuzz(arraynumbers) {
