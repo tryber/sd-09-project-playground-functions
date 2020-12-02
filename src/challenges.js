@@ -50,18 +50,26 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let biggestNumber = Math.max(...array);
-  let ocurrence = 0;
+  let occurrence = 0;
   for (let index in array) {
     if (array[index] === biggestNumber) {
-      ocurrence += 1;
+      occurrence += 1;
     }
   }
-  return ocurrence;
+  return occurrence;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = cat1 - mouse;
+  let cat2Distance = cat2 - mouse;
+  if (cat1Distance < cat2Distance) {
+    return 'o gato1 alcança o rato primeiro';
+  } else if (cat2Distance < cat1Distance) {
+    return 'o gato2 alcança o rato primeiro';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }  
 }
 
 // Desafio 8
