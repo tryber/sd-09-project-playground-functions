@@ -1,50 +1,53 @@
 function compareTrue(valor1, valor2) {
-  
-  if(valor1 === true && valor2 === true) {
+
+  if (valor1 === true && valor2 === true) {
     return true;
-  } else {return false}     
-  }
+  } else { return false }
+}
 
-  let verdadeiro = true;
-  let falso = false;
+let verdadeiro = true;
+let falso = false;
 
-console.log(compareTrue(verdadeiro, verdadeiro ))
+console.log(compareTrue(verdadeiro, verdadeiro))
 
 // Desafio 2
 function calcArea(base, height) {
- let area;
- 
- area = (base * height) /2;
-
- return area
-
+ return (base * height) / 2;
+  
 }
-console.log(calcArea(10,20))
+console.log(calcArea(10, 20))
 
 
 
 // Desafio 3
 function splitSentence(string) {
-  
-  let convertArray;
-  convertArray = string.split(" ")
-   return convertArray
+  return string.split(' ')
 }
-
 let teste3 = 'go trybe'
 console.log(splitSentence(teste3));
 
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(meuArray) {
+ return `${meuArray[meuArray.length -1]} e ${meuArray[0]}`
 }
 
+let nomes = ['paulo', 'joao', 'felipe', 'thiago'];
+console.log(concatName(nomes));
+
+
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ 
+return (wins * 3) + (ties * 1);
+ 
 }
+let jogosGanhos = 5;
+let jogosEmpatados = 2;
+
+console.log(footballPoints(jogosGanhos, jogosEmpatados))
 
 // Desafio 6
 function highestCount() {
