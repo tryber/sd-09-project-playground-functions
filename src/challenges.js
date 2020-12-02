@@ -219,7 +219,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  string = string.split("")
+  let cupsOfWater = 0;
+
+  for (i in string) {
+    if (isNumberCharacter(string[i])) {
+      cupsOfWater += parseInt(string[i], 10);
+    }
+  }
+  return (cupsOfWater + ' copos de água');
 }
 
 
