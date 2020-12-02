@@ -116,7 +116,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numArray) {
   let resultArray = [];
-  for (let fizzKey in numArray) {
+  for (let fizzKey = 0; fizzKey < numArray.length; fizzKey += 1) {
     if (numArray[fizzKey] % 3 === 0 && numArray[fizzKey] % 5 === 0) {
       resultArray.push('fizzbuzz');
     } else if (numArray[fizzKey] % 3 === 0) {
