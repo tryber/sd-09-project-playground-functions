@@ -103,8 +103,6 @@ function fizzBuzz(array) {
   return result;
 }
 
-console.log(fizzBuzz([7, 9]));
-
 // Desafio 9
 function encode(string) {
   let result = '';
@@ -189,20 +187,100 @@ function techList(technologies, name) {
   }
 }
 
+//Funcão retorna quantidade de vezes que value aparece no array
+function counterArray(array, value) {
+  let count = 0;
+  for (let index in array) {
+    if (array[index == value]) {
+      count++;
+    }
+  }
+  return count;
+}
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let phoneNumber = '';
+  if ((array.length < 11) ||  (array.length > 11)) {
+    return 'Array com tamanho incorreto.'
+  }
+  for (let index in array) {
+    if (array[index] < 0 || array[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }else if (counterArray(array, array[index]) >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  for (let index in array) {
+    if (index == 0) {
+      phoneNumber = '(' + array[index];
+    }else if (index == 1) {
+      phoneNumber += array[index] + ')';
+    }else if (index == 2) {
+      phoneNumber += ' ' + array[index];
+    }else if (index == 7) {
+      phoneNumber += '-' + array[index];
+    }else {
+      phoneNumber += array[index];
+    }
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < (lineB + lineC)) && (lineA > distanceBetween(lineB, lineC))) {
+    if ((lineB < (lineA + lineC)) && (lineB > distanceBetween(lineA, lineC))) {
+      if ((lineC < (lineB + lineA)) && (lineC > distanceBetween(lineB, lineA))) {
+        return true;
+      }else {
+        return false;
+      }
+    }else {
+      return false;
+    }
+  }else {
+    return false;
+  }
+}
+
+//Função retorna a somatoria do array
+function addArray(array) {
+  let add = '';
+  for (let index in array) {
+    add += array[index];
+  }
+  return add;
+}
+
+//Função retorna true se caractere é numero e false se não for
+function isNumeral(caractere) {
+  for (let number = 1 ; number <= 9 ; number++) {
+    if (caractere == number) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let count = [];
+  let frase = '';
+  for (let letra in string) {
+    if (isNumeral(string[letra])) {
+      count.push(string[letra]);
+    }
+  }
+  if (addArray(count) > 1) {
+    frase = addArray(count) + ' copos de água'
+  }else {
+    frase = addArray(count) + ' copo de água'
+  }
+  return frase;
 }
+
+console.log(hydrate('7 cervejas'));
 
 
 module.exports = {
