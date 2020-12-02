@@ -1,8 +1,16 @@
-// ALTERAÇÃO PARA COMMIT INICIAL
+//PROJECT 2 - playground functions
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(param1, param2) {
+  if (param1 == true && param2 == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+//let ana = true
+//let luiza = false 
+//console.log(compareTrue(ana, luiza));
 
 // Desafio 2
 function calcArea() {
