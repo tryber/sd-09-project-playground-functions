@@ -175,15 +175,33 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let isTriangle = false
+  if (lineA > Math.abs(lineB - lineC) && lineA < lineB + lineC) {
+    isTriangle = true
+    return isTriangle
+  } else if (lineB > Math.abs(lineA - lineC) && lineB < lineA + lineC) {
+    isTriangle = true
+    return isTriangle
+  } else if (lineC > Math.abs(lineA - lineB) && lineC < lineA + lineB) {
+    isTriangle = true
+    return isTriangle
+  }
+  return isTriangle
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(str) {
   // seu código aqui
+  let waterGlasess = str.split(/\D/g).join('')
+  let sum = 0
+  for (let items of waterGlasess) {
+    sum += Number(items)
+  }
+  return `${sum} copo(s) de água`
 }
-
+// console.log(hydrate('1 cachaça, 5 cervejas e 9 copo de vinho'))
 
 module.exports = {
   calcArea,
