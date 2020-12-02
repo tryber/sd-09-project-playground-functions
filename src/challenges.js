@@ -4,7 +4,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -19,8 +19,9 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  result = array[(array.length - 1)] + ', ' + array[0];
+  return result;
 }
 
 // Desafio 5
