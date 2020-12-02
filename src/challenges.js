@@ -63,24 +63,26 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let result = [];
   for (let index = 0; index < array.length; index += 1) {
     switch (true) {
       case ((array[index] % 3) === 0 && (array[index] % 5) !== 0):
-        console.log('fizz');
+        result.push('fizz');
         break;
       case ((array[index] % 3) !== 0 && (array[index] % 5) === 0):
-        console.log('fizz');
+        result.push('fizz');
         break;
       case ((array[index] % 3) === 0 && (array[index] % 5) === 0):
-        console.log('fizzBuzz');
+        result.push('fizzBuzz');
         break;
       default:
-        console.log('bug!');
+        result.push('bug!');
         break;
     }
   }
+  return result;
 }
-// fizzBuzz([2, 15, 7, 9, 45]);
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
