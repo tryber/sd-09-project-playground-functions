@@ -1,5 +1,3 @@
-//Bruno Brolesi
-//
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   return (firstValue && secondValue);
@@ -34,8 +32,8 @@ function highestCount(numberArray) {
     if (numberArray[highestNumberIndex] < numberArray[i]) {
       highestNumberIndex = i;
       counter = 1;
-    } else if (numberArray[highestNumberIndex] == numberArray[i]) {
-      counter++;
+    } else if (numberArray[highestNumberIndex] === numberArray[i]) {
+      counter = counter + 1;
     }
   }
 
@@ -98,10 +96,10 @@ function swapVowelNumber(vowel) {
       return vowelNumberPair.numbers[i];
     }
   }
+  return;
 }
 
 function swapNumberVowel(number) {
-
   let vowelNumberPair = {
     vowels: ['a', 'e', 'i', 'o', 'u'],
     numbers: ['1', '2', '3', '4', '5'],
@@ -112,32 +110,31 @@ function swapNumberVowel(number) {
       return vowelNumberPair.vowels[i];
     }
   }
+  return;
 }
 
 function encode(string) {
-  string = string.split("");
+  string = string.split('');
 
   for (let i in string) {
     if (isVowel(string[i])) {
       string[i] = swapVowelNumber(string[i]);
     }
   }
-  return string.join("");
+  return string.join('');
 }
 
-console.log(encode("hello world!"));
-
 function decode(string) {
-  string = string.split("");
+  string = string.split('');
 
   for (let i in string) {
     if (isNumberCharacter(string[i])) {
       string[i] = swapNumberVowel(string[i]);
     }
   }
-  return string.join("");
+  return string.join('');
 }
-console.log(decode(encode("hello world!")));
+
 // Desafio 10
 function techList(techArray, name) {
   if (techArray.length === 0) {
@@ -161,7 +158,7 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber(numberArray) {
-  if (numberArray.length != 11) {
+  if (numberArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -176,7 +173,7 @@ function generatePhoneNumber(numberArray) {
   for (let i in numberArray) {
     for (let j = i; j < numberArray.length; j++) {
       if (numberArray[j] === numberArray[i]) {
-        repeatCounter++;
+        repeatCounter = repeatCounter + 1;
       }
       if (repeatCounter >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
@@ -184,7 +181,7 @@ function generatePhoneNumber(numberArray) {
     }
     repeatCounter = 0;
   }
-  numberArray = numberArray.join("")
+  numberArray = numberArray.join('')
   return ('(' + numberArray.slice(0, 2) + ') ' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
 }
 
@@ -208,7 +205,7 @@ function triangleCheck(lineA, lineB, lineC) {
   checks.push(checkSubRule(lineB, lineC, lineA));
   checks.push(checkSubRule(lineC, lineA, lineB));
 
-  for (i in checks) {
+  for (let i in checks) {
     if (!checks[i]) {
       return false;
     }
@@ -219,9 +216,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function getNumberOfWaterCups(string) {
-  string = string.split("")
+  string = string.split('')
   let cupsOfWater = 0;
-  for (i in string) {
+  for (let i in string) {
     if (isNumberCharacter(string[i])) {
       cupsOfWater += parseInt(string[i], 10);
     }
@@ -234,13 +231,9 @@ function hydrate(string) {
 
   if (cupsOfWater === 1) {
     return (cupsOfWater + ' copo de água');
-  } else {
-    return (cupsOfWater + ' copos de água');
   }
-
+  return (cupsOfWater + ' copos de água');
 }
-
-console.log(hydrate("1 cerveja"));
 
 module.exports = {
   calcArea,
