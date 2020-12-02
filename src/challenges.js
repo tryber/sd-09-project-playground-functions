@@ -25,9 +25,13 @@ console.log(splitSentence('Go trybe'));
 // Desafio 4
 function concatName(string) {
   // seu código aqui
-  let lastFirst = string.pop()
-  return lastFirst + ', ' + string[0]
+  let lastFirst = string.pop();
+  return lastFirst + ', ' + string[0];
 }
+let array1 = ['pedro', 'henrique', 'frederico'];
+console.log(concatName(array1));
+
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -62,9 +66,25 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (array[index] % 3 === 0){
+      result.push('fizz');
+    } else if (array[index] % 5 === 0){
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }    
+  }
+  return result;
 }
+
+
+
 
 // Desafio 9
 function encode() {
