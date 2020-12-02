@@ -118,7 +118,7 @@ function fizzBuzz(numArray) {
   let resultArray = [];
   for (let fizzKey = 0; fizzKey < numArray.length; fizzKey += 1) {
     if (numArray[fizzKey] % 3 === 0 && numArray[fizzKey] % 5 === 0) {
-      resultArray.push('fizzbuzz');
+      resultArray.push('fizzBuzz');
     } else if (numArray[fizzKey] % 3 === 0) {
       resultArray.push('fizz');
     } else if (numArray[fizzKey] % 5 === 0) {
