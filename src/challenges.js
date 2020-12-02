@@ -76,10 +76,7 @@ function highestCount(inputArray) {
   let highestNumber;
   for (let index in inputArray) {
     if (Object.prototype.hasOwnProperty.call(inputArray, index)) {
-      let number = {
-        index,
-        value: inputArray[index],
-      }
+      let number = { index, value: inputArray[index] }
       counter = countNumber(number.value, counter);
       highestNumber = getHighestNumber(number, highestNumber);
     }
@@ -89,10 +86,7 @@ function highestCount(inputArray) {
 
 // Desafio 7
 function catObject(catName, catPosition, mousePosition) {
-  return {
-    name: catName,
-    distance: Math.abs(catPosition - mousePosition),
-  }
+  return { name: catName, distance: Math.abs(catPosition - mousePosition) }
 }
 
 function getClosestCat(first, second) {
@@ -139,10 +133,7 @@ function getFizzBuzz(remainders) {
 }
 
 function checkForFizzBuzz(number) {
-  let remainders = {
-    by3: number % 3,
-    by5: number % 5,
-  }
+  let remainders = { by3: number % 3, by5: number % 5 }
   let output = '';
   if ((remainders.by3 === 0) || (remainders.by5 === 0)) {
     output = getFizzBuzz(remainders);
@@ -226,11 +217,7 @@ function techList(array, name) {
 // Desafio 11
 function getIndexFormat(index) {
   let output = '';
-  let formats = {
-    0: '(',
-    2: ') ',
-    7: '-',
-  };
+  let formats = { 0: '(', 2: ') ', 7: '-' };
   if (index in formats) {
     output = formats[index];
   }
@@ -307,11 +294,9 @@ function hydrate(text) {
       totalWater += number;
     }
   }
-
   if (totalWater > 1) {
     cupsText += 's'
   }
-
   return `${totalWater} ${cupsText} de água`;
 }
 
