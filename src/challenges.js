@@ -120,7 +120,7 @@ function techList(array, name) {
   }
 
   if (array.length === 0) {
-    console.log('Vazio!');
+    return 'Vazio!';
   } else {
     return arrayList;
   }
