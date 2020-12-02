@@ -170,23 +170,21 @@ function techList(arr, name) {
   // seu código aqui
   let obj = [];
   let array = arr.sort();
-  if (arr.length < 1){
+  if (arr.length < 1) {
     return 'Vazio!'
-  } else {
-    for (let index = 0; index < arr.length; index += 1) {
-      x = { tech: array[index],
-            name: name };
-      obj.push(x); 
-    }
   }
+  for (let index = 0; index < arr.length; index += 1) {
+    let x = { tech: array[index],
+        name: name };
+    obj.push(x);
+  }
+  
   return obj;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
-  
-
 }
 
 // Desafio 12
