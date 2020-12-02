@@ -30,15 +30,7 @@ function handleChar(context) {
 }
 
 function splitSentence(text) {
-  let context = {
-    currentWord: '',
-    textArray: [],
-    currentChar: {
-      index: null,
-      value: null,
-    },
-    lastIndex: (text.length - 1).toString(),
-  }
+  let context = { currentWord: '', textArray: [], currentChar: { index: null, value: null }, lastIndex: (text.length - 1).toString() }
   for (let charIndex in text) {
     if (Object.prototype.hasOwnProperty.call(text, charIndex)) {
       context.currentChar.index = charIndex;
@@ -117,7 +109,7 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = catObject('cat1', cat1, mouse);
   cat2 = catObject('cat2', cat2, mouse);
   let output = '';
-  if (cat1.position != cat2.position) {
+  if (cat1.position !== cat2.position) {
     output = getClosestCat(cat1, cat2);
   } else {
     output = 'os gatos trombam e o rato foge';
