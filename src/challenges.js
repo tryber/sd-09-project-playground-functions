@@ -32,7 +32,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (3 * wins) + ties;
+  let totalPoints = 3 * wins + ties;
 
   return totalPoints;
 }
@@ -118,41 +118,40 @@ function createCipherObj(type) {
 }
 
 function cipherCases(index, type) {
-  let encryptedChar
-  let cipher = createCipherObj(type)
-  
-  
-    switch (index) {
-      case 'a':
-      case '1':
-        encryptedChar = cipher[index];
-        break;
+  let encryptedChar;
+  let cipher = createCipherObj(type);
 
-      case 'e':
-      case '2':
-        encryptedChar = cipher[index];
-        break;
+  switch (index) {
+    case 'a':
+    case '1':
+      encryptedChar = cipher[index];
+      break;
 
-      case 'i':
-      case '3':
-        encryptedChar = cipher[index];
-        break;
+    case 'e':
+    case '2':
+      encryptedChar = cipher[index];
+      break;
 
-      case 'o':
-      case '4':
-        encryptedChar = cipher[index];
-        break;
+    case 'i':
+    case '3':
+      encryptedChar = cipher[index];
+      break;
 
-      case 'u':
-      case '5':
-        encryptedChar = cipher[index];
-        break;
+    case 'o':
+    case '4':
+      encryptedChar = cipher[index];
+      break;
 
-      default:
-        encryptedChar = index;
-        break;
+    case 'u':
+    case '5':
+      encryptedChar = cipher[index];
+      break;
+
+    default:
+      encryptedChar = index;
+      break;
   }
-  return encryptedChar
+  return encryptedChar;
 }
 
 function encode(string) {
@@ -160,7 +159,7 @@ function encode(string) {
   let encrypted = '';
 
   for (let i of string) {
-    encrypted += cipherCases(i, 'encode')
+    encrypted += cipherCases(i, 'encode');
   }
   return encrypted;
 }
@@ -170,13 +169,13 @@ function decode(string) {
   let decipher = '';
 
   for (let i of string) {
-    decipher += cipherCases(i, 'decode')
+    decipher += cipherCases(i, 'decode');
   }
   return decipher;
 }
 
-console.log(encode('hi there'))
-console.log(decode('h1 th2r2'))
+console.log(encode('hi there'));
+console.log(decode('h1 th2r2'));
 
 // Desafio 10
 function techList(array, name) {
