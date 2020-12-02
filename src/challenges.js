@@ -172,10 +172,10 @@ function techList(tech, name) {
 
   tech.sort();
 
-  for (let index in tech) {
+  for (let index = 0; index < tech.length; index += 1) {
     objectTech.push({
-      'tech': tech[index],
-      'name': name,
+      tech: tech[index],
+      name: name,
     });
   }
 
