@@ -16,7 +16,7 @@ function calcArea(base , height) {
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(" " , )
-  return console.log(array)
+  return array
 }
 
 // Desafio 4
@@ -26,8 +26,8 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins , ties) {
-  let result = (wins *3) + ties
-  console.log(result)
+  let totalPoints = (wins *3) + ties
+  return totalPoints
 }
 
 // Desafio 6
@@ -46,8 +46,7 @@ function highestCount(array) {
       result = result + 1
     }
   }
-  console.log(result)
-
+  return result
 }
 
 // Desafio 7
@@ -71,7 +70,7 @@ function fizzBuzz(array) {
     }
 
   }
-  console.log(result)
+  return result
 }
 
 // Desafio 9
@@ -99,7 +98,7 @@ function encode(string) {
 
   array = array.join("")
 
-  console.log(array)
+  return array
 }
 
 function decode(string) {
@@ -124,7 +123,7 @@ function decode(string) {
 
   array = array.join("")
 
-  console.log(array)
+  return array
 }
 
 // Desafio 10
