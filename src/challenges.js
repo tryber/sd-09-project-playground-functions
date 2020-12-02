@@ -20,7 +20,7 @@ function splitSentence(string) {
     if (string[index] === ' ') {
       array.push(word);
       word = '';
-    } else if (index === string.length - 1){
+    } else if (index === (string.length - 1)){
       word += string[index];
       array.push(word);
     } else {
@@ -216,13 +216,13 @@ function generatePhoneNumber(array) {
     }
   }
   for (let index in array) {
-    if (index === 0) {
+    if (index === '0') {
       phoneNumber = '(' + array[index];
-    } else if (index === 1) {
+    } else if (index === '1') {
       phoneNumber += array[index] + ')';
-    } else if (index === 2) {
+    } else if (index === '2') {
       phoneNumber += ' ' + array[index];
-    } else if (index === 7) {
+    } else if (index === '7') {
       phoneNumber += '-' + array[index];
     } else {
       phoneNumber += array[index];
@@ -230,6 +230,8 @@ function generatePhoneNumber(array) {
   }
   return phoneNumber;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
