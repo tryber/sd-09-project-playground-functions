@@ -5,7 +5,7 @@ let secondValue = true;
 function compareTrue(valor1, valor2) {
   return valor1 && valor2;
 }
-console.log(compareTrue(firstValue,secondValue));
+console.log(compareTrue(firstValue, secondValue));
 //
 // Desafio 2
 let base1 = 10
@@ -16,10 +16,10 @@ function calcArea(base, height) {
 console.log(calcArea(base1, altura));
 
 // Desafio 3
-let stringExemplo = "Hello world!";
+let stringExemplo = 'Hello world!';
 
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
 console.log(splitSentence(stringExemplo));
 
