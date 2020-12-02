@@ -130,7 +130,7 @@ function techList(tecnologias, name) {
 
   let techOrdenada = tecnologias.sort();
   let listaDeObjetos = [];
-  
+
   if (listaDeObjetos.length === 0) {
     return 'Vazio!';
   }
