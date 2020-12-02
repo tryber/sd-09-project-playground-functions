@@ -174,9 +174,9 @@ function techList(array, name) {
 function getIndexFormat(index) {
   let output = '';
   let formats = {
-    '0': '(',
-    '2': ') ',
-    '7': '-',
+    0: '(',
+    2: ') ',
+    7: '-',
   };
   if (index in formats) {
     output = formats[index];
