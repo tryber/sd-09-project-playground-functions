@@ -52,17 +52,29 @@ function highestCount(valuesArray) {
     if (valuesArray[indexOfValues] > highestNumber) {
       highestNumber = valuesArray[indexOfValues];
       highestRepeat = 1;
-    } else if (highestNumber === valuesArray[indexOfValues]) {
+    }
+    if (highestNumber === valuesArray[indexOfValues]) {
       highestRepeat += 1;
     }
   }
   return highestRepeat;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance = Math.abs(cat1 - mouse) - Math.abs(cat2 - mouse);
+  let result = '';
+
+  if (distance < 0) {
+    result = 'cat1';
+  }
+  if (distance > 0) {
+    result = 'cat2';
+  }
+  if (distance === 0) {
+    result = 'os gatos trombam e o rato foge'
+  }
+  return (result);
 }
 
 // Desafio 8
