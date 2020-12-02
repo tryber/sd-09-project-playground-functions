@@ -213,7 +213,7 @@ function techList(array, name) {
   return 'Vazio!'
 }
 
-// Desafio 11
+// Desafio 11 OK
 function generatePhoneNumber(number) {
   if (validationNumber(number) === true) {
     let ddd = [];
@@ -235,8 +235,10 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
+    return 'true';
+  }
 }
 
 // Desafio 13
