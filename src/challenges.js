@@ -27,6 +27,44 @@ function isDivisibleBy(dividend, divider) {
   return false;
 }
 
+function repeatMore(array) {
+  let numRepeat;
+  let qntRepeat = 0;
+  for (let i = 0; i < array.length; i++) {
+    let cont1 = 0;
+    let cont2 = 0;
+    let numTemp1;
+    let numTemp2;
+    let repetiu = false;
+    for (let j = i + 1; j < array.length; j++ ) {
+      if (repetiu == false){
+        if (array[i] == array[j]) {
+          repetiu = true;
+          cont1 = 2;
+          numTemp1 = array[j];
+          array.splice(j,1);
+          j--;
+        }
+      }else{
+        if (array[i] == array[j]) {
+          cont2++;
+          numTemp2 = array[j]
+          array.splice(j,1);
+          j--;
+        }
+      }
+      if (numTemp1 == numTemp2 && qntRepeat < cont1 + cont2) {
+        qntRepeat = cont1 + cont2;
+        numRepeat = numTemp1;
+      }
+    }
+    // console.log(`O numero ${numRepeat} repetiu ${qntRepeat} vezes`);
+    // console.log(num);
+  }
+  // console.log(`O número ${numRepeat} repetiu ${qntRepeat} vezez e foi o que mais repetiu`)
+  return qntRepeat;
+}
+
 // Desafio 1 OK
 function compareTrue(boolean1, boolean2) {
   // seu código aqui
@@ -179,7 +217,7 @@ function generatePhoneNumber(number) {
     return "Array com tamanho incorreto.";
   }
   for (let i in number) {
-    if (number[i] < 0) {
+    if (number[i] < 0 || number[i] > 9 || repeatMore(number) > 2) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
