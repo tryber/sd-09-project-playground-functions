@@ -113,7 +113,7 @@ function encode(transLettersNumbers) {
   }
   return texteDecode;
 }
-//(codeclimate repetição)
+// (codeclimate repetição)
 function decode(transNumbersLettes) {
   // seu código aqui
   let decodeTexte = '';
@@ -151,15 +151,63 @@ function techList(tech, name) {
     obj.name = name;
     arrayNames.push(obj);
   }
-  let arrayOrdenado = arrayNames.sort((a, b) => (a.tech > b.tech) ? 1 : -1); 
+  let arrayOrdenado = arrayNames.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
   return tech.length > 0 ? arrayOrdenado : 'Vazio!'
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function numberequal11(arrayNumber){
+  if (arrayNumber.length === 11) {
+    return true;
+  }
+  return false;
+}
+function numberLess0(arrayNumber) {
+  for (let key of arrayNumber){
+    if (key < 0) {
+      return false;
+    }
+  }
+  return true;
+}
+function verificationNumber(arrayNumber) {
+  let repeatNumber = 0
+  for (let key of arrayNumber) {
+    repeatNumber = 0;
+    for (let count = 0; count < arrayNumber.length; count += 1) {
+      if (key === arrayNumber[count]) {
+        repeatNumber += 1;
+      }
+    }
+    if (repeatNumber >= 3) {
+      return false;
+    }
+  }
+  return true;
 }
 
+function transformeArrayString(arrayNumber) {
+  let stringNumber = '';
+  for (let number of arrayNumber) {
+    stringNumber += number;
+  }
+  return stringNumber;
+}
+function generatePhoneNumber(arrayNumber) {
+  // seu código aqui
+  let stringNumber = transformeArrayString(arrayNumber);
+  if (numberequal11(arrayNumber) === true) {
+    if (numberLess0(arrayNumber) === false || verificationNumber(arrayNumber) === false) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  let inittialNumbers = stringNumber.slice(0, 2);
+  let middlesNumbers = stringNumber.slice(2, 7);
+  let finalNumbers = stringNumber.slice(7, 12);
+  return `(${inittialNumbers}) ${middlesNumbers}-${finalNumbers}`;
+  }
+  return 'array com tamanho incorreto';
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
