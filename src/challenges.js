@@ -111,7 +111,7 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings
 }
 
-// Challenge Nine - Function to encode string
+// Challenge Nine - Function to encode and decode string
 function encode(stringToEncode) {
   let translatorMap = {
     a: 1,
@@ -134,15 +134,38 @@ function encode(stringToEncode) {
     }
     if (encoded === false) {
       encodedString += stringToEncode[index];
-    } else {
-      encoded = false;
     }
+    encoded = false;
   }
   return encodedString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringToDecode) {
+  let translatorMap = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+
+  stringToDecode = stringToDecode.toLowerCase();
+  let decodedString = '';
+
+  let decoded = false;
+  for (let index = 0; index < stringToDecode.length; index += 1) {
+    for (let key in translatorMap) {
+      if (stringToDecode[index] == translatorMap[key]) {
+        decodedString += key;
+        decoded= true;
+      }
+    }
+    if (decoded === false) {
+      decodedString += stringToDecode[index];
+    }
+    decoded = false;
+  }
+  return decodedString;
 }
 
 // Desafio 10
