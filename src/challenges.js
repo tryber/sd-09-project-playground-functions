@@ -44,6 +44,16 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(3, 2))
 
 // Desafio 6
+function greatestValue(array) {
+  let greatest = 0
+  for (let element of array) {
+    if (element > greatest) {
+      greatest = element
+    }
+  }
+  return greatest
+}
+
 function highestCount(array) {
   // seu código aqui
   const greatestNumber = greatestValue(array)
@@ -155,16 +165,6 @@ function techList(array, name) {
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Neves'))
 
 // Desafio 11
-function greatestValue(array) {
-  let greatest = 0
-  for (let element of array) {
-    if (element > greatest) {
-      greatest = element
-    }
-  }
-  return greatest
-}
-
 function lowestValue(array) {
   let lowest = 0
   for (let element of array) {
@@ -183,13 +183,27 @@ function phoneNumberMaker(array) {
   return phoneNumber
 }
 
+function elementCounter(array) {
+  const repetitionNumbers = []
+  for (let element of array) {
+    let counter = 0
+    for (let index = 0; index < array.length; index += 1) {
+      if (element === array[index]) {
+        counter += 1
+      }
+    }
+    repetitionNumbers.push(counter)
+  }
+  return repetitionNumbers
+}
+
 function generatePhoneNumber(array) {
   // seu código aqui
   let maxNumber = greatestValue(array)
   let minNumber = lowestValue(array)
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.'
-  } else if (maxNumber !== 9 || minNumber !== 0 || highestCount(array) >= 3) {
+  } else if (maxNumber !== 9 || minNumber !== 0 || greatestValue(elementCounter(array)) >= 3) {
     return 'não é possível gerar um número de telefone com esses valores'
   }
   const phoneNumber = phoneNumberMaker(array)
