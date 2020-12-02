@@ -129,7 +129,7 @@ let distancia2 = 0;
   } else if (catFunct1(mouse, cat1) > catFunct2(mouse, cat2)) {
     return 'cat2';
   } else if (catFunct1(mouse, cat1) === catFunct2(mouse, cat2)) {
-    return 'Os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge'
   }
 }
 
@@ -199,8 +199,19 @@ return fraseFinal;
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+
+let lista = [];
+array.sort()
+
+  for (let contador = 0; contador < asd.length; contador += 1) {
+    lista.push({tech: array[contador], name: name})
+  }
+  if(lista.length === 0) {
+    return 'Vazio!'
+  }
+return lista;
 }
 
 // Desafio 11
