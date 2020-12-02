@@ -27,10 +27,10 @@ function concatName(arrayStrings) {
   let last = '';
   first = arrayStrings[0];
   last = arrayStrings[arrayStrings.length - 1];
-  let newArray = [last , first]
-  return newArray;
+  let returnString = last + ", " + first;
+  return returnString;
 }
-console.log(concatName(['Ana', 'maria', 'joana']))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let result = 0
@@ -78,7 +78,7 @@ function catAndMouse(cat1, cat2, mouse) {
 
 // Desafio 8
 function fizzBuzz(arraynumbers) {
-  
+  // seu código aqui
 }
 
 // Desafio 9
