@@ -77,11 +77,6 @@ function fizzBuzz(array3) {
   let array = [];
 
   for (const multiplo of array3) {
-    verificarMultiplo(multiplo);
-  }
-  return array;
-
-  function verificarMultiplo(multiplo) {
     if ((multiplo % 3 === 0) && (multiplo % 5 !== 0)) {
       array.push('Fizz');
     } else if ((multiplo % 5 === 0) && (multiplo % 3 !== 0)) {
@@ -92,6 +87,7 @@ function fizzBuzz(array3) {
       array.push('bug!');
     }
   }
+  return array;
 }
 
 // Desafio 9
