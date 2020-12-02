@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   conta quantos passos existem para alcançar o rato
    */
-}
+
 
 //catAndMouse(3, 5)
 
