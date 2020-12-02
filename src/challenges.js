@@ -20,7 +20,7 @@ function splitSentence(string) {
     if (string[index] === ' ') {
       array.push(word);
       word = '';
-    } else if (index === string.length-1){
+    } else if (index === string.length - 1){
       word += string[index];
       array.push(word);
     } else {
@@ -32,13 +32,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let string =  array[array.length-1] + ', ' + array[0];
+  let string =  array[array.length - 1] + ', ' + array[0];
   return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3) + (ties*1);
+  return (wins * 3) + (ties * 1);
 }
 
 // Função retorna maior do array
@@ -166,8 +166,8 @@ function createNewTec(technology, name) {
 
 // Função retorna array ordenado
 function sortArrayObjects(array) {
-  for (let index = 0;index < array.length-1;index++) {
-    for (let index2 = index+1;index2 < array.length; index2++){
+  for (let index = 0;index < array.length - 1;index++) {
+    for (let index2 = index + 1;index2 < array.length;index2++){
       if (array[index].tech > array[index2].tech) {
         let aux = createNewTec(array[index2].tech, array[index2].name);
         array[index2] = array[index];
@@ -185,7 +185,7 @@ function techList(technologies, name) {
   } else {
     let tecno = [];
     for (let index in technologies) {
-      tecno.push(createNewTec(technologies[index],name));
+      tecno.push(createNewTec(technologies[index], name));
     }
     return sortArrayObjects(tecno);
   }
@@ -213,7 +213,7 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     } else if (counterArray(array, array[index]) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } 
+    }
   }
   for (let index in array) {
     if (index === 0) {
@@ -275,7 +275,7 @@ function addArray(array) {
 
 // Função retorna true se caractere é numero e false se não for
 function isNumeral(caractere) {
-  for (let number = 1;number <= 9; number++) {
+  for (let number = 1;number <= 9;number++) {
     if (caractere == number) {
       return true;
     }
