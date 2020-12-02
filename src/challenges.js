@@ -37,26 +37,17 @@ function footballPoints(wins, ties) {
   return totalNumber;
 }
 
-// Desafio 6 OK (Refatorar)
-function highestNumber(arrayNumber) {
-  let maxNumber = 0;
-  for (let key in arrayNumber) {
-    if (arrayNumber[key] > maxNumber) {
-      maxNumber = arrayNumber[key];
-    }
-  }
-  return maxNumber;
-}
+// Desafio 6 OK
 function highestCount(arrayNumber) {
   // seu código aqui
-  let numberMax = highestNumber(arrayNumber);
-  let result = 0;
-  for (let key in arrayNumber) {
-    if (arrayNumber[key] === numberMax) {
-      result += 1;
+  let repeatNumber = 0;
+  let maxNumber = Math.max(...arrayNumber);
+  for (let count = 0; count < arrayNumber.length; count += 1) {
+    if (arrayNumber[count] === maxNumber) {
+      repeatNumber += 1;
     }
   }
-  return result;
+  return repeatNumber;
 }
 
 // Desafio 7 OK
@@ -72,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
-// Desafio 8 Ok (refatorar)
+// Desafio 8 Ok
 function fizzBuzz(array) {
   // seu código aqui
   let result = [];
@@ -90,12 +81,12 @@ function fizzBuzz(array) {
       default:
         result.push('bug!');
         break;
-  }
+    }
   }
   return result;
 }
 
-// Desafio 9
+// Desafio 9 Ok (codeclimate repetição)
 function encode(transLettersNumbers) {
   // seu código aqui
   let texteDecode = '';
@@ -122,37 +113,46 @@ function encode(transLettersNumbers) {
   }
   return texteDecode;
 }
-
+//(codeclimate repetição)
 function decode(transNumbersLettes) {
   // seu código aqui
   let decodeTexte = '';
   for (let number of transNumbersLettes) {
     switch (number) {
       case '1':
-        texteDecode += 'a';
+        decodeTexte += 'a';
         break;
       case '2':
-        texteDecode += 'e';
+        decodeTexte += 'e';
         break;
       case '3':
-        texteDecode += 'i';
+        decodeTexte += 'i';
         break;
       case '4':
-        texteDecode += 'o';
+        decodeTexte += 'o';
         break;
       case '5':
-        texteDecode += 'u';
+        decodeTexte += 'u';
         break;
       default:
-        texteDecode += letter;
+        decodeTexte += number;
     }
   }
-  return texteDecode;
+  return decodeTexte;
 }
 
 // Desafio 10
-function techList(arrayNames, name) {
+function techList(tech, name) {
   // seu código aqui
+  let arrayNames = [];
+  for (let count = 0; count < tech.length; count += 1) {
+    let obj = {};
+    obj.tech = tech[count];
+    obj.name = name;
+    arrayNames.push(obj);
+  }
+  let arrayOrdenado = arrayNames.sort((a, b) => (a.tech > b.tech) ? 1 : -1); 
+  return tech.length > 0 ? arrayOrdenado : 'Vazio!'
 }
 
 // Desafio 11
