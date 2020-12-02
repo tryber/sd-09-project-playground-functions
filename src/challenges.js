@@ -166,8 +166,8 @@ function techList(array, name) {
   if (array.length !== 0) {
     let list = [];
     for (i in array.sort()) {
-      list.push( {tech: array[i], name: name} );
-    } 
+      list.push({ tech: array[i] , name: name });
+    }
     return list;
   }
   return 'Vazio!'
