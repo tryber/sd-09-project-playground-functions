@@ -161,16 +161,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function checkNumbers(array) {
-  let validate = true;
-  for (let number in array) {
-   let count = countRepeatedNumbers(array, number);
-   validate = validateNumbers(array[number], count);
-  }
-  return validate;
-}
-
-function validateNumbers (num, count) {
+function validateNumbers(num, count) {
   let validate = true;
   if (count >= 3 || num < 0 || num > 9) {
     validate = false;
@@ -178,14 +169,23 @@ function validateNumbers (num, count) {
   return validate;
 }
 
-function countRepeatedNumbers (numeros, number) {
+function countRepeatedNumbers(numArray, number) {
   let count = 0;
-  for (let num in array) {
-    if (numeros[num] === numeros[number]) {
+  for (let num in numArray) {
+    if (numArray[num] === numArray[number]) {
       count += 1;
     }
   }
   return count;
+}
+
+function checkNumbers(array) {
+  let validate = true;
+  for (let number in array) {
+    let count = countRepeatedNumbers(array, number);
+    validate = validateNumbers(array[number], count);
+  }
+  return validate;
 }
 
 function generatePhoneNumber(array) {
