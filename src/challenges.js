@@ -137,8 +137,6 @@ function techList(array ,name) {
     return 'Vazio!';
   }
 }
-let arrayNamesTech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(arrayNamesTech,'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -163,7 +161,7 @@ function generatePhoneNumber(array) {
       } else if (index === '0') {
         telephone += '(' + array[index];
       } else if (index === '1') {
-        telephone += array[index] + ')';
+        telephone += array[index] + ')' + ' ';
       } else if (index === '6'){
         telephone += array[index] + '-';
       } else {
