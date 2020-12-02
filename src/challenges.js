@@ -12,29 +12,74 @@ function compareTrue(firstItem, secondItem) {
 console.log(compareTrue(false, false));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) / 2;
 }
+
+console.log(calcArea(5, 5));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(arraySplit) {
   // seu código aqui
+  return arraySplit.split(" ");
 }
+
+console.log(splitSentence("vamos com tudo!! todos somos trybe"));
 
 // Desafio 4
-function concatName() {
+function concatName(arrayConcat) {
   // seu código aqui
+  let result = `${arrayConcat[arrayConcat.length - 1]}, ${arrayConcat[0]}`;
+
+  return result;
+
+  /*
+  let string01 = array[0];
+  let string02 = array[array.length -1];
+  let string03 = string01 + ',' + string02;
+   ou 
+
+   return arrayConcat[arrayConcat.length - 1] + ',' + arrayContat;
+  
+  */
 }
+
+console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let quantityWins = wins * 3;
+  let quantityTies = ties * 1;
+  let quantityTotal = quantityWins + quantityTies;
+  return quantityTotal;
 }
 
+console.log(footballPoints(10, 3));
+
 // Desafio 6
-function highestCount() {
+
+function highestCount(arrayRepet) {
+  let maiorNumero = arrayRepet[0];
+  let contaMaiorNumero = 0;
   // seu código aqui
+  for (let index = 0; index < arrayRepet.length; index += 1) {
+    if (arrayRepet[index] > maiorNumero) {
+      maiorNumero = arrayRepet[index];
+    }
+
+    for (let index = 0; index < arrayRepet.length; index += 1) {
+      if (arrayRepet[index] === maiorNumero) {
+        contaMaiorNumero += 1;
+      }
+
+      return contaMaiorNumero;
+    }
+  }
 }
+
+console.log(highestCount());
 
 // Desafio 7
 function catAndMouse() {
