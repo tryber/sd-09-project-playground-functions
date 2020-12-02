@@ -27,9 +27,11 @@ function concatName(names) {
 console.log(concatName(['Long', 'live', 'trybers']))
 
 // Desafio 5
-function footballPoints() {
-// seu código aqui
+function footballPoints(wins, ties) {
+let score = wins * 3 + ties
+ return score
 }
+console.log(footballPoints(5, 4))
 
 // Desafio 6
 function highestCount() {
