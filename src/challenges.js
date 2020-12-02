@@ -197,8 +197,20 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let answer = true;
+  if (
+    lineA >= lineB + lineC ||
+    lineB >= lineA + lineC ||
+    lineC >= lineA + lineB ||
+    lineA <= Math.abs(lineB - lineC) ||
+    lineB <= Math.abs(lineA - lineC) ||
+    lineC <= Math.abs(lineA - lineB)
+  ) {
+    answer = false;
+  }
+  return answer;
 }
 
 // Desafio 13
