@@ -200,7 +200,6 @@ function generatePhoneNumber(numberArray) {
   return ('(' + numberArray.slice(0, 2) + ') ' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
 }
 
-
 // Desafio 12
 function checkSumRule(lineA, lineB, lineC) {
   return (lineA < (lineB + lineC))
