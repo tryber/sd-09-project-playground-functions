@@ -76,3 +76,8 @@ assert.deepStrictEqual(challenges.triangleCheck(10, 14, 8), true)
 assert.deepStrictEqual(challenges.triangleCheck(10, 18, 8), false)
 console.log('12° OK');
 
+assert.deepStrictEqual(challenges.hydrate('1 cerveja'), '1 copo de água' )
+assert.deepStrictEqual(challenges.hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'), '7 copos de água')
+assert.deepStrictEqual(challenges.hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'), '7 copos de água')
+console.log('13° OK');
+

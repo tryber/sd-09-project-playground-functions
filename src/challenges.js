@@ -172,13 +172,13 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true
   }
-  if(lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     return true
   }
-  if(lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
+  if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
     return true
   }
 
@@ -186,8 +186,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+/**
+ * @param {string} bebidas
+ */
+function hydrate(bebidas) {
+  const numbers = bebidas.match(/\d/g)
+  const sum = numbers.reduce((prev, curr) => parseInt(curr) + parseInt(prev), 0)
+  if (sum === 1) {
+    return `${sum} copo de água`
+  } else if (sum > 1) {
+    return `${sum} copos de água`
+  } else {
+    return 'nenhum copo de água'
+  }
 }
 
 
