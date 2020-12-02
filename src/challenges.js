@@ -28,8 +28,7 @@ Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lu
 let arrayNomes = ['Lucas','Cassiano','Ferraz', 'Paolillo']
 // Desafio 4
 function concatName(arrayNomes) {
-  
-return arrayNomes[arrayNomes.length-1] + ',' + arrayNomes[0];
+return `${arrayNomes[arrayNomes.length-1] + ', ' + arrayNomes[0]}`;
 }
 console.log(concatName(arrayNomes));
 
