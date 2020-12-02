@@ -61,22 +61,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNums) {
-  let arrayResponse = [];
-  for (let index in arrayNums) {
-    let word = '';
-    if ((arrayNums[index]) % 3 === 0) {
-      word += 'fizz';
-    }
-    if ((arrayNums[index]) % 5 === 0) {
-      word += 'buzz';
-    }
-    if (word == '') {
-      word = 'bug!';
-    }
-    arrayResponse.push(word);
+function fizzBuzzGenerate(number){
+  let word = '';
+  if (number % 3 === 0) {
+  word += 'fizz';
   }
-  return arrayResponse;
+  if (number % 5 === 0) {
+  word += 'buzz';
+  }
+  if (word == '') {
+  word = 'bug!';
+  }
+  return word;
+}
+function fizzBuzz(arrayNums) {
+let arrayResponse = [];
+for (let index in arrayNums) {
+  arrayResponse.push(fizzBuzzGenerate(arrayNums[index]));
+}
+return arrayResponse;
 }
 
 // Desafio 9
