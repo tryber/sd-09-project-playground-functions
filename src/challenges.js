@@ -20,8 +20,9 @@ function concatName(array) {
   for (let index = 0; index < 1; index += 1) {
     result.push(array[index]);
   }
-  return result.join();
+  return result.join(', ');
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
