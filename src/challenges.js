@@ -111,7 +111,7 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings
 }
 
-// Challenge Nine - Function to encode and decode string
+// Challenge Nine - Function to encode string
 function encode(stringToEncode) {
   let translatorMap = {
     a: 1,
@@ -127,9 +127,9 @@ function encode(stringToEncode) {
   let encoded = false;
   for (let index = 0; index < stringToEncode.length; index += 1) {
     for (let key in translatorMap) {
-      if (stringToEncode[index] == key) {
+      if (stringToEncode[index] === key) {
         encodedString += translatorMap[key];
-        encoded= true;
+        encoded = true;
       }
     }
     if (encoded === false) {
@@ -140,6 +140,7 @@ function encode(stringToEncode) {
   return encodedString;
 }
 
+// Challenge Nine - Function to decode a string
 function decode(stringToDecode) {
   let translatorMap = {
     a: 1,
