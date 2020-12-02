@@ -91,7 +91,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let arrayToReturn = []
   for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
       arrayToReturn.push('fizz')
     } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
       arrayToReturn.push('buzz')
