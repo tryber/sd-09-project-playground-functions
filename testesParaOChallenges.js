@@ -26,10 +26,20 @@
 //   console.log(compareTrue(false, true))
 
 
-// Desafio 4
-function concatName(arrayDeStrings) {
-   let lastFirst = arrayDeStrings.pop()
-   return lastFirst + ', ' + arrayDeStrings[0]
+// // Desafio 4
+// function concatName(arrayDeStrings) {
+//    let lastFirst = arrayDeStrings.pop()
+//    return lastFirst + ', ' + arrayDeStrings[0]
+//   }
+//   let arrayDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//   console.log(concatName(arrayDeNomes))
+
+
+// Desafio 2
+// seu código aqui
+function calcArea(base, height) {
+    // seu código aqui
+    return (base * height) / 2
   }
-  let arrayDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-  console.log(concatName(arrayDeNomes))
+  console.log(calcArea(10, 2))
+
