@@ -132,7 +132,11 @@ function hydrate(order) {
     waterCups += numbers[index]
   }
 
-  return `${waterCups} copos de água`;
+  if (waterCups === 1) {
+    return `${waterCups} copo de água`;
+  } else {
+    return `${waterCups} copos de água`;
+  }
 }
 
 module.exports = {
