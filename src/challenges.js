@@ -163,7 +163,7 @@ function numberequal11(arrayNumber) {
   return false;
 }
 function numberLess0(arrayNumber) {
-  for (let key of arrayNumber){
+  for (let key of arrayNumber) {
     if (key < 0) {
       return false;
     }
@@ -214,7 +214,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     triangle = true;
   }
-  if (lineB < lineA + lineC && Math,abs(lineA - lineC)) {
+  if (lineB < lineA + lineC && Math.abs(lineA - lineC)) {
     triangle = true;
   }
   if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
@@ -226,13 +226,14 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(arrayDrink) {
   // seu código aqui
-  let water = arrayDrink.replace(/\D/gim, '');
+  let water = arrayDrink.split(/\D/g).join('');
   if (water.length === 1) {
     return '1 copo de água';
   }
   if (water.lentgh > 1) {
-    return `${water.lentgh} copos de água`
+    return `${water.lentgh} copos de água`;
   }
+  return '0 copos de água';
 }
 
 module.exports = {
