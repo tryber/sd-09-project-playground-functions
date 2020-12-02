@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+  let result = Boolean;
   if (value1 === true && value2 === true) {
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 // Desafio 2
@@ -20,7 +22,7 @@ function splitSentence(string) {
     if (string[index] === ' ') {
       array.push(word);
       word = '';
-    } else if (index === String(string.length - 1)){
+    } else if (index === String(string.length - 1)) {
       word += string[index];
       array.push(word);
     } else {
@@ -29,11 +31,10 @@ function splitSentence(string) {
   }
   return array;
 }
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let string =  array[array.length - 1] + ', ' + array[0];
+  let string =  `${array[array.length - 1]}, ${array[0]}`;
   return string;
 }
 
@@ -63,9 +64,9 @@ function highestCount(array) {
   let bigger = biggerInArray(array);
   let count = 0;
   for (let index in array) {
-      if (array[index] === bigger) {
-        count++;
-      }
+    if (array[index] === bigger) {
+      count += 1;
+    }
   }
   return count;
 }
@@ -73,11 +74,13 @@ function highestCount(array) {
 // Função retorna distacia positiva entre dois pontos
 function distanceBetween(element1, element2) {
   let result = element1 - element2;
+  let out = Number;
   if (result < 0) {
-    return result * -1;
+    out = result * -1;
   } else {
-    return result;
+    out = result;
   }
+  return out;
 }
 
 // Desafio 7
@@ -126,7 +129,7 @@ function encode(string) {
         status = true;
       }
     }
-    if (status == false) {
+    if (status === false) {
       result += string[index];
     }
   }
