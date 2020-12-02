@@ -104,8 +104,8 @@ function fizzBuzz(numbersArray) {
 }
 
 function code(stringToCode, toBeReplaced, replaceBy) {
-  codedString = "";
-  for (let stringIndex = 0; stringIndex < stringToCode.length; stringIndex++) {
+  let codedString = '';
+  for (let stringIndex = 0; stringIndex < stringToCode.length; stringIndex += 1) {
     if (stringToCode[stringIndex] === toBeReplaced) {
       codedString += replaceBy;
     } else {
