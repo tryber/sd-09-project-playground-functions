@@ -224,19 +224,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(arrayDrink) {
   // seu código aqui
-  let waterGlasess = str.split(/\D/g).join('')
-  let sum = 0
-  for (let items of waterGlasess) {
-    sum += Number(items)
+  let water = arrayDrink.replace(/\D/gim, '');
+  if (water.length === 1) {
+    return '1 copo de água';
   }
-  if (sum === 1) {
-    return `${sum} copo de água`
+  if (water.lentgh > 1) {
+    return `${water.lentgh} copos de água`
   }
-  return `${sum} copos de água`
 }
-
 
 module.exports = {
   calcArea,
