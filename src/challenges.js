@@ -61,16 +61,18 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2,
   }
   let message = '';
-  if (positions.mouse - positions.cat1 < positions.mouse - positions.cat2) {
+  let distanceCat1 = Math.abs(positions.mouse - positions.cat1);
+  let distanceCat2 = Math.abs(positions.mouse - positions.cat2)
+  if (distanceCat1 < distanceCat2) {
     message = 'cat1';
-  } else if (positions.mouse - positions.cat1 > positions.mouse - positions.cat2) {
+  } else if (distanceCat1 > distanceCat2) {
     message = 'cat2';
   } else {
     message = 'os gatos trombam e o rato foge';
   }
   return message;
 }
-
+console.log(catAndMouse(0, 3, 2));
 // Desafio 8
 // switch  if() to switch()
 function fizzBuzz(numberList) {
@@ -91,12 +93,11 @@ function fizzBuzz(numberList) {
 
 // Desafio 9
 function encode(word) {
-  let loweredWord = word.toLowerCase();
   let codedWord = '';
-  for (let index in loweredWord) {
-    switch (loweredWord[index]) {
+  for (let index in word) {
+    switch (word[index]) {
       default:
-        codedWord += loweredWord[index];
+        codedWord += word[index];
         break;
       case 'a':
         codedWord += '1';
@@ -118,12 +119,11 @@ function encode(word) {
 }
 
 function decode(codedWord) {
-  let loweredWord = codedWord.toLowerCase();
   let decodedWord = '';
-  for (let index in loweredWord) {
-    switch (loweredWord[index]) {
+  for (let index in codedWord) {
+    switch (codedWord[index]) {
       default:
-        decodedWord += loweredWord[index];
+        decodedWord += codedWord[index];
         break;
       case '1':
         decodedWord += 'a';
