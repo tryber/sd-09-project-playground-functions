@@ -173,9 +173,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let sum = 0;
+  let aux = 0;
+  for (let index = 0; index < bebidas.length; index += 1) {
+    if (isNaN(bebidas[index]) == false) {
+      if(bebidas[index] == ' ') {
+          sum += 0
+      } else {
+      aux = parseInt(bebidas[index])
+      sum += aux;
+      }
+    }
+  }
+  return `${sum} copos de água`
 }
+console.log(hydrate("1 cachaça, 5 cervejas, 3 whisks e 1 copo de vinho"))
 
 
 module.exports = {
