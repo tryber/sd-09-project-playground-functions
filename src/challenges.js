@@ -35,16 +35,16 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 function footballPoints(wins, ties) {
   let vitorias = 0;
   let empate = 0;
-  if (wins === true) {
-    vitorias = 3;
-  } else if (ties === true) {
-    empate = 1;
+  if (wins !== 0) {
+    vitorias = wins * 3;
+  } else if (ties !== 0) {
+    empate = ties * 1;
   } else {
     return false;
   }
   return vitorias + empate;
 }
-console.log(footballPoints(true, true));
+console.log(footballPoints(10, 5));
 
 // Desafio 6
 function highestCount(numeros) {
