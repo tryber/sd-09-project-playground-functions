@@ -168,20 +168,24 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(tech, name) {
-  let objectTech = [];
+  if (tech.length == '') {
+    return 'Vazio!';
+  } else {
+    let objectTech = [];
 
-  tech.sort();
-
-  for (let index = 0; index < tech.length; index += 1) {
-    objectTech.push({
-      tech: tech[index],
-      'name': name,
-    });
+    tech.sort();
+  
+    for (let index = 0; index < tech.length; index += 1) {
+      objectTech.push({
+        tech: tech[index],
+        name: name,
+      });
+    }
+  
+    return objectTech;
   }
-
-  return objectTech;
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Nathália'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Nathália'));
 
 
 // Desafio 11
