@@ -87,7 +87,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrNumber) {
   // seu código aqui
   let arrFizz = [];
-  for (let index in arrNumber) {
+  for (let index = 0; index < arrNumber.length; index += 1) {
     switch (true) {
       case ((arrNumber[index] % 5 === 0) && (arrNumber[index] % 3 === 0)):
         arrFizz.push('fizzBuzz');
@@ -104,6 +104,7 @@ function fizzBuzz(arrNumber) {
   }
   return arrFizz;
 }
+
 
 // Desafio 9
 function encode(stri) {
@@ -175,16 +176,68 @@ function techList(arr, name) {
   }
   for (let index = 0; index < arr.length; index += 1) {
     let x = { tech: array[index],
-        name: name };
+      name: name };
     obj.push(x);
   }
-  
   return obj;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function criateNumber (number) {
+  let numero = '';
+  for (let index = 0; index < number.length; index += 1){
+    switch (index) {
+      case 0:
+        numero += `(${number[index]}`;
+        break;
+      case 1:
+        numero += `${number[index]}) `;
+        break;
+      case 6:
+        numero += `${number[index]}-`
+        break;
+      default:
+        numero += `${number[index]}`
+    }
+  }
+  return numero;
+}
+
+function verifyNumber(number) {
+  let isRight90 = false;
+  for (let index of number){
+    if ((index > 9) || (index < 0)){
+      isRight90 = true;
+    }
+  }
+  return isRight90;
+}
+
+function quantidyNumber(number) {
+  let volta = false;
+  for (let index of number) {
+    let cont = 0;
+    for (let index2 of number) {
+      if (number[index] === number[index2]){
+        cont += 1;
+      }
+      if (cont >= 3) {
+        volta = true;
+      }
+    }
+  }
+  return volta;
+}
+
+function generatePhoneNumber(number) {
   // seu código aqui
+  let show = '';
+  if (verifyNumber(number) || quantidyNumber(number)){
+    show = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    show = criateNumber(number);
+  }
+  return show;
 }
 
 // Desafio 12
