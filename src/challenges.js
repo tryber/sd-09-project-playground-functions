@@ -26,13 +26,13 @@ let string = 'go Trybe';
 console.log(splitSentence(string));
 
 // Desafio 4
-function concatName(array) {
+function concatName(words) {
   // seu código aqui
-  let ultimoPalavra = array.pop();
-  return `${ultimoPalavra}, ${array[0]}`;
+  let ultimoPalavra = words.pop();
+  return `${ultimoPalavra}, ${words[0]}`;
 }
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(array));
+let words = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(words));
 
 // Desafio 5
 function footballPoints() {
@@ -40,21 +40,21 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(numeros) {
   let contador = 0;
   let maiorNum = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > maiorNum) {
-      maiorNum = array[index];
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] > maiorNum) {
+      maiorNum = numeros[index];
     }
-  } for (let index2 = 0; index2 < array.length; index2 += 1) {
-    if (array[index2] === maiorNum) {
+  } for (let index2 = 0; index2 < numeros.length; index2 += 1) {
+    if (numeros[index2] === maiorNum) {
       contador += 1;
     }
   } return contador;
 }
-let array = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(array));
+let numeros = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse() {
