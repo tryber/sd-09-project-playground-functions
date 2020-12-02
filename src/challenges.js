@@ -59,12 +59,12 @@ if (distanceTwoPoints(mouse, cat1) < distanceTwoPoints(mouse, cat2)){
 function fizzBuzz(num) {
   let list = []
   for( let i=0; i<num.length; i++){
-    if(num[i]%3==0){
-        list.push("fizz");
+    if(num[i]%3==0 && num[i]%5==0){
+        list.push("fizzBuzz");
     } else if(num[i]%5==0) {
         list.push("buzz") ;
-    } else if(num[i]%3==0 && num[i]%5==0){
-        list.push("fizzBuzz");
+    } else if(num[i]%3==0){
+        list.push("fizz");
     } else{
         list.push("bug!");
     }
