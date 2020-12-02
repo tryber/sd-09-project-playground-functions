@@ -25,7 +25,7 @@ function splitSentence(text) {
       } else {
         currentWord += char;
       }
-    }   
+    }
   }
   return textArray;
 }
