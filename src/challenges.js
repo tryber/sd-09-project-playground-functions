@@ -63,7 +63,7 @@ console.log(footballPoints(10, 3));
 // Desafio 6
 
 function highestCount(arrayRepet) {
-  let maiorNumero = arrayRepet;
+  let maiorNumero = arrayRepet[0];
   let contaMaiorNumero = 0;
   // seu código aqui
   for (let index = 0; index < arrayRepet.length; index += 1) {
