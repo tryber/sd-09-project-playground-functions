@@ -205,7 +205,7 @@ function techList(array, name) {
 let lista = [];
 array.sort()
 
-  for (let contador = 0; contador < asd.length; contador += 1) {
+  for (let contador = 0; contador < array.length; contador += 1) {
     lista.push({tech: array[contador], name: name})
   }
   if(lista.length === 0) {
