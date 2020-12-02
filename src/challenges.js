@@ -184,14 +184,14 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(pedido) {
-  let total = pedido.split(' ');
-  let counter = 0;
-  for (let i = 0; i < total.length; i++) {
-      if (total[i] > 0) {
-          counter += parseInt(total[i]) 
-      }
+  let parameter = /[0-9]/g;
+  let filter = pedido.match(parameter);
+  let result = 0
+
+  for (let i = 0; i < filter.length; i++) {
+      result += parseInt(filter[i])
   }
-  return counter + ' copos de agua'
+  return `${result} copo de água`
 }
 
 
