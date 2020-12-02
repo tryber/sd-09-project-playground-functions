@@ -92,15 +92,35 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  let encrypted = '';
-  let cipher = {
+function createCipherObj (type) {
+  let cipher
+  
+if (type === 'encode') {
+cipher = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
-  };
+  }
+
+  }
+
+if (type === 'decode'){
+  cipher = {
+    '1': 'a',
+    '2': 'e',
+    '3': 'i',
+    '4': 'o',
+    '5': 'u'
+  }
+}
+return cipher
+}
+
+function encode(string) {
+  let encrypted = '';
+  let cipher = createCipherObj('encode')
 
   for (let i of string) {
     switch (i) {
@@ -134,13 +154,7 @@ function encode(string) {
 
 function decode(string) {
   let decipher = '';
-  let cipher = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
+  let cipher = createCipherObj('decode')
 
   for (let i of string) {
     switch (i) {
@@ -171,6 +185,8 @@ function decode(string) {
   }
   return decipher;
 }
+
+console.log(decode('h3 th2r2'))
 
 // Desafio 10
 function techList(array, name) {
