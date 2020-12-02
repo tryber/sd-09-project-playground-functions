@@ -63,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
-  } else (distanciaCat1 === distanciaCat2) 
+  } else (distanciaCat1 === distanciaCat2)
     return 'os gatos trombam e o rato foge';
   }
 
@@ -89,8 +89,8 @@ function fizzBuzz(array) {
 function encode(string) {
   // seu código aqui
   let newString = '';
-  let vowels = { 
-    a: 1, 
+  let vowels = {
+    a: 1,
     e: 2,
     i: 3,
     o: 4,
@@ -108,23 +108,8 @@ return newString;
 
 function decode() {
   // seu código aqui
-  let newString = '';
-  let vowels = { 
-    1: a, 
-    2: e,
-    3: i,
-    4: o,
-    5: u,
-  };
-  for (let key in string) {
-    if (string[key] === '1' || string[key] === '2' || string[key] === '3' || string[key] === '4'|| string[key] === '5') {
-      newString += vowels[string[key]];
-  } else {
-    newString += string[key];
-  }
 }
-return newString;
-}
+
 console.log(decode('h3 th2r2!'));
 
 // Desafio 10
