@@ -68,6 +68,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let mouCat1 = 0;
   let mouCat2 = 0;
+  let result = '';
   if (mouse > cat1) {
     mouCat1 = mouse - cat1;
   } else {
@@ -79,18 +80,34 @@ function catAndMouse(mouse, cat1, cat2) {
     mouCat2 = cat2 - mouse;
   }
   if (mouCat2 > mouCat1) {
-    console.log('cat1')
+    console.log('cat1');
+    result = 'cat1';
   } else 
   if (mouCat1 === mouCat2) {
-    console.log('os gatos trombam e o rato foge')
+    console.log('os gatos trombam e o rato foge');
+    result = 'os gatos trombam e o rato foge';
   } else {
-    console.log('cat2')
+    console.log('cat2');
+    result = 'cat';
   }
+  return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(array) {
+  let result = [];
+  for (let index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!')
+    }
+  }
+  console.log(result);
 }
 
 // Desafio 9
@@ -146,5 +163,6 @@ concatName(['primeira', 'segunda', 'Ultima'])
 footballPoints(3, 1)
 highestCount([9, 1, 2, 41, 3, 9, 5, 7, 9, 41, 17, 41])
 catAndMouse(7, 8, 8)
+fizzBuzz([2, 15, 7, 9, 45, 25])
 
 // Aooba, não é que tem um segredo no Lession Learned?!
