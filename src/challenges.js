@@ -29,13 +29,16 @@ function concatName(nomeInicioFim) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  for (index = 0; index < wins; index ++) {
+  let somaVitorias = 0;
+  let somaEmpates = 0;
+    
+  for (let index = 0; index < wins; index += 1) {
     somaVitorias = wins * 3;
   }
-  for (index2 = 0; index2 < ties; index2 ++) {
+  for (let index2 = 0; index2 < ties; index2 += 1) {
     somaEmpates = ties * 1;
   }return somaEmpates + somaVitorias;
-}console.log(footballPoints(2, 2));
+}console.log(footballPoints(2, 3));
 
 // Desafio 6
 function highestCount() {
