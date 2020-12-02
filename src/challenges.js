@@ -13,15 +13,23 @@ function compareTrue( value1, value2 ) {
 // Desafio 2
 function calcArea( base , height ) {
   // seu código aqui
-  let valueAria = ( base * height ) / 2;
+  let valueArea = ( base * height ) / 2;
   return valueArea;
 
 }
 
+calcArea(10, 5);
+
 // Desafio 3
-function splitSentence() {
+function splitSentence( phrase ) {
   // seu código aqui
+  let array = phrase.split("");
+
+  return array;
+
 }
+
+splitSentence("Arroz e feijao e bom");
 
 // Desafio 4
 function concatName() {
@@ -93,3 +101,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
