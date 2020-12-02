@@ -37,21 +37,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let biggest = array[0]
-  let aparissons = 0
-  
+  let biggest = array[0];
+  let aparissons = 0;
+
   for (let i of array) {
     if (i > biggest) {
-      biggest = i
+      biggest = i;
     }
   }
 
   for (let i of array) {
     if (i === biggest) {
-      aparissons++
+      aparissons++;
     }
   }
-  return aparissons
+  return aparissons;
 }
 
 // Desafio 7
@@ -123,21 +123,21 @@ function encode(string) {
         break;
 
       default:
-        encrypted += i
+        encrypted += i;
         break;
     }
   }
-  return encrypted
+  return encrypted;
 }
 
 function decode(string) {
   let decipher = "";
   let cipher = {
-    '1': 'a',
-    '2': 'e',
-    '3': 'i',
-    '4': 'o',
-    '5': 'u',
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u",
   };
 
   for (let i of string) {
@@ -163,67 +163,76 @@ function decode(string) {
         break;
 
       default:
-        decipher += i
+        decipher += i;
         break;
     }
   }
-  return decipher
+  return decipher;
 }
 
 // Desafio 10
 function techList(array, name) {
-  let sortArray = array.sort()
-  let resultArray = []
+  let sortArray = array.sort();
+  let resultArray = [];
 
   for (let i = 0; i < array.length; i++) {
     resultArray.push({
       tech: sortArray[i],
-      name: name
-    })
+      name: name,
+    });
   }
-  return resultArray
+  return resultArray;
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let reps
-  let isValid
-  let result
+  let reps;
+  let isValid;
+  let result;
 
   for (let i of array) {
-    reps = 0
-    
+    reps = 0;
+
     for (let j of array) {
       if (i === j) {
-        reps++
+        reps++;
       }
     }
-    
+
     if (reps >= 3 || i < 0 || i > 9) {
-      result = 'não é possível gerar um número de telefone com esses valores'
-      isValid = false
+      result = "não é possível gerar um número de telefone com esses valores";
+      isValid = false;
     }
   }
 
   if (array.length !== 11) {
-    result = 'Array com tamanho incorreto'
-    isValid = false
-  } 
+    result = "Array com tamanho incorreto";
+    isValid = false;
+  }
 
-  if (isValid = true) {
-    result = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
-    return result
+  if ((isValid = true)) {
+    result = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+    return result;
   } else {
-    return result
+    return result;
   }
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 1, 7, 8, 9, 0, 1]))
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function compareNum (a, b) {
+  if (a == b) return 0;
+  if (a < b) return -1;
+  if (a > b) return 1;
 }
+
+function triangleCheck(lineA, lineB, lineC) {
+  let lines = [lineA, lineB, lineC];
+  let linesSorted = lines.sort(compareNum);
+  let sum = Math.abs(linesSorted[1] + linesSorted[0]);
+
+  return linesSorted[2] < sum ? true : false
+}
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
