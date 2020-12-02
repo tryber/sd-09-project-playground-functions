@@ -1,8 +1,4 @@
 // Desafio 1
-//.
-let bool1 = true
-let bool2 = false
-
 function compareTrue(bool1, bool2) {
   // seu código aqui
   if (bool1 === true && bool2 === true) {
@@ -19,8 +15,17 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  let divisor = [];
+  for(let i = 0; i < frase.length; i ++) {
+    if (frase[i] !== ' ') {
+      divisor += frase[i]
+    } else {
+      divisor.push(frase[i])
+    }
+  }
+  return divisor
 }
 
 // Desafio 4
