@@ -70,9 +70,22 @@ function catAndMouse(mouse, cat1, cat2) {
   
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros = []) {
   // seu código aqui
-}
+  divisiveis = []
+  for (contador = 0; contador < numeros.length; contador += 1){
+    if (numeros[contador] % 3 === 0 && numeros[contador] % 5 > 0){
+      divisiveis.push('fizz')
+    } else if (numeros[contador] % 5 === 0 && numeros[contador] % 3 > 0){
+      divisiveis.push('buzz')
+    } else if (numeros[contador] % 5 === 0 && numeros[contador] % 3 === 0){
+      divisiveis.push('fizzBuzz')
+    } else {
+      divisiveis.push('bug!')
+    }
+  } console.log(divisiveis)
+
+}fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
 function encode() {
