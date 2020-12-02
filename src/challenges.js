@@ -1,4 +1,4 @@
-// Desafio 1 teste
+// Desafio 1
 function compareTrue(bool1, bool2) {
   let answer = false;
 
@@ -39,14 +39,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let biggest = array[0];
+  let biggest = array.sort(compareNum)[array.length - 1];
   let aparissons = 0;
-
-  for (let i of array) {
-    if (i > biggest) {
-      biggest = i;
-    }
-  }
 
   for (let i of array) {
     if (i === biggest) {
