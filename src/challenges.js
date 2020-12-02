@@ -35,15 +35,14 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 function footballPoints(wins, ties) {
   let vitorias = 0;
   let empate = 0;
-  let pontos = 0;
-  if(wins === true){
+  if (wins === true) {
     vitorias = 3;
   } else if (ties === true) {
     empate = 1;
   } else {
     return false;
   }
-  return pontos = vitorias + empate;
+  return vitorias + empate;
 }
 console.log(footballPoints(true, true));
 
@@ -61,8 +60,7 @@ function highestCount(numeros) {
     }
   } return contador;
 }
-let numeros = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(numeros));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
