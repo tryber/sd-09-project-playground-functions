@@ -51,9 +51,9 @@ function highestCount(valuesArray) {
   for (let indexOfValues = 1; indexOfValues < valuesArray.length; indexOfValues += 1) {
     if (valuesArray[indexOfValues] > highestNumber) {
       highestNumber = valuesArray[indexOfValues];
-      highestRepeat = 1;
+      highestRepeat = 0;
     }
-    if (highestNumber === valuesArray[indexOfValues]) {
+    if (valuesArray[indexOfValues] === highestNumber) {
       highestRepeat += 1;
     }
   }
@@ -77,21 +77,9 @@ function catAndMouse(mouse, cat1, cat2) {
   return (result);
 }
 
-// Desafio 8
-function fizzBuzz(numbersArray) {
-  let fizzBuzzArray = [];
-  for (const indexNumbers = 0; indexNumbers < numbersArray.length; indexNumbers += 1) {
-    fizzBuzzArray[indexNumbers] = fizzOrBuzz(numbersArray[indexNumbers]);
-    if (fizzBuzzArray[indexNumbers] === undefined) {
-      fizzBuzzArray[indexNumbers] = 'bug!';
-    }
-  }
-  return fizzBuzzArray;
-}
-
 function fizzOrBuzz(number) {
   let result;
-    if (number % 3 === 0) {
+  if (number % 3 === 0) {
     result = 'fizz';
   }
   if (number % 5 === 0) {
@@ -102,6 +90,19 @@ function fizzOrBuzz(number) {
   }
   return result;
 }
+
+// Desafio 8
+function fizzBuzz(numbersArray) {
+  let fizzBuzzArray = [];
+  for (let indexNumbers = 0; indexNumbers < numbersArray.length; indexNumbers += 1) {
+    fizzBuzzArray[indexNumbers] = fizzOrBuzz(numbersArray[indexNumbers]);
+    if (fizzBuzzArray[indexNumbers] === undefined) {
+      fizzBuzzArray[indexNumbers] = 'bug!';
+    }
+  }
+  return fizzBuzzArray;
+}
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
