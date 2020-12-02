@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
 function highestCount(array2) {
   let maiorNumero = 0;
   let repeticao = 0;
-  
+
   for (const numero1 of array2) {
     if (maiorNumero < numero1) {
       maiorNumero = numero1;
