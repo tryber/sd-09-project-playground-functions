@@ -14,16 +14,18 @@ function splitSentence(text) {
   let textArray = [];
   let lastIndex = (text.length - 1).toString();
   for (let charIndex in text) {
-    let char = text[charIndex];
-    if (char === ' ') {
-      textArray.push(currentWord);
-      currentWord = '';
-    } else if (charIndex === lastIndex) {
-      currentWord += char;
-      textArray.push(currentWord);
-    } else {
-      currentWord += char;
-    }
+    if (text.hasOwnProperty(charIndex)) {
+      let char = text[charIndex];
+      if (char === ' ') {
+        textArray.push(currentWord);
+        currentWord = '';
+      } else if (charIndex === lastIndex) {
+        currentWord += char;
+        textArray.push(currentWord);
+      } else {
+        currentWord += char;
+      }
+    }   
   }
   return textArray;
 }
@@ -46,14 +48,16 @@ function highestCount(inputArray) {
   let counter = {};
   let highestNumber;
   for (let index in inputArray) {
-    let number = inputArray[index];
-    if (!(number in counter)) {
-      counter[number] = 1;
-    } else {
-      counter[number] += 1;
-    }
-    if (index === '0' || number > highestNumber) {
-      highestNumber = number;
+    if (inputArray.hasOwnProperty(index)) {
+      let number = inputArray[index];
+      if (!(number in counter)) {
+        counter[number] = 1;
+      } else {
+        counter[number] += 1;
+      }
+      if (index === '0' || number > highestNumber) {
+        highestNumber = number;
+      }
     }
   }
   return counter[highestNumber];
@@ -93,9 +97,11 @@ function getFizzBuzz(number) {
 
 function fizzBuzz(inputArray) {
   for (let index in inputArray) {
-    let number = inputArray[index];
-    let resultStr = getFizzBuzz(number);
-    inputArray[index] = resultStr;
+    if (inputArray.hasOwnProperty(index)) {
+      let number = inputArray[index];
+      let resultStr = getFizzBuzz(number);
+      inputArray[index] = resultStr;
+    }
   }
   return inputArray;
 }
@@ -104,11 +110,13 @@ function fizzBuzz(inputArray) {
 function translate(text, dictionary) {
   let output = '';
   for (let charIndex in text) {
-    let char = text[charIndex];
-    if (char in dictionary) {
-      output += dictionary[char];
-    } else {
-      output += char;
+    if (text.hasOwnProperty(charIndex)) {
+      let char = text[charIndex];
+      if (char in dictionary) {
+        output += dictionary[char];
+      } else {
+        output += char;
+      }
     }
   }
   return output;
@@ -156,9 +164,11 @@ function techList(array, name) {
     array = ascOrder(array);
     let output = [];
     for (let index in array) {
-      let tech = array[index];
-      let obj = { tech, name };
-      output.push(obj);
+      if (array.hasOwnProperty(index)) {
+        let tech = array[index];
+        let obj = { tech, name };
+        output.push(obj);
+      }
     }
     return output;
   }
@@ -196,13 +206,15 @@ function handlePhoneArray(array) {
   let output = '';
   let counter = {};
   for (let index in array) {
-    let item = array[index];
-    counter = countItem(item, counter);
-    if (validateItem(item, counter[item])) {
-      output = 'não é possível gerar um número de telefone com esses valores';
-      break;
+    if (array.hasOwnProperty(index)) {
+      let item = array[index];
+      counter = countItem(item, counter);
+      if (validateItem(item, counter[item])) {
+        output = 'não é possível gerar um número de telefone com esses valores';
+        break;
+      }
+      output += getIndexFormat(index) + item;
     }
-    output += getIndexFormat(index) + item;
   }
   return output;
 }
@@ -233,8 +245,10 @@ function hydrate(text) {
   let cupsText = 'copo';
 
   for (let index in numbersInText) {
-    let number = parseInt(numbersInText[index], 10);
-    totalWater += number;
+    if (numbersInText.hasOwnProperty(index)) {
+      let number = parseInt(numbersInText[index], 10);
+      totalWater += number;
+    }
   }
 
   if (totalWater > 1) {
