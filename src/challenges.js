@@ -28,16 +28,32 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
+// Outro jeito de resolver o desafio 3: 
+function splitSentence(string) {
+  let stringArray = [];
+  let temporary = '';
+  for (let key in string){
+    if (string[key] === ' ') {
+      stringArray.push(temporary);
+      temporary = '';
+    } else {
+      temporary += string[key]; 
+    }
+  }
+  stringArray.push(temporary);
+  return stringArray;
+}
+
 // console.log(splitSentence('Go Trybe'));
 // --------------------------------------------------------------------
 
 // Desafio 4
 function concatName(stringArray) {
-  let concatenatedName = stringArray[stringArray.length - 1] + ', ' + stringArray[0] + '.';
+  let concatenatedName = (`${stringArray[stringArray.length - 1]},  ${stringArray[0]}.`);
   return concatenatedName;
 }
 
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // --------------------------------------------------------------------
 
 // Desafio 5
