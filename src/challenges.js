@@ -46,12 +46,15 @@ function concatName( arrayString ) {
   return result;
 }
 
-let varr = ["arroz", "feijao", "macarrao"];
-concatName(varr);
-
 // Desafio 5
-function footballPoints() {
+function footballPoints( wins, ties) {
   // seu código aqui
+
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+
+  let result = winsPoints + tiesPoints;
+  return result;
 
 }
 
