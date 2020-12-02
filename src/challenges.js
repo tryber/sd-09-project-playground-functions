@@ -1,15 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  let result;
-
-  if (value1 === true && value2 === true)   {
-    result = true;
+  if (value1 === true && value2 === true) {
+    return (true);
   }
-    else     {
-    result = false;
+    else {
+      return (false);
     }
-  return (result);
 }
 
 // Desafio 2
