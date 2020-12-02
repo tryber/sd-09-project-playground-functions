@@ -67,11 +67,11 @@ function catAndMouse(mouse , cat1 , cat2) {
   let distance2 = distance(mouse , cat2)
 
   if(distance1 > distance2) {
-    return console.log('cat2')
+    return 'cat2'
   } else if (distance1 < distance2) {
-    return console.log('cat1')
+    return 'cat1'
   } else {
-    return console.log("os gatos trombam e o rato foge")
+    return "os gatos trombam e o rato foge"
   }
 }
 
