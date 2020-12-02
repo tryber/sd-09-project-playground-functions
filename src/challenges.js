@@ -218,19 +218,29 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(string) {
+function getNumberOfWaterCups(string) {
   string = string.split("")
   let cupsOfWater = 0;
-
   for (i in string) {
     if (isNumberCharacter(string[i])) {
       cupsOfWater += parseInt(string[i], 10);
     }
   }
-  return (cupsOfWater + ' copos de água');
+  return cupsOfWater;
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+function hydrate(string) {
+  let cupsOfWater = getNumberOfWaterCups(string);
+
+  if (cupsOfWater === 1) {
+    return (cupsOfWater + ' copo de água');
+  } else {
+    return (cupsOfWater + ' copos de água');
+  }
+
+}
+
+console.log(hydrate("1 cerveja"));
 
 module.exports = {
   calcArea,
