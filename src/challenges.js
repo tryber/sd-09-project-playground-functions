@@ -5,7 +5,7 @@ function compareTrue(value1, value2) {
   if (value1 && value2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 console.log(compareTrue(true, true))
 
@@ -13,14 +13,11 @@ console.log(compareTrue(true, true))
 
 function calcArea(base, height) {
   // seu código aqui
-  // Área de um triângulo: (base * altura) / 2.
   return base * height / 2;
 }
 
-console.log(calcArea(2, 4))
-
 // Desafio 3
-function splitSentence(str) {
+function splitSentence() {
   // seu código aqui
 }
 
@@ -35,12 +32,9 @@ function footballPoints() {
 }
 
 // Desafio 6
-// function highestCount() {
-  // seu código aqui
-  // 
-// }
 function highestCount() {
-
+  // seu código aqui
+ 
 }
 
 // Desafio 7
