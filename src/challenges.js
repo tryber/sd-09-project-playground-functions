@@ -244,6 +244,10 @@ function hydrate(string) {
     quantity += parseInt(i)
   }
 
+  if (quantity === 1) {
+    phrase = 'copo de água'
+  }
+
   output = `${quantity} ${phrase}`
 
   return output
