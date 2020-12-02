@@ -40,7 +40,7 @@ function highestCount(arrayNums) {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
     }
-    if (arrayNums[numberIndex] === highterNum) {
+    else if (arrayNums[numberIndex] === highterNum) {
       highterNumRepeat += 1;
     }
   }
@@ -51,7 +51,7 @@ function highestCount(arrayNums) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseToCats= [Math.abs((cat1 - mouse)), Math.abs((cat2 - mouse))]
   let  priority = 'cat1';
-  if (distanceMouseToCats[0] > distanceMouseToCats[1]){
+  if (distanceMouseToCats[0] > distanceMouseToCats[1]) {
       priority = 'cat2';
   }
   if (distanceMouseToCats[0] === distanceMouseToCats[1]) {
@@ -62,17 +62,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzzGenerate(number) {
-  let word = '';
+  let baseFizzBuzz = {
+    0: 'bug!',
+    1: 'fizz',
+    2: 'buzz',
+    3: 'fizzBuzz',    
+  }
+  let mask = 0;
   if (number % 3 === 0) {
-    word += 'fizz';
+    mask += 1 ;
   }
   if (number % 5 === 0) {
-    word += 'Buzz';
+    mask += 2;
   }
-  if (word === '') {
-    word = 'bug!';
-  }
-  return word;
+  return baseFizzBuzz[mask];
 }
 function fizzBuzz(arrayNums) {
   let arrayResponse = [];
