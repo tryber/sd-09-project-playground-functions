@@ -180,7 +180,7 @@ function techList(array, name) {
   for (let i = 0; i < array.length; i += 1) {
     resultArray.push({
       tech: sortArray[i],
-      name: name,
+      name: name
     });
   }
 
@@ -230,8 +230,13 @@ function triangleCheck(lineA, lineB, lineC) {
   let lines = [lineA, lineB, lineC];
   let linesSorted = lines.sort(compareNum);
   let sum = Math.abs(linesSorted[1] + linesSorted[0]);
+  let result = false
 
-  return linesSorted[2] < sum ? true : false;
+  if (linesSorted[2] < sum) {
+    result = true
+  }
+
+  return result
 }
 
 // Desafio 13
