@@ -81,6 +81,17 @@ function fizzBuzz(arrayNums) {
 }
 
 // Desafio 9
+function codeBase(phrase) {
+  let objectReference = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  objectReference.arrayPhrase = phrase.split('');
+  return objectReference;
+}
 function encode(phrase) {
   let baseCopy;
   baseCopy = codeBase(phrase);
@@ -104,39 +115,28 @@ function decode(phrase) {
   return baseCopy.arrayPhrase.join('');
 }
 
-function codeBase(phrase) {
-  let objectReference = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
-  objectReference.arrayPhrase = phrase.split('');
-  return objectReference;
-}
-
 // Desafio 10
-function techList(arrayNamesAndTechs, name) {
-  if (arrayNamesAndTechs.length > 0) {
-    let object;
-    object = techObjectCreator(arrayNamesAndTechs, name);
-    return object;
-  }
-  return 'Vazio!';
-}
-function techObjectCreator(arrayNamesAndTechs, nameReceived) {
+function techObjectCreator(arrayNamesAndTechs, nameReceived){
   let arrayTech = [];
   arrayNamesAndTechs.sort();
-  for (let index = 0; index < arrayTech.length; index += 1) {
+  for (let index in arrayNamesAndTechs) {
     arrayTech.push(
-    techObject = {
+      techObject = {
       tech: arrayNamesAndTechs[index],
       name: nameReceived,
       }
-    )
+    );
   }
   return arrayTech;
+}
+
+function techList(arrayNamesAndTechs, name) {
+  if (arrayNamesAndTechs.length > 0) {
+    return techObjectCreator(arrayNamesAndTechs, name);
+  }
+  else {
+    return 'Vazio!';
+  }
 }
 
 // Desafio 11
