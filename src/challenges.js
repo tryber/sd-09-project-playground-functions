@@ -238,7 +238,7 @@ module.exports = {
   compareTrue,
   concatName,
   decode,
-  // encode,
+  encode,
   fizzBuzz,
   footballPoints,
   generatePhoneNumber,
