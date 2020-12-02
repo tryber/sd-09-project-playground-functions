@@ -89,9 +89,10 @@ function isNumberCharacter(character) {
 
 function swapVowelNumber(vowel) {
   let vowelNumberPair = {
-    vowels = ['a', 'e', 'i', 'o', 'u'],
-    numbers = ['1', '2', '3', '4', '5'],
-  }
+    vowels: ['a', 'e', 'i', 'o', 'u'],
+    numbers: ['1', '2', '3', '4', '5'],
+  };
+
   for (let i in vowelNumberPair.vowels) {
     if (vowel === vowelNumberPair.vowels[i]) {
       return vowelNumberPair.numbers[i];
@@ -102,12 +103,12 @@ function swapVowelNumber(vowel) {
 function swapNumberVowel(number) {
 
   let vowelNumberPair = {
-    vowels = ['a', 'e', 'i', 'o', 'u'],
-    numbers = ['1', '2', '3', '4', '5'],
-  }
+    vowels: ['a', 'e', 'i', 'o', 'u'],
+    numbers: ['1', '2', '3', '4', '5'],
+  };
 
   for (let i in vowelNumberPair.numbers) {
-    if (vowel === vowelNumberPair.vowels[i]) {
+    if (number === vowelNumberPair.numbers[i]) {
       return vowelNumberPair.vowels[i];
     }
   }
