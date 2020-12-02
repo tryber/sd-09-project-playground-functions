@@ -157,10 +157,10 @@ function techList(tech, name) {
 
 // Desafio 11
 function numberequal11(arrayNumber) {
-  if (arrayNumber.length === 11) {
-    return true;
+  if (arrayNumber.length !== 11) {
+    return false;
   }
-  return false;
+  return true;
 }
 function numberLess0(arrayNumber) {
   for (let key of arrayNumber) {
@@ -210,8 +210,12 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) && (lineB < lineA + lineC && Math.abs(lineA - lineC)) && (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))) {
-    return true;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    if (lineB < lineA + lineC && Math.abs(lineA - lineC)) {
+      if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+        return true;
+      }
+    }
   }
   return false;
 }
