@@ -111,6 +111,10 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings
 }
 
+let tester = encode('Hi there, how are you?');
+console.log(tester);
+console.log(decode(tester));
+
 // Challenge Nine - Function to encode string
 function encode(stringToEncode) {
   let translatorMap = {
@@ -122,20 +126,17 @@ function encode(stringToEncode) {
   }
 
   stringToEncode = stringToEncode.toLowerCase();
+  let encodedArray = [];
   let encodedString = '';
 
-  let encoded = false;
   for (let index = 0; index < stringToEncode.length; index += 1) {
+    encodedArray.push(stringToEncode[index]);
     for (let key in translatorMap) {
-      if (stringToEncode[index] === key) {
-        encodedString += translatorMap[key];
-        encoded = true;
+      if (encodedArray[index] === key) {
+        encodedArray[index] = translatorMap[key];
       }
     }
-    if (encoded === false) {
-      encodedString += stringToEncode[index];
-    }
-    encoded = false;
+    encodedString += encodedArray[index];
   }
   return encodedString;
 }
@@ -151,20 +152,16 @@ function decode(stringToDecode) {
   }
 
   stringToDecode = stringToDecode.toLowerCase();
+  let decodedArray = [];
   let decodedString = '';
-
-  let decoded = false;
   for (let index = 0; index < stringToDecode.length; index += 1) {
+    decodedArray.push(stringToDecode[index]);
     for (let key in translatorMap) {
-      if (stringToDecode[index] == translatorMap[key]) {
-        decodedString += key;
-        decoded= true;
+      if (decodedArray[index] == translatorMap[key]) {
+        decodedArray[index] = key;
       }
     }
-    if (decoded === false) {
-      decodedString += stringToDecode[index];
-    }
-    decoded = false;
+    decodedString += decodedArray[index];
   }
   return decodedString;
 }
