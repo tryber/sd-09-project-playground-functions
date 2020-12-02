@@ -99,61 +99,60 @@ function fizzBuzz(array) {
 function encode(transLettersNumbers) {
   // seu código aqui
   let texteDecode = '';
-    for (let letter of transLettersNumbers) {
-      switch (letter) {
-        case 'a':
-          texteDecode += '1';
-          break;
-        case 'e':
-          texteDecode  += '2';
-          break;
-        case 'i':
-          texteDecode  += '3';
-          break;
-        case 'o':
-          texteDecode  += '4';
-          break;
-        case 'u':
-          texteDecode  += '5';
-          break;
-        default:
-          texteDecode  += letter;
-      }
-    }
-  return texteDecode ;
-}
-
-function decode(transLettersNumbers) {
-  // seu código aqui
-  let texteDecode = '';
   for (let letter of transLettersNumbers) {
     switch (letter) {
+      case 'a':
+        texteDecode += '1';
+        break;
+      case 'e':
+        texteDecode += '2';
+        break;
+      case 'i':
+        texteDecode += '3';
+        break;
+      case 'o':
+        texteDecode += '4';
+        break;
+      case 'u':
+        texteDecode += '5';
+        break;
+      default:
+        texteDecode += letter;
+    }
+  }
+  return texteDecode;
+}
+
+function decode(transNumbersLettes) {
+  // seu código aqui
+  let decodeTexte = '';
+  for (let number of transNumbersLettes) {
+    switch (number) {
       case '1':
         texteDecode += 'a';
         break;
       case '2':
-        texteDecode  += 'e';
+        texteDecode += 'e';
         break;
       case '3':
-        texteDecode  += 'i';
+        texteDecode += 'i';
         break;
       case '4':
-        texteDecode  += 'o';
+        texteDecode += 'o';
         break;
       case '5':
-        texteDecode  += 'u';
+        texteDecode += 'u';
         break;
       default:
-        texteDecode  += letter;
+        texteDecode += letter;
     }
   }
-  return texteDecode ;
+  return texteDecode;
 }
 
 // Desafio 10
 function techList(arrayNames, name) {
   // seu código aqui
-  
 }
 
 // Desafio 11
