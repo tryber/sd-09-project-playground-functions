@@ -115,11 +115,11 @@ function decode(string) {
 function techList(array, name) {
   let arrayList = [];
   for (let i = 0; i < array.length; i += 1) {
-    arrayList.push({tech: array[i], name: name})
+    arrayList.push({ tech: array[i], name })
   }
   return arrayList;
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Marcus'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Marcus'));
 
 // Desafio 11
 function generatePhoneNumber() {
