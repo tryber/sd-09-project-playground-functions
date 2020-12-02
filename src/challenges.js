@@ -178,6 +178,11 @@ function generatePhoneNumber(number) {
   if (number !== 11) {
     return "Array com tamanho incorreto.";
   }
+  for (let i in number) {
+    if (number[i] < 0) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
   let ddd = `(${ number[0]}` + `${number[1] })`;
   let num =  ` ${ number[2]}` + `${number[3]}` + `${number[4]}` + `${number[5]}` + `${number[6]}` + '-'+ `${number[7]}` + `${number[8]}` + `${number[9]}` + `${number[10] }`;
   let tel = ddd + num;
