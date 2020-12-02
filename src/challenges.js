@@ -7,15 +7,11 @@ function compareTrue(booleanOne ,booleanTwo) {
   }
 }
 
-console.log(compareTrue(false ,false));
-
 // Desafio 2
 function calcArea(base ,height) {
   let area = ((base * height) / 2);
   return area;
 }
-
-console.log(calcArea(10 ,5));
 
 // Desafio 3
 function splitSentence(str) {
@@ -23,16 +19,11 @@ function splitSentence(str) {
   return strArray;
 }
 
-console.log(splitSentence('go Trybe'));
-
 // Desafio 4
 function concatName(array) {
   let str = array[array.length - 1] + ', ' + array[0];
   return str;
 }
-
-let arrayNames = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(arrayNames));
 
 // Desafio 5
 function footballPoints(wins ,ties) {
@@ -40,8 +31,6 @@ function footballPoints(wins ,ties) {
   points = (wins * 3) + ties;
   return points;
 }
-
-console.log(footballPoints(5 ,3));
 
 // Desafio 6
 function highestCount(array) {
@@ -60,9 +49,6 @@ function highestCount(array) {
   return count;
 }
 
-let arrayNumbers = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(arrayNumbers));
-
 // Desafio 7
 function catAndMouse(mouse ,cat1 ,cat2) {
   let result = '';
@@ -77,11 +63,6 @@ function catAndMouse(mouse ,cat1 ,cat2) {
     return result;
   }
 }
-
-let mousePos = 5;
-let cat1Pos = 7;
-let cat2Pos = 8;
-console.log(catAndMouse(mousePos ,cat1Pos ,cat2Pos));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -99,9 +80,6 @@ function fizzBuzz(array) {
   }
   return result;
 }
-
-let arrayFizBuzz = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(arrayFizBuzz));
 
 // Desafio 9
 function encode(str) {
@@ -142,12 +120,6 @@ function decode(str) {
   return str;
 }
 
-let phrase = 'hi there!';
-phrase = encode(phrase);
-console.log(phrase);
-phrase = decode(phrase);
-console.log(phrase);
-
 // Desafio 10
 function techList(array ,name) {
   let arrayTech = [];
@@ -164,9 +136,6 @@ function techList(array ,name) {
     return 'Vazio!';
   }
 }
-
-let arrayTechList = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(arrayTechList, 'Felipe'));
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -203,9 +172,6 @@ function generatePhoneNumber(array) {
   }
 }
 
-arrayTelephone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(arrayTelephone));
-
 // Desafio 12
 function triangleCheck(lineA ,lineB , lineC) {
   if ( lineA > (lineB + lineC) && lineA < (Math.abs(lineA - lineB - lineC))) {
@@ -219,8 +185,6 @@ function triangleCheck(lineA ,lineB , lineC) {
   }
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
 function hydrate(str) {
   let digit = /\d+/;
@@ -232,8 +196,6 @@ function hydrate(str) {
   }
   return str;
 }
-
-console.log(hydrate("1 cerveja"));
 
 module.exports = {
   calcArea,
