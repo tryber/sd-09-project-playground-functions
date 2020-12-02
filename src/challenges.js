@@ -51,6 +51,18 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse , cat1 , cat2) {
+  function distance (number1 , number2) {
+    let distanceValue = ''
+  
+    if (number1 > number2) {
+      return distanceValue = (number1 - number2)
+    } else if (number1 < number2) {
+      return distanceValue = (number2 - number1)
+    } else {
+      return distanceValue = (number1 - number2)
+    }
+  }
+  
   let distance1 = distance(mouse , cat1)
   let distance2 = distance(mouse , cat2)
 
@@ -169,17 +181,7 @@ function biggestElement(array) {
   console.log(maior)
 }
 
-function distance (number1 , number2) {
-  let distanceValue = ''
 
-  if (number1 > number2) {
-    return distanceValue = (number1 - number2)
-  } else if (number1 < number2) {
-    return distanceValue = (number2 - number1)
-  } else {
-    return distanceValue = (number1 - number2)
-  }
-}
 
 
 module.exports = {
