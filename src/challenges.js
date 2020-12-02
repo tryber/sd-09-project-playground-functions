@@ -191,7 +191,7 @@ function techList(technologies, name) {
 function counterArray(array, value) {
   let count = 0;
   for (let index in array) {
-    if (array[index == value]) {
+    if (array[index] == value) {
       count++;
     }
   }
@@ -209,7 +209,7 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }else if (counterArray(array, array[index]) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    }
+    } 
   }
   for (let index in array) {
     if (index == 0) {
@@ -246,9 +246,25 @@ function triangleCheck(lineA, lineB, lineC) {
 
 //Função retorna a somatoria do array
 function addArray(array) {
-  let add = '';
-  for (let index in array) {
-    add += array[index];
+  let add = 0;
+  let numbers = {
+    '0': 0,
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+  }
+  for (let item in array) {
+    for (let number in numbers) {
+      if (array[item] == number) {
+        add += numbers[number];
+      }
+    }
   }
   return add;
 }
@@ -279,8 +295,6 @@ function hydrate(string) {
   }
   return frase;
 }
-
-console.log(hydrate('7 cervejas'));
 
 
 module.exports = {
