@@ -168,8 +168,32 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
   // seu código aqui
+  if (number.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  let answer = "(";
+  let helper;
+  for (let index = 0; index < number.length; index += 1) {
+    helper = 0;
+    for (let counter in number) {
+      if (number[index] === number[counter]) {
+        helper += 1;
+      }
+    }
+    if (helper >= 3 || number[index] < 0) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    if (index === 2) {
+      answer += ") ";
+    }
+    if (index === 7) {
+      answer += "-";
+    }
+    answer += number[index];
+  }
+  return answer;
 }
 
 // Desafio 12
