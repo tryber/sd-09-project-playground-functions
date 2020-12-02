@@ -65,7 +65,7 @@ function highestCount(array) {
   return count;
 }
 
-//Função retorna distacia positiva entre dois pontos
+// Função retorna distacia positiva entre dois pontos
 function distanceBetween(element1, element2) {
   let result = element1 - element2;
   if (result < 0) {
@@ -152,7 +152,7 @@ function decode(string) {
   return result;
 }
 
-//Função retorna ogjeto tec
+// Função retorna ogjeto tec
 function createNewTec(technology, name) {
   let tec = {};
   tec.tech = technology;
@@ -160,10 +160,10 @@ function createNewTec(technology, name) {
   return tec;
 }
 
-//Função retorna array ordenado
+// Função retorna array ordenado
 function sortArrayObjects(array) {
-  for (let index = 0 ; index < array.length-1 ; index++) {
-    for (let index2 = index+1 ; index2 < array.length; index2++){
+  for (let index = 0;index < array.length-1;index++) {
+    for (let index2 = index+1;index2 < array.length; index2++){
       if (array[index].tech > array[index2].tech) {
         let aux = createNewTec(array[index2].tech, array[index2].name);
         array[index2] = array[index];
@@ -187,7 +187,7 @@ function techList(technologies, name) {
   }
 }
 
-//Funcão retorna quantidade de vezes que value aparece no array
+// Funcão retorna quantidade de vezes que value aparece no array
 function counterArray(array, value) {
   let count = 0;
   for (let index in array) {
@@ -244,7 +244,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-//Função retorna a somatoria do array
+// Função retorna a somatoria do array
 function addArray(array) {
   let add = 0;
   let numbers = {
@@ -269,9 +269,9 @@ function addArray(array) {
   return add;
 }
 
-//Função retorna true se caractere é numero e false se não for
+// Função retorna true se caractere é numero e false se não for
 function isNumeral(caractere) {
-  for (let number = 1 ; number <= 9 ; number++) {
+  for (let number = 1;number <= 9; number++) {
     if (caractere == number) {
       return true;
     }
@@ -289,9 +289,9 @@ function hydrate(string) {
     }
   }
   if (addArray(count) > 1) {
-    frase = addArray(count) + ' copos de água'
+    frase = addArray(count) + ' copos de água';
   } else {
-    frase = addArray(count) + ' copo de água'
+    frase = addArray(count) + ' copo de água';
   }
   return frase;
 }
