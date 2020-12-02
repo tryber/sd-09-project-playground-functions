@@ -118,23 +118,23 @@ function encode(string) {
   return encodedString;
 }
 function decode(string) {
-  let decodedString = "";
+  let decodedString = '';
   for (let letter of string) {
     switch (letter) {
-      case "1":
-        decodedString += "a";
+      case '1':
+        decodedString += 'a';
         break;
-      case "2":
-        decodedString += "e";
+      case '2':
+        decodedString += 'e';
         break;
-      case "3":
-        decodedString += "i";
+      case '3':
+        decodedString += 'i';
         break;
-      case "4":
-        decodedString += "o";
+      case '4':
+        decodedString += 'o';
         break;
-      case "5":
-        decodedString += "u";
+      case '5':
+        decodedString += 'u';
         break;
       default:
         decodedString += letter;
@@ -144,8 +144,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let arrayTechObjects = [];
+  if (array.length !== 0) {
+  for (let tec of array.sort()) {
+     let techObject = {
+       tech: undefined,
+       name: name,
+     };
+    techObject.tech = tec;
+    arrayTechObjects.push(techObject);
+  }
+  return arrayTechObjects;
+} 
+  return 'Vazio!'
 }
 
 // Desafio 11
