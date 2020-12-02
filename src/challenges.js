@@ -84,9 +84,21 @@ function highestCount(arrayRepet) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distancia1 = Math.abs(cat1) - Math.abs(mouse);
+  let distanci2 = Math.abs(cat2) - Math.abs(mouse);
+
+  if (distancia1 < distanci2) {
+    return "O gato 1 vai alcançar o rato.";
+  } else if (distancia1 > distanci2) {
+    return "O gato 2 vai alcançar o rato.";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
+
+console.log(catAndMouse(3, -4, -5));
 
 // Desafio 8
 function fizzBuzz() {
