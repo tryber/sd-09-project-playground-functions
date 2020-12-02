@@ -27,11 +27,12 @@ function splitSentence(string1) {
 // Desafio 4
 function concatName(arrayN) {
   let ultPri = ""
-  ultPri = arrayN[0] + ", " + arrayN[arrayN.length -1]
+  ultPri = arrayN[arrayN.length -1] + ", " + arrayN[0]
   return ultPri
   // seu código aqui
 }
-
+// let teste4 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+// console.log(concatName(teste4))
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
