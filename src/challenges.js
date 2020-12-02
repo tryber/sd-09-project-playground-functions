@@ -19,7 +19,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   // seu código aqui
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
@@ -27,14 +27,14 @@ function concatName(array) {
   // seu código aqui
   let helper = array[array.length - 1];
   let holder = array[0];
-  let answer = helper + ", " + holder;
+  let answer = `${helper}, ${holder}`;
   return answer;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return 3 * wins + ties;
+  return (3 * wins) + ties;
 }
 
 // Desafio 6
@@ -59,15 +59,15 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let answer = "";
+  let answer = '';
   let d1 = Math.abs(cat1 - mouse);
   let d2 = Math.abs(cat2 - mouse);
   if (d1 < d2) {
-    answer = "cat1";
+    answer = 'cat1';
   } else if (d1 > d2) {
-    answer = "cat2";
+    answer = 'cat2';
   } else {
-    answer = "os gatos trombam e o rato foge";
+    answer = 'os gatos trombam e o rato foge';
   }
   return answer;
 }
@@ -88,13 +88,13 @@ function fizzBuzz(array) {
       buzz = true;
     }
     if (fizz && buzz) {
-      answer.push("fizzBuzz");
+      answer.push('fizzBuzz');
     } else if (fizz) {
-      answer.push("fizz");
+      answer.push('fizz');
     } else if (buzz) {
-      answer.push("buzz");
+      answer.push('buzz');
     } else {
-      answer.push("bug!");
+      answer.push('bug!');
     }
   }
   return answer;
@@ -109,16 +109,16 @@ const code = {
   u: 5,
 };
 const code2 = {
-  1: "a",
-  2: "e",
-  3: "i",
-  4: "o",
-  5: "u",
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
 };
 
 function encode(message) {
   // seu código aqui
-  let answer = "";
+  let answer = '';
   let helper;
   for (let index = 0; index < message.length; index += 1) {
     helper = true;
@@ -136,7 +136,7 @@ function encode(message) {
 }
 function decode(message) {
   // seu código aqui
-  let answer = "";
+  let answer = '';
   let helper;
   for (let index = 0; index < message.length; index += 1) {
     helper = true;
@@ -157,7 +157,7 @@ function decode(message) {
 function techList(tech, name) {
   // seu código aqui
   if (tech.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   let answer = [];
   let helper = tech.sort();
@@ -171,9 +171,9 @@ function techList(tech, name) {
 function generatePhoneNumber(number) {
   // seu código aqui
   if (number.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
-  let answer = "(";
+  let answer = '(';
   let helper;
   for (let index = 0; index < number.length; index += 1) {
     helper = 0;
@@ -183,13 +183,13 @@ function generatePhoneNumber(number) {
       }
     }
     if (helper >= 3 || number[index] < 0 || number[index] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     if (index === 2) {
-      answer += ") ";
+      answer += ') ';
     }
     if (index === 7) {
-      answer += "-";
+      answer += '-';
     }
     answer += number[index];
   }
@@ -216,17 +216,17 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(drinks) {
   // seu código aqui
-  let answer = "";
+  let answer = '';
   let helper = 0;
   for (let index = 0; index < drinks.length; index += 1) {
     if (drinks[index] > 0 && drinks[index] < 9) {
       helper += parseInt(drinks[index], 10);
     }
   }
-  if(helper === 1){
-    answer += helper + " copo de água";
+  if (helper === 1) {
+    answer = `${helper} copo de água`;
   } else {
-    answer += helper + " copos de água";
+    answer = `${helper} copos de água`;
   }
   return answer;
 }
