@@ -14,7 +14,7 @@ function calcArea(base, heigth) {
         console.log(calcArea(10, 5));
 
 // Desafio 3
-let array = 'vai que vai';
+let array = 'go trybe';
 function splitSentence(string) {
 let divisor = string.split(' ');
 console.log(divisor);
@@ -34,7 +34,6 @@ let finalResult = lastName + ', ' + firstName;
         console.log(concatName());
 
 // Desafio 5
-
 function footballPoints(wins,ties) {
 let empate = 1;
 let vitoria = 3;
@@ -45,8 +44,6 @@ let total = vitoria + empate;
       return total;
 }
       console.log(footballPoints());
-
-
 
 // Desafio 6
 function highestCount() {
