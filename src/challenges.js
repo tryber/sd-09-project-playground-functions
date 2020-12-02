@@ -19,8 +19,6 @@ function splitSentence(string) {
   let arrayString = string.split(" ");
   return arrayString;
 }
-const result = arrayString = string.split(" ");
-console.log(result);
 
 // Desafio 4 OK
 function concatName(frase) {
@@ -30,7 +28,8 @@ function concatName(frase) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = (wins*3)+ties;
+  const winpoint = 3;
+  let result = (wins*winpoint)+ties;
   return result;
 }
 
