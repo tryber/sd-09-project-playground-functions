@@ -133,52 +133,78 @@ function fizzBuzz(numArray) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // --------------------------------------------------------------------
 
+/*
+OBSERVAÇÃO SOBRE FOR IN:
+for (const key in object) {
+  if (object.hasOwnProperty(key)) {
+    const element = object[key];
+
+  }
+}
+*/
+
 // Desafio 9
 function encode(string) {
+  let newString = '';
   function aTo1(string) {
-    for (let index in string) {
+    newString = '';
+    for (let index = 0; index < string.length; index += 1) {
       if (string[index] === 'a') {
-        string[index] = 1;
+        newString += '1';
+      } else {
+        newString += string[index];
       }
     }
-    return string;
+    return newString;
   }
   function eTo2(string) {
-    for (let index in string) {
+    newString = '';
+    for (let index = 0; index < string.length; index += 1) {
       if (string[index] === 'e') {
-        string[index] = 2;
+        newString += '2';
+      } else {
+        newString += string[index];
       }
     }
-    return string;
+    return newString;
   }
   function iTo3(string) {
-    for (let index in string) {
+    newString = '';
+    for (let index = 0; index < string.length; index += 1) {
       if (string[index] === 'i') {
-        string[index] = 3;
+        newString += '3';
+      } else {
+        newString += string[index];
       }
     }
-    return string;
+    return newString;
   }
   function oTo4(string) {
-    for (let index in string) {
+    newString = '';
+    for (let index = 0; index < string.length; index += 1) {
       if (string[index] === 'o') {
-        string[index] = 4;
+        newString += '4';
+      } else {
+        newString += string[index];
       }
     }
-    return string;
+    return newString;
   }
   function uTo5(string) {
-    for (let index in string) {
+    newString = '';
+    for (let index = 0; index < string.length; index += 1) {
       if (string[index] === 'u') {
-        string[index] = 5;
+        newString += '5';
+      } else {
+        newString += string[index];
       }
     }
-    return string;
+    return newString;
   }
-  return aTo1(eTo2(iTo3(oTo4(uTo5(string)))));
+ return aTo1(eTo2(iTo3(oTo4(uTo5(string)))));
 }
 
-// console.log(encode('hi there!'));
+// console.log(encode('hiaeiou there!'));
 
 
 function decode() {
@@ -186,7 +212,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList(arrayTech, name) {
+function techList() {
   // seu código aqui
 }
 
@@ -212,7 +238,7 @@ module.exports = {
   compareTrue,
   concatName,
   decode,
-  encode,
+  // encode,
   fizzBuzz,
   footballPoints,
   generatePhoneNumber,
