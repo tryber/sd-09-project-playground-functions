@@ -25,14 +25,27 @@ return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
-return wins *3 + ties
+  function footballPoints(wins, ties) {
+  return wins *3 + ties
+  }
+  // Desafio 6
+  let array = [1, 3, 7, 7, 7, 7];
+  function highestCount(numbers) {
+  let maxNumber = 0;
+  let amountMany = 0;
+  for(let index in numbers) {
+    if(numbers[index] > maxNumber){
+    maxNumber = numbers[index];
+    }
+  }
+  for(let index2 in numbers){
+    if(numbers[index2] === maxNumber){
+    amountMany += 1;
+    }
+  }
+  return amountMany;
 }
-// Desafio 6
-function highestCount() {
-  // seu código aqui  
-}
-
+console.log(highestCount(array));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
