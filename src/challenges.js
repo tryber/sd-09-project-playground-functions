@@ -207,7 +207,7 @@ function generatePhoneNumber(array) {
   }
 
   if (array.length !== 11) {
-    result = "Array com tamanho incorreto";
+    result = "Array com tamanho incorreto.";
     isValid = false;
   }
 
