@@ -148,8 +148,8 @@ function techList(arrayTechs = [], name) {
   } else {
     for (contador = 0; contador <= arrayFinal.length; contador += 1){
       arrayfinal2.push(arrayFinal[arrayFinal.length - contador])
-    }
-  } return arrayfinal2
+    } return arrayfinal2
+  } 
 }techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
 
 // Desafio 11
