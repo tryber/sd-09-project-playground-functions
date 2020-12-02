@@ -66,21 +66,21 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouseCat1 = 0;
-  let mouseCat2 = 0;
+  let mouCat1 = 0;
+  let mouCat2 = 0;
   if (mouse > cat1) {
-    mouseCat1 = mouse - cat1;
+    mouCat1 = mouse - cat1;
   } else {
-    mouseCat1 = cat1 - mouse;
+    mouCat1 = cat1 - mouse;
   }
   if (mouse > cat2) {
-    mouseCat2 = mouse - cat2;
+    mouCat2 = mouse - cat2;
   } else {
-    mouseCat2 = cat2 - mouse;
+    mouCat2 = cat2 - mouse;
   }
-  if (mouseCat2 > mouseCat1) {
+  if (mouCat2 > mouCat1) {
     console.log('cat1')
-  } else if (mouseCat1 === mouseCat2) {
+  } else if (mouCat1 === mouCat2) {
     console.log('os gatos trombam e o rato foge')
   } else {
     console.log('cat2')
