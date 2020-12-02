@@ -44,16 +44,6 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(3, 2))
 
 // Desafio 6
-function greatestValue(array) {
-  let greatest = 0
-  for (let element of array) {
-    if (element > greatest) {
-      greatest = element
-    }
-  }
-  return greatest
-}
-
 function highestCount(array) {
   // seu código aqui
   const greatestNumber = greatestValue(array)
@@ -165,6 +155,16 @@ function techList(array, name) {
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Neves'))
 
 // Desafio 11
+function greatestValue(array) {
+  let greatest = 0
+  for (let element of array) {
+    if (element > greatest) {
+      greatest = element
+    }
+  }
+  return greatest
+}
+
 function lowestValue(array) {
   let lowest = 0
   for (let element of array) {
@@ -198,7 +198,7 @@ function generatePhoneNumber(array) {
   const phoneNumberPart3 = phoneNumber.slice(7, 12)
   return `(${phoneNumberPart1}) ${phoneNumberPart2}-${phoneNumberPart3}`
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -230,7 +230,7 @@ function hydrate(str) {
   }
   return `${sum} copos de água`
 }
-console.log(hydrate('1 cachaça, 9 cervejas e 4 copos de vinho'))
+// console.log(hydrate('1 cachaça, 9 cervejas e 4 copos de vinho'))
 
 module.exports = {
   calcArea,
