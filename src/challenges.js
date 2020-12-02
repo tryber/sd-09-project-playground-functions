@@ -135,31 +135,34 @@ function encode(string) {
 
 function decode(string) {
   let array = string.split('');
-  let encodeArray = [];
+  let decodeArray = [];
   let vowels = ['1', '2', '3', '4', '5']
   for (let i = 0; i < array.length; i += 1) {
     switch(array[i]) {
       case vowels[0]:
-        encodeArray.push('a');
+        decodeArray.push('a');
         break;
       case vowels[1]:
-        encodeArray.push('e');
+        decodeArray.push('e');
         break;
       case vowels[2]:
-        encodeArray.push('i');
+        decodeArray.push('i');
         break;
       case vowels[3]:
-        encodeArray.push('o');
+        decodeArray.push('o');
         break;
       case vowels[4]:
-        encodeArray.push('u');
+        decodeArray.push('u');
         break;
       default:
-        encodeArray.push(array[i]);
+        decodeArray.push(array[i]);
     }
   }
-  return encodeArray.join();
+  let encodeString = decodeArray.join('');
+  return encodeString;
 }
+
+console.log(decode("h3 th2r2!"))
 
 
 // Desafio 10
