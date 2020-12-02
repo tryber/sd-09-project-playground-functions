@@ -136,7 +136,15 @@ function decode(phrase2) {
 }
 
 // Desafio 10
-function techList() {
+function techList(toLearn, name) {
+  let infoList = []
+  for (i in toLearn){
+    infoList.push({
+    "tech": toLearn[i],
+    "name": name
+    })
+  }
+  return infoList
   // seu código aqui
 }
 
