@@ -57,14 +57,12 @@ function fizzBuzz(entry) {
   let divisibles = [];
   for (let index = 0; index < entry.length; index += 1) {
     divisibles.push('bug!');
-    if (entry[index] % 3 === 0) {
-      divisibles[index] = 'fizz';
-    }
-    if (entry[index] % 5 === 0) {
-      divisibles[index] = 'buzz';
-    }
     if (entry[index] % 15 === 0) {
       divisibles[index] = 'fizzBuzz';
+    } else if (entry[index] % 3 === 0) {
+      divisibles[index] = 'fizz';
+    } else if (entry[index] % 5 === 0) {
+      divisibles[index] = 'buzz';
     }
   }
   return divisibles;
