@@ -238,7 +238,7 @@ function hydrate(text) {
   let cupsText = 'copo';
 
   for (let index in numbersInText) {
-    let number = parseInt(numbersInText[index]);
+    let number = parseInt(numbersInText[index], 10);
     totalWater += number;
   }
 
