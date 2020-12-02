@@ -174,12 +174,12 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
   if (array.length != 11){
     return 'Array com tamanho incorreto.';
-  }
-  let counter = 0;
+  }  
   for(let index = 0; index < array.length; index += 1){
     if (array[index] < 0 || array[index] > 9){
       return 'não é possível gerar um número de telefone com esses valores';
     } else if (index <= 9){
+      let counter = 0;
       for (let index2 = 1; index2 < array.length; index2 += 1){
         if (array[index] === array[index2]){
           counter += 1;
