@@ -1,16 +1,24 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolean1, boolean2) {
+  if (boolean1 && boolean2 === true) {
+    return true;
+  } return false;
+}
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(projetoJS) {
+  projetoJS = ["Function", "Array", "For"];
 }
 
 // Desafio 4
@@ -66,7 +74,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +89,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
