@@ -193,7 +193,7 @@ function generatePhoneNumber(arrayNumber) {
   // seu código aqui
   let stringNumber = transformeArrayString(arrayNumber);
   if (numberequal11(arrayNumber) === true) {
-    if (numberLess0(arrayNumber) === false || verificationNumber(arrayNumber) >= 3) {
+    if (numberLess0(arrayNumber) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     let inittialNumbers = stringNumber.slice(0, 2);
