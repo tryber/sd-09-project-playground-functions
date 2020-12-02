@@ -220,8 +220,18 @@ function generatePhoneNumber(arrayPhoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumBC = lineB + lineC;
+  let sumAC = lineA + lineC;
+  let sumAB = lineA + lineB;
+  let absBC = Math.abs(lineB - lineC);
+  let absAC = Math.abs(lineA - lineC);
+  let absAB = Math.abs(lineA - lineB);
+
+  if (lineA < sumBC && lineB < sumAC && lineC < sumAB && lineA > absBC && lineB > absAC && lineC > absAB) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
@@ -264,3 +274,5 @@ let name = 'Lucas';
 console.log(techList(techListArray, name));
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+console.log(triangleCheck(10, 14, 8));
