@@ -48,7 +48,7 @@ function highestCount(inputArray) {
   let counter = {};
   let highestNumber;
   for (let index in inputArray) {
-    if (inputArray.hasOwnProperty(index)) {
+    if (Object.prototype.hasOwnProperty.call(inputArray, index)) {
       let number = inputArray[index];
       if (!(number in counter)) {
         counter[number] = 1;
@@ -97,7 +97,7 @@ function getFizzBuzz(number) {
 
 function fizzBuzz(inputArray) {
   for (let index in inputArray) {
-    if (inputArray.hasOwnProperty(index)) {
+    if (Object.prototype.hasOwnProperty.call(inputArray, index)) {
       let number = inputArray[index];
       let resultStr = getFizzBuzz(number);
       inputArray[index] = resultStr;
@@ -110,7 +110,7 @@ function fizzBuzz(inputArray) {
 function translate(text, dictionary) {
   let output = '';
   for (let charIndex in text) {
-    if (text.hasOwnProperty(charIndex)) {
+    if (Object.prototype.hasOwnProperty.call(text, charIndex)) {
       let char = text[charIndex];
       if (char in dictionary) {
         output += dictionary[char];
@@ -164,7 +164,7 @@ function techList(array, name) {
     array = ascOrder(array);
     let output = [];
     for (let index in array) {
-      if (array.hasOwnProperty(index)) {
+      if (Object.prototype.hasOwnProperty.call(array, index)) {
         let tech = array[index];
         let obj = { tech, name };
         output.push(obj);
@@ -206,7 +206,7 @@ function handlePhoneArray(array) {
   let output = '';
   let counter = {};
   for (let index in array) {
-    if (array.hasOwnProperty(index)) {
+    if (Object.prototype.hasOwnProperty.call(array, index)) {
       let item = array[index];
       counter = countItem(item, counter);
       if (validateItem(item, counter[item])) {
@@ -238,23 +238,23 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(text) {
   // Referência para o código (MDN web docs):
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
-
+  
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
   let cupsText = 'copo';
-
+  
   for (let index in numbersInText) {
-    if (numbersInText.hasOwnProperty(index)) {
+    if (Object.prototype.hasOwnProperty.call(numbersInText, index)) {
       let number = parseInt(numbersInText[index], 10);
       totalWater += number;
     }
   }
-
+  
   if (totalWater > 1) {
     cupsText += 's'
   }
-
+  
   return `${totalWater} ${cupsText} de água`;
 }
 
