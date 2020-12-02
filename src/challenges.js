@@ -124,17 +124,8 @@ function compareStringsLength(word1, word2) {
  */
 function techList(technologies, name) {
   if (!technologies.length) return 'Vazio!'
-  for (let i = 0; i < technologies.length; i += 1) {
-    for (let j = i + 1; j < technologies.length; j += 1) {
-      const result = compareStringsLength(technologies[i], technologies[j])
-      if (result > 0) {
-        const techAuxiliar = technologies[i]
-        technologies[i] = technologies[j]
-        technologies[j] = techAuxiliar
-      }
-    }
-  }
-  return technologies.map(tech => ({ tech, name }))
+  const sortedTechnologies = technologies.sort((first, second) => compareStringsLength(first, second))
+  return sortedTechnologies.map(tech => ({ tech, name }))
 }
 
 /**
@@ -191,14 +182,13 @@ function triangleCheck(lineA, lineB, lineC) {
  */
 function hydrate(bebidas) {
   const numbers = bebidas.match(/\d/g)
-  const sum = numbers.reduce((prev, curr) => parseInt(curr) + parseInt(prev), 0)
+  const sum = numbers.reduce((prev, curr) => Number(curr) + Number(prev), 0)
   if (sum === 1) {
     return `${sum} copo de água`
   } else if (sum > 1) {
     return `${sum} copos de água`
-  } else {
-    return 'nenhum copo de água'
   }
+  return 'nenhum copo de água'
 }
 
 
