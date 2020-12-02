@@ -111,10 +111,6 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings
 }
 
-let tester = encode('Hi there, how are you?');
-console.log(tester);
-console.log(decode(tester));
-
 // Challenge Nine - Function to encode string
 function encode(stringToEncode) {
   let translatorMap = {
@@ -157,7 +153,7 @@ function decode(stringToDecode) {
   for (let index = 0; index < stringToDecode.length; index += 1) {
     decodedArray.push(stringToDecode[index]);
     for (let key in translatorMap) {
-      if (decodedArray[index] == translatorMap[key]) {
+      if (decodedArray[index] === translatorMap[key].toString()) {
         decodedArray[index] = key;
       }
     }
