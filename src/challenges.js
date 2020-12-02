@@ -28,12 +28,9 @@ function splitSentence(frase) {
 // console.log(splitSentence('Henrique Gabriel de Moura'));
 
 // Desafio 4
-// function concatName(exemplo1) {
-//   let exemplo1 = exemplo1.pop();
-//   return(exemplo1[0] + exemplo1.pop);
-// }
-// let frutas = ['banana' , 'maça' , 'manga'];
-// // console.log(concatName(frutas));
+function concatName(){
+  
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
