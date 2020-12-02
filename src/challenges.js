@@ -21,7 +21,7 @@ function splitSentence(string) {
     } else if (array[arrayIndex] === undefined) {
       array[arrayIndex] = string[index];
     } else {
-        array[arrayIndex] += string[index];
+      array[arrayIndex] += string[index];
     }
   }
   return array;
@@ -125,7 +125,7 @@ function techList(arrayTech, name) {
     for (let index in arrayTech) {
       newArray[index] = {
         tech: arrayTech[index],
-        name: name,
+        name,
       };
     }
     return newArray;
@@ -193,7 +193,7 @@ function phoneNumberCreator(arrayTest) {
   return phoneNumber.join('');
 }
 
-function generatePhoneNumber (numArray) {
+function generatePhoneNumber(numArray) {
   if (numArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (checkRepeatedAndValidNumbers(numArray)) {
