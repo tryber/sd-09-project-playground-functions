@@ -178,8 +178,45 @@ function techList(list, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayPhoneNumber) {
+  let phoneNumber = '';
+
+  if (arrayPhoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let index in arrayPhoneNumber) {
+    let numberRepeated = 0;
+    
+    // Valida números 
+    for (let index2 = 0; index2 < arrayPhoneNumber.length; index2 += 1) {
+      if (arrayPhoneNumber[index] === arrayPhoneNumber[index2]) {
+        numberRepeated += 1;
+      }
+    }
+    if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9 || numberRepeated >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    
+    // Adiciona caracteres especiais
+    let phoneNumberLength = phoneNumber.length;
+
+    switch (phoneNumberLength) {
+      case 0:
+        phoneNumber += '(';
+        break;
+      case 3:
+        phoneNumber += ') ';
+        break;
+      case 10:
+        phoneNumber += '-';
+        break;
+    }
+    phoneNumber += arrayPhoneNumber[index];
+
+  }
+
+  return phoneNumber;
 }
 
 // Desafio 12
@@ -225,3 +262,5 @@ let techListArray = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 let name = 'Lucas';
 
 console.log(techList(techListArray, name));
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
