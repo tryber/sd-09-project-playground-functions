@@ -42,14 +42,14 @@ function highestCount(array) {
   let biggest = array[0];
   let aparissons = 0;
 
-  for (let i of array) {
-    if (i > biggest) {
-      biggest = i;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > biggest) {
+      biggest = array[i];
     }
   }
 
-  for (let i of array) {
-    if (i === biggest) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === biggest) {
       aparissons += 1;
     }
   }
@@ -77,12 +77,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultArray = [];
 
-  for (let i of array) {
-    if (i % 3 === 0 && i % 5 === 0) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       resultArray.push('fizzBuzz');
-    } else if (i % 3 === 0) {
+    } else if (array[i] % 3 === 0) {
       resultArray.push('fizz');
-    } else if (i % 5 === 0) {
+    } else if (array[i] % 5 === 0) {
       resultArray.push('buzz');
     } else {
       resultArray.push('bug!');
@@ -184,11 +184,11 @@ function generatePhoneNumber(array) {
   let result;
   let reps;
 
-  for (let i of array) {
+  for (let i = 0; i < array.length; i += 1) {
     reps = 0;
 
-    for (let j of array) {
-      if (i === j) {
+    for (let j = 0; j < array.length; i += 1) {
+      if (array[i] === array[j]) {
         reps += 1;
       }
     }
