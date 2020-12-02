@@ -56,8 +56,19 @@ if (distanceTwoPoints(mouse, cat1) < distanceTwoPoints(mouse, cat2)){
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(num) {
+  let list = []
+  for( let i=0; i<num.length; i++){
+    if(num[i]%3==0){
+        list.push("fizz");
+    } else if(num[i]%5==0) {
+        list.push("buzz") ;
+    } else if(num[i]%3==0 && num[i]%5==0){
+        list.push("fizzBuzz");
+    } else{
+        list.push("bug!");
+    }
+  }return list;
 }
 
 // Desafio 9
