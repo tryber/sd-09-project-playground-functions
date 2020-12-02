@@ -20,10 +20,18 @@ function splitSentence(frase) {
   return array;
 }
 console.log(splitSentence('Kamila Vanessa Ribeiro'));
+
+/*Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+
+Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas. */
+
+let arrayNomes = ['Lucas','Cassiano','Ferraz', 'Paolillo']
 // Desafio 4
-function concatName(arrayNome) {
-return arrayNome[arrayNome.length-1] + ',' + arrayNome[0];
+function concatName(arrayNomes) {
+  
+return arrayNomes[arrayNomes.length-1] + ',' + arrayNomes[0];
 }
+console.log(concatName(arrayNomes));
 
 // Desafio 5
   function footballPoints(wins, ties) {
