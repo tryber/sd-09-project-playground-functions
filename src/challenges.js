@@ -51,7 +51,7 @@ function highestCount(array) {
   let high = 0;
   let result = 0;
   for (let index in array) {
-    if (array[index] > higher) {
+    if (array[index] > high) {
       high = array[index];
     }
   }
