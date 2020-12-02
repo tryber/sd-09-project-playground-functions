@@ -23,18 +23,17 @@ console.log(splitSentence('go trybe'));
 // Desafio 4
 function concatName(names) {
   return `${names[names.length - 1]}, ${names[0]}`
-  
 }
-console.log(concatName(["Long", "live", "trybers"]))
+console.log(concatName(['Long', 'live', 'trybers']))
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui 
+// seu código aqui
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui highestCount(wins,ties) {let score= (wins*3 + ties return sccore}
+// seu código aqui highestCount(wins,ties) {let score= (wins*3 + ties return sccore}
 }
 
 // Desafio 7
@@ -49,7 +48,7 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+// seu código aqui
 }
 function decode() {
   // seu código aqui
@@ -57,22 +56,22 @@ function decode() {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+// seu código aqui
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+// seu código aqui
 }
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+// seu código aqui
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+// seu código aqui
 }
 
 
