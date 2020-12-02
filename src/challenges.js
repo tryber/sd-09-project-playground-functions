@@ -129,31 +129,31 @@ return newString;
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  let newArray = []
-  let string = 'Vazio!'
-  for (let key = array.length; key > array.length; key -= 1) {
-    if (array[key] < array.length) {
+  let newArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if(array[index] < array) {
         let outro = {
-          tech: array[key],
+          tech: array[index],
           name: name
         }
         newArray.push(outro)
-    } 
-    else if ([] === 0) {
-        return string
     }
   }
   newArray.sort(function(a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    }
-    if (a.tech < b.tech) {
-      return -1;
-    }
-    return 0;
-});
+      if (a.tech > b.tech) {
+        return 1;
+      }
+      if (a.tech < b.tech) {
+        return -1;
+      }
+      return 0;
+  }); 
+  if (newArray.length > 0) {
   return newArray;
-}
+  } else {
+   return 'Vazio!'   
+  }
+};
 
 // Desafio 11
 function generatePhoneNumber() {
