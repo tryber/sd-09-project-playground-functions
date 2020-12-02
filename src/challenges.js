@@ -136,54 +136,73 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
+// Desafio 11
+function checkValidNumber (numArray) {
+  let check = false;
+  for (let index in numArray) {
+    if (numArray[index] < 0 || numArray[index] > 9) {
+      check = true;
+    }
+  }
+  return check;
+}
+
+function checkRepeatedNumbers (arrayTest) {
+  let check = false;
+  let numArray = arrayTest.slice();
+  numArray.sort();
+  for (let index = 0; index < numArray.length - 1; index += 1) {
+    let countNumbers = 1;
+    while (numArray[index] === numArray[index + 1]) {
+      countNumbers += 1;
+      index += 1;
+    }
+    if (countNumbers >= 3) {
+      check = true;
+      break;
+    }
+  }
+  return check;
+}
+
+function checkRepeatedAndValidNumbers (numArray) {
+  let check = false;
+  if (checkValidNumber (numArray)) {
+    check = true
+  }
+  if (checkRepeatedNumbers (numArray)) {
+    check = true;
+  }
+  return check;
+}
+
+function phoneNumber (arrayTest) {
+  let phoneNumber = ['(' , ')' , ' ' , '-' ];
+  let DDD = [];
+  let firstPart = [];
+  let lastPart = [];
+  for (let index in arrayTest) {
+    if (index < 2) {
+      DDD.push(arrayTest[index]);
+    } else if (index < 7) {
+      firstPart.push(arrayTest[index]);
+    } else {
+      lastPart.push(arrayTest[index]);
+    }
+  }
+  phoneNumber.splice(1 , 0 , DDD.join(''));
+  phoneNumber.splice(4 , 0 , firstPart.join(''));
+  phoneNumber.splice(10 , 0 , lastPart.join(''));
+  return phoneNumber.join('');
+}
+
 function generatePhoneNumber(numArray) {
-  let checkNumbers = true;
-  let countNumbers;
   if (numArray.length !== 11) {
     return 'Array com tamanho incorreto.';
+  } else if (checkRepeatedAndValidNumbers(numArray)) {
+    return 'não é possível gerar um número de telefone com esses valores'
   } else {
-    let arrayTest = numArray.slice();
-    let a;
-    let b;
-    numArray.sort();
-    for (let index = 0; index < numArray.length - 1; index += 1) {
-      if (numArray[index] >= 0) {
-        countNumbers = 1;
-        a = numArray[index];
-        b = numArray[index + 1];
-        while (numArray[index] === numArray[index + 1]) {
-          countNumbers += 1;
-          index += 1;
-        }
-        if (countNumbers >= 3) {
-          break;
-        }
-      } else if (numArray[index] < 0) {
-        checkNumbers = false;
-        break;
-      }
-    }
-    if (!checkNumbers || countNumbers >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      let phoneNumber = ['(' , ')' , ' ' , '-' ];
-      let DDD = [];
-      let firstPart = [];
-      let lastPart = [];
-      for (let index in arrayTest) {
-        if (index < 2) {
-          DDD.push(arrayTest[index]);
-        } else if (index < 7) {
-          firstPart.push(arrayTest[index]);
-        } else {
-          lastPart.push(arrayTest[index]);
-        }
-      }
-      phoneNumber.splice(1 , 0 , DDD.join(''));
-      phoneNumber.splice(4 , 0 , firstPart.join(''));
-      phoneNumber.splice(10 , 0 , lastPart.join(''));
-      return phoneNumber.join('');
-    }
+    return (phoneNumber(numArray));
   }
 }
 
