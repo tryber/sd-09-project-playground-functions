@@ -78,17 +78,14 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function isVowel(character) {
-  if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
-    return true;
-  }
-  return false;
+  vowels = ['a', 'e', 'i', 'o', 'u'];
+  return vowels.includes(character);
 }
 
-function isNumberCharecter(number) {
-  if (number === '1' || number === '2' || number === '3' || number === '4' || number === '5') {
-    return true;
-  }
-  return false;
+function isDigit(digit){
+  let digits = ['0', '1', '2' ,'3', '4', '5','6', '7', '8', '9'];
+
+  return digits.includes(digit);
 }
 
 function swapVowelNumber(vowel) {
@@ -142,19 +139,17 @@ function encode(string) {
   return string.join("");
 }
 
-console.log(encode("hello world!"));
-
 function decode(string) {
   string = string.split("");
 
   for (let i in string) {
-    if (isNumberCharecter(string[i])) {
+    if (isDigit(string[i])) {
       string[i] = swapNumberVowel(string[i]);
     }
   }
   return string.join("");
 }
-console.log(decode(encode("hello world!")));
+
 // Desafio 10
 function techList(techArray, name) {
   if (techArray.length === 0) {
@@ -234,10 +229,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+
+function isDigit(digit){
+  let digits = ['0', '1', '2' ,'3', '4', '5','6', '7', '8', '9'];
+
+  return digits.includes(digit);
 }
 
+function hydrate(string) {
+  string = string.split("")
+  let cupsOfWater = 0;
+
+  for(i in string){
+    if(isDigit(string[i])){
+      cupsOfWater += parseInt(string[i], 10);
+    }
+  }
+  return (cupsOfWater + ' copos de água');
+}
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
