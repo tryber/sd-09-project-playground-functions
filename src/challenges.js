@@ -43,18 +43,16 @@ function footballPoints(wins, ties) {
 }// console.log(footballPoints(2, 3));
 
 // Desafio 6
- function highestCount(count) {
-  let cont = 0;
-  for (let index = 0; index < count.length; index += 1) {
-    for (let index2 = 0; index < count.length; index += 1) {
-      if (count[index] === count[index2]) {
-        cont ++;
-      }
-    }return cont;
-  }
-}console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
- 
-// console.log(highestCount( [9, 1, 2, 3, 9, 5, 7]))
+function highestCount(count) {
+   let cont = 0;
+   for (let index = 0; index < count.length; index += 1) {
+      for (let index2 = 0; index < count.length; index += 1) {
+        if (count[index] === count[index2]) {
+          cont ++;
+        }
+      }return cont;
+    }
+  }// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9, 8, 9, 9]));
 
 // Desafio 7
 function catAndMouse() {
@@ -76,7 +74,7 @@ function decode() {
 
 // Desafio 10
 function techList() {
-  
+
 }
 
 // Desafio 11
