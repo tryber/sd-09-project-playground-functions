@@ -73,7 +73,7 @@ function highestCount( arrayNumbers ) {
   }
 
   for (let index = 0; index < arrayNumbers.length; index += 1){
-    if (maiorValor === maiorValor){
+    if (maiorValor === arrayNumbers[index] ){
       cont += 1;
     }
   }
