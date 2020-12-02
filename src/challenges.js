@@ -103,12 +103,66 @@ function fizzBuzz(param) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vogal = ''
+  for(i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a':
+        vogal = vogal + '1'
+        break;
+      case 'e':
+        vogal = vogal + '2'
+        break;
+      case 'i':
+        vogal = vogal + '3'
+        break;
+      case 'o':
+        vogal = vogal + '4'
+        break;
+      case 'u':
+        vogal = vogal + '5'
+        break;
+      default:
+        vogal = vogal + string[i]
+        break;
+    }
+    
+  }
+  return vogal
+
 }
-function decode() {
-  // seu código aqui
+
+;
+
+function decode(string) {
+  let vogal = ''
+  for(i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case '1':
+        vogal = vogal + 'a'
+        break;
+      case '2':
+        vogal = vogal + 'e'
+        break;
+      case '3':
+        vogal = vogal + 'i'
+        break;
+      case '4':
+        vogal = vogal + 'o'
+        break;
+      case '5':
+        vogal = vogal + 'u'
+        break;
+      default:
+        vogal = vogal + string[i]
+        break;
+    }
+    
+  }
+  return vogal
 }
+
+
 
 // Desafio 10
 function techList() {
