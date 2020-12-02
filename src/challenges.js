@@ -147,17 +147,17 @@ function decode(string) {
 function techList(array, name) {
   let arrayTechObjects = [];
   if (array.length !== 0) {
-  for (let tec of array.sort()) {
-     let techObject = {
-       tech: undefined,
-       name: name,
-     };
-    techObject.tech = tec;
-    arrayTechObjects.push(techObject);
+    for (let tec of array.sort()) {
+      let techObject = {
+        tech: undefined,
+        name
+      };
+      techObject.tech = tec;
+      arrayTechObjects.push(techObject);
+    }
+    return arrayTechObjects;
   }
-  return arrayTechObjects;
-} 
-  return 'Vazio!'
+  return 'Vazio!';
 }
 
 // Desafio 11
