@@ -36,15 +36,13 @@ function highestCount(arrayNums) {
   let highterNum = arrayNums[0];
   let highterNumRepeat = 0;
   for (let numberIndex in arrayNums) {
-    if (arrayNums[numberIndex] > highterNum)
-    {
+    if (arrayNums[numberIndex] > highterNum) {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
-    }
-    else if (arrayNums[numberIndex] === highterNum)
-    {
+      }
+    else if (arrayNums[numberIndex] === highterNum) {
       highterNumRepeat += 1;
-    }
+      }
   }
   return highterNumRepeat;
 }
@@ -55,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs((cat2 - mouse));
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
-  }
+    }
   else if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
@@ -84,7 +82,8 @@ function fizzBuzz(arrayNums) {
 
 // Desafio 9
 function encode(phrase) {
-  let baseCopy = codeBase(phrase);
+  let baseCopy;
+  baseCopy = codeBase(phrase);
   for (let index in baseCopy.arrayPhrase) {
     if (baseCopy.arrayPhrase[index] in baseCopy) {
       baseCopy.arrayPhrase[index] = baseCopy[baseCopy.arrayPhrase[index]];
@@ -94,7 +93,8 @@ function encode(phrase) {
 }
 
 function decode(phrase) {
-  let baseCopy = codeBase(phrase);
+  let baseCopy;
+  baseCopy = codeBase(phrase);
   for (let index in baseCopy.arrayPhrase) {
     if (baseCopy.arrayPhrase[index] in (Object.keys(baseCopy))) {
       baseCopy.arrayPhrase[index] = Object.keys(baseCopy)
@@ -119,7 +119,8 @@ function codeBase(phrase) {
 // Desafio 10
 function techList(arrayNamesAndTechs, name) {
   if (arrayNamesAndTechs.length > 0) {
-    let object = techObjectCreator(arrayNamesAndTechs, name);
+    let object;
+    object = techObjectCreator(arrayNamesAndTechs, name);
     return object;
   }
   return 'Vazio!';
@@ -127,12 +128,12 @@ function techList(arrayNamesAndTechs, name) {
 function techObjectCreator(arrayNamesAndTechs, nameReceived) {
   let arrayTech = [];
   arrayNamesAndTechs.sort();
-  for (let index = 0; index < arrayTech.length; i += 1) {
+  for (let index = 0; index < arrayTech.length; index += 1) {
     arrayTech.push(
-      techObject = {
+    techObject = {
       tech: arrayNamesAndTechs[index],
-      name: nameReceived
-    }
+      name: nameReceived,
+      }
     )
   }
   return arrayTech;
