@@ -14,7 +14,7 @@ function splitSentence(text) {
   let textArray = [];
   let lastIndex = (text.length - 1).toString();
   for (let charIndex in text) {
-    if (text.hasOwnProperty(charIndex)) {
+    if ({}.hasOwnProperty.call(text, charIndex) {
       let char = text[charIndex];
       if (char === ' ') {
         textArray.push(currentWord);
