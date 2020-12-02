@@ -71,8 +71,8 @@ function highestCount(arrayRepet) {
       maiorNumero = arrayRepet[index];
     }
 
-    for (let index = 0; index < arrayRepet.length; index += 1) {
-      if (arrayRepet[index] === maiorNumero) {
+    for (let index2 = 0; index2 < arrayRepet.length; index2 += 1) {
+      if (arrayRepet[index2] === maiorNumero) {
         contaMaiorNumero += 1;
       }
 
