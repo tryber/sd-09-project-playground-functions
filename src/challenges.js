@@ -29,18 +29,16 @@ console.log(splitSentence('Rua Leobino Pimentel'));
 function concatName(strings) {
   let firstName = '';
   let lastName = '';
-  let completedName = '';
 
-  for (let index = 0; index < strings.length; index += 1){
-    if ( index === 0) {
+  for (let index = 0; index < strings.length; index += 1) {
+    if (index === 0) {
       firstName = strings[index];
-    } else if (index === strings.length - 1){
+    } else if (index === strings.length - 1) {
       lastName = strings[index];
     }
   }
 
-  completedName = lastName + ', ' + firstName;
-  return completedName;
+  return lastName + ', ' + firstName;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
