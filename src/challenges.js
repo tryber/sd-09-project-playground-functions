@@ -112,7 +112,7 @@ function fizzBuzz(numbers) {
     } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
       result.push('buzz')
     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      result.push('fizzbuzz');
+      result.push('fizzBuzz');
     } else {
       result.push('bug!')
     }
