@@ -4,7 +4,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else if {
+  } else {
     return false;
   }
 }
@@ -39,10 +39,13 @@ function splitSentence(string) {
   return stringArray;
 }
 
-// Outro jeito de resolver o desafio 3:
-// function splitSentence(string) {
-//   return string.split(' ');
-// }
+/*
+Outro jeito de resolver o desafio 3:
+function splitSentence(string) {
+  let stringArray = string.split(' ');
+  return stringArray;
+}
+*/
 
 // console.log(splitSentence('Go Trybe'));
 // --------------------------------------------------------------------
@@ -53,7 +56,7 @@ function concatName(stringArray) {
   return concatenatedName;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // --------------------------------------------------------------------
 
 // Desafio 5
@@ -79,7 +82,7 @@ function highestCount(numArray) {
   for (let key2 in numArray) {
     if (numArray[key2] === highestNum) {
       counter += 1;
-    } 
+    }
   }
   return counter;
 }
@@ -88,14 +91,29 @@ function highestCount(numArray) {
 // --------------------------------------------------------------------
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numArray) {
+  let resultArray = [];
+  for (let fizzKey in numArray) {
+    if (numArray[fizzKey] % 3 === 0 && numArray[fizzKey] % 5 === 0) {
+      resultArray.push('fizzbuzz');
+      } else if (numArray[fizzKey] % 3 === 0) {
+        resultArray.push('fizz');
+      } else if (numArray[fizzKey] % 5 === 0) {
+        resultArray.push('buzz');
+      } else {
+        resultArray.push('bug!');
+      }
+  }
+  return resultArray;
 }
+
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// --------------------------------------------------------------------
 
 // Desafio 9
 function encode() {
