@@ -232,10 +232,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(text) {
+  // Referência para o código (MDN web docs):
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+  
+  let numberPattern = /\d+/g;
+  let numbersInText = text.match(numberPattern);
+  let totalWater = 0;
+  for (let index in numbersInText) {
+    let number = parseInt(numbersInText[index]);
+    totalWater += number;
+  }
 
+  return `${totalWater} copos de água`;
+}
 
 module.exports = {
   calcArea,
