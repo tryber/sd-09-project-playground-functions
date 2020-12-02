@@ -102,14 +102,41 @@ function fizzBuzz(numbersArray) {
   }
   return fizzBuzzArray;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+function code(stringToCode, toBeReplaced, replaceBy) {
+  codedString = "";
+  for (let stringIndex = 0; stringIndex < stringToCode.length; stringIndex++) {
+    if (stringToCode[stringIndex] === toBeReplaced) {
+      codedString += replaceBy;
+    } else {
+      codedString += stringToCode[stringIndex];
+    }
+  }
+  return codedString;
+}
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringToEncode) {
+  let encodedString = stringToEncode;
+
+  encodedString = code(encodedString, 'a', '1');
+  encodedString = code(encodedString, 'e', '2');
+  encodedString = code(encodedString, 'i', '3');
+  encodedString = code(encodedString, 'o', '4');
+  encodedString = code(encodedString, 'u', '5');
+
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+function decode(stringToDecode) {
+  let decodedString = stringToDecode;
+
+  decodedString = code(decodedString, '1', 'a');
+  decodedString = code(decodedString, '2', 'e');
+  decodedString = code(decodedString, '3', 'i');
+  decodedString = code(decodedString, '4', 'o');
+  decodedString = code(decodedString, '5', 'u');
+
+  return decodedString;
 }
 
 // Desafio 10
