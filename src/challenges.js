@@ -4,13 +4,12 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
-// let ana = true
-// let luiza = false
+// let ana = true;
+// let luiza = false;
 // console.log(compareTrue(ana, luiza));
 // --------------------------------------------------------------------
 
@@ -143,73 +142,89 @@ for (const key in object) {
 }
 */
 
+// FUNÇÕES AUXILIARES PARA DESAFIO 9:
+function aTo1(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      newString += '1';
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
+}
+function eTo2(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'e') {
+      newString += '2';
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
+}
+function iTo3(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'i') {
+      newString += '3';
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
+}
+function oTo4(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'o') {
+      newString += '4';
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
+}
+function uTo5(string) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'u') {
+      newString += '5';
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
+}
+
 // Desafio 9
 function encode(string) {
-  let newString = '';
-  function aTo1(string) {
-    newString = '';
-    for (let index = 0; index < string.length; index += 1) {
-      if (string[index] === 'a') {
-        newString += '1';
-      } else {
-        newString += string[index];
-      }
-    }
-    return newString;
-  }
-  function eTo2(string) {
-    newString = '';
-    for (let index = 0; index < string.length; index += 1) {
-      if (string[index] === 'e') {
-        newString += '2';
-      } else {
-        newString += string[index];
-      }
-    }
-    return newString;
-  }
-  function iTo3(string) {
-    newString = '';
-    for (let index = 0; index < string.length; index += 1) {
-      if (string[index] === 'i') {
-        newString += '3';
-      } else {
-        newString += string[index];
-      }
-    }
-    return newString;
-  }
-  function oTo4(string) {
-    newString = '';
-    for (let index = 0; index < string.length; index += 1) {
-      if (string[index] === 'o') {
-        newString += '4';
-      } else {
-        newString += string[index];
-      }
-    }
-    return newString;
-  }
-  function uTo5(string) {
-    newString = '';
-    for (let index = 0; index < string.length; index += 1) {
-      if (string[index] === 'u') {
-        newString += '5';
-      } else {
-        newString += string[index];
-      }
-    }
-    return newString;
-  }
- return aTo1(eTo2(iTo3(oTo4(uTo5(string)))));
+  return test(test(test(test(test(string, 'a', '1'), 'e', '2'), 'i', '3'), 'o', '4'), 'u', '5');
+// return aTo1(eTo2(iTo3(oTo4(uTo5(string)))));
 }
-
 // console.log(encode('hiaeiou there!'));
 
-
-function decode() {
-  // seu código aqui
+function test(string, param1, param2) {
+  let newString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === param1) {
+      newString += param2;
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
 }
+
+// console.log(test('h111112345oi', '1', 'a'));
+
+function decode(numString) {
+  return test(test(test(test(test(numString, '1', 'a'), '2', 'e'), '3', 'i'), '4', 'o'), '5', 'u');
+}
+
+// console.log(decode('h111112345oi'));
 
 // Desafio 10
 function techList() {
