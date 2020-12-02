@@ -172,16 +172,19 @@ function fizzBuzz(inputArray) {
 }
 
 // Desafio 9
+function checkDictionary(char, dictionary) {
+  if (char in dictionary) {
+    char = dictionary[char];
+  }
+  return char;
+}
+
 function translate(text, dictionary) {
   let output = '';
   for (let charIndex in text) {
     if (Object.prototype.hasOwnProperty.call(text, charIndex)) {
       let char = text[charIndex];
-      if (char in dictionary) {
-        output += dictionary[char];
-      } else {
-        output += char;
-      }
+      output += checkDictionary(char, dictionary)
     }
   }
   return output;
@@ -225,9 +228,10 @@ function ascOrder(array) {
 }
 
 function techList(array, name) {
+  let output = 'Vazio!';
   if (array.length > 0) {
     array = ascOrder(array);
-    let output = [];
+    output = [];
     for (let index in array) {
       if (Object.prototype.hasOwnProperty.call(array, index)) {
         let tech = array[index];
@@ -235,9 +239,8 @@ function techList(array, name) {
         output.push(obj);
       }
     }
-    return output;
   }
-  return 'Vazio!';
+  return output;
 }
 
 // Desafio 11
