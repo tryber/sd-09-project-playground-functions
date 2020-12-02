@@ -117,36 +117,50 @@ function createCipherObj(type) {
   return cipher;
 }
 
+function cipherCases(index, type) {
+  let encryptedChar
+  let cipher = createCipherObj(type)
+  
+  
+    switch (index) {
+      case 'a':
+      case '1':
+        encryptedChar = cipher[index];
+        break;
+
+      case 'e':
+      case '2':
+        encryptedChar = cipher[index];
+        break;
+
+      case 'i':
+      case '3':
+        encryptedChar = cipher[index];
+        break;
+
+      case 'o':
+      case '4':
+        encryptedChar = cipher[index];
+        break;
+
+      case 'u':
+      case '5':
+        encryptedChar = cipher[index];
+        break;
+
+      default:
+        encryptedChar = index;
+        break;
+  }
+  return encryptedChar
+}
+
 function encode(string) {
   let cipher = createCipherObj('encode');
   let encrypted = '';
 
   for (let i of string) {
-    switch (i) {
-      case 'a':
-        encrypted += cipher[i];
-        break;
-
-      case 'e':
-        encrypted += cipher[i];
-        break;
-
-      case 'i':
-        encrypted += cipher[i];
-        break;
-
-      case 'o':
-        encrypted += cipher[i];
-        break;
-
-      case 'u':
-        encrypted += cipher[i];
-        break;
-
-      default:
-        encrypted += i;
-        break;
-    }
+    encrypted += cipherCases(i, 'encode')
   }
   return encrypted;
 }
@@ -156,34 +170,13 @@ function decode(string) {
   let decipher = '';
 
   for (let i of string) {
-    switch (i) {
-      case '1':
-        decipher += cipher[i];
-        break;
-
-      case '2':
-        decipher += cipher[i];
-        break;
-
-      case '3':
-        decipher += cipher[i];
-        break;
-
-      case '4':
-        decipher += cipher[i];
-        break;
-
-      case '5':
-        decipher += cipher[i];
-        break;
-
-      default:
-        decipher += i;
-        break;
-    }
+    decipher += cipherCases(i, 'decode')
   }
   return decipher;
 }
+
+console.log(encode('hi there'))
+console.log(decode('h1 th2r2'))
 
 // Desafio 10
 function techList(array, name) {
