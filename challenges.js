@@ -9,3 +9,11 @@ function compareTrue(v1,v2) {
 function calcArea(base, height) {
   return((base*height)/2)
 };
+
+function splitSentence(String) {
+  return (String.split(" "))
+};
+
+function concatName(Ar[]) {
+  return (Ar.indexOf(-1) + ", " + Ar.indexOf(0))
+};
