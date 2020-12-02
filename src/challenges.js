@@ -42,11 +42,13 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if ((cat1 - mouse) < (cat2 - mouse)) {
-    return cat1;
-  } else if ((cat2 - mouse) < (cat1 - mouse)) {
-    return cat2;
-  } else (cat1 === cat2) 
+  let distanciaCat1 = Math.abs(mouse - cat1)
+  let distanciaCat2 = Math.abs(mouse - cat2)
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  } else if (distanciaCat2 < distanciaCat1) {
+    return 'cat2';
+  } else (distanciaCat1 === distanciaCat2) 
     return 'os gatos trombam e o rato foge';
   }
 
@@ -69,8 +71,16 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let vowels = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  for (let index = 0; index < string.length; index += 1) {}
 }
 
 
@@ -82,16 +92,17 @@ function decode() {
 function techList(array, name) {
   // seu código aqui
   let newArray = []
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < array) {
+  let string = 'Vazio!'
+  for (let index = array.length; index > array.length; index -= 1) {
+    if (array[index] < array.length) {
         let outro = {
           tech: array[index],
           name: name
         }
         newArray.push(outro)
     } 
-    else if (array === []) {
-        return 'Vazio!'
+    else if ([] === 0) {
+        return string
     }
   }
   newArray.sort(function(a, b) {
