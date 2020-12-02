@@ -111,8 +111,6 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings
 }
 
-console.log(encode('hello u there aiho'))
-
 // Challenge Nine - Function to encode string
 function encode(stringToEncode) {
   let translatorMap = {
