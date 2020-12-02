@@ -70,11 +70,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       array[i] = 'fizzBuzz';
-    } else if (array[i] % 5 == 0) {
+    } else if (array[i] % 5 === 0) {
       array[i] = 'buzz';
-    } else if (array[i] % 3 == 0) {
+    } else if (array[i] % 3 === 0) {
       array[i] = 'fizz';
     } else {
       array[i] = 'bug!';
@@ -84,16 +84,60 @@ function fizzBuzz(array) {
   return array;
 }
 
-let array = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(array))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  for (let i = 0; i < str.length; i += 1) {
+    switch (str[i]) {
+      case 'a':
+        str[i] = '1';
+        break;
+      case 'e':
+        str[i] = '2';
+        break;
+      case 'i':
+        str[i] = '3';
+        break;
+      case 'o':
+        str[i] = '4';
+        break;
+      case 'u':
+        str[i] = '5';
+        break;
+    }
+  }
+
+  return str;
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  for (let i = 0; i < str.length; i += 1) {
+    switch (str[i]) {
+      case '1':
+        str[i] = 'a';
+        break;
+      case '2':
+        str[i] = 'e';
+        break;
+      case '3':
+        str[i] = 'i';
+        break;
+      case '4':
+        str[i] = 'o';
+        break;
+      case '5':
+        str[i] = 'u';
+        break;
+    }
+  }
+
+  return str;
 }
+
+let str = 'meu nome é gabriel galdino';
+str[2] = '2';
+console.log("Codificação:");
+console.log(encode(str));
+console.log("Decodificação:");
+console.log(decode(str));
 
 // Desafio 10
 function techList() {
