@@ -170,7 +170,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(number) {
   // seu código aqui
-  if (number.length != 11) {
+  if (number.length !== 11) {
     return "Array com tamanho incorreto.";
   }
   let answer = "(";
@@ -214,8 +214,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let answer = "";
+  let helper = 0;
+  for (let index = 0; index < drinks.length; index += 1) {
+    if (drinks[index] > 0 && drinks[index] < 9) {
+      helper += parseInt(drinks[index], 10);
+    }
+  }
+  answer += helper + " copos de água";
+  return answer;
 }
 
 module.exports = {
