@@ -40,12 +40,14 @@ function footballPoints(wins, ties) {
     points += 3
   }
   for (j = 1; j<= ties; j++){
-    poins += 1
+    points += 1
   }
   return points
   // seu código aqui
 }
-
+// let teste5w = 3
+// let teste5t = 2
+// console.log(footballPoints(teste5w, teste5t))
 // Desafio 6
 let teste = [9, 1, 2, 3, 9, 5, 7];
 function highestCount(numbers) {
