@@ -175,7 +175,7 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     objectTech.push({
       tech: tech[index],
-      name: name,
+      'name': name,
     });
   }
 
