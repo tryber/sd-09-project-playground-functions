@@ -32,7 +32,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = 3 * wins + ties;
+  let totalPoints = (3 * wins) + ties;
 
   return totalPoints;
 }
@@ -155,7 +155,6 @@ function cipherCases(index, type) {
 }
 
 function encode(string) {
-  let cipher = createCipherObj('encode');
   let encrypted = '';
 
   for (let i of string) {
@@ -165,7 +164,6 @@ function encode(string) {
 }
 
 function decode(string) {
-  let cipher = createCipherObj('decode');
   let decipher = '';
 
   for (let i of string) {
