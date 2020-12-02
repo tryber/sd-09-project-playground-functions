@@ -143,8 +143,8 @@ function decode(text) {
 
 // Desafio 10
 function ascOrder(array) {
-  for (cycles = array.length - 1; cycles > 0; cycles -= 1) {
-    for (currentIndex = 0; currentIndex < cycles; currentIndex += 1) {
+  for (let cycles = array.length - 1; cycles > 0; cycles -= 1) {
+    for (let currentIndex = 0; currentIndex < cycles; currentIndex += 1) {
       let nextIndex = currentIndex + 1;
       if (array[currentIndex] > array[nextIndex]) {
         let first = array[nextIndex];
@@ -205,7 +205,7 @@ function handlePhoneArray(array) {
   let output = '';
   let counter = {};
   for (let index in array) {
-    item = array[index];
+    let item = array[index];
     counter = countItem(item, counter);
     if (validateItem(item, counter[item])) {
       output = 'não é possível gerar um número de telefone com esses valores';
@@ -217,7 +217,7 @@ function handlePhoneArray(array) {
 }
 
 function generatePhoneNumber(array) {
-  output = '';
+  let output = '';
   if (array.length === 11) {
     output = handlePhoneArray(array);
   } else {
