@@ -52,7 +52,6 @@ function highestCount(array) {
   }
 
   for ()
-}
 */
 
 // Desafio 7
@@ -63,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (cat2Distance > cat1Distance) {
     return 'cat1';
-  } 
+  }
   return 'os gatos se trombam e o rato foge';
 }
 console.log(catAndMouse(1, 0, 2));
