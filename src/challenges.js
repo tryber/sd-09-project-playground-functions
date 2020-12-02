@@ -1,6 +1,6 @@
  // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 === true && valor2 === false) {
+  if(valor1 === true && valor2 === true) {
     return true;
   } else {
     return false;
@@ -34,9 +34,19 @@ let finalResult = lastName + ', ' + firstName;
         console.log(concatName());
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}undefined
+
+function footballPoints(wins,ties) {
+let empate = 1;
+let vitoria = 3;
+let total = vitoria + empate;
+
+  if(wins === vitoria && ties === empate) {
+  } 
+      return total;
+}
+      console.log(footballPoints());
+
+
 
 // Desafio 6
 function highestCount() {
