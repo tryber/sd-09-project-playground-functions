@@ -1,7 +1,7 @@
 //  Cheguei na NAVE, Trybers!! VAMOS QUE VAMOS!
 
 // Desafio 1
-  function compareTrue(valorOne, valorTwo) {
+function compareTrue(valorOne, valorTwo) {
   if(valorOne === true && valorTwo === true) {
     return true;
   } else {
@@ -19,7 +19,6 @@ function splitSentence(frase) {
   let array = frase.split(' ');
   return array;
 }
-console.log(splitSentence('Kamila Vanessa Ribeiro'));
 
 /*Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 
@@ -30,12 +29,12 @@ let arrayNomes = ['Lucas','Cassiano','Ferraz', 'Paolillo']
 function concatName(arrayNomes) {
 return `${arrayNomes[arrayNomes.length-1] + ', ' + arrayNomes[0]}`;
 }
-console.log(concatName(arrayNomes));
 
 // Desafio 5
-  function footballPoints(wins, ties) {
+function footballPoints(wins, ties) {
   return wins *3 + ties
   }
+
   // Desafio 6
   let array = [1, 3, 7, 7, 7, 7];
   function highestCount(numbers) {
@@ -53,20 +52,33 @@ console.log(concatName(arrayNomes));
   }
   return amountMany;
 }
-console.log(highestCount(array));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distanciaCat1 = cat1 - mouse;
-let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = 0;
+  let distanciaCat2 = 0;
 
-if( distanciaCat2 > distanciaCat1) {
+  if(cat1 > mouse){
+    distanciaCat1 = cat1 - mouse;
+  } else {
+    distanciaCat1 = mouse - cat1;
+  }
+  
+  if(cat2 > mouse) {
+    distanciaCat2 = cat2 - mouse;
+  } else {
+    distanciaCat2 = mouse - cat2;
+  }
+
+  if( distanciaCat2 > distanciaCat1) {
+    return 'Cat1';
+  } else if (distanciaCat1 === distanciaCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else {
     return 'Cat2';
-
-  }else (distanciaCat1 === distanciaCat2); {
-    return 'os gatos trombam e o rato foge'
   }
 }
-console.log(catAndMouse(5,7,15))
+//console.log(catAndMouse(5, 6, 9))
 
 // Desafio 8
 function fizzBuzz() {
