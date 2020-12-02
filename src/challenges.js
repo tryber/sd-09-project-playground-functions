@@ -87,7 +87,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function checkTypesDivisions() {
+
+function fizzBuzz(numbers) {
+  let arrayToReturn = []
   for (let index in numbers) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
       arrayToReturn.push('fizz')
@@ -99,11 +101,6 @@ function checkTypesDivisions() {
       arrayToReturn.push('bug!')
     }
   }
-}
-
-function fizzBuzz(numbers) {
-  let arrayToReturn = []
-  checkTypesDivisions(numbers)
   console.log(arrayToReturn)
   return arrayToReturn
 }
