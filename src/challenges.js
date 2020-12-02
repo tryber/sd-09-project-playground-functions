@@ -52,7 +52,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  let concatenatedName = (`${stringArray[stringArray.length - 1]},  ${stringArray[0]}.`);
+  let concatenatedName = (`${stringArray[stringArray.length - 1]}, ${stringArray[0]}`);
   return concatenatedName;
 }
 
@@ -101,13 +101,13 @@ function fizzBuzz(numArray) {
   for (let fizzKey in numArray) {
     if (numArray[fizzKey] % 3 === 0 && numArray[fizzKey] % 5 === 0) {
       resultArray.push('fizzbuzz');
-      } else if (numArray[fizzKey] % 3 === 0) {
-        resultArray.push('fizz');
-      } else if (numArray[fizzKey] % 5 === 0) {
-        resultArray.push('buzz');
-      } else {
-        resultArray.push('bug!');
-      }
+    } else if (numArray[fizzKey] % 3 === 0) {
+      resultArray.push('fizz');
+    } else if (numArray[fizzKey] % 5 === 0) {
+      resultArray.push('buzz');
+    } else {
+      resultArray.push('bug!');
+    }
   }
   return resultArray;
 }
@@ -116,15 +116,60 @@ function fizzBuzz(numArray) {
 // --------------------------------------------------------------------
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = '';
+  function aTo1(string) {
+    for (let index in string) {
+      if (string[index] === a) {
+      string[index] = 1;
+      }
+    }
+    return string;
+  }
+  function eTo2(string) {
+    for (let index in string) {
+      if (string[index] === e) {
+      string[index] = 2;
+      }
+    }
+    return string;
+  }
+  function iTo3(string) {
+    for (let index in string) {
+      if (string[index] === i) {
+      string[index] = 3;
+      }
+    }
+    return string;
+  }
+  function oTo4(string) {
+    for (let index in string) {
+      if (string[index] === o) {
+      string[index] = 4;
+      }
+    }
+    return string;
+  }
+  function uTo5(string) {
+    for (let index in string) {
+      if (string[index] === u) {
+      string[index] = 5;
+      }
+    }
+    return string;
+  }
+  return string;
 }
+
+console.log(encode('hi there!'));
+
+
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayTech, name) {
   // seu código aqui
 }
 
