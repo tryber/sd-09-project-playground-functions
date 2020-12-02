@@ -33,16 +33,7 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let vitorias = 0;
-  let empate = 0;
-  if (wins !== 0) {
-    vitorias = wins * 3;
-  } else if (ties !== 0) {
-    empate = ties * 1;
-  } else {
-    return false;
-  }
-  return vitorias + empate;
+  return wins * 3 + ties;
 }
 console.log(footballPoints(10, 5));
 
