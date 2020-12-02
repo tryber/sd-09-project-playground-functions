@@ -97,7 +97,7 @@ function encode(string) {
   }
   return encrypt;
 }
-console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
 function decode(string) {
   let decrypt = string;
@@ -109,7 +109,7 @@ function decode(string) {
   }
   return decrypt;
 }
-console.log(decode('h3 th2r2!'));
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
