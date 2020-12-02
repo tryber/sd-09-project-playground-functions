@@ -10,12 +10,17 @@ function compareTrue(value1, value2) {
 console.log(compareTrue(true, true))
 
 // Desafio 2
+
 function calcArea(base, height) {
   // seu código aqui
+  // Área de um triângulo: (base * altura) / 2.
+  return base * height / 2;
 }
 
+console.log(calcArea(2, 4))
+
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
 }
 
@@ -30,8 +35,12 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
+// function highestCount() {
   // seu código aqui
+  // 
+// }
+function highestCount() {
+
 }
 
 // Desafio 7
