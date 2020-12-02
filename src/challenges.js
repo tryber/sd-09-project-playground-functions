@@ -130,8 +130,16 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let techListName = [];
+  if (techs == '') {
+    return 'Vazio!'
+  }
+  for (let index = 0; index < techs.length; index += 1) {
+    let newItem = {tech: techs[index], name: name}
+    techListName.push(newItem)
+  }
+  return techListName;
 }
 
 // Desafio 11
