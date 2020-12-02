@@ -3,8 +3,8 @@ function compareTrue(firstValue, secondValue) {
   if (firstValue === true && secondValue === true) {
     return true;
   }
-    return false;
-  }
+  return false;
+}
 
 console.log(compareTrue(true, false));
 
