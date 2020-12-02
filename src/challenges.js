@@ -44,39 +44,31 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(3, 2))
 
 // Desafio 6
-function numberCounter(array) {
-  const repetitionArray = []
-  for (let element of array) {
-    let counter = 0
-    for (let arrayIndex = 0; arrayIndex < array.length; arrayIndex += 1) {
-      if (element === array[arrayIndex]) {
-        counter += 1
-      }
-    }
-    repetitionArray.push(counter)
-  }
-  return repetitionArray
-}
-
-function highestCount(array) {
-  // seu código aqui
-  const repetitionArray = numberCounter(array)
+function greatestValue(array) {
   let greatest = 0
-  for (let element of repetitionArray) {
+  for (let element of array) {
     if (element > greatest) {
       greatest = element
     }
   }
-
-  // return array[repetitionArray.indexOf(greatest)]
-  // Retorna o elemento que mais se repete no array
-
   return greatest
 }
-// console.log(highestCount([9, 3, 3, 3, 9, 9, 9]))
+
+function highestCount(array) {
+  // seu código aqui
+  const greatestNumber = greatestValue(array)
+  let greatestCounter = 0
+  for (let element of array) {
+    if (element === greatestNumber) {
+      greatestCounter += 1
+    }
+  }
+  return greatestCounter
+}
+// console.log(highestCount([9, 10, 9, 3, 9, 9, 9, 1, 9, 1, 9]))
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let diffCat1 = Math.abs(mouse - cat1)
   let diffCat2 = Math.abs(mouse - cat2)
@@ -157,7 +149,10 @@ function decode(str) {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  array = array.sort()
+  if (array.length === 0) {
+    return 'Vazio!'
+  }
+  array.sort()
   let myArray = []
   for (let element of array) {
     let object = {}
@@ -170,16 +165,6 @@ function techList(array, name) {
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Neves'))
 
 // Desafio 11
-function greatestValue(array) {
-  let greatest = 0
-  for (let element of array) {
-    if (element > greatest) {
-      greatest = element
-    }
-  }
-  return greatest
-}
-
 function lowestValue(array) {
   let lowest = 0
   for (let element of array) {
@@ -213,7 +198,7 @@ function generatePhoneNumber(array) {
   const phoneNumberPart3 = phoneNumber.slice(7, 12)
   return `(${phoneNumberPart1}) ${phoneNumberPart2}-${phoneNumberPart3}`
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -240,9 +225,12 @@ function hydrate(str) {
   for (let items of waterGlasess) {
     sum += Number(items)
   }
-  return `${sum} copo(s) de água`
+  if (sum === 1) {
+    return `${sum} copo de água`
+  }
+  return `${sum} copos de água`
 }
-// console.log(hydrate('1 cachaça, 5 cervejas e 9 copo de vinho'))
+console.log(hydrate('1 cachaça, 9 cervejas e 4 copos de vinho'))
 
 module.exports = {
   calcArea,
