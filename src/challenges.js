@@ -28,32 +28,31 @@ function isDivisibleBy(dividend, divider) {
 }
 
 function repeatMore(array) {
-  let numRepeat;
   let qntRepeat = 0;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     let cont1 = 0;
     let cont2 = 0;
     let numTemp1;
     let numTemp2;
     let repetiu = false;
-    for (let j = i + 1; j < array.length; j++ ) {
-      if (repetiu == false){
-        if (array[i] == array[j]) {
+    for (let j = i + 1; j < array.length; j += 1) {
+      if (repetiu === false){
+        if (array[i] === array[j]) {
           repetiu = true;
           cont1 = 2;
           numTemp1 = array[j];
           array.splice(j,1);
-          j--;
+          j -= 1;
         }
-      }else{
-        if (array[i] == array[j]) {
-          cont2++;
+      } else {
+        if (array[i] === array[j]) {
+          cont2 += 1;
           numTemp2 = array[j]
           array.splice(j,1);
-          j--;
+          j -= 1;
         }
       }
-      if (numTemp1 == numTemp2 && qntRepeat < cont1 + cont2) {
+      if (numTemp1 === numTemp2 && qntRepeat < cont1 + cont2) {
         qntRepeat = cont1 + cont2;
         numRepeat = numTemp1;
       }
@@ -213,7 +212,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  if (number !== 11) {
+  if (number.length !== 11) {
     return "Array com tamanho incorreto.";
   }
   for (let i in number) {
