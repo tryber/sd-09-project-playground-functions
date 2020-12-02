@@ -227,7 +227,7 @@ function hydrate(arrayDrink) {
   if (water.length === 1) {
     return '1 copo de água';
   }
-  if (water.lentgh > 1) {
+  if (water.length > 1) {
     return `${water.length} copos de água`;
   }
   return '0 copos de água';
