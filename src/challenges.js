@@ -180,7 +180,7 @@ function techList(array, name) {
   for (let i = 0; i < array.length; i += 1) {
     resultArray.push({
       tech: sortArray[i],
-      name: name
+      name
     });
   }
 
@@ -221,9 +221,17 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function compareNum(a, b) {
-  if (a === b) return 0;
-  if (a < b) return -1;
-  if (a > b) return 1;
+  let output = 0
+
+  if (a < b) {
+    output = -1
+  }
+
+  if (a > b) {
+    output = 1
+  }
+
+  return output
 }
 
 function triangleCheck(lineA, lineB, lineC) {
@@ -248,7 +256,7 @@ function hydrate(string) {
   let output;
 
   for (let i of resultArray) {
-    quantity += parseInt(i);
+    quantity += parseInt(i, 10);
   }
 
   if (quantity === 1) {
