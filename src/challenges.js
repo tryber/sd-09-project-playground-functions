@@ -40,7 +40,7 @@ function highestCount(arrayNums) {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
     }
-    else if (arrayNums[numberIndex] === highterNum) {
+    if (arrayNums[numberIndex] === highterNum) {
       highterNumRepeat += 1;
     }
   }
@@ -49,15 +49,15 @@ function highestCount(arrayNums) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = Math.abs((cat1 - mouse));
-  let distanceCat2 = Math.abs((cat2 - mouse));
-  if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge';
+  let distanceMouseToCats= [Math.abs((cat1 - mouse)), Math.abs((cat2 - mouse))]
+  let  priority = 'cat1';
+  if (distanceMouseToCats[0] > distanceMouseToCats[1]){
+      priority = 'cat2';
   }
-  else if (distanceCat1 < distanceCat2) {
-    return 'cat1';
+  if (distanceMouseToCats[0] === distanceMouseToCats[1]) {
+      priority = 'os gatos trombam e o rato foge';
   }
-  return 'cat2';
+  return priority;
 }
 
 // Desafio 8
@@ -67,7 +67,7 @@ function fizzBuzzGenerate(number) {
     word += 'fizz';
   }
   if (number % 5 === 0) {
-    word += 'buzz';
+    word += 'Buzz';
   }
   if (word === '') {
     word = 'bug!';
@@ -76,7 +76,7 @@ function fizzBuzzGenerate(number) {
 }
 function fizzBuzz(arrayNums) {
   let arrayResponse = [];
-  for (let index in arrayNums) {
+  for (let index = 0; index < arrayNums.length; index += 1) {
     arrayResponse.push(fizzBuzzGenerate(arrayNums[index]));
   }
   return arrayResponse;
@@ -121,7 +121,7 @@ function decode(phrase) {
 function techObjectCreator(arrayNamesAndTechs, nameReceived) {
   let arrayTech = [];
   arrayNamesAndTechs.sort();
-  for (let index = 0; index < arrayTech.length; index += 1){
+  for (let index = 0; index < arrayNamesAndTechs.length; index += 1){
     let techObject = {
       tech: arrayNamesAndTechs[index],
       name: nameReceived,
