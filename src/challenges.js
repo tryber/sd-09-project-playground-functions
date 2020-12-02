@@ -110,8 +110,8 @@ function encode(stri) {
   // seu código aqui
   let voltaStr = '';
   let str = stri;
-  for (let index = 0; index < str.length; index += 1){
-    switch (str[index]){
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
       case 'a':
         voltaStr += 1;
         break;
@@ -139,8 +139,8 @@ function decode(stri) {
   // seu código aqui
   let voltaStr = '';
   let str = stri;
-  for (let index = 0; index < str.length; index += 1){
-    switch (str[index]){
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
       case '1':
         voltaStr += 'a';
         break;
@@ -166,13 +166,27 @@ function decode(stri) {
 
 
 // Desafio 10
-function techList() {
+function techList(arr, name) {
   // seu código aqui
+  let obj = [];
+  let array = arr.sort();
+  if (arr.length < 1){
+    return 'Vazio!'
+  } else {
+    for (let index = 0; index < arr.length; index += 1) {
+      x = { tech: array[index],
+            name: name };
+      obj.push(x); 
+    }
+  }
+  return obj;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
+  
+
 }
 
 // Desafio 12
