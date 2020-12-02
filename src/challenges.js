@@ -15,10 +15,15 @@ function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
 
+console.log(calcArea(10, 20))
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  const arrayString = string.split(' ');
+  return arrayString;
 }
+
+console.log(splitSentence('Rua Leobino Pimentel'))
 
 // Desafio 4
 function concatName() {
