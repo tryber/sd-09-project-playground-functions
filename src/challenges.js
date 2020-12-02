@@ -26,8 +26,9 @@ function concatName(arrayString) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // return wins * 3;
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  return wins + ties;
 }
 
 // Desafio 6
@@ -93,3 +94,4 @@ console.log(compareTrue(true, false));
 console.log(calcArea(30, 20));
 console.log(splitSentence("Gabriel Castro"));
 console.log(concatName(["xurubita", "lucas", "thiago", "white"]));
+console.log(footballPoints(4, 2));
