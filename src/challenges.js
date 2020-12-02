@@ -37,11 +37,14 @@ function concatName(stringArray){
 }
 console.log(concatName(reverse));
 
-
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let vic= 3  
+let emp = 4
+function footballPoints(wins, ties) {
+  let vitorias = wins * 3;
+  let empate = ties * 1
+  
+  return vitorias + empate;
 }
 
 // Desafio 6
