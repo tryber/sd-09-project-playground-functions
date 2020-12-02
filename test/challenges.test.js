@@ -72,3 +72,7 @@ assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 10, 
 assert.deepStrictEqual(challenges.generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]), '(12) 34567-8901')
 console.log('11° OK');
 
+assert.deepStrictEqual(challenges.triangleCheck(10, 14, 8), true)
+assert.deepStrictEqual(challenges.triangleCheck(10, 18, 8), false)
+console.log('12° OK');
+
