@@ -126,8 +126,7 @@ function encode(string) {
       case vowels[4]:
         encodeArray.push(5);
         break;
-      default:
-        encodeArray.push(array[i]);
+      default: encodeArray.push(array[i]);
     }
   }
   let encodeString = encodeArray.join('');
@@ -164,14 +163,14 @@ function decode(string) {
 
 // Desafio 10 OK
 function techList(array, name) {
-  let list = [];
-  for (i in array.sort()) {
-    list.push( {tech: array[i], name: name} );
-  } 
-  if (list.length === 0) {
-    return 'Vazio!';
+  if (array.length !== 0) {
+    let list = [];
+    for (i in array.sort()) {
+      list.push( {tech: array[i], name: name} );
+    } 
+    return list;
   }
-  return list;
+  return 'Vazio!'
 }
 
 // Desafio 11
