@@ -114,16 +114,19 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let arrayList = [];
-  if (array.length !== 0) {
-    for (let i = 0; i < array.length; i += 1) {
-      arrayList.push({ tech: array[i], name })
-    }
-  }else {
-    return 'Vazio!';
+
+  for (let i = 0; i < array.length; i += 1) {
+    arrayList.push({ tech: array[i], name })
   }
-  return arrayList;
+
+  if (array.length === 0) {
+    console.log('Vazio!');
+  } else {
+    return arrayList;
+  }
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcus'));
+// techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcus');
+// 'React', 'Jest', 'HTML', 'CSS', 'JavaScript'
 
 // Desafio 11
 function generatePhoneNumber() {
