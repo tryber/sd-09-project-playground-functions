@@ -8,12 +8,20 @@ function compareTrue(firstBool, secondBool) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let array = [];
+  let aux = 0;
+  for (index in string) {
+      if (!array[aux]) {
+          array[aux] = '';
+      }
+      string[index] === ' ' ? aux += 1 : array[aux] += string[index];
+  }
+  return array;
 }
 
 // Desafio 4
