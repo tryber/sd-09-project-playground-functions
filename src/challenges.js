@@ -240,17 +240,18 @@ function quantidyNumber(number) {
 function generatePhoneNumber(number) {
   // seu código aqui
   let show = '';
-  if (verifyNumber(number)) {
-    show = 'Array com tamanho incorreto.'
-  } 
   if (quantidyNumber(number)) {
     show = 'não é possível gerar um número de telefone com esses valores';
   }
+  if (verifyNumber(number)) {
+    show = 'Array com tamanho incorreto.'
+  } 
   if (show === '') {
     show = criateNumber(number);
   }
   return show;
 }
+
 
 // Desafio 12
 function triangleCheck() {
