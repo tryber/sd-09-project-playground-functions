@@ -82,13 +82,13 @@ function fizzBuzz(array) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
+let letters = ['a', 'e', 'i', 'o', 'u'];
+let numbers = ['1', '2', '3', '4', '5'];
 function encode(string) {
-  let letters = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = ['1', '2', '3', '4', '5'];
-  let encrypt = string.toLowerCase();
+  let encrypt = string;
 
   for (let i = 0; i < string.length; i += 1) {
     for (let j = 0; j < 5; j += 1) {
@@ -97,12 +97,10 @@ function encode(string) {
   }
   return encrypt;
 }
-// console.log(encode('Marcuseaio'));
+console.log(encode('hi there!'));
 
 function decode(string) {
-  let numbers = ['1', '2', '3', '4', '5'];
-  let letters = ['a', 'e', 'i', 'o', 'u'];
-  let decrypt = string.toLowerCase();
+  let decrypt = string;
 
   for (let i = 0; i < string.length; i += 1) {
     for (let j = 0; j < 5; j += 1) {
@@ -111,7 +109,7 @@ function decode(string) {
   }
   return decrypt;
 }
-// console.log(decode('M1rc5s'));
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
