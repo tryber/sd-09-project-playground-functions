@@ -186,7 +186,8 @@ function hydrate(bebidas) {
       }
     }
   }
-  return `${sum} copos de água`
+  let sugestion = `${sum} copos de água`
+  return sugestion;
 }
 console.log(hydrate("1 cachaça, 5 cervejas, e 1 copo de vinho"))
 
