@@ -175,12 +175,20 @@ function generatePhoneNumber(array) {
   if (array.length != 11){
     return 'Array com tamanho incorreto.';
   }
+  let counter = 0;
   for(let index = 0; index < array.length; index += 1){
     if (array[index] < 0 || array[index] > 9){
       return 'não é possível gerar um número de telefone com esses valores';
+    } else if (index <= 9){
+      for (let index2 = 1; index2 < array.length; index2 += 1){
+        counter += 1;
+      }
+      if (counter >= 3){
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
     }
   }
-  let phoneNumber = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + '-' + array[6] + array[7] + array[8] + array[9];  
+  let phoneNumber = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];  
   return phoneNumber;
 }
 
