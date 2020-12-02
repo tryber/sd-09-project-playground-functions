@@ -92,8 +92,17 @@ function highestCount(numArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+      return 'cat1';
+  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+      return 'os gatos trombam e o rato foge';
+  } else {
+      return 'cat2';
+  }  
 }
+
+// console.log(catAndMouse(3, 1, 6));
+// --------------------------------------------------------------------
 
 // Desafio 8
 function fizzBuzz(numArray) {
@@ -117,48 +126,47 @@ function fizzBuzz(numArray) {
 
 // Desafio 9
 function encode(string) {
-  let newString = '';
   function aTo1(string) {
     for (let index in string) {
-      if (string[index] === a) {
-      string[index] = 1;
+      if (string[index] === 'a') {
+        string[index] = 1;
       }
     }
     return string;
   }
   function eTo2(string) {
     for (let index in string) {
-      if (string[index] === e) {
-      string[index] = 2;
+      if (string[index] === 'e') {
+        string[index] = 2;
       }
     }
     return string;
   }
   function iTo3(string) {
     for (let index in string) {
-      if (string[index] === i) {
-      string[index] = 3;
+      if (string[index] === 'i') {
+        string[index] = 3;
       }
     }
     return string;
   }
   function oTo4(string) {
     for (let index in string) {
-      if (string[index] === o) {
-      string[index] = 4;
+      if (string[index] === 'o') {
+        string[index] = 4;
       }
     }
     return string;
   }
   function uTo5(string) {
     for (let index in string) {
-      if (string[index] === u) {
-      string[index] = 5;
+      if (string[index] === 'u') {
+        string[index] = 5;
       }
     }
     return string;
   }
-  return string;
+  return aTo1(eTo2(iTo3(oTo4(uTo5(string)))));
 }
 
 // console.log(encode('hi there!'));
