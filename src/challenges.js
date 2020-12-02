@@ -1,21 +1,27 @@
-//PROJECT 2 - playground functions
+// PROJECT 2 - playground functions
+
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true) {
+  if (param1 === true && param2 === true) {
     return true;
   } else {
     return false;
   }
 }
 
-//let ana = true
-//let luiza = false 
-//console.log(compareTrue(ana, luiza));
+// let ana = true
+// let luiza = false
+// console.log(compareTrue(ana, luiza));
+// ---------------------------------------------------------------
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
+
+// console.log(calcArea(5,4));
+// ---------------------------------------------------------------
 
 // Desafio 3
 function splitSentence() {
