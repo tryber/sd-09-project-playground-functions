@@ -120,11 +120,21 @@ function techList(array, name) {
     for (let i = 0; i < array.length; i += 1) {
       arrayList.push({ tech: array[i], name });
     }
+    arrayList.sort(function (a, b) {
+      if (a.tech > b.tech) {
+        return 1;
+      }
+      if (a.tech < b.tech) {
+        return -1;
+      }
+      return 0;
+    })
   }
+
   return arrayList;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcus'));
-console.log(techList([], 'Marcus'));
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcus'));
+// console.log(techList([], 'Marcus'));
 
 // Desafio 11
 function generatePhoneNumber() {
