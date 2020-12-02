@@ -95,42 +95,40 @@ function decode(phrase) {
   let baseCopy = codeBase(phrase);
   for (let index in baseCopy.arrayPhrase) {
     if (baseCopy.arrayPhrase[index] in (Object.keys(baseCopy))) {
-      baseCopy.arrayPhrase[index] = Object.keys(baseCopy).
-        slice(baseCopy.arrayPhrase[index] - 1 , baseCopy.arrayPhrase[index]);
+      baseCopy.arrayPhrase[index] = Object.keys(baseCopy)
+        .slice(baseCopy.arrayPhrase[index] - 1, baseCopy.arrayPhrase[index]);
     }
   }
   return baseCopy.arrayPhrase.join('');
 }
 
 function codeBase(phrase) {
-  objectReference = {
+  let objectReference = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   }
-  objectReference['arrayPhrase'] = phrase.split('');
+  objectReference.arrayPhrase = phrase.split('');
   return objectReference;
 }
 
 // Desafio 10
 function techList(arrayNamesAndTechs, name) {
   if (arrayNamesAndTechs.length > 0) {
-    return techObjectCreator(arrayNamesAndTechs);
-  }
+    return techObjectCreator(arrayNamesAndTechs, name); }
   else {
-    return 'Vazio!';
-  }
+    return 'Vazio!'; }
 }
-function techObjectCreator(arrayNamesAndTechs){
+function techObjectCreator(arrayNamesAndTechs, nameReceived) {
   let arrayTech = [];
   arrayNamesAndTechs.sort();
   for (let index in arrayNamesAndTechs) {
     arrayTech.push(
       techObject = {
       tech: arrayNamesAndTechs[index],
-      name: name
+      name: nameReceived
     }
     )
   }
