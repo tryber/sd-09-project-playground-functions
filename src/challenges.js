@@ -87,7 +87,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function checkBuzzFizzBug() {
+function checkBuzzFizzBug(numbers) {
   if (numbers[index] % 5 === 0) {
     arrayToReturn.push('buzz')
   } else if (numbers[index] % 3 === 0) {
@@ -103,7 +103,7 @@ function fizzBuzz(numbers) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       arrayToReturn.push('fizzBuzz')
     } else {
-      checkBuzzFizzBug()
+      checkBuzzFizzBug(numbers)
     }
   }
   console.log(arrayToReturn)
