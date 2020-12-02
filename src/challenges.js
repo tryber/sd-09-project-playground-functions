@@ -75,13 +75,6 @@ function catAndMouse(mouse, cat1, cat2) {
       phrase = 'os gatos trombam e o rato foge';
       break;
   }
-  // if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-  //   phrase = 'cat1';
-  // } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-  //   phrase = 'cat2';
-  // } else {
-  //   phrase = 'os gatos trombam e o rato foge';
-  // }
 
   return phrase;
 }
@@ -114,23 +107,26 @@ function fizzBuzz(arrayNumbers) {
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-
+// rgb(76,164,109)
 // Desafio 9
-// Procurei ajuda para esse exercício, e achei mas com soluções mais
-// complexas, aproveitando apenas a idéia de objeto.
-// https://dev.to/thepracticaldev/daily-challenge-254-the-vowel-code-1046
+function compareLetter(letter, objectChar) {
+  let newLetter = '';
+
+  for (let indexObject in objectChar) {
+    if (letter === indexObject) {
+      newLetter = objectChar[indexObject];
+    }
+  }
+  return newLetter;
+}
+
 function switchLetter(phrase, objectChar) {
   let newPhrase = '';
 
   for (let index = 0; index < phrase.length; index += 1) {
     let newLetter = '';
 
-    for (let indexObject in objectChar) {
-      if (phrase[index] === indexObject) {
-        newLetter = objectChar[indexObject];
-      }
-    }
-
+    newLetter = compareLetter(phrase[index], objectChar);
     newPhrase += (newLetter !== '') ? newLetter : phrase[index];
   }
 
@@ -183,9 +179,31 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumbers) {
+  if (arrayNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  // let phone = '';
+
+  // for (let index = 0; index < arrayNumbers.length; index += 1) {
+  //   switch (index) {
+  //     case 0:
+  //       phone += '(';
+  //       break;
+  //     case 2:
+  //       phone += ') ';
+  //       break;
+  //     case 7:
+  //       phone += '-';
+  //       break;
+  //   }
+  //   phone += arrayNumbers[index];
+  // }
+
+  return phone;
 }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
