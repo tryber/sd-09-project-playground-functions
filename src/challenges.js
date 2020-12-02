@@ -128,9 +128,21 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+let vetor = [];
+let pessoa = 'Lucas'
+function techList(arrayTechs, name) {
+  if (arrayTechs.length === 0){
+    return 'Vazio!'
+  }
+  let listaComObjetos = [];
+  for (let index = 0; index < arrayTechs.length; index += 1){
+    listaComObjetos[index] = {
+      Tech:arrayTechs[index], 
+      nome: name,}
+  }
+  return listaComObjetos
 }
+console.log(techList(vetor, pessoa))
 
 // Desafio 11
 function generatePhoneNumber() {
