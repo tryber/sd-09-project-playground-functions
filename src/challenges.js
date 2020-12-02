@@ -16,9 +16,9 @@ console.log(area)
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(` `);
+  return frase.split(' ');
 }
-console.log(splitSentence(`go trybe`));
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(names) {
