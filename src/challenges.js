@@ -194,7 +194,7 @@ function generatePhoneNumber(arrayNumber) {
   // seu código aqui
   let stringNumber = transformeArrayString(arrayNumber);
   if (numberequal11(arrayNumber) === true) {
-    if (numberLess0(arrayNumber) === false || greatestValue(verificationNumber(arrayNumber)) >= 3) {
+    if (numberLess0(arrayNumber) === false || Math.max(verificationNumber(arrayNumber)) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     let inittialNumbers = stringNumber.slice(0, 2);
@@ -202,7 +202,7 @@ function generatePhoneNumber(arrayNumber) {
     let finalNumbers = stringNumber.slice(7, 12);
     return `(${inittialNumbers}) ${middlesNumbers}-${finalNumbers}`;
   }
-  return 'Array com tamanho incorreto';
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
