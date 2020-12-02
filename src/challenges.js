@@ -123,18 +123,14 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList(tecnologias, name) {
-  if (tecnologias.length === 0) {
+function techList(arrayTech, name) {
+  if (arrayTech.length === 0) {
     return 'Vazio!';
   }
 
-  let techOrdenada = tecnologias.sort();
+  let techOrdenada = arrayTech.sort();
   let listaDeObjetos = [];
-
-  if (listaDeObjetos.length === 0) {
-    return 'Vazio!';
-  }
-
+  
   for (const NomeTech of techOrdenada) {
     let obj = {
       tech: NomeTech,
