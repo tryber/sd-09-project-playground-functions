@@ -138,7 +138,6 @@ function switchLetter(phrase, objectChar) {
 }
 
 function encode(phrase) {
-  let newEncode = '';
   let objectEncode = {
     a: 1,
     e: 2,
@@ -146,13 +145,11 @@ function encode(phrase) {
     o: 4,
     u: 5,
   };
-  
   return switchLetter(phrase, objectEncode);
 }
 // console.log(encode('hi there!'));
 
 function decode(phrase) {
-  let newDecode = '';
   let objectDecode = {
     1: 'a',
     2: 'e',
@@ -160,7 +157,6 @@ function decode(phrase) {
     4: 'o',
     5: 'u',
   };
-
   return switchLetter(phrase, objectDecode);
 }
 // console.log(decode('H4w 1r2 y45 t4d1y?'));
