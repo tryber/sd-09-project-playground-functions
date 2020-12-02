@@ -82,8 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouCat2 > mouCat1) {
     console.log('cat1');
     result = 'cat1';
-  } else 
-  if (mouCat1 === mouCat2) {
+  } else if (mouCat1 === mouCat2) {
     console.log('os gatos trombam e o rato foge');
     result = 'os gatos trombam e o rato foge';
   } else {
