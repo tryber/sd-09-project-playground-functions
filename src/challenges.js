@@ -64,12 +64,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
   let cat2Distance = cat2 - mouse;
   if (cat1Distance < cat2Distance) {
-    return 'o gato1 alcança o rato primeiro';
+    return 'cat1';
   } else if (cat2Distance < cat1Distance) {
-    return 'o gato2 alcança o rato primeiro';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }  
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
