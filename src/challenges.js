@@ -111,9 +111,38 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings
 }
 
-// Desafio 9
+console.log(encode('hello u there aiho'))
+
+// Challenge Nine - Function to encode string
 function encode(stringToEncode) {
+  let translatorMap = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+
+  stringToEncode = stringToEncode.toLowerCase();
+  let encodedString = '';
+
+  let encoded = false;
+  for (let index = 0; index < stringToEncode.length; index += 1) {
+    for (let key in translatorMap) {
+      if (stringToEncode[index] == key) {
+        encodedString += translatorMap[key];
+        encoded= true;
+      }
+    }
+    if (encoded === false) {
+      encodedString += stringToEncode[index];
+    } else {
+      encoded = false;
+    }
+  }
+  return encodedString;
 }
+
 function decode() {
   // seu código aqui
 }
