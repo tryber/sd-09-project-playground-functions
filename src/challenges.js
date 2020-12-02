@@ -19,10 +19,10 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(stringsArray) {
   stringsArray = [];
-  let firstIndex = stringsArray[stringsArray.length -1];
-  let separator = ', ';
-  let lastIndex = stringsArray[0];
-  let concatenated = firstIndex + separator + lastIndex; 
+  let concatenated = '';
+  concatenated += stringsArray[stringsArray.length -1];
+  concatenated += ', ';
+  concatenated += stringsArray[0]; 
   return concatenated;
 }
 
