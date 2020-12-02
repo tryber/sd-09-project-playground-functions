@@ -140,8 +140,41 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayTelefone) {
+  if (arrayTelefone.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+
+  for (const numeros of arrayTelefone) {
+    if ((numeros < 0) || (numeros > 9)) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
+    let contador = 0;
+    for (const numero2 of arrayTelefone) {
+      if (numeros === numero2) {  
+        contador += 1;
+      }
+    }
+
+    if (contador > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  let telefoneFormatado = '(ab) cdefg-hijk'
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[1], arrayTelefone[0]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[2], arrayTelefone[1]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[5], arrayTelefone[2]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[6], arrayTelefone[3]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[7], arrayTelefone[4]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[8], arrayTelefone[5]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[9], arrayTelefone[6]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[11], arrayTelefone[7]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[12], arrayTelefone[8]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[13], arrayTelefone[9]);
+  telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[14], arrayTelefone[10]);
+  return telefoneFormatado;
 }
 
 // Desafio 12
