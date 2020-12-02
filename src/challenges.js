@@ -188,7 +188,7 @@ function hydrate(bebidas) {
   }
   return `${sum} copos de água`
 }
-console.log(hydrate("1 cachaça, 5 cervejas, 3 whisks e 1 copo de vinho"))
+console.log(hydrate("1 cachaça, 5 cervejas, e 1 copo de vinho"))
 
 
 module.exports = {
