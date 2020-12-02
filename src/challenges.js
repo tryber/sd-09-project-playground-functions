@@ -152,7 +152,7 @@ function generatePhoneNumber(arrayTelefone) {
 
     let contador = 0;
     for (const numero2 of arrayTelefone) {
-      if (numeros === numero2) {  
+      if (numeros === numero2) {
         contador += 1;
       }
     }
