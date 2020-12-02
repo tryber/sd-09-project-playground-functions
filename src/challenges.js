@@ -39,10 +39,10 @@ function highestCount(arrayNums) {
     if (arrayNums[numberIndex] > highterNum) {
       highterNum = arrayNums[numberIndex];
       highterNumRepeat = 1;
-      }
+    }
     else if (arrayNums[numberIndex] === highterNum) {
       highterNumRepeat += 1;
-      }
+    }
   }
   return highterNumRepeat;
 }
@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs((cat2 - mouse));
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
-    }
+  }
   else if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
@@ -61,25 +61,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzzGenerate(number){
+function fizzBuzzGenerate(number) {
   let word = '';
   if (number % 3 === 0) {
-  word += 'fizz';
+    word += 'fizz';
   }
   if (number % 5 === 0) {
-  word += 'buzz';
+    word += 'buzz';
   }
-  if (word == '') {
-  word = 'bug!';
+  if (word === '') {
+    word = 'bug!';
   }
   return word;
 }
 function fizzBuzz(arrayNums) {
-let arrayResponse = [];
-for (let index in arrayNums) {
-  arrayResponse.push(fizzBuzzGenerate(arrayNums[index]));
-}
-return arrayResponse;
+  let arrayResponse = [];
+  for (let index in arrayNums) {
+    arrayResponse.push(fizzBuzzGenerate(arrayNums[index]));
+  }
+  return arrayResponse;
 }
 
 // Desafio 9
@@ -121,7 +121,7 @@ function decode(phrase) {
 function techObjectCreator(arrayNamesAndTechs, nameReceived) {
   let arrayTech = [];
   arrayNamesAndTechs.sort();
-  for (let index = 0; index < arrayTech.length; index += 1 ){
+  for (let index = 0; index < arrayTech.length; index += 1){
     let techObject = {
       tech: arrayNamesAndTechs[index],
       name: nameReceived,
