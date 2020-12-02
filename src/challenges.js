@@ -30,7 +30,7 @@ console.log(splitSentence(teste3));
 
 // Desafio 4
 function concatName(meuArray) {
- return `${meuArray[meuArray.length -1]} e ${meuArray[0]}`
+ return `${meuArray[meuArray.length -1]}, ${meuArray[0]}`
 }
 
 let nomes = ['paulo', 'joao', 'felipe', 'thiago'];
@@ -44,14 +44,15 @@ function footballPoints(wins, ties) {
 return (wins * 3) + (ties * 1);
  
 }
-let jogosGanhos = 5;
-let jogosEmpatados = 2;
+let vitorias = 5;
+let empates = 2;
 
-console.log(footballPoints(jogosGanhos, jogosEmpatados))
+console.log(footballPoints(vitorias, empates))
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+ 
+
 }
 
 // Desafio 7
