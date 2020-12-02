@@ -1,3 +1,4 @@
+// if someone's reading this I'd like you to know that you're a very nice person
 // Desafio 1
 function compareTrue() {
   // seu código aqui
