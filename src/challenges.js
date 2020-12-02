@@ -130,7 +130,8 @@ function encode(string) {
         encodeArray.push(array[i]);
     }
   }
-  return encodeArray.join();
+  let encodeString = encodeArray.join('');
+  return encodeString;
 }
 
 function decode(string) {
