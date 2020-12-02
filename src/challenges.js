@@ -3,20 +3,20 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base * height / 2;
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  arraySplit = sentence.split(" ");
+  let arraySplit = [];
+  arraySplit = sentence.split(' ');
   return arraySplit;
 }
 
@@ -28,7 +28,7 @@ function concatName(entry) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = 3 * wins + 1 * ties;
+  let points = (3 * wins) + (ties);
   return points;
 }
 
@@ -39,31 +39,31 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let capture = '';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-      return 'cat1';
+    capture = 'cat1';
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-      return 'cat2';
+    capture = 'cat2';
   } else if (Math.abs(cat2 - mouse) === Math.abs(cat1 - mouse)) {
-      return 'os gatos trombam e o rato foge';
+    capture = 'os gatos trombam e o rato foge';
   }
+  return capture;
 }
 
 // Desafio 8
 function fizzBuzz(entry) {
   let divisibles = [];
-  
   for (let index = 0; index < entry.length; index += 1) {
-      if (entry[index] % 3 === 0 && entry[index] % 5 === 0) {
-          divisibles.push('fizzBuzz');
-      } else if (entry[index] % 3 === 0) {
-          divisibles.push('fizz');
-      } else if (entry[index] % 5 === 0) {
-          divisibles.push('buzz');
-      } else {
-          divisibles.push('bug!')
-      }
+    if (entry[index] % 15 === 0) {
+      divisibles.push('fizzBuzz');
+    } else if (entry[index] % 3 === 0) {
+      divisibles.push('fizz');
+    } else if (entry[index] % 5 === 0) {
+      divisibles.push('buzz');
+    } else {
+      divisibles.push('bug!');
+    }
   }
-  
   return divisibles;
 }
 
