@@ -92,11 +92,11 @@ function encode(text) {
 }
 
 function decode(text) {
-  let code = 1; textDecode = text;
+  let code = 1, textDecode = text;
   let vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (vowel of vowels) {
-    for (character of textDecode) {
-      if (character == code) {
+  for (let vowel of vowels) {
+    for (let character of textDecode) {
+      if (character === code.toString()) {
         textDecode = textDecode.replace(code, vowel);
       }
     }
