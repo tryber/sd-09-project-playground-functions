@@ -250,7 +250,6 @@ function generatePhoneNumber(number) {
   return show;
 }
 
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
