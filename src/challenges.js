@@ -178,13 +178,13 @@ function techList(tech, name) {
     });
   }
 
-  if (objectTech === '') {
+  if (objectTech.length === 0) {
     return 'Vazio!';
   } else {
     return objectTech;
   }
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Nathália'));
+console.log(techList([], 'Nathália'));
 
 
 // Desafio 11
