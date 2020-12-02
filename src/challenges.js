@@ -181,7 +181,8 @@ function techList(array, name) {
       name: name,
     });
   }
-  return resultArray;
+
+  return resultArray.length === 0 ? 'Vazio!' : resultArray;
 }
 
 // Desafio 11
@@ -232,7 +233,6 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return linesSorted[2] < sum ? true : false
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
