@@ -172,18 +172,15 @@ function numberLess0(arrayNumber) {
 }
 function verificationNumber(arrayNumber) {
   let repeatNumber = 0
-  for (let key of arrayNumber) {
+  for (let count = 0; count < arrayNumber.lenth; coun += 1) {
     repeatNumber = 0;
-    for (let count = 0; count < arrayNumber.length; count += 1) {
-      if (key === arrayNumber[count]) {
+    for (let count2 = 0; count2 < arrayNumber.length; count2 += 1) {
+      if (arrayNumber[count] === arrayNumber[count2]) {
         repeatNumber += 1;
-      }
-    }
-    if (repeatNumber >= 3) {
-      return false;
+      }      
     }
   }
-  return true;
+  return repeatNumber;
 }
 function transformeArrayString(arrayNumber) {
   let stringNumber = '';
@@ -196,7 +193,7 @@ function generatePhoneNumber(arrayNumber) {
   // seu código aqui
   let stringNumber = transformeArrayString(arrayNumber);
   if (numberequal11(arrayNumber) === true) {
-    if (numberLess0(arrayNumber) === false || verificationNumber(arrayNumber) === false) {
+    if (numberLess0(arrayNumber) === false || verificationNumber(arrayNumber) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     let inittialNumbers = stringNumber.slice(0, 2);
