@@ -215,7 +215,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  if (validationNumber(number)) {
+  if (validationNumber(number) === true) {
     let ddd = [];
     let fifthFist = [];
     let fourthLast = [];
@@ -233,8 +233,6 @@ function generatePhoneNumber(number) {
   }
   return validationNumber(number);
 }
-let arr = [5, 2, 3, 4, 5, 6, 7, 8, 9, 0, 4];
-console.log(generatePhoneNumber(arr))
 
 // Desafio 12
 function triangleCheck() {
