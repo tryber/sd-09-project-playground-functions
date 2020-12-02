@@ -23,10 +23,12 @@ function splitSentence(split) {
 }
 console.log(splitSentence('go Trybe'));
 
-// Desafio 4
-function concatName(arraySTR) {
-  let string = arraySTR.reverse(' ');
-  return string;
+Desafio 4
+function concatName(arraySTR) { 
+  let firstName = arraySTR[0];
+  let  lastName = arraySTR[arraySTR.length -1];
+  concat = lastName + ', ' + firstName;  
+  return concat
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
