@@ -24,9 +24,9 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(nomeInicioFim) {
-  inicioEfim = nomeInicioFim[0] + nomeInicioFim[nomeInicioFim.length - 1];
+  let inicioEfim = nomeInicioFim[nomeInicioFim.length - 1] + ', ' + nomeInicioFim[0];
   return inicioEfim;
-}console.log(concatName(['Lucas', ' Cassiano', ' Ferraz', ' Paolillo']));
+}console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
