@@ -1,5 +1,6 @@
 // Desafio 1
-unction compareTrue(values1, values2) {
+  // seu código aqui
+function compareTrue(values1, values2) {
   if (values1 === true && values2 === true){
     return true;
   } 
@@ -22,9 +23,12 @@ function splitSentence(string) {
   console.log(splitSentence(array));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(arrayDeStrings) {
+  let lastFirst = arrayDeStrings.pop()
+  return lastFirst + ', ' + arrayDeStrings[0]
+ }
+ let arrayDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+ console.log(concatName(arrayDeNomes))
 
 // Desafio 5
 // concluido
