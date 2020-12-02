@@ -23,23 +23,24 @@ function splitSentence(sentence) {
   }
   
   let arrayFinal = [];
+  let count = 0;
   for (let index = 0; index < arraySentence.length; index += 1) {
     if(arraySentence[index] !== ' ') {
-      arrayFinal += arraySentence[index] 
+      arrayFinal[count] += arraySentence[index] 
     } else if (arraySentence[index] === ' ') {
-      arrayFinal += ', '
+      count += 1
     }
   }
   // seu código aqui
   return arrayFinal;
 }
+console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName(array) {
   let nome = `${array[array.length - 1]}, ${array[0]}`
   return nome;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
