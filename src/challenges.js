@@ -29,7 +29,7 @@ let numeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito',
 function concatName(stringArray){
   let reverse = stringArray.reverse()
 
-  return reverse.concat();
+  return reverse.concat(',');
 }
 console.log(concatName(numeros));
 
