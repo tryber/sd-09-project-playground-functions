@@ -53,8 +53,17 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2) {
   // seu código aqui
+  if(cat1 === cat2){
+    return 'os gatos trombam e o rato foge';
+  }
+  if(cat1 > cat2){
+      return 'cat1';
+  } else {
+      return 'cat2';
+  }
+  
 }
 
 // Desafio 8
@@ -89,7 +98,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-console.log(footballPoints(3,2));
 module.exports = {
   calcArea,
   catAndMouse,
