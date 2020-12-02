@@ -103,6 +103,7 @@ function checkTypesDivisions() {
 
 function fizzBuzz(numbers) {
   let arrayToReturn = []
+  checkTypesDivisions(numbers)
   console.log(arrayToReturn)
   return arrayToReturn
 }
