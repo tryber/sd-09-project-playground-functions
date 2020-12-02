@@ -273,7 +273,7 @@ return telefone;
 }
 
   if (array.length != 11) {
-      return 'Array com tamanho incorreto';
+      return 'Array com tamanho incorreto.';
   } else if (repita(array) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
   } else if (numeroMenorMaior(array) === true) {
