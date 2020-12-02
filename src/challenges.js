@@ -23,12 +23,13 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(nomeInicioFim) {
-  //let retorno = nomeInicioFim[0]
-  return nomeInicioFim = nomeInicioFim[0] + nomeInicioFim[nomeInicioFim.length -1];
+//let retorno = nomeInicioFim[0]
+  return nomeInicioFim = nomeInicioFim[ 0 ] + nomeInicioFim[nomeInicioFim.length - 1];
 }console.log(concatName(['Lucas', ' Cassiano', ' Ferraz', ' Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
+  return null;
 
 }
 
