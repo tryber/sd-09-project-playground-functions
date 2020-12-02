@@ -208,12 +208,12 @@ function generatePhoneNumber(arrayNumber) {
 }
 
 // Desafio 12
-function triangleCheck(linaA, lineB, lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let triangle = false;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     triangle = true;
-  } 
+  }
   if (lineB < lineA + lineC && Math,abs(lineA - lineC)) {
     triangle = true;
   }
@@ -226,6 +226,15 @@ function triangleCheck(linaA, lineB, lineC) {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  let waterGlasess = str.split(/\D/g).join('')
+  let sum = 0
+  for (let items of waterGlasess) {
+    sum += Number(items)
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`
+  }
+  return `${sum} copos de água`
 }
 
 
