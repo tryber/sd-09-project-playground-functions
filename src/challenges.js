@@ -1,5 +1,5 @@
 //Bruno Brolesi
-
+//
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   return (firstValue && secondValue);
@@ -78,14 +78,17 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function isVowel(character) {
-  vowels = ['a', 'e', 'i', 'o', 'u'];
-  return vowels.includes(character);
+  if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
+    return true;
+  }
+  return false;
 }
 
-function isDigit(digit){
-  let digits = ['0', '1', '2' ,'3', '4', '5','6', '7', '8', '9'];
-
-  return digits.includes(digit);
+function isNumberCharecter(number) {
+  if (number === '1' || number === '2' || number === '3' || number === '4' || number === '5') {
+    return true;
+  }
+  return false;
 }
 
 function swapVowelNumber(vowel) {
@@ -139,17 +142,19 @@ function encode(string) {
   return string.join("");
 }
 
+console.log(encode("hello world!"));
+
 function decode(string) {
   string = string.split("");
 
   for (let i in string) {
-    if (isDigit(string[i])) {
+    if (isNumberCharecter(string[i])) {
       string[i] = swapNumberVowel(string[i]);
     }
   }
   return string.join("");
 }
-
+console.log(decode(encode("hello world!")));
 // Desafio 10
 function techList(techArray, name) {
   if (techArray.length === 0) {
@@ -197,7 +202,7 @@ function generatePhoneNumber(numberArray) {
     repeatCounter = 0;
   }
   numberArray = numberArray.join("")
-  return ('(' + numberArray.slice(0, 2) + ') ' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
+  return ('(' + numberArray.slice(0, 2) + ')' + numberArray.slice(2, 7) + '-' + numberArray.slice(7, 11));
 }
 
 // Desafio 12
@@ -229,24 +234,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-
-function isDigit(digit){
-  let digits = ['0', '1', '2' ,'3', '4', '5','6', '7', '8', '9'];
-
-  return digits.includes(digit);
+function hydrate() {
+  // seu código aqui
 }
 
-function hydrate(string) {
-  string = string.split("")
-  let cupsOfWater = 0;
-
-  for(i in string){
-    if(isDigit(string[i])){
-      cupsOfWater += parseInt(string[i], 10);
-    }
-  }
-  return (cupsOfWater + ' copos de água');
-}
 
 module.exports = {
   calcArea,
