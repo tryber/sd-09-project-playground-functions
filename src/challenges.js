@@ -26,11 +26,10 @@ console.log(splitSentence('Go trybe'));
 function concatName(string) {
   // seu código aqui
   let lastFirst = string.pop();
-  return lastFirst + ', ' + string[0];
+  return `${lastFirst}, ${string[0]}`;
 }
 let array1 = ['pedro', 'henrique', 'frederico'];
 console.log(concatName(array1));
-
 
 
 // Desafio 5
@@ -47,13 +46,13 @@ function highestCount(number) {
   // seu código aqui
   let maiorNumero = 0;
   let qtdVezes = 0;
-  for (let index in number){
+  for (let index in number) {
     if (number[index] > maiorNumero) {
       maiorNumero = number[index];
     }
   }
-  for (let index2 in number){
-    if (number[index2] === maiorNumero){
+  for (let index2 in number) {
+    if (number[index2] === maiorNumero) {
       qtdVezes += 1;
     }
   }
@@ -66,15 +65,15 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(fizzbug) {
   // seu código aqui
   let result = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+  for (let index = 0; index < fizzbug.length; index += 1) {
+    if (fizzbug[index] % 3 === 0 && fizzbug[index] % 5 === 0) {
       result.push('fizzBuzz');
-    } else if (array[index] % 3 === 0){
+    } else if (fizzbug[index] % 3 === 0) {
       result.push('fizz');
-    } else if (array[index] % 5 === 0){
+    } else if (fizzbug[index] % 5 === 0) {
       result.push('buzz');
     } else {
       result.push('bug!');
