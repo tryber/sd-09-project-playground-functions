@@ -137,7 +137,7 @@ function decode(numString) {
 
 // Desafio 10
 function techList(array, name) {
-  if (array === []) {
+  if (array === [] || name === '') {
     return 'Vazio!';
   };
   let infoList = array.sort();
