@@ -88,7 +88,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(param) {
-  let numEncode = '';  
+  let numEncode = '';
   for (let index = 0; index < param.length; index += 1) {
     switch (param[index]) {
       case 'a':
