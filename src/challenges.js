@@ -191,12 +191,12 @@ function translate(text, dictionary) {
 }
 
 function encode(text) {
-  let dictionary = {a: 1, e: 2, i: 3, o: 4, u: 5,};
+  let dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   return translate(text, dictionary);
 }
 
 function decode(text) {
-  let dictionary = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u',};
+  let dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   return translate(text, dictionary);
 }
 
@@ -303,23 +303,23 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(text) {
   // Referência para o código (MDN web docs):
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
-  
+
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
   let cupsText = 'copo';
-  
+
   for (let index in numbersInText) {
     if (Object.prototype.hasOwnProperty.call(numbersInText, index)) {
       let number = parseInt(numbersInText[index], 10);
       totalWater += number;
     }
   }
-  
+
   if (totalWater > 1) {
     cupsText += 's'
   }
-  
+
   return `${totalWater} ${cupsText} de água`;
 }
 
