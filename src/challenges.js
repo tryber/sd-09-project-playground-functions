@@ -2,9 +2,8 @@
 function compareTrue(x, y) {
   if (x === true && y === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -24,7 +23,6 @@ function concatName(array) {
   array = ultimo + ', ' + primeiro;
   return array;
 }
-console.log(concatName(['Felipe', 'José', 'Maria', 'Sorin']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -37,41 +35,38 @@ function highestCount(array) {
   let contador = 0;
   for (let i in array) {
     if (array[i] === maior) {
-      contador++;
+      contador += 1;
     }
   }
   return contador
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return "cat1";
-  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return "cat2";
-  else return "os gatos trombam e o rato foge";
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
+  else 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
   let fizzBuzzArray = [];
   for (let i in array) {
-    if (array[i] % 3 === 0 && array[i] % 5 != 0) {
-      fizzBuzzArray.push("fizz");
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+      fizzBuzzArray.push('fizz');
     }
-    if (array[i] % 5 === 0 && array[i] % 3 != 0) {
-      fizzBuzzArray.push("buzz");
+    if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+      fizzBuzzArray.push('buzz');
     }
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      fizzBuzzArray.push("fizzBuzz");
-    }
-    if (array[i] % 3 != 0 && array[i] % 5 != 0) {
-      fizzBuzzArray.push("bug!");
+      fizzBuzzArray.push('fizzBuzz');
+    } else {
+      fizzBuzzArray.push('bug!');
     }
   }
   return fizzBuzzArray;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
@@ -86,7 +81,6 @@ function encode(frase) {
   }
   return fraseArray.join('');
 }
-console.log(encode('hi there'))
 
 function decode(frase) {
   let fraseArray = frase.split('');
@@ -100,18 +94,40 @@ function decode(frase) {
   }
   return fraseArray.join('');
 }
-console.log(decode('h3 th2r2'))
 
 // Desafio 10
 function techList(arrayTec, name) {
-  
+  let tecObj = {
+    tech,
+  }
 }
-console.log()
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumb) {
+  if (arrayNumb.length < 11) return "Array com tamanho incorreto.";
+
+  else {
+    arrayNumb.splice(0, 0, '(');
+    arrayNumb.splice(3, 0, ')');
+    arrayNumb.splice(4, 0, ' ');
+    arrayNumb.splice(10, 0, '-');
+  }
+
+  let newArr = [];
+  let indice = arrayNumb.indexOf(9); // volta -1(false) ou 0(true)
+  while(indice != -1) { // -1 = false 
+    newArr.push(indice); // empurrando indices para novo array
+    indice = arrayNumb.indexOf(9, indice +1); // (developer.mozilla)
+  } 
+  if(newArr.length > 2) return 'não é possível gerar um número de telefone com esses valores';
+
+  for(let i in arrayNumb) {
+    if(arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
+  }
+  
+  return arrayNumb.join('');
 }
+console.log(generatePhoneNumber([1, 2, 9, 9, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
