@@ -110,7 +110,7 @@ function encode(string) {
   let encodeArray = [];
   let vowels = ['a', 'e', 'i', 'o', 'u']
   for (let i = 0; i < array.length; i += 1) {
-    switch(array[i]) {
+    switch (array[i]) {
       case vowels[0]:
         encodeArray.push(1);
         break;
@@ -139,7 +139,7 @@ function decode(string) {
   let decodeArray = [];
   let vowels = ['1', '2', '3', '4', '5']
   for (let i = 0; i < array.length; i += 1) {
-    switch(array[i]) {
+    switch (array[i]) {
       case vowels[0]:
         decodeArray.push('a');
         break;
@@ -166,8 +166,11 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let list = [];
-  for (let i in array.sort()) {
+  for (i in array.sort()) {
     list.push({tech: array[i], name: name})
+  }
+  if (list.length === 0) {
+    return 'Vazio!';
   }
   return list;
 }
