@@ -224,13 +224,14 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(arrayDrink) {
   // seu código aqui
   let water = arrayDrink.split(/\D/g).join('');
-  if (water.length === 1) {
-    return '1 copo de água';
+  let result = 0;
+  for (let i of water) {
+    result += parseInt(i);
   }
-  if (water.length > 1) {
-    return `${water.length} copos de água`;
+  if (result <= 1) {
+    return `${result} copo de água`;
   }
-  return '0 copos de água';
+  return `${result} copos de água`;
 }
 
 module.exports = {
