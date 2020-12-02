@@ -74,12 +74,18 @@ function fizzBuzz(array) {
   for (let i of array) {
     if (i % 3 === 0 && i % 5 === 0) {
       resultArray.push('fizzBuzz');
-    } else if (i % 3 === 0) {
-      resultArray.push('fizz');
-    } else if (i % 5 === 0) {
-      resultArray.push('buzz');
-    } else {
-      resultArray.push('bug!');
+    } 
+
+    if (i % 3 === 0 && i % 5 !== 0) {
+      resultArray.push('fizz')
+    }
+
+    if (i % 3 !== 0 && i % 5 === 0) {
+      resultArray.push('buzz')
+    }
+
+    if (i % 3 !== 0 && i % 5 !== 0) {
+      resultArray.push('bug!')
     }
   }
   return resultArray;
