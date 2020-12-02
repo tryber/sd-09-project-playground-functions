@@ -16,10 +16,10 @@ function splitSentence(string) {
     if (string[index] == ' ') {
       array.push(word);
       word = '';
-    }else if (index == string.length-1){
+    } else if (index == string.length-1){
       word += string[index];
       array.push(word);
-    }else {
+    } else {
       word += string[index];
     }
   }
@@ -42,7 +42,7 @@ function biggerInArray(array) {
   let bigger = null;
   if (array.length == 0) {
     console.log('Array Vazio');
-  }else {
+  } else {
     bigger = array[0];
     for (let index in array) {
       if (array[index] > bigger) {
@@ -70,7 +70,7 @@ function distanceBetween(element1, element2) {
   let result = element1 - element2;
   if (result < 0) {
     return result * -1;
-  }else {
+  } else {
     return result;
   }
 }
@@ -79,9 +79,9 @@ function distanceBetween(element1, element2) {
 function catAndMouse(mouse, cat1, cat2) {
   if (distanceBetween(mouse, cat1) == distanceBetween(mouse, cat2)) {
     return 'os gatos trombam e o rato foge';
-  }else if (distanceBetween(mouse, cat1) > distanceBetween(mouse, cat2)) {
+  } else if (distanceBetween(mouse, cat1) > distanceBetween(mouse, cat2)) {
     return 'cat2';
-  }else {
+  } else {
     return 'cat1';
   }
 }
@@ -92,11 +92,11 @@ function fizzBuzz(array) {
   for (let index in array) {
     if (!(array[index] % 3 == 0) && !(array[index] % 5 == 0)) {
       result.push('bug!');
-    }else if ((array[index] % 3 == 0) && (array[index] % 5 == 0)) {
+    } else if ((array[index] % 3 == 0) && (array[index] % 5 == 0)) {
       result.push('fizzBuzz');
-    }else if (array[index] % 3 == 0) {
+    } else if (array[index] % 3 == 0) {
       result.push('fizz');
-    }else if (array[index] % 5 == 0) {
+    } else if (array[index] % 5 == 0) {
       result.push('buzz');
     }
   }
@@ -178,7 +178,7 @@ function sortArrayObjects(array) {
 function techList(technologies, name) {
   if (technologies.length == 0) {
     return 'Vazio!';
-  }else {
+  } else {
     let tecno = [];
     for (let index in technologies) {
       tecno.push(createNewTec(technologies[index],name));
@@ -207,20 +207,20 @@ function generatePhoneNumber(array) {
   for (let index in array) {
     if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    }else if (counterArray(array, array[index]) >= 3) {
+    } else if (counterArray(array, array[index]) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     } 
   }
   for (let index in array) {
     if (index == 0) {
       phoneNumber = '(' + array[index];
-    }else if (index == 1) {
+    } else if (index == 1) {
       phoneNumber += array[index] + ')';
-    }else if (index == 2) {
+    } else if (index == 2) {
       phoneNumber += ' ' + array[index];
-    }else if (index == 7) {
+    } else if (index == 7) {
       phoneNumber += '-' + array[index];
-    }else {
+    } else {
       phoneNumber += array[index];
     }
   }
@@ -233,13 +233,13 @@ function triangleCheck(lineA, lineB, lineC) {
     if ((lineB < (lineA + lineC)) && (lineB > distanceBetween(lineA, lineC))) {
       if ((lineC < (lineB + lineA)) && (lineC > distanceBetween(lineB, lineA))) {
         return true;
-      }else {
+      } else {
         return false;
       }
-    }else {
+    } else {
       return false;
     }
-  }else {
+  } else {
     return false;
   }
 }
@@ -290,7 +290,7 @@ function hydrate(string) {
   }
   if (addArray(count) > 1) {
     frase = addArray(count) + ' copos de água'
-  }else {
+  } else {
     frase = addArray(count) + ' copo de água'
   }
   return frase;
