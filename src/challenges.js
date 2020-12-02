@@ -180,7 +180,7 @@ function techList(array, name) {
   for (let i = 0; i < array.length; i += 1) {
     resultArray.push({
       tech: sortArray[i],
-      name
+      name,
     });
   }
 
