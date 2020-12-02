@@ -69,15 +69,24 @@ function highestCount(aheiNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if ((cat1 - mouse) === (cat2 - mouse)) {
+  cat1 = mouse - cat1;
+  cat2 = mouse - cat2;
+  if (cat1 < 0){
+    cat1 = cat1 * -1;
+  }
+  if (cat2 < 0){
+    cat2 = cat2 * -1;
+  }
+  if (cat1  === cat2) {
     return 'os gatos trombam e o rato foge';
   }
-  else if((cat1 - mouse) > (cat2 - mouse)){
-    return 'cat1';
+  else if(cat1 < cat2){
+    return 'cat1'; 
+  } else {
+    return 'cat2'; 
   }
-  return 'cat2';
 }
-//console.log(catAndMouse(9, 4, 4))
+console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
 function fizzBuzz() {
