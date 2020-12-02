@@ -172,12 +172,12 @@ function numberLess0(arrayNumber) {
 }
 function verificationNumber(arrayNumber) {
   let repeatNumber = 0
-  for (let count = 0; count < arrayNumber.lenth; coun += 1) {
+  for (let count = 0; count < arrayNumber.lenth; count += 1) {
     repeatNumber = 0;
     for (let count2 = 0; count2 < arrayNumber.length; count2 += 1) {
       if (arrayNumber[count] === arrayNumber[count2]) {
         repeatNumber += 1;
-      }      
+      }
     }
   }
   return repeatNumber;
