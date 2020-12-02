@@ -11,7 +11,7 @@ function biggestNumber(numbers) {
   return biggest;
 }
 
-function encodeDecode (string, a1, b1, a2, b2, a3, b3, a4, b4, a5, b5) {
+function encodeDecode(string, a1, b1, a2, b2, a3, b3, a4, b4, a5, b5) {
   let newString = '';
 
   for (let key of string) {
@@ -106,10 +106,10 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  return(encodeDecode(string, 'a', '1', 'e', '2', 'i', '3,', 'o', '4', 'u', '5'));
+  return (encodeDecode(string, 'a', '1', 'e', '2', 'i', '3,', 'o', '4', 'u', '5'));
 }
 function decode(string) {
-  return(encodeDecode(string, '1', 'a', '2', 'e', '3', 'i,', '4', 'o', '5', 'u'));
+  return (encodeDecode(string, '1', 'a', '2', 'e', '3', 'i,', '4', 'o', '5', 'u'));
 }
 
 // Desafio 10
