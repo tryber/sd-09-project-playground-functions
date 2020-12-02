@@ -12,13 +12,13 @@ function calcArea(base, height) {
 function splitSentence(text) {
   let currentWord = '';
   let textArray = [];
+  let lastIndex = (text.length - 1).toString();
   for (let charIndex in text) {
     let char = text[charIndex];
-    charIndex = parseInt(charIndex);
     if (char === ' ') {
       textArray.push(currentWord);
       currentWord = '';
-    } else if (charIndex === text.length - 1) {
+    } else if (charIndex === lastIndex) {
       currentWord += char;
       textArray.push(currentWord);
     } else {
@@ -52,7 +52,7 @@ function highestCount(inputArray) {
     } else {
       counter[number] += 1;
     }
-    if (index == 0 || number > highestNumber) {
+    if (index === '0' || number > highestNumber) {
       highestNumber = number;
     }
   }
@@ -175,9 +175,69 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+function breakFlow(repeatCounter, item) {
+  return ((repeatCounter > 2) || (item < 0) || (item > 9));
 }
+
+function updateCounter(status) {
+  if (status.currentElement === status.lastElement) {
+    status.repeatCounter += 1;
+  } else {
+    status.repeatCounter = 0;
+  }
+  return status.repeatCounter;
+}
+
+function getIndexFormat(index) {
+  let output = '';
+  let formats = {
+    '0': '(',
+    '2': ') ',
+    '7': '-'
+  };
+  if (index in formats) {
+    output = formats[index];
+  }
+  return output;
+}
+
+function handlePhoneArray(array) {
+  let output = '';
+  let status = {
+    repeatCounter: 0,
+    lastElement: '',
+    currentElement: ''
+  };
+
+  for (let index in array) {
+    status.currentElement = array[index];
+    status.repeatCounter = updateCounter(status);
+    if (breakFlow(status.repeatCounter, status.currentElement)) {
+      output = 'não é possível gerar um número de telefone com esses valores';
+      break;
+    }
+    output += getIndexFormat(index) + status.currentElement;
+    status.lastElement = status.currentElement;
+  }
+  return output;
+}
+
+function generatePhoneNumber(array) {
+  output = '';
+  if (array.length === 11) {
+    output = handlePhoneArray(array);
+  } else {
+    output = 'Array com tamanho incorreto.'
+  }
+  return output;
+}
+
+// let test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// let test = [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0];
+// let test = [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 1];
+let test = [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 10];
+console.log(generatePhoneNumber(test));
 
 // Desafio 12
 function triangleCheck() {
