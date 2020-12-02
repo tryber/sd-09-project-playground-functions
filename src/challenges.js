@@ -131,13 +131,14 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(techs, name) {
-  let techListName = [];
   if (techs == '') {
-    return 'Vazio!'
+    return 'Vazio!';
   }
+  let techListName = [];
+  techs.sort();
   for (let index = 0; index < techs.length; index += 1) {
-    let newItem = {tech: techs[index], name: name}
-    techListName.push(newItem)
+    let newItem = {tech: techs[index], name: name};
+    techListName.push(newItem);
   }
   return techListName;
 }
