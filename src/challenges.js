@@ -124,10 +124,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(order) {
+  let numbers = order.match(/\d+/g).map(Number);
+  let waterCups = 0;
 
+  for (let index in numbers) {
+    waterCups += numbers[index]
+  }
+
+  return `${waterCups} copos de água`;
+}
 
 module.exports = {
   calcArea,
