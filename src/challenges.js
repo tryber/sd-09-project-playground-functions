@@ -31,9 +31,9 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let firstIndex = array[0];
-  let lastIndex = array[array.length-1];
-  let newArray = [lastIndex, firstIndex];
-  return newArray;
+  let lastIndex = array[array.length - 1];
+  let string = lastIndex + ', ' + firstIndex;
+  return string;
 }
 
 // Desafio 5
