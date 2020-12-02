@@ -119,16 +119,22 @@ function fizzBuzz(arrayNumbers) {
 // Procurei ajuda para esse exercício, e achei mas com soluções mais
 // complexas, aproveitando apenas a idéia de objeto.
 // https://dev.to/thepracticaldev/daily-challenge-254-the-vowel-code-1046
-function switchLetter(letter, objectChar) {
-  let newLetter = '';
+function switchLetter(phrase, objectChar) {
+  let newPhrase = '';
 
-  for (let index in objectChar) {
-    if (letter === index) {
-      newLetter = objectChar[index];
+  for (let index = 0; index < phrase.length; index += 1) {
+    let newLetter = '';
+
+    for (let indexObject in objectChar) {
+      if (phrase[index] === indexObject) {
+        newLetter = objectChar[indexObject];
+      }
     }
+
+    newPhrase += (newLetter !== '') ? newLetter : phrase[index];
   }
 
-  return (newLetter !== '') ? newLetter : letter;
+  return newPhrase;
 }
 
 function encode(phrase) {
@@ -140,11 +146,8 @@ function encode(phrase) {
     o: 4,
     u: 5,
   };
-
-  for (let index = 0; index < phrase.length; index += 1) {
-    newEncode += switchLetter(phrase[index], objectEncode);
-  }
-  return newEncode;
+  
+  return switchLetter(phrase, objectEncode);
 }
 // console.log(encode('hi there!'));
 
@@ -158,10 +161,7 @@ function decode(phrase) {
     5: 'u',
   };
 
-  for (let index = 0; index < phrase.length; index += 1) {
-    newDecode += switchLetter(phrase[index], objectDecode);
-  }
-  return newDecode;
+  return switchLetter(phrase, objectDecode);
 }
 // console.log(decode('H4w 1r2 y45 t4d1y?'));
 
@@ -183,7 +183,7 @@ function techList(tech, name) {
   }
   return objectTech;
 }
-console.log(techList([], 'Nathália'));
+// console.log(techList([], 'Nathália'));
 
 
 // Desafio 11
