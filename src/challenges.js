@@ -126,13 +126,13 @@ function decode(sentence) {
 }
 
 // Desafio 10
-function techList(techArray, nameOfStudent) {
+function techList(techArray, name) {
   let listToLearn = [];
   if (techArray.length !== 0) {
     for (let index = 0; index < techArray.length; index += 1) {
       let format = {
         tech: techArray[index],
-        name: nameOfStudent,
+        name: name,
       }
       listToLearn.push(format);
     }
