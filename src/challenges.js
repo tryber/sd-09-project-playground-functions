@@ -105,10 +105,10 @@ function catAndMouse(mouse, cat1, cat2) {
     distancia2 = mouse - cat2;
   }
 
-  if (distancia1 < distancia2) {
-    return "O gato 1 vai alcançar o rato.";
-  } else if (distancia1 > distancia2) {
-    return "O gato 2 vai alcançar o rato.";
+  if (distancia1 > distancia2) {
+    return "cat2";
+  } else if (distancia1 < distancia2) {
+    return "cat1";
   } else {
     return "os gatos trombam e o rato foge";
   }
