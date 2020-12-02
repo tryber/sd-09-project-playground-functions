@@ -40,7 +40,7 @@ footballPoints(10, 5);
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-let numbers = [  ];
+  let numbers = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     let value = arrayNumbers[index];
     if (numbers[value] === undefined) {
@@ -76,11 +76,11 @@ catAndMouse(10, 10)
 function fizzBuzz(arrayNumbers) {
   let result = []
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0){
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       result.push('fizzBuzz');
     } else if (arrayNumbers[index] % 5 === 0) {
       result.push('buzz');
-    } else if (arrayNumbers[index] % 3 === 0){
+    } else if (arrayNumbers[index] % 3 === 0) {
       result.push('fizz');
     } else {
       result.push('bug!');
@@ -90,13 +90,13 @@ function fizzBuzz(arrayNumbers) {
 }
 fizzBuzz([2, 15, 7, 9, 45]);
 
-//Desafio 9
+// Desafio 9
 function encode() {
-// seu código aqui
+  // seu código aqui
 }
 
 function decode() {
-// seu código aqui  
+  // seu código aqui  
 }
 
 // Desafio 10
