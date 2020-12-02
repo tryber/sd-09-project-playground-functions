@@ -207,15 +207,33 @@ arrayTelephone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(arrayTelephone));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA ,lineB , lineC) {
+  if ( lineA > (lineB + lineC) && lineA < (Math.abs(lineA - lineB - lineC))) {
+    return false;
+  } else if ( lineB > (lineA + lineC) && lineA < (Math.abs(lineA - lineB - lineC))) {
+    return false;
+  } else if ( lineC > (lineA + lineB) && lineA < (Math.abs(lineA - lineB - lineC))) {
+    return false;
+  } else {
+    return true;
+  }
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let digit = /\d+/;
+  let numberOfDrinks = str.match(digit);
+  if ( numberOfDrinks == 1){
+    str =  numberOfDrinks + ' copo de água.';
+  } else {
+    str =  numberOfDrinks + ' copos de água.';
+  }
+  return str;
 }
 
+console.log(hydrate("1 cerveja"));
 
 module.exports = {
   calcArea,
