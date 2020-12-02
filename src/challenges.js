@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
-  return console.log;
 }
 compareTrue(true, true);
 
@@ -20,9 +19,9 @@ console.log(calcArea(10, 5));
 // Desafio 3
 function splitSentence(split) {
   let string = split;
-  return console.log(string.split(' '));
+  return string.split(' ');
 }
-splitSentence('go Trybe');
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(arraySTR) {
