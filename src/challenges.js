@@ -107,7 +107,7 @@ function encode(text) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   let output = '';
   for (let charIndex in text) {
@@ -127,7 +127,7 @@ function decode(text) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u',
   };
   let output = '';
   for (let charIndex in text) {
@@ -164,7 +164,7 @@ function techList(array, name) {
       let tech = array[index];
       let obj = {
         tech: tech,
-        name: name
+        name: name,
       };
       output.push(obj);
     }
@@ -180,7 +180,7 @@ function getIndexFormat(index) {
   let formats = {
     '0': '(',
     '2': ') ',
-    '7': '-'
+    '7': '-',
   };
   if (index in formats) {
     output = formats[index];
