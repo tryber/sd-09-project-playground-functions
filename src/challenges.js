@@ -125,7 +125,7 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tecnologias, name) {
   let techOrdenada = tecnologias.sort();
   let listaDeObjetos = [];
   
