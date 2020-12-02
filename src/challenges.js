@@ -17,15 +17,15 @@ console.log(area)
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(` `);
 }
-console.log(splitSentence("go trybe"));
+console.log(splitSentence(`go trybe`));
 
 // Desafio 4
 function concatName(names) {
   return `${names[names.length - 1]} , ${names[0]}`
 }
-console.log(concatName("Long, live , Trybers"))
+console.log(concatName(`Long, live , Trybers`))
 
 // Desafio 5
 function footballPoints() {
