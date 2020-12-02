@@ -238,9 +238,13 @@ function quantidyNumber(number) {
 function generatePhoneNumber(number) {
   // seu código aqui
   let show = '';
-  if (verifyNumber(number) || quantidyNumber(number)) {
+  if (verifyNumber(number)) {
+    show = 'Array com tamanho incorreto.'
+  } 
+  if (quantidyNumber(number)) {
     show = 'não é possível gerar um número de telefone com esses valores';
-  } else {
+  }
+  if (show === '') {
     show = criateNumber(number);
   }
   return show;
