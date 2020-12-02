@@ -81,10 +81,10 @@ function fizzBuzz(arrayNums) {
 }
 
 // Desafio 9
-function encode(phrase){
-  baseCopy = codeBase(phrase);
-  for (let index in baseCopy.arrayPhrase){
-    if (baseCopy.arrayPhrase[index] in baseCopy){
+function encode(phrase) {
+  let baseCopy = codeBase(phrase);
+  for (let index in baseCopy.arrayPhrase) {
+    if (baseCopy.arrayPhrase[index] in baseCopy) {
       baseCopy.arrayPhrase[index] = baseCopy[baseCopy.arrayPhrase[index]];
     }
   }
@@ -92,22 +92,23 @@ function encode(phrase){
 }
 
 function decode(phrase) {
-  baseCopy = codeBase(phrase);
-  for (let index in baseCopy.arrayPhrase){
-    if (baseCopy.arrayPhrase[index] in (Object.keys(baseCopy))){
-      baseCopy.arrayPhrase[index] = Object.keys(baseCopy).slice(baseCopy.arrayPhrase[index] -1 , baseCopy.arrayPhrase[index]);
+  let baseCopy = codeBase(phrase);
+  for (let index in baseCopy.arrayPhrase) {
+    if (baseCopy.arrayPhrase[index] in (Object.keys(baseCopy))) {
+      baseCopy.arrayPhrase[index] = Object.keys(baseCopy).
+        slice(baseCopy.arrayPhrase[index] - 1 , baseCopy.arrayPhrase[index]);
     }
   }
   return baseCopy.arrayPhrase.join('');
 }
 
-function codeBase(phrase){
+function codeBase(phrase) {
   objectReference = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
   }
   objectReference['arrayPhrase'] = phrase.split('');
   return objectReference;
@@ -115,7 +116,7 @@ function codeBase(phrase){
 
 // Desafio 10
 function techList(arrayNamesAndTechs, name) {
-  if (arrayNamesAndTechs != null) {
+  if (arrayNamesAndTechs.length > 0) {
     return techObjectCreator(arrayNamesAndTechs);
   }
   else {
