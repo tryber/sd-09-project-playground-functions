@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let arrayFizzBuzz = [];
-  for(number of numbers) {
+  for (let number of numbers) {
     if ((number % 3 === 0) && (number % 5 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (number % 3 === 0) {
@@ -77,11 +77,32 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let code = 1, textEncode = text;
+  for (vowel of vowels) {
+    for (character of textEncode) {
+      if (character === vowel) {
+        textEncode = textEncode.replace(vowel, code);
+      }
+    }
+    code += 1;
+  }
+  return textEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  let code = 1; textDecode = text;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (vowel of vowels) {
+    for (character of textDecode) {
+      if (character == code) {
+        textDecode = textDecode.replace(code, vowel);
+      }
+    }
+    code += 1;
+  }
+  return textDecode;
 }
 
 // Desafio 10
