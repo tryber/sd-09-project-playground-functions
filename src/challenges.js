@@ -62,11 +62,11 @@ function catAndMouse(cat1, cat2, mouse) {
   let positionCat2 = cat2 - mouse;
 
   if (positionCat1 < positionCat2) {
-    console.log('cat1');
+    return 'cat1';
   } else  if(positionCat2 < positionCat1){
-    console.log('cat2');
+    return 'cat2';
   } else if(positionCat1 === positionCat2){
-    console.log('Os gatos trombam é o rato foge!');
+    return 'Os gatos trombam é o rato foge!';
   }
 }
 console.log(catAndMouse(8, 8, 7));
