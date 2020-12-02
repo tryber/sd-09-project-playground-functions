@@ -15,7 +15,7 @@ function calcArea(base, heigth) {
   return (base * heigth) / 2;
 }
 
-console.log(calcArea(10, 20))
+console.log(calcArea(10, 20));
 
 // Desafio 3
 function splitSentence(string) {
@@ -23,12 +23,27 @@ function splitSentence(string) {
   return arrayString;
 }
 
-console.log(splitSentence('Rua Leobino Pimentel'))
+console.log(splitSentence('Rua Leobino Pimentel'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+  let firstName = '';
+  let lastName = '';
+  let completedName = '';
+
+  for (let index = 0; index < strings.length; index += 1){
+    if ( index === 0) {
+      firstName = strings[index];
+    } else if (index === strings.length - 1){
+      lastName = strings[index];
+    }
+  }
+
+  completedName = lastName + ', ' + firstName;
+  return completedName;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
