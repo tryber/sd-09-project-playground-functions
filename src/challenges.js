@@ -156,7 +156,7 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function numberequal11(arrayNumber){
+function numberequal11(arrayNumber) {
   if (arrayNumber.length === 11) {
     return true;
   }
@@ -199,17 +199,28 @@ function generatePhoneNumber(arrayNumber) {
     if (numberLess0(arrayNumber) === false || verificationNumber(arrayNumber) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  let inittialNumbers = stringNumber.slice(0, 2);
-  let middlesNumbers = stringNumber.slice(2, 7);
-  let finalNumbers = stringNumber.slice(7, 12);
-  return `(${inittialNumbers}) ${middlesNumbers}-${finalNumbers}`;
+    let inittialNumbers = stringNumber.slice(0, 2);
+    let middlesNumbers = stringNumber.slice(2, 7);
+    let finalNumbers = stringNumber.slice(7, 12);
+    return `(${inittialNumbers}) ${middlesNumbers}-${finalNumbers}`;
   }
   return 'array com tamanho incorreto';
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(linaA, lineB, lineC) {
   // seu código aqui
+  let triangle = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    triangle = true;
+  } 
+  if (lineB < lineA + lineC && Math,abs(lineA - lineC)) {
+    triangle = true;
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    triangle = true;
+  }
+  return triangle;
 }
 
 // Desafio 13
