@@ -156,7 +156,7 @@ function techList(tech, name) {
   }
   return myArr;
 }
-console.log(tecnologias(['React', 'Jest', 'HTML', 'CSS', 'Javascript'], 'Lucas'))
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'Javascript'], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
