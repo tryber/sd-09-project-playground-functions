@@ -1,4 +1,4 @@
-// Desafio 1
+ // Desafio 1
 function compareTrue(valor1, valor2) {
   if(valor1 === true && valor2 === false) {
     return true;
@@ -14,31 +14,38 @@ function calcArea(base, heigth) {
         console.log(calcArea(10, 5));
 
 // Desafio 3
- let array = 'vai que vai';
- let divisor = array.split('');
- function splitSentence(string) {
-return string;
-}
-console.log(splitSentence(array));
+let array = 'vai que vai';
+function splitSentence(string) {
+let divisor = string.split(' ');
+console.log(divisor);
+  return string;
+} 
+  console.log(splitSentence(array));
 
-// Desafio 4
+//Desafio 4
+
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
-  // seu código aqui
+let firstName = nomes[0];
+let lastName = nomes[nomes.length - 1];
+let finalResult = lastName + ', ' + firstName;
+  return finalResult;
 }
+        console.log(concatName());
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
-}
+}undefined
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
-}
+}  /*/*/
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  // seu código a*/qui
 }
 
 // Desafio 8
@@ -75,7 +82,7 @@ function hydrate() {
 }
 
 
-module.exports = {
+module.exports = { 
   calcArea,
   catAndMouse,
   compareTrue,
