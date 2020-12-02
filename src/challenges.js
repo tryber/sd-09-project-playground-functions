@@ -12,14 +12,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   let array = [];
   let aux = 0;
-  for (index in string) {
-      if (!array[aux]) {
-          array[aux] = '';
-      }
-      string[index] === ' ' ? aux += 1 : array[aux] += string[index];
+  for (let index in string) {
+    if (!array[aux]) {
+        array[aux] = '';
+    }
+    string[index] === ' ' ? aux += 1 : array[aux] += string[index];
   }
   return array;
 }
