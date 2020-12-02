@@ -27,7 +27,7 @@ function concatName(arrayStrings) {
   let last = '';
   first = arrayStrings[0];
   last = arrayStrings[arrayStrings.length - 1];
-  return last , first;
+  return [last , first];
 }
 
 // Desafio 5
@@ -56,7 +56,7 @@ function highestCount(numbers) {
 function catAndMouse(cat1, cat2, mouse) {
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
+  }
     let distaCat1 = 0
     let distaCat2 = 0
     if (mouse > cat1) {
@@ -71,10 +71,8 @@ function catAndMouse(cat1, cat2, mouse) {
     }
     if (distaCat1 < distaCat2) {
       return 'cat1';
-    } else {
-      return 'cat2';
     }
-  }
+      return 'cat2';
 }
 
 // Desafio 8
