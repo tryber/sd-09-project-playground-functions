@@ -26,7 +26,7 @@ console.log(splitSentence('go Trybe'));
 //Desafio 4
 function concatName(arraySTR) { 
   let firstName = arraySTR[0];
-  let  lastName = arraySTR[arraySTR.length -1];
+  let lastName = arraySTR[arraySTR.length -1];
   concat = lastName + ', ' + firstName;  
   return concat
 }
