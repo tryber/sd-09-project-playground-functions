@@ -70,7 +70,7 @@ function fizzBuzz(array) {
         result.push('fizz');
         break;
       case ((array[index] % 3) !== 0 && (array[index] % 5) === 0):
-        result.push('fizz');
+        result.push('buzz');
         break;
       case ((array[index] % 3) === 0 && (array[index] % 5) === 0):
         result.push('fizzBuzz');
@@ -82,7 +82,7 @@ function fizzBuzz(array) {
   }
   return result;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
