@@ -98,7 +98,7 @@ function highestCount(inputArray) {
 // Desafio 7
 function catObject(catName, catPosition, mousePosition) {
   return {
-    name: catName, 
+    name: catName,
     distance: Math.abs(catPosition - mousePosition),
   }
 }
