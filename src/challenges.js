@@ -86,12 +86,12 @@ function highestCount(inputArray) {
 
 // Desafio 7
 function catObject(catName, catPosition, mousePosition) {
-  return { name: catName, distance: Math.abs(catPosition - mousePosition) }
+  return { name: catName, distance: Math.abs(mousePosition - catPosition) }
 }
 
 function getClosestCat(first, second) {
   let closest = '';
-  if (first.position < second.position) {
+  if (first.distance < second.distance) {
     closest = first;
   } else {
     closest = second;
@@ -103,13 +103,16 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = catObject('cat1', cat1, mouse);
   cat2 = catObject('cat2', cat2, mouse);
   let output = '';
-  if (cat1.position !== cat2.position) {
+  if (cat1.distance !== cat2.distance) {
     output = getClosestCat(cat1, cat2);
   } else {
     output = 'os gatos trombam e o rato foge';
   }
   return output;
 }
+
+let test = catAndMouse(4, 1, 2);
+console.log(test);
 
 // Desafio 8
 function getFizzOrBuzz(remainders) {
@@ -282,12 +285,10 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(text) {
   // Referência para o código (MDN web docs):
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
-
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
   let cupsText = 'copo';
-
   for (let index in numbersInText) {
     if (Object.prototype.hasOwnProperty.call(numbersInText, index)) {
       let number = parseInt(numbersInText[index], 10);
