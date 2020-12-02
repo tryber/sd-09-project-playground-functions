@@ -21,10 +21,9 @@ function splitSentence(string) {
     }
     if (string[index] === ' ') {
       aux += 1;
+      index += 1;
     }
-    else {
-      array[aux] += string[index];
-    }
+    array[aux] += string[index];
   }
   return array;
 }
