@@ -104,7 +104,7 @@ function fizzBuzz(array) {
   return answers;
 }
 
-// Desafio 9
+// Desafio 9 OK
 function encode(string) {
   let array = string.split('');
   let encodeArray = [];
@@ -163,12 +163,13 @@ function decode(string) {
   return encodeString;
 }
 
-console.log(decode("h3 th2r2!"))
-
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let list = [];
+  for (let i in array.sort()) {
+    list.push({tech: array[i], name: name})
+  }
+  return list;
 }
 
 // Desafio 11
