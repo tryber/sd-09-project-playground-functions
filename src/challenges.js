@@ -29,7 +29,7 @@ console.log(splitSentence(string));
 function concatName(array) {
   // seu código aqui
   let ultimoPalavra = array.pop();
-  return ultimoPalavra + ', ' + array[0];
+  return `${ultimoPalavra}, ${array[0]}`;
 }
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(array));
