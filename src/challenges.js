@@ -39,8 +39,7 @@ function highestCount(array) {
       maior = array[index]
     }
   }
-  console.log(maior)
-    
+      
   for (let index = 0 ; index < array.length ; index += 1) {
     if (maior === array[index]) {
       result = result + 1
