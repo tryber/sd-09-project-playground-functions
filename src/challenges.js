@@ -140,7 +140,7 @@ function techList(array ,name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let telephone = '';
-  let error = 'não é possível gerar um número de telefone com esses valores.';
+  let error = 'não é possível gerar um número de telefone com esses valores';
   let errorArray = 'Array com tamanho incorreto.';
   if (array.length === 11){
     for (index in array) {
@@ -172,9 +172,6 @@ function generatePhoneNumber(array) {
     return errorArray;
   }
 }
-
-let ttelefones = [1, 2];
-console.log(generatePhoneNumber(ttelefones));
 
 // Desafio 12
 function triangleCheck(lineA ,lineB , lineC) {
