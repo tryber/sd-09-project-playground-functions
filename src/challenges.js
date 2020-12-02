@@ -32,7 +32,8 @@ function splitSentence(string) {
 function concatName(array) {
   let firstIndex = array[0];
   let lastIndex = array[array.length - 1];
-  let string = lastIndex + ', ' + firstIndex;
+  let commaPlusSpace = ', '
+  let string = lastIndex + commaPlusSpace + firstIndex;
   return string;
 }
 
