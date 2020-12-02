@@ -22,18 +22,19 @@ console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(names) {
-  return `${names[names.length - 1]} , ${names[0]}`
+  return `${names[names.length - 1]}, ${names[0]}`
+  
 }
-// console.log(concatName(`Long, live , Trybers`))
+console.log(concatName(["Long", "live", "trybers"]))
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  // seu código aqui 
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  // seu código aqui highestCount(wins,ties) {let score= (wins*3 + ties return sccore}
 }
 
 // Desafio 7
