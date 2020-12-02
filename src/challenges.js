@@ -39,20 +39,13 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array2) {
-  let maiorNumero = 0;
+function highestCount(numeros) {
+  let maiorNumero = Math.max.apply(null, numeros);
   let repeticao = 0;
 
-  for (const numero1 of array2) {
-    if (maiorNumero < numero1) {
-      maiorNumero = numero1;
-      repeticao = 0;
-
-      for (const numero2 of array2) {
-        if (maiorNumero === numero2) {
-          repeticao += 1;
-        }
-      }
+  for (const numero2 of numeros) {
+    if (maiorNumero === numero2) {
+      repeticao += 1;
     }
   }
   return repeticao;
@@ -142,7 +135,7 @@ function techList(tecnologias, name) {
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
   if (arrayTelefone.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
 
   for (const numeros of arrayTelefone) {
@@ -162,7 +155,7 @@ function generatePhoneNumber(arrayTelefone) {
     }
   }
 
-  let telefoneFormatado = '(ab) cdefg-hijk'
+  let telefoneFormatado = '(ab) cdefg-hijk';
   telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[1], arrayTelefone[0]);
   telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[2], arrayTelefone[1]);
   telefoneFormatado = telefoneFormatado.replace(telefoneFormatado[5], arrayTelefone[2]);
@@ -209,4 +202,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
