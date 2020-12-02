@@ -183,9 +183,9 @@ function techList(arr, name) {
 }
 
 // Desafio 11
-function criateNumber (number) {
+function criateNumber(number) {
   let numero = '';
-  for (let index = 0; index < number.length; index += 1){
+  for (let index = 0; index < number.length; index += 1) {
     switch (index) {
       case 0:
         numero += `(${number[index]}`;
@@ -205,8 +205,8 @@ function criateNumber (number) {
 
 function verifyNumber(number) {
   let isRight90 = false;
-  for (let index of number){
-    if ((index > 9) || (index < 0)){
+  for (let index of number) {
+    if ((index > 9) || (index < 0)) {
       isRight90 = true;
     }
   }
@@ -216,23 +216,29 @@ function verifyNumber(number) {
 function quantidyNumber(number) {
   let volta = false;
   for (let index of number) {
-    let cont = 0;
-    for (let index2 of number) {
-      if (number[index] === number[index2]){
-        cont += 1;
-      }
-      if (cont >= 3) {
-        volta = true;
-      }
-    }
+    volta = comparNumber(number, index);
   }
   return volta;
+}
+
+function comparNumber(number, index) {
+  let volta = false;
+  let cont = 0;
+  for (let index2 of number) {
+    if (index === index2) {
+      cont += 1;
+    }
+    if (cont >= 3) {
+      volta = true;
+    }
+  }
+  return volta
 }
 
 function generatePhoneNumber(number) {
   // seu código aqui
   let show = '';
-  if (verifyNumber(number) || quantidyNumber(number)){
+  if (verifyNumber(number) || quantidyNumber(number)) {
     show = 'não é possível gerar um número de telefone com esses valores';
   } else {
     show = criateNumber(number);
