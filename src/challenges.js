@@ -29,38 +29,29 @@ function isDivisibleBy(dividend, divider) {
 
 function repeatMore(array) {
   let qntRepeat = 0;
+  let numRepeat;
   for (let i = 0; i < array.length; i += 1) {
-    let cont1 = 0;
-    let cont2 = 0;
-    let numTemp1;
-    let numTemp2;
+    let numTemp;
+    let contTemp = 0;
     let repetiu = false;
     for (let j = i + 1; j < array.length; j += 1) {
       if (repetiu === false){
         if (array[i] === array[j]) {
           repetiu = true;
-          cont1 = 2;
-          numTemp1 = array[j];
-          array.splice(j,1);
-          j -= 1;
+          contTemp = 2;
+          numTemp = array[j];
         }
       } else {
         if (array[i] === array[j]) {
-          cont2 += 1;
-          numTemp2 = array[j]
-          array.splice(j,1);
-          j -= 1;
+          contTemp += 1;
         }
       }
-      if (numTemp1 === numTemp2 && qntRepeat < cont1 + cont2) {
-        qntRepeat = cont1 + cont2;
-        numRepeat = numTemp1;
-      }
     }
-    // console.log(`O numero ${numRepeat} repetiu ${qntRepeat} vezes`);
-    // console.log(num);
+    if (qntRepeat < contTemp) {
+      qntRepeat = contTemp;
+      numRepeat = numTemp;
+    }  
   }
-  // console.log(`O número ${numRepeat} repetiu ${qntRepeat} vezez e foi o que mais repetiu`)
   return qntRepeat;
 }
 
@@ -226,27 +217,23 @@ function techList(array, name) {
 function generatePhoneNumber(number) {
   if (validationNumber(number)) {
     let ddd = [];
-    let fourthFist = [];
+    let fifthFist = [];
     let fourthLast = [];
     for (let i in number) {
       if (i < 2) {
         ddd.push(number[i]);
-      } else if (i < 6) {
-        fourthFist.push(number[i]);
+      } else if (i < 7) {
+        fifthFist.push(number[i]);
       } else {
         fourthLast.push(number[i]);
       }
     }
-    let telNumber = `(${ddd.join('')})` + ' ' + `${fourthFist.join('')}` + '-' + `${fourthLast.join('')}`;
+    let telNumber = `(${ddd.join('')})` + ' ' + `${fifthFist.join('')}` + '-' + `${fourthLast.join('')}`;
     return telNumber
   }
   return validationNumber(number);
-  // let ddd = `(${number[0]}` + `${number[1]})`;
-  // let num =  ` ${number[2]}` + `${number[3]}` + `${number[4]}` + `${number[5]}` + `${number[6]}` + '-'+ `${number[7]}` + `${number[8]}` + `${number[9]}` + `${number[10]}`;
-  // let tel = ddd + num;
-  // return tel;
 }
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let arr = [5, 2, 3, 4, 5, 6, 7, 8, 9, 0, 4];
 console.log(generatePhoneNumber(arr))
 
 // Desafio 12
