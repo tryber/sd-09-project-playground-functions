@@ -22,7 +22,6 @@ function splitSentence(stringArray) {
 }
 console.log(splitSentence('Go trybe'));
 
-
 // Desafio 4
 function concatName(arrayString) {
   let result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
@@ -30,7 +29,6 @@ function concatName(arrayString) {
 }
 console.log(concatName(['Toselli' , 'Henrique' , 'Pedro']));
 //Utilizei o seguinte site como fonte de pesquisa : https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -73,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(5 , 3 , 8));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumber) {
     let arrayFizBu = [];
     for (let index =0; index < arrayNumber.length; index += 1) {
         if (arrayNumber[index] % 3 === 0) {
