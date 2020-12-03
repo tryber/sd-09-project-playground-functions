@@ -88,7 +88,7 @@ function encode(inputString) {
     }
   return outputString;
 }
-function decode() {
+function decode(inputstring) {
   let outputString = '';
   for (let index = 0; index < inputString.length; index += 1) {
     switch (inputString[index]){
