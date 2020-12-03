@@ -74,20 +74,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arraynumbers) {
-  let arrayFizzBuzz = [];
-  for (let index = 0; index < arraynumbers.length; index += 1) {
-    if (arraynumbers[index] % 15 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arraynumbers[index] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (arraynumbers[index] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
+function verificateNumbers(arraynumbers) {
+  let arrayFizzBuzz = ''; 
+    if (arraynumbers % 15 ===0) {
+      arrayFizzBuzz = 'fizzBuzz';
+    } else if (arraynumbers % 3 === 0) {
+      arrayFizzBuzz = 'fizz';
+    } else if (arraynumbers % 5 === 0) {
+      arrayFizzBuzz = 'buzz';
     } else {
-      arrayFizzBuzz.push('bug!');
+      arrayFizzBuzz = 'bug!';
     }
-  }
   return arrayFizzBuzz;
+}
+
+function fizzBuzz(arraynumbers){
+  let arraynumbersFizzBuzz = [];
+  for (let index in arraynumbers) {
+    arraynumbersFizzBuzz.push(verificateNumbers(index));
+  }
+  return arraynumbersFizzBuzz;
 }
 
 // Desafio 9
