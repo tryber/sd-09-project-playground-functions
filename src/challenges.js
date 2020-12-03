@@ -127,29 +127,18 @@ function decode(str) {
 // Desafio 10
 function techList(techArray, nome) {
   let objList = []
-
   techArray = techArray.sort();
 
-  if (techArray.length === 0) {
-    return 'Vazio!';
-  }
-
   for (let x in techArray) {
-    objList.push({tech: techArray[x], name: nome});
+    if (techArray[x] === 0) {
+      return 'Vazio!';
+    }
+    
+    objList.push({ tech: techArray[x], name: nome });
   }
-
-  // for (let i = 0; i < techArray.length; i += 1) {
-  //   object.tech = techArray[i];
-  //   object.name = nome;
-  //   objList.push(object);
-  // }
 
   return objList;
 }
-
-let nome = "Lucas";
-let techArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(techArray, nome));
 
 // Desafio 11
 function generatePhoneNumber() {
