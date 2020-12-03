@@ -292,7 +292,7 @@ function hydrate(drinks) {
   }
 
   if (sum === 1) {
-    return `${sum} copo de água`;  
+    return `${sum} copo de água`;
   }
 
   return `${sum} copos de água`;
