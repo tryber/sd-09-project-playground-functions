@@ -59,8 +59,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let test = [9, 8, 7, 15, 4];
 function fizzBuzz(array) {
-  
+  let final = [];
+  for (let index = 0; index <= array.length; index += 1){
+    if (index % 3 == 0 && index % 5 == 0){
+      final.push += ('fizzBuzz, ');
+      } else if (index % 3 == 0){
+        final.push += ('fizz, ');
+      } else if (index % 5 == 0){
+        final.push += ('buzz, ' );
+      } else {
+        final.push += ('bug!, ');
+      }
+  }
+  return final
 }
 
 // Desafio 9
