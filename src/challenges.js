@@ -23,13 +23,9 @@ console.log(splitSentence('Vamos nessa'));
 
 // Desafio 4
 function concatName(array) {
-  let firstName = [];
-  let lastName = [];
   let firstAndLast = '';
   for (let index = 0; index <= array.length; index += 1) {
-    firstName = array[0];
-    lastName = array[index - 1];
-    firstAndLast = lastName + ', ' + firstName;
+    firstAndLast = array[index - 1] + ' ' + array[0];
   }
   return firstAndLast;
 }
@@ -44,38 +40,6 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(5, 5));
 
-//Função que verifica maior número em um array
-function maxNumberIn(array) {
-  let bigger = array[0];
-  for (let index = 1; index < array.length; index += 1) {
-    if (array[index] > bigger) {
-      bigger = array[index];
-    }
-  }
-  return bigger;
-}
-
-//Função que retorna o numero mais repetido da array
-function numberThatAppearsMostIn(array) {
-  let repeated = 0;
-  let counter = 0;
-  let repeatedIndex = 0;
-  for (let index in array) {
-    let number = array[index];
-    for (let index2 in array) {
-      if (number === array[index2]) {
-        counter++;
-      }
-    }
-    if (counter > repeated) {
-      repeated = counter;
-      repeatedIndex = index;
-    }
-    counter = 0;
-  }
-  return array[repeatedIndex];
-}
-
 // Desafio 6
 function highestCount(array) {
   let bigger = array[0];
@@ -84,11 +48,16 @@ function highestCount(array) {
       bigger = array[index];
     }
   }
-  return bigger;
+  let number = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if(array[index] === bigger) {
+      number += 1;
+    }
+  }
+ return number;
 }
-let array = [2, 8, 1, 8, 15, 5, 15, 7]
-console.log(highestCount(array))
-
+let array = [9, 1, 2, 3, 9, 10, 5, 7]
+console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse() {
@@ -96,9 +65,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let result = '';
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+      result += 'fizzBuzz ';
+    } else if (arrayNumbers[index] % 5 === 0) {
+      result += 'buzz ';
+    } else if (arrayNumbers[index] % 3 === 0) {
+      result += 'fizz ';
+    } else {
+      result += 'bug! ';
+    }
+  }
+  return result;
 }
+// let arrayNumbers = [2, 15, 7, 9, 45]
+// console.log(fizzBuzz(arrayNumbers))
 
 // Desafio 9
 function encode() {
