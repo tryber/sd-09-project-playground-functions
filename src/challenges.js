@@ -96,33 +96,31 @@ let vowelToNumber = {
 };
 
 let NumberToVowel = {
-  '1': 'a',
-  '2': 'e',
-  '3': 'i',
-  '4': 'o',
-  '5': 'u',
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
 }
 
-function encode(string) {
+function encode(decodedString) {
   let newString = [];
-  for (let index in string) {
-    let char = string[index];
-    if (typeof vowelToNumber[string[index]] === 'undefined') {
-      newString[index] = string[index];
+  for (let index in decodedString) {
+    if (typeof vowelToNumber[decodedString[index]] === 'undefined') {
+      newString[index] = decodedString[index];
     } else {
-      newString[index] = vowelToNumber[string[index]];
+      newString[index] = vowelToNumber[decodedString[index]];
     }
   }
   return newString.join('');
 }
-function decode(string) {
+function decode(encodedString) {
   let newString = [];
-  for (let index in string) {
-    let char = string[index];
-    if (typeof NumberToVowel[string[index]] === 'undefined') {
-      newString[index] = string[index];
+  for (let index in encodedString) {
+    if (typeof NumberToVowel[encodedString[index]] === 'undefined') {
+      newString[index] = encodedString[index];
     } else {
-      newString[index] = NumberToVowel[string[index]];
+      newString[index] = NumberToVowel[encodedString[index]];
     }
   }
   return newString.join('');
@@ -228,10 +226,10 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   /*
-  Aviso para a Raquel do futuro e outros leitores: 
+  Aviso para a Raquel do futuro e outros leitores:
   Aqui foi feito o uso das Regular Expressions para capturar todos os números na string.
-  /\d+/g siginfica que todos os números arábicos com 1+ dígitos serão coletados e 
-  armazenados em outro array. 
+  /\d+/g siginfica que todos os números arábicos com 1+ dígitos serão coletados e
+  armazenados em outro array.
   O elemento g que torna possível varrer toda a string ser retornado um array com todos os matches.
   */
   let drinksArray = string.match(/\d+/g);
