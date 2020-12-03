@@ -116,7 +116,7 @@ function generatePhoneNumber(arrayNumb) {
   }
 
   for (let i in arrayNumb) {
-    if (arrayNumb[i] < 0 || arrayNumb[i] > 9 || numRepeat > 2) return 'não é possível gerar um número de telefone com esses valores';
+    if (arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let count = 0;
