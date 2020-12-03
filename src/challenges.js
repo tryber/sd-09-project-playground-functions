@@ -4,22 +4,22 @@
 
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-    console.log('Retornou true')
-    return true
+    // console.log('Retornou true')
+    return true;
   }
-  return false
+  return false;
 }
 
-compareTrue(true, true)
+compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, height) {
-  console.log(`Area do triangulo é ${(base * height) / 2}`)
-  return (base * height) / 2
+  // console.log(`Area do triangulo é ${(base * height) / 2}`)
+  return (base * height) / 2;
   // seu código aqui
 }
 
-calcArea(5, 4)
+calcArea(5, 4);
 
 // Desafio 3
 function splitSentence() {
@@ -33,77 +33,84 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + (ties)
-  return points
+  let points = (wins * 3) + (ties);
+  return points;
 }
 
 // Desafio 6
 function getHigherNumber(numbers) {
-  let higherNumberFromNow = 0
+  let higherNumberFromNow = 0;
   for (let index in numbers) {
     if (numbers[index] > higherNumberFromNow) {
-      higherNumberFromNow = numbers[index]
+      higherNumberFromNow = numbers[index];
     }
   }
-  return higherNumberFromNow
+  return higherNumberFromNow;
 }
 
 function getTimesHigherNumber(numbers, numberToCount) {
-  let timesHigherNumberFromNow = 0
+  let timesHigherNumberFromNow = 0;
   for (let index in numbers) {
     if (numbers[index] === numberToCount) {
-      timesHigherNumberFromNow += 1
+      timesHigherNumberFromNow += 1;
     }
   }
-  return timesHigherNumberFromNow
+  return timesHigherNumberFromNow;
 }
 
 function highestCount(numbers) {
-  let higherNumber = getHigherNumber(numbers)
-  let timesHigherNumber = getTimesHigherNumber(numbers, higherNumber)
-  console.log(`O maior numero foi ${higherNumber} e ele aparece ${timesHigherNumber} vezes`)
-  return timesHigherNumber
+  let higherNumber = getHigherNumber(numbers);
+  let timesHigherNumber = getTimesHigherNumber(numbers, higherNumber);
+  // console.log(`O maior numero foi ${higherNumber} e ele aparece ${timesHigherNumber} vezes`)
+  return timesHigherNumber;
 }
 
 // Desafio 7
 function distanceCalculator(cat, mouse) {
-  let distance = cat - mouse
+  let distance = cat - mouse;
   if (distance < 0) {
-    distance *= -1
+    distance *= -1;
   }
-  return distance
+  return distance;
 }
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1ToMouse = distanceCalculator(cat1, mouse)
-  let distanceCat2ToMouse = distanceCalculator(cat2, mouse)
+  let distanceCat1ToMouse = distanceCalculator(cat1, mouse);
+  let distanceCat2ToMouse = distanceCalculator(cat2, mouse);
   if (distanceCat2ToMouse > distanceCat1ToMouse) {
-    console.log('cat1')
-    return 'cat1'
+    // console.log('cat1')
+    return 'cat1';
   } else if (distanceCat2ToMouse === distanceCat1ToMouse) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
-  console.log('cat2')
-  return 'cat2'
+  // console.log('cat2')
+  return 'cat2';
 }
 
 // Desafio 8
 
-function fizzBuzz(numbers) {
-  let arrayToReturn = []
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      arrayToReturn.push('fizzBuzz')
-    } else if (numbers[index] % 5 === 0) {
-      arrayToReturn.push('buzz')
-    } else if (numbers[index] % 3 === 0) {
-      arrayToReturn.push('fizz')
-    } else {
-      arrayToReturn.push('bug!')
-    }
+function addWord(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
   }
-  console.log(arrayToReturn)
-  return arrayToReturn
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
 }
+
+function fizzBuzz(numbers) {
+  let arrayToReturn = [];
+  for (let index in numbers) {
+    arrayToReturn.push(addWord(numbers[index]));
+  }
+  console.log(arrayToReturn);
+  return arrayToReturn;
+}
+
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
@@ -149,4 +156,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
