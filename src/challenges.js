@@ -58,7 +58,7 @@ function footballPoints(wins, ties) {
   return quantityTotal;
 }
 
-console.log(footballPoints(10, 3));
+console.log(footballPoints(10, 4));
 
 // Desafio 6
 
