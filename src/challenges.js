@@ -151,13 +151,13 @@ function hydrate(entry) {
   let message = '';
   for (let index = 0; index < entry.length; index += 1) {
     if (isNaN(entry[index]) === false) {
-      water = water + Number(entry[index]);
+      water += Number(entry[index]);
     }
   }
   if (water === 1) {
     message = '1 copo de água';
   } else {
-    message = water + ' copos de água';
+    message = water.toString().concat(' copos de água');
   }
   return message;
 }
