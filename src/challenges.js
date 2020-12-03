@@ -17,16 +17,16 @@ function splitSentence(string) {
   // seu código aqui
   let auxiliarString = '';
   let arrayString = [];
-  for (let index = 0; index < string.length; index+=1) {
-    if (string[index] !== ' '){
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] !== ' ') {
       auxiliarString += string[index];
     } else if (string[index] === ' ') {
-            arrayString.push(auxiliarString);
-            auxiliarString = '';
-          }
-    if (index === (string.length -1)) {
-              arrayString.push(auxiliarString);
-           }
+      arrayString.push(auxiliarString);
+      auxiliarString = '';
+      }
+    if (index === (string.length - 1)) {
+      arrayString.push(auxiliarString);
+      }
   }
   return arrayString;
 }
@@ -34,7 +34,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-let indexOfLastWord = arrayString.length - 1;
+  let indexOfLastWord = arrayString.length - 1;
   let lastString = arrayString[indexOfLastWord];
   return lastString + ', ' + arrayString[0];
 }
@@ -43,18 +43,18 @@ let indexOfLastWord = arrayString.length - 1;
 function footballPoints(wins, ties) {
   // seu código aqui
   let score = 0;
-  score = (3 * wins ) + (1 * ties);
+  score = (3 * wins) + (1 * ties);
   return score;
 }
-function excludeRepetitions(numbers){
+function excludeRepetitions(numbers) {
   let auxiliarArray = [];
   let conditionAdd = true;
   auxiliarArray.push(numbers[0]);
-  for (let index = 0; index < numbers.length; index +=1) {
-    for(let indexAux = 0; indexAux < auxiliarArray.length; indexAux +=1 ) {
-      if (numbers[index] === auxiliarArray[indexAux]){
+  for (let index = 0; index < numbers.length; index += 1) {
+    for (let indexAux = 0; indexAux < auxiliarArray.length; indexAux += 1) {
+      if (numbers[index] === auxiliarArray[indexAux]) {
         conditionAdd = false;
-      } 
+      }
     }
     if (conditionAdd === true) {
       auxiliarArray.push(numbers[index]);
@@ -62,13 +62,12 @@ function excludeRepetitions(numbers){
     conditionAdd = true;
   }
   return auxiliarArray;
-
 }
-function foundBigger(vector){
-  let bigger =0 
+function foundBigger(vector) {
+  let bigger = 0;
   bigger = vector[0];
-  for(let index = 0; index < vector.length; index += 1){
-    if(vector[index] > bigger) {
+  for (let index = 0; index < vector.length; index += 1){
+    if (vector[index] > bigger) {
       bigger = vector[index];
     }
   }
@@ -80,49 +79,44 @@ function highestCount(numbers) {
   let numbersNoRepeated = [];
   numbersNoRepeated = excludeRepetitions(numbers);
   let count = [];
-  let biggestNumber = 0;
   let counter = 0;
-  for (let index = 0; index < numbersNoRepeated.length; index +=1){
-      for (let index2 = 0; index2 < numbers.length; index2 +=1 ) {
-        if(numbersNoRepeated[index] == numbers[index2]){
-          counter += 1;
-        }
+  for (let index = 0; index < numbersNoRepeated.length; index +=1) {
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+        if (numbersNoRepeated[index] === numbers[index2]) {
+        counter += 1;
       }
-      count.push(counter);
-      counter=0;
-    }
-
-    return foundBigger(count);
+   }
+    count.push(counter);
+    counter = 0;
   }
 
-
+  return foundBigger(count);
+}
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
   let distanceCat1 = 0;
-  let distanceCat2 = 0; 
+  let distanceCat2 = 0;
   distanceCat1 = cat1 - mouse;
   distanceCat2 = cat2 - mouse;
-  if(distanceCat1 === distanceCat2){
+  if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
+  } else if (distanceCat1 > distanceCat2) {
+    return 'cat1';
   }
-  if(distanceCat1 > distanceCat2){
-      return 'cat1';
-  } else {
-      return 'cat2';
-  }
-  
+    return 'cat2';
 }
 function fizz(number) {
-  if (number%3 === 0){
+  if (number % 3 === 0){
     return true;
   }
+  return false;
 }
-
 function buzz (number) {
-  if (number%5 === 0){
+  if (number % 5 === 0){
     return true;
   }
+  return false;
 }
 // Desafio 8
 function fizzBuzz(numbers) {
