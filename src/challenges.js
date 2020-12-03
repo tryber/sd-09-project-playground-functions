@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(firstBoolean, secondBoolean) {
-  if(firstBoolean && secondBoolean){
+  if (firstBoolean && secondBoolean) {
     return true;
   }
-  else {
+  {
     return false;
   }
 }
@@ -15,13 +15,17 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastItem = array[0]
+  let firstItem = array[array.length - 1]
+  let firstLast = lastItem + ', ' +  firstItem
+
+  return firstLast
 }
 
 // Desafio 5
