@@ -114,17 +114,78 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(3, 4, 5));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayFizz) {
   // seu código aqui
+  let arrayResult = [];
+  for (let index = 0; index < arrayFizz.length; index += 1) {
+    if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 !== 0) {
+      arrayResult.push("fizz");
+    } else if (arrayFizz[index] % 5 === 0 && arrayFizz[index] % 3 !== 0) {
+      arrayResult.push("buzz");
+    } else if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 === 0) {
+      arrayResult.push("fizzBuzz");
+    } else {
+      arrayResult.push("bug!");
+    }
+  }
+  return arrayResult;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(encodeStringToNumber) {
   // seu código aqui
+  let encodeString = encodeStringToNumber.split("");
+
+  for (let index = 0; index < encodeString.length; index += 1) {
+    switch (encodeString[index]) {
+      case "a":
+        encodeString[index] = 1;
+        break;
+      case "e":
+        encodeString[index] = 2;
+        break;
+      case "i":
+        encodeString[index] = 3;
+        break;
+      case "o":
+        encodeString[index] = 4;
+        break;
+      case "u":
+        encodeString[index] = 5;
+    }
+  }
+
+  return encodeString.join("");
 }
-function decode() {
+function decode(encodeStringToNumber) {
   // seu código aqui
+  let decodeNumber = encodeStringToNumber.split("");
+
+  for (let index = 0; index < decodeNumber.length; index += 1) {
+    switch (decodeNumber[index]) {
+      case "1":
+        decodeNumber[index] = "a";
+        break;
+      case "2":
+        decodeNumber[index] = "e";
+        break;
+      case "3":
+        decodeNumber[index] = "i";
+        break;
+      case "4":
+        decodeNumber[index] = "o";
+        break;
+      case "5":
+        decodeNumber[index] = "u";
+    }
+  }
+
+  return decodeNumber.join("");
 }
+
+console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
