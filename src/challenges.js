@@ -34,16 +34,12 @@ function highestCount(param) {
   let lastNum = numOrdered[param.length - 1]
   let qtdNumRepeat = 0;
 
-  // console.log( 'numero mais alto = ' + lastNum )
-
   if (lastNum === 0) {
     for (let key in param) {
-      // console.log(param[key])
       if (param[key] === lastNum) {
         qtdNumRepeat += 1
       }
     }
-    // console.log('quantidade de números 0 = ' + qtdNumRepeat)
   } else {
     for (let i = 0; i <= lastNum; i += 1) {
       if (param[i] === lastNum) {
@@ -53,10 +49,6 @@ function highestCount(param) {
   }
   return qtdNumRepeat
 }
-
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9]))
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-// console.log(highestCount([0, 0, 0, 0]))
 
 // Desafio 7 - PASS
 function catAndMouse(mouse, cat1, cat2) {
@@ -83,19 +75,15 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   switch (mouse) {
-    case (mouse === cat1 && mouse === cat2 || rangeGato1 === rangeGato2):
+    case ((mouse === cat1 && mouse === cat2) || (rangeGato1 === rangeGato2)):
       return 'os gatos trombam e o rato foge'
-    case (mouse === cat1 && mouse !== cat2 || rangeGato2 > rangeGato1):
+    case ((mouse === cat1 && mouse !== cat2) || (rangeGato2 > rangeGato1)):
       return 'cat1'
-    case (mouse === cat2 && mouse !== cat1 || rangeGato1 > rangeGato2):
+    case ((mouse === cat2 && mouse !== cat1) || (rangeGato1 > rangeGato2)):
       return 'cat2'
+    default: return false
   }
 }
-
-// console.log( catAndMouse(4, 5, 1) )
-// console.log( catAndMouse(1, 0, 2) ) //precisar ser igual
-// console.log( catAndMouse(10, 4, 22) )
-// console.log( catAndMouse(0, 3, 2) )
 
 // Desafio 8
 function fizzBuzz(dividendo) {
@@ -113,17 +101,10 @@ function fizzBuzz(dividendo) {
 
   for (let i = 0; i < dividendo.length; i += 1) {
     dividePor3e5(dividendo[i])
-    // textos.push('bug!')
   }
 
   return textos
 }
-
-// ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
-// console.log(2 % 3, 15 % 3, 7 % 3, 9 % 3, 45 % 3)
-// console.log(2 % 5, 15 % 5, 7 % 5, 9 % 5, 45 % 5)
-// fizzBuzz([ 2, 15, 7, 9, 45])
-
 
 // Desafio 9
 function encode() {
