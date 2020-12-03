@@ -17,24 +17,23 @@ function calcArea(base, height) {
 function splitSentence(phrase) {
   // seu código aqui
   let newSentence = [];
-  let indexNewSentence = 0;
 
   for (let index = 0; index < phrase.length; index+=1) {
-    if (index === ' '){
-      indexNewSentence = indexNewSentence + 1;
+    if (phrase[index] !== ' '){
+      newSentence = newSentence + phrase[index]
+    } else if (phrase[index] === ' '){
+      newSentence.push(' ');
     }
-    newSentence = newSentence + phrase[index]
   }
   return newSentence;
 }
-//console.log(splitSentence('Vamos com tudo!'));
+// console.log(splitSentence('Vamos com tudo!'));
 
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
-  return (nameList[nameList.length-1], nameList[0]);
+  return (nameList[nameList.length-1]+', '+nameList[0]);
 }
-//console.log(concatName(['Marcelo', 'Fernanda', 'Claudia']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
