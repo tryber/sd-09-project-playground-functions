@@ -47,10 +47,10 @@ function highestCount(arrayNumbers) {
   return cont;
 }
 
-// Desafio 7
+// Desafio 7 - Método abs() para retorna valor absoluto positivo
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2 - mouse;
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   } else if (distanceCat1 < distanceCat2) {
