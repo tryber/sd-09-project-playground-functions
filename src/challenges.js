@@ -71,24 +71,28 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-let arrayFizzBuzz = [];
+  let array = [];
 
-for (let i = 0; i < numbers.length; i += 1) {
-
-  if (numbers[i] % 3 === 0) {
-    if (numbers[i] % 5 === 0) {
-      arrayFizzBuzz[i] = "fizzBuzz";
+  for(let i = 0; i < numbers.length; i += 1) {
+    let fizz = numbers[i] % 3;
+    let buzz = numbers[i] % 5;
+    
+    if (fizz === 0 && buzz === 0) {
+      array.push('fizzBuzz');
+    } else if (fizz === 0 && buzz !== 0) {
+      array.push('fizz');
+    } else if (fizz !== 0 && buzz === 0) {
+      array.push('buzz')
+    } else {
+      array.push('bug!')
     }
-    arrayFizzBuzz[i] = "fizz";
   }
-  if (numbers[i] % 5 === 0) {
-    arrayFizzBuzz[i] = "buzz";
-  }
-  arrayFizzBuzz[i] = "bug!";
+return array;
 }
 
-return arrayFizzBuzz;
-}
+
+let test = [2, 15, 7, 9, 45]
+console.log(fizzBuzz(test));
 
 // Desafio 9
 function encode(string) {
@@ -101,6 +105,10 @@ function decode(string) {
 // Desafio 10
 function techList(techArray, name) {
   let newArray = [];
+  let obj = {
+    tech,
+    name,
+  }
 
   for (let i = 0; i < techArray.length; i += 1) {
 
