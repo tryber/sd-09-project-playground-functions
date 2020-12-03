@@ -43,8 +43,14 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return "os gatos trombam e o rato foge";
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return "cat2";
+  } else {
+    return "cat1";
+  }
 }
 
 // Desafio 8
@@ -102,3 +108,4 @@ console.log(splitSentence("Gabriel Castro"));
 console.log(concatName(["xurubita", "lucas", "thiago", "white"]));
 console.log(footballPoints(4, 2));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(catAndMouse(5, 10, 5));
