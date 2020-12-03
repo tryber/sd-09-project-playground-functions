@@ -169,14 +169,15 @@ function validateNumbers(num, count) {
   return validate;
 }
 
-function countRepeatedNumbers(numArray, number) {
+function countRepeatedNumbers(numArray) {
   let count = 0;
   for (let num in numArray) {
+    for (let number in numArray)
     if (numArray[num] === numArray[number]) {
       count += 1;
     }
+    return count;
   }
-  return count;
 }
 
 function checkNumbers(array) {
@@ -188,24 +189,30 @@ function checkNumbers(array) {
   return validate;
 }
 
-function generatePhoneNumber(array) {
-  let numero = '(';
+function validateIfPossiblePhoneNumber(array) {
   if (array.length === 11) {
     if (checkNumbers(array)) {
-      for (let number in array) {
-        if (number === "1") {
-          numero += `${array[number]}) `;
-        } else if (number === "6") {
-          numero += `${array[number]}-`;
-        } else {
-          numero += array[number];
-        }
-      }
-      return numero;
+      return true;
     }
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return 'Array com tamanho incorreto.';
+}
+
+function generatePhoneNumber(array) {
+  if (validateIfPossiblePhoneNumber(array)) {
+    let numero = '(';
+    for (let number in array) {
+      if (number === '1') {
+        numero += `${array[number]}) `;
+      } else if (number === '6') {
+        numero += `${array[number]}-`;
+      } else {
+        numero += array[number];
+      }
+    }
+    return numero;
+  } return validateIfPossiblePhoneNumber(array);
 }
 
 // Desafio 12
