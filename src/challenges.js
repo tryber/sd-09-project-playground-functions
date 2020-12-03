@@ -77,14 +77,11 @@ function fizzBuzz(myArray) {
   for (let element in myArray) {
     if (myArray[element] % 3 === 0 && myArray[element] % 5 === 0) {
       myNewArray.push('fizzBuzz');
-    } 
-    if (myArray[element] % 3 === 0) {
+    } else if (myArray[element] % 3 === 0) {
       myNewArray.push('fizz');
-    } 
-    if (myArray[element] % 5 === 0) {
+    } else if (myArray[element] % 5 === 0) {
       myNewArray.push('buzz');
-    } 
-    if (myArray[element] % 3 !== 0 && myArray[element] % 5 !== 0) {
+    } else if (myArray[element] % 3 !== 0 && myArray[element] % 5 !== 0) {
       myNewArray.push('bug!');
     }
   }
@@ -92,11 +89,28 @@ function fizzBuzz(myArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringToBeEncoded) {
+  let arrayOfCharacters = [];
+  let myCypher = {a : 1, e : 2, i : 3, o : 4, u : 5,};
+  arrayOfCharacters.push(...stringToBeEncoded)
+  for (let character in arrayOfCharacters) {
+    if (arrayOfCharacters[character] in myCypher) {
+      arrayOfCharacters[character] = myCypher[arrayOfCharacters[character]];
+    }
+  }
+  return arrayOfCharacters.toString().replaceAll(',','');
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringToBeDecoded) {
+  let arrayOfDecodedChar = [];
+  let myCypher = {1 : 'a', 2 : 'e', 3 : 'i', 4 : 'o', 5 : 'u',};
+  arrayOfDecodedChar.push(...stringToBeDecoded);
+  for (let character in arrayOfDecodedChar) {
+    if (arrayOfDecodedChar[character] in myCypher) {
+      arrayOfDecodedChar[character] = myCypher[arrayOfDecodedChar[character]];
+    }
+  }
+  return arrayOfDecodedChar.toString().replaceAll(',','');
 }
 
 // Desafio 10
