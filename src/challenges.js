@@ -126,10 +126,10 @@ function decode(stringDecode) {
   };
   let auxDecode = [];
   for (let indexDecode = 0; indexDecode < stringDecode.length; indexDecode += 1) {
-    aux[indexDecode] = stringDecode[indexDecode];
+    auxDecode[indexDecode] = stringDecode[indexDecode];
     for (let keyDecode in objectDecode) {
       if (stringDecode[indexDecode] === keyDecode) {
-        aux[indexDecode] = objectDecode[keyDecode];
+        auxDecode[indexDecode] = objectDecode[keyDecode];
       }
     }
   }
@@ -137,7 +137,7 @@ function decode(stringDecode) {
 }
 
 // Desafio 10
-function techList(array, name) {
+function techList() {
 }
 
 // Desafio 11
