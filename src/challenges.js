@@ -5,7 +5,7 @@ function compareTrue(boolean1, boolean2) {
   }
   return false;
 }
-console.log(compareTrue(true, false));
+//console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,10 +14,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  const arrayString = string.split(" ");
+  const arrayString = string.split(' ');
   return arrayString;
 }
-console.log(splitSentence('Tree Of Savior'));
+//console.log(splitSentence('Tree Of Savior'));
 
 // Desafio 4
 function concatName(stringArray) {
@@ -25,7 +25,7 @@ function concatName(stringArray) {
   let lastName = stringArray[stringArray.length - 1];
   return `${lastName}, ${firstName}`;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
   let points = winner + tied;
   return points;
 }
-console.log(footballPoints(1, 1));
+//console.log(footballPoints(1, 1));
 
 // Desafio 6
 function highestCount(numbers) {
@@ -55,7 +55,7 @@ function highestCount(numbers) {
   }
   return numbers[indexNumberRepeat];
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat1';
 }
-console.log(catAndMouse(-15, -15, -15));
+//console.log(catAndMouse(-15, -15, -15));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -87,7 +87,7 @@ function fizzBuzz(array) {
   }
   return myArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
@@ -109,7 +109,7 @@ function encode(string) {
   }
   return encodingString;
 }
-console.log(encode('hi there!'));
+//console.log(encode('hi there!'));
 
 function decode(string2) {
   let decodingString = '';
@@ -130,7 +130,7 @@ function decode(string2) {
   }
   return decodingString;
 }
-console.log(decode('h3 th2r2!'));
+//console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(languages, name) {
@@ -147,9 +147,7 @@ function techList(languages, name) {
   }
   return arrayTech;
 }
-console.log(
-  techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Matheus')
-);
+//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Matheus'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -171,7 +169,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return isTriangle;
 }
-console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
@@ -185,7 +183,7 @@ function hydrate(string) {
   }
   return `${trans} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
