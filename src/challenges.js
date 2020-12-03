@@ -75,22 +75,22 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function verificateNumbers(arraynumbers) {
-  let arrayFizzBuzz = ''; 
-    if (arraynumbers % 15 ===0) {
-      arrayFizzBuzz = 'fizzBuzz';
-    } else if (arraynumbers % 3 === 0) {
-      arrayFizzBuzz = 'fizz';
-    } else if (arraynumbers % 5 === 0) {
-      arrayFizzBuzz = 'buzz';
-    } else {
-      arrayFizzBuzz = 'bug!';
-    }
+  let arrayFizzBuzz = '';
+  if (arraynumbers % 15 === 0) {
+    arrayFizzBuzz = 'fizzBuzz';
+  } else if (arraynumbers % 3 === 0) {
+    arrayFizzBuzz = 'fizz';
+  } else if (arraynumbers % 5 === 0) {
+    arrayFizzBuzz = 'buzz';
+  } else {
+    arrayFizzBuzz = 'bug!';
+  }
   return arrayFizzBuzz;
 }
 
-function fizzBuzz(arraynumbers){
+function fizzBuzz(arraynumbers) {
   let arraynumbersFizzBuzz = [];
-  for (let index in arraynumbers) {
+  for (let index of arraynumbers) {
     arraynumbersFizzBuzz.push(verificateNumbers(index));
   }
   return arraynumbersFizzBuzz;
