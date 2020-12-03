@@ -58,9 +58,7 @@ function fizzBuzz(inputArray) {
     else if (inputArray[index] % 5 === 0) {
       outputArray.push('buzz');
     }
-    else {
-      outputArray.push('bug!');
-    }
+
   }
   console.log(inputArray);
   return outputArray;
