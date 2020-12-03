@@ -38,26 +38,19 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let greatest = 0
-  for (let element of numbers) {
-    if (element > greatest) {
-      greatest = element
+  let maxnumber = 0;
+  let contnumber = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (maxnumber < numbers[index]) {
+      maxnumber = numbers[index];
+      contnumber = 1;
+    } else if (maxnumber === numbers[index]) {
+      contnumber += 1;
     }
   }
-  return greatest
+  return contnumber
 }
-
-function contValue(numbers) {
-  const greatNumber = highestCount(numbers)
-  let greatCont = 0
-  for (let element of numbers) {
-    if (element === greatNumber) {
-      greatCont += 1
-    }
-  }
-  return greatCont
-}
-console.log(contValue([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -88,7 +81,7 @@ function fizzBuzz(array) {
   }
   return array;
 }
- console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
