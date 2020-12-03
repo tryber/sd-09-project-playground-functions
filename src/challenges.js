@@ -136,12 +136,11 @@ function techList(techs, name) {
   let listaComObjetos = [];
   for (let index = 0; index < arrayTechs.length; index += 1){
     listaComObjetos[index] = {
-      Tech:arrayTechs[index], 
-      nome: name,}
+      tech:arrayTechs[index], 
+      name: name,}
   }
   return listaComObjetos
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
