@@ -101,7 +101,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
   let enc = '';
   for (index = 0; index < string.length; index += 1) {
@@ -126,7 +126,7 @@ function encode() {
   }
   return enc;
 }
-function decode() {
+function decode(string) {
   // seu código aqui
   let dec = '';
   for (index = 0; index < string.length; index += 1) {
