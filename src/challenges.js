@@ -56,7 +56,7 @@ function fizzBuzz(inputArray) {
       outputArray.push('fizz')
     }
     else if (inputArray[index] % 5 === 0) {
-      outputArray.push('Buzz');
+      outputArray.push('buzz');
     }
     else {
       outputArray.push('bug!');
