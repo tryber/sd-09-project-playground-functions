@@ -165,7 +165,6 @@ function techList(techArray, name) {
   }
   return newArray;
 }
-console.log(techList(['HTML', 'javaScript', 'PHP'], 'Luciano'))
 
 // Desafio 11
 function generatePhoneNumber() {
