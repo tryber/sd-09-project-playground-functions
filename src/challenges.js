@@ -181,9 +181,20 @@ console.log(encode('hi there!'));
 console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let techLists = [];
+  techs.sort();
+  for (let index = 0; index < techs.length; index += 1) {
+    const object = {
+      tech: techs[index],
+      name: name,
+    }
+    techLists.push(object);
+  }
+  return techLists;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
