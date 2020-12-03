@@ -57,9 +57,24 @@ function highestCount(array) {
 console.log('O número ' , arrayReverse[0] , ' aparece' , highestCount(array) , ' vezes !!!');
 
 // Desafio 7
+let mouse = 5;
+let cat1 = 3;
+let cat2 = 8;
+
 function catAndMouse() {
-  // seu código aqui
+    let distanceMouseCat1 = mouse - cat1;
+    let distanceMouseCat2 = mouse - cat2;
+    let distanceCats = cat1 - cat2;
+
+    if (distanceMouseCat1 < distanceMouseCat2) {
+        console.log('O gato 1 alcançou o Rato!');
+    }else if (distanceMouseCat1 > distanceMouseCat2) {
+        console.log('O gato 2 alcançou o Rato!');
+    }else if(distanceCats === 0) {
+        console.log('Os Gatos Trombaram e o rato escapou!!!');
+    }
 }
+catAndMouse();
 
 // Desafio 8
 function fizzBuzz() {
