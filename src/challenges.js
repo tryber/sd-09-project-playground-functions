@@ -36,7 +36,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let repetitions = {};
+  let sortedEntry = entry.sort(function(a, b){return a - b});
+// Contagem de repetições baseada no gabarito do exercício 5 da parte II do bloco 4.4
+  for (let index = 0; index < entry.length; index += 1) {
+    let number = entry[index];
+    if (repetitions[number] === undefined) {
+      repetitions[number] = 1;
+    } else {
+      repetitions[number] += 1;
+    }
+  }
+  return repetitions[sortedEntry[sortedEntry.length - 1].toString()];
 }
 
 // Desafio 7
