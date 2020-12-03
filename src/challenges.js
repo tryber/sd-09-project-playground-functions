@@ -125,6 +125,7 @@ function encode(stringToEncode) {
 
   return (stringToEncode);
 }
+
 function decode(stringToDecode) {
   stringToDecode = code(stringToDecode, '1', 'a');
   stringToDecode = code(stringToDecode, '2', 'e');
