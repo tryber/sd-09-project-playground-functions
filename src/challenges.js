@@ -120,8 +120,24 @@ function encode(string) {
   }
   return aux.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let object = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let aux = [];
+  for (let index in string) {
+    aux[index] = string[index];
+    for (let key in object) {
+      if (string[index] === key) {
+        aux[index] = object[key];
+      }
+    }
+  }
+  return aux.join('');
 }
 
 // Desafio 10
