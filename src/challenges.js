@@ -104,7 +104,9 @@ function addWord(number) {
 function fizzBuzz(numbers) {
   let arrayToReturn = [];
   for (let index in numbers) {
-    arrayToReturn.push(addWord(numbers[index]));
+    if (typeof numbers[index] === 'number') {
+      arrayToReturn.push(addWord(numbers[index]));
+    }
   }
   console.log(arrayToReturn);
   return arrayToReturn;
