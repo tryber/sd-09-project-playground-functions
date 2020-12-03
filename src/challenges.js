@@ -63,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let diffCat2 = Math.abs(mouse - cat2);
 
   if (diffCat1 === diffCat2) {
-    return "Os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
   } else if (diffCat1 > diffCat2) {
     return "cat2";
   }
@@ -162,9 +162,18 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let water = string.split(/\D/g).join("");
+  let trans = 0;
+  for (let things of water) {
+    trans += Number(things);
+  }
+  if (trans === 1) {
+    return `${trans} copo de água`;
+  }
+  return `${trans} copos de água`;
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
