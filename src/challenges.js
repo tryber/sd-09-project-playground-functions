@@ -33,7 +33,7 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 console.log(footballPoints(10, 5));
 
@@ -59,9 +59,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(lista) {
+  let proxima = [];
+  for (let index = 0; index <= lista.length; index += 1) {
+    proxima = lista[index];
+    if (proxima % 3 === 0 && proxima % 5 === 0) {
+      console.log("fizzBuzz");
+    } else if (proxima % 3 === 0) {
+      console.log("fizz");
+    } else if (proxima % 5 === 0) {
+      console.log("buzz");
+    } else console.log("bug");
+  }
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
