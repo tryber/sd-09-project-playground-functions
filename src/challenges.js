@@ -41,7 +41,6 @@ function highestCount(array) {
   let maiorNumero = 0;
   let numeroDeVezes = 0;
   let var1 = 0;
-  let resultado = [];
   for (let index = 0; index < array.length; index += 1) {
     let contador = 0;
     let repeticao = 0;
@@ -74,8 +73,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let array2 = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    if ((array[index] % 3) === 0 && (array[index] % 5) === 0) {
+      array2.push('fizzBuzz');
+    } else if ((array[index] % 5) === 0) {
+        array2.push('buz');
+    } else if ((array[index] % 3) === 0) {
+        array2.push('fizz');
+    } else {
+        array2.push('bug');
+    }
+  }
+  return array2;
+}
 }
 
 // Desafio 9
