@@ -123,25 +123,42 @@ function techList(arrayOfTech, name) {
   if (arrayOfTech.length === 0) {
     return 'Vazio!';
   }
-  for (let item in myArrayOfTech) {
+  for (let item = 0; item < myArrayOfTech.length;item +=1) {
     let tempObject = {}
-    tempObject['tech'] = myArrayOfTech[item];
-    tempObject['name'] = name;
+    tempObject.tech = myArrayOfTech[item];
+    tempObject.name = name;
     myArrayOfTechObjects.push(tempObject);
   }
   return myArrayOfTechObjects;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function smallNumbers(number) {
+  let AllSmall = false;
+  for (let valor in number) {
+    if (number[valor] > 9) {
+      AllSmall = false;
+      break
+    }
+  }
+  return AllSmall;
+}
+function generatePhoneNumber(myArrayOfNumbers) {
+  let Array = myArrayOfNumbers;
+  let myPhoneNumber = ''
+  let validArray = Array.length < 11 ? myPhoneNumber = 'Array com tamanho incorreto.' : false;
+  let validNumbers = smallNumbers(Array) === false ? myPhoneNumber = 'não é possível gerar um número de telefone com esses valores' : false;
+  if (validArray === false && validNumbers === false) {
+    myPhoneNumber = `(${Array[0]}${Array[1]})${Array[2]}${Array[3]}${Array[4]}${Array[5]}${Array[6]}-${Array[7]}${Array[8]}${Array[9]}${Array[10]}`
+  }
+  return myPhoneNumber
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
 }
-
+//console.log(triangleCheck(10, 14, 8))//esperado true
 // Desafio 13
 function hydrate() {
   // seu código aqui
