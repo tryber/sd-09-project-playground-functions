@@ -77,39 +77,38 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(text) {
+function engine(text, action) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let code = 1, textEncode = text;
-  for (vowel of vowels) {
-    for (character of textEncode) {
-      if (character === vowel) {
-        textEncode = textEncode.replace(vowel, code);
+  let code = 1;
+  let newText = text;
+  for (let vowel of vowels) {
+    for (let character of newText) {
+      if (character === vowel && action === 'encode') {
+        newText = newText.replace(vowel, code);
+      } else if (character === code.toString() && action === 'decode'){
+        newText = newText.replace(code, vowel);
       }
     }
     code += 1;
   }
+  return newText;
+}
+
+function encode(text) {
+  textEncode = engine(text, 'encode');
   return textEncode;
 }
 
 function decode(text) {
-  let code = 1, textDecode = text;
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (let vowel of vowels) {
-    for (let character of textDecode) {
-      if (character === code.toString()) {
-        textDecode = textDecode.replace(code, vowel);
-      }
-    }
-    code += 1;
-  }
+  textDecode = engine(text, 'decode');
   return textDecode;
 }
 
 // Desafio 10
-function techList(arrayTechs,name) {
+function techList(arrayTechs, name) {
   let orderListTech = arrayTechs.sort();
   let listObjects = [];
-  for (tech of orderListTech) {
+  for (let tech of orderListTech) {
     listObjects.push({
       tech: tech, 
       name: name
