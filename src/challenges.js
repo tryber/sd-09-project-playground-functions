@@ -61,14 +61,16 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(lista) {
   let proxima = [];
+  let proximaCont = 0;
   for (let index = 0; index <= lista.length; index += 1) {
-    if (proxima % 3 === 0 && proxima % 5 === 0) {
-      proxima.push("fizzBuzz");
-    } else if (proxima % 3 === 0) {
-      proxima.push("fizz");
-    } else if (proxima % 5 === 0) {
-      proxima.push("buzz");
-    } else proxima.push("bug");
+    proximaCont = lista[index];
+    if (proximaCont % 3 === 0 && proximaCont % 5 === 0) {
+      proxima.push('fizzBuzz');
+    } else if (proximaCont % 3 === 0) {
+      proxima.push('fizz');
+    } else if (proximaCont % 5 === 0) {
+      proxima.push('buzz');
+    } else proxima.push('bug');
   } return proxima;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
