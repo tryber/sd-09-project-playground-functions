@@ -59,13 +59,13 @@ function fizzBuzz(Ar) {
   let Array = [];
   for (let index = 0; index < Ar.length; index += 1) {
     if (Ar[index] % 3 === 0 && Ar[index] % 5 === 0) {
-      Array.push('fizzbuzz');
+      Array.push('fizzBuzz');
     } else if (Ar[index] % 3 === 0) {
       Array.push('fizz');
     } else if (Ar[index] % 5 === 0) {
       Array.push('buzz');
     } else {
-      Array.push('bug');
+      Array.push('bug!');
     }
   }
   return Array;
