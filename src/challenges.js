@@ -1,4 +1,5 @@
 // Minhas funções
+
 function biggestNumber(numbers) {
   let biggest = 0;
 
@@ -8,6 +9,27 @@ function biggestNumber(numbers) {
     }
   }
   return biggest;
+}
+
+function encodeDecode(string, input, output) {
+  let newString = '';
+
+  for (let key of string) {
+    if (key === input[0]) {
+      newString += output[0];
+    } else if (key === input[1]) {
+      newString += output[1];
+    } else if (key === input[2]) {
+      newString += output[2];
+    } else if (key === input[3]) {
+      newString += output[3];
+    } else if (key === input[4]) {
+      newString += output[4];
+    } else {
+      newString += key;
+    }
+  }
+  return newString;
 }
 
 // Desafio 1
@@ -83,21 +105,15 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  return string
-  .replaceAll('a', '1')
-  .replaceAll('e', '2')
-  .replaceAll('i', '3')
-  .replaceAll('o', '4')
-  .replaceAll('u', '5');
+function encode(phrase) {
+  let input = ['a', 'e', 'i', 'o', 'u'];
+  let output = ['1', '2', '3', '4', '5']
+  return encodeDecode(phrase, input, output);
 }
-function decode(string) {
-  return string
-  .replaceAll('1', 'a')
-  .replaceAll('2', 'e')
-  .replaceAll('3', 'i')
-  .replaceAll('4', 'o')
-  .replaceAll('5', 'u');
+function decode(phrase) {
+  let input = ['1', '2', '3', '4', '5']
+  let output = ['a', 'e', 'i', 'o', 'u'];
+  return encodeDecode(phrase, input, output);
 }
 
 // Desafio 10
