@@ -128,9 +128,8 @@ function decode(frase) {
 }
 
 // Desafio 10
-let vetor = [];
-let pessoa = 'Lucas'
-function techList(arrayTechs, name) {
+function techList(techs, name) {
+  let arrayTechs = techs.sort()
   if (arrayTechs.length === 0){
     return 'Vazio!'
   }
@@ -142,7 +141,7 @@ function techList(arrayTechs, name) {
   }
   return listaComObjetos
 }
-console.log(techList(vetor, pessoa))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
