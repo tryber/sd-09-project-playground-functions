@@ -203,23 +203,27 @@ function addCharToNumber(index) {
   }
   return char;
 }
-function countNumbersArray(array) {
+function verifyCountNumbersArray(num) {
   let count = 0;
   let number = -1;
+  let result = false;
 
+  if (num > number) {
+    number = num;
+    if (count > 2) {
+      result = true;
+    }
+    count = 1;
+  } else {
+    count += 1;
+  }
+  return result;
+}
+function countNumbersArray(array) {
   array.sort();
 
   for (let index in array) {
-    if (array[index] > number) {
-      number = array[index];
-      if (count > 2) {
-        return true;
-      }
-
-      count = 1;
-    } else {
-      count += 1;
-    }
+    verifyCountNumbersArray(array[index]);
   }
   return false;
 }
