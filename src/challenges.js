@@ -15,7 +15,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let array = [];
   let aux = 0;
-  for (let index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     if (!array[aux]) {
       array[aux] = '';
     }
@@ -47,7 +47,7 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let highestNumber = array[0];
   let repeatCount = 0;
-  for (let index in array) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === highestNumber) {
       repeatCount += 1;
     }
@@ -85,8 +85,8 @@ function fizzBuzz(array) {
     15: 'fizzBuzz',
   };
   let fizzBuzzArray = [];
-  for (let index in array) {
-    for (let key in object) {
+  for (let index = 0; index < array.length; index += 1) {
+    for (let key = 0; key < object.length; key +=1) {
       if (array[index] % key === 0) {
         fizzBuzzArray[index] = object[key];
       }
@@ -105,7 +105,7 @@ function encode(string) {
     u: 5,
   };
   let aux = [];
-  for (let index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     aux[index] = string[index];
     for (let key in object) {
       if (string[index] === key) {
@@ -124,7 +124,7 @@ function decode(string) {
     5: 'u',
   };
   let aux = [];
-  for (let index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     aux[index] = string[index];
     for (let key in object) {
       if (string[index] === key) {
@@ -137,13 +137,6 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  for (let index in array) {
-    let object = {
-      tech: "NomeTech",
-      name: name,
-    };
-  }
-  
 }
 
 // Desafio 11
