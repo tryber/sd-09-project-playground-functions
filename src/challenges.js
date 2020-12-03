@@ -302,7 +302,7 @@ let somaNumero = number2 + number3;
 
 function numeroAbsoluto(number1, number2, number3) {
 
-let diferncaNumero = number2 - number3;
+let diferncaNumero = Math.abs.number2 - Math.abs.number3;
 
   if (number1 > diferncaNumero) {
     return true;
@@ -325,7 +325,7 @@ let diferncaNumero = number2 - number3;
   }
   return false;
 }
-console.log(triangleCheck(1, 14, 8));
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
