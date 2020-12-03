@@ -48,7 +48,7 @@ function highestCount(array) {
   }
   return count;
 }
-
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = '';
@@ -138,34 +138,31 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let telephone = '';
-  let error = 'não é possível gerar um número de telefone com esses valores';
-  let errorArray = 'Array com tamanho incorreto.';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
       let cont = 0;
       for (let index2 = 0; index2 < array.length; index2 += 1) {
         if (array[index] === array[index2]) {
           cont += 1;
-          if (cont >= 3){
-            return error;
+          if (cont >= 3) {
+            return 'não é possível gerar um número de telefone com esses valores';
           }
         }
       }
       if ((array[index] < 0) || (array[index] > 9)) {
-        return error;
+        return 'não é possível gerar um número de telefone com esses valores';
       } else if (index === 0) {
         telephone += `(${array[index]}`;
       } else if (index === 1) {
         telephone += `${array[index]}) `;
       } else if (index === 6) {
         telephone += `${array[index]}-`;
-      } else {
-        telephone += array[index];
       }
+      telephone += array[index];
     }
     return telephone;
   }
-  return errorArray;
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
@@ -187,7 +184,7 @@ function hydrate(str) {
   for (let index = 0; index < numberOfDrinks.length; index += 1) {
     numberOfWater += parseInt(numberOfDrinks[index], 10);
   }
-  if(numberOfWater === 1) {
+  if (numberOfWater === 1) {
     str = `${numberOfWater} copo de água`;
   } else {
     str = `${numberOfWater} copos de água`;
