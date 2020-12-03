@@ -60,9 +60,9 @@ function fizzBuzz(Ar) {
   for (let index = 0; index < Ar.length; index += 1) {
     if (Ar[index] % 3 === 0 && Ar[index] % 5 === 0) {
       Array.push('fizzbuzz');
-    } else if (Ar[index] % 3 === 0 && Ar[index] % 5 !== 0) {
+    } else if (Ar[index] % 3 === 0) {
       Array.push('fizz');
-    } else if (Ar[index] % 3 !== 0 && Ar[index] % 5 === 0) {
+    } else if (Ar[index] % 5 === 0) {
       Array.push('buzz');
     } else {
       Array.push('bug');
@@ -70,12 +70,48 @@ function fizzBuzz(Ar) {
   }
   return Array;
 }
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(Str) {
+  for (let index = 0; index < Str.length; index += 1) {
+    if (Str.includes('a')) {
+      Str = Str.replace('a', '1');
+    }
+    if (Str.includes('e')) {
+      Str = Str.replace('e', '2');
+    }
+    if (Str.includes('i')) {
+      Str = Str.replace('i', '3');
+    }
+    if (Str.includes('o')) {
+      Str = Str.replace('o', '4');
+    }
+    if (Str.includes('u')) {
+      Str = Str.replace('u', '5');
+    }
+  }
+  return Str;
 }
-function decode() {
-  // seu código aqui
+
+function decode(Str2) {
+  for (let index = 0; index < Str2.length; index += 1) {
+    if (Str2.includes('1')) {
+      Str2 = Str2.replace('1', 'a');
+    }
+    if (Str2.includes('2')) {
+      Str2 = Str2.replace('2', 'e');
+    }
+    if (Str2.includes('3')) {
+      Str2 = Str2.replace('3', 'i');
+    }
+    if (Str2.includes('4')) {
+      Str2 = Str2.replace('4', 'o');
+    }
+    if (Str2.includes('5')) {
+      Str2 = Str2.replace('5', 'u');
+    }
+  }
+  return Str2;
 }
 
 // Desafio 10
