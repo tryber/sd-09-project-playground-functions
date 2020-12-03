@@ -16,11 +16,10 @@ return area
 console.log(calcArea(10,5))
 
 // Desafio 3
-function splitSentence() {
-  let exemplo = "Estou aprendendo a programar com a Trybe!"
-  return exemplo.split(" ")
+function splitSentence(umaString) {
+  return umaString.split(" ")
 }
-console.log(splitSentence())
+console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
 
 // Desafio 4
 function concatName() {
