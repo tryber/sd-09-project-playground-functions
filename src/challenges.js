@@ -215,8 +215,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  //Aviso para a Raquel do futuro e outros leitores: aqui foi feito o uso das Regular Expressions para capturar todos os números na string
+  // /\d+/g siginficado que todos os números arábicos com 1+ serão coletados e armazenados em outro array. O elemento g que torna possível varrer toda a string ser retornado um array com todos os matches 
+  let drinksArray = string.match(/\d+/g);
+  let countDrinks = 0;
+  for (let index in drinksArray) {
+    countDrinks += Number(drinksArray[index]);
+  }
+  return console.log(`${countDrinks} copos de água`)
 }
 
 
