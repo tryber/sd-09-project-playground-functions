@@ -80,7 +80,7 @@ function fizzBuzz(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0){
       if (numbers[i] % 5 === 0) {
-        arrayFizzBuzz.push('fizzBuzz');        
+        arrayFizzBuzz.push('fizzBuzz');
       }
       arrayFizzBuzz.push('fizz');
     }
@@ -89,9 +89,7 @@ function fizzBuzz(numbers) {
       arrayFizzBuzz.push('buzz');
     }
 
-    if {
       arrayFizzBuzz.push('bug!');
-    }
   }
 
   return arrayFizzBuzz;
