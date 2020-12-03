@@ -62,7 +62,7 @@ function catAndMouse() {
 function fizzBuzz(lista) {
   let proxima = [];
   let proximaCont = 0;
-  for (let index = 0; index <= lista.length; index += 1) {
+  for (let index = 0; index < lista.length; index += 1) {
     proximaCont = lista[index];
     if (proximaCont % 3 === 0 && proximaCont % 5 === 0) {
       proxima.push('fizzBuzz');
@@ -70,7 +70,7 @@ function fizzBuzz(lista) {
       proxima.push('fizz');
     } else if (proximaCont % 5 === 0) {
       proxima.push('buzz');
-    } else proxima.push('bug');
+    } else proxima.push('bug!');
   } return proxima;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
