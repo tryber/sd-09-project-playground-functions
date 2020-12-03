@@ -169,7 +169,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(digitedNumber) {
   if (digitedNumber.length != 11) {
-    let message = "Array com tamanho incorreto";
+    let message = "Array com tamanho incorreto.";
     return message;
   }
   for (let index in digitedNumber) {
@@ -208,10 +208,14 @@ function generatePhoneNumber(digitedNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  sumSides = lineA + lineB + lineC;
+  sumCheck = lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA+ lineB;
+  absolutCheck = lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA);
+  allCheck = sumCheck && absolutCheck;
+  return allCheck;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
