@@ -64,18 +64,18 @@ function fizzBuzz(array) {
   let final = [];
   for (let index = 0; index <= array.length; index += 1){
     if (index % 3 == 0 && index % 5 == 0){
-      final.push += ('fizzBuzz, ');
+      final.push('fizzBuzz');
       } else if (index % 3 == 0){
-        final.push += ('fizz, ');
+        final.push('fizz');
       } else if (index % 5 == 0){
-        final.push += ('buzz, ' );
+        final.push('buzz' );
       } else {
-        final.push += ('bug!, ');
+        final.push('bug!');
       }
   }
   return final
 }
-
+console.log(fizzBuzz(test));
 // Desafio 9
 function encode() {
   // seu código aqui
