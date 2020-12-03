@@ -59,18 +59,17 @@ function fizzBuzz(Ar) {
   let Array = [];
   for (let index = 0; index < Ar.length; index += 1) {
     if (Ar[index] % 3 === 0 && Ar[index] % 5 === 0) {
-      Array.push("fizzbuzz");
+      Array.push('fizzbuzz');
     } else if (Ar[index] % 3 === 0 && Ar[index] % 5 !== 0) {
-      Array.push("fizz");
+      Array.push('fizz');
     } else if (Ar[index] % 3 !== 0 && Ar[index] % 5 === 0) {
-      Array.push("buzz");
+      Array.push('buzz');
     } else {
-      Array.push("bug");
+      Array.push('bug');
     }
   }
   return Array;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
