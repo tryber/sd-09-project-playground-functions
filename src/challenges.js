@@ -38,8 +38,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let maior = 0
+  let quantidade = 0
+
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] > maior) {
+      maior = array[index]
+      quantidade = 1
+    } else if (array[index] === maior) {
+      quantidade += 1
+    }
+  }
+  return quantidade
 }
 
 // Desafio 7
@@ -79,6 +91,8 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
+highestCount()
 
 module.exports = {
   calcArea,
