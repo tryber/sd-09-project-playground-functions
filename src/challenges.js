@@ -191,8 +191,26 @@ function repeats(number, array, qtty) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let greatSide = checkGreatSide(lineA, lineB, lineC);
+  if( greatSide !== null){
+    if((greatSide[0] < greatSide[1] + greatSide[2]) && greatSide[0] > Math.abs(greatSide[1] - greatSide[2])){
+      return true;
+    }
+  }
+  return false
+}
+
+function checkGreatSide(line1, line2, line3) {
+  if(line1 > line2 && line1 > line3){
+    return [line1, line2, line3];
+  } else if (line2 > line1 && line2 > line3) {
+    return [line2, line1, line3];
+  } else if (line3 > line1 && line3 > line2) {
+    return [line3, line1, line2];
+  } else {
+    return null;
+  }
 }
 
 // Desafio 13
