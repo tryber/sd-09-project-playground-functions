@@ -44,16 +44,21 @@ console.log(footballPoints(vitoria, empate))
 
 // Desafio 6
 function highestCount(repeat) {
-  let array = [repeat];
   let maiorNum = 0;
   let quantMaior = 0;
-    for(index = 0; index < array.length; index +=1){
-      if(array[index] > 0){
-        
+    for(let index = 0; index < repeat.length; index +=1){
+      if(repeat[index] > maiorNum){
+        maiorNum = repeat[index];        
+      }
+    }    
+    for(let index1 = 0; index1 < repeat.length; index1 += 1){
+      if(repeat[index1] === maiorNum){
+        quantMaior+=1;
       }
     }
+    return quantMaior
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
