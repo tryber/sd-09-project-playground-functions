@@ -31,9 +31,9 @@ function footballPoints(wins, ties) {
 function highestCount(values) {
   let highvalue;
 
-function selectValues (highValueArray) {
-  return highValueArray === highValueArray;
-}
+  function selectValues (highValueArray) {
+    return highValueArray === highValue;
+  }
   let sortValues = values.sort();
   let selectValues = sortValues.filter(selectValues, sortValues[sortValues.length - 1]);
   return selectValues.length;
