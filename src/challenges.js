@@ -74,7 +74,7 @@ function fizzBuzz(numbers) {
 let arrayFizzBuzz = [];
 
 for (let i = 0; i < numbers.length; i += 1) {
-  
+
   if (numbers[i] % 3 === 0) {
     if (numbers[i] % 5 === 0) {
       arrayFizzBuzz[i] = "fizzBuzz";
@@ -97,9 +97,7 @@ function encode(string) {
 
 function decode(string) {
 
-  
-
-
+}
 // Desafio 10
 function techList(techArray, name) {
   let newArray = [];
@@ -111,9 +109,9 @@ function techList(techArray, name) {
       name: name,
     }
     newArray.push(obj);
-    
+
   }
-  return newArray;
+return newArray;
 }
 
 // Desafio 11
