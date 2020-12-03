@@ -192,13 +192,13 @@ function techList(techArray, name) {
   // seu código aqui
   // tech = ["ReactJS", "NodeJS", "React Native"];
   // name = "Igor";
+  if (techArray.length === 0) {
+    return "Vazio!";
+  }
   let techName = [];
   techArray.sort();
 
   for (let index = 0; index < techArray.length; index += 1) {
-    if (techArray.length === 0) {
-      return "Vazio!";
-    }
 
     let techNameObject = {
       tech: techArray[index],
