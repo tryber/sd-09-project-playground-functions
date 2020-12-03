@@ -125,9 +125,7 @@ function fizzBuzz(dividendo) {
     // textos.push('bug!')
   }
 
-  for (let key in textos, dividendo) {
-    console.log(key + ': ' + dividendo[key] + ' ' + textos[key] + ' ')
-  }
+  return textos
 }
 
 // ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
