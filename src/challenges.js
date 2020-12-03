@@ -245,18 +245,45 @@ function generatePhoneNumber(number) {
   }
   if (verifyNumber(number)) {
     show = 'Array com tamanho incorreto.'
-  } 
+  }
   if (show === '') {
     show = criateNumber(number);
   }
   return show;
 }
 
+function checkSoma(param1, param2, param3){
+  let soma3 = param1 + param2;
+  let soma2 = param3 + param1;
+  let soma1 = param2 + param3;
+  let can = false;
+  if ((param3 < soma3) && (param2 < soma2) && (param1 < soma1)){
+    can = true;
+  }
+  return can
+}
+
+function checkDif(param1, param2, param3){
+  let soma3 = Math.abs(param1 - param2);
+  let soma2 = Math.abs(param3 - param1);
+  let soma1 = Math.abs(param2 - param3);
+  let can = false;
+  if ((param3 > soma3) && (param2 > soma2) && (param1 > soma1)){
+    can = true;
+  }
+  return can
+}
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(sideA, sideB, sideC) {
   // seu código aqui
+  let can = false;
+  if ((checkSoma(sideA, sideB, sideC)) && (checkDif(sideA, sideB, sideC))){
+    can = true;
+  }
+  return can;
 }
+
 
 // Desafio 13
 function hydrate() {
