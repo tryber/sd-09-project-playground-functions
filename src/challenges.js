@@ -175,8 +175,7 @@ function techList(arr, name) {
     return 'Vazio!'
   }
   for (let index = 0; index < arr.length; index += 1) {
-    let x = { tech: array[index],
-      name: name };
+    let x = { tech: array[index], name };
     obj.push(x);
   }
   return obj;
@@ -289,7 +288,7 @@ function triangleCheck(sideA, sideB, sideC) {
 function hydrate(alcool) {
   // seu código aqui
   let water = '';
-  let injectAlcool = alcool.match(/\d+/g);;
+  let injectAlcool = alcool.match(/\d+/g);
   let someAlcool = 0;
   for (let index of injectAlcool) {
     someAlcool += parseInt(index);
