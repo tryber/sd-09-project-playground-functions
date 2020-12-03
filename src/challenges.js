@@ -187,14 +187,14 @@ function techList(techs, name) {
   for (let index = 0; index < techs.length; index += 1) {
     const object = {
       tech: techs[index],
-      name: name,
+      name,
     }
     techLists.push(object);
   }
   return techLists;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
