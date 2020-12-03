@@ -14,24 +14,49 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(phrase) {
   // seu código aqui
+  let newSentence = [];
+  let indexNewSentence = 0;
+
+  for (let index = 0; index < phrase.length; index+=1) {
+    if (index === ' '){
+      indexNewSentence = indexNewSentence + 1;
+    }
+    newSentence = newSentence + phrase[index]
+  }
+  return newSentence;
 }
+//console.log(splitSentence('Vamos com tudo!'));
 
 // Desafio 4
-function concatName() {
+function concatName(nameList) {
   // seu código aqui
+  return (nameList[nameList.length-1], nameList[0]);
 }
+//console.log(concatName(['Marcelo', 'Fernanda', 'Claudia']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(setOfNumbers) {
   // seu código aqui
+  let timeCounter = 0;
+
+  for (let index = 0; index < setOfNumbers.length; index+=1) {
+    setOfNumbers(index);
+    for (let index2 = 0; index2 < setOfNumbers.length; index2+=1) {
+      if (setOfNumbers[index] >= setOfNumbers[index2]) {
+        timeCounter = timeCounter + 1;
+      }
+    }
+    return timeCounter
 }
+//console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse() {
