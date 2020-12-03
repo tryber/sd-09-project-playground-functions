@@ -92,8 +92,6 @@ function hydrate() {
   // seu código aqui
 }
 
-highestCount()
-
 module.exports = {
   calcArea,
   catAndMouse,
