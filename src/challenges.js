@@ -156,8 +156,14 @@ function generatePhoneNumber() {
 function triangleCheck(lineA, lineB, lineC) {
   let triangle = true;
   let check = [[lineA, lineB, lineC], [lineB, lineA, lineC], [lineC, lineA, lineB]];
+  let line = 0;
+  let sum = 0;
+  let diff = 0;
   for (let index = 0; index < check.length; index += 1) {
-    if (check[index][0] > Math.abs(check[index][1] - check[index][2]) && check[index][0] < (check[index][1] + check[index][2])) {
+    line = check[index][0];
+    sum = check[index][1] + check[index][2];
+    diff = Math.abs(check[index][1] - check[index][2]);
+    if (line > diff && line < sum) {
       triangle = true;
     } else {
       triangle = false;
