@@ -40,7 +40,7 @@ console.log(footballPoints(6, 6))
 
 // Desafio 6 -Para resolução desse exercicio utilizei a ajuda de : Luciano lodi, jhonatas, christofer e Lucas Galdino!!!
 // fonte de pesquisa: https://medium.com/@danvitoriano/ordenando-listas-com-javascript-array-sort-52446c25d94b
-let array = [1 , 2 , 3 , 4 , 5 , 5 , 9 , 5 , 9 , 9 , 9 ];
+let array = [9, 1, 2, 3, 9, 5, 7];
 let arraySort = array.sort();
 let arrayReverse = arraySort.reverse();
 function highestCount(array) {
@@ -54,7 +54,7 @@ function highestCount(array) {
         }
         return count
     }
-console.log('O número ' , arrayReverse[0] , ' aparece' , highestCount(array) , ' vezes !!!');
+console.log(highestCount(array));
 
 // Desafio 7
 let mouse = 5;
@@ -67,11 +67,11 @@ function catAndMouse() {
     let distanceCats = cat1 - cat2;
 
     if (distanceMouseCat1 < distanceMouseCat2) {
-        console.log('O gato 1 alcançou o Rato!');
+        console.log('cat1');
     }else if (distanceMouseCat1 > distanceMouseCat2) {
-        console.log('O gato 2 alcançou o Rato!');
+        console.log('cat2');
     }else if(distanceCats === 0) {
-        console.log('Os Gatos Trombaram e o rato escapou!!!');
+        console.log('os gatos trombam e o rato foge');
     }
 }
 catAndMouse();
