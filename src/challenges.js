@@ -116,7 +116,7 @@ function encode(string) {
   }
   return aux.join('');
 }
-function decode(stringDecode) {
+function decode(string) {
   let object = {
     a: 1,
     e: 2,
