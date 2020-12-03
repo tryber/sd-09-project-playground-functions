@@ -47,9 +47,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1
   let distanceCat2 = mouse - cat2
 
-  if (distanceCat1 > distanceCat2) {
+  if (distanceCat1 < distanceCat2) {
     return 'cat1'
-  } else if (distanceCat2 > distanceCat1) {
+  } else if (distanceCat2 < distanceCat1) {
     return 'cat2'
   }
   return 'Os gatos trombam e o rato foge'
@@ -57,17 +57,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
+  let result = []
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
-      console.log('fizzBuzz')
+      result.push('fizzBuzz')
     } else if (arr[index] % 3 === 0) {
-      console.log('fizz')
+      result.push('fizz')
     } else if (arr[index] % 5 === 0) {
-      console.log('buzz')
+      result.push('buzz')
     } else {
-      console.log('bug')
+      result.push('bug!')
     }
   }
+  return result
 }
 
 // Desafio 9
