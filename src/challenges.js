@@ -174,7 +174,11 @@ function hydrate(string) {
       waterGlassCounter = waterGlassCounter + Number(string[index])
     }
   }
-  return (waterGlassCounter +" copos de água")
+
+  if (waterGlassCounter === 1) {
+    return (waterGlassCounter +" copo de água")
+  } else {}
+    return (waterGlassCounter +" copos de água")
 }
 
 module.exports = {
