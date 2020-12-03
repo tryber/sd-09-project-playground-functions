@@ -69,7 +69,6 @@ function fizzBuzz(array) {
   }
   return fizzBuzzArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
@@ -117,11 +116,21 @@ function generatePhoneNumber(arrayNumb) {
   }
 
   let count = 0;
-  for (let i in arrayNumb) {
-    if (arrayNumb[i] == arrayNumb[i]) {
-      count++;
+  let numRepeat = 0;
+  let numArray = 0;
+  for (let index1 in arrayNumb) {
+    numArray = arrayNumb[index1];
+    for (let index2 in arrayNumb) {
+      if (numArray === arrayNumb[index2]) {
+        count++;
+      }
     }
+    if (count > numRepeat) {
+      numRepeat = count;
+    }
+    count = 0;
   }
+  if (numRepeat > 2) return 'não é possível gerar um número de telefone com esses valores';
 
   for (let i in arrayNumb) {
     if (arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
@@ -130,7 +139,6 @@ function generatePhoneNumber(arrayNumb) {
   return arrayNumb.join('');
 }
 
-console.log(generatePhoneNumber([3, 1, 9, 7, 5, 6, 7, 8, 5, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -138,7 +146,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return true
   } else return false;
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
