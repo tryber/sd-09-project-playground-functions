@@ -20,11 +20,22 @@ function splitSentence() {
   // seu código aqui
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
-}
+// Desafio 4 - Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 
+function concatName(arrayNames) {
+  let stringNamesFromArray = [];
+  for (let index = 0; index <arrayNames.length; index += 1){
+    if (index + arrayNames.length === arrayNames.length){
+      stringNamesFromArray.push(arrayNames[index]);
+    }
+    else if (index + (arrayNames.length + 1) === arrayNames.length * 2){
+      stringNamesFromArray.push(arrayNames[index]);
+    }
+  }
+  console.log(stringNamesFromArray.join());
+}
+let arrayExemplos =  ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatName(arrayExemplos);
 // Desafio 5 - pontos no futebol
 function footballPoints(wins, ties) {
   let calcWins = wins * 3;
