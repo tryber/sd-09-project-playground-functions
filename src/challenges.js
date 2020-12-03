@@ -16,11 +16,13 @@ function splitSentence(string) {
   let array = [];
   let aux = 0;
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === ' ') {
-      aux += 1;
-    }
     if (!array[aux]) {
       array[aux] = '';
+    }
+    if (string[index] === ' ') {
+      aux += 1;
+      array[aux] = '';
+      index += 1;
     }
     array[aux] += string[index];
   }
