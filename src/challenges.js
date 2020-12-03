@@ -34,29 +34,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestNumber(array6) {
-  let index = 0;
-  let highest = array6[0];
-    for (index = 0; index < array6.length; index ++) {
-      if (highest < array6[index]) {
-        highest = array6[index];
-      }
-    }
-  return highest;
-}
+// function highestNumber(array6) {
+//   let index = 0;
+//   let highest = array6[index];
+//     for (index = 0; index < array6.length; index ++) {
+//       if (highest < array6[index]) {
+//         highest = array6[index];
+//       }
+//     }
+//   return highest;
+// }
+// let highest = highestNumber();
 
-let highest = highestNumber(array6);
-
-function highestCount(array6) {
-  let index = 0;
-  let counter = 0;
-  for (index = 0; index < array6.length; index ++) {
-    if (highest === array6[index]) {
-      counter = counter + 1;
-    }
-  }
-  return counter;
-}
+// function highestCount(array6) {
+//   let index = 0;
+//   let counter = 0;
+//   for (index = 0; index < array6.length; index ++) {
+//     if (highest === array6[index]) {
+//       counter = counter + 1;
+//     }
+//   }
+//   return counter;
+// }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -111,8 +110,9 @@ return string9;
 }
 
 // Desafio 10
-function techList() {
+function techList(arraytech, name) {
   // seu código aqui
+  
 }
 
 // Desafio 11
