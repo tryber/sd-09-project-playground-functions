@@ -6,7 +6,6 @@ function compareTrue(valor1, valor2) {
   return valor1 && valor2;
 }
 console.log(compareTrue(firstValue, secondValue));
-//
 // Desafio 2
 let base1 = 10
 let altura = 8
@@ -37,8 +36,8 @@ console.log(concatName(numeros));
 function footballPoints(wins, ties) {
   let vitorias = wins * 3;
   let empate = ties * 1
-
-  return vitorias + empate;
+  let total = vitorias + empate;
+  return total;
 }
 
 // Desafio 6
@@ -58,8 +57,8 @@ console.log(highestCount(repetidos));
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  let positionCat1 = cat1 - mouse;
-  let positionCat2 = cat2 - mouse;
+  let positionCat1 = Math.abs(cat1 - mouse);
+  let positionCat2 = Math.abs(cat2 - mouse);
   let resultado = [];
 
   if (positionCat1 < positionCat2) {
@@ -69,7 +68,7 @@ function catAndMouse(cat1, cat2, mouse) {
   } else if(positionCat1 === positionCat2){
     resultado = 'os gatos trombam e o rato foge';
   }
-  return resultado.Math.abs();
+  return resultado;
 }
 console.log(catAndMouse(8, 12, 4));
 
@@ -83,8 +82,6 @@ function fizzBuzz(array) {
       
     }
   }
-  
-
 }
 
 // Desafio 9
