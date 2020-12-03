@@ -177,8 +177,21 @@ function generatePhoneNumber(arrayTelefone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC)) {
+    if (lineA > Math.abs(lineB - lineC)) {
+      return true;
+    }
+  } else if (lineB < (lineA + lineC)) {
+    if (lineB > Math.abs(lineA - lineC)) {
+      return true;
+    }
+  } else if (lineC < (lineA + lineB)) {
+    if (lineC > Math.abs(lineA - lineB)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // Desafio 13
