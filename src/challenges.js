@@ -195,6 +195,7 @@ function techList(techArray, name) {
   if (techArray.length === 0) {
     return "Vazio!";
   }
+  
   let techName = [];
   techArray.sort();
 
