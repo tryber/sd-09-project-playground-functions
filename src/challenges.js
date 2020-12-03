@@ -118,18 +118,19 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(array, name) {
-  let newArray = [];
-
-  for (let index = 0; index < array.length; index += 1) {
-    newArray[index] = {
-      tech: array[index],
-      name,
+  if (array.length > 0) {
+    let newArray = [];
+    array.sort();
+  
+    for (let index = 0; index < array.length; index += 1) {
+      newArray[index] = {
+        tech: array[index],
+        name,
+      }
     }
+    return newArray;
   }
-  if (array.length === 0) {
-    return 'Vazio!'
-  }
-  return newArray;
+  return 'Vazio!'
 }
 
 // Desafio 11
