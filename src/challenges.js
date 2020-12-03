@@ -123,12 +123,13 @@ function decode(entry) {
 // Desafio 10
 function techList(techs, name) {
   let alphaTechs = techs.sort();
-  let abilities = [];
+  let abilities;
   if (techs === []) {
     abilities = 'Vazio!';
   } else {
+    abilities = [];
     for (let index = 0; index < alphaTechs.length; index += 1) {
-      abilities[index] = { tech: alphaTechs[index], name: name };
+      abilities.push({ tech: alphaTechs[index], name: name, });
     }
   }
   return abilities;
