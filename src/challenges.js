@@ -29,9 +29,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(values) {
+  let highvalue;
+
+function selectValues (highValueArray) {
+  return highValueArray === highValueArray;
+}
   let sortValues = values.sort();
-  let selectValues = sortValues.filter[sortValues.length - 1];
-  return selectValues.length - 1;
+  let selectValues = sortValues.filter(selectValues, sortValues[sortValues.length - 1]);
+  return selectValues.length;
 }
 
 // Desafio 7
