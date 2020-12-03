@@ -64,32 +64,11 @@ function fizzBuzz(inputArray) {
 }
 
 // Desafio 9
-function encode(inputString) {
+function encode() {
 }
 
-function decode(inputString) {
-  let outputString = '';
-  for (let index = 0; index < inputString.length; index += 1) {
-    switch (inputString[index]){
-      case '1':
-        outputString += 'a';
-        break;
-      case '2':
-          outputString += 'e';
-        break;
-      case '3':
-          outputString += 'i';
-        break;
-      case '4':
-        outputString += 'o';
-        break;
-      case '5':
-          outputString += 'u';
-        break;
-      default:
-        outputString += inputString[index];
-    }
-  return outputString;
+function decode() {
+
 }
 
 // Desafio 10
