@@ -74,19 +74,19 @@ console.log(catAndMouse(5 , 3 , 8));
 
 // Desafio 8
 function fizzBuzz() {
-    let array = [];
+    let arrayFizBu = [];
     for (let index =0; index < arrayNumber.length; index += 1) {
         if (arrayNumber[index] % 3 === 0) {
-            array.push('fizz');
+            arrayFizBu.push('fizz');
         } else if (arrayNumber[index] % 5 === 0) {
-            array.push('buzz');
+            arrayFizBu.push('buzz');
         } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
-            array.push('fizzBuzz');
+            arrayFizBu.push('fizzBuzz');
         } else {
-            array.push('bug!');
+            arrayFizBu.push('bug!');
         }
     }
-    return array;
+    return arrayFizBu;
 }
 console.log(fizzBuzz([ 2 , 15 , 7 , 9 , 45]));
 
