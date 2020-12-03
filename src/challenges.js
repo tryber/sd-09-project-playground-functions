@@ -161,10 +161,20 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  let error = 'Vazio!';
+  
+  for (let i = 0; i < techArray.length; i += 1){
+    let newList = {
+      tech: techArray[i],
+      name: name,
+    }
+    if (techArray = []) {
+      return error;
+    }
+  }
+  return newList;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
