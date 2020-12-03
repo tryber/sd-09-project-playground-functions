@@ -127,11 +127,11 @@ function encode(stringToEncode) {
 }
 
 function decode(stringToDecode) {
-  stringToDecode = code(stringToDecode, '1', 'a');
-  stringToDecode = code(stringToDecode, '2', 'e');
-  stringToDecode = code(stringToDecode, '3', 'i');
-  stringToDecode = code(stringToDecode, '4', 'o');
   stringToDecode = code(stringToDecode, '5', 'u');
+  stringToDecode = code(stringToDecode, '4', 'o');
+  stringToDecode = code(stringToDecode, '3', 'i');
+  stringToDecode = code(stringToDecode, '2', 'e');
+  stringToDecode = code(stringToDecode, '1', 'a');
 
   return (stringToDecode);
 }
