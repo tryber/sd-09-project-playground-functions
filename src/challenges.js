@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let newString = array[array.length - 1] +", " + array[0] 
+  let newString = array[array.length - 1] +", " + array[0]
   return newString
 }
 
@@ -40,7 +40,7 @@ function highestCount(array) {
       maior = array[index]
     }
   }
-      
+
   for (let index = 0 ; index < array.length ; index += 1) {
     if (maior === array[index]) {
       repetition = repetition + 1
@@ -48,6 +48,8 @@ function highestCount(array) {
   }
   return repetition
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse , cat1 , cat2) {
@@ -78,7 +80,7 @@ let distance1 = distance(mouse , cat1)
 // Desafio 8
 function fizzBuzz(array) {
   let result = []
-  
+
   for (let index = 0 ; index < array.length ; index += 1) {
     if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
       result.push('fizzBuzz')
@@ -163,8 +165,16 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  
+  let waterGlassCounter = 0
+
+  for (let index = 0 ; index < string.length ; index += 1) {
+    if (string[index] >= 0) {
+      waterGlassCounter = waterGlassCounter + Number(string[index])
+    }
+  }
+  return (waterGlassCounter +" copos de água")
 }
 
 module.exports = {
