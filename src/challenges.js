@@ -55,6 +55,7 @@ function highestCount(numbersArray) {
       count += 1;
     }
   } return count;
+}
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
@@ -131,3 +132,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
+}
