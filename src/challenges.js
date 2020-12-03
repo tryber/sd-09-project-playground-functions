@@ -29,14 +29,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(param) {
-  let major = [];
+  let major = 0;
+  let countMajor = 0;
   for (let index = 0; index < param.length; index += 1) {
-    if (param[index] >= major) {
-      major.push(param[index])
+    if (param[index] > major) {
+      major = param[index]
+      countMajor = 1
+    } else if (param[index] === major ) {
+      countMajor += 1
     }
   }
-  return major.length
+  return countMajor
 };
+
+let array = [2, 1, 2, 3, 9, 9, 7]
+console.log(highestCount(array))
+
 
 
 // Desafio 7
