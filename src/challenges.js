@@ -108,7 +108,7 @@ function fizzBuzz(numbersArray) {
         break;
     }
   }
-  return fizzBuzzStrings
+  return fizzBuzzStrings;
 }
 
 // Challenge Nine - Function to encode string
@@ -120,10 +120,8 @@ function encode(stringToEncode) {
     o: 4,
     u: 5,
   }
-  
   let encodedArray = [];
   let encodedString = '';
-
   for (let index = 0; index < stringToEncode.length; index += 1) {
     encodedArray.push(stringToEncode[index]);
     for (let key in translatorMap) {
