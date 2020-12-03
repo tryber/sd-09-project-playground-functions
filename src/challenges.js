@@ -22,8 +22,8 @@ return array[array.length -1 ] + ', ' + array[0]
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
