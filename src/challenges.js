@@ -50,7 +50,6 @@ function fizzBuzz(inputArray) {
   let outputArray = [];
   for (let index = 0; index < inputArray.length; index += 1) {
     outputArray.push('bug!');
-    }
     if (inputArray[index] % 15 === 0) {
       outputArray[index] = ('fizzBuzz');
     }
@@ -60,9 +59,7 @@ function fizzBuzz(inputArray) {
     else if (inputArray[index] % 5 === 0) {
       outputArray[index] = ('buzz');
     }
-
   }
-  console.log(inputArray);
   return outputArray;
 }
 
