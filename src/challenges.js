@@ -85,45 +85,58 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let encodingString = '';
-  for (let element of string) {
-    if (element === 'a') {
-      encodingString += '1';
-    } else if (element === 'e') {
-      encodingString += '2';
-    } else if (element === 'i') {
-      encodingString += '3';
-    } else if (element === 'o') {
-      encodingString += '4';
-    } else if (element === 'u') {
-      encodingString += '5';
-    } else {
-      encodingString += element;
+  let stringEnc = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case 'a':
+        stringEnc += 1;
+        break;
+      case 'e':
+        stringEnc += 2;
+        break;
+      case 'i':
+        stringEnc += 3;
+        break;
+      case 'o':
+        stringEnc += 4;
+        break;
+      case 'u':
+        stringEnc += 5;
+        break;
+      default:
+        stringEnc += string[index];
     }
   }
-  return encodingString;
+  return stringEnc;
 }
-// console.log(encode('hi there!'));
+// console.log(encode('hi there!'))
 
-function decode(string2) {
-  let decodingString = '';
-  for (let element of string2) {
-    if (element === '1') {
-      decodingString += 'a';
-    } else if (element === '2') {
-      decodingString += 'e';
-    } else if (element === '3') {
-      decodingString += 'i';
-    } else if (element === '4') {
-      decodingString += 'o';
-    } else if (element === '5') {
-      decodingString += 'u';
-    } else {
-      decodingString += element;
+function decode(string) {
+  let stringDec = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case '1':
+        stringDec += 'a';
+        break;
+      case '2':
+        stringDec += 'e';
+        break;
+      case '3':
+        stringDec += 'i';
+        break;
+      case '4':
+        stringDec += 'o';
+        break;
+      case '5':
+        stringEnc += 'u';
+        break;
+      default:
+        stringDec += string[index];
     }
   }
-  return decodingString;
+  return stringDec;
 }
+
 // console.log(decode('h3 th2r2!'));
 
 // Desafio 10
