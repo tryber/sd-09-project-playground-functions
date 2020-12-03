@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1Distance > cat2Distance) {
     closestCat = 'cat2';
   }
-  if (cat1Distance > cat2Distance) {
+  if (cat1Distance < cat2Distance) {
     closestCat = 'cat1';
   }
   return closestCat;
@@ -78,25 +78,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let object = {
+    1: 'bug!',
+    3: 'fizz',
+    5: 'buzz',
+    15: 'fizzBuzz',
+  };
   let fizzBuzzArray = [];
-    for (let index in array) {
-      let restBy3 = (array[index]) % 3;
-      let restBy5 = (array[index]) % 5;
-      let restBy15 = restBy3 + restBy5;
-      let restBy3Or5 = restBy3 * restBy5;
-      if (restBy3Or5) {
-        fizzBuzzArray[index] = 'bug!';
-      }
-      if (!restBy3) {
-        fizzBuzzArray[index] = 'fizz';
-      }
-      if (!restBy5) {
-        fizzBuzzArray[index] = 'buzz';
-      }
-      if (!restBy15) {
-        fizzBuzzArray[index] = 'fizzBuzz';
+  for (let index in array) {
+    for (let key in object) {
+      if (array[index] % key === 0) {
+        fizzBuzzArray[index] = object[key];
       }
     }
+  }
   return fizzBuzzArray;
 }
 
@@ -141,8 +136,14 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  for (let index in array) {
+    let object = {
+      tech: "NomeTech",
+      name: name,
+    };
+  }
+  
 }
 
 // Desafio 11
