@@ -17,7 +17,7 @@ function splitSentence(string) {
   const arrayString = string.split(" ");
   return arrayString;
 }
-console.log(splitSentence("Tree Of Savior"));
+console.log(splitSentence('Tree Of Savior'));
 
 // Desafio 4
 function concatName(stringArray) {
@@ -25,7 +25,7 @@ function concatName(stringArray) {
   let lastName = stringArray[stringArray.length - 1];
   return `${lastName}, ${firstName}`;
 }
-console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolillo"]));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -63,11 +63,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let diffCat2 = Math.abs(mouse - cat2);
 
   if (diffCat1 === diffCat2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (diffCat1 > diffCat2) {
-    return "cat2";
+    return 'cat2';
   }
-  return "cat1";
+  return 'cat1';
 }
 console.log(catAndMouse(-15, -15, -15));
 
@@ -76,13 +76,13 @@ function fizzBuzz(array) {
   const myArray = [];
   for (let element of array) {
     if (element % 3 === 0 && element % 5 === 0) {
-      myArray.push("fizzBuzz");
+      myArray.push('fizzBuzz');
     } else if (element % 3 === 0) {
-      myArray.push("fizz");
+      myArray.push('fizz');
     } else if (element % 5 === 0) {
-      myArray.push("buzz");
+      myArray.push('buzz');
     } else {
-      myArray.push("bug!");
+      myArray.push('bug!');
     }
   }
   return myArray;
@@ -91,51 +91,51 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
-  let encodingString = "";
+  let encodingString = '';
   for (let element of string) {
-    if (element === "a") {
-      encodingString += "1";
-    } else if (element === "e") {
-      encodingString += "2";
-    } else if (element === "i") {
-      encodingString += "3";
-    } else if (element === "o") {
-      encodingString += "4";
-    } else if (element === "u") {
-      encodingString += "5";
+    if (element === 'a') {
+      encodingString += '1';
+    } else if (element === 'e') {
+      encodingString += '2';
+    } else if (element === 'i') {
+      encodingString += '3';
+    } else if (element === 'o') {
+      encodingString += '4';
+    } else if (element === 'u') {
+      encodingString += '5';
     } else {
       encodingString += element;
     }
   }
   return encodingString;
 }
-console.log(encode("hi there!"));
+console.log(encode('hi there!'));
 
 function decode(string2) {
-  let decodingString = "";
+  let decodingString = '';
   for (let element of string2) {
-    if (element === "1") {
-      decodingString += "a";
-    } else if (element === "2") {
-      decodingString += "e";
-    } else if (element === "3") {
-      decodingString += "i";
-    } else if (element === "4") {
-      decodingString += "o";
-    } else if (element === "5") {
-      decodingString += "u";
+    if (element === '1') {
+      decodingString += 'a';
+    } else if (element === '2') {
+      decodingString += 'e';
+    } else if (element === '3') {
+      decodingString += 'i';
+    } else if (element === '4') {
+      decodingString += 'o';
+    } else if (element === '5') {
+      decodingString += 'u';
     } else {
       decodingString += element;
     }
   }
   return decodingString;
 }
-console.log(decode("h3 th2r2!"));
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(languages, name) {
   if (languages.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   languages.sort();
   let arrayTech = [];
@@ -148,7 +148,7 @@ function techList(languages, name) {
   return arrayTech;
 }
 console.log(
-  techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
+  techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Matheus')
 );
 
 // Desafio 11
@@ -157,13 +157,25 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let isTriangle = false;
+  if (lineA > Math.abs(lineB - lineC) && lineA < lineB + lineC) {
+    isTriangle = true;
+    return isTriangle;
+  } else if (lineB > Math.abs(lineA - lineC) && lineB < lineA + lineC) {
+    isTriangle = true;
+    return isTriangle;
+  } else if (lineC > Math.abs(lineA - lineB) && lineC < lineA + lineB) {
+    isTriangle = true;
+    return isTriangle;
+  }
+  return isTriangle;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
-  let water = string.split(/\D/g).join("");
+  let water = string.split(/\D/g).join('');
   let trans = 0;
   for (let things of water) {
     trans += Number(things);
@@ -173,7 +185,7 @@ function hydrate(string) {
   }
   return `${trans} copos de água`;
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
