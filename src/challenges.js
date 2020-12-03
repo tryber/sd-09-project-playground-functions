@@ -192,7 +192,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function checkIsValid(array) {
+function repsValidation(array) {
   let isValid = true;
   let reps;
 
@@ -209,6 +209,14 @@ function checkIsValid(array) {
       isValid = false;
     }
   }
+
+  return isValid;
+}
+
+function checkIsValid(array) {
+  let isValid;
+
+  isValid = repsValidation(array);
 
   if (array.length !== 11) {
     isValid = false;
@@ -228,7 +236,7 @@ function generatePhoneNumber(array) {
   } else if (array.length !== 11) {
     result = 'Array com tamanho incorreto.';
   } else {
-    result = 'não é possível gerar um número de telefone com esses valores'
+    result = 'não é possível gerar um número de telefone com esses valores';
   }
   return result;
 }
