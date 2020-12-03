@@ -186,9 +186,9 @@ function countRepeatedNumbers(array, number) {
 function checkNumbers(array) {
   let validate = true;
   let check = true;
-  for (let number in array) {
-    let count = countRepeatedNumbers(array, array[number]);
-    validate = validateNumbers(array[number], count);
+  for (let number of array) {
+    let count = countRepeatedNumbers(array, number);
+    validate = validateNumbers(number, count);
     if (validate === false) {
       check = false;
     }
