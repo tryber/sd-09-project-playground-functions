@@ -69,16 +69,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let mouCat1 = 0;
   let mouCat2 = 0;
   let result = '';
+
   if (mouse > cat1) {
     mouCat1 = mouse - cat1;
   } else {
     mouCat1 = cat1 - mouse;
-  }
+  };
   if (mouse > cat2) {
     mouCat2 = mouse - cat2;
   } else {
     mouCat2 = cat2 - mouse;
-  }
+  };
   if (mouCat2 > mouCat1) {
     console.log('cat1');
     result = 'cat1';
@@ -87,7 +88,7 @@ function catAndMouse(mouse, cat1, cat2) {
     result = 'os gatos trombam e o rato foge';
   } else {
     console.log('cat2');
-    result = 'cat';
+    result = 'cat2';
   }
   return result;
 }
@@ -97,24 +98,58 @@ function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result.push('fizzBuzz');
+      result.push("fizzBuzz");
     } else if (array[index] % 3 === 0) {
-      result.push('fizz');
+      result.push("fizz");
     } else if (array[index] % 5 === 0) {
-      result.push('buzz');
+      result.push("buzz");
     } else {
-      result.push('bug!')
+      result.push("bug!")
     }
   }
   console.log(result);
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encoded = '';
+  for (let index in string) {
+    if (string[index].toLowerCase() === 'a') {
+      encoded = encoded += 1;
+    } else if (string[index].toLowerCase() === 'e') {
+      encoded = encoded += 2;
+    } else if (string[index].toLowerCase() === 'i') {
+      encoded = encoded += 3;
+    } else if (string[index].toLowerCase() === 'o') {
+      encoded = encoded += 4;
+    } else if (string[index].toLowerCase() === 'u') {
+      encoded = encoded += 5;
+    } else {
+      encoded = encoded += string[index];
+    }
+  }
+  console.log(encoded);
+  return encoded;
 }
-function decode() {
-  // seu código aqui
+function decode(encoded) {
+  let decoded = '';
+  for (let index in encoded) {
+    if (encoded[index] === '1') {
+      decoded = decoded += 'a';
+    } else if (encoded[index] === '2') {
+      decoded = decoded += 'e';
+    } else if (encoded[index] === '3') {
+      decoded = decoded += 'i';
+    } else if (encoded[index] === '4') {
+      decoded = decoded += 'o';
+    } else if (encoded[index] === '5') {
+      decoded = decoded += 'u';
+    } else {
+      decoded = decoded += encoded[index];
+    }
+  }
+  console.log(decoded);
+  return decoded;
 }
 
 // Desafio 10
@@ -163,5 +198,7 @@ footballPoints(3, 1)
 highestCount([9, 1, 2, 41, 3, 9, 5, 7, 9, 41, 17, 41])
 catAndMouse(7, 8, 8)
 fizzBuzz([2, 15, 7, 9, 45, 25])
+encode('Boa noite meu consagrado')
+decode('B41 n43t2 m25 c4ns1gr1d4')
 
 // Aooba, não é que tem um segredo no Lession Learned?!
