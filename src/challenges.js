@@ -96,9 +96,8 @@ function catAndMouse(posMouse, posCat1, posCat2) {
     return 'cat2'
   } else if (distanceCat1 < distanceCat2) {
     return 'cat1'
-  } else {
-    return 'os gatos trombam e o rato foge'
   }
+  return 'os gatos trombam e o rato foge'
 }
 
 console.log(catAndMouse(5, 2, 9))
@@ -142,6 +141,7 @@ function encode(phrase) {
         break;
       case 'u':
         strings[index] = 5;
+        break;
       default:
         break;
     }
@@ -169,7 +169,7 @@ function decode(phrase) {
       case '5':
         strings[index] = 'u';
         break;
-      default:  
+      default:
         break;
     }
   }
