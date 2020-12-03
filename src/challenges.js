@@ -33,7 +33,7 @@ function highestCount(nums) {
   for (let index = 1; index < nums.length; index += 1) {
     if (numMax < nums[index]) {
       numMax = nums[index];
-     }
+    }
   }
   for (let index2 = 0; index2 < nums.length; index2 += 1) {
     if (numMax === nums[index2]) {
@@ -45,7 +45,7 @@ function highestCount(nums) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) != Math.abs(mouse - cat2)) {
+  if (Math.abs(mouse - cat1) !== Math.abs(mouse - cat2)) {
     if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
       return 'cat1';
     }
@@ -58,14 +58,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(Ar) {
   let Array = [];
   for (let index = 0; index < Ar.length; index += 1) {
-    if (Ar[index]%3 == 0 && Ar[index]%5 == 0) {
-      Array.push("fizzbuzz");
-    } else if (Ar[index]%3 == 0) {
-      Array.push("fizz");
-    } else if (Ar[index]%5 == 0) {
-      Array.push("buzz");
-    } else {
-      Array.push("bug");
+    if (Ar[index] % 3 === 0 && Ar[index] % 5 === 0) {
+      Array.push('fizzbuzz');
+    } else if (Ar[index] % 3 === 0) {
+      Array.push('fizz');
+    } else if (Ar[index] % 5 === 0) {
+      Array.push('buzz');
+    }
+    if (Ar[index] % 3 !== 0 && Ar[index] % 5 !== 0) {
+      Array.push('bug');
     }
   }
   return Array;
