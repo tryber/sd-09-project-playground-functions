@@ -45,17 +45,22 @@ let total = totalWins + totalTies;
       console.log(footballPoints(5,2));
 
 // Desafio 6
-/*let numbers = [9, 1, 2, 3, 9, 5, 7];
-let contador = 0;*/
+let numbers = [1, 1, 2, 9, 9, 5, 7];
+let contador = 2;
+let maiorNumero = 0;
+
 function highestCount() {
- /* for (let i = 0; i < numbers.length; i += 1) {
-    if(numbers[i] === contador) {
-      contador += 1;
+  for (let i = 0; i < numbers.length; i += 1) {
+    for (let j = 0; j < numbers[i]; j = numbers[i]) {
+      if (maiorNumero < numbers[i]) {
+        maiorNumero = contador;
+      }
     }
-  } return contador;
+    
+  } return maiorNumero;
 }
-      console.log(highestCount());*/
-}
+      console.log(highestCount());
+
 // Desafio 7
 function catAndMouse() {
   // seu código a*/qui
