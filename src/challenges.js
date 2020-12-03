@@ -191,7 +191,28 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function statements(arr, validVariable) {
+function countingReps(arr) {
+  let reps;
+  let answer;
+
+  for (let i of arr) {
+    reps = 0;
+
+    for (let j of arr) {
+      if (i === j) {
+        reps += 1;
+      }
+    }
+
+    if (reps >= 3 || i < 0 || i > 9) {
+      answer = 'não é possível gerar um número de telefone com esses valores';
+      isValid = false;
+    }
+  }
+  return answer;
+}
+
+function statements(arr, validVariable, res) {
   let otherAnswers;
 
   if (arr.length !== 11) {
@@ -208,23 +229,8 @@ function statements(arr, validVariable) {
 function generatePhoneNumber(array) {
   let isValid = true;
   let result;
-  let reps;
 
-  for (let i of array) {
-    reps = 0;
-
-    for (let j of array) {
-      if (i === j) {
-        reps += 1;
-      }
-    }
-
-    if (reps >= 3 || i < 0 || i > 9) {
-      result = 'não é possível gerar um número de telefone com esses valores';
-      isValid = false;
-    }
-  }
-
+  result = countingReps(array);
   result = statements(array, isValid);
 
   return result;
