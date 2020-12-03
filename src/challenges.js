@@ -56,7 +56,7 @@ function highestCount(param) {
 
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 5, 4, 6, 9, 2, 9, 12, 9]))
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-console.log(highestCount([0,0,0,0]))
+// console.log(highestCount([0, 0, 0, 0]))
 
 // Desafio 7 - PASS
 function catAndMouse(mouse, cat1, cat2) {
@@ -102,9 +102,39 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log( catAndMouse(0, 3, 2) )
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(dividendo) {
+  let textos = []
+
+  function dividePor3e5 (param) {
+    if ((param % 3 === 0) && (param % 5 === 0)) {
+        textos.push('fizzBuzz')
+
+      } else if ((param % 3) === 0) {
+        textos.push('fizz')
+
+      } else if ((param % 5) === 0) {
+        textos.push('buzz');
+
+      } else {
+        textos.push('bug!')
+      }
+  }
+
+  for (let i = 0; i < dividendo.length; i += 1) {
+    dividePor3e5(dividendo[i])
+    // textos.push('bug!')
+  }
+
+  for (let key in textos, dividendo) {
+    console.log(key + ': ' + dividendo[key] + ' ' + textos[key] + ' ')
+  }
 }
+
+// ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
+// console.log(2 % 3, 15 % 3, 7 % 3, 9 % 3, 45 % 3)
+// console.log(2 % 5, 15 % 5, 7 % 5, 9 % 5, 45 % 5)
+// fizzBuzz([ 2, 15, 7, 9, 45])
+
 
 // Desafio 9
 function encode() {
