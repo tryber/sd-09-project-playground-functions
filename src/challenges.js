@@ -91,22 +91,22 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode(string2) {
   let stringCodificada = '';
 
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
+  for (let index = 0; index < string2.length; index += 1) {
+    if (string2[index] === 'a') {
       stringCodificada += '1';
-    } else if (string[index] === 'e') {
+    } else if (string2[index] === 'e') {
       stringCodificada += '2';
-    } else if (string[index] === 'i') {
+    } else if (string2[index] === 'i') {
       stringCodificada += '3';
-    } else if (string[index] === 'o') {
+    } else if (string2[index] === 'o') {
       stringCodificada += '4';
-    } else if (string[index] === 'u') {
+    } else if (string2[index] === 'u') {
       stringCodificada += '5';
     } else {
-      stringCodificada += string[index];
+      stringCodificada += string2[index];
     }
   }
   return stringCodificada;
