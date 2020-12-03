@@ -158,7 +158,7 @@ function techList(tech, name) {
   tech.sort();
   let arrayReturn = [];
   for (let index in tech) {
-    let objectTech = new Object();
+    let objectTech = {};
     objectTech['tech'] = tech[index];
     objectTech['name'] = name;
     arrayReturn.push(objectTech);
@@ -167,8 +167,44 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(digitedNumber) {
+  if (digitedNumber.length != 11) {
+    let message = "Array com tamanho incorreto";
+    return message;
+  }
+  for (let index in digitedNumber) {
+    if (digitedNumber[index] < 0 || digitedNumber[index] > 9) {
+      let message = "não é possível gerar um número de telefone com esses valores";
+      return message;
+    }
+    let count = 0;
+    for (let indexRepeat in digitedNumber) {
+      if (digitedNumber[indexRepeat] === digitedNumber[index]) {
+        count += 1;
+      }
+    }
+    if (count >= 3) {
+      let message = "não é possível gerar um número de telefone com esses valores";
+      return message;
+    }
+  }
+  let message = '';
+  for (let index = 0; index < digitedNumber.length; index += 1) {
+    switch (index) {
+      case 0:
+      message += `(${digitedNumber[index]}`;
+      break;
+      case 1:
+      message += `${digitedNumber[index]}) `;
+      break;
+      case 6:
+      message += `${digitedNumber[index]}-`;
+      break;
+      default: 
+      message += digitedNumber[index];
+    }
+  }
+  return message;
 }
 
 // Desafio 12
