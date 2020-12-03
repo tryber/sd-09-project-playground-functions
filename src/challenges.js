@@ -124,7 +124,7 @@ function decode(entry) {
 function techList(techs, person) {
   let alphaTechs = techs.sort();
   let abilities;
-  if (techs === []) {
+  if (techs.length === 0) {
     abilities = 'Vazio!';
   } else {
     abilities = [];
