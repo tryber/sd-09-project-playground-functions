@@ -88,10 +88,41 @@ function fizzBuzz(arrayPassed) {
 }
 let arrayNumbers = [2, 15, 7, 9, 45];
 fizzBuzz(arrayNumbers);
-// Desafio 9
-function encode() {
-  // seu código aqui
+
+// Desafio 9 - Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+/*
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+*/
+
+function encode(stringtoChange) {
+  let novaString = "";
+  for (let index = 0; index<stringtoChange.length; index += 1){
+    if (stringtoChange[index] === 'a'){
+      novaString += '1';
+    }
+    else if (stringtoChange[index] === 'e'){
+    novaString += '2';
+    }
+    else if (stringtoChange[index] === 'i'){
+    novaString += '3';
+    }  
+    else if (stringtoChange[index] === 'o'){
+      novaString += '4';
+    }
+    else if (stringtoChange[index] === 'u'){
+      novaString += '5';
+    } else {
+      novaString += stringtoChange[index];
+    }
+  }
+  return novaString;
+
 }
+encode('hi there!');
 function decode() {
   // seu código aqui
 }
