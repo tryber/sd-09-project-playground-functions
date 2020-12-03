@@ -77,7 +77,7 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function engine(text, action) {
+function engineCode(text, action) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
   let code = 1;
   let newText = text;
@@ -95,12 +95,12 @@ function engine(text, action) {
 }
 
 function encode(text) {
-  let textEncode = engine(text, 'encode');
+  let textEncode = engineCode(text, 'encode');
   return textEncode;
 }
 
 function decode(text) {
-  let textDecode = engine(text, 'decode');
+  let textDecode = engineCode(text, 'decode');
   return textDecode;
 }
 
@@ -109,7 +109,7 @@ function techList(arrayTechs, name) {
   let orderListTech = arrayTechs.sort();
   let listObjects = [];
   for (let tech of orderListTech) {
-    listObjects.push({tech: tech,name: name,});
+    listObjects.push({ tech: tech, name: name, });
   }
   if (listObjects.length === 0) {
     return 'Vazio!';
