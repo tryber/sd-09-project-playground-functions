@@ -48,7 +48,7 @@ function highestCount(array) {
   }
   return count;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = '';
@@ -157,14 +157,15 @@ function generatePhoneNumber(array) {
         telephone += `${array[index]}) `;
       } else if (index === 6) {
         telephone += `${array[index]}-`;
+      } else {
+        telephone += array[index];
       }
-      telephone += array[index];
     }
     return telephone;
   }
   return 'Array com tamanho incorreto.';
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineC))) {
