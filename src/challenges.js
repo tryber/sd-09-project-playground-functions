@@ -192,17 +192,23 @@ function techList(tech, name) {
   // seu código aqui
   // tech = ["ReactJS", "NodeJS", "React Native"];
   // name = "Igor";
+  let techName = [];
 
-  let techName = [
-    { tech: tech[0], name: name },
-    { tech: tech[1], name: name },
-    { tech: tech[2], name: name },
-  ];
+  for (let index = 0; index < tech.length; index += 1) {
+    let techNameObject = {
+      tech: tech[index],
+      name: name,
+    };
+
+    techName.push(techNameObject);
+  }
 
   return techName;
 }
 
-console.log(techList(["ReactJS", "NodeJS", "React Native"], "Igor"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+
+console.log(techList(techList));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
