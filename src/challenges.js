@@ -82,30 +82,36 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    let mod5 = arrayNumbers[index] % 5 === 0;
-    let mod3 = arrayNumbers[index] % 3 === 0;
+function divideBy(number) {
+  let word = '';
+  let mod5 = number % 5 === 0;
+  let mod3 = number % 3 === 0;
 
-    switch (true) {
-      case mod3 && mod5:
-        arrayNumbers[index] = 'fizzBuzz';
-        break;
-      case mod3:
-        arrayNumbers[index] = 'fizz';
-        break;
-      case mod5:
-        arrayNumbers[index] = 'buzz';
-        break;
-      default:
-        arrayNumbers[index] = 'bug!';
-        break;
-    }
+  if (mod3 === true) {
+    word = 'fizz';
+  } 
+  
+  if (mod5 === true) {
+    word = 'buzz';
   }
 
+  if ((mod3 === true) && (mod5 === true)) {
+    word = 'fizzBuzz';
+  } 
+
+  if (word === '') {
+    word = 'bug!';
+  }
+
+  return word;
+}
+function fizzBuzz(arrayNumbers) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    arrayNumbers[index] = divideBy(arrayNumbers[index]);
+  }
   return arrayNumbers;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // rgb(76,164,109)
 // Desafio 9
