@@ -120,8 +120,7 @@ function encode(stringToEncode) {
     o: 4,
     u: 5,
   }
-
-  stringToEncode = stringToEncode.toLowerCase();
+  
   let encodedArray = [];
   let encodedString = '';
 
@@ -147,7 +146,6 @@ function decode(stringToDecode) {
     u: 5,
   }
 
-  stringToDecode = stringToDecode.toLowerCase();
   let decodedArray = [];
   let decodedString = '';
   for (let index = 0; index < stringToDecode.length; index += 1) {
