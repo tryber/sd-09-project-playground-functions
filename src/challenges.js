@@ -137,7 +137,7 @@ return nova2
 function techList(arrayTechs = [], name) {
   // seu código aqui
   arrayFinal = []
-  arrayfinal2 = []
+  arrayFinal2 = []
   for (contador = 0; contador < arrayTechs.length; contador += 1){
     arrayFinal.push(obj = {
       tech: arrayTechs[contador],
@@ -147,8 +147,10 @@ function techList(arrayTechs = [], name) {
     return 'Vazio!'
   } else {
     for (contador = 0; contador <= arrayFinal.length; contador += 1){
-      arrayfinal2.push(arrayFinal[arrayFinal.length - contador])
-    } return arrayfinal2
+      arrayFinal2.push(arrayFinal[arrayFinal.length - contador])
+    }
+    console.log(arrayFinal2)
+    return arrayFinal2
   } 
 }techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
 
