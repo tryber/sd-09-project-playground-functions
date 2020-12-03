@@ -108,18 +108,92 @@ function fizzBuzz(numbers) {
       arrayToReturn.push(addWord(numbers[index]));
     }
   }
-  console.log(arrayToReturn);
+  // console.log(arrayToReturn);
   return arrayToReturn;
 }
 
 fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function checkIsVowel(letter) {
+  if (
+    letter === 'a' ||
+    letter === 'e' ||
+    letter === 'i' ||
+    letter === 'o' ||
+    letter === 'u'
+  ) {
+    return true;
+  }
+  return false;
 }
-function decode() {
-  // seu código aqui
+function switchVowelToNumber(letter) {
+  switch (letter) {
+    case 'a':
+      letter = 1;
+      break;
+    case 'e':
+      letter = 2;
+      break;
+    case 'i':
+      letter = 3;
+      break;
+    case 'o':
+      letter = 4;
+      break;
+    case 'u':
+      letter = 5;
+      break;
+    default:
+      break;
+  }
+  return letter;
+}
+
+function switchNumberToVowel(letter) {
+  switch (letter) {
+    case '1':
+      letter = 'a';
+      break;
+    case '2':
+      letter = 'e';
+      break;
+    case '3':
+      letter = 'i';
+      break;
+    case '4':
+      letter = 'o';
+      break;
+    case '5':
+      letter = 'u';
+      break;
+    default:
+      break;
+  }
+  return letter;
+}
+function encode(frase) {
+  let encodedFrase = [];
+  for (let index in frase) {
+    if (checkIsVowel(frase[index])) {
+      encodedFrase.push(switchVowelToNumber(frase[index]));
+      // console.log(`A letra da frase agora é ${frase[index]}`);
+    }
+  }
+  // console.log(encodedFrase.join(''));
+  return encodedFrase.join('');
+}
+
+function decode(frase) {
+  let decodedFrase = [];
+  for (let index in frase) {
+    if (checkIsVowel(frase[index])) {
+      decodedFrase.push(switchNumberToVowel(frase[index]));
+      // console.log(`A letra da frase agora é ${frase[index]}`);
+    }
+  }
+  // console.log(decodedFrase.join(''));
+  return decodedFrase.join('');
 }
 
 // Desafio 10
