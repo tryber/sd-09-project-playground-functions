@@ -41,12 +41,12 @@ console.log(footballPoints(6, 6))
 // Desafio 6 -Para resolução desse exercicio utilizei a ajuda de : Luciano lodi, jhonatas, christofer e Lucas Galdino!!!
 // fonte de pesquisa: https://medium.com/@danvitoriano/ordenando-listas-com-javascript-array-sort-52446c25d94b
 
-function highestCount(array) {
-  let arraySort = array.sort();
+function highestCount(arrayHisCo) {
+  let arraySort = arrayHisCo.sort();
   let arrayReverse = arraySort.reverse();
      let count = 1;
      for (let index = 0; index < arrayReverse.length; index += 1) {
-         if (arrayReverse[index] === array[index +1]) {
+         if (arrayReverse[index] === arrayHisCo[index +1]) {
              count += 1;
          }else {
              return count;
