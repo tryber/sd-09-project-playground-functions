@@ -149,7 +149,7 @@ function techList(arrayTechs = [], name) {
     for (index = 1; index <= arrayFinal.length; index += 1){
       arrayFinal2.push(arrayFinal[arrayFinal.length - index])
     }
-    console.log(arrayFinal2)
+    return arrayFinal2
   } 
 }techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
 
