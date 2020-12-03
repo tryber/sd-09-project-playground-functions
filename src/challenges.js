@@ -154,7 +154,7 @@ function techList(arrayTechs, name) {
     return arrayFinal2
   } 
   
-}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
+}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
 
 // Desafio 11
 function generatePhoneNumber() {
