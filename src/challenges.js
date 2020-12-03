@@ -56,7 +56,7 @@ function highestCount(arrayNum) {
 console.log(highestCount(repetidos));
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(cat1 - mouse);
   let positionCat2 = Math.abs(cat2 - mouse);
   let resultado = '';
