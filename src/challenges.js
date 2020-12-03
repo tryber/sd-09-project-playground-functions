@@ -63,34 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let rangeGato1 = 0
   let rangeGato2 = 0
 
-  function distantCat(param1, param2, param3) {
-    switch(param1, param2, param3) {
-      case (param1 === param2 && param1 === param3):
-        return 'os gatos trombam e o rato foge'
-      case (param1 === param2 && param1 !== param3):
-        return 'cat1'
-      case (param1 === param3 && param1 !== param2):
-        return 'cat2'
-      default: 
-        return false
-    }
-  }
-
-  function checkCat (param1, param2) {
-    switch (param1, param2) {
-      case (param1 > param2):
-        return 'cat2'
-      case (param2 > param1):
-        return 'cat1'
-      case (param1 === param2):
-        return 'os gatos trombam e o rato foge'
-      default:
-        return false
-    }
-  }
-
-  distantCat(mouse, cat1, cat2)
-
   if (mouse > cat1) {
     for (let i = mouse; i > cat1; i -= 1) {
       rangeGato1 += 1;
@@ -110,13 +82,15 @@ function catAndMouse(mouse, cat1, cat2) {
     }
   }
 
-  checkCat(rangeGato1, rangeGato2)
-
+  switch (mouse) {
+    case (mouse === cat1 && mouse === cat2 || rangeGato1 === rangeGato2):
+      return 'os gatos trombam e o rato foge'
+    case (mouse === cat1 && mouse !== cat2 || rangeGato2 > rangeGato1):
+      return 'cat1'
+    case (mouse === cat2 && mouse !== cat1 || rangeGato1 > rangeGato2):
+      return 'cat2'
+  }
 }
-
-
-
-
 
 // console.log( catAndMouse(4, 5, 1) )
 // console.log( catAndMouse(1, 0, 2) ) //precisar ser igual
