@@ -60,7 +60,7 @@ console.log(highestCount(repetidos));
 function catAndMouse(cat1, cat2, mouse) {
   let positionCat1 = cat1 - mouse;
   let positionCat2 = cat2 - mouse;
-  let resultado = 0;
+  let resultado = [];
 
   if (positionCat1 < positionCat2) {
     resultado = 'cat1';
@@ -69,15 +69,22 @@ function catAndMouse(cat1, cat2, mouse) {
   } else if(positionCat1 === positionCat2){
     resultado = 'os gatos trombam e o rato foge';
   }
-  return resultado;
+  return resultado.Math.abs();
 }
 console.log(catAndMouse(8, 12, 4));
 
-  
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let numeros = [8, 4, 3, 8, 9];
+function fizzBuzz(array) {
+  for (let key in array) {
+    if (array.hasOwnProperty(key)) {
+      const element = array[key];
+      
+    }
+  }
+  
+
 }
 
 // Desafio 9
