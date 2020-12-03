@@ -22,7 +22,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(entry) {
-  let name = entry[entry.length - 1] + ', ' + entry[0];
+  let lastName = entry[entry.length - 1];
+  let firstName = entry[0]
+  let name = lastName.concat(', ', firstName);
   return name;
 }
 
@@ -75,11 +77,11 @@ function encode(entry) {
     e: '2',
     i: '3',
     o: '4',
-    u: '5'
+    u: '5',
   };
   let code = entry.split('');
-  for (let char in cypher) {
-    for (let index = 0; index < code.length; index += 1) {
+  for (let index = 0; index < code.length; index += 1) {
+    for (let char in cypher) {
       if (code[index] === char) {
         code[index] = cypher[char];
       }
@@ -94,11 +96,11 @@ function decode(entry) {
     e: '2',
     i: '3',
     o: '4',
-    u: '5'
+    u: '5',
   };
   let code = entry.split('');
-  for (let char in cypher) {
-    for (let index = 0; index < code.length; index += 1) {
+  for (let index = 0; index < code.length; index += 1) {
+    for (let char in cypher) {
       if (code[index] === cypher[char]) {
         code[index] = char;
       }
