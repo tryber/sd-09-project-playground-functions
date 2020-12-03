@@ -24,8 +24,13 @@ console.log(splitSentence('Go trybe'));
 
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
+  let result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  return result;
 }
+console.log(concatName(['Toselli' , 'Henrique' , 'Pedro']));
+//Utilizei o seguinte site como fonte de pesquisa : https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -33,10 +38,23 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(6, 6))
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+// Desafio 6 -Para resolução desse exercicio utilizei a ajuda de : Luciano lodi, jhonatas, christofer e Lucas Galdino!!!
+// fonte de pesquisa: https://medium.com/@danvitoriano/ordenando-listas-com-javascript-array-sort-52446c25d94b
+let array = [1 , 2 , 3 , 4 , 5 , 5 , 9 , 5 , 9 , 9 , 9 ];
+let arraySort = array.sort();
+let arrayReverse = arraySort.reverse();
+function highestCount(array) {
+     let count = 1;
+     for (let index = 0; index < arrayReverse.length; index += 1){
+         if (arrayReverse[index] === array[index +1]){
+             count += 1;
+         }else {
+             return count;
+            }
+        }
+        return count
+    }
+console.log('O número ' , arrayReverse[0] , ' aparece' , highestCount(array) , ' vezes !!!');
 
 // Desafio 7
 function catAndMouse() {
@@ -57,9 +75,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(name, programList) {}
 
 // Desafio 11
 function generatePhoneNumber() {
