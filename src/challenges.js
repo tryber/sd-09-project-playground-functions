@@ -71,6 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(5 , 3 , 8));
 
 // Desafio 8
+let arrayNumber = [];
 function fizzBuzz(arrayNumber) {
     let arrayFizBu = [];
     for (let index =0; index < arrayNumber.length; index += 1) {

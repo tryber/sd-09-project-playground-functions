@@ -14,12 +14,12 @@
 
 
 // // Desafio 9
-function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
+// function encode() {
+//     // seu código aqui
+//   }
+//   function decode() {
+//     // seu código aqui
+//   }
 
 
 
