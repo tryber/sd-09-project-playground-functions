@@ -65,10 +65,9 @@ function fizzBuzz(inputArray) {
 
 // Desafio 9
 function encode() {
- 
 }
+
 function decode() {
-  
 }
 
 // Desafio 10
