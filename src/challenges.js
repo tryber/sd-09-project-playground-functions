@@ -72,20 +72,12 @@ function catAndMouse(mouse, cat1, cat2) {
     distanciaMouseGato2 = cat2 - mouse;
   }
 
-  Math.abs(distanciaMouseGato1);
-  Math.abs(distanciaMouseGato2);
-
-
   if (distanciaMouseGato1 > distanciaMouseGato2) {
-    console.log('\nCat 2 pegou o gato!!\n');
-    console.log('Cat 2 estava a ' + distanciaMouseGato2 + ' de distância e pegou o gato');
-    console.log('Cat 1 estava a ' + distanciaMouseGato1 + ' de distância e rodou');
+    return "cat2";
   } else if (distanciaMouseGato1 < distanciaMouseGato2){
-    console.log('Cat 1 pegou o gato!! ');
-    console.log('Cat 1 estava a ' + distanciaMouseGato1 + ' de distância e pegou o gato');
-    console.log('Cat 2 estava a ' + distanciaMouseGato2 + ' de distância e rodou');
+    return "cat1";
   } else {
-    console.log('Os gatos trombaram e o rato fugiu!!');
+    return "os gatos trombam e o rato foge";
   }
   
 }
@@ -111,9 +103,53 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode() {
   // seu código aqui
+  let enc = '';
+  for (index = 0; index < string.length; index += 1) {
+    switch (string[index]){
+      case 'a':         
+        enc += 1;
+        break;
+      case 'e': 
+        enc += 2;
+        break;
+      case 'i': 
+        enc += 3;
+        break;
+      case 'o': 
+        enc += 4;
+        break;
+      case 'u': 
+        enc += 5;
+        break;
+      default: enc += string[index];
+    }
+  }
+  return enc;
 }
 function decode() {
   // seu código aqui
+  let dec = '';
+  for (index = 0; index < string.length; index += 1) {
+    switch (string[index]){
+      case '1':         
+        dec += 'a';
+        break;
+      case '2': 
+        dec += 'e';
+        break;
+      case '3': 
+        dec += 'i';
+        break;
+      case '4': 
+        dec += 'o';
+        break;
+      case '5': 
+        dec += 'u';
+        break;
+      default: dec += string[index];
+    }
+  }
+  return dec;
 }
 
 // Desafio 10
