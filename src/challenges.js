@@ -143,7 +143,7 @@ function techList(arrayTechs, name) {
       tech: arrayTechs[contador],
       name: name,
     })
-  } if (arrayTechs === ''){
+  } if (arrayTechs === null){
     arrayFinal2 = 'Vazio!'
     console.log(arrayFinal2)
     return arrayFinal2
