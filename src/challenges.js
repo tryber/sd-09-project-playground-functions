@@ -220,43 +220,45 @@ function verifyCountNumbersArray(num) {
   return result;
 }
 function countNumbersArray(array) {
-  array.sort();
+  let newArray = [...array];
+  newArray.sort();
 
-  for (let index in array) {
-    verifyCountNumbersArray(array[index]);
+  for (let index = 0; index < newArray.length; index += 1) {
+    verifyCountNumbersArray(newArray[index]);
   }
   return false;
 }
-function invalidNumbers(number, array) {
+function invalidNumbers(number, arrayNumbers) {
   let invalid = false;
   let invalidPhrase = '';
+  let verify = countNumbersArray(arrayNumbers);
 
-  if (array.length !== 11) {
+  if (arrayNumbers.length !== 11) {
     invalid = true;
     invalidPhrase = 'Array com tamanho incorreto.';
   }
 
-  if ((number < 0 || number > 9) || countNumbersArray(array) === true) {
+  if ((number < 0 || number > 9) || verify === true) {
     invalid = true;
     invalidPhrase = 'não é possível gerar um número de telefone com esses valores';
   }
 
   return [invalid, invalidPhrase];
 }
-function generatePhoneNumber(arrayNumbers) {
+function generatePhoneNumber(arrayPhone) {
   let phone = '';
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    let errors = invalidNumbers(arrayNumbers[index], arrayNumbers);
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    let errors = invalidNumbers(arrayPhone[index], arrayPhone);
     if (errors[0] === true) {
       return errors[1];
     }
-    phone += addCharToNumber(index) + arrayNumbers[index];
+    phone += addCharToNumber(index) + arrayPhone[index];
   }
 
   return phone;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 1, 9, 0, 1]));
+console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 // Desafio 12
 function triangleCheck() {
