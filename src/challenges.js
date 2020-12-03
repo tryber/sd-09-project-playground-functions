@@ -144,12 +144,23 @@ function generatePhoneNumber(arrayNumb) {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineC - lineA) && lineC > Math.abs(lineB - lineA)) {
     return true
-  } else return false;
+  } 
+  else return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let listaNum = frase.replace(/[^0-9]/g, '');
+  let arrayListaNum = listaNum.split('');
+
+  let sum = 0;
+  for (let i in arrayListaNum) {
+    sum = sum + Number(arrayListaNum[i]);
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  else return `${sum} copos de água`;
 }
 
 
