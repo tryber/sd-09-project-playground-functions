@@ -23,13 +23,12 @@ console.log(splitSentence('Vamos nessa'));
 
 // Desafio 4
 function concatName(array) {
-  let firstAndLast = '';
-  for (let index = 0; index <= array.length; index += 1) {
-    firstAndLast = array[index - 1] + ' ' + array[0];
-  }
+  let firstAndLast = [array[array.length - 1], array[0]];
+  firstAndLast = firstAndLast.join(', ');
   return firstAndLast;
 }
-console.log(concatName(['Roberta', 'Julia', 'João', 'Maria', 'Marcos']));
+let arrayOfNames = ['Roberta', 'Julia', 'João', 'Maria', 'Marcos'];
+console.log(concatName(arrayOfNames));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -50,11 +49,11 @@ function highestCount(array) {
   }
   let number = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if(array[index] === bigger) {
+    if (array[index] === bigger) {
       number += 1;
     }
   }
- return number;
+  return number;
 }
 let array = [9, 1, 2, 3, 9, 10, 5, 7]
 console.log(highestCount(array));
