@@ -104,12 +104,12 @@ function decode(text) {
   return textDecode;
 }
 
-// Desafio 10
+// Desafio 10 - Ordenando o array antes
 function techList(arrayTechs, name) {
   let orderListTech = arrayTechs.sort();
   let listObjects = [];
   for (let tech of orderListTech) {
-    listObjects.push({ tech: tech, name: name, });
+    listObjects.push({ tech: tech, name: name });
   }
   if (listObjects.length === 0) {
     return 'Vazio!';
