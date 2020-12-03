@@ -23,7 +23,8 @@ return array[array.length -1 ] + ', ' + array[0]
 
 // Desafio 5
 function footballPoints() {
- 
+  // seu código aqui
+}
 
 // Desafio 6
 function highestCount() {
