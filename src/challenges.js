@@ -258,12 +258,28 @@ function generatePhoneNumber(arrayPhone) {
 
   return phone;
 }
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function verifyTriangle(N1, N2, N3) {
+  let verify = false;
+
+  if ((N1 < Math.abs(N2 + N3)) && (N1 > Math.abs(N2 - N3))) {
+    verify = true;
+  }
+  return verify;
 }
+function triangleCheck(lineA, lineB, lineC) {
+  let verifyA = verifyTriangle(lineA, lineB, lineC);
+  let verifyB = verifyTriangle(lineB, lineC, lineA);
+  let verifyC = verifyTriangle(lineC, lineA, lineB);
+
+  if (verifyA && verifyB && verifyC) {
+    return true;
+  }
+  return false;
+}
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
