@@ -85,7 +85,7 @@ function engine(text, action) {
     for (let character of newText) {
       if (character === vowel && action === 'encode') {
         newText = newText.replace(vowel, code);
-      } else if (character === code.toString() && action === 'decode'){
+      } else if (character === code.toString() && action === 'decode') {
         newText = newText.replace(code, vowel);
       }
     }
@@ -95,12 +95,12 @@ function engine(text, action) {
 }
 
 function encode(text) {
-  textEncode = engine(text, 'encode');
+  let textEncode = engine(text, 'encode');
   return textEncode;
 }
 
 function decode(text) {
-  textDecode = engine(text, 'decode');
+  let textDecode = engine(text, 'decode');
   return textDecode;
 }
 
@@ -109,10 +109,10 @@ function techList(arrayTechs, name) {
   let orderListTech = arrayTechs.sort();
   let listObjects = [];
   for (let tech of orderListTech) {
-    listObjects.push({
-      tech: tech, 
-      name: name
-    });
+    listObjects.push({tech: tech,name: name,});
+  }
+  if (listObjects.length === 0) {
+    return 'Vazio!';
   }
   return listObjects;
 }
