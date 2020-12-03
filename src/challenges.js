@@ -192,7 +192,7 @@ function encode(frase) {
       encodedFrase.push(switchVowelToNumber(frase[index]));
       // console.log(`A letra da frase agora é ${frase[index]}`);
     } else {
-      encodedFrase.push(frase[index])
+      encodedFrase.push(frase[index]);
     }
   }
   // console.log(encodedFrase.join(''));
@@ -206,19 +206,29 @@ function decode(frase) {
       decodedFrase.push(switchNumberToVowel(frase[index]));
       // console.log(`A letra da frase agora é ${frase[index]}`);
     } else {
-      decodedFrase.push(frase[index])
+      decodedFrase.push(frase[index]);
     }
   }
   // console.log(decodedFrase.join(''));
   return decodedFrase.join('');
 }
 
-console.log(decode('h2ll4')); 
-
 // Desafio 10
-function techList() {
-  
+let technologiesToLearn = ['React', 'Vue', 'Python', 'Django', 'MySQL', '.NET', 'Bootstrap', 'WordPress'];
+
+function techList(technologies, name) {
+  let listTechnologies = [];
+  technologiesToLearn.sort();
+  for (let index in technologies) {
+    listTechnologies.push({
+      tech: technologies[index],
+      name: name,
+    });
+  }
+  return listTechnologies;
 }
+
+console.log(techList(technologiesToLearn, 'Maximilian'));
 
 // Desafio 11
 function generatePhoneNumber() {
