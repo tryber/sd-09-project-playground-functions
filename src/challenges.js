@@ -32,12 +32,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  let count = 1;
-  let index = arrayNumbers.length - 1;
-  arrayNumbers.sort();
-  while (arrayNumbers[index] === arrayNumbers[index - 1]) {
-    count += 1;
-    index -= 1;
+  let count = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === 9) {
+      count += 1;
+    }
   }
   return count;
 }
@@ -54,9 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz() {}
 
 // Desafio 9
 function encode() {
@@ -109,3 +106,4 @@ console.log(concatName(["xurubita", "lucas", "thiago", "white"]));
 console.log(footballPoints(4, 2));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(5, 10, 5));
+console.log(fizzBuzz(10));
