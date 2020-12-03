@@ -25,7 +25,7 @@ console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName(firstAndLastIndex) {
   let string = [];
-  string = firstAndLastIndex[firstAndLastIndex.length - 1] + ', ' + firstAndLastIndex[0];
+  string = `${firstAndLastIndex[firstAndLastIndex.length - 1]}, ${firstAndLastIndex[0]}`;
   return string;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -48,7 +48,7 @@ function highestCount(numbersArray) {
   }
 
   for (let index in numbersArray) {
-    if (highestNumber === numbersArray[index]){
+    if (highestNumber === numbersArray[index]) {
       timesHighestNumberAppears += 1;
     }
   }
@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (cat2Distance > cat1Distance) {
     return 'cat1';
-  } 
+  }
   return 'os gatos se trombam e o rato foge';
 }
 console.log(catAndMouse(1, 0, 2));
@@ -84,34 +84,29 @@ function fizzBuzz(fizzBuzzArray) {
     }
   }
   return fizzBuzzResult;
-}   
+}
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(arrayToEncode) {
   let encodedArray = [];
   for (let index = 0; index < arrayToEncode.length; index += 1) {
-    switch (arrayToEncode[index]){
+    switch (arrayToEncode[index]) {
       case 'a':
-          encodedArray.push(arrayToEncode.replace(/a/gi, '1'));
-          break;
-
+        encodedArray.push(arrayToEncode.replace(/a/gi, '1'));
+        break;
       case 'e':
-          encodedArray.push(arrayToEncode.replace(/e/gi, '2'));
-          break;
-
+        encodedArray.push(arrayToEncode.replace(/e/gi, '2'));
+        break;
       case 'i':
-          encodedArray.push(arrayToEncode.replace(/i/gi, '3'));
-          break;
-      
+        encodedArray.push(arrayToEncode.replace(/i/gi, '3'));
+        break;
       case 'o':
-          encodedArray.push(arrayToEncode.replace(/o/gi, '4'));
-          break;
-
+        encodedArray.push(arrayToEncode.replace(/o/gi, '4'));
+        break;
       case 'u':
-          encodedArray.push(arrayToEncode.replace(/u/gi, '5'));
-          break;
-
+        encodedArray.push(arrayToEncode.replace(/u/gi, '5'));
+        break;
       default:
           break;
       }
@@ -121,7 +116,7 @@ function encode(arrayToEncode) {
 console.log(encode('hi there'));
 
 function decode() {
- 
+
 }
 
 // Desafio 10
