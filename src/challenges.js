@@ -122,7 +122,7 @@ function decode(string) {
     } else if (string[index] === '3') {
       stringdecodificada += 'i';
     } else if (string[index] === '4') {
-      stringdecodificada += '0';
+      stringdecodificada += 'o';
     } else if (string[index] === '5') {
       stringdecodificada += 'u';
     } else {
