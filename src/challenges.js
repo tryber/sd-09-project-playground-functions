@@ -171,24 +171,23 @@ function validateNumbers(num, count) {
 
 function countRepeatedNumbers(array, number) {
   let count = 0;
-  let highestCount = 0;
+  let highestRepeatedCount = 0;
   for (let num of array) {
     if (num === number) {
       count += 1;
     }
-    if (highestCount < count) {
-      highestCount = count;
+    if (highestRepeatedCount < count) {
+      highestRepeatedCount = count;
     }
   }
-  return highestCount;
+  return highestRepeatedCount;
 }
 
 function checkNumbers(array) {
   let validate = true;
   let check = true;
-  
   for (let number in array) {
-    count = countRepeatedNumbers(array, array[number]);
+    let count = countRepeatedNumbers(array, array[number]);
     validate = validateNumbers(array[number], count);
     if (validate === false) {
       check = false;
