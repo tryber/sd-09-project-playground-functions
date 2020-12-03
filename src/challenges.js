@@ -63,15 +63,17 @@ function excludeRepetitions(numbers) {
   }
   return auxiliarArray;
 }
-function foundBigger(vector) {
+function foundIndexBigger(vector) {
   let bigger = 0;
+  let indexBigger = 0;
   bigger = vector[0];
   for (let index = 0; index < vector.length; index += 1){
     if (vector[index] > bigger) {
       bigger = vector[index];
+      indexBigger = index;
     }
   }
-  return bigger
+  return indexBigger;
 }
 // Desafio 6
 function highestCount(numbers) {
@@ -89,8 +91,7 @@ function highestCount(numbers) {
     count.push(counter);
     counter = 0;
   }
-
-  return foundBigger(count);
+  return numbersNoRepeated[foundIndexBigger(count)];
 }
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
