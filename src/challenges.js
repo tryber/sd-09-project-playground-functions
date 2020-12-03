@@ -206,32 +206,32 @@ function countingReps(arr) {
 
     if (reps >= 3 || i < 0 || i > 9) {
       answer = 'não é possível gerar um número de telefone com esses valores';
-      isValid = false;
     }
   }
   return answer;
 }
 
-function statements(arr, validVariable, res) {
+function statements(arr) {
+  
   let otherAnswers;
 
   if (arr.length !== 11) {
-    validVariable = false;
     otherAnswers = 'Array com tamanho incorreto.';
-  }
-
-  if (validVariable === true) {
-    otherAnswers = `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
+  } else {
+    otherAnswers = `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`
   }
   return otherAnswers;
 }
 
 function generatePhoneNumber(array) {
-  let isValid = true;
-  let result;
+  let result = ' ';
 
   result = countingReps(array);
-  result = statements(array, isValid);
+  
+  if (typeof(result) === 'undefined') {
+    result = statements(array);
+  }
+  
 
   return result;
 }
