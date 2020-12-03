@@ -120,13 +120,17 @@ function decode(phrase) {
 function techList(array, name) {
   let newArray = [];
 
-  for (let index = 0; index < array.length; index += 1) {
-    newArray[index] = {
-      tech: array[index],
-      name: name,
+  if (array == []) {
+    return 'Vazio!';
+  } else {
+    for (let index = 0; index < array.length; index += 1) {
+      newArray[index] = {
+        tech: array[index],
+        name: name,
+      }
     }
+    return newArray;
   }
-  return newArray;
 }
 
 // Desafio 11
