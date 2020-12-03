@@ -102,19 +102,25 @@ function encode(entry) {
 }
 
 function decode(entry) {
-  let cypher = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
-  };
   let code = entry.split('');
   for (let index = 0; index < code.length; index += 1) {
-    for (let char in cypher) {
-      if (code[index] === cypher[char]) {
-        code[index] = char;
-      }
+    switch (code[index]) {
+      case '1':
+        code[index] = 'a';
+        break;
+      case '2':
+        code[index] = 'e';
+        break;
+      case '3':
+        code[index] = 'i';
+        break;
+      case '4':
+        code[index] = 'o';
+        break;
+      case '5':
+        code[index] = 'u';
+        break;
+      default:
     }
   }
   return code.join('');
