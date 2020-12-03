@@ -51,11 +51,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultCat = '';
 
   if (positionCat1 < positionCat2) {
-    resultado = 'cat1';
+    resultCat = 'cat1';
   } else  if(positionCat2 < positionCat1){
-    resultado = 'cat2';
+    resultCat = 'cat2';
   } else if(positionCat1 === positionCat2){
-    resultado = 'os gatos trombam e o rato foge';
+    resultCat = 'os gatos trombam e o rato foge';
   }
   return resultCat;
 }
