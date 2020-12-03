@@ -89,9 +89,23 @@ function fizzBuzz(numbersArray) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(testString) {
+  for (let index = 0; index < testString.length; index += 1) {
+    if (testString[index] === 'a') {
+      testString[index] = 1;
+    } else if (testString[index] === 'e') {
+      testString[index] = 2;
+    } else if (testString[index] === 'i') {
+      testString[index] = 3;
+    } else if (testString[index] === 'o') {
+      testString[index] = 4;
+    } else if (testString[index] === 'u') {
+      testString[index] = 5;
+    }
+  } return testString;
 }
+console.log(encode('hi there!'));
+
 function decode() {
   // seu código aqui
 }
