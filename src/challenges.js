@@ -144,9 +144,7 @@ function techList(arrayTechs, name) {
       name: name,
     })
   } if (arrayTechs.length === 0){
-    arrayFinal2 = 'Vazio!'
-    console.log(arrayFinal2)
-    return arrayFinal2
+    return 'Vazio!'
     
   } else {
     for (index = 1; index <= arrayFinal.length; index += 1){
