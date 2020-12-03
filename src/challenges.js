@@ -62,6 +62,7 @@ function fizzBuzz(inputArray) {
       outputArray.push('bug!');
     }
   }
+  console.log (outputArray);
   return outputArray;
 }
 
