@@ -44,9 +44,7 @@ function highestCount(numbersArray) {
     if (numbersArray[index] > highestNumber) {
       highestNumber = numbersArray[index];
       highestNumberRepeat = 1;
-    }
-
-    if (numbersArray[index] === highestNumber) {
+    } else if (numbersArray[index] === highestNumber) {
       highestNumberRepeat += 1;
     }
   }
