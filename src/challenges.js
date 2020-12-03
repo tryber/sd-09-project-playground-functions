@@ -4,7 +4,6 @@ function compareTrue(value1, value2) {
     return true;
   } return false;
 }
-
 console.log(compareTrue(true, true));
 
 // Desafio 2
@@ -65,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Distance > cat1Distance) {
     return 'cat1';
   }
-  return 'os gatos se trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(1, 0, 2));
 
@@ -108,8 +107,8 @@ function encode(arrayToEncode) {
         encodedArray.push(arrayToEncode.replace(/u/gi, '5'));
         break;
       default:
-          break;
-      }
+        break;
+    }
   }
   return encodedArray.join('');
 }
