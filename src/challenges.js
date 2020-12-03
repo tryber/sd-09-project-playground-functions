@@ -63,13 +63,13 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let closestCat = '';
   if (Math.abs((cat1 - mouse)) === Math.abs((cat2 - mouse))) {
-    closestCat = '"os gatos trombam e o rato foge"';
+    closestCat = 'os gatos trombam e o rato foge';
   }
   if ((cat1 - mouse) > (cat2 - mouse)) {
-    closestCat = '"cat2"';
+    closestCat = 'cat2';
   }
   if ((cat1 - mouse) < (cat2 - mouse)) {
-    closestCat = '"cat1"';
+    closestCat = 'cat1';
   }
   return closestCat;
 }
@@ -105,7 +105,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   let aux = [];
   for (let index in string) {
