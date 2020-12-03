@@ -49,14 +49,16 @@ function catAndMouse() {
 function fizzBuzz(inputArray) {
   let outputArray = [];
   for (let index = 0; index < inputArray.length; index += 1) {
+    outputArray.push('bug!');
+    }
     if (inputArray[index] % 15 === 0) {
-      outputArray.push('fizzBuzz');
+      outputArray[index] = ('fizzBuzz');
     }
     else if (inputArray[index] % 3 === 0) {
-      outputArray.push('fizz')
+      outputArray[index] = ('fizz')
     }
     else if (inputArray[index] % 5 === 0) {
-      outputArray.push('buzz');
+      outputArray[index] = ('buzz');
     }
 
   }
