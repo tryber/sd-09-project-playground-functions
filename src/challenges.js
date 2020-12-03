@@ -188,10 +188,21 @@ console.log(encode("hi there!"));
 console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  // tech = ["ReactJS", "NodeJS", "React Native"];
+  // name = "Igor";
+
+  let techName = [
+    { tech: tech[0], name: name },
+    { tech: tech[1], name: name },
+    { tech: tech[2], name: name },
+  ];
+
+  return techName;
 }
 
+console.log(techList(["ReactJS", "NodeJS", "React Native"], "Igor"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
