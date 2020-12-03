@@ -252,33 +252,33 @@ function generatePhoneNumber(number) {
   return show;
 }
 
-function checkSoma(param1, param2, param3){
+// Desafio 12
+function checkSoma(param1, param2, param3) {
   let soma3 = param1 + param2;
   let soma2 = param3 + param1;
   let soma1 = param2 + param3;
   let can = false;
-  if ((param3 < soma3) && (param2 < soma2) && (param1 < soma1)){
+  if ((param3 < soma3) && (param2 < soma2) && (param1 < soma1)) {
     can = true;
   }
   return can
 }
 
-function checkDif(param1, param2, param3){
+function checkDif(param1, param2, param3) {
   let soma3 = Math.abs(param1 - param2);
   let soma2 = Math.abs(param3 - param1);
   let soma1 = Math.abs(param2 - param3);
   let can = false;
-  if ((param3 > soma3) && (param2 > soma2) && (param1 > soma1)){
+  if ((param3 > soma3) && (param2 > soma2) && (param1 > soma1)) {
     can = true;
   }
   return can
 }
 
-// Desafio 12
 function triangleCheck(sideA, sideB, sideC) {
   // seu código aqui
   let can = false;
-  if ((checkSoma(sideA, sideB, sideC)) && (checkDif(sideA, sideB, sideC))){
+  if ((checkSoma(sideA, sideB, sideC)) && (checkDif(sideA, sideB, sideC))) {
     can = true;
   }
   return can;
@@ -286,8 +286,19 @@ function triangleCheck(sideA, sideB, sideC) {
 
 
 // Desafio 13
-function hydrate() {
+function hydrate(alcool) {
   // seu código aqui
+  let water = '';
+  let injectAlcool = alcool.match(/\d+/g);;
+  let someAlcool = 0;
+  for (let index of injectAlcool) {
+    someAlcool += parseInt(index);
+  }
+  water = `${someAlcool} copos de água`;
+  if (someAlcool === 1) {
+    water = `${someAlcool} copo de água`;
+  }
+  return water;
 }
 
 
