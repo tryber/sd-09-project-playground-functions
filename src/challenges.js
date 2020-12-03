@@ -80,7 +80,7 @@ function chooseFizzBuzz(value) {
 }
 
 function fizzBuzz(array) {
-  for (let index in array) {
+  for (let index = 0; index < array.length; index += 1) {
     array[index] = chooseFizzBuzz(array[index]);
   }
   return array;
@@ -131,7 +131,7 @@ function techList(arrayTech, name) {
   let newArray = [];
   arrayTech.sort();
   if (arrayTech.length > 0) {
-    for (let index in arrayTech) {
+    for (let index = 0; index < arrayTech.length; index += 1) {
       newArray[index] = {
         tech: arrayTech[index],
         name,
@@ -234,7 +234,7 @@ function hydrate(string) {
   */
   let drinksArray = string.match(/\d+/g);
   let countDrinks = 0;
-  for (let index in drinksArray) {
+  for (let index = 0; index < drinksArray.length; index += 1) {
     countDrinks += Number(drinksArray[index]);
   }
   if (countDrinks > 1) {
@@ -242,9 +242,6 @@ function hydrate(string) {
   }
   return `${countDrinks} copo de água`;
 }
-
-string = '1 cerveja';
-hydrate(string);
 
 module.exports = {
   calcArea,
