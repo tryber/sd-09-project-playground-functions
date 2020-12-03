@@ -117,8 +117,6 @@ function code(stringToCode, toBeReplaced, replaceBy) {
 
 // Desafio 9
 function encode(stringToEncode) {
-  let encodedString = stringToEncode;
-
   stringToEncode = code(stringToEncode, 'a', '1');
   stringToEncode = code(stringToEncode, 'e', '2');
   stringToEncode = code(stringToEncode, 'i', '3');
@@ -128,8 +126,6 @@ function encode(stringToEncode) {
   return (stringToEncode);
 }
 function decode(stringToDecode) {
-  let decodedString = stringToDecode;
-
   stringToDecode = code(stringToDecode, '1', 'a');
   stringToDecode = code(stringToDecode, '2', 'e');
   stringToDecode = code(stringToDecode, '3', 'i');
