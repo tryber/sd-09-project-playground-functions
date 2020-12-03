@@ -281,11 +281,51 @@ return telefone;
   }
 return telefone;
 }
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+
+let number1 = false;
+let number2 = false;
+let number3 = false;
+
+function menorQueSomaDasMedidas(number1, number2, number3) {
+
+let somaNumero = number2 + number3;
+
+  if (number1 < somaNumero) {
+    return true;
+  }
+  return false;
 }
 
+function numeroAbsoluto(number1, number2, number3) {
+
+let diferncaNumero = number2 - number3;
+
+  if (number1 > diferncaNumero) {
+    return true;
+  }
+  return false;
+}
+
+  if (menorQueSomaDasMedidas(lineA, lineB, lineC) === true && numeroAbsoluto(lineA, lineB, lineC) === true) {
+    number1 = true;
+  }
+  if (menorQueSomaDasMedidas(lineB, lineA, lineC) === true && numeroAbsoluto(lineB, lineA, lineC) === true) {
+    number2 = true;
+  }
+  if (menorQueSomaDasMedidas(lineC, lineA, lineB) === true && numeroAbsoluto(lineC, lineA, lineB) === true) {
+    number3 = true;
+  }
+
+  if (number1 === true && number2 === true && number3 === true) {
+    return true;
+  }
+  return false;
+}
+console.log(triangleCheck(1, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
