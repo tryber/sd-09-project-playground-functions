@@ -197,7 +197,7 @@ function techList(techArray, name) {
   }
 
   let techName = [];
-  //techArray.sort();
+  techArray.sort();
 
   for (let index = 0; index < techArray.length; index += 1) {
     let techNameObject = {
