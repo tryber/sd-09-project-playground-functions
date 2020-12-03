@@ -48,12 +48,12 @@ function highestCount(array) {
   let highestNumber = array[0];
   let repeatCount = 0;
   for (let index in array) {
-    if (array[index] > highestNumber) {
-        highestNumber = array[index];
-        repeatCount = 1;
-    }
     if (array[index] === highestNumber) {
-        repeatCount += 1;
+      repeatCount += 1;
+    }
+    if (array[index] > highestNumber) {
+      highestNumber = array[index];
+      repeatCount = 1;
     }
   }
   return repeatCount;
