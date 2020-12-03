@@ -51,7 +51,7 @@ function footballPoints(wins, ties) {
 function highestCount(aheiNumbers) {
   // seu código aqui
   let maior = [0, 0];
-  for (index = 0; index < aheiNumbers.length; index += 1) {
+  for (let index = 0; index < aheiNumbers.length; index += 1) {
     if (aheiNumbers[index] >= aheiNumbers[(aheiNumbers.length-1)-index] && aheiNumbers[index] >= maior[0]) {
         if (aheiNumbers[index] === maior[0]) {
           maior[0] = aheiNumbers[index];
@@ -71,27 +71,40 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   cat1 = mouse - cat1;
   cat2 = mouse - cat2;
-  if (cat1 < 0){
-    cat1 = cat1 * -1;
+  if (cat1 < 0) {
+    cat1 = (cat1 * -1);
   }
-  if (cat2 < 0){
-    cat2 = cat2 * -1;
+  if (cat2 < 0) {
+    cat2 = (cat2 * -1);
   }
-  if (cat1  === cat2) {
+  if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   }
-  else if(cat1 < cat2){
-    return 'cat1'; 
-  } else {
-    return 'cat2'; 
-  }
+  else if (cat1 < cat2){
+    return 'cat1';
+  } 
+  return 'cat2';
 }
 //console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(aheiFB) {
   // seu código aqui
+  for (let index = 0; index < aheiFB.length; index += 1){
+    if ((aheiFB[index] % 3 === 0 )&& (aheiFB[index] % 5 === 0)){
+      aheiFB[index] = 'fizzBuzz';
+    } else if(aheiFB[index] % 5 === 0){
+      aheiFB[index] = 'buzz';
+    } else if(aheiFB[index] % 3 === 0){
+      aheiFB[index] = 'fizz';
+    }
+    else {
+      aheiFB[index] = 'bug!';
+    }
+  }
+  return aheiFB;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
