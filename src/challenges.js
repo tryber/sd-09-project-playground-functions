@@ -70,14 +70,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultado;
 }
-console.log(catAndMouse(8, 12, 4));
-
 
 // Desafio 8
 
-/*let numeros = [8, 4, 3, 8, 9];
+let numeros = [8, 4, 3, 8, 9];
 function fizzBuzz(array) {
-  for (let key in array) {
+ /* for (let key in array) {
     if (array.hasOwnProperty(key)) {
       const element = array[key];
       
