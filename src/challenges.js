@@ -80,7 +80,7 @@ function encode(inputString) {
       case 'o':
         outputString += '4';
         break;
-      case 'o':
+      case 'u':
           outputString += '5';
         break;
       default:
@@ -89,7 +89,28 @@ function encode(inputString) {
   return outputString;
 }
 function decode() {
-  // seu código aqui
+  let outputString = '';
+  for (let index = 0; index < inputString.length; index += 1) {
+    switch (inputString[index]){
+      case '1':
+        outputString += 'a';
+        break;
+      case '2':
+          outputString += 'e';
+        break;
+      case '3':
+          outputString += 'i';
+        break;
+      case '4':
+        outputString += 'o';
+        break;
+      case '5':
+          outputString += 'u';
+        break;
+      default:
+        outputString += inputString[index];
+    }
+  return outputString;
 }
 
 // Desafio 10
