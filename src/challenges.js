@@ -52,15 +52,15 @@ function fizzBuzz(inputArray) {
     if (inputArray[index] % 3 === 0 && inputArray[index] % 5 === 0) {
       outputArray.push('fizzBuzz');
     }
-      else if (inputArray[index] % 3 === 0) {
-        outputArray.push('fizz')
-      }
-        else if (inputArray[index] % 5 === 0) {
-          outputArray.push('Buzz');
-        }
-          else {
-            outputArray.push('bug!');
-          }
+    else if (inputArray[index] % 3 === 0) {
+      outputArray.push('fizz')
+    }
+    else if (inputArray[index] % 5 === 0) {
+      outputArray.push('Buzz');
+    }
+    else {
+      outputArray.push('bug!');
+    }
   }
   return outputArray;
 }
