@@ -123,7 +123,7 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     newArray[index] = {
       tech: array[index],
-      name: name,
+      name,
     }
   }
   if (array === '') {
