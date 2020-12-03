@@ -123,7 +123,7 @@ function techList(arrayOfTech, name) {
   if (arrayOfTech.length === 0) {
     return 'Vazio!';
   }
-  for (let item = 0; item < myArrayOfTech.length;item +=1) {
+  for (let item = 0; item < myArrayOfTech.length; item +=1) {
     let tempObject = {}
     tempObject.tech = myArrayOfTech[item];
     tempObject.name = name;
@@ -134,23 +134,43 @@ function techList(arrayOfTech, name) {
 
 // Desafio 11
 function smallNumbers(number) {
-  let AllSmall = false;
+  let notSmall = false;
   for (let valor in number) {
     if (number[valor] > 9) {
-      AllSmall = false;
+      notSmall = true;
       break
     }
   }
-  return AllSmall;
+  return notSmall;
 }
-function generatePhoneNumber(myArrayOfNumbers) {
-  let Array = myArrayOfNumbers;
-  let myPhoneNumber = ''
-  let validArray = Array.length < 11 ? myPhoneNumber = 'Array com tamanho incorreto.' : false;
-  let validNumbers = smallNumbers(Array) === false ? myPhoneNumber = 'não é possível gerar um número de telefone com esses valores' : false;
-  if (validArray === false && validNumbers === false) {
-    myPhoneNumber = `(${Array[0]}${Array[1]})${Array[2]}${Array[3]}${Array[4]}${Array[5]}${Array[6]}-${Array[7]}${Array[8]}${Array[9]}${Array[10]}`
+function tooMuchRepeated(array) {
+  let tooMuchRepeated = false;
+  let occurrence = 0;
+  for (let number in array) {
+    for (let index in array) {
+      if (array[index] === array[number]) {
+        occurrence += 1;
+      }
+      if (occurrence > 2) {
+        tooMuchRepeated = true
+        return tooMuchRepeated;
+      }
+    }
+    occurrence = 0;
   }
+  return tooMuchRepeated;
+}
+function generatePhoneNumber(array) {
+  let myPhoneNumber = ''
+  let invalidNumbers = smallNumbers(array);
+  let repeatedNumbers = tooMuchRepeated(array);
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (invalidNumbers !== false || repeatedNumbers !== false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  myPhoneNumber = `(${Math.abs(array[0])}${Math.abs(array[1])})${Math.abs(array[2])}${Math.abs(array[3])}${Math.abs(array[4])}${Math.abs(array[5])}${Math.abs(array[6])}-${Math.abs(array[7])}${Math.abs(array[8])}${Math.abs(array[9])}${Math.abs(array[10])}`
   return myPhoneNumber
 }
 
