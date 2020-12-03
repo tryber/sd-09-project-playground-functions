@@ -121,7 +121,7 @@ function decode(entry) {
 }
 
 // Desafio 10
-function techList(techs, name) {
+function techList(techs, person) {
   let alphaTechs = techs.sort();
   let abilities;
   if (techs === []) {
@@ -129,7 +129,7 @@ function techList(techs, name) {
   } else {
     abilities = [];
     for (let index = 0; index < alphaTechs.length; index += 1) {
-      abilities.push({ tech: alphaTechs[index], name: name, });
+      abilities.push({ tech: alphaTechs[index], name: person });
     }
   }
   return abilities;
@@ -146,8 +146,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(entry) {
+  let water = 0;
+  let message = '';
+  for (let index = 0; index < entry.length; index += 1) {
+    if (isNaN(entry[index]) === false) {
+      water = water + Number(entry[index]);
+    }
+  }
+  if (water === 1) {
+    message = '1 copo de água';
+  } else {
+    message = water + ' copos de água';
+  }
+  return message;
 }
 
 
