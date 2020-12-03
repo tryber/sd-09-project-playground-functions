@@ -53,7 +53,8 @@ function highestCount(setOfNumbers) {
         timeCounter = timeCounter + 1;
       }
     }
-    return timeCounter
+  }
+  return timeCounter
 }
 //console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
 
@@ -63,8 +64,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(bet) {
   // seu código aqui
+  let matchResult = [];
+  for (let index = 0; index < bet.length; index+=1) {
+    if (bet[index] % 3 === 0 && bet[index] % 5 !== 0) {
+      matchResult.push("fizz");
+    } else if (bet[index] % 3 !== 0 && bet[index] % 5 === 0) {
+      matchResult.push("buzz");
+    } else if (bet[index] % 3 === 0 && bet[index] % 5 === 0) {
+      matchResult.push("fizzBuzz");
+    } else {
+      matchResult.push("bug!");
+    }
+  }
+  return matchResult;
 }
 
 // Desafio 9
