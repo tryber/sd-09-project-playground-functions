@@ -27,7 +27,7 @@ function splitSentence(stringToSplit) {
   if (stringToBePushed !== '') {
     stringSplitted.push(stringToBePushed);
   }
-  return stringSplitted;
+  return (stringSplitted);
 }
 
 // Desafio 4
@@ -36,7 +36,7 @@ function concatName(stringArray) {
   concatenadedString += stringArray[stringArray.length - 1];
   concatenadedString += ', ';
   concatenadedString += stringArray[0];
-  return concatenadedString;
+  return (concatenadedString);
 }
 
 // Desafio 5
@@ -57,7 +57,7 @@ function highestCount(valuesArray) {
       highestRepeat += 1;
     }
   }
-  return highestRepeat;
+  return (highestRepeat);
 }
 
 // Desafio 7
@@ -88,7 +88,7 @@ function fizzOrBuzz(number) {
   if (number % 3 === 0 && number % 5 === 0) {
     result = 'fizzBuzz';
   }
-  return result;
+  return (result);
 }
 
 // Desafio 8
@@ -100,7 +100,7 @@ function fizzBuzz(numbersArray) {
       fizzBuzzArray[indexNumbers] = 'bug!';
     }
   }
-  return fizzBuzzArray;
+  return (fizzBuzzArray);
 }
 
 function code(stringToCode, toBeReplaced, replaceBy) {
@@ -112,31 +112,31 @@ function code(stringToCode, toBeReplaced, replaceBy) {
       codedString += stringToCode[stringIndex];
     }
   }
-  return codedString;
+  return (codedString);
 }
 
 // Desafio 9
 function encode(stringToEncode) {
   let encodedString = stringToEncode;
 
-  encodedString = code(encodedString, 'a', '1');
-  encodedString = code(encodedString, 'e', '2');
-  encodedString = code(encodedString, 'i', '3');
-  encodedString = code(encodedString, 'o', '4');
-  encodedString = code(encodedString, 'u', '5');
+  stringToEncode = code(stringToEncode, 'a', '1');
+  stringToEncode = code(stringToEncode, 'e', '2');
+  stringToEncode = code(stringToEncode, 'i', '3');
+  stringToEncode = code(stringToEncode, 'o', '4');
+  stringToEncode = code(stringToEncode, 'u', '5');
 
-  return encodedString;
+  return (stringToEncode);
 }
 function decode(stringToDecode) {
   let decodedString = stringToDecode;
 
-  decodedString = code(decodedString, '1', 'a');
-  decodedString = code(decodedString, '2', 'e');
-  decodedString = code(decodedString, '3', 'i');
-  decodedString = code(decodedString, '4', 'o');
-  decodedString = code(decodedString, '5', 'u');
+  stringToDecode = code(stringToDecode, '1', 'a');
+  stringToDecode = code(stringToDecode, '2', 'e');
+  stringToDecode = code(stringToDecode, '3', 'i');
+  stringToDecode = code(stringToDecode, '4', 'o');
+  stringToDecode = code(stringToDecode, '5', 'u');
 
-  return decodedString;
+  return (stringToDecode);
 }
 
 // Desafio 10
