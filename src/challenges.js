@@ -83,53 +83,53 @@ function fizzBuzz(entry) {
 
 // Desafio 9
 function encode(entry) {
-  let encoding = entry.split('');
-  for (let index = 0; index < encoding.length; index += 1) {
-    switch (encoding[index]) {
+  let code = entry.split('');
+  for (let index = 0; index < code.length; index += 1) {
+    switch (code[index]) {
       case 'a':
-        encoding[index] = '1';
+        code[index] = '1';
         break;
       case 'e':
-        encoding[index] = '2';
+        code[index] = '2';
         break;
       case 'i':
-        encoding[index] = '3';
+        code[index] = '3';
         break;
       case 'o':
-        encoding[index] = '4';
+        code[index] = '4';
         break;
       case 'u':
-        encoding[index] = '5';
+        code[index] = '5';
         break;
       default:
     }
   }
-  return encoding.join('');
+  return code.join('');
 }
 
-function decode(entry) {
-  let decoding = entry.split('');
-  for (let index = 0; index < decoding.length; index += 1) {
-    switch (decoding[index]) {
+function decode(secret) {
+  let cypher = secret.split('');
+  for (let control = 0; control < cypher.length; control += 1) {
+    switch (cypher[control]) {
       case '1':
-        decoding[index] = 'a';
+        cypher[control] = 'a';
         break;
       case '2':
-        decoding[index] = 'e';
+        cypher[control] = 'e';
         break;
       case '3':
-        decoding[index] = 'i';
+        cypher[control] = 'i';
         break;
       case '4':
-        decoding[index] = 'o';
+        cypher[control] = 'o';
         break;
       case '5':
-        decoding[index] = 'u';
+        cypher[control] = 'u';
         break;
       default:
     }
   }
-  return decoding.join('');
+  return cypher.join('');
 }
 
 // Desafio 10
