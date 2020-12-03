@@ -118,17 +118,18 @@ function decode(stringToBeDecoded) {
 
 // Desafio 10
 function techList(arrayOfTech, name) {
-  let myArrayOfTech = [];
+  let myArrayOfTech = arrayOfTech.sort();
+  let myArrayOfTechObjects = [];
   if (arrayOfTech.length === 0) {
     return 'Vazio!';
   }
-  for (let item in arrayOfTech) {
+  for (let item in myArrayOfTech) {
     let tempObject = {}
-    tempObject['tech'] = arrayOfTech[item];
+    tempObject['tech'] = myArrayOfTech[item];
     tempObject['name'] = name;
-    myArrayOfTech.push(tempObject);
+    myArrayOfTechObjects.push(tempObject);
   }
-  return myArrayOfTech;
+  return myArrayOfTechObjects;
 }
 
 // Desafio 11
