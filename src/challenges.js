@@ -142,7 +142,7 @@ function techList(techs, person) {
 
 // Desafio 11
 function generatePhoneNumber(entry) {
-  let repeat = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, }
+  let repeat = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }
   let phone = entry.join('')
   let ddd = '('.concat(phone.substr(0, 2)).concat(') ');
   let tel = phone.substr(2, 5).concat('-').concat(phone.substr(7, 4));
@@ -156,7 +156,8 @@ function generatePhoneNumber(entry) {
     if (repeat[number] === undefined || repeat[number] === 2) {
       message = 'não é possível gerar um número de telefone com esses valores';
       return message;
-    } else { repeat[number] += 1; }
+    }
+    repeat[number] += 1;
   }
   return message
 }
