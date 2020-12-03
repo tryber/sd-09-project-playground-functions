@@ -22,7 +22,6 @@ function concatName(array) {
   }
   return result.join(', ');
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -31,18 +30,24 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let repeat = 0;
   let count = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > count) {
-      count = array[index];
-    } else {
-      count === array[index];
-      repeat += 1;
+  let repeat = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    let number = array[i]
+    if (count < number) {
+      count = array[i]
+    }
+  }
+  for (let j = 0; j < array.length; j++) {
+    if (count === array[j]) {
+      repeat +=1
     }
   }
   return repeat;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
