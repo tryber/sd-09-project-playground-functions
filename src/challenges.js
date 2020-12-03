@@ -21,16 +21,18 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let lastItem = array[0]
-  let firstItem = array[array.length - 1]
-  let firstLast = lastItem + ', ' +  firstItem
+  let lastItem = array[0];
+  let firstItem = array[array.length - 1];
+  let Space = ', ';
+  let string = lastItem + Space + firstItem;
 
-  return firstLast
+  return string
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (win * 3) + ties;
+  return points;
 }
 
 // Desafio 6
