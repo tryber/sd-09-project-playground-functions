@@ -145,13 +145,14 @@ function techList(arrayTechs = [], name) {
     })
   } if (arrayTechs === []){
     return 'Vazio!'
+    
   } else {
     for (index = 1; index <= arrayFinal.length; index += 1){
       arrayFinal2.push(arrayFinal[arrayFinal.length - index])
     }
     return arrayFinal2
   } 
-}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
+}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
 
 // Desafio 11
 function generatePhoneNumber() {
