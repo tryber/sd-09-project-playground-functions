@@ -19,10 +19,7 @@ function splitSentence(text) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let arrayReturn = [];
-  arrayReturn.push(arrayString[arrayString.length - 1]);
-  arrayReturn.push(arrayString[0]);
-  return arrayReturn;
+  return arrayString[arrayString.length - 1] + ', ' + arrayString[0]
 }
 
 // Desafio 5
