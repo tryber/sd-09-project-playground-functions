@@ -59,7 +59,7 @@ console.log(highestCount(repetidos));
 function catAndMouse(cat1, cat2, mouse) {
   let positionCat1 = Math.abs(cat1 - mouse);
   let positionCat2 = Math.abs(cat2 - mouse);
-  let resultado = [];
+  let resultado = '';
 
   if (positionCat1 < positionCat2) {
     resultado = 'cat1';
@@ -74,7 +74,8 @@ console.log(catAndMouse(8, 12, 4));
 
 
 // Desafio 8
-let numeros = [8, 4, 3, 8, 9];
+
+/*let numeros = [8, 4, 3, 8, 9];
 function fizzBuzz(array) {
   for (let key in array) {
     if (array.hasOwnProperty(key)) {
@@ -82,7 +83,7 @@ function fizzBuzz(array) {
       
     }
   }
-}
+}*/
 
 // Desafio 9
 function encode() {
