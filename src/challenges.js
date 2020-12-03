@@ -123,10 +123,33 @@ function encode(stringtoChange) {
 
 }
 encode('hi there!');
-function decode() {
-  // seu código aqui
-}
 
+// A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
+function decode(stringtoChange) {
+  let novaString = "";
+  for (let index = 0; index<stringtoChange.length; index += 1){
+    if (stringtoChange[index] === '1'){
+      novaString += 'a';
+    }
+    else if (stringtoChange[index] === '2'){
+    novaString += 'e';
+    }
+    else if (stringtoChange[index] === '3'){
+    novaString += 'i';
+    }  
+    else if (stringtoChange[index] === '4'){
+      novaString += 'o';
+    }
+    else if (stringtoChange[index] === '5'){
+      novaString += 'u';
+    } else {
+      novaString += stringtoChange[index];
+    }
+  }
+  return novaString;
+}
+decode('h4j2 t2m p3zz1, v35!!!');
 // Desafio 10
 function techList() {
   // seu código aqui
