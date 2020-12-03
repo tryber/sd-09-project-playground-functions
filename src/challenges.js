@@ -102,7 +102,6 @@ function encode(stringToBeEncoded) {
   let encodedString = arrayOfCharacters.toString().replace(regexReplace, '');
   return encodedString;
 }
-
 function decode(stringToBeDecoded) {
   let arrayOfDecodedChar = [];
   let myCypher = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
