@@ -62,17 +62,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function chooseFizzBuzz(value) {
+  let text = 'bug!';
+  let fizz = value % 3 === 0;
+  let buzz = value % 5 === 0;
+  let fizBuzz = fizz + buzz === 2;
+  if (fizz) {
+    text = 'fizz';
+  }
+  if (buzz) {
+    text = 'buzz';
+  }
+  if (fizBuzz) {
+    text = 'fizzBuzz';
+  }
+  return text;
+}
+
 function fizzBuzz(array) {
   for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      array[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      array[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      array[index] = 'buzz';
-    } else {
-      array[index] = 'bug!';
-    }
+    array[index] = chooseFizzBuzz(array[index]);
   }
   return array;
 }
@@ -217,8 +226,11 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   /*
-  Aviso para a Raquel do futuro e outros leitores: aqui foi feito o uso das Regular Expressions para capturar todos os números na string.
-  /\d+/g siginficado que todos os números arábicos com 1+ serão coletados e armazenados em outro array. O elemento g que torna possível varrer toda a string ser retornado um array com todos os matches 
+  Aviso para a Raquel do futuro e outros leitores: 
+  Aqui foi feito o uso das Regular Expressions para capturar todos os números na string.
+  /\d+/g siginfica que todos os números arábicos com 1+ dígitos serão coletados e 
+  armazenados em outro array. 
+  O elemento g que torna possível varrer toda a string ser retornado um array com todos os matches.
   */
   let drinksArray = string.match(/\d+/g);
   let countDrinks = 0;
