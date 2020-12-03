@@ -238,10 +238,13 @@ function hydrate(string) {
     countDrinks += Number(drinksArray[index]);
   }
   if (countDrinks > 1) {
-    return console.log(`${countDrinks} copos de água`);
+    return `${countDrinks} copos de água`;
   }
-  return console.log(`${countDrinks} copo de água`);
+  return `${countDrinks} copo de água`;
 }
+
+string = '1 cerveja';
+hydrate(string);
 
 module.exports = {
   calcArea,
