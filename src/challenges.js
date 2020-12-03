@@ -69,11 +69,42 @@ function fizzBuzz(entry) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(entry) {
+  let cypher = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
+  let code = entry.split('');
+  for (let char in cypher) {
+    for (let index = 0; index < code.length; index += 1) {
+      if (code[index] === char) {
+        code[index] = cypher[char];
+      }
+    }
+  }
+  return code.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(entry) {
+  let cypher = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
+  let code = entry.split('');
+  for (let char in cypher) {
+    for (let index = 0; index < code.length; index += 1) {
+      if (code[index] === cypher[char]) {
+        code[index] = char;
+      }
+    }
+  }
+  return code.join('');
 }
 
 // Desafio 10
