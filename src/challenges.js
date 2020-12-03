@@ -177,16 +177,15 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA ,lineB , lineC) {
-  if ( lineA > (lineB + lineC) && lineA < (Math.abs(lineA - lineB - lineC))) {
-    return false;
-  } else if ( lineB > (lineA + lineC) && lineA < (Math.abs(lineA - lineB - lineC))) {
-    return false;
-  } else if ( lineC > (lineA + lineB) && lineA < (Math.abs(lineA - lineB - lineC))) {
+  if ((lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineC)) && (lineA > (Math.abs(lineB - lineC)) || lineB > (Math.abs(lineA - lineC)) || lineC > (Math.abs(lineA - lineC)))){
     return false;
   } else {
     return true;
   }
 }
+
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(16, 9, 2));
 
 // Desafio 13
 function hydrate(str) {
