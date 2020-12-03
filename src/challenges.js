@@ -288,8 +288,13 @@ function hydrate(drinks) {
   drinks = (drinks.match(/\d/g));
   for (let index = 0; index < drinks.length; index += 1) {
     const newLocal = drinks[index];
-    sum += parseInt(newLocal);
+    sum += parseInt(newLocal, 10);
   }
+
+  if (sum === 1) {
+    return `${sum} copo de água`;  
+  }
+
   return `${sum} copos de água`;
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
