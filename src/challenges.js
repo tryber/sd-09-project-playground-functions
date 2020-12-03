@@ -91,31 +91,35 @@ function fizzBuzz(myArray) {
 // Desafio 9
 function encode(stringToBeEncoded) {
   let arrayOfCharacters = [];
-  let myCypher = {a : 1, e : 2, i : 3, o : 4, u : 5,};
+  let myCypher = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   arrayOfCharacters.push(...stringToBeEncoded)
   for (let character in arrayOfCharacters) {
     if (arrayOfCharacters[character] in myCypher) {
       arrayOfCharacters[character] = myCypher[arrayOfCharacters[character]];
     }
   }
-  return arrayOfCharacters.toString().replaceAll(',','');
+  let regexReplace = /,/g;
+  let encodedString = arrayOfCharacters.toString().replace(regexReplace, '');
+  return encodedString;
 }
 
 function decode(stringToBeDecoded) {
   let arrayOfDecodedChar = [];
-  let myCypher = {1 : 'a', 2 : 'e', 3 : 'i', 4 : 'o', 5 : 'u',};
+  let myCypher = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   arrayOfDecodedChar.push(...stringToBeDecoded);
   for (let character in arrayOfDecodedChar) {
     if (arrayOfDecodedChar[character] in myCypher) {
       arrayOfDecodedChar[character] = myCypher[arrayOfDecodedChar[character]];
     }
   }
-  return arrayOfDecodedChar.toString().replaceAll(',','');
+  let regexReplace = /,/g;
+  let decodedString = arrayOfDecodedChar.toString().replace(regexReplace, '');
+  return decodedString;
 }
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  
 }
 
 // Desafio 11
