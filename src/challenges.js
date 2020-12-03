@@ -117,23 +117,23 @@ function encode(string) {
   return aux.join('');
 }
 function decode(stringDecode) {
-  let objectDecode = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
+  let object = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
   };
-  let auxDecode = [];
-  for (let indexDecode = 0; indexDecode < stringDecode.length; indexDecode += 1) {
-    auxDecode[indexDecode] = stringDecode[indexDecode];
-    for (let keyDecode in objectDecode) {
-      if (stringDecode[indexDecode] === keyDecode) {
-        auxDecode[indexDecode] = objectDecode[keyDecode];
+  let aux = [];
+  for (let index = 0; index < string.length; index += 1) {
+    aux[index] = string[index];
+    for (let key in object) {
+      if (string[index] === object[key].toString()) {
+        aux[index] = key;
       }
     }
   }
-  return auxDecode.join('');
+  return aux.join('');
 }
 
 // Desafio 10
