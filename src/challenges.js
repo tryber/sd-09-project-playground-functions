@@ -109,7 +109,7 @@ function fizzBuzz(aheiFB) {
 // Desafio 9
 function encode(originalText) {
   // seu código aqui
-  let key = [1, 2, 3, 4, 5];
+  let key = ['1', '2', '3', '4', '5'];
   let putCode = ['a','e','i','o','u'];
   let encodedText = '';
   for (let index = 0; index < originalText.length; index += 1) {
@@ -130,13 +130,13 @@ return encodedText;
 
 function decode(codedText) {
   // seu código aqui
-  let key = [1, 2, 3, 4, 5];
+  let key = ['1', '2', '3', '4', '5'];
   let uncode = ['a','e','i','o','u'];
   let uncodedText = '';
   for (let index = 0; index < codedText.length; index += 1) {
     let letterUncoded = false;
     for (let indexCode = 0; indexCode < key.length; indexCode += 1) {
-      if (codedText[index] == key[indexCode]) {
+      if (codedText[index] === key[indexCode]) {
         uncodedText += uncode[indexCode];
         letterUncoded = true;
         break;
@@ -148,7 +148,7 @@ function decode(codedText) {
   }
 return uncodedText;
 }
-//console.log(decode('h3 th2r2!'));
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
