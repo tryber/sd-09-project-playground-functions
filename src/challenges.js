@@ -45,7 +45,7 @@ function highestCount(numbers) {
     let verifyNumber = numbers[index];
     for (let index2 in numbers) {
       if (verifyNumber === numbers[index2]) {
-        contRepeat++;
+        contRepeat += 1;
       }
     }
     if (contNumber > contRepeat) {
@@ -55,7 +55,7 @@ function highestCount(numbers) {
   }
   return numbers[indexNumberRepeat];
 }
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  const myArray = [];
+  let myArray = [];
   for (let element of array) {
     if (element % 3 === 0 && element % 5 === 0) {
       myArray.push('fizzBuzz');
@@ -87,10 +87,30 @@ function fizzBuzz(array) {
   }
   return myArray;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(string) {
+function encode(phrase) {
+  let objectEncode = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return switchLetter(phrase, objectEncode);
+}
+function decode(phrase) {
+  let objectDecode = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  return switchLetter(phrase, objectDecode);
+}
+/*function encode(string) {
   let encodingString = '';
   for (let element of string) {
     if (element === 'a') {
@@ -111,7 +131,7 @@ function encode(string) {
 }
 //console.log(encode('hi there!'));
 
-function decode(string2) {
+/*function decode(string2) {
   let decodingString = '';
   for (let element of string2) {
     if (element === '1') {
@@ -130,7 +150,7 @@ function decode(string2) {
   }
   return decodingString;
 }
-//console.log(decode('h3 th2r2!'));
+console.log(decode('h3 th2r2!'));*/
 
 // Desafio 10
 function techList(languages, name) {
@@ -172,18 +192,9 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate(string) {
-  let water = string.split(/\D/g).join('');
-  let trans = 0;
-  for (let things of water) {
-    trans += Number(things);
-  }
-  if (trans === 1) {
-    return `${trans} copo de água`;
-  }
-  return `${trans} copos de água`;
+function hydrate() {
+// seu código aqui
 }
-//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
