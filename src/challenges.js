@@ -58,25 +58,27 @@ function highestCount(numbersArray) {
 function subtrNumber(number1, number2) {
   return (number1 < number2) ? number2 - number1 : number1 - number2;
 }
-
-function catAndMouse(mouse, cat1, cat2) {
+function compareCatAndMouse(diff1, diff2) {
   let phrase = '';
+
+  if (diff1 < diff2) {
+    phrase = 'cat1';
+  }
+
+  if (diff1 > diff2) {
+    phrase = 'cat2';
+  }
+
+  if (phrase === '') {
+    phrase = 'os gatos trombam e o rato foge';
+  }
+  return phrase;
+}
+function catAndMouse(mouse, cat1, cat2) {
   let diffCat1 = subtrNumber(mouse, cat1);
   let diffCat2 = subtrNumber(mouse, cat2);
 
-  switch (true) {
-    case diffCat1 < diffCat2:
-      phrase = 'cat1';
-      break;
-    case diffCat1 > diffCat2:
-      phrase = 'cat2';
-      break;
-    default:
-      phrase = 'os gatos trombam e o rato foge';
-      break;
-  }
-
-  return phrase;
+  return compareCatAndMouse(diffCat1, diffCat2);
 }
 // console.log(catAndMouse(1, 0, 2));
 
@@ -89,15 +91,15 @@ function divideBy(number) {
 
   if (mod3 === true) {
     word = 'fizz';
-  } 
-  
+  }
+
   if (mod5 === true) {
     word = 'buzz';
   }
 
   if ((mod3 === true) && (mod5 === true)) {
     word = 'fizzBuzz';
-  } 
+  }
 
   if (word === '') {
     word = 'bug!';
