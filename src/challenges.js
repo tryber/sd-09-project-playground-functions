@@ -49,7 +49,7 @@ function catAndMouse() {
 function fizzBuzz(inputArray) {
   let outputArray = [];
   for (let index = 0; index < inputArray.length; index += 1) {
-    if (inputArray[index] % 3 === 0 && inputArray[index] % 5 === 0) {
+    if (inputArray[index] % 15 === 0) {
       outputArray.push('fizzBuzz');
     }
     else if (inputArray[index] % 3 === 0) {
