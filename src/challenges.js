@@ -87,21 +87,30 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+let vowelToNumber = {
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
+};
+
+let NumberToVowel = {
+  '1': 'a',
+  '2': 'e',
+  '3': 'i',
+  '4': 'o',
+  '5': 'u',
+}
+
 function encode(string) {
   let newString = [];
   for (let index in string) {
-    if (string[index] === 'a') {
-      newString[index] = '1';
-    } else if (string[index] === 'e') {
-      newString[index] = '2';
-    } else if (string[index] === 'i') {
-      newString[index] = '3';
-    } else if (string[index] === 'o') {
-      newString[index] = '4';
-    } else if (string[index] === 'u') {
-      newString[index] = '5';
-    } else {
+    let char = string[index];
+    if (typeof vowelToNumber[string[index]] === 'undefined') {
       newString[index] = string[index];
+    } else {
+      newString[index] = vowelToNumber[string[index]];
     }
   }
   return newString.join('');
@@ -109,18 +118,11 @@ function encode(string) {
 function decode(string) {
   let newString = [];
   for (let index in string) {
-    if (string[index] === '1') {
-      newString[index] = 'a';
-    } else if (string[index] === '2') {
-      newString[index] = 'e';
-    } else if (string[index] === '3') {
-      newString[index] = 'i';
-    } else if (string[index] === '4') {
-      newString[index] = 'o';
-    } else if (string[index] === '5') {
-      newString[index] = 'u';
-    } else {
+    let char = string[index];
+    if (typeof NumberToVowel[string[index]] === 'undefined') {
       newString[index] = string[index];
+    } else {
+      newString[index] = NumberToVowel[string[index]];
     }
   }
   return newString.join('');
