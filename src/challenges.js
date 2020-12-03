@@ -62,7 +62,7 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let closestCat = '';
-  if (cat1 === cat2) {
+  if ((cat1 - mouse) === (cat2 - mouse)) {
     closestCat = '"os gatos trombam e o rato foge"';
   }
   if ((cat1 - mouse) > (cat2 - mouse)) {
@@ -75,8 +75,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fizzBuzzArray = [];
+    for (let index in array) {
+        let restBy3 = (array[index]) % 3;
+        let restBy5 = (array[index]) % 5;
+        let restBy15 = restBy3 + restBy5;
+        let restBy3Or5 = restBy3 * restBy5;
+        if (restBy3Or5) {
+            fizzBuzzArray[index] = 'bug!';
+        }
+        if (!restBy3) {
+            fizzBuzzArray[index] = 'fizz';
+        }
+        if (!restBy5) {
+            fizzBuzzArray[index] = 'buzz';
+        }
+        if (!restBy15) {
+            fizzBuzzArray[index] = 'fizzBuzz';
+        }
+    }
+    return fizzBuzzArray;
 }
 
 // Desafio 9
