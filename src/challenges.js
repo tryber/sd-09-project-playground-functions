@@ -126,7 +126,7 @@ function techList(array, name) {
       name,
     }
   }
-  if (array === '') {
+  if (array.length === 0) {
     return 'Vazio!'
   }
   return newArray;
