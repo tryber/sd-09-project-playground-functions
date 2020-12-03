@@ -83,25 +83,22 @@ function fizzBuzz(entry) {
 
 // Desafio 9
 function encode(entry) {
+  let cypher = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
   let code = entry.split('');
   for (let index = 0; index < code.length; index += 1) {
-    switch (code[index]) {
-      case 'a':
-        code[index] = '1';
-        break;
-      case 'e':
-        code[index] = '2';
-        break;
-      case 'i':
-        code[index] = '3';
-        break;
-      case 'o':
-        code[index] = '4';
-        break;
-      case 'u':
-        code[index] = '5';
-        break;
-      default:
+    for (let char in cypher) {
+      switch(code[index]) {
+        case char:
+          code[index] = cypher[char];
+          break;
+        default:
+      }
     }
   }
   return code.join('');
