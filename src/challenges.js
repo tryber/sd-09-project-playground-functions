@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(x, y) {
-  if (x === true && y === true) {
-    return true;
-  }
-  return false;
+  return (x && y);
 }
 
 // Desafio 2
@@ -142,10 +139,17 @@ function generatePhoneNumber(arrayNumb) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineC - lineA) && lineC > Math.abs(lineB - lineA)) {
+  if (
+    lineA < lineB + lineC 
+    && lineB < lineA + lineC 
+    && lineC < lineB + lineA
+    && lineA > Math.abs(lineB - lineC) 
+    && lineB > Math.abs(lineC - lineA) 
+    && lineC > Math.abs(lineB - lineA)
+  ) 
+  {
     return true
-  } 
-  else return false;
+  } else return false;
 }
 
 // Desafio 13
@@ -159,8 +163,7 @@ function hydrate(frase) {
   }
   if (sum === 1) {
     return `${sum} copo de água`;
-  }
-  else return `${sum} copos de água`;
+  } else return `${sum} copos de água`;
 }
 
 
