@@ -1,3 +1,17 @@
+function compareNum(a, b) {
+  let output = 0;
+
+  if (a < b) {
+    output = -1;
+  }
+
+  if (a > b) {
+    output = 1;
+  }
+
+  return output;
+}
+
 // Desafio 1
 function compareTrue(bool1, bool2) {
   let answer = false;
@@ -68,26 +82,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzzStatements (i) {
-  let fizzBuzzAnswer
-  
+function fizzBuzzStatements(i) {
+  let fizzBuzzAnswer;
+
   if (i % 3 === 0 && i % 5 === 0) {
-      fizzBuzzAnswer = ('fizzBuzz');
-    } else if (i % 3 === 0) {
-      fizzBuzzAnswer = ('fizz');
-    } else if (i % 5 === 0) {
-      fizzBuzzAnswer = ('buzz');
-    } else {
-      fizzBuzzAnswer = ('bug!');
-    }
-  return fizzBuzzAnswer
+    fizzBuzzAnswer = 'fizzBuzz';
+  } else if (i % 3 === 0) {
+    fizzBuzzAnswer = 'fizz';
+  } else if (i % 5 === 0) {
+    fizzBuzzAnswer = 'buzz';
+  } else {
+    fizzBuzzAnswer = 'bug!';
+  }
+  return fizzBuzzAnswer;
 }
 
 function fizzBuzz(array) {
   let resultArray = [];
 
   for (let i of array) {
-    resultArray.push(fizzBuzzStatements(i))
+    resultArray.push(fizzBuzzStatements(i));
   }
   return resultArray;
 }
@@ -209,20 +223,6 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function compareNum(a, b) {
-  let output = 0;
-
-  if (a < b) {
-    output = -1;
-  }
-
-  if (a > b) {
-    output = 1;
-  }
-
-  return output;
-}
-
 function triangleCheck(lineA, lineB, lineC) {
   let lines = [lineA, lineB, lineC];
   let linesSorted = lines.sort(compareNum);
