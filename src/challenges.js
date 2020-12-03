@@ -15,17 +15,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let finalArray = [];
-  let tempArray = '';
-
-  for (let index = 0; index < string.length; index += 1) {
-    tempArray += string[index];
-    if (string[index + 1] === ' ' || index === string.length - 1) {
-      finalArray.push(tempArray);
-      tempArray = '';
-    }
+  let newArray = string.split(" ");
   }
-  return finalArray;
+  return newArray;
 }
 
 // Desafio 4
@@ -163,7 +155,7 @@ function decode(string) {
 // Desafio 10
 function techList(techArray, name) {
   let error = 'Vazio!';
-  
+
   for (let i = 0; i < techArray.length; i += 1){
     let newList = {
       tech: techArray[i],
