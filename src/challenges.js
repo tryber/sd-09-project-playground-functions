@@ -86,7 +86,7 @@ function fizzBuzz(array) {
   };
   let fizzBuzzArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    for (let key = 0; key < object.length; key +=1) {
+    for (let key in object) {
       if (array[index] % key === 0) {
         fizzBuzzArray[index] = object[key];
       }
