@@ -92,76 +92,23 @@ return arrayFizzBuzz;
 
 // Desafio 9
 function encode(string) {
-  let codedString = '';
-  let charCode = ['a', 'e', 'i', 'o', 'u'];
 
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] == charCode[0]){
-      codedString += '1';
-      continue;
-    }
-    if (string[i] == charCode[1]){
-      codedString += '2';
-      continue;
-    }
-    if (string[i] == charCode[2]){
-      codedString += '3';
-      continue;
-    }
-    if (string[i] == charCode[3]){
-      codedString += '4';
-      continue;
-    }
-    if (string[i] == charCode[4]){
-      codedString += '5';
-      continue;
-    }
-    codedString += string[i];
-  }
-  return codedString;
 }
 
 function decode(string) {
-  let decodedString ='';
-  let numberCode = ['1', '2', '3', '4', '5'];
 
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] == numberCode[0]){
-      decodedString += 'a';
-      continue;
-    }
-    if (string[i] == numberCode[1]){
-      decodedString += 'e';
-      continue;
-    }
-    if (string[i] == numberCode[2]){
-      decodedString += 'i';
-      continue;
-    }
-    if (string[i] == numberCode[3]){
-      decodedString += 'o';
-      continue;
-    }
-    if (string[i] == numberCode[4]){
-      decodedString += 'u';
-      continue;
-    }
-    decodeString += string[i];
-  }
-  return decodedString;
 }
+
 
 // Desafio 10
 function techList(techArray, name) {
   let newArray = [];
 
   for (let i = 0; i < techArray.length; i += 1) {
-    let obj = {
+    newArray.push( = {
       tech: techArray[i],
       name: name,
-    }
-
-    newArray.push(obj);
+    })
   }
   return newArray;
 }
