@@ -46,24 +46,28 @@ let total = totalWins + totalTies;
 
 // Desafio 6
 let numbers = [1, 1, 2, 9, 9, 5, 7];
-let contador = 2;
+let contador = 0;
 let maiorNumero = 0;
-
 function highestCount() {
   for (let i = 0; i < numbers.length; i += 1) {
-    for (let j = 0; j < numbers[i]; j = numbers[i]) {
-      if (maiorNumero < numbers[i]) {
-        maiorNumero = contador;
-      }
+     if (numbers[i] > maiorNumero) {
+        maiorNumero = numbers[i];
+
+      } else if (maiorNumero === numbers[i]) {
+                contador = contador + 1;
     }
-    
-  } return maiorNumero;
-}
+  } return contador;
+}       
       console.log(highestCount());
 
 // Desafio 7
-function catAndMouse() {
-  // seu código a*/qui
+let cat1Mouse;
+let cat2Mouse;
+let catsequal;
+function catAndMouse(mouse, cat1, cat2) {
+    if(cat1 - mouse){
+      
+    }
 }
 
 // Desafio 8
