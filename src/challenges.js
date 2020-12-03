@@ -39,6 +39,17 @@ function footballPoints(wins, ties) {
   return totalPoints;
 }
 
+// Funcao auxiliar
+function highestValue(array) {
+  let bigger = array[0];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > bigger) {
+      bigger = array[index];
+    }
+  }
+  return bigger;
+}
+
 // Desafio 6
 function highestCount(array) {
   let bigger = highestValue(array);
@@ -51,20 +62,16 @@ function highestCount(array) {
   return highestValueAmount;
 }
 
-// Funcao auxiliar
-function highestValue(array) {
-  let bigger = array[0];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > bigger) {
-      bigger = array[index];
-    }
-  }
-  return bigger;
-}
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if (distanceCat1 < distanceCat2) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
 
 // Desafio 8
