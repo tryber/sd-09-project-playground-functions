@@ -106,7 +106,7 @@ function techList(arrayTec, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumb) {
-  if (arrayNumb.length < 11) return "Array com tamanho incorreto.";
+  if (arrayNumb.length !== 11) return "Array com tamanho incorreto.";
 
   else {
     arrayNumb.splice(0, 0, '(');
@@ -116,7 +116,7 @@ function generatePhoneNumber(arrayNumb) {
   }
 
   for (let i in arrayNumb) {
-    if (arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
+    if (arrayNumb[i] < 0 || arrayNumb[i] > 9 || numRepeat > 2) return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let count = 0;
@@ -134,12 +134,11 @@ function generatePhoneNumber(arrayNumb) {
     }
     count = 0;
   }
-  
+
   if (numRepeat > 2) return 'não é possível gerar um número de telefone com esses valores';
 
   return arrayNumb.join('');
 }
-
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
