@@ -199,7 +199,7 @@ function hydrate(qtdBebidas) {
   let valores = 0;
   for (const qtd of qtdBebidas) {
     if (!isNaN(parseInt(qtd, 10))) {
-      valores = valores + parseInt(qtd, 10);
+      valores += parseInt(qtd, 10);
     }
   }
 
