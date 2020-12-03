@@ -134,7 +134,7 @@ return nova2
 }decode("h3 th2r2!")
 
 // Desafio 10
-function techList(arrayTechs = [], name) {
+function techList(arrayTechs, name) {
   // seu código aqui
   arrayFinal = []
   arrayFinal2 = []
@@ -143,16 +143,20 @@ function techList(arrayTechs = [], name) {
       tech: arrayTechs[contador],
       name: name,
     })
-  } if (arrayTechs === []){
-    return 'Vazio!'
+  } if (arrayTechs === ''){
+    arrayFinal2 = 'Vazio!'
+    console.log(arrayFinal2)
+    return arrayFinal2
     
   } else {
     for (index = 1; index <= arrayFinal.length; index += 1){
       arrayFinal2.push(arrayFinal[arrayFinal.length - index])
     }
+    console.log(arrayFinal2)
     return arrayFinal2
   } 
-}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")
+  
+}techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
 
 // Desafio 11
 function generatePhoneNumber() {
