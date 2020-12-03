@@ -41,7 +41,7 @@ console.log(footballPoints(2, 1));
 
 // Desafio 6
 function highestCount(numbersArray) {
-  let maiorNumero = array[0]
+  let maiorNumero = numbers.Array[0]
   let count = 0
 
   for (let index in numbersArray) {
