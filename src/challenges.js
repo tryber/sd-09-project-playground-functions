@@ -87,22 +87,8 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(str) {
   for (let i = 0; i < str.length; i += 1) {
-    switch (str[i]) {
-      case 'a':
-        str[i] = '1';
-        break;
-      case 'e':
-        str[i] = '2';
-        break;
-      case 'i':
-        str[i] = '3';
-        break;
-      case 'o':
-        str[i] = '4';
-        break;
-      case 'u':
-        str[i] = '5';
-        break;
+    if (str[i] === 'a') {
+      str[i] += '1';
     }
   }
 
@@ -112,7 +98,7 @@ function decode(str) {
   for (let i = 0; i < str.length; i += 1) {
     switch (str[i]) {
       case '1':
-        str[i] = 'a';
+        str[i] = "a";
         break;
       case '2':
         str[i] = 'e';
@@ -132,17 +118,38 @@ function decode(str) {
   return str;
 }
 
-let str = 'meu nome é gabriel galdino';
-str[2] = '2';
-console.log("Codificação:");
-console.log(encode(str));
-console.log("Decodificação:");
-console.log(decode(str));
+// let str = 'meu nome é gabriel galdino';
+// console.log("Codificação:");
+// console.log(encode(str));
+// console.log("Decodificação:");
+// console.log(decode(str));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, nome) {
+  let objList = []
+
+  techArray = techArray.sort();
+
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  for (let x in techArray) {
+    objList.push({tech: techArray[x], name: nome});
+  }
+
+  // for (let i = 0; i < techArray.length; i += 1) {
+  //   object.tech = techArray[i];
+  //   object.name = nome;
+  //   objList.push(object);
+  // }
+
+  return objList;
 }
+
+let nome = "Lucas";
+let techArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(techArray, nome));
 
 // Desafio 11
 function generatePhoneNumber() {
