@@ -116,8 +116,8 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  let 
+function generatePhoneNumber(arraytelephone) {
+  
 }
 
 // Desafio 12
@@ -146,3 +146,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
+}
