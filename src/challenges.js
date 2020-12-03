@@ -90,7 +90,31 @@ function encode(encodeString) {
   return outputString;
 }
 
-function decode() {
+function decode(decodeString) {
+  let outputString = '';
+  for (let index = 0; index < decodeString.length; index += 1) {
+    switch (decodeString[index]) {
+      case '1':
+        outputString += 'a';
+        break;
+      case '2':
+        outputString += 'e';
+        break;
+      case '3':
+        outputString += 'i';
+        break;
+      case '4':
+        outputString += 'o';
+        break;
+      case '5':
+        outputString += 'u';
+        break;
+      default:
+        outputString += decodeString[index];
+    }
+  }
+  return outputString;
+}
 
 }
 
