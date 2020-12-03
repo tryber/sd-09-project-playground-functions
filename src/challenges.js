@@ -115,6 +115,10 @@ function generatePhoneNumber(arrayNumb) {
     arrayNumb.splice(10, 0, '-');
   }
 
+  for (let i in arrayNumb) {
+    if (arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
+  }
+
   let count = 0;
   let numRepeat = 0;
   let numArray = 0;
@@ -130,11 +134,8 @@ function generatePhoneNumber(arrayNumb) {
     }
     count = 0;
   }
+  
   if (numRepeat > 2) return 'não é possível gerar um número de telefone com esses valores';
-
-  for (let i in arrayNumb) {
-    if (arrayNumb[i] < 0 || arrayNumb[i] > 9) return 'não é possível gerar um número de telefone com esses valores';
-  }
 
   return arrayNumb.join('');
 }
