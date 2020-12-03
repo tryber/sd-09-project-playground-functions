@@ -128,19 +128,20 @@ function decode(sentence) {
 // Desafio 10
 function techList(techArray, name) {
   let listToLearn = [];
+  techArray = techArray.sort();
   if (techArray.length !== 0) {
     for (let index = 0; index < techArray.length; index += 1) {
       let format = {
         tech: techArray[index],
-        name: name
-      }
+        name: name,
+      };
       listToLearn.push(format);
     }
     return listToLearn;
   }
-  return null;
+  return 'Vazio!';
 }
-let x = techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas');
+
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   let number;
