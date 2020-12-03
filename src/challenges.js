@@ -1,36 +1,26 @@
 // Desafio 1
-let firstValue = true;
-let secondValue = true;
-
 function compareTrue(valor1, valor2) {
   return valor1 && valor2;
 }
-console.log(compareTrue(firstValue, secondValue));
+
 // Desafio 2
-let base1 = 10
-let altura = 8
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(base1, altura));
 
 // Desafio 3
-let stringExemplo = 'Hello world!';
-
 function splitSentence(string) {
-  return string.split(' ');
+  let retorno = 0;
+  retorno = string.split(' ');
+  return retorno;
 }
-console.log(splitSentence(stringExemplo));
 
 // Desafio 4
-let numeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove']
-
 function concatName(stringArray){
   let reverse = stringArray.reverse();
   let concaterna = reverse.concat();
   return concaterna;
 }
-console.log(concatName(numeros));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,19 +31,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let repetidos = [1, 9, 9, 8, 7, 5, 8, 9, 4, 9]
 function highestCount(arrayNum) {
  let contador = 0
  let maiorNum = Math.max.apply(null, arrayNum);
  for (index = 0; index < arrayNum.length; index += 1) {
    if (maiorNum === arrayNum[index]) {
       contador +=1
-     
     }
   }
  return contador;
 }
-console.log(highestCount(repetidos));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -72,16 +59,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-
-let numeros = [8, 4, 3, 8, 9];
 function fizzBuzz(array) {
- /* for (let key in array) {
-    if (array.hasOwnProperty(key)) {
-      const element = array[key];
-      
-    }
-  }
-}*/
+  
+}
 
 // Desafio 9
 function encode() {
