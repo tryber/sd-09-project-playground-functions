@@ -51,29 +51,44 @@
 //   }
 
 
-function highestCount(array) {
+// function highestCount(array) {
     
-    let maiorNumero = array[0]
-    let contaMaiorNumero = 0
+//     let maiorNumero = array[0]
+//     let contaMaiorNumero = 0
     
-    // encontrar o maior valor
-    for (let index = 0; index < array.length; index += 1) {
-        if (array[index] > maiorNumero){
-            maiorNumero = array[index];
-        }
+//     // encontrar o maior valor
+//     for (let index = 0; index < array.length; index += 1) {
+//         if (array[index] > maiorNumero){
+//             maiorNumero = array[index];
+//         }
+//     }
+//     // frequencia do maiorNumero no array
+//     for (let index = 0; index < array.length; index += 1) {
+//         if (array[index] == maiorNumero){
+//             contaMaiorNumero += 1;
+//         }
+//     }
+//     return contaMaiorNumero;
+//   }
+//  let array = [9, 1, 2, 3, 9, 5, 7]
+// console.log(highestCount(array))
+
+
+
+
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+    let cat1Distance = Math.abs (cat1 - mouse) ;
+    let cat2Distance = Math.abs (cat2 - mouse) ;
+    if (cat1Distance > cat2Distance) {
+      return 'cat2';
+    } else if (cat2Distance > cat1Distance) {
+        return 'cat1';
+    } else {
+        return 'os gatos trombam e o rato foge'
     }
-    // frequencia do maiorNumero no array
-    for (let index = 0; index < array.length; index += 1) {
-        if (array[index] == maiorNumero){
-            contaMaiorNumero += 1;
-        }
-    }
-    return contaMaiorNumero;
   }
- let array = [9, 1, 2, 3, 9, 5, 7]
-console.log(highestCount(array))
-
-
+  console.log(catAndMouse(1, 0, 2))
 
 
 // // Desafio 8
