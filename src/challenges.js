@@ -129,11 +129,11 @@ function techList(techArray, nome) {
   let objList = []
   techArray = techArray.sort();
 
-  for (let x in techArray) {
-    if (techArray.length === 0) {
-      return 'Vazio!';
-    }
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
 
+  for (let x in techArray) {
     objList.push({ tech: techArray[x], name: nome });
   }
 
