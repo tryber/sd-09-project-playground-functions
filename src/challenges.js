@@ -146,10 +146,9 @@ function techList(arrayTechs = [], name) {
   } if (arrayTechs === []){
     return 'Vazio!'
   } else {
-    for (contador = 0; contador <= arrayFinal.length; contador += 1){
-      arrayFinal2.push(arrayFinal[arrayFinal.length - contador])
+    for (index = 0; index <= arrayFinal.length; index += 1){
+      arrayFinal2.push(arrayFinal[arrayFinal.length - index])
     }
-    console.log(arrayFinal2)
     return arrayFinal2
   } 
 }techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
