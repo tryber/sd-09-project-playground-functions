@@ -40,13 +40,13 @@ console.log(footballPoints(6, 6))
 
 // Desafio 6 -Para resolução desse exercicio utilizei a ajuda de : Luciano lodi, jhonatas, christofer e Lucas Galdino!!!
 // fonte de pesquisa: https://medium.com/@danvitoriano/ordenando-listas-com-javascript-array-sort-52446c25d94b
-let array = [9, 1, 2, 3, 9, 5, 7];
-let arraySort = array.sort();
-let arrayReverse = arraySort.reverse();
+
 function highestCount(array) {
+  let arraySort = array.sort();
+  let arrayReverse = arraySort.reverse();
      let count = 1;
-     for (let index = 0; index < arrayReverse.length; index += 1){
-         if (arrayReverse[index] === array[index +1]){
+     for (let index = 0; index < arrayReverse.length; index += 1) {
+         if (arrayReverse[index] === array[index +1]) {
              count += 1;
          }else {
              return count;
@@ -54,14 +54,10 @@ function highestCount(array) {
         }
         return count
     }
-console.log(highestCount(array));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-let mouse = 5;
-let cat1 = 3;
-let cat2 = 8;
-
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
     let distanceMouseCat1 = mouse - cat1;
     let distanceMouseCat2 = mouse - cat2;
     let distanceCats = cat1 - cat2;
@@ -74,12 +70,27 @@ function catAndMouse() {
         console.log('os gatos trombam e o rato foge');
     }
 }
-catAndMouse();
+console.log(catAndMouse(5 , 3 , 8));
 
 // Desafio 8
+let arrayNumber = [ 2 , 15 , 7 , 9 , 45];
+
 function fizzBuzz() {
-  // seu código aqui
+    let array = [];
+    for (let index =0; index < arrayNumber.length; index += 1) {
+        if (arrayNumber[index] % 3 === 0) {
+            array.push('fizz');
+        } else if (arrayNumber[index] % 5 === 0) {
+            array.push('buzz');
+        } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
+            array.push('fizzBuzz');
+        } else {
+            array.push('bug!');
+        }
+    }
+    return array;
 }
+console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {

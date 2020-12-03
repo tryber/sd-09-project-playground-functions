@@ -10,20 +10,6 @@
 // Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar `["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]`.
 
 // Desafio 8
-let arrayNumber = [ 2 , 15 , 7 , 9 , 45]
-function fizzBuzz() {
-    for (let index =0; index < arrayNumber.length; index += 1){
-    if (arrayNumber[index] % 3 === 0){
-        console.log('fizz');
-    }else if(arrayNumber[index] % 5 === 0){
-        console.log('buzz');
-    }else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0){
-        console.log('fizzBuzz');
-    }else {
-        console.log('bug!');
-    }
-    }
-}
 
 
 
@@ -45,13 +31,13 @@ function fizzBuzz() {
 // A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`).
 
 
-// Desafio 9
-function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
+// // Desafio 9
+// function encode() {
+//     // seu código aqui
+//   }
+//   function decode() {
+//     // seu código aqui
+//   }
 
 
 
@@ -113,5 +99,5 @@ function encode() {
 
 
 
-// Desafio 10
-function techList(name, programList) {}
+// // Desafio 10
+// function techList(name, programList) {}
