@@ -153,19 +153,20 @@ function decode(string) {
 
 // Desafio 10
 function techList(techArray, name) {
-  let error = 'Vazio!';
+  let newArray = [];
 
-  for (let i = 0; i < techArray.length; i += 1){
-    let newList = {
+  for (let i = 0; i < techArray.length; i += 1) {
+    let obj = {
       tech: techArray[i],
       name: name,
     }
-    if (techArray = []) {
-      return error;
-    }
+
+    newArray.push(obj);
   }
-  return newList;
+  return newArray;
 }
+console.log(techList(['HTML', 'javaScript', 'PHP'], 'Luciano'))
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
