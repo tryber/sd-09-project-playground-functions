@@ -129,7 +129,7 @@ function techList(techArray, nome) {
   let objList = []
   techArray = techArray.sort();
 
-  if (techArray[x] === 0) {
+  if (techArray.length === 0) {
     return 'Vazio!';
   } else {
     for (let x in techArray) {
