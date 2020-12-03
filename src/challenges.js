@@ -45,7 +45,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayOfNumbers) {
   let counter = 0;
 
-  let number = highestNumber(arrayOfNumbers);
+  let number = findHighest(arrayOfNumbers);
 
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
     if (arrayOfNumbers[index] === number) {
