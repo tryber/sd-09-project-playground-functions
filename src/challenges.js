@@ -118,7 +118,6 @@ function fizzBuzz(buzzArray) {
         } else if ((buzzArray[index] % 3) !== 0 && (buzzArray[index] % 5) !== 0) {
             arrayFizzBuzz.push('bug!')
         }
-
     }
     return arrayFizzBuzz;
 }
@@ -127,12 +126,35 @@ console.log(fizzBuzz(multiplos));
 
 
 // Desafio 9
-function encode() {
-    // seu código aqui
+function encode(myString) {
+
+    myString = myString.split('a').join(1);
+    myString = myString.split('e').join(2);
+    myString = myString.split('i').join(3);
+    myString = myString.split('o').join(4);
+    myString = myString.split('u').join(5);
+
+    return myString
 }
-function decode() {
-    // seu código aqui
+
+let encodeString = 'amanhã vai fazer sol ou não'
+console.log(encode(encodeString));
+
+
+
+function decode(myString) {
+
+    myString = myString.split('1').join('a');
+    myString = myString.split('2').join('e');
+    myString = myString.split('3').join('i');
+    myString = myString.split('4').join('o');
+    myString = myString.split('5').join('u');
+
+    return myString
 }
+
+let decoding = '1m1nhã v13 f1z2r s4l 45 nã4';
+console.log(decode(decoding));
 
 // Desafio 10
 function techList() {
