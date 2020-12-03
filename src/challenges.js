@@ -123,6 +123,9 @@ function techList(tech, named) {
     tec.name = named
     techListObjects.push(tec)
   }
+  if (techListObjects === []) {
+    return ('Vazio!');
+  }
   return techListObjects;
 }
 
