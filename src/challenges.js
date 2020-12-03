@@ -115,8 +115,15 @@ function decode(Str2) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, named) {
+  let techListObjects = [];
+  for (let index = 0; index < tech.length; index += 1) {
+    let tec = Object();
+    tec.tech = tech[index];
+    tec.name = named
+    techListObjects.push(tec)
+  }
+  return techListObjects;
 }
 
 // Desafio 11
