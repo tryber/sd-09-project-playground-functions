@@ -20,8 +20,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let newString = array[array.length - 1] +", " + array[0] 
+  return newString
 }
 
 // Desafio 5
@@ -165,23 +166,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
-// Extra Functions
-
-
-function biggestElement(array) {
-  let maior = ''
-  
-  for (let index = 0 ; index < array.length ; index += 1) {
-    if (maior < array[index]) {
-      maior = array[index]
-    }
-  }
-  console.log(maior)
-}
-
-
-
 
 module.exports = {
   calcArea,
