@@ -127,6 +127,19 @@ function checkIsVowel(letter) {
   }
   return false;
 }
+
+function checkIsNumber(letter) {
+  if (
+    letter === '1' ||
+    letter === '2' ||
+    letter === '3' ||
+    letter === '4' ||
+    letter === '5'
+  ) {
+    return true;
+  }
+  return false;
+}
 function switchVowelToNumber(letter) {
   switch (letter) {
     case 'a':
@@ -189,7 +202,7 @@ function encode(frase) {
 function decode(frase) {
   let decodedFrase = [];
   for (let index in frase) {
-    if (checkIsVowel(frase[index])) {
+    if (checkIsNumber(frase[index])) {
       decodedFrase.push(switchNumberToVowel(frase[index]));
       // console.log(`A letra da frase agora é ${frase[index]}`);
     } else {
@@ -199,6 +212,8 @@ function decode(frase) {
   // console.log(decodedFrase.join(''));
   return decodedFrase.join('');
 }
+
+console.log(decode('h2ll4')); 
 
 // Desafio 10
 function techList() {
