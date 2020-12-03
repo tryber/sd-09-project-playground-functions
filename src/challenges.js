@@ -85,8 +85,9 @@ function fizzBuzz() {
     array[index] = "bug!";
     }
   }
+  return array;
 }
-return array;
+
 
 // Desafio 9
 function encode() {
