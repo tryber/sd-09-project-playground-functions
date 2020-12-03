@@ -97,7 +97,7 @@ function encode(string) {
 
 function decode(string) {
 
-}
+  
 
 
 // Desafio 10
@@ -105,10 +105,13 @@ function techList(techArray, name) {
   let newArray = [];
 
   for (let i = 0; i < techArray.length; i += 1) {
-    newArray.push( = {
+
+    let obj = {
       tech: techArray[i],
       name: name,
-    })
+    }
+    newArray.push(obj);
+    
   }
   return newArray;
 }
