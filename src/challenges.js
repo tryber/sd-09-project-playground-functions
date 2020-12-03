@@ -64,10 +64,54 @@ function fizzBuzz(inputArray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(inputString) {
+  let outputString = '';
+  for (let index = 0; index < inputString.length; index += 1) {
+    switch (inputString[index]){
+      case 'a':
+        outputString += '1';
+        break;
+      case 'e':
+          outputString += '2';
+        break;
+      case 'i':
+          outputString += '3';
+        break;
+      case 'o':
+        outputString += '4';
+        break;
+      case 'u':
+          outputString += '5';
+        break;
+      default:
+        outputString += inputString[index];
+    }
+  return outputString;
 }
 
-function decode() {
+function decode(inputString) {
+  let outputString = '';
+  for (let index = 0; index < inputString.length; index += 1) {
+    switch (inputString[index]){
+      case '1':
+        outputString += 'a';
+        break;
+      case '2':
+          outputString += 'e';
+        break;
+      case '3':
+          outputString += 'i';
+        break;
+      case '4':
+        outputString += 'o';
+        break;
+      case '5':
+          outputString += 'u';
+        break;
+      default:
+        outputString += inputString[index];
+    }
+  return outputString;
 }
 
 // Desafio 10
