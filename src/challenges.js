@@ -83,53 +83,53 @@ function fizzBuzz(entry) {
 
 // Desafio 9
 function encode(entry) {
-  let code = entry.split('');
-  for (let index = 0; index < code.length; index += 1) {
-    switch (code[index]) {
+  let encoding = entry.split('');
+  for (let index = 0; index < encoding.length; index += 1) {
+    switch (encoding[index]) {
       case 'a':
-        code[index] = '1';
+        encoding[index] = '1';
         break;
       case 'e':
-        code[index] = '2';
+        encoding[index] = '2';
         break;
       case 'i':
-        code[index] = '3';
+        encoding[index] = '3';
         break;
       case 'o':
-        code[index] = '4';
+        encoding[index] = '4';
         break;
       case 'u':
-        code[index] = '5';
+        encoding[index] = '5';
         break;
       default:
     }
   }
-  return code.join('');
+  return encoding.join('');
 }
 
 function decode(entry) {
-  let code = entry.split('');
-  for (let index = 0; index < code.length; index += 1) {
-    switch (code[index]) {
+  let decoding = entry.split('');
+  for (let index = 0; index < decoding.length; index += 1) {
+    switch (decoding[index]) {
       case '1':
-        code[index] = 'a';
+        decoding[index] = 'a';
         break;
       case '2':
-        code[index] = 'e';
+        decoding[index] = 'e';
         break;
       case '3':
-        code[index] = 'i';
+        decoding[index] = 'i';
         break;
       case '4':
-        code[index] = 'o';
+        decoding[index] = 'o';
         break;
       case '5':
-        code[index] = 'u';
+        decoding[index] = 'u';
         break;
       default:
     }
   }
-  return code.join('');
+  return decoding.join('');
 }
 
 // Desafio 10
