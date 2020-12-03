@@ -6,6 +6,7 @@ function compareTrue(boolean1, boolean2) {
   return false;
 }
 console.log(compareTrue(true, false));
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -17,6 +18,7 @@ function splitSentence(string) {
   return arrayString;
 }
 console.log(splitSentence("Tree Of Savior"));
+
 // Desafio 4
 function concatName(stringArray) {
   let firstName = stringArray[0];
@@ -36,7 +38,6 @@ console.log(footballPoints(1, 1));
 
 // Desafio 6
 function highestCount(numbers) {
-  // seu código aqui
   let contNumber = 0;
   let contRepeat = 0;
   let indexNumberRepeat = 0;
@@ -57,27 +58,98 @@ function highestCount(numbers) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let diffCat1 = Math.abs(mouse - cat1);
+  let diffCat2 = Math.abs(mouse - cat2);
+
+  if (diffCat1 === diffCat2) {
+    return "Os gatos trombam e o rato foge";
+  } else if (diffCat1 > diffCat2) {
+    return "cat2";
+  }
+  return "cat1";
 }
+console.log(catAndMouse(-15, -15, -15));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  const myArray = [];
+  for (let element of array) {
+    if (element % 3 === 0 && element % 5 === 0) {
+      myArray.push("fizzBuzz");
+    } else if (element % 3 === 0) {
+      myArray.push("fizz");
+    } else if (element % 5 === 0) {
+      myArray.push("buzz");
+    } else {
+      myArray.push("bug!");
+    }
+  }
+  return myArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodingString = "";
+  for (let element of string) {
+    if (element === "a") {
+      encodingString += "1";
+    } else if (element === "e") {
+      encodingString += "2";
+    } else if (element === "i") {
+      encodingString += "3";
+    } else if (element === "o") {
+      encodingString += "4";
+    } else if (element === "u") {
+      encodingString += "5";
+    } else {
+      encodingString += element;
+    }
+  }
+  return encodingString;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"));
+
+function decode(string2) {
+  let decodingString = "";
+  for (let element of string2) {
+    if (element === "1") {
+      decodingString += "a";
+    } else if (element === "2") {
+      decodingString += "e";
+    } else if (element === "3") {
+      decodingString += "i";
+    } else if (element === "4") {
+      decodingString += "o";
+    } else if (element === "5") {
+      decodingString += "u";
+    } else {
+      decodingString += element;
+    }
+  }
+  return decodingString;
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(languages, name) {
+  if (languages.length === 0) {
+    return "Vazio!";
+  }
+  languages.sort();
+  let arrayTech = [];
+  for (let element of languages) {
+    let object = {};
+    object.tech = element;
+    object.name = name;
+    arrayTech.push(object);
+  }
+  return arrayTech;
 }
+console.log(
+  techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus")
+);
 
 // Desafio 11
 function generatePhoneNumber() {
