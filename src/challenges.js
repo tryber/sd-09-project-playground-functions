@@ -63,11 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let rangeGato1 = 0
   let rangeGato2 = 0
 
-  if (mouse === cat1 && mouse === cat2) {
-    return 'os gatos trombam e o rato foge'
-  }
-  if (mouse === cat1 && mouse !== cat2) return 'cat1'
-  if (mouse === cat2 && mouse !== cat1) return 'cat2'
+  gatoMaisProximo(mouse, cat1, cat2)
+  
   if (mouse > cat1) {
     for (let i = mouse; i > cat1; i -= 1) {
       rangeGato1 += 1;
@@ -97,6 +94,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+function gatoMaisProximo(mouse, cat1, cat2) {
+  if (mouse === cat1 && mouse === cat2) {
+    return 'os gatos trombam e o rato foge'
+  }
+  if (mouse === cat1 && mouse !== cat2) return 'cat1'
+  if (mouse === cat2 && mouse !== cat1) return 'cat2'
+}
 
 // console.log( catAndMouse(4, 5, 1) )
 // console.log( catAndMouse(1, 0, 2) ) //precisar ser igual
