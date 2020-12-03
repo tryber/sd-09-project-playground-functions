@@ -44,7 +44,9 @@ function highestCount(numbersArray) {
     if (numbersArray[index] > highestNumber) {
       highestNumber = numbersArray[index];
       highestNumberRepeat = 1;
-    } else if (numbersArray[index] === highestNumber) {
+    }
+
+    if (numbersArray[index] === highestNumber) {
       highestNumberRepeat += 1;
     }
   }
@@ -113,9 +115,9 @@ function fizzBuzz(arrayNumbers) {
   }
   return arrayNumbers;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// rgb(76,164,109)
+
 // Desafio 9
 function compareLetter(letter, objectChar) {
   let newLetter = '';
@@ -187,31 +189,72 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber(arrayNumbers) {
-  if (arrayNumbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+function addCharToNumber(index) {
+  let char = '';
+
+  if (index === 0) {
+    char = '(';
   }
 
-  // let phone = '';
+  if (index === 2) {
+    char = ') ';
+  }
 
-  // for (let index = 0; index < arrayNumbers.length; index += 1) {
-  //   switch (index) {
-  //     case 0:
-  //       phone += '(';
-  //       break;
-  //     case 2:
-  //       phone += ') ';
-  //       break;
-  //     case 7:
-  //       phone += '-';
-  //       break;
-  //   }
-  //   phone += arrayNumbers[index];
-  // }
+  if (index === 7) {
+    char = '-';
+  }
+  return char;
+}
+function countNumbersArray(array) {
+  let count = 0;
+  let number = -1;
+
+  array.sort();
+
+  for (let index in array) {
+    if (array[index] > number) {
+      number = array[index];
+      if (count > 2) {
+        return true;
+      }
+
+      count = 1;
+    } else {
+      count += 1;
+    }
+  }
+  return false;
+}
+function invalidNumbers(number, array) {
+  let invalid = false;
+  let invalidPhrase = '';
+
+  if (array.length !== 11) {
+    invalid = true;
+    invalidPhrase = 'Array com tamanho incorreto.';
+  }
+
+  if ((number < 0 || number > 9) || countNumbersArray(array) === true) {
+    invalid = true;
+    invalidPhrase = 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  return [invalid, invalidPhrase];
+}
+function generatePhoneNumber(arrayNumbers) {
+  let phone = '';
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    let errors = invalidNumbers(arrayNumbers[index], arrayNumbers);
+    if (errors[0] === true) {
+      return errors[1];
+    }
+    phone += addCharToNumber(index) + arrayNumbers[index];
+  }
 
   return phone;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 1, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
