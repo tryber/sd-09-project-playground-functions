@@ -24,7 +24,7 @@ function splitSentence(string) {
 function concatName(array) {
   let string = '';
   for (let index = 0; index < array.length; index += 1) {
-    string = array[array.length-1] + ', ' + array[0];
+    string = array[array.length - 1] + ', ' + array[0];
   }
   return string;
 }
@@ -40,7 +40,7 @@ function highestCount(array) {
   let higherNumber = 0;
   for (let index in array) {
     if (array[index] > higherNumber) {
-        higherNumber = array[index];
+      higherNumber = array[index];
     }
   }
   let vezesRepetido = 0;
@@ -173,7 +173,7 @@ function contaRepeticoes(array) {
 function verificaTamanho(array) {
   let trueOrFalse = false;
   for (let index = 0; index < array.length; index += 1) {
-    if (contaRepeticoes(array) || array[index] < 0 || array[index]> 9) {
+    if (contaRepeticoes(array) || array[index] < 0 || array[index] > 9) {
       trueOrFalse = true;
     }
   }
@@ -195,8 +195,37 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+function verifyLineA(lineA, lineB, lineC) {
+  let validate = false;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    validate = true;
+  }
+  return validate;
+}
+
+function verifyLineB(lineA, lineB, lineC) {
+  let validate = false;
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    validate = true;
+  }
+  return validate;
+}
+
+function verifyLineC(lineA, lineB, lineC) {
+  let validate = false;
+  if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+    validate = true;
+  }
+  return validate;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let validate = false;
+  if (verifyLineA(lineA, lineB, lineC) && verifyLineB(lineA, lineB, lineC) && verifyLineC(lineA, lineB, lineC)) {
+    validate = true;
+  }
+  return validate;
 }
 
 // Desafio 13
