@@ -130,10 +130,10 @@ function techList(techArray, nome) {
   techArray = techArray.sort();
 
   for (let x in techArray) {
-    if (techArray[x] === 0) {
+    if (techArray.length === 0) {
       return 'Vazio!';
     }
-    
+
     objList.push({ tech: techArray[x], name: nome });
   }
 
