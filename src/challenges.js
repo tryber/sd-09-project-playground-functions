@@ -19,7 +19,7 @@ function splitSentence(string) {
 let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco']
 function concatName(stringArray){
   let reverse = stringArray.reverse();
-  let concatReverse = reverse.join(' ');
+  let concatReverse = reverse.join(', ');
   return concatReverse;
 }
 console.log(concatName(numbers))
@@ -48,7 +48,7 @@ function highestCount(arrayNum) {
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(cat1 - mouse);
   let positionCat2 = Math.abs(cat2 - mouse);
-  let resultado = '';
+  let resultCat = '';
 
   if (positionCat1 < positionCat2) {
     resultado = 'cat1';
@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if(positionCat1 === positionCat2){
     resultado = 'os gatos trombam e o rato foge';
   }
-  return resultado;
+  return resultCat;
 }
 
 // Desafio 8
