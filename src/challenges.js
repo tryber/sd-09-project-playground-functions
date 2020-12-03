@@ -178,6 +178,8 @@ function encode(frase) {
     if (checkIsVowel(frase[index])) {
       encodedFrase.push(switchVowelToNumber(frase[index]));
       // console.log(`A letra da frase agora é ${frase[index]}`);
+    } else {
+      encodedFrase.push(frase[index])
     }
   }
   // console.log(encodedFrase.join(''));
@@ -190,6 +192,8 @@ function decode(frase) {
     if (checkIsVowel(frase[index])) {
       decodedFrase.push(switchNumberToVowel(frase[index]));
       // console.log(`A letra da frase agora é ${frase[index]}`);
+    } else {
+      decodedFrase.push(frase[index])
     }
   }
   // console.log(decodedFrase.join(''));
