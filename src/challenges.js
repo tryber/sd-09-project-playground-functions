@@ -169,22 +169,27 @@ function validateNumbers(num, count) {
   return validate;
 }
 
-function countRepeatedNumbers(numArray) {
+function countRepeatedNumbers(array, number) {
   let count = 0;
-  for (let num in numArray) {
-    for (let number in numArray)
-    if (numArray[num] === numArray[number]) {
+  let highestCount = 0;
+  for (let num of array) {
+    if (num === number) {
       count += 1;
     }
-    return count;
+    if (highestCount < count) {
+      highestCount = count;
+    }
   }
+  return highestCount;
 }
 
 function checkNumbers(array) {
   let validate = true;
+  
   for (let number in array) {
-    let count = countRepeatedNumbers(array, number);
+    count = countRepeatedNumbers(array, array[number]);
     validate = validateNumbers(array[number], count);
+    count = 0;
   }
   return validate;
 }
@@ -200,7 +205,7 @@ function validateIfPossiblePhoneNumber(array) {
 }
 
 function generatePhoneNumber(array) {
-  if (validateIfPossiblePhoneNumber(array)) {
+  if (validateIfPossiblePhoneNumber(array) === true) {
     let numero = '(';
     for (let number in array) {
       if (number === '1') {
