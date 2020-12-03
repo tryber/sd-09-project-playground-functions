@@ -182,16 +182,19 @@ console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(techs, name) {
-  let techLists = [];
-  techs.sort();
-  for (let index = 0; index < techs.length; index += 1) {
-    const object = {
-      tech: techs[index],
-      name,
+  if (techs.length > 0) {
+    let techLists = [];
+    techs.sort();
+    for (let index = 0; index < techs.length; index += 1) {
+      const object = {
+        tech: techs[index],
+        name,
+      }
+      techLists.push(object);
     }
-    techLists.push(object);
+    return techLists;
   }
-  return techLists;
+  return 'Vazio!'
 }
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
