@@ -63,8 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
   let rangeGato1 = 0
   let rangeGato2 = 0
 
-  gatoMaisProximo(mouse, cat1, cat2)
-  
+  function distantCat(param1, param2, param3) {
+    if (param1 === param2 && param1 === param3) {
+      return 'os gatos trombam e o rato foge'
+    } else if (param1 === param2 && param1 !== param3) {
+      return 'cat1'
+    } else if (param1 === param3 && param1 !== param2) {
+      return 'cat2'
+    } else {
+      return false
+    }
+  }
+
+  distantCat(mouse, cat1, cat2)
+
   if (mouse > cat1) {
     for (let i = mouse; i > cat1; i -= 1) {
       rangeGato1 += 1;
@@ -85,22 +97,22 @@ function catAndMouse(mouse, cat1, cat2) {
     }
   }
   // console.log('Distancia do Gato 2: ' + rangeGato2)
-  if (rangeGato1 > rangeGato2) {
-    return 'cat2'
-  } else if (rangeGato2 > rangeGato1) {
-    return 'cat1'
-  } else if (rangeGato1 === rangeGato2) {
-    return 'os gatos trombam e o rato foge'
+
+  function checkCat (param1, param2) {
+    if (param1 > param2) {
+      return 'cat2'
+    } else if (param2 > param1) {
+      return 'cat1'
+    } else if (param1 === param2) {
+      return 'os gatos trombam e o rato foge'
+    } else {
+      return false
+    }
   }
+
+  checkCat(rangeGato1, rangeGato2)
 }
 
-function gatoMaisProximo(mouse, cat1, cat2) {
-  if (mouse === cat1 && mouse === cat2) {
-    return 'os gatos trombam e o rato foge'
-  }
-  if (mouse === cat1 && mouse !== cat2) return 'cat1'
-  if (mouse === cat2 && mouse !== cat1) return 'cat2'
-}
 
 // console.log( catAndMouse(4, 5, 1) )
 // console.log( catAndMouse(1, 0, 2) ) //precisar ser igual
