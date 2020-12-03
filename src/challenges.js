@@ -57,7 +57,6 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let number;
   for (number in array) {
-    number = number;
     if (array[number] % 3 === 0 && array[number] % 5 !== 0) {
       array[number] = 'fizz';
     } else if (array[number] % 5 === 0 && array[number] % 3 !== 0) {
