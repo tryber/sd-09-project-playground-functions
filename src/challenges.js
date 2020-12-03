@@ -141,7 +141,9 @@ function encode(phrase) {
         strings[index] = 4;
         break;
       case 'u':
-        string[index] = 5;
+        strings[index] = 5;
+      default:
+        break;
     }
   }
 
@@ -165,7 +167,10 @@ function decode(phrase) {
         strings[index] = 'o';
         break;
       case '5':
-        string[index] = 'u';
+        strings[index] = 'u';
+        break;
+      default:  
+        break;
     }
   }
 
