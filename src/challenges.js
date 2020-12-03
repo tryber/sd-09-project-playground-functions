@@ -218,7 +218,10 @@ let technologiesToLearn = ['React', 'Vue', 'Python', 'Django', 'MySQL', '.NET', 
 
 function techList(technologies, name) {
   let listTechnologies = [];
-  technologiesToLearn.sort();
+  technologies.sort();
+  if (technologies.length <= 0) {
+    return 'Vazio';
+  };
   for (let index in technologies) {
     listTechnologies.push({
       tech: technologies[index],
@@ -228,7 +231,7 @@ function techList(technologies, name) {
   return listTechnologies;
 }
 
-console.log(techList(technologiesToLearn, 'Maximilian'));
+console.log(techList(['teste'], 'Maximilian'));
 
 // Desafio 11
 function generatePhoneNumber() {
