@@ -68,25 +68,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzBuzzStatements (i) {
+  let fizzBuzzAnswer
+  
+  if (i % 3 === 0 && i % 5 === 0) {
+      fizzBuzzAnswer = ('fizzBuzz');
+    } else if (i % 3 === 0) {
+      fizzBuzzAnswer = ('fizz');
+    } else if (i % 5 === 0) {
+      fizzBuzzAnswer = ('buzz');
+    } else {
+      fizzBuzzAnswer = ('bug!');
+    }
+  return fizzBuzzAnswer
+}
+
 function fizzBuzz(array) {
   let resultArray = [];
 
   for (let i of array) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      resultArray.push('fizzBuzz');
-    } 
-
-    if (i % 3 === 0 && i % 5 !== 0) {
-      resultArray.push('fizz')
-    }
-
-    if (i % 3 !== 0 && i % 5 === 0) {
-      resultArray.push('buzz')
-    }
-
-    if (i % 3 !== 0 && i % 5 !== 0) {
-      resultArray.push('bug!')
-    }
+    resultArray.push(fizzBuzzStatements(i))
   }
   return resultArray;
 }
