@@ -131,13 +131,13 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(techs, name) {
-  if (techs == '') {
+  if (techs === '') {
     return 'Vazio!';
   }
   let techListName = [];
   techs.sort();
   for (let index = 0; index < techs.length; index += 1) {
-    let newItem = {tech: techs[index], name: name};
+    let newItem = { tech: techs[index], name };
     techListName.push(newItem);
   }
   return techListName;
@@ -145,17 +145,17 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  if (numbers.length !== 11) return 'Array com tamanho incorreto.'; // checa o tamanho do array
-  let phoneNumber = `(${numbers[0]}${numbers[1]}) `; // envolve o código de área com parenteses
-  for (let number in numbers) { // para cade numero entre os numeros
-    if (numbers[number] < 0 || numbers[number] > 9) return 'não é possível gerar um número de telefone com esses valores'; // se algum numero for menor que 0 ou maior que 9, retorna a mensagem
-    let checkRepeat = 0; // inicia a variavel com zero
-    for (let item = 0; item < numbers.length; item += 1){
-      if (parseInt(number) === numbers[item]) checkRepeat += 1; // se o numero atual for igual o numero no indice soma 1 à variável
+  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
+  let phoneNumber = `(${numbers[0]}${numbers[1]}) `;
+  for (let number in numbers) {
+    if (numbers[number] < 0 || numbers[number] > 9) return 'não é possível gerar um número de telefone com esses valores';
+    let checkRepeat = 0;
+    for (let item = 0; item < numbers.length; item += 1) {
+      if (parseInt(number, 10) === numbers[item]) checkRepeat += 1;
       if (checkRepeat > 2) return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  for(let index = 2; index < numbers.length; index += 1) {
+  for (let index = 2; index < numbers.length; index += 1) {
     phoneNumber = phoneNumber.concat(`${numbers[index]}`)
     if (index === 6) phoneNumber = phoneNumber.concat('-');
   }
