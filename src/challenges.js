@@ -46,7 +46,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (3 * wins) + ties;
+  let winPoints = 3
+  let totalPoints = (winPoints * wins) + ties;
 
   return totalPoints;
 }
@@ -191,48 +192,44 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function countingReps(arr) {
+function checkIsValid(array) {
+  let isValid = true;
   let reps;
-  let answer;
 
-  for (let i of arr) {
+  for (let i of array) {
     reps = 0;
 
-    for (let j of arr) {
+    for (let j of array) {
       if (i === j) {
-        reps += 1;
+        reps++;
       }
     }
 
     if (reps >= 3 || i < 0 || i > 9) {
-      answer = 'não é possível gerar um número de telefone com esses valores';
+      isValid = false;
     }
   }
-  return answer;
-}
 
-function statements(arr) {
-  
-  let otherAnswers;
-
-  if (arr.length !== 11) {
-    otherAnswers = 'Array com tamanho incorreto.';
-  } else {
-    otherAnswers = `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`
+  if (array.length !== 11) {
+    isValid = false;
   }
-  return otherAnswers;
+
+  return isValid;
 }
 
 function generatePhoneNumber(array) {
-  let result = ' ';
+  let result;
+  let isValid = true;
 
-  result = countingReps(array);
-  
-  if (typeof(result) === 'undefined') {
-    result = statements(array);
+  isValid = checkIsValid(array);
+
+  if (isValid === true) {
+    result = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  } else if (array.length !== 11) {
+    result = "Array com tamanho incorreto";
+  } else {
+    result = 'não é possível gerar um número de telefone com esses valores'
   }
-  
-
   return result;
 }
 
