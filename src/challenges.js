@@ -60,7 +60,7 @@ console.log(highestCount(repetidos));
 function catAndMouse(cat1, cat2, mouse) {
   let positionCat1 = cat1 - mouse;
   let positionCat2 = cat2 - mouse;
-  let resultado = ''
+  let resultado = 0;
 
   if (positionCat1 < positionCat2) {
     resultado = 'cat1';
