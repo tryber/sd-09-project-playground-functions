@@ -57,6 +57,36 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distanciaMouseGato1 = 0;
+  let distanciaMouseGato2 = 0;
+
+  if (mouse > cat1){
+    distanciaMouseGato1 = mouse - cat1;
+  } else {
+    distanciaMouseGato1 = cat1 - mouse;
+  }
+
+  if (mouse > cat2){
+    distanciaMouseGato2 = mouse - cat2;
+  } else {
+    distanciaMouseGato2 = cat2 - mouse;
+  }
+
+  Math.abs(distanciaMouseGato1);
+  Math.abs(distanciaMouseGato2);
+
+
+  if (distanciaMouseGato1 > distanciaMouseGato2) {
+    console.log('\nCat 2 pegou o gato!!\n');
+    console.log('Cat 2 estava a ' + distanciaMouseGato2 + ' de distância e pegou o gato');
+    console.log('Cat 1 estava a ' + distanciaMouseGato1 + ' de distância e rodou');
+  } else if (distanciaMouseGato1 < distanciaMouseGato2){
+    console.log('Cat 1 pegou o gato!! ');
+    console.log('Cat 1 estava a ' + distanciaMouseGato1 + ' de distância e pegou o gato');
+    console.log('Cat 2 estava a ' + distanciaMouseGato2 + ' de distância e rodou');
+  } else {
+    console.log('Os gatos trombaram e o rato fugiu!!');
+  }
   
 }
 
