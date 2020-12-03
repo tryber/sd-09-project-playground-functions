@@ -23,10 +23,6 @@ return array[array.length -1 ] + ', ' + array[0]
 
 // Desafio 5
 function footballPoints(wins, ties) {
- let wins = 3;
- let ties = 1;
- let sum = wins + ties;
-} return sum
 
 // Desafio 6
 function highestCount() {
