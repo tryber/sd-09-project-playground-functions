@@ -60,15 +60,16 @@ console.log(highestCount(repetidos));
 function catAndMouse(cat1, cat2, mouse) {
   let positionCat1 = cat1 - mouse;
   let positionCat2 = cat2 - mouse;
+  let resultado = ''
 
   if (positionCat1 < positionCat2) {
-    catAndMouse.push = ('cat1');
+    resultado = 'cat1';
   } else  if(positionCat2 < positionCat1){
-    catAndMouse.push = ('cat2');
+    resultado = 'cat2';
   } else if(positionCat1 === positionCat2){
-    catAndMouse.push = ('Os gatos trombam é o rato foge!');
+    resultado = 'os gatos trombam e o rato foge';
   }
-  return catAndMouse;
+  return resultado;
 }
 console.log(catAndMouse(8, 12, 4));
 
