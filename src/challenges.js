@@ -79,15 +79,21 @@ function fizzBuzz(numbers) {
 
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0){
+      if (numbers[i] % 5 === 0) {
+        arrayFizzBuzz.push('fizzBuzz');        
+      }
       arrayFizzBuzz.push('fizz');
-    } else if (numbers[i] % 5 === 0) {
+    }
+
+    if (numbers[i] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
-    } else if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
-      arrayFizzBuzz.push('fizzBuzz');
-    } else {
+    }
+
+    if {
       arrayFizzBuzz.push('bug!');
     }
   }
+
   return arrayFizzBuzz;
 }
 
