@@ -91,7 +91,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode() {
   let stringCodificada = '';
 
   for (let index = 0; index < string.length; index += 1) {
@@ -109,8 +109,9 @@ function encode(string) {
       stringCodificada += string[index];
     }
   }
+  return stringCodificada;
 }
-function decode(string) {
+function decode() {
   let stringdecodificada = '';
 
   for (let index = 0; index < string.length; index += 1) {
