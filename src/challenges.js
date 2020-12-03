@@ -84,7 +84,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(arrNumbers) {
   let nomesBizarros = [];
-  for(let valor in arrNumbers){
+  for(let valor of arrNumbers){
     if(valor % 3 === 0 && valor % 5 === 0) {
       nomesBizarros.push('fizzBuzz');
     } else if (valor % 5 === 0) {
@@ -97,6 +97,7 @@ function fizzBuzz(arrNumbers) {
     }
   return(nomesBizarros)
 }
+
 
 
 
