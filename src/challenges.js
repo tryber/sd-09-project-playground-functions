@@ -1,13 +1,8 @@
 // Desafio 1
 function compareTrue(trueOrFalse1, truOrFalse2) {
   // seu código aqui
-  let retorno;
-  if ((trueOrFalse1) && (trueOrFalse2)) {
-    retorno = true;
-  } else {
-    retorno = false;
-  }
-  return retorno;
+
+  return ((trueOrFalse1) && (trueOrFalse2));
 }
 
 // Desafio 2
@@ -19,40 +14,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(stringUnica) {
+function splitSentence() {
   // seu código aqui
-  let posicaoString = stringUnica.length;
-  let palavraFormada = false;
-  let palavraExtraida = [];
-  let letraRetorno = '';
-  let letraAtual = '';
 
-  for (let index = 0; posicaoString > index; index += 1) {
-    letraAtual = stringUnica[index];
-    palavraformada = separaPalavra(letraAtual)
-    if (palavraFormada) {
-      letraRetorno = montaSaida();
-      arrayString.push(palavraExtraida);
-    }
-  }
-  arrayString.push(palavraExtraida);
-
-  return arrayString;
-}
-
-function separaPalavra(letraAnalise) {
-  if (letraAnalise === ' ') {
-    return true;
-  }
-  if (letraAnalise != ' ') {
-    return false;
-  }
-};
-
-function montaSaida(concatenaPalavra, finaliza) {
-  if (finaliza) {
-    return concatenaPalavra;
-  }
+  return;
 }
 
 // Desafio 4
