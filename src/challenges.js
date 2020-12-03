@@ -84,7 +84,7 @@ function fizzBuzz(array) {
     } else if ((array[index] % 3) === 0) {
         array2.push('fizz');
     } else {
-        array2.push('bug');
+        array2.push('bug!');
     }
   }
   return array2;
