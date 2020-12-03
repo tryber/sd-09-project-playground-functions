@@ -5,7 +5,7 @@ function compareTrue(boolean1, boolean2) {
   }
   return false;
 }
-//console.log(compareTrue(true, false));
+// console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -17,7 +17,7 @@ function splitSentence(string) {
   const arrayString = string.split(' ');
   return arrayString;
 }
-//console.log(splitSentence('Tree Of Savior'));
+// console.log(splitSentence('Tree Of Savior'));
 
 // Desafio 4
 function concatName(stringArray) {
@@ -25,7 +25,7 @@ function concatName(stringArray) {
   let lastName = stringArray[stringArray.length - 1];
   return `${lastName}, ${firstName}`;
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -34,14 +34,14 @@ function footballPoints(wins, ties) {
   let points = winner + tied;
   return points;
 }
-//console.log(footballPoints(1, 1));
+// console.log(footballPoints(1, 1));
 
 // Desafio 6
 function highestCount(numbers) {
   let contNumber = 0;
   let contRepeat = 0;
   let indexNumberRepeat = 0;
-  for (let index in numbers) {
+  for (let index in numbers) if (verifyNumber = numbers[index]) {
     let verifyNumber = numbers[index];
     for (let index2 in numbers) {
       if (verifyNumber === numbers[index2]) {
@@ -55,7 +55,7 @@ function highestCount(numbers) {
   }
   return numbers[indexNumberRepeat];
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,48 +69,27 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat1';
 }
-//console.log(catAndMouse(-15, -15, -15));
+// console.log(catAndMouse(-15, -15, -15));
 
 // Desafio 8
 function fizzBuzz(array) {
-  let myArray = [];
-  for (let element of array) {
-    if (element % 3 === 0 && element % 5 === 0) {
-      myArray.push('fizzBuzz');
-    } else if (element % 3 === 0) {
-      myArray.push('fizz');
-    } else if (element % 5 === 0) {
-      myArray.push('buzz');
+  for (number in array) {
+    if (array[number] % 3 === 0 && array[number] % 5 !== 0) {
+      array[number] = 'fizz';
+    } else if (array[number] % 5 === 0 && array[number] % 3 !== 0) {
+      array[number] = 'buzz';
+    } else if (array[number] % 5 === 0 && array[number] % 3 === 0) {
+      array[number] = 'fizzBuzz';
     } else {
-      myArray.push('bug!');
+      array[number] = 'bug!';
     }
   }
-  return myArray;
+  return array;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(phrase) {
-  let objectEncode = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  return switchLetter(phrase, objectEncode);
-}
-function decode(phrase) {
-  let objectDecode = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-  return switchLetter(phrase, objectDecode);
-}
-/*function encode(string) {
+function encode(string) {
   let encodingString = '';
   for (let element of string) {
     if (element === 'a') {
@@ -129,9 +108,9 @@ function decode(phrase) {
   }
   return encodingString;
 }
-//console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
-/*function decode(string2) {
+function decode(string2) {
   let decodingString = '';
   for (let element of string2) {
     if (element === '1') {
@@ -150,7 +129,7 @@ function decode(phrase) {
   }
   return decodingString;
 }
-console.log(decode('h3 th2r2!'));*/
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(languages, name) {
@@ -167,7 +146,7 @@ function techList(languages, name) {
   }
   return arrayTech;
 }
-//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Matheus'));
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Matheus'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -189,7 +168,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return isTriangle;
 }
-//console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
