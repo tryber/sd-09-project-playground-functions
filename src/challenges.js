@@ -185,13 +185,17 @@ function countRepeatedNumbers(array, number) {
 
 function checkNumbers(array) {
   let validate = true;
+  let check = true;
   
   for (let number in array) {
     count = countRepeatedNumbers(array, array[number]);
     validate = validateNumbers(array[number], count);
+    if (validate === false) {
+      check = false;
+    }
     count = 0;
   }
-  return validate;
+  return check;
 }
 
 function validateIfPossiblePhoneNumber(array) {
