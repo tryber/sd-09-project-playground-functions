@@ -91,14 +91,10 @@ function encode(entry) {
     u: '5',
   };
   let code = entry.split('');
+// Solução baseada na resolução do desafio 6
   for (let index = 0; index < code.length; index += 1) {
-    for (let char in cypher) {
-      switch(code[index]) {
-        case char:
-          code[index] = cypher[char];
-          break;
-        default:
-      }
+    if (cypher[code[index]] !== undefined) {
+      code[index] = cypher[code[index]]
     }
   }
   return code.join('');
