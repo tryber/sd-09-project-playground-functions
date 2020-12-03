@@ -235,8 +235,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let allDrinks = drinks.match(/\d+/g); // Expressão Regular
+  let drinksOfWater = 0;
+
+  for (let index in allDrinks) {
+    let numberOfDrinks = parseInt(allDrinks[index]);
+    drinksOfWater += numberOfDrinks;
+  }
+
+  if (drinksOfWater <= 1) {
+    return '1 copo de água';
+  }
+
+  return (drinksOfWater + ' copos de água');
 }
 
 
@@ -258,14 +270,23 @@ module.exports = {
 }
 
 console.log(compareTrue(true, true));
+
 console.log(calcArea(20, 30));
+
 console.log(splitSentence('go Trybe vamos que vamos'));
+
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 console.log(footballPoints(10, 5));
+
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 console.log(catAndMouse(5, 2, 8));
+
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 console.log(encode('hi there!'));
+
 console.log(decode('h3 th2r2!'));
 
 let techListArray = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
@@ -276,3 +297,5 @@ console.log(techList(techListArray, name));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 console.log(triangleCheck(10, 14, 8));
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
