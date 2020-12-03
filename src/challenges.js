@@ -49,17 +49,17 @@ function catAndMouse() {
 function fizzBuzz(inputArray) {
   let outputArray = [];
   for (let index = 0; index < inputArray.length; index += 1) {
-    if (inputArray[index] % 3 === 0 && inputArray[index] % 5 === 0) {
+    if (inputArray[index] % 3 != 0 && inputArray[index] % 5 != 0) {
+      outputArray.push('bug!');
+    }
+    if (inputArray[index] % 3 == 0 && inputArray[index] % 5 == 0) {
       outputArray.push('fizzBuzz');
     }
-    else if (inputArray[index] % 3 === 0) {
-      outputArray.push('fizz')
+    if (inputArray[index] % 3 == 0 && inputArray[index] % 5 != 0) {
+        outputArray.push('fizz')
     }
-    else if (inputArray[index] % 5 === 0) {
-      outputArray.push('Buzz');
-    }
-    else {
-      outputArray.push('bug!');
+    if (inputArray[index] % 3 != 0 && inputArray[index] % 5 == 0) {
+        outputArray.push('Buzz');
     }
   }
   console.log (outputArray);
