@@ -16,7 +16,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco']
+let numbers = ['lucas', 'gustavo', 'jon', 'carlos', 'yan']
 function concatName(stringArray){
   let reverse = stringArray.reverse();
   let concatReverse = reverse.join(', ');
