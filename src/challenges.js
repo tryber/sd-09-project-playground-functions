@@ -223,7 +223,10 @@ function hydrate(string) {
   for (let index in drinksArray) {
     countDrinks += Number(drinksArray[index]);
   }
-  return console.log(`${countDrinks} copos de água`)
+  if (countDrinks > 1) {
+    return console.log(`${countDrinks} copos de água`)
+  }
+  return console.log(`${countDrinks} copo de água`)
 }
 
 
