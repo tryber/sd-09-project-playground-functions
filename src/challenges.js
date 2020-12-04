@@ -138,7 +138,7 @@ function techList(arrayNamesAndTechs, name) {
 }
 
 // Desafio 11
-function verifyNumbersInArray(arrayNums) {
+function verifyPhoneNumbersLength(arrayNums) {
   let lowerNum = Math.min(...arrayNums);
   let highterNum = Math.max(...arrayNums);
   let response = null;
@@ -155,16 +155,43 @@ function verifyNumbersInArray(arrayNums) {
   return response;
 }
 
-function generatePhoneNumber(arrayNums) {
-  let responseVerifier = verifyNumbersInArray(arrayNums);
-  let numberCreated = null;
-  if (responseVerifier != null) {
-      return responseVerifier;
+function verifyPhoneNumbersCounterCalculator(arrayNums, number){
+  let counter = 0;
+  for (let i in arrayNums) {
+    if (arrayNums[i] == number) {
+      counter += 1;
+    }
   }
+  return counter;
+}
+
+function verifyPhoneNumbersRepeat(arrayNums) {
+  for (let i in arrayNums) {
+    let valueCounter = verifyPhoneNumbersCounterCalculator(arrayNums, arrayNums[i]);
+    if (valueCounter >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return null;
+}
+
+function generatePhoneNumber(arrayNums) {
+  let responseVerifier = verifyPhoneNumbersLength(arrayNums);
+  let responseVerifier2 = verifyPhoneNumbersRepeat(arrayNums);
+  let baseNumberVerifiers = {
+      verifier1: responseVerifier,
+      verifier2: responseVerifier2
+  }
+  for (let index in baseNumberVerifiers) {
+      if (baseNumberVerifiers[index] !== null) {
+          return baseNumberVerifiers[index];
+      }
+  }
+  //after verification then create the phone number
   arrayNums.splice(0, 0, '(');
   arrayNums.splice(3, 0, ')', ' ');
   arrayNums.splice(10, 0, '-');
-  numberCreated = arrayNums.join('');
+  let numberCreated = arrayNums.join('');
   return numberCreated;
 }
 
