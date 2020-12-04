@@ -168,7 +168,7 @@ function triangleCheck(lineA , lineB , lineC) {
   return b - a
   });
   
-  if ( (lineA - lineC) < lineB < (lineA + lineB) === true && 
+  if ( (lineA - lineC) < lineB < (lineA + lineC) === true && 
        (lineA - lineB) < lineC < (lineA + lineB) === true && 
        (lineB - lineC) < lineA < (lineB + lineC) === true) {
     result = true
@@ -177,7 +177,6 @@ function triangleCheck(lineA , lineB , lineC) {
   }
   return result
 }
-console.log(triangleCheck(10 , 14 , 8))
 
 // Desafio 13
 function hydrate(string) {
