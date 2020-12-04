@@ -16,13 +16,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-//let numbers = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(stringArray) {
   let reverse = stringArray.reverse();
   let concatReverse = reverse.join(', ');
   return concatReverse;
 }
-//console.log(concatName(numbers))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,9 +34,9 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNum) {
   let contador = 0;
   let maiorNum = Math.max.apply(null, arrayNum);
-  for ( let index = 0; index < arrayNum.length; index += 1) {
+  for (let index = 0; index < arrayNum.length; index += 1) {
     if (maiorNum === arrayNum[index]) {
-      contador +=1
+      contador += 1;
     }
   }
   return contador;
@@ -52,9 +50,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (positionCat1 < positionCat2) {
     resultCat = 'cat1';
-  } else if(positionCat2 < positionCat1) {
+  } else if (positionCat2 < positionCat1) {
     resultCat = 'cat2';
-  } else if(positionCat1 === positionCat2) {
+  } else if (positionCat1 === positionCat2) {
     resultCat = 'os gatos trombam e o rato foge';
   }
   return resultCat;
