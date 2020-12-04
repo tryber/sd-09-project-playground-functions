@@ -16,7 +16,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-let numbers = ['lucas', 'gustavo', 'jon', 'carlos', 'yan']
+let numbers = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(stringArray){
   let reverse = stringArray.reverse();
   let concatReverse = reverse.join(', ');
@@ -63,16 +63,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let final = [];
-  for (let index = 0; index <= array.length; index += 1){
-    if (index % 3 === 0 && index % 5 === 0){
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] % 3 === 0 && array[index] % 5 === 0){
       final.push('fizzBuzz');
-      } else if (index % 3 === 0){
-        final.push('fizz');
-      } else if (index % 5 === 0){
-        final.push('buzz' );
-      } else {
-        final.push('bug!');
-      }     
+    } else if (array[index] % 3 === 0){
+      final.push('fizz');
+    } else if (array[index] % 5 === 0){
+      final.push('buzz')
+    } else {
+      final.push('bug!');
+    }     
   }
   return final;
 }  
