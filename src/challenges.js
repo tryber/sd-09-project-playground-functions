@@ -117,16 +117,18 @@ function decode(Str2) {
 // Desafio 10
 function techList(tech, named) {
   let techListObjects = [];
+  tech = tech.sort();
   for (let index = 0; index < tech.length; index += 1) {
     let tec = Object();
     tec.tech = tech[index];
-    tec.name = named
-    techListObjects.push(tec)
+    tec.name = named;
+    techListObjects.push(tec);
   }
-  if (techListObjects === []) {
-    return ('Vazio!');
+  if (techListObjects.length === 0) {
+    return 'Vazio!';
   }
   return techListObjects;
+
 }
 
 // Desafio 11
