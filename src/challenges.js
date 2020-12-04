@@ -77,8 +77,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(num1) {
+  for (let i = 0; i < num1.length; i++){
+    if ((num1[i] % 3) == 0){
+      console.log('fizz')
+    } else if ((num1 % 5) == 0){
+      console.log('buzz')
+    } else if ((num1 % 3) == 0 && (num1 % 5) == 0){
+      console.log('fizzBuzz')
+    } else {
+      console.log('bug!')
+    }
+  }
 }
 
 // Desafio 9
@@ -104,7 +114,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   
 }
 
