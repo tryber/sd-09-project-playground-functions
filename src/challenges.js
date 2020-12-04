@@ -38,7 +38,6 @@ function highestCount(arrayNumbers) {
     if (arrayNumbers[index] > number) {
       number = arrayNumbers[index];
     }
-    console.log(number, arrayNumbers[index]);
   }
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (number === arrayNumbers[index]) {
@@ -47,7 +46,6 @@ function highestCount(arrayNumbers) {
   }
   return count;
 }
-console.log(highestCount([0, 1, 5, 5, 5]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -119,7 +117,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
-
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 console.log(fizzBuzz(10));
