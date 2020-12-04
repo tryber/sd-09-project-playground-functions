@@ -8,26 +8,26 @@ function compareTrue(boolean1 , boolean2) {
 }
 
 // Desafio 2
-function calcArea(base , height) {
+function calcArea(base, height) {
   let resultCalc = (base * height) / 2
   return resultCalc
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" " , )
+  let array = string.split(" ", )
   return array
 }
 
 // Desafio 4
 function concatName(array) {
-  let newString = array[array.length - 1] +", " + array[0]
+  let newString = array[array.length - 1] + ', ' + array[0]
   return newString
 }
 
 // Desafio 5
-function footballPoints(wins , ties) {
-  let totalPoints = (wins *3) + ties
+function footballPoints(wins, ties) {
+  let totalPoints = (wins * 3) + ties
   return totalPoints
 }
 
@@ -35,13 +35,13 @@ function footballPoints(wins , ties) {
 function highestCount(array) {
   let maior = ''
   let repetition = 0
-  for (let index = 0 ; index < array.length ; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (maior <= array[index]) {
       maior = array[index]
     }
   }
 
-  for (let index = 0 ; index < array.length ; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (maior === array[index]) {
       repetition = repetition + 1
     }
@@ -50,21 +50,20 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse , cat1 , cat2) {
-  function distance (number1 , number2) {
-    let distanceValue = ''
-  
+function catAndMouse(mouse, cat1, cat2) {
+  function distance (number1, number2) {
+      
     if (number1 > number2) {
-      return distanceValue = (number1 - number2)
+      return (number1 - number2)
     } else if (number1 < number2) {
-      return distanceValue = (number2 - number1)
+      return (number2 - number1)
     } else {
-      return distanceValue = (number1 - number2)
+      return (number1 - number2)
     }
   }
   
-let distance1 = distance(mouse , cat1)
-let distance2 = distance(mouse , cat2)
+  let distance1 = distance(mouse, cat1)
+  let distance2 = distance(mouse, cat2)
 
   if (distance1 > distance2) {
     return 'cat2'
@@ -99,7 +98,7 @@ function encode(string) {
   let array = []
   
   // 1º Parte: Verificar se a letra é minuscula, realizar a troca se necessário e por fim criar o array.
-  for (let index = 0 ; index < string.length ; index += 1){
+  for (let index = 0; index < string.length; index += 1){
     if(string[index] === string.toUpperCase()) {
       array.push(string[index])
     } else if (string[index] === 'a') {
@@ -126,7 +125,7 @@ function decode(string) {
   let array = []
   
   // 1º Parte: Verificar se é um número, se sim, retornar a letra.
-  for (let index = 0 ; index < string.length ; index += 1){
+  for (let index = 0; index < string.length; index += 1){
     if(string[index] == '1') {
       array.push('a')
     } else if (string[index] === '2') {
@@ -159,17 +158,10 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA , lineB , lineC) {
-  // Resolver itens negativos
-  let array = [lineA , lineB , lineC]
 
   let result = ""
 
-  array.sort(function(a, b) {
-  return b - a
-  });
-  
-  if ( (lineA - lineC) < lineB < (lineA + lineC) === true && 
-       (lineA - lineB) < lineC < (lineA + lineB) === true && 
+  if ( (lineA - lineC) < lineB < (lineA + lineC) === true && (lineA - lineB) < lineC < (lineA + lineB) === true && 
        (lineB - lineC) < lineA < (lineB + lineC) === true) {
     result = true
   } else {
@@ -177,6 +169,11 @@ function triangleCheck(lineA , lineB , lineC) {
   }
   return result
 }
+
+console.log(triangleCheck(10, 3, 4))
+
+
+
 
 // Desafio 13
 function hydrate(string) {
