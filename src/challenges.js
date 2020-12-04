@@ -90,42 +90,54 @@ function fizzBuzz(numbersArray) {
 
 // Desafio 9
 function encode(testString) {
-  let newString = '';
+  let newStringEncode = '';
   for (let index = 0; index < testString.length; index += 1) {
-    if (testString[index] === 'a') {
-      newString += '1';
-    } else if (testString[index] === 'e') {
-      newString += '2';
-    } else if (testString[index] === 'i') {
-      newString += '3';
-    } else if (testString[index] === 'o') {
-      newString += '4';
-    } else if (testString[index] === 'u') {
-      newString += '5';
-    } else {
-      newString += testString[index];
+    switch (testString[index]) {
+      case 'a':
+        newStringEncode += '1';
+        break;
+      case 'e':
+        newStringEncode += '2';
+        break;
+      case 'i':
+        newStringEncode += '3';
+        break;
+      case 'o':
+        newStringEncode += '4';
+        break;
+      case 'u':
+        newStringEncode += '5';
+        break;
+      default:
+        newStringEncode += testString[index];
     }
-  } return newString;
+  } return newStringEncode;
 }
 console.log(encode('hi there!'));
 
 function decode(testString) {
-  let newString = '';
+  let newStringDecode = '';
   for (let index = 0; index < testString.length; index += 1) {
-    if (testString[index] === '1') {
-      newString += 'a';
-    } else if (testString[index] === '2') {
-      newString += 'e';
-    } else if (testString[index] === '3') {
-      newString += 'i';
-    } else if (testString[index] === '4') {
-      newString += 'o';
-    } else if (testString[index] === '5') {
-      newString += 'u';
-    } else {
-      newString += testString[index];
+    switch (testString[index]) {
+      case '1':
+        newStringDecode += 'a';
+        break;
+      case '2':
+        newStringDecode += 'e';
+        break;
+      case '3':
+        newStringDecode += 'i';
+        break;
+      case '4':
+        newStringDecode += 'o';
+        break;
+      case '5':
+        newStringDecode += 'u';
+        break;
+      default:
+        newStringDecode += testString[index];
     }
-  } return newString;
+  } return newStringDecode;
 }
 console.log(decode('h3 th2r2!'));
 
