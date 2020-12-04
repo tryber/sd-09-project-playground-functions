@@ -207,12 +207,15 @@ function hydrate(string) {
   let regexForNumbers = /\d+/g;
   let myNumbers = string.match(regexForNumbers);
   let sumOfArrayNumbers = 0;
-  for (let number in myNumbers) {
+  for (let number = 0; number < myNumbers.length; number += 1) {
     sumOfArrayNumbers += Math.abs(myNumbers[number]);
+  }
+  if (sumOfArrayNumbers === 1) {
+    return `${sumOfArrayNumbers} copo de água`;
   }
   return `${sumOfArrayNumbers} copos de água`;
 }
-
+console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'))
 
 module.exports = {
   calcArea,
