@@ -212,10 +212,12 @@ function hydrate(string) {
   for (let index = 0; index < numberMatch.length; index += 1) {
     waterCups += parseInt(numberMatch[index]);
   }
-  if (waterCups === 0)
+  if (numberMatch.length > 0) {
+    returnPhrase = waterCups + ' copos de água';
+  }
+  if (waterCups === 0) {
     returnPhrase =  '1 copo de água';
-  if (numberMatch.length > 0)
-  returnPhrase = waterCups + ' copos de água';
+  }
   return returnPhrase;
 }
 
