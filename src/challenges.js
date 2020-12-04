@@ -41,7 +41,7 @@ function concatName(arrayNames) {
       stringNamesFromArray.push(arrayNames[index]);
     }
   }
-  console.log(stringNamesFromArray.join(', '));
+  return stringNamesFromArray.join(', ');
 }
 
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
