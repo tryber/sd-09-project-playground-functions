@@ -10,8 +10,7 @@ compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, height) {
-  let triangle = [];
-  triangle = ((base * height) / 2);
+  let triangle = ((base * height) / 2);
   return triangle;
 }
 console.log(calcArea(10, 5));
@@ -24,11 +23,11 @@ function splitSentence(split) {
 console.log(splitSentence('go Trybe'));
 
 //Desafio 4
-function concatName(arraySTR) { 
+function concatName(arraySTR) {
   let firstName = arraySTR[0];
   let lastName = arraySTR[arraySTR.length -1];
-  concat = lastName + ', ' + firstName;  
-  return concat
+  concat = lastName + ', ' + firstName;
+  return concat;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -41,46 +40,45 @@ console.log(footballPoints(10, 5));
 
 // Desafio 6
 function greatestValue(arrayNumbers) {
-  let greatest = 0
+  let greatest = 0;
   for (let element of arrayNumbers) {
     if (element > greatest) {
-      greatest = element
+      greatest = element;
     }
   }
-  return greatest
+  return greatest;
 }
 
 function highestCount(arrayNumbers) {
-  let greatestNumber = greatestValue(arrayNumbers)
-  let greatestCounter = 0
+  let greatestNumber = greatestValue(arrayNumbers);
+  let greatestCounter = 0;
   for (let element of arrayNumbers) {
     if (element === greatestNumber) {
-      greatestCounter += 1
+      greatestCounter += 1;
     }
   }
-  return greatestCounter
+  return greatestCounter;
 }
 
 console.log(highestCount([9, 1, 2, 3, 5, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let moveCat1 = Math.abs(mouse - cat1)
-  let moveCat2 = Math.abs(mouse - cat2)
-
+  let moveCat1 = Math.abs(mouse - cat1);
+  let moveCat2 = Math.abs(mouse - cat2);
   if (moveCat1 === moveCat2) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   } else if (moveCat1 > moveCat2) {
-    return 'cat2'
+    return 'cat2';
   } else {
-    return 'cat1'
+    return 'cat1';
 }
 }
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let result = []
+  let result = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       result.push('fizzBuzz');
@@ -96,15 +94,36 @@ function fizzBuzz(arrayNumbers) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayEncode) {
+  let encodeVocals = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+ };
+ arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding){
+   return encodeVocals[encoding];
+ });
+return arrayEncode;
 }
+console.log(encode('hi there!'));
 
-function decode() {
-  // seu código aqui  
+function decode(arrayDecode) {
+  let decodeVocals = {
+  '1': 'a',
+  '2': 'e',
+  '3': 'i',
+  '4': 'o',
+  '5': 'u',
+};
+arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function(decoding){
+  return decodeVocals[decoding];
+});
+return arrayDecode;
 }
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
