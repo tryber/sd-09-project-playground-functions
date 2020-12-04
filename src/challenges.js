@@ -49,60 +49,69 @@ function highestCount(recive) {
   }
   return count;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  switch (true) {
+    case distanceCat2 < distanceCat1:
+      return 'cat2';
+    case distanceCat1 < distanceCat2:
+      return 'cat2';
+    case distanceCat1 === distanceCat2:
+      return 'os gatos trombam e o rato foge';
+  }
 
-// Desafio 8
-function fizzBuzz(numberRecept) {
-  // seu código aqui
-}
+  // Desafio 8
+  function fizzBuzz(numberRecept) {
+    // seu código aqui
+  }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+  // Desafio 9
+  function encode() {
+    // seu código aqui
+  }
+  function decode() {
+    // seu código aqui
+  }
 
-// Desafio 10
-function techList() {
-  // seu código aqui
-}
+  // Desafio 10
+  function techList() {
+    // seu código aqui
+  }
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+  // Desafio 11
+  function generatePhoneNumber() {
+    // seu código aqui
+  }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+  // Desafio 12
+  function triangleCheck() {
+    // seu código aqui
+  }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+  // Desafio 13
+  function hydrate() {
+    // seu código aqui
+  }
 
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
-}
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    generatePhoneNumber,
+    techList,
+    highestCount,
+    hydrate,
+    splitSentence,
+    triangleCheck,
+  }
