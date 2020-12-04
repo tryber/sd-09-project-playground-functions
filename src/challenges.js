@@ -22,9 +22,24 @@ function calcArea(base, height) {
 calcArea(5, 4);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let frasesInArray = [];
+  let individualFrase = '';
+  for (let index in frase) {
+    console.log(`Letra que vou trabalhar agora é ${frase[index]}`)
+    if (frase[index] === ' ') {
+      frasesInArray.push(individualFrase);
+      console.log(`Frase acaba de ser adicionada no array`)
+      individualFrase = '';
+      console.log(`Frase acaba de ser apagada, e agora esta assim ${individualFrase}`)
+    }
+    individualFrase += frase[index];
+  }
+  frasesInArray.push(individualFrase);
+  console.log(frasesInArray)
 }
+
+splitSentence("go Trybe Maximilian Kaden")
 
 // Desafio 4
 function concatName() {
@@ -231,7 +246,7 @@ function techList(technologies, name) {
   return listTechnologies;
 }
 
-console.log(techList(['teste'], 'Maximilian'));
+// console.log(techList(['teste'], 'Maximilian'));
 
 // Desafio 11
 function generatePhoneNumber() {
