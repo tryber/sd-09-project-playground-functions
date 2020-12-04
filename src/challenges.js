@@ -32,7 +32,7 @@ function concatName(arrayNames) {
       stringNamesFromArray.push(arrayNames[index]);
     }
   }
-  console.log(stringNamesFromArray.join());
+  return stringNamesFromArray.join();
 }
 let arrayExemplos =  ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(arrayExemplos);
@@ -47,12 +47,18 @@ footballPoints(5, 2)
 
 // Desafio 6 - Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
 function highestCount(arrayOfNumbers) {
-  let HighestNumber = 0;
+  let highestNumber = 0;
   for (let index = 0; index < arrayOfNumbers.length; index += 1){
-
+    if (highestNumber > arrayOfNumbers[index]){
+      highestNumber = arrayOfNumbers[index];
+    }
+    else if (arrayOfNumbers[index] > highestNumber){
+      highestNumber = arrayOfNumbers[index];
+    }
   }
+  console.log(highestNumber);
 }
-
+highestCount([9, 1, 2, 3, 9, 5, 0]);
 // Desafio 7 - Caça ao rato.
 function catAndMouse(mouse, cat1, cat2) {
   let distanceFromCat1;
