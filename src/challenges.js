@@ -10,7 +10,7 @@ function compareTrue(num1, num2) {
   }
 }
 
-console.log(compareTrue(false, false));
+console.log(compareTrue( ));
 
 // Desafio 2
 function calcArea(base, height) {
