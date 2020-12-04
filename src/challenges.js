@@ -117,17 +117,20 @@ function stringLength(string1, string2) {
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let resultado = [];
+  let ehResto3;
+  let ehResto5;
+  let arrayTamanho = arrayNumeros.length;
 
-  for (let ind) {
+  for (let ind; ind < arrayTamanho; ind += 1) {
     frase = '';
-    resto3 = restCalculateTree(arrayNumeros[prop]);
-    resto5 = restCalculateFive(arrayNumeros[prop]);
-  frase += retornoAmbos(resto3, resto5);
-  frase += retornaFizz(resto3, resto5);
-  resultado.push(frase);
-}
+    ehResto3 = restCalculateTree(arrayNumeros[ind]);
+    ehResto5 = restCalculateFive(arrayNumeros[ind]);
+    frase += retornoAmbos(resto3, resto5, frase);
+    frase += retornaFizz(resto3, resto5);
+    resultado.push(frase);
+  }
 
-return resultado;
+  return resultado;
 }
 
 function restCalculateTree(numberArrayTree) {
@@ -139,6 +142,7 @@ function restCalculateFive(numberArrayFive) {
 }
 
 function retornoAmbos(boleanoA01, boleanoA02, texto) {
+
   let retorno = texto;
   if (boleanoA01 && boleanoA02) {
     retorno = 'fizzBuzz';
