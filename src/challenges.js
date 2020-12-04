@@ -208,8 +208,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.match(/\d+/g);
+  let sum = 0;
+  for(let index = 0; index < numbers.length; index += 1){
+      let int = parseInt(numbers[index]);
+      sum += int;
+  }
+  if (sum === 1){
+      return "1 copo de água";
+  }
+  return sum + ' copos de água'
 }
 
 
