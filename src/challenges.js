@@ -37,16 +37,19 @@ function splitSentence(frase) {
     }
   }
   frasesInArray.push(individualFrase);
-  console.log(frasesInArray);
+  // console.log(frasesInArray);
   return frasesInArray;
 }
 
 splitSentence('vamo que vamo ')
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  nomeUltimoEPrimeiro = `${array[0]}, ${array[array.length - 1]}`
+  return nomeUltimoEPrimeiro
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
