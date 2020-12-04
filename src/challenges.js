@@ -2,7 +2,7 @@
 function compareTrue(trueOrFalse1, truOrFalse2) {
   // seu código aqui
 
-  return ((trueOrFalse1) && (trueOrFalse2));
+  return ((trueOrFalse1) && (truOrFalse2));
 }
 
 // Desafio 2
@@ -40,9 +40,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumeros) {
-  let maiorNumero = '';
-  maiorNumero = arrayNumeros.reduce((a, b) => Math.max(a, b));
+
+  let maiorNumero = arrayNumeros.reduce((a, b) => Math.max(a, b));
+  let quantMaior = somaMaiorNumero(maiorNumero, arrayNumeros);
+
   return maiorNumero;
+}
+
+function somaMaiorNumero(numero, arrayNumero) {
+  let qdt = 0;
+  for (let i; i < arrayNumeros.length; i += 1) {
+    if (arrayNumero[i] === numero) {
+      qdt += 1;
+    }
+    return qdt;
+  }
 }
 
 // Desafio 7
@@ -66,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function distanceForMouse(mouses, cats) {
-  let dist = mouse - cats
+  let dist = mouses - cats
   return dist;
 }
 
