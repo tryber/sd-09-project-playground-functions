@@ -128,7 +128,7 @@ function fizzBuzz(arrayNumeros) {
     frase += retornoAmbos(resto3, resto5, frase);
     frase += retornaFizz(resto3, resto5);
     resultado.push(frase);
-  }
+  };
 
   return resultado;
 }
