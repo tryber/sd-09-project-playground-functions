@@ -46,32 +46,34 @@ function highestCount(setOfNumbers) {
   // seu código aqui
   function getMaxOfArray(setOfNumbers) {
     return Math.max.apply(null, setOfNumbers);
- }
- let higherNumber = getMaxOfArray(setOfNumbers)
- let count = 0;
+  }
+  let higherNumber = getMaxOfArray(setOfNumbers)
+  let numberCounter = 0;
 
- for (let index = 0; index < setOfNumbers.length; index += 1) {
-   if (higherNumber === setOfNumbers[index]) {
-     count++;
-   }
- }
- return count
+  for (let index = 0; index < setOfNumbers.length; index += 1) {
+    if (higherNumber === setOfNumbers[index]) {
+      numberCounter = numberCounter + 1;
+    }
+  }
+  return numberCounter
 }
-console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
+// console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let positionCat1Mouse = cat1 - mouse;
   let positionCat2Mouse = cat2 - mouse;
-
+  let mouseHut;
+  
   if (positionCat1Mouse < positionCat2Mouse) {
-    return "cat1";
+    mouseHut = 'cat1';
   } else if (positionCat1Mouse > positionCat2Mouse) {
-    return "cat2";
+    mouseHut = 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    mouseHut = 'os gatos trombam e o rato foge';
   }
+  return mouseHut;
 }
 
 // Desafio 8
