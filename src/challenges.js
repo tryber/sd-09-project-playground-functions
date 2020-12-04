@@ -73,11 +73,11 @@ function fizzBuzz(numbers) {
       arrayOfStrings[index] = 'fizz';
     } else if (numbers[index] % 5 === 0) {
       arrayOfStrings[index] = 'buzz';
-    } 
-      arrayOfStrings[index] = 'bug!';
+    }
+    arrayOfStrings[index] = 'bug!';
   }
   return arrayOfStrings;
-  }
+}
 
 // Desafio 9
 function encode() {
