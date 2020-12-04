@@ -133,7 +133,7 @@ function techList(arrayOfTech, name) {
 }
 
 // Desafio 11
-function inadequatedNumbers(number) {
+function inadequateNumbers(number) {
   let inadequated = false;
   for (let valor in number) {
     if (number[valor] > 9) {
@@ -166,7 +166,7 @@ function tooMuchRepeated(array) {
 }
 function generatePhoneNumber(array) {
   let myPhoneNumber = ''
-  let invalidNumbers = inadequatedNumbers(array);
+  let invalidNumbers = inadequateNumbers(array);
   let repeatedNumbers = tooMuchRepeated(array);
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -179,10 +179,29 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+function lineACheck(lineA, lineB, lineC) {
+  let smallerThanSum = lineA < lineB + lineC;
+  let biggerThanDiff = lineA > Math.abs(lineB - lineC);
+  return (smallerThanSum && biggerThanDiff);
 }
-
+function lineBCheck(lineA, lineB, lineC) {
+  let smallerThanSum = lineB < lineA + lineC;
+  let biggerThanDiff = lineB > Math.abs(lineA - lineC);
+  return (smallerThanSum && biggerThanDiff);
+}
+function lineCCheck(lineA, lineB, lineC) {
+  let smallerThanSum = lineC < lineB + lineA;
+  let biggerThanDiff = lineC > Math.abs(lineB - lineA);
+  return (smallerThanSum && biggerThanDiff);
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let sideA = lineACheck(lineA, lineB, lineC);
+  let sideB = lineBCheck(lineA, lineB, lineC);
+  let sideC = lineCCheck(lineA, lineB, lineC);
+  let compare = (sideA === true || sideB === true || sideC === true) ? true : false;
+  return compare;
+}
+console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
