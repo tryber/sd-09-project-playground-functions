@@ -112,21 +112,20 @@ return string9;
 let arraytech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let name = "Felipe";
 function techList(arraytech, name) {
-  // seu código aqui
+// seu código aqui
   let arrayTech = [];
-  tech.sort();
-  for (let index = 0; index < tech.length; index += 1) {
+  arraytech.sort();
+  for (let index = 0; index < arraytech.length; index += 1) {
     arrayTech.push({
-      tech: tech[index],
+      tech: arraytech[index],
       name,
     });   
   }
   if (arrayTech.length === 0) {
-    return 'Vazio!';
+  return 'Vazio!';
   }
   return arrayTech;
 }
-
 
 // Desafio 11
 function generatePhoneNumber(arraytelephone) {
