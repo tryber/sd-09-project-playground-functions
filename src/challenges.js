@@ -281,12 +281,12 @@ function checkNumberIsCorrect(array) {
   for (let index in array) {
     if (array[index] < 0 || array[index] > 9){
       isCorrect = false;
-      console.log('Tem numero fora do range 0 - 9')
+      // console.log('Tem numero fora do range 0 - 9')
     };
     let actualNumberCheck = array[index]
     if (checkNumberRepeatMoreThanLimit(actualNumberCheck, array) === true){
       isCorrect = false;
-      console.log('Numero se repetiu mais de 3x')
+      // console.log('Numero se repetiu mais de 3x')
     }
   }
   return isCorrect
@@ -295,11 +295,11 @@ function checkNumberIsCorrect(array) {
 function checkNumberRepeatMoreThanLimit(number, array) {
   let timesNumberRepeat = 0;
   for (let index in array) {
-    console.log(`Iniciando comparação do numero ${number} com ${array[index]}`)
+    // console.log(`Iniciando comparação do numero ${number} com ${array[index]}`)
     if (number === array[index]) {
       timesNumberRepeat += 1
-      console.log(`Numero se repetiu`)
-      console.log(timesNumberRepeat)
+      // console.log(`Numero se repetiu`)
+      // console.log(timesNumberRepeat)
     }
     let maxTimeToRepeat = 3
     if (timesNumberRepeat >= maxTimeToRepeat) {
@@ -321,9 +321,20 @@ function generatePhoneNumber(array) {
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineb, linec) {
+  let lines = [lineA, lineb, linec]
+  let totalLinesLenght = lineA + lineb + linec
+  let isTrue = true
+  //Verificação 1
+  for (let line in lines) {
+    if (lines[line] > totalLinesLenght - lines[line]){
+      isTrue = false
+    }
+  }
+  return isTrue
 }
+
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
