@@ -15,8 +15,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string0) {
   // seu código aqui
+  let main = [];
+  let sup1 = '';
+  for(let i = 0; i <= string0.length; i += 1) {
+    if (string0[i] === ' ' || i === string0.length) {
+      main.push(sup1)
+      sup1 = ''
+    } else {
+      sup1 += string0[i]
+    }
+  }
+  return main
 }
 
 // Desafio 4
@@ -39,13 +50,32 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if (cat1 - mouse > cat2 - mouse) {
+    return "cat2"
+  } else if (cat1 - mouse < cat2 - mouse) {
+    return "cat1"
+  } else {
+    return "Os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numberArray) {
   // seu código aqui
+  let retorno = []; 
+  for(let i = 0; i < numberArray.length; i+= 1) {
+    if (numberArray[i] % 3 === 0 && numberArray[i] % 5 !== 0) {
+      retorno.push('fizz')
+    } else if (numberArray[i] % 5 === 0 && numberArray[i] % 3 !== 0) {
+      retorno.push('buzz')
+    } else if (numberArray[i] % 3 === 0 && numberArray[i] % 3 === 0) {
+      retorno.push('fizzBuzz')
+    } else {
+      retorno.push('bug!')
+    }
+  } return retorno
 }
 
 // Desafio 9
