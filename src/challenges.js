@@ -26,10 +26,8 @@ function concatName(array) {
   // seu código aqui
   let str1 = array[0];
   let str2 = array[array.length - 1];
-  let str3 = str2 + ', ' + str1;
-  
+  let str3 = str2 + ', ' + str1;  
   return str3;
-
 }
 
 // Desafio 5
@@ -60,13 +58,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouseGato1 = 0;
   let distanciaMouseGato2 = 0;
 
-  if (mouse > cat1){
+  if (mouse > cat1) {
     distanciaMouseGato1 = mouse - cat1;
   } else {
     distanciaMouseGato1 = cat1 - mouse;
   }
 
-  if (mouse > cat2){
+  if (mouse > cat2) {
     distanciaMouseGato2 = mouse - cat2;
   } else {
     distanciaMouseGato2 = cat2 - mouse;
@@ -74,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaMouseGato1 > distanciaMouseGato2) {
     return "cat2";
-  } else if (distanciaMouseGato1 < distanciaMouseGato2){
+  } else if (distanciaMouseGato1 < distanciaMouseGato2) {
     return "cat1";
   } else {
     return "os gatos trombam e o rato foge";
@@ -105,20 +103,20 @@ function encode(string) {
   // seu código aqui
   let enc = '';
   for (index = 0; index < string.length; index += 1) {
-    switch (string[index]){
-      case 'a':         
+    switch (string[index]) {
+      case 'a':
         enc += 1;
         break;
-      case 'e': 
+      case 'e':
         enc += 2;
         break;
-      case 'i': 
+      case 'i':
         enc += 3;
         break;
-      case 'o': 
+      case 'o':
         enc += 4;
         break;
-      case 'u': 
+      case 'u':
         enc += 5;
         break;
       default: enc += string[index];
@@ -130,20 +128,20 @@ function decode(string) {
   // seu código aqui
   let dec = '';
   for (index = 0; index < string.length; index += 1) {
-    switch (string[index]){
-      case '1':         
+    switch (string[index]) {
+      case '1':
         dec += 'a';
         break;
-      case '2': 
+      case '2':
         dec += 'e';
         break;
-      case '3': 
+      case '3':
         dec += 'i';
         break;
-      case '4': 
+      case '4':
         dec += 'o';
         break;
-      case '5': 
+      case '5':
         dec += 'u';
         break;
       default: dec += string[index];
@@ -155,8 +153,8 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  if (!array.length){
-    return 'Vazio!'
+  if (!array.length) {
+    return 'Vazio!';
   }
   array.sort();
   for (let index = 0; index < array.length; index += 1) {
@@ -175,20 +173,21 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let isTriangle = false;
-    if ((Math.abs(lineB - lineC) < lineA) && (lineA < (lineB+lineC)) &&
-        (Math.abs(lineA - lineC) < lineB) && (lineB < (lineA+lineC)) &&
-        (Math.abs(lineA - lineB) < lineC) && (lineC < (lineA+lineC))) {
-        isTriangle = true;           
-    }
+  if ((Math.abs(lineB - lineC) < lineA) && (lineA < (lineB+lineC)) &&
+      (Math.abs(lineA - lineC) < lineB) && (lineB < (lineA+lineC)) &&
+      (Math.abs(lineA - lineB) < lineC) && (lineC < (lineA+lineC))) {
+      isTriangle = true;
+  }
     return isTriangle;
 }
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  
 }
 
 
