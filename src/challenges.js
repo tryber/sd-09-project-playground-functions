@@ -44,12 +44,13 @@ function highestCount(arrayNumeros) {
   let maiorNumero = arrayNumeros.reduce((a, b) => Math.max(a, b));
   let quantMaior = somaMaiorNumero(maiorNumero, arrayNumeros);
 
-  return maiorNumero;
+  return quantMaior;
 }
 
 function somaMaiorNumero(numero, arrayNumero) {
   let qdt = 0;
-  for (let i; i < arrayNumeros.length; i += 1) {
+  let tamanhoArray = arrayNumeros.length;
+  for (let i; i < tamanhoArray; i += 1) {
     if (arrayNumero[i] === numero) {
       qdt += 1;
     }
@@ -91,8 +92,14 @@ function distanceInCats1(distCat1, distCat2) {
 }
 
 function cat1ToCat2(cat1, cat2) {
-  let distanceCats = (a > b) ? 'cat1' : 'cat2';
-  return distanceCats;
+  let distanceCats = 0;
+  let retornoString = '';
+  if (cat1 > cat2) {
+    retornoString = 'cat1';
+  } else {
+    retornoString = 'cat2';
+  }
+  return retornoString;
 }
 
 function stringLength(string1, string2) {
@@ -110,21 +117,17 @@ function stringLength(string1, string2) {
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let resultado = [];
-  validade = false;
-  let resto3 = false;
-  let resto5 = false;
-  let frase = '';
 
-  for (let prop in arrayNumeros) {
+  for (let ind) {
     frase = '';
     resto3 = restCalculateTree(arrayNumeros[prop]);
     resto5 = restCalculateFive(arrayNumeros[prop]);
-    frase += retornoAmbos(resto3, resto5);
-    frase += retornaFizz(resto3, resto5);
-    resultado.push(frase);
-  }
+  frase += retornoAmbos(resto3, resto5);
+  frase += retornaFizz(resto3, resto5);
+  resultado.push(frase);
+}
 
-  return resultado;
+return resultado;
 }
 
 function restCalculateTree(numberArrayTree) {
