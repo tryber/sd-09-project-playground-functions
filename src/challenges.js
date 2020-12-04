@@ -143,22 +143,22 @@ function verifyPhoneNumbersLength(arrayNums) {
   let highterNum = Math.max(...arrayNums);
   let response = null;
   let errorMsg = {
-      0: 'não é possível gerar um número de telefone com esses valores',
-      1: 'Array com tamanho incorreto.'
+    0: 'não é possível gerar um número de telefone com esses valores',
+    1: 'Array com tamanho incorreto.',
   }
   if (lowerNum < 0 || highterNum > 9) {
-      response = errorMsg[0];
+    response = errorMsg[0];
   }
   if (arrayNums.length != 11) {
-      response = errorMsg[1];
+    response = errorMsg[1];
   }
   return response;
 }
 
-function verifyPhoneNumbersCounterCalculator(arrayNums, number){
+function verifyPhoneNumbersCounterCalculator(arrayNums, number) {
   let counter = 0;
   for (let i in arrayNums) {
-    if (arrayNums[i] == number) {
+    if (arrayNums[i] === number) {
       counter += 1;
     }
   }
@@ -166,7 +166,7 @@ function verifyPhoneNumbersCounterCalculator(arrayNums, number){
 }
 
 function verifyPhoneNumbersRepeat(arrayNums) {
-  for (let i in arrayNums) {
+  for (let index = 0; index < arrayNums.length; index += 1) {
     let valueCounter = verifyPhoneNumbersCounterCalculator(arrayNums, arrayNums[i]);
     if (valueCounter >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -179,15 +179,15 @@ function generatePhoneNumber(arrayNums) {
   let responseVerifier = verifyPhoneNumbersLength(arrayNums);
   let responseVerifier2 = verifyPhoneNumbersRepeat(arrayNums);
   let baseNumberVerifiers = {
-      verifier1: responseVerifier,
-      verifier2: responseVerifier2
+    verifier1: responseVerifier,
+    verifier2: responseVerifier2
   }
   for (let index in baseNumberVerifiers) {
-      if (baseNumberVerifiers[index] !== null) {
-          return baseNumberVerifiers[index];
-      }
+    if (baseNumberVerifiers[index] !== null) {
+      return baseNumberVerifiers[index];
+    }
   }
-  //after verification then create the phone number
+  // after verification then create the phone number
   arrayNums.splice(0, 0, '(');
   arrayNums.splice(3, 0, ')', ' ');
   arrayNums.splice(10, 0, '-');
