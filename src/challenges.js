@@ -36,10 +36,11 @@ function splitSentence(frase) {
     individualFrase += frase[index];
   }
   frasesInArray.push(individualFrase);
-  console.log(frasesInArray)
+  console.log(frasesInArray);
+  return frasesInArray;
 }
 
-splitSentence("go Trybe Maximilian Kaden")
+splitSentence('go Trybe')
 
 // Desafio 4
 function concatName() {
