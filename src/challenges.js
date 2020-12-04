@@ -45,7 +45,7 @@ splitSentence('vamo que vamo ')
 
 // Desafio 4
 function concatName(array) {
-  nomeUltimoEPrimeiro = `${array[0]}, ${array[array.length - 1]}`
+  nomeUltimoEPrimeiro = `${array[array.length - 1]}, ${array[0]}`
   return nomeUltimoEPrimeiro
 }
 
