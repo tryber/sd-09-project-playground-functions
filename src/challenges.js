@@ -115,8 +115,14 @@ function decode() {
 
 // Desafio 10
 function techList(tech, name) {
-  
-}
+  let objetoTech = []
+  if (tech === null){
+    return 'Vazio!'
+  } else {
+    for (key in tech) {
+      objetoTech.push(tech[key] + ' e ' + name);
+    }
+  }
 
 // Desafio 11
 function generatePhoneNumber() {
