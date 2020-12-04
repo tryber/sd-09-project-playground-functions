@@ -137,17 +137,15 @@ function decode(codedString) {
 // Desafio 10
 function techList(techArray, name) {
   let array = [];
-  let object = {}
 
   for (let i = 0; i < techArray.length; i += 1) {
-    object = {
+    array[i] = {
       tech: techArray[i],
       name: name,
-    }
-    array.push(object);
-    object = {};
+    };
   }
-}
+  return array;
+} 
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
