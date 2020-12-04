@@ -54,6 +54,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzOrBuzz(array) {
+  for (let index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+      array[index] = 'fizz';
+    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+      array[index] = 'buzz';
+    }
+  }
+  return array;
+}
+
 function fizzBuzz(array) {
   fizzOrBuzz(array);
   for (let index in array) {
@@ -61,17 +72,6 @@ function fizzBuzz(array) {
       array[index] = 'fizzBuzz';
     } else if (typeof array[index] !== 'string') {
       array[index] = 'bug!';
-    }
-  }
-  return array;
-}
-
-function fizzOrBuzz(array) {
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-      array[index] = 'fizz';
-    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
-      array[index] = 'buzz';
     }
   }
   return array;
