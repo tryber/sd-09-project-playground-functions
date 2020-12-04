@@ -89,55 +89,55 @@ function fizzBuzz(numbersArray) {
 // console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
-function encode(testString) {
-  let newStringEncode = '';
-  for (let index = 0; index < testString.length; index += 1) {
-    switch (testString[index]) {
+function encode(string) {
+  let encodeString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
       case 'a':
-        newStringEncode += '1';
+        encodeString += '1';
         break;
       case 'e':
-        newStringEncode += '2';
+        encodeString += '2';
         break;
       case 'i':
-        newStringEncode += '3';
+        encodeString += '3';
         break;
       case 'o':
-        newStringEncode += '4';
+        encodeString += '4';
         break;
       case 'u':
-        newStringEncode += '5';
+        encodeString += '5';
         break;
       default:
-        newStringEncode += testString[index];
+        encodeString += string[index];
     }
-  } return newStringEncode;
+  } return encodeString;
 }
 console.log(encode('hi there!'));
 
-function decode(testString) {
-  let newStringDecode = '';
-  for (let index = 0; index < testString.length; index += 1) {
-    switch (testString[index]) {
+function decode(string) {
+  let decodeString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
       case '1':
-        newStringDecode += 'a';
+        decodeString += 'a';
         break;
       case '2':
-        newStringDecode += 'e';
+        decodeString += 'e';
         break;
       case '3':
-        newStringDecode += 'i';
+        decodeString += 'i';
         break;
       case '4':
-        newStringDecode += 'o';
+        decodeString += 'o';
         break;
       case '5':
-        newStringDecode += 'u';
+        decodeString += 'u';
         break;
       default:
-        newStringDecode += testString[index];
+        decodeString += string[index];
     }
-  } return newStringDecode;
+  } return decodeString;
 }
 console.log(decode('h3 th2r2!'));
 
