@@ -64,7 +64,7 @@ function catAndMouse(mouse , cat1 , cat2) {
   }
   
 let distance1 = distance(mouse , cat1)
- let distance2 = distance(mouse , cat2)
+let distance2 = distance(mouse , cat2)
 
   if (distance1 > distance2) {
     return 'cat2'
@@ -158,9 +158,26 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lines) {
+  // Resolver itens negativos
+  let array = lines
+
+  let result = ""
+
+  array.sort(function(a, b) {
+  return b - a
+  });
+  
+  if ( (array[0] - array[2]) < array[1] < (array[0] + array[1]) === true && 
+       (array[0] - array[1]) < array[2] < (array[0] + array[1]) === true && 
+       (array[1] - array[2]) < array[0] < (array[1] + array[2]) === true) {
+    result = true
+  } else {
+    result = false
+  }
+  return result
 }
+console.log(triangleCheck([10 , 14 , 8]))
 
 // Desafio 13
 function hydrate(string) {
