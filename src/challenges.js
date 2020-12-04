@@ -50,15 +50,15 @@ function highestCount(array) {
   let higher = array[0];
   let n = array.length;
   let counter = 0;
-  for (let index = 0; index < n; index += 1){
+  for (let index = 0; index < n; index += 1) {
     let number = array[index];
-    if (number > higher){
+    if (number > higher) {
       higher = array[index];
     }
   }
-  for ( let index = 0; index < n; index += 1){
-      let number = array[index]
-    if (higher === number){
+  for ( let index = 0; index < n; index += 1) {
+    let number = array[index];
+    if (higher === number) {
       counter += 1;
     }
   }
@@ -69,31 +69,30 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
   let dist2 = mouse - cat2;
-  if (dist1 < 0){
+  if (dist1 < 0) {
     dist1 = (dist1 * -1);
-  } else if (dist2 < 0){
+  } else if (dist2 < 0) {
     dist2 = (dist2 * -1);
   }
 
-  if (dist1 === dist2){
+  if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
-  }else if (dist1 < dist2){
+  } else if (dist1 < dist2) {
     return 'cat1';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let array2 = [];
-  for (let index = 0; index < array.length; index += 1){
-    if (array[index] % 3 === 0 && array[index] % 5 === 0){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       array2.push('fizzBuzz');
-    } else if (array[index] % 5 === 0){
+    } else if (array[index] % 5 === 0) {
       array2.push('buzz');
-    } else if (array[index] % 3 === 0){
-          array2.push('fizz');
+    } else if (array[index] % 3 === 0) {
+        array2.push('fizz');
     } else {
       array2.push('bug!')
     }
@@ -104,16 +103,16 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(phraseLetters) {
   let phrase2 = '';
-  for (let index = 0; index < phraseLetters.length; index += 1){
-    if (phraseLetters.charAt(index) === 'a'){
+  for (let index = 0; index < phraseLetters.length; index += 1) {
+    if (phraseLetters.charAt(index) === 'a') {
       phrase2 += '1';
-    } else if (phraseLetters.charAt(index) === 'e'){
+    } else if (phraseLetters.charAt(index) === 'e') {
       phrase2 += '2';
-    } else if (phraseLetters.charAt(index) === 'i'){
+    } else if (phraseLetters.charAt(index) === 'i') {
       phrase2 += '3';
-    } else if (phraseLetters.charAt(index) === 'o'){
+    } else if (phraseLetters.charAt(index) === 'o') {
       phrase2 += '4';
-    } else if (phraseLetters.charAt(index) === 'u'){
+    } else if (phraseLetters.charAt(index) === 'u') {
       phrase2 += '5';
     } else {
       phrase2 += phraseLetters.charAt(index);
@@ -124,16 +123,16 @@ function encode(phraseLetters) {
 
 function decode(phraseNumbers) {
   let phrase2 = '';
-  for (let index = 0; index < phraseNumbers.length; index += 1){
-    if (phraseNumbers.charAt(index) === '1'){
+  for (let index = 0; index < phraseNumbers.length; index += 1) {
+    if (phraseNumbers.charAt(index) === '1') {
       phrase2 += 'a';
-    } else if (phraseNumbers.charAt(index) === '2'){
+    } else if (phraseNumbers.charAt(index) === '2') {
       phrase2 += 'e';
-    } else if (phraseNumbers.charAt(index) === '3'){
+    } else if (phraseNumbers.charAt(index) === '3') {
       phrase2 += 'i';
-    } else if (phraseNumbers.charAt(index) === '4'){
+    } else if (phraseNumbers.charAt(index) === '4') {
       phrase2 += 'o';
-    } else if (phraseNumbers.charAt(index) === '5'){
+    } else if (phraseNumbers.charAt(index) === '5') {
       phrase2 += 'u';
     } else {
       phrase2 += phraseNumbers.charAt(index);
@@ -145,21 +144,20 @@ function decode(phraseNumbers) {
 // Desafio 10
 function techList(array, name) {
   let n1 = array.length;
-  if (n1 == 0){
+  if (n1 === 0) {
     return 'Vazio!';
-  } else {
-      let array2 = array.sort();
-      let array3 = [];
-      let n = array.length;
-      for (let index = 0; index < n; index += 1){
-        let object = {
-          tech: array2[index],
-          name: name
-        }
-        array3.push(object);
-      }
-      return array3;
   }
+  let array2 = array.sort();
+  let array3 = [];
+  let n = array.length;
+  for (let index = 0; index < n; index += 1){
+    let object = {
+      tech: array2[index],
+      name: name
+    }
+    array3.push(object);
+  }
+  return array3;
 }
 
 // Desafio 11
