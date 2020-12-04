@@ -14,10 +14,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  let arrayForSentence = frase.split(' ');
 
-  return;
+  return arrayForSentence;
 }
 
 // Desafio 4
@@ -38,31 +39,59 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(arrayNumeros) {
+  let maiorNumero = '';
+  maiorNumero = arrayNumeros.reduce((a, b) => Math.max(a, b));
+  return maiorNumero;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distCat1 = mouse - cat1;
-  let distCat2 = mouse - cat2;
-  let resultado = 'os gatos trombam e o rato foge';
+  let distCat1 = 0;
+  let distCat2 = 0;
+  let stringResponse1 = '';
+  let stringResponse2 = '';
+  let responseQuestion = '';
 
-  if (distCat1 !== distCat2) {
-    resultado = distanciaRatoGato(cat1, cat2);
-  }
+  distCat1 = distanceForMouse(mouse, cat1);
+  distCat2 = distanceForMouse(mouse, cat2);
+
+  stringResponse1 = distanceInCats1(distCat1, distCat2);
+  stringResponse2 = cat1ToCat2(cat1, cat2);
+
+  responseQuestion = stringLength(stringResponse1, stringResponse2)
+
   return resultado;
 }
 
-function distanciaRatoGato(cat1, cat2) {
-  if (cat1 < cat2) {
-    return 'cat1';
+function distanceForMouse(mouses, cats) {
+  let dist = mouse - cats
+  return dist;
+}
+
+function distanceInCats1(distCat1, distCat2) {
+  let retorno = '';
+  if (distCat1 === distCat2) {
+    retorno = 'os gatos trombam e o rato foge';
   }
-  if (cat2 < cat1) {
-    return 'cat2';
+  return retorno;
+}
+
+function cat1ToCat2(cat1, cat2) {
+  let distanceCats = (a > b) ? 'cat1' : 'cat2';
+  return distanceCats;
+}
+
+function stringLength(string1, string2) {
+  let widthString = string1.length;
+  let stringCats = string1;
+
+  if (widthString <= 0) {
+    stringCats = string2;
   }
+
+  return stringCats;
 }
 
 // Desafio 8
@@ -139,7 +168,6 @@ function retornaBug(stringBug) {
 function encode() {
   // seu código aqui
 
-
 }
 
 function decode() {
@@ -147,7 +175,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayTech) {
   // seu código aqui
   const arrayTechSort = arrayTech.sort();
   let tamanhoTechSort = arrayTechSort.length;
@@ -155,6 +183,7 @@ function techList() {
   let obj;
 
   for (let index = 0; index < tamanhoTechSort; index += 1) {
+    obj = '{tech: ' + arrayTechSort[index]
     obj = criaObj("HTML", nameTech);
     objetoResultado.push(obj);
   }
