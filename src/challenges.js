@@ -113,7 +113,7 @@ function fizzBuzz(numbersArray) {
 
 // Challenge Nine - Function to encode string
 function encode(stringToEncode) {
-  let translatorMap = {
+  let encriptorMap = {
     a: 1,
     e: 2,
     i: 3,
@@ -124,16 +124,12 @@ function encode(stringToEncode) {
   let encodedString = '';
   for (let index = 0; index < stringToEncode.length; index += 1) {
     encodedArray.push(stringToEncode[index]);
-    encodedArray[index] = encriptMessage(encodedArray[index], translatorMap);
+    encodedArray[index] = encriptMessage(encodedArray[index], encriptorMap);
     
     encodedString += encodedArray[index];
   }
   return encodedString;
 }
-
-let coded = encode('Helo there, how are you');
-console.log(coded);
-console.log(decode(coded));
 
 function encriptMessage(character, charMap) {
   for (let key in charMap) {
@@ -146,7 +142,7 @@ function encriptMessage(character, charMap) {
 
 // Challenge Nine - Function to decode a string
 function decode(stringToDecode) {
-  let translatorMap = {
+  let decriptorMap = {
     a: 1,
     e: 2,
     i: 3,
@@ -158,7 +154,7 @@ function decode(stringToDecode) {
   let decodedString = '';
   for (let index = 0; index < stringToDecode.length; index += 1) {
     decodedArray.push(stringToDecode[index]);
-    decodedArray[index] = decriptMessage(stringToDecode[index], translatorMap);
+    decodedArray[index] = decriptMessage(stringToDecode[index], decriptorMap);
     decodedString += decodedArray[index];
   }
   return decodedString;
