@@ -220,7 +220,7 @@ function techList(technologies, name) {
   let listTechnologies = [];
   technologies.sort();
   if (technologies.length <= 0) {
-    return 'Vazio';
+    return 'Vazio!';
   };
   for (let index in technologies) {
     listTechnologies.push({
