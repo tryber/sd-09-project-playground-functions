@@ -52,21 +52,21 @@ function highestCount(recive) {
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
   // seu código aqui
-  /*switch (true) {
+/* switch (true) {
     case distanceCat1 < distanceCat2:
-      return 'cat1';
+  return 'cat1';
     case distanceCat2 < distanceCat1:
-      return 'cat2';
+  return 'cat2';
     case distanceCat1 === distanceCat2:
-      return 'os gatos trombam e o rato foge';*/
+  return 'os gatos trombam e o rato foge'; */
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumber) {
+function fizzBuzz() {
   // seu código aqui
-  /*let arrayFizz = []
+  /* let arrayFizz = []
   for (let index = 0; index <= arrayNumber; index += 1) {
     switch (true) {
       case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 === 0)):
@@ -79,10 +79,9 @@ function fizzBuzz(arrayNumber) {
         arrayFizz.push('fizz');
         break;
       default
-        arrayFizz.push('bug!');
-    }*/
-}
-//return arrayFizz;
+        arrayFizz.push('bug!');*/
+    } 
+// return arrayFizz;
 
 // Desafio 9
 function encode() {
