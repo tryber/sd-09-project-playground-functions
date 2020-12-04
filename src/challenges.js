@@ -16,9 +16,9 @@ function calcArea(base, height) {
 function splitSentence(sentence) {
   let arrayStrings = [];
   let newString = '';
-  for (index = 0; index < sentence.length; index += 1) {
+  for (let index = 0; index < sentence.length; index += 1) {
     if (sentence[index] !== ' ') {
-      newString = newString + sentence[index];
+      newString += sentence[index];
     }
     if (sentence[index] === ' ' && newString !== '') {
       arrayStrings.push(newString);
@@ -53,20 +53,8 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz([arrayNumbers]) {
+function fizzBuzz() {
 }
-  /*let novaArray = [];
-  for (index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 3 == 0) {
-      novaArray.replace('fizz');
-    } else if (arrayNumbers[index] % 5 == 0) {
-      console.log('buzz');
-    } else if (arrayNumbers[index] % 15 == 0) {
-      console.log('fizzBuzz');
-    } else {
-      console.log('bug!');
-    }
-  */
 
 // Desafio 9
 function encode() {
