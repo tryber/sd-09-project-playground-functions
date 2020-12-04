@@ -153,10 +153,10 @@ function decode(string) {
 function techList(arrayNames, name) {
   let objectlist = [];
   if (arrayNames.length !== 0) {
-    for (key in arrayNames.sort()) {
+    for (let key in arrayNames.sort()) {
       let object = {
         tech: arrayNames[key],
-        name: name
+        name, 
       }
       objectlist.push(object);
     }
