@@ -337,7 +337,9 @@ let totalNumber = 0;
   for (let contador = 0; contador < number.length; contador += 1) {
     totalNumber += Math.abs(number[contador]);
   }
-
+  if( totalNumber === 1) {
+    return (totalNumber + ' copo de água')
+  }
   return (totalNumber + ' copos de água');
 }
 
