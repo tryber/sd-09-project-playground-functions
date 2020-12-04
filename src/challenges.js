@@ -325,12 +325,21 @@ let diferencaNumero = Math.abs(number2) - Math.abs(number3);
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
+// Desafio 13
+function hydrate(string) {
+  // seu código aqui
+
+let regExNumber = /\d+/g;
+let number = string.match(regExNumber);
+let totalNumber = 0;
+
+  for (let contador = 0; contador < number.length; contador += 1) {
+    totalNumber += Math.abs(number[contador]);
+  }
+
+  return (totalNumber + ' copos de água');
+}
 
 module.exports = {
   calcArea,
