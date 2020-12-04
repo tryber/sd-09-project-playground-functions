@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let arrayFizzBuzz = [];
-  for (let number of numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if ((number % 3 === 0) && (number % 5 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
     } else if (number % 3 === 0) {
@@ -79,17 +79,17 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function engineCode(text, action) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let code = 1;
+  let codeVowels = 1;
   let newText = text;
-  for (let vowel of vowels) {
-    for (let character of newText) {
-      if (character === vowel && action === 'encode') {
-        newText = newText.replace(vowel, code);
-      } else if (character === code.toString() && action === 'decode') {
-        newText = newText.replace(code, vowel);
+  for (let index = 0; index < vowels.length; index += 1) {
+    for (let indexCharacter = 0; indexCharacter < newText.length; indexCharacter += 1) {
+      if (newText[indexCharacter] === vowels[index] && action === 'encode') {
+        newText = newText.replace(vowels[index], codeVowels);
+      } else if (newText[indexCharacter] === codeVowels.toString() && action === 'decode') {
+        newText = newText.replace(codeVowels, vowels[index]);
       }
     }
-    code += 1;
+    codeVowels += 1;
   }
   return newText;
 }
@@ -103,6 +103,8 @@ function decode(text) {
   let textDecode = engineCode(text, 'decode');
   return textDecode;
 }
+
+console.log(decode('H3 th2r2!'));
 
 // Desafio 10 - Ordenando o array antes
 function techList(arrayTechs, name) {
