@@ -135,9 +135,8 @@ function techList(array, name) {
 
 // Desafio 11
 // PRIMEIRO TESTE
-function testNumberArray (array) {
+function testNumberArray(array) {
   if (array.length === 11) {
-    let number = arrayToString(array);
     return true;
   }
   return false;
@@ -149,14 +148,14 @@ function testNumberRange(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       test = true;
-    } 
-  } 
+    }
+  }
   return test;
 }
 // TERCEIRO TESTE
 function testRepeatedNumber(array) {
   let repeatedNumbers = [];
-  
+
   for (let number1 of array) {
     let counter = 0;
     for (let number2 = 0; number2 < array.length; number2 += 1) {
@@ -175,7 +174,7 @@ function generatePhoneNumber(array) {
 
   if (possibleNumber === false && biggestNumber(repeatedNumbers) < 3) {
     if (numberArray === true) {
-      phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+      let phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
     return phoneNumber;
     } else {
       return 'Array com tamanho incorreto.'
