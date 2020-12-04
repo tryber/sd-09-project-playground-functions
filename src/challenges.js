@@ -15,11 +15,20 @@ function calcArea(base, height) {
 }
 calcArea(10, 15);
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 - Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original. Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+function splitSentence(stringToSplit) {
+  let arraySplit = [];
+  splitingString = '';
+  for (let index = 0; index < stringToSplit.length; index += 1){
+    if (stringToSplit[index] != ' '){
+      splitingString += stringToSplit[index];
+    } else {
+      arraySplit.push(splitingString);
+    }
+  }
+  console.log(arraySplit);
 }
-
+splitSentence('go Trybe');
 // Desafio 4 - Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 
 function concatName(arrayNames) {
@@ -48,17 +57,20 @@ footballPoints(5, 2)
 // Desafio 6 - Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
 function highestCount(arrayOfNumbers) {
   let highestNumber = 0;
+  let contMumbTurns = 0;
   for (let index = 0; index < arrayOfNumbers.length; index += 1){
-    if (highestNumber > arrayOfNumbers[index]){
-      highestNumber = arrayOfNumbers[index];
-    }
-    else if (arrayOfNumbers[index] > highestNumber){
+    if (arrayOfNumbers[index] > highestNumber){
       highestNumber = arrayOfNumbers[index];
     }
   }
-  console.log(highestNumber);
+  for (let index = 0; index < arrayOfNumbers.length; index += 1){
+    if (highestNumber === arrayOfNumbers[index]){
+      contMumbTurns += 1;
+    }
+  }
+  console.log(contMumbTurns);
 }
-highestCount([9, 1, 2, 3, 9, 5, 0]);
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 // Desafio 7 - Caça ao rato.
 function catAndMouse(mouse, cat1, cat2) {
   let distanceFromCat1;
