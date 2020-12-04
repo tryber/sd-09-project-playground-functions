@@ -199,8 +199,8 @@ function hydrate(string) {
   let array = string.match(/\d+/g);
   let waterCups = 0;
 
-  for (index = 0; index < array.length; index += 1) {
-    waterCups = waterCups + parseInt(array[index]);
+  for (let index = 0; index < array.length; index += 1) {
+    waterCups += parseInt(array[index], 10);
   }
   return `${waterCups} copos de água`;
 }
