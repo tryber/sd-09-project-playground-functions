@@ -160,6 +160,9 @@ function techList(techsArray, personName) {
   let techProperty = '';
   let techsObjectsArray = [];
   techsArray.sort();
+  if (techsArray === []) {
+    return 'Vazio!';
+  }
   for (let index = 0; index < techsArray.length; index += 1) {
     techProperty = techsArray[index];
     let techObject = {
