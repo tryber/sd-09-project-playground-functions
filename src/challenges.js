@@ -170,7 +170,7 @@ function triangleCheck(lineA, lineB, lineC) {
     lineC + lineA,
     lineA + lineB,
   ];
-  for(let segment in segments){
+  for (let segment in segments) {
     if (segments[segment] <= lines[segment]) {
       return false;
     }
