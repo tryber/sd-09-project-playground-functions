@@ -45,9 +45,9 @@ let total = totalWins + totalTies;
       //console.log(footballPoints(5,2));
 
 // Desafio 6
-let arrayys = [1, 1, 2, 9, 9, 5, 7];
+let arrayys = [9, 1, 2, 3, 9, 5, 7];
 function highestCount(numbers) {
-let contador = 0;
+let contador = 1;
 let maiorNumero = 0;
   for (let i = 0; i < numbers.length; i += 1) {
      if (numbers[i] > maiorNumero) {
@@ -58,10 +58,9 @@ let maiorNumero = 0;
     }
   } return contador;
 }       
-      //console.log(highestCount(arrayys));
+      console.log(highestCount(arrayys));
 
 // Desafio 7
-
 function catAndMouse(mouse, cat1, cat2) {
 let cat1Distance = Math.abs(cat1 - mouse);
 let cat2Distance = Math.abs(cat2 - mouse);
@@ -74,7 +73,7 @@ let cat2Distance = Math.abs(cat2 - mouse);
         return "os gatos trombam e o rato foge";
    } 
 }     
-        console.log(catAndMouse(1, 0, 2));
+       // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(arrayFB) {
