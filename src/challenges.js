@@ -49,7 +49,7 @@ function concatName(array) {
   return nomeUltimoEPrimeiro
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -254,10 +254,36 @@ function techList(technologies, name) {
 // console.log(techList(['teste'], 'Maximilian'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function ddd(array) {
+  return `${array[0]}${array[1]}`
 }
 
+function fourNumber(array,firtsOrLast) {
+  let fourNumber = '';
+  if (firtsOrLast === 'first') {
+    // console.log(`Entrando no IF first`)
+    for (let numberIndex = 2; numberIndex <= 6; numberIndex += 1){
+      // console.log(`Realizando for first`)
+      fourNumber += array[numberIndex]
+      // console.log(fourNumber)
+    };
+  };
+  if (firtsOrLast === 'last') {
+    for (let numberIndex = 7; numberIndex <= 10; numberIndex += 1){
+      fourNumber += array[numberIndex]
+    };
+  };
+  return fourNumber;
+}
+function generatePhoneNumber(array) {
+  if (array.length != 11){
+    return 'Array com tamanho incorreto.';
+  }
+  let numero = `(${ddd(array)}) ${fourNumber(array,'first')}-${fourNumber(array,'last')}`
+  return numero
+}
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
