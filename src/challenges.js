@@ -88,12 +88,12 @@ function catAndMouse( mouse, cat1, cat2 ) {
   let gato1 = "cat1";
   let gato2 = "cat2";
   let gatoIgual = "os gatos trombam e o rato foge";
-  if ( cat1 - mouse < cat2 - mouse ){
-    return gato1;
-  } else if (cat2 - mouse < cat1 - mouse){
-    return gato2;
-  } else if (cat1 - mouse == cat2 - mouse) {
-    return gatoIgual;
+  if ( Math.abs(cat1) - Math.abs(mouse) < Math.abs(cat2) - Math.abs(mouse)){
+      console.log("cat1");
+  } else if (Math.abs(cat2) - Math.abs(mouse) < Math.abs(cat1) - Math.abs(mouse)){
+      console.log("cat2");
+  } else if (Math.abs(cat1) - Math.abs(mouse) == Math.abs(cat2) - Math.abs(mouse)) {
+      console.log("os gatos trombam e o rato foge");
   }
 }
 
