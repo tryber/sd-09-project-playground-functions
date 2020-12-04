@@ -98,7 +98,9 @@ function catAndMouse(cat1, cat2, mouse) {
   let distanceCat1 = 0;
   let distanceCat2 = 0;
   distanceCat1 = cat1 - mouse;
+  distanceCat1 = Math.abs(distanceCat1);
   distanceCat2 = cat2 - mouse;
+  distanceCat2 = Math.abs(distanceCat2);
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   } else if (distanceCat1 > distanceCat2) {
@@ -197,7 +199,9 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-console.log(decode("h3 th2r2!"));
+let distance = - 2;
+distance = Math.abs(distance);
+console.log(distance);
 module.exports = {
   calcArea,
   catAndMouse,
