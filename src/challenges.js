@@ -89,12 +89,35 @@ function fizzBuzz(arrayNumber) {
 // console.log(fizzBuzz([ 2 , 15 , 7 , 9 , 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayEncode) {
+  let encodeVocals = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+ }
+ arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding){
+   return encodeVocals[encoding];
+ })
+return arrayEncode;
 }
-function decode() {
-  // seu código aqui
+//   console.log(encode('hi there!'));
+
+function decode(arrayDecode) {
+  let encodeVocals = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+ }
+ arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function(decoding){
+   return encodeVocals[decoding];
+ })
+return arrayDecode;
 }
+//   console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(name, programList) {}

@@ -16,34 +16,32 @@
 // // Desafio 9
 // fonte de consulta : https://www.alura.com.br/artigos/trocando-caracteres-de-uma-string-no-java#:~:text=Para%20isso%20podemos%20usar%20o,que%20passarmos%20por%20outro%20caractere.
 
-function encode(encodeArray) {
-    for(let index = 0; index < encodeArray; index += 1){
-        if (encodeArray[index] === a){
-            encodeArray.replaceAll("a","1");
-            return stringA;
-        }else if (encodeArray[index] === e) {
-                encodeArray.replaceAll("e","1");
-                return stringE;
-        }else if (encodeArray[index] === i) {
-                encodeArray.replaceAll("i","1");
-                return stringI;
-        }else if (encodeArray[index] === o) {
-                encodeArray.replaceAll("o","1");
-                return stringO;
-        }else if (encodeArray[index] === u) {
-                encodeArray.replaceAll("u","1");
-                return stringU;
-        }
-    }
-    return encodeArray;
+function encode(arrayEncode) {
+    let encodeVocals = {
+      a: '1',
+      e: '2',
+      i: '3',
+      o: '4',
+      u: '5',
+   }
+   arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding){
+     return encodeVocals[encoding];
+   })
+  return arrayEncode;
   }
-  console.log(encode('abacaxi'));
+//   console.log(encode('hi there!'));
 
-  function decode() {
-    // seu código aqui
+  function decode(arrayDecode) {
+    let encodeVocals = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
+   }
+   arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function(decoding){
+     return encodeVocals[decoding];
+   })
+  return arrayDecode;
   }
-
-//   public static String formataDados(String dado){
-//     stringA = dado.replaceAll("a","4");
-//     return stringA;
-//  }
+//   console.log(decode('h3 th2r2!'));
