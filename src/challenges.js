@@ -111,16 +111,15 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings;
 }
 
-let translatorMap = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5,
-};
-
 // Challenge Nine - Function to encode string
 function encriptAndDecriptMessage(character) {
+  const translatorMap = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
   for (let key in translatorMap) {
     if (character === key) {
       return translatorMap[key];
@@ -156,9 +155,20 @@ function decode(stringToDecode) {
   return decodedString;
 }
 
-// Desafio 10
-function techList() {
-  // seu código aqui
+// Challenge ten - Function to generate objects from array
+function techList(techsArray, name) {
+  let techProperty = '';
+  let techsObjectsArray = [];
+  techsArray.sort();
+  for (let index = 0; index < techsArray.length; index += 1) {
+    techProperty = techsArray[index];
+    let techObject = {
+      tech: techProperty,
+      name: name,
+    };
+    techsObjectsArray.push(techObject);
+  }
+  return techsObjectsArray;
 }
 
 // Desafio 11
