@@ -152,18 +152,17 @@ function decode(string) {
 // Desafio 10
 function techList() {
   let objectlist = [];
-  if (arrayNames.length === 0){
-    return 'Vazio!';
-  } else {
+  if (arrayNames.length !== 0) {
     for (key in arrayNames.sort()) {
       let object = {
-      tech: arrayNames[key],
-      name: name
+        tech: arrayNames[key],
+        name: name
       }
       objectlist.push(object);
     }
     return objectlist;
   }
+  return 'Vazio!';
 }
 
 // Desafio 11
