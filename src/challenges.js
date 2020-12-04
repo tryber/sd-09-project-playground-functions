@@ -66,9 +66,9 @@ function highestCount(array) {
       let number = array[index]
     if (higher === number){
       counter += 1;
-    }    
-  }    
-  return counter;    
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
@@ -109,9 +109,8 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(phraseLetters) {
-  let n = phraseLetters.length;
   let phrase2 = '';
-  for (let index = 0; index < n; index += 1){
+  for (let index = 0; index < phraseLetters.length; index += 1){
     if (phraseLetters.charAt(index) === 'a'){
       phrase2 += '1';
     } else if (phraseLetters.charAt(index) === 'e'){
@@ -130,9 +129,8 @@ function encode(phraseLetters) {
 }
 
 function decode(phraseNumbers) {
-  let n = phraseNumbers.length;
   let phrase2 = '';
-  for (let index = 0; index < n; index += 1){
+  for (let index = 0; index < phraseNumbers.length; index += 1){
     if (phraseNumbers.charAt(index) === '1'){
       phrase2 += 'a';
     } else if (phraseNumbers.charAt(index) === '2'){
