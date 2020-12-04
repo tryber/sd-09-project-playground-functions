@@ -123,7 +123,7 @@ function techList(arrayOfTech, name) {
   if (arrayOfTech.length === 0) {
     return 'Vazio!';
   }
-  for (let item = 0; item < myArrayOfTech.length; item +=1) {
+  for (let item = 0; item < myArrayOfTech.length; item += 1) {
     let tempObject = {}
     tempObject.tech = myArrayOfTech[item];
     tempObject.name = name;
@@ -133,18 +133,22 @@ function techList(arrayOfTech, name) {
 }
 
 // Desafio 11
-function smallNumbers(number) {
-  let notSmall = false;
+function inadequatedNumbers(number) {
+  let inadequated = false;
   for (let valor in number) {
     if (number[valor] > 9) {
-      notSmall = true;
+      inadequated = true;
+      break
+    } 
+    if (number[valor] < 0) {
+      inadequated = true;
       break
     }
   }
-  return notSmall;
+  return inadequated;
 }
 function tooMuchRepeated(array) {
-  let tooMuchRepeated = false;
+  let soMuchRepetition = false;
   let occurrence = 0;
   for (let number in array) {
     for (let index in array) {
@@ -152,17 +156,17 @@ function tooMuchRepeated(array) {
         occurrence += 1;
       }
       if (occurrence > 2) {
-        tooMuchRepeated = true
-        return tooMuchRepeated;
+        soMuchRepetition = true
+        return soMuchRepetition;
       }
     }
     occurrence = 0;
   }
-  return tooMuchRepeated;
+  return soMuchRepetition;
 }
 function generatePhoneNumber(array) {
   let myPhoneNumber = ''
-  let invalidNumbers = smallNumbers(array);
+  let invalidNumbers = inadequatedNumbers(array);
   let repeatedNumbers = tooMuchRepeated(array);
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -170,10 +174,10 @@ function generatePhoneNumber(array) {
   if (invalidNumbers !== false || repeatedNumbers !== false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  myPhoneNumber = `(${Math.abs(array[0])}${Math.abs(array[1])})${Math.abs(array[2])}${Math.abs(array[3])}${Math.abs(array[4])}${Math.abs(array[5])}${Math.abs(array[6])}-${Math.abs(array[7])}${Math.abs(array[8])}${Math.abs(array[9])}${Math.abs(array[10])}`
+  myPhoneNumber = `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   return myPhoneNumber
 }
-
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   
