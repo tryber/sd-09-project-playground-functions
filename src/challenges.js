@@ -78,7 +78,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function distanceForMouse(mouses, cats) {
-  let dist = mouses - cats
+  let dist = mouses - cats;
+  dist = Math.abs(dist);
   return dist;
 }
 
@@ -93,7 +94,7 @@ function distanceInCats1(distCat1, distCat2) {
 function cat1ToCat2(cat1, cat2) {
   let distanceCats = 0;
   let retornoString = '';
-  if (cat1 > cat2) {
+  if (cat1 < cat2) {
     retornoString = 'cat1';
   } else {
     retornoString = 'cat2';
