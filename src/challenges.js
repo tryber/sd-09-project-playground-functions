@@ -32,15 +32,16 @@ function splitSentence(frase) {
       // console.log(`Frase acaba de ser adicionada no array`)
       individualFrase = '';
       // console.log(`Frase acaba de ser apagada, e agora esta assim ${individualFrase}`)
+    } else {
+      individualFrase += frase[index];
     }
-    individualFrase += frase[index];
   }
   frasesInArray.push(individualFrase);
-  // console.log(frasesInArray);
+  console.log(frasesInArray);
   return frasesInArray;
 }
 
-// splitSentence('vamo que vamo')
+splitSentence('vamo que vamo ')
 
 // Desafio 4
 function concatName() {
