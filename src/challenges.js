@@ -142,35 +142,35 @@ for(let index = 0; index < tech.length; index += 1) {
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
-// // Desafio 11
-// function generatePhoneNumber() {
-//   // seu código aqui
-// }
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
 
-// // Desafio 12
-// function triangleCheck() {
-//   // seu código aqui
-// }
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
 
-// // Desafio 13
-// function hydrate() {
-//   // seu código aqui
-// }
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
 
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   generatePhoneNumber,
-//   techList,
-//   highestCount,
-//   hydrate,
-//   splitSentence,
-//   triangleCheck,
-// }
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
