@@ -2,6 +2,7 @@
 // Desafio 1
 function compareTrue(num1, num2) {
   // seu código aqui
+
   if (num1 == num2 && num2 == num1) {
     return true;
   } else {
@@ -9,7 +10,7 @@ function compareTrue(num1, num2) {
   }
 }
 
-console.log(compareTrue(1, 1));
+console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -28,7 +29,7 @@ function splitSentence(str) {
   return sentence.split(" ");
   
 }
-console.log(splitSentence('Eae mundo'));
+console.log(splitSentence('Go, Tryber'));
 
 // Desafio 4
 function concatName(arr) {
@@ -65,7 +66,9 @@ console.log(footballPoints(10, 5))
 // Desafio 6
 function highestCount() {
   // seu código aqui
+  
 }
+
 
 // Desafio 7
 function catAndMouse() {
@@ -73,8 +76,29 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+
+   array = [2, 15, 7, 9, 45];
+
+  for(index = 0; index < array.length; index += 1) {
+    if(array[index] / 3 == 0) {
+      console.log('fizz');
+      
+    }
+    if(array[index] / 5 == 0) {
+      console.log('buzz');
+     
+    }
+    if(array[index] / 3 && array[index] / 5 == 0) {
+      console.log('fizzBuzz')
+      
+    } else {
+      console.log('bug!');
+    }
+
+  }
+
 }
 
 // Desafio 9
