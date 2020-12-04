@@ -179,8 +179,9 @@ function generatePhoneNumber(array) {
     } else {
       return 'Array com tamanho incorreto.';
     }
+  } else {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return 'não é possível gerar um número de telefone com esses valores';
 }
 
 // Desafio 12
