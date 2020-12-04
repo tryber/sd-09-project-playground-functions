@@ -123,7 +123,7 @@ function techList(tech, name) {
       objetoTech.push(tech[key] + ' e ' + name);
     }
   }
-
+}
 // Desafio 11
 function generatePhoneNumber() {
   
@@ -155,4 +155,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}}
+}
