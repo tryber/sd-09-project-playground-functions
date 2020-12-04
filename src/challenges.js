@@ -76,11 +76,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(num1) {
   let arrayBuzz = [];
   for (let i = 0; i < num1.length; i++){
-    if ((num1 % 3) == 0 && (num1 % 5) == 0){
+    if ((num1[i] % 3) == 0 && (num1[i] % 5) == 0){
       arrayBuzz.push('fizzBuzz')
     } else if ((num1[i] % 3) == 0){
       arrayBuzz.push('fizz')
-    } else if ((num1 % 5) == 0){
+    } else if ((num1[i] % 5) == 0){
       arrayBuzz.push('buzz')
     } else {
       arrayBuzz.push('bug!')
@@ -88,6 +88,8 @@ function fizzBuzz(num1) {
   }
   return arrayBuzz;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(frase) {
