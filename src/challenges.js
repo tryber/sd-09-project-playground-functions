@@ -32,8 +32,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  function ordenaNum(a, b) {
+    return a - b;
+}
+  array.sort(ordenaNum);
+  return array
+
+// Solucao retirada deste video https://www.youtube.com/watch?v=SkDZY7N0Ox8
 }
 
 // Desafio 7
