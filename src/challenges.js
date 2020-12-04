@@ -24,12 +24,12 @@ function splitSentence(sentence) {
     if (sentenceArray[index] !== ' ') {
       if (sentenceSplited[positionCount] === undefined) {
         sentenceSplited[positionCount] = '';
-      };
+      }
       sentenceSplited[positionCount] += sentenceArray[index];
     } else {
       positionCount += 1;
-    };
-  };
+    }
+  }
   return sentenceSplited;
 }
 
@@ -52,7 +52,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let biggerNumber = 0;
   let countBuggerNumber = 0;
-  
+
   for (let index in numbers) {
     if (numbers[index] === biggerNumber) {
       countBuggerNumber += 1;
@@ -83,18 +83,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzBug = [];
-
+  
   for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+    let divisionBy3 = numbers[index] % 3;
+    let divisionBy5 = numbers[index] % 5;
+
+    if (divisionBy3 === 0 && divisionBy5 % 5 === 0) {
       fizzBuzzBug[index] = 'fizzBuzz';
     }
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+    if (divisionBy3 % 3 === 0 && divisionBy5 % 5 !== 0) {
       fizzBuzzBug[index] = 'fizz';
     }
-    if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
+    if (divisionBy3 % 3 !== 0 && divisionBy5 % 5 === 0) {
       fizzBuzzBug[index] = 'buzz';
     }
-    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0) {
+    if (divisionBy3 % 3 !== 0 && divisionBy5 % 5 !== 0) {
       fizzBuzzBug[index] = 'bug!';
     }
   }
@@ -165,7 +168,7 @@ function techList(list, name) {
       tech: '',
       name: ''
     };
-  
+
     for (let index in list) {
       arrayStacks.push({
         tech: list[index],
@@ -187,8 +190,8 @@ function generatePhoneNumber(arrayPhoneNumber) {
 
   for (let index in arrayPhoneNumber) {
     let numberRepeated = 0;
-    
-    // Valida números 
+
+    // Valida números
     for (let index2 = 0; index2 < arrayPhoneNumber.length; index2 += 1) {
       if (arrayPhoneNumber[index] === arrayPhoneNumber[index2]) {
         numberRepeated += 1;
@@ -197,7 +200,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
     if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9 || numberRepeated >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    
+
     // Adiciona caracteres especiais
     let phoneNumberLength = phoneNumber.length;
 
