@@ -275,15 +275,50 @@ function fourNumber(array,firtsOrLast) {
   };
   return fourNumber;
 }
+
+function checkNumberIsCorrect(array) {
+  let isCorrect = true;
+  for (let index in array) {
+    if (array[index] < 0 || array[index] > 9){
+      isCorrect = false;
+      console.log('Tem numero fora do range 0 - 9')
+    };
+    let actualNumberCheck = array[index]
+    if (checkNumberRepeatMoreThanLimit(actualNumberCheck, array) === true){
+      isCorrect = false;
+      console.log('Numero se repetiu mais de 3x')
+    }
+  }
+  return isCorrect
+}
+
+function checkNumberRepeatMoreThanLimit(number, array) {
+  let timesNumberRepeat = 1;
+  for (let index in array) {
+    if (number === array[index]) {
+      timesNumberRepeat += 1
+      // console.log(`Numero se repetiu`)
+      // console.log(timesNumberRepeat)
+    }
+    let maxTimeToRepeat = 3
+    if (timesNumberRepeat >= maxTimeToRepeat) {
+      return true;
+    }
+  }
+  return false
+}
 function generatePhoneNumber(array) {
   if (array.length != 11){
     return 'Array com tamanho incorreto.';
   }
-  let numero = `(${ddd(array)}) ${fourNumber(array,'first')}-${fourNumber(array,'last')}`
-  return numero
+  if (checkNumberIsCorrect(array) === false) {
+    return "não é possível gerar um número de telefone com esses valores";
+  };
+  let numero = `(${ddd(array)}) ${fourNumber(array,'first')}-${fourNumber(array,'last')}`;
+  return numero;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 1, 1, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
