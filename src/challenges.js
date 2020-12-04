@@ -177,12 +177,12 @@ function generatePhoneNumber(array) {
   myPhoneNumber = `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   return myPhoneNumber
 }
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]))
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
+  // seu código aqui
 }
-//console.log(triangleCheck(10, 14, 8))//esperado true
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
