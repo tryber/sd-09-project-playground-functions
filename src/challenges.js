@@ -38,7 +38,7 @@ de vezes que o maior deles se repete. Exemplo: caso o parâmetro de highestCount
 valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9
 (maior número do array) se repete.*/
 
-let numbers = [9, 1, 1, 9, 3, 9, 5, 7, 7, 9, 9, 9, 13]
+let numbers = [9, 1, 1, 9, 3, 9, 5, 7, 7, 9, 9, 9]
 function highestCount(param) {
   let maxNumber = 0;
   let count = 1;
@@ -50,8 +50,7 @@ function highestCount(param) {
       count += 1
     }
   }
-  console.log("maxNumber", maxNumber)
-  console.log("count", count)
+  return count;
 }
 highestCount(numbers);
 
