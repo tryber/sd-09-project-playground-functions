@@ -76,30 +76,31 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(numerosArray) {
   // seu código aqui
+  let arrayBuzz = []
 
-   array = [2, 15, 7, 9, 45];
+  for(let index = 0; index < numerosArray.length; index += 1) {
+    
+    if(numerosArray[index] % 3 === 0 && numerosArray[index] % 5 === 0) {
+      arrayBuzz.push('fizzBuzz');
 
-  for(index = 0; index < array.length; index += 1) {
-    if(array[index] / 3 == 0) {
-      console.log('fizz');
-      
-    }
-    if(array[index] / 5 == 0) {
-      console.log('buzz');
-     
-    }
-    if(array[index] / 3 && array[index] / 5 == 0) {
-      console.log('fizzBuzz')
-      
+    } else if (numerosArray[index] % 3 === 0) {
+      arrayBuzz.push('fizz');
+
+    } else if (numerosArray[index] % 5 === 0) {
+      arrayBuzz.push('buzz');
+
     } else {
-      console.log('bug!');
+      arrayBuzz.push('bug!');
     }
 
   }
-
+      
+  return arrayBuzz
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
