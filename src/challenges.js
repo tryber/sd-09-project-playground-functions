@@ -163,8 +163,19 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lines = [lineA, lineB, lineC];
+  let segments = [
+    lineB + lineC,
+    lineC + lineA,
+    lineA + lineB,
+  ];
+  for(let segment in segments){
+    if (segments[segment] <= lines[segment]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // Desafio 13
