@@ -35,7 +35,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let n = array.length;
-  let phrase = `${array[n-1]}, ${array[0]}`
+  let phrase = `${array[n - 1]}, ${array[0]}`
   return phrase;
 }
 
@@ -122,23 +122,23 @@ function encode(phraseLetters) {
 }
 
 function decode(phraseNumbers) {
-  let phrase2 = '';
+  let phrase3 = '';
   for (let index = 0; index < phraseNumbers.length; index += 1) {
     if (phraseNumbers.charAt(index) === '1') {
-      phrase2 += 'a';
+      phrase3 += 'a';
     } else if (phraseNumbers.charAt(index) === '2') {
-      phrase2 += 'e';
+      phrase3 += 'e';
     } else if (phraseNumbers.charAt(index) === '3') {
-      phrase2 += 'i';
+      phrase3 += 'i';
     } else if (phraseNumbers.charAt(index) === '4') {
-      phrase2 += 'o';
+      phrase3 += 'o';
     } else if (phraseNumbers.charAt(index) === '5') {
-      phrase2 += 'u';
+      phrase3 += 'u';
     } else {
-      phrase2 += phraseNumbers.charAt(index);
+      phrase3 += phraseNumbers.charAt(index);
     }
   }
-  return phrase2;
+  return phrase3;
 }
 
 // Desafio 10
@@ -180,7 +180,7 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  let phoneNumber = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  let phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   return phoneNumber;
 }
 
