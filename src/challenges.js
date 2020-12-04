@@ -21,7 +21,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nome1) {
   let index = nome1.length - 1
-  return nome1[index], nome1[0]
+  return nome1[index] + ', ' + nome1[0]
 }
 
 // Desafio 5
