@@ -121,8 +121,12 @@ function techList(arraytech, name) {
       name,
     });   
   }
-  return arrayTech
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayTech;
 }
+
 
 // Desafio 11
 function generatePhoneNumber(arraytelephone) {
