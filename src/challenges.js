@@ -41,10 +41,10 @@ function concatName(arrayNames) {
       stringNamesFromArray.push(arrayNames[index]);
     }
   }
-  return stringNamesFromArray.join();
+  console.log(stringNamesFromArray.join(', '));
 }
-let arrayExemplos =  ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-concatName(arrayExemplos);
+
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5 - pontos no futebol
 function footballPoints(wins, ties) {
   let calcWins = wins * 3;
