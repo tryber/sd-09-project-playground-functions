@@ -54,6 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
     if (cat2Pos < cat1Pos){
       result = 'cat2';
   }return result
+}
 
 
  // Desafio 8
