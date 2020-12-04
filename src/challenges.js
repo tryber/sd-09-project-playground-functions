@@ -103,17 +103,17 @@ function fizzBuzz( myArray ) {
   let resultArray = [];
 
   for (let index in myArray) {
-      if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
-          resultArray.push("fizzBuzz");
-      } else if (myArray[index] % 3 === 0 ) {
-          myArray.push("fizz");
-      } else if (myArray[index] % 5 === 0 ) {
-          myArray.push("buzz");
-      } else{
-          myArray.push("bug!")
-      }
+    if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
+      resultArray.push("fizzBuzz");
+    } else if (myArray[index] % 3 === 0 ) {
+        resultArray.push("fizz");
+    } else if (myArray[index] % 5 === 0 ) {
+        resultArray.push("buzz");
+    } else{
+        resultArray.push("bug!");
+    }
   }
-  
+  return resultArray;
 
 }
 
