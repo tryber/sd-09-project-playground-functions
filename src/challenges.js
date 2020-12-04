@@ -1,4 +1,4 @@
-//VQV Brows
+// VQV Brows
 
 // Desafio 1
 function compareTrue(value1, value2) {
@@ -35,7 +35,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let n = array.length;
-  let phrase = '${array[n-1]}, ${array[0]}'
+  let phrase = `${array[n-1]}, ${array[0]}`
   return phrase;
 }
 
@@ -168,7 +168,7 @@ function generatePhoneNumber(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } else if (index <= 9){
+    } else if (index <= 9) {
       let counter = 0;
       for (let index2 = 1; index2 < array.length; index2 += 1) {
         if (array[index] === array[index2]) {
@@ -207,7 +207,7 @@ function hydrate(string) {
   if (sum === 1) {
     return '1 copo de água';
   }
-  return sum + ' copos de água'
+  return `${sum} copos de água`
 }
 
 
