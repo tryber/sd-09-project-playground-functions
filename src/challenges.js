@@ -155,4 +155,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+}}
