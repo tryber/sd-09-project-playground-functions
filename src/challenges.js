@@ -111,26 +111,15 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzStrings;
 }
 
-// Challenge Nine - Function to encode string
-function encode(stringToEncode) {
-  let encriptorMap = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
-  let encodedArray = [];
-  let encodedString = '';
-  for (let index = 0; index < stringToEncode.length; index += 1) {
-    encodedArray.push(stringToEncode[index]);
-    encodedArray[index] = encriptMessage(encodedArray[index], encriptorMap);
-    
-    encodedString += encodedArray[index];
-  }
-  return encodedString;
+let translatorMap = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
 }
 
+// Challenge Nine - Function to encode string
 function encriptMessage(character, charMap) {
   for (let key in charMap) {
     if (character === key) {
@@ -140,26 +129,20 @@ function encriptMessage(character, charMap) {
   return character;
 }
 
-// Challenge Nine - Function to decode a string
-function decode(stringToDecode) {
-  let decriptorMap = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
+// Challenge Nine - Function to encode string
+function encode(stringToEncode) {
+  let encodedArray = [];
+  let encodedString = '';
+  for (let index = 0; index < stringToEncode.length; index += 1) {
+    encodedArray.push(stringToEncode[index]);
+    encodedArray[index] = encriptMessage(encodedArray[index], translatorMap);
+    
+    encodedString += encodedArray[index];
   }
-
-  let decodedArray = [];
-  let decodedString = '';
-  for (let index = 0; index < stringToDecode.length; index += 1) {
-    decodedArray.push(stringToDecode[index]);
-    decodedArray[index] = decriptMessage(stringToDecode[index], decriptorMap);
-    decodedString += decodedArray[index];
-  }
-  return decodedString;
+  return encodedString;
 }
 
+// Challenge Nine - Function to encode string
 function decriptMessage(character, charMap) {
   for (let key in charMap) {
     if (character === charMap[key].toString()) {
@@ -167,6 +150,18 @@ function decriptMessage(character, charMap) {
     }
   }
   return character;
+}
+
+// Challenge Nine - Function to decode a string
+function decode(stringToDecode) {
+  let decodedArray = [];
+  let decodedString = '';
+  for (let index = 0; index < stringToDecode.length; index += 1) {
+    decodedArray.push(stringToDecode[index]);
+    decodedArray[index] = decriptMessage(stringToDecode[index], translatorMap);
+    decodedString += decodedArray[index];
+  }
+  return decodedString;
 }
 
 // Desafio 10
