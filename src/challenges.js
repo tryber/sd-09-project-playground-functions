@@ -68,7 +68,7 @@ function highestCount(arrayOfNumbers) {
       contMumbTurns += 1;
     }
   }
-  console.log(contMumbTurns);
+  return contMumbTurns;
 }
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 // Desafio 7 - Caça ao rato.
