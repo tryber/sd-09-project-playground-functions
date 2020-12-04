@@ -53,8 +53,9 @@ function catAndMouse() {
 }
 
 // Desafio 8
-/*function fizzBuzz([arrayNumbers]) {
-  let novaArray = [];
+function fizzBuzz([arrayNumbers]) {
+}
+  /*let novaArray = [];
   for (index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 == 0) {
       novaArray.replace('fizz');
@@ -65,10 +66,7 @@ function catAndMouse() {
     } else {
       console.log('bug!');
     }
-  }
-  return novaArray;
-}
-console.log([2, 15, 7, 9, 45]);
+  */
 
 // Desafio 9
 function encode() {
