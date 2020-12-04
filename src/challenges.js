@@ -139,7 +139,7 @@ function inadequatedNumbers(number) {
     if (number[valor] > 9) {
       inadequated = true;
       break
-    } 
+    }
     if (number[valor] < 0) {
       inadequated = true;
       break
@@ -149,18 +149,18 @@ function inadequatedNumbers(number) {
 }
 function tooMuchRepeated(array) {
   let soMuchRepetition = false;
-  let occurrence = 0;
-  for (let number in array) {
-    for (let index in array) {
+  let numberOfRepetition = 0;
+  for (let number = 0; number < array.length; number += 1) {
+    for (let index = 0; index < array.length; index += 1) {
       if (array[index] === array[number]) {
-        occurrence += 1;
+        numberOfRepetition += 1;
       }
-      if (occurrence > 2) {
+      if (numberOfRepetition > 2) {
         soMuchRepetition = true
         return soMuchRepetition;
       }
     }
-    occurrence = 0;
+    numberOfRepetition = 0;
   }
   return soMuchRepetition;
 }
@@ -174,7 +174,7 @@ function generatePhoneNumber(array) {
   if (invalidNumbers !== false || repeatedNumbers !== false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  myPhoneNumber = `(${array[0]}${array[1]})${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+  myPhoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
   return myPhoneNumber
 }
 
