@@ -57,7 +57,7 @@ function highestCount(numbers) {
     if (numbers[index] === biggerNumber) {
       countBuggerNumber += 1;
     }
-    if(numbers[index] > biggerNumber) {
+    if (numbers[index] > biggerNumber) {
       biggerNumber = numbers[index];
       countBuggerNumber = 1;
     }
@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzBug = [];
-  
+
   for (let index in numbers) {
     let divisionBy3 = numbers[index] % 3;
     let divisionBy5 = numbers[index] % 5;
@@ -107,12 +107,12 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(message) {
-  let encoder= {
+  let encoder = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   let encodedMessage = '';
 
@@ -166,18 +166,18 @@ function techList(list, name) {
     list = list.sort();
     let stack = {
       tech: '',
-      name: ''
+      name: '',
     };
 
     for (let index in list) {
       arrayStacks.push({
         tech: list[index],
-        name: name
+        name,
       })
     }
     return arrayStacks;
   }
-  
+
 }
 
 // Desafio 11
