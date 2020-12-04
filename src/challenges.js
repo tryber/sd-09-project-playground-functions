@@ -6,15 +6,11 @@ function compareTrue(firstValue, secondValue) {
   return false;
 }
 
-//console.log(compareTrue(true, false)); //apagar
-
 // Desafio 2
 function calcArea(base, height) {
   let calc = (base * height) / 2;
   return calc;
 }
-
-//console.log(calcArea(4, 18)); //apagar
 
 // Desafio 3
 function splitSentence(sentence) {
@@ -23,25 +19,23 @@ function splitSentence(sentence) {
   for (index = 0; index < sentence.length; index += 1) {
     if (sentence[index] !== ' ') {
       newString = newString + sentence[index];
-    } if (sentence[index] === ' ' && newString !== '') {
+    }
+    if (sentence[index] === ' ' && newString !== '') {
       arrayStrings.push(newString);
       newString = '';
     }
   }
   if (newString !== '') {
-  arrayStrings.push(newString);
+    arrayStrings.push(newString);
   }
   return arrayStrings;
 }
 
-console.log(splitSentence(' go  Trybe ')); //apagar
-
 // Desafio 4
-function concatName() {
-
+function concatName(stringsArray) {
+  let stringDone = stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0];
+  return stringDone;
 }
-
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
@@ -59,7 +53,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz([arrayNumbers]) {
+/*function fizzBuzz([arrayNumbers]) {
   let novaArray = [];
   for (index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 == 0) {
