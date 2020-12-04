@@ -65,7 +65,6 @@ function excludeRepetitions(numbers) {
 }
 function foundBigger(vector) {
   let bigger = 0;
-  let indexBigger = 0;
   bigger = vector[0];
   for (let index = 0; index < vector.length; index += 1){
     if (vector[index] > bigger) {
@@ -79,18 +78,14 @@ function highestCount(numbers) {
   // seu código aqui
   let numbersNoRepeated = [];
   numbersNoRepeated = excludeRepetitions(numbers);
-  let count = [];
   let counter = 0;
-  for (let index = 0; index < numbersNoRepeated.length; index +=1) {
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-        if (numbersNoRepeated[index] === numbers[index2]) {
-        counter += 1;
-      }
+  let biggerNumber = foundBigger(numbersNoRepeated);
+  for (let index = 0; index < numbers.length; index +=1) {
+        if (biggerNumber === numbers[index]) {
+        counter += 1;     
    }
-    count.push(counter);
-    counter = 0;
   }
-  return foundBigger(count);
+  return counter;
 }
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
@@ -199,9 +194,6 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-let distance = - 2;
-distance = Math.abs(distance);
-console.log(distance);
 module.exports = {
   calcArea,
   catAndMouse,
