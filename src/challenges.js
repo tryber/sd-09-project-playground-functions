@@ -293,12 +293,13 @@ function checkNumberIsCorrect(array) {
 }
 
 function checkNumberRepeatMoreThanLimit(number, array) {
-  let timesNumberRepeat = 1;
+  let timesNumberRepeat = 0;
   for (let index in array) {
+    console.log(`Iniciando comparação do numero ${number} com ${array[index]}`)
     if (number === array[index]) {
       timesNumberRepeat += 1
-      // console.log(`Numero se repetiu`)
-      // console.log(timesNumberRepeat)
+      console.log(`Numero se repetiu`)
+      console.log(timesNumberRepeat)
     }
     let maxTimeToRepeat = 3
     if (timesNumberRepeat >= maxTimeToRepeat) {
@@ -318,7 +319,7 @@ function generatePhoneNumber(array) {
   return numero;
 }
 
-console.log(generatePhoneNumber([1, 1, 1, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
