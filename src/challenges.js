@@ -177,6 +177,13 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
+  let isTriangle = false;
+    if ((Math.abs(lineB - lineC) < lineA) && (lineA < (lineB+lineC)) &&
+        (Math.abs(lineA - lineC) < lineB) && (lineB < (lineA+lineC)) &&
+        (Math.abs(lineA - lineB) < lineC) && (lineC < (lineA+lineC))) {
+        isTriangle = true;           
+    }
+    return isTriangle;
 }
 
 // Desafio 13
