@@ -153,7 +153,7 @@ function decode(string) {
 function techList(arrayNames, name) {
   let objectlist = [];
   if (arrayNames.length !== 0) {
-    for (let key in arrayNames.sort()) {
+    for (let key of arrayNames.sort()) {
       let object = {
         tech: arrayNames[key],
         name,
