@@ -159,9 +159,6 @@ function generatePhoneNumber(array) {
     }
   }
   display.displayMessage = display.phoneNumberArray.join('');
-  if (array.length !== 11) {
-    display.displayMessage = display.errorMessageOne;
-  }
   for (let index = 0; index < array.length; index += 1) {
     display.repeatCount = 0;
     for (let repeatIndex = 0; repeatIndex < array.length; repeatIndex += 1) {
@@ -172,6 +169,9 @@ function generatePhoneNumber(array) {
         display.displayMessage = display.errorMessageTwo;
       }
     }
+  }
+  if (array.length !== 11) {
+    display.displayMessage = display.errorMessageOne;
   }
   return display.displayMessage;
 }
@@ -193,7 +193,10 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   for (let index = 0; index < lineArray.length; index += 1) {
     let middleLine = linesSum - highestLine;
-    if (highestLine > (linesSum - highestLine) || smallestLine < Math.abs(highestLine - middleLine)) {
+    if (
+      highestLine > (linesSum - highestLine) ||
+      smallestLine < Math.abs(highestLine - middleLine)
+      ) {
       triangle = false;
     }
   }
