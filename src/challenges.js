@@ -156,7 +156,7 @@ function decode(stringToDecode) {
 }
 
 // Challenge ten - Function to generate objects from array
-function techList(techsArray, name) {
+function techList(techsArray, personName) {
   let techProperty = '';
   let techsObjectsArray = [];
   techsArray.sort();
@@ -164,13 +164,14 @@ function techList(techsArray, name) {
     techProperty = techsArray[index];
     let techObject = {
       tech: techProperty,
-      name: name,
+      name: personName,
     };
     techsObjectsArray.push(techObject);
   }
   return techsObjectsArray;
 }
 
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Pablo"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
