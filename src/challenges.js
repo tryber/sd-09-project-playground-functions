@@ -74,12 +74,12 @@ let arrayNumber = [];
 function fizzBuzz(arrayNumber) {
     let arrayFizBu = [];
     for (let index =0; index < arrayNumber.length; index += 1) {
-        if (arrayNumber[index] % 3 === 0) {
-            arrayFizBu.push('fizz');
+        if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
+          arrayFizBu.push('fizzBuzz');
         } else if (arrayNumber[index] % 5 === 0) {
             arrayFizBu.push('buzz');
-        } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
-            arrayFizBu.push('fizzBuzz');
+        } else if (arrayNumber[index] % 3 === 0) {
+          arrayFizBu.push('fizz');
         } else {
             arrayFizBu.push('bug!');
         }
