@@ -89,11 +89,11 @@ function catAndMouse( mouse, cat1, cat2 ) {
   let gato2 = "cat2";
   let gatoIgual = "os gatos trombam e o rato foge";
   if ( Math.abs(cat1) - Math.abs(mouse) < Math.abs(cat2) - Math.abs(mouse)){
-      console.log("cat1");
+      return gato1;
   } else if (Math.abs(cat2) - Math.abs(mouse) < Math.abs(cat1) - Math.abs(mouse)){
-      console.log("cat2");
+      return gato2;
   } else if (Math.abs(cat1) - Math.abs(mouse) == Math.abs(cat2) - Math.abs(mouse)) {
-      console.log("os gatos trombam e o rato foge");
+      return gatoIgual;
   }
 }
 
