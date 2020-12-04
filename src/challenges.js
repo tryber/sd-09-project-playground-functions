@@ -150,7 +150,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayNames, name) {
   let objectlist = [];
   if (arrayNames.length !== 0) {
     for (key in arrayNames.sort()) {
