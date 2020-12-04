@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
   stringResponse1 = distanceInCats1(distCat1, distCat2);
   stringResponse2 = cat1ToCat2(cat1, cat2);
 
-  responseQuestion = stringLength(stringResponse1, stringResponse2)
+  responseQuestion = stringLength(stringResponse1, stringResponse2);
 
   return resultado;
 }
