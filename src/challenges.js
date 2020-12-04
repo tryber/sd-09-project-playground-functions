@@ -45,7 +45,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function greatestValue(array) {
-  let greatest = 0
+  let greatest = array[0]
   for (let element of array) {
     if (element > greatest) {
       greatest = element
@@ -166,7 +166,7 @@ function techList(array, name) {
 
 // Desafio 11
 function lowestValue(array) {
-  let lowest = 0
+  let lowest = array[0]
   for (let element of array) {
     if (element < lowest) {
       lowest = element
