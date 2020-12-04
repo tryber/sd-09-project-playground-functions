@@ -240,7 +240,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let allDrinks = drinks.match(/\d+/g); // Expressão Regular
+  // Entendendo o funcionamento das expressões regulares em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+  // Exemplo visto em https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/
+  let allDrinks = drinks.match(/\d+/g);
   let drinksOfWater = 0;
 
   for (let index in allDrinks) {
