@@ -24,7 +24,7 @@ function splitSentence() {
 
 function concatName(arrayNames) {
   let stringNamesFromArray = [];
-  for (let index = 0; index <arrayNames.length; index += 1){
+  for (let index = arrayNames.length; index >= 0; index -= 1){
     if (index + arrayNames.length === arrayNames.length){
       stringNamesFromArray.push(arrayNames[index]);
     }
@@ -32,7 +32,7 @@ function concatName(arrayNames) {
       stringNamesFromArray.push(arrayNames[index]);
     }
   }
-  return stringNamesFromArray.join();
+  console.log(stringNamesFromArray.join());
 }
 let arrayExemplos =  ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatName(arrayExemplos);
@@ -45,9 +45,12 @@ function footballPoints(wins, ties) {
 }
 footballPoints(5, 2)
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 - Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
+function highestCount(arrayOfNumbers) {
+  let HighestNumber = 0;
+  for (let index = 0; index < arrayOfNumbers.length; index += 1){
+
+  }
 }
 
 // Desafio 7 - Caça ao rato.
@@ -75,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-catAndMouse(3,9,17);
+catAndMouse(3, 9, 17);
 
 // Desafio 8
 function fizzBuzz(arrayPassed) {
