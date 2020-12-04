@@ -154,7 +154,7 @@ function generatePhoneNumber(array) {
   for (let index = 0; index < display.phoneNumber.length; index += 1) {
     display.phoneNumberArray[index] = display.phoneNumber[index];
     if (display.phoneNumber[index] === 'a') {
-      display.phoneNumberArray[index] = array[display.phoneIndex].toString();
+      display.phoneNumberArray[index] = array[display.phoneIndex];
       display.phoneIndex += 1;
     }
   }
@@ -177,8 +177,27 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let lineArray = [lineA, lineB, lineC];
+  let highestLine = lineArray[0];
+  let smallestLine = lineArray[0];
+  let linesSum = lineA + lineB + lineC;
+  let triangle = true;
+  for (let index = 0; index < lineArray.length; index += 1) {
+    if (lineArray[index] > highestLine) {
+      highestLine = lineArray[index];
+    }
+    if (lineArray[index] < highestLine) {
+      smallestLine = lineArray[index];
+    }
+  }
+  for (let index = 0; index < lineArray.length; index += 1) {
+    let middleLine = linesSum - highestLine;
+    if (highestLine > (linesSum - highestLine) || smallestLine < Math.abs(highestLine - middleLine)) {
+      triangle = false;
+    }
+  }
+  return triangle;
 }
 
 // Desafio 13
