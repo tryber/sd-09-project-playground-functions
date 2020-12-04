@@ -73,11 +73,14 @@ function fizzBuzz(numbers) {
       arrayOfStrings[index] = 'fizz';
     } else if (numbers[index] % 5 === 0) {
       arrayOfStrings[index] = 'buzz';
+    } else {
+      arrayOfStrings[index] = 'bug!';
     }
-    arrayOfStrings[index] = 'bug!';
   }
   return arrayOfStrings;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
