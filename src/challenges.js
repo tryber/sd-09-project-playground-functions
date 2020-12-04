@@ -47,7 +47,14 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
     let cat1Pos = Math.abs(cat1 - mouse);
     let cat2Pos = Math.abs(cat2 - mouse);
-	  let result = "os gatos trombam e o rato foge";
+    let result = "os gatos trombam e o rato foge";
+    if (cat1Pos < cat2Pos){
+      result = 'cat1';
+    }
+    if (cat2Pos < cat1Pos){
+      result = 'cat2';
+  }return result
+
 
  // Desafio 8
 function fizzBuzz(arrayNumb) {
