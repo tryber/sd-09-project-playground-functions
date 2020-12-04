@@ -37,19 +37,19 @@ function highestCount(recive) {
   // seu código aqui
   let highest = -1;
   let count = 0;
-  for (let index in recive) {
-    if (recive[index] > highest) {
-      highest = recive[index];
-      return highest
+  for (let largestNumber in recive) {
+    if (recive[largestNumber] > highest) {
+      highest = recive[largestNumber];
     }
   }
-  for (let index in recive) {
-    if (recive[index] === highest) {
+  for (let largestNumber in recive) {
+    if (recive[largestNumber] === highest) {
       count += 1;
     }
   }
   return count;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
