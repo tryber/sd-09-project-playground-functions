@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Distance > cat1Distance) {
     return 'cat1';
   }
-  return 'os gatos se trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(1, 0, 2));
 
@@ -75,12 +75,12 @@ console.log(catAndMouse(1, 0, 2));
 let fizzBuzzResult = [];
 function fizzBuzz(numbersArray) {
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 === 0) {
-      fizzBuzzResult.push('fizz');
+    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
+      fizzBuzzResult.push('fizzBuzz');
     } else if (numbersArray[index] % 5 === 0) {
       fizzBuzzResult.push('buzz');
-    } else if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
-      fizzBuzzResult.push('fizzBuzz');
+    } else if (numbersArray[index] % 3 === 0) {
+      fizzBuzzResult.push('fizz');
     } else {
       fizzBuzzResult.push('bug!');
     }
