@@ -16,18 +16,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(phrase) {
   // seu código aqui
-  let newSentence = [];
-
-  for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] !== ' ') {
-      newSentence = newSentence + phrase[index]
-    } else if (phrase[index] === ' ') {
-      newSentence.push(' ');
-    }
-  }
-  return newSentence;
+  return phrase.split(' ');
 }
-// console.log(splitSentence('Vamos com tudo!'));
 
 // Desafio 4
 function concatName(nameList) {
@@ -95,8 +85,18 @@ function fizzBuzz(bet) {
 }
 
 // Desafio 9
-function encode() {
+function encode(insertString) {
   // seu código aqui
+  let encodeResult = '';
+  
+  for (let index = 0; index < insertString.length; index += 1) {
+    if (insertString[index === 'a']) {
+      
+    } else {
+      
+    }
+    
+  }
 }
 function decode() {
   // seu código aqui
