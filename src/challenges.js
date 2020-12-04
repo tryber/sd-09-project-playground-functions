@@ -75,17 +75,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(num1) {
+  let arrayBuzz = [];
   for (let i = 0; i < num1.length; i++){
     if ((num1[i] % 3) == 0){
-      console.log('fizz')
+      arrayBuzz.push('fizz')
     } else if ((num1 % 5) == 0){
-      console.log('buzz')
+      arrayBuzz.push('buzz')
     } else if ((num1 % 3) == 0 && (num1 % 5) == 0){
-      console.log('fizzBuzz')
+      arrayBuzz.push('fizzBuzz')
     } else {
-      console.log('bug!')
+      arrayBuzz.push('bug!')
     }
   }
+  return arrayBuzz;
 }
 
 // Desafio 9
