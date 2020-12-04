@@ -271,6 +271,8 @@ String retornada:
 
 **Dica:** pesquise por algo similar a `get all integers inside a string js`.
 
+**Obs:** para o seguinte desafio foi utilizado 2 fontes externas, [esse](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) para entender expressões regulares e [esse](https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/) de exemplo para estrair os numeros do array.
+
 ---
 
 ### DURANTE O DESENVOLVIMENTO
