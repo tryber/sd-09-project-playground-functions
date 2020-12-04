@@ -159,22 +159,20 @@ function generatePhoneNumber(array) {
     }
   }
   display.displayMessage = display.phoneNumberArray.join('');
-
-  if (array.length != 11) {
+  if (array.length !== 11) {
     display.displayMessage = display.errorMessageOne;
   }
-  for (let index = 0; index < array.length; index += 1 ) {
+  for (let index = 0; index < array.length; index += 1) {
     display.repeatCount = 0;
     for (let repeatIndex = 0; repeatIndex < array.length; repeatIndex += 1) {
       if (array[repeatIndex] === array[index]) {
         display.repeatCount += 1;
       }
-      if (display.repeatCount > 2) {
+      if (array[index] < 0 || array[index] > 9 || display.repeatCount > 2) {
         display.displayMessage = display.errorMessageTwo;
       }
     }
   }
-
   return display.displayMessage;
 }
 
