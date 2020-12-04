@@ -14,72 +14,35 @@
 
 
 // // Desafio 9
-// function encode() {
-//     // seu código aqui
-//   }
-//   function decode() {
-//     // seu código aqui
-//   }
+// fonte de consulta : https://www.alura.com.br/artigos/trocando-caracteres-de-uma-string-no-java#:~:text=Para%20isso%20podemos%20usar%20o,que%20passarmos%20por%20outro%20caractere.
 
+function encode(encodeArray) {
+    for(let index = 0; index < encodeArray; index += 1){
+        if (encodeArray[index] === a){
+            encodeArray.replaceAll("a","1");
+            return stringA;
+        }else if (encodeArray[index] === e) {
+                encodeArray.replaceAll("e","1");
+                return stringE;
+        }else if (encodeArray[index] === i) {
+                encodeArray.replaceAll("i","1");
+                return stringI;
+        }else if (encodeArray[index] === o) {
+                encodeArray.replaceAll("o","1");
+                return stringO;
+        }else if (encodeArray[index] === u) {
+                encodeArray.replaceAll("u","1");
+                return stringU;
+        }
+    }
+  }
+  console.log(encode('abacaxi'));
 
+  function decode() {
+    // seu código aqui
+  }
 
-
-// **10 - Lista de tecnologias**
-// -
-// Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado `name` com um nome.
-
-// Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
-
-// ```
-// {
-//   tech: "NomeTech",
-//   name: name
-// }
-// ```
-
-// Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo `tech` no objeto.
-
-// A saída da sua função deve ser uma lista de objetos ordenada pelo campo `tech` dos objetos com o formato acima.
-
-// Exemplo:
-// ```
-// Entradas da função:
-
-// ["React", "Jest", "HTML", "CSS", "JavaScript"]
-// "Lucas"
-
-// // Saída:
-
-// [
-//   {
-//     tech: "CSS",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "HTML",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "JavaScript",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "Jest",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "React",
-//     name: "Lucas"
-//   }
-// ]
-// ```
-
-// Caso o array venha vazio sua função deve retornar 'Vazio!'
-
-
-
-
-
-
-// // Desafio 10
-// function techList(name, programList) {}
+//   public static String formataDados(String dado){
+//     stringA = dado.replaceAll("a","4");
+//     return stringA;
+//  }
