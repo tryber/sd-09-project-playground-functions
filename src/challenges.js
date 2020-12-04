@@ -137,11 +137,45 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringToEncode) {
   // seu código aqui
+  let encodedString = '';
+  for (let index = 0; index < stringToEncode.length; index += 1 ) {
+    if (stringToEncode[index] === 'a') {
+         encodedString += '1';
+    } else if (stringToEncode[index] === 'e') {
+         encodedString += '2';
+    } else if (stringToEncode[index] === 'i') {
+          encodedString += '3';
+    } else if(stringToEncode[index] === 'o') {
+          encodedString += '4';
+    } else if (stringToEncode[index] === 'u') {
+          encodedString += '5';   
+  } else {
+    encodedString += stringToEncode[index];
+  }
 }
-function decode() {
+  return encodedString;
+}
+function decode(stringToDecode) {
   // seu código aqui
+  let decodedString = '';
+  for (let index = 0; index < stringToDecode.length; index += 1 ) {
+    if (stringToDecode[index] === '1') {
+         decodedString += 'a';
+    } else if (stringToDecode[index] === '2') {
+         decodedString += 'e';
+    } else if (stringToDecode[index] === '3') {
+         decodedString += 'i';
+    } else if(stringToDecode[index] === '4') {
+         decodedString += 'o';
+    } else if (stringToDecode[index] === '5') {
+         decodedString += 'u';   
+  } else {
+    decodedString += stringToDecode[index];
+  }
+}
+  return decodedString;
 }
 
 // Desafio 10
@@ -163,6 +197,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+console.log(decode("h3 th2r2!"));
 module.exports = {
   calcArea,
   catAndMouse,
