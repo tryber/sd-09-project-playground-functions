@@ -102,10 +102,10 @@ function encode(arrayEncode) {
     i: '3',
     o: '4',
     u: '5',
- };
+ }
  arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding){
    return encodeVocals[encoding];
- });
+ })
 return arrayEncode;
 }
 console.log(encode('hi there!'));
@@ -117,48 +117,57 @@ function decode(arrayDecode) {
   '3': 'i',
   '4': 'o',
   '5': 'u',
-};
+}
 arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function(decoding){
   return decodeVocals[decoding];
-});
+})
 return arrayDecode;
 }
 console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech , name) {
+  let wantLearn = [];
+  tech = tech.sort();
+  if(tech.length === 0) {
+    return 'Vazio!';
+  }  
+for(let index = 0; index < tech.length; index += 1) {
+  wantLearn.push({ tech: tech[index],  name: name }); 
 }
-
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+ return wantLearn;
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+// // Desafio 11
+// function generatePhoneNumber() {
+//   // seu código aqui
+// }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+// // Desafio 12
+// function triangleCheck() {
+//   // seu código aqui
+// }
+
+// // Desafio 13
+// function hydrate() {
+//   // seu código aqui
+// }
 
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
-}
+// module.exports = {
+//   calcArea,
+//   catAndMouse,
+//   compareTrue,
+//   concatName,
+//   decode,
+//   encode,
+//   fizzBuzz,
+//   footballPoints,
+//   generatePhoneNumber,
+//   techList,
+//   highestCount,
+//   hydrate,
+//   splitSentence,
+//   triangleCheck,
+// }
