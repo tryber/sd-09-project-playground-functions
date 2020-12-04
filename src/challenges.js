@@ -87,7 +87,7 @@ function catAndMouse( mouse, cat1, cat2 ) {
   // seu código aqui
   let gato = "";
   if ( Math.abs(cat1) - Math.abs(mouse) < Math.abs(cat2) - Math.abs(mouse)){
-      gato = "cat1";
+    gato = "cat1";
   } else if (Math.abs(cat2) - Math.abs(mouse) < Math.abs(cat1) - Math.abs(mouse)){
       gato = "cat2";
   } else if (Math.abs(cat1) - Math.abs(mouse) == Math.abs(cat2) - Math.abs(mouse)) {
