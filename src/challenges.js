@@ -19,8 +19,7 @@ function splitSentence(sentence) {
   for (let index = 0; index < sentence.length; index += 1) {
     if (sentence[index] !== ' ') {
       newString += sentence[index];
-    }
-    if (sentence[index] === ' ' && newString !== '') {
+    } else if (sentence[index] === ' ' && newString !== '') {
       arrayStrings.push(newString);
       newString = '';
     }
@@ -38,9 +37,11 @@ function concatName(stringsArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints() {//wins, ties) {
+  //let pointsTeam = 0;
+  //return pointsTeam;
 }
+//console.log(3, 7)
 
 // Desafio 6
 function highestCount() {
@@ -53,8 +54,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-}
+function fizzBuzz() {}
 
 // Desafio 9
 function encode() {
