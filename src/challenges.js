@@ -109,9 +109,19 @@ return string9;
 }
 
 // Desafio 10
+let arraytech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Felipe";
 function techList(arraytech, name) {
   // seu código aqui
-  
+  let arrayTech = [];
+  tech.sort();
+  for (let index = 0; index < tech.length; index += 1) {
+    arrayTech.push({
+      tech: tech[index],
+      name,
+    });   
+  }
+  return arrayTech
 }
 
 // Desafio 11

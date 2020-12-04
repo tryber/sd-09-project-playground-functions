@@ -1,58 +1,54 @@
-// function highestNumber(array6) {
-//   let index = 0;
-//   let highest = 0;
-//   let array = [];
-//   for (index0 = 0; index0 < array6.length; index0 ++) {
-//     array = array.push(array6[index0]);
-//   }
-//   for (index = 0; index < array6.length; index ++) {
-//     if (highest < array6[index]) {
-//       highest = array6[index];
-//     }
-//   }
-//   return highest;
-// }
-// console.log(highestNumber([3, 4, 5, 6, 8, 4]));
-
-//desafio10
-// let arraytech = ["react", "phyton", "javascript"];
+// let arraytech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 // let name = "Felipe";
+// let object = {};
 // function techList(arraytech, name) {
+//   // seu código aqui
 //   let arraysort = arraytech.sort;
-//   return arraysort
-
+  
+//   for (let index = 0; index < arraytech.length; index ++) {
+//     object.push = ({
+//       tech:arraysort[index],
+//       name,
+//     });
+//   }
+//   return object
 // }
-// console.log(techlist(arraytech, name));
-
-// var numbers = [4, 2, 5, 1, 3];
-// numbers.sort(function(a, b) {
-//   return a - b;
+// object.push = ({
+//   tech:arraytech[0],
+//   name,
 // });
-// console.log(numbers);
+// object.push = ({
+//   tech:arraytech[1],
+//   name,
+// });
+// object.push = ({
+//   tech:arraytech[2],
+//   name,
+// });
 
-console.log("desafio6");
-let highest = "";
+// console.log(table.object);
 
-function highestNumber(array6) {
-  let index = 0;
-  let highest = array6[index];
-    for (index = 0; index < array6.length; index ++) {
-      if (highest < array6[index]) {
-        highest = array6[index];
-      }
-    }
-  return highest;
-}
 
-//let highest = highestNumber([]);
-
-function highestCount(array6) {
-  let index = 0;
-  let counter = 0;
-  for (index = 0; index < array6.length; index ++) {
-    if (highestNumber(array6) === array6[index]) {
-      counter = counter + 1;
-    }
+//EXEMPLO DO COLEGUINHA
+let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Felipe";
+function techList(tech, name) {
+  let arrayTech = [];
+  tech.sort();
+  for (let index = 0; index < tech.length; index += 1) {
+    arrayTech.push({
+      tech: tech[index],
+      name,
+    });
+    console.log((arrayTech)+(index));
   }
-  return counter;
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayTech;
 }
+console.table(techList(tech, name));
+let a = 2;
+let b = 4;
+console.log(a + "-" + b);
+    
