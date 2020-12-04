@@ -155,7 +155,7 @@ function techList(arrayNames, name) {
   if (arrayNames.length !== 0) {
     for (let key of arrayNames.sort()) {
       let object = {
-        tech: arrayNames[key],
+        tech: key,
         name,
       }
       objectlist.push(object);
