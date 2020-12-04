@@ -158,9 +158,9 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lines) {
+function triangleCheck(lineA , lineB , lineC) {
   // Resolver itens negativos
-  let array = lines
+  let array = [lineA , lineB , lineC]
 
   let result = ""
 
@@ -168,16 +168,16 @@ function triangleCheck(lines) {
   return b - a
   });
   
-  if ( (array[0] - array[2]) < array[1] < (array[0] + array[1]) === true && 
-       (array[0] - array[1]) < array[2] < (array[0] + array[1]) === true && 
-       (array[1] - array[2]) < array[0] < (array[1] + array[2]) === true) {
+  if ( (lineA - lineC) < lineB < (lineA + lineB) === true && 
+       (lineA - lineB) < lineC < (lineA + lineB) === true && 
+       (lineB - lineC) < lineA < (lineB + lineC) === true) {
     result = true
   } else {
     result = false
   }
   return result
 }
-console.log(triangleCheck([10 , 14 , 8]))
+console.log(triangleCheck(10 , 14 , 8))
 
 // Desafio 13
 function hydrate(string) {
