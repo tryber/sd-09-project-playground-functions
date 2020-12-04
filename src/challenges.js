@@ -44,11 +44,12 @@ function highestCount(arrayNumbers) {
 } 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+    let cat1Pos = Math.abs(cat1 - mouse);
+    let cat2Pos = Math.abs(cat2 - mouse);
+	  let result = "os gatos trombam e o rato foge";
 
-// Desafio 8
+ // Desafio 8
 function fizzBuzz(arrayNumb) {
   let arrayFizz = [];
   for (let index = 0; index < arrayNumb.length; index += 1) {
