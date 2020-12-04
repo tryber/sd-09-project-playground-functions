@@ -40,7 +40,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumeros) {
-
   let maiorNumero = arrayNumeros.reduce((a, b) => Math.max(a, b));
   let quantMaior = somaMaiorNumero(maiorNumero, arrayNumeros);
 
