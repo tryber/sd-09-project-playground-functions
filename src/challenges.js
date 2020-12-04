@@ -95,6 +95,9 @@ function fizzBuzz(arrayNumbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
+// href "https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings" buscando soluções para o desafio 09 encontrei esta trhead no StackOverflow onde a estrutura do codigo cabia perfeitamente na problematica ==> param = param.replace(strings/gi, function(novoParam){return resultado[novoParam]; <==
+// Neste codigo apliquei replace para subustituir as strings por outras strings conforme solicitado, utilizei o comando /gi para fosse aplicado o replace não só na primeira ocorrencia e uma função de retorno aplicando o novo parametro na string parametro do desafio.
+
 function encode(arrayEncode) {
   let encodeVocals = {
     a: '1',
