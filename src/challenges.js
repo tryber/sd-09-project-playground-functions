@@ -1,17 +1,11 @@
 //VQV Brows
 
-
-
-
-
-
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true){
+  if (value1 === true && value2 === true){
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -25,10 +19,10 @@ function splitSentence(phrase) {
   phrase += ' ';
   let n = phrase.length;
   let wordsSplited = [];
-  for(let index = 0; index < n; index += 1){
+  for (let index = 0; index < n; index += 1){
     phrase += ' ';
     let letter = phrase.charAt(index);
-    if (letter != ' ') {
+    if (letter !== ' ') {
       word += letter;
     } else {
       wordsSplited.push(word);
@@ -41,7 +35,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(array) {
   let n = array.length;
-  let phrase = array[n-1] + ', ' + array[0]
+  let phrase = '${array[n-1]}, ${array[0]}'
   return phrase;
 }
 
@@ -172,7 +166,7 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
   if (array.length != 11){
     return 'Array com tamanho incorreto.';
-  }  
+  }
   for(let index = 0; index < array.length; index += 1){
     if (array[index] < 0 || array[index] > 9){
       return 'não é possível gerar um número de telefone com esses valores';
@@ -188,7 +182,7 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  let phoneNumber = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];  
+  let phoneNumber = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
   return phoneNumber;
 }
 
