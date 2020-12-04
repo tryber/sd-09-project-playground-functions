@@ -6,14 +6,14 @@ function compareTrue(valor1, valor2) {
     return false;
   }
 }
-console.log(compareTrue(true, true));
+//console.log(compareTrue(true, true));
 
 
 // Desafio 2
 function calcArea(base, heigth) {
   return ((base * heigth) / 2);
 }
-console.log(calcArea(10, 5));
+//console.log(calcArea(10, 5));
 
 
 // Desafio 3
@@ -22,7 +22,7 @@ function splitSentence(string) {
   let divisor = string.split(' ');
   return divisor;
 }
-console.log(splitSentence(array));
+//console.log(splitSentence(array));
 
 //Desafio 4
 
@@ -33,7 +33,7 @@ let lastName = nomes[nomes.length - 1];
 let finalResult = lastName + ', ' + firstName;
   return finalResult;
 }
-        console.log(concatName(arrays));
+        //console.log(concatName(arrays));
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -42,11 +42,10 @@ let totalTies = ties * 1;
 let total = totalWins + totalTies;
       return total;
 }
-      console.log(footballPoints(5,2));
+      //console.log(footballPoints(5,2));
 
 // Desafio 6
 let arrayys = [1, 1, 2, 9, 9, 5, 7];
-
 function highestCount(numbers) {
 let contador = 0;
 let maiorNumero = 0;
@@ -59,13 +58,14 @@ let maiorNumero = 0;
     }
   } return contador;
 }       
-      console.log(highestCount(arrayys));
+      //console.log(highestCount(arrayys));
 
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
-let cat1Distance = cat1 - mouse;
-let cat2Distance = cat2 - mouse;
+let cat1Distance = Math.abs(cat1 - mouse);
+let cat2Distance = Math.abs(cat2 - mouse);
+
     if (cat1Distance < cat2Distance) {
         return "cat1";
    } else if (cat2Distance < cat1Distance) {
@@ -77,7 +77,6 @@ let cat2Distance = cat2 - mouse;
         console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-//let arrayFB = [;
 function fizzBuzz(arrayFB) {
   for (let index = 0; index < arrayFB.length; index += 1) {
 
@@ -97,9 +96,21 @@ function fizzBuzz(arrayFB) {
 }       fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+let letra = [];
+//let soma = 0;
+function encode(changeLtoN) {
+ for (let index = 0; index < letra.length; index += 1){
+//changeLtoN = letra[index].replace('a', 1);
+              //soma += letra[index];
+      if (letra[index] === 'a') {        
+      } else ('a' === 1); 
+
+      console.log(letra);
+ }  
+  
+
+}       encode();
+
 function decode() {
   // seu código aqui
 }
