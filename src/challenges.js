@@ -18,10 +18,10 @@ function splitSentence(phrase) {
   // seu código aqui
   let newSentence = [];
 
-  for (let index = 0; index < phrase.length; index+=1) {
-    if (phrase[index] !== ' '){
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] !== ' ') {
       newSentence = newSentence + phrase[index]
-    } else if (phrase[index] === ' '){
+    } else if (phrase[index] === ' ') {
       newSentence.push(' ');
     }
   }
@@ -32,50 +32,61 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
-  return (nameList[nameList.length-1]+', '+nameList[0]);
+  return (nameList[nameList.length-1] + ', ' + nameList[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(setOfNumbers) {
   // seu código aqui
-  let timeCounter = 0;
+  function getMaxOfArray(setOfNumbers) {
+    return Math.max.apply(null, setOfNumbers);
+ }
+ let higherNumber = getMaxOfArray(setOfNumbers)
+ let count = 0;
 
-  for (let index = 0; index < setOfNumbers.length; index+=1) {
-    setOfNumbers(index);
-    for (let index2 = 0; index2 < setOfNumbers.length; index2+=1) {
-      if (setOfNumbers[index] >= setOfNumbers[index2]) {
-        timeCounter = timeCounter + 1;
-      }
-    }
-  }
-  return timeCounter
+ for (let index = 0; index < setOfNumbers.length; index += 1) {
+   if (higherNumber === setOfNumbers[index]) {
+     count++;
+   }
+ }
+ return count
 }
-//console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
+console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let positionCat1Mouse = cat1 - mouse;
+  let positionCat2Mouse = cat2 - mouse;
+
+  if (positionCat1Mouse < positionCat2Mouse) {
+    return "cat1";
+  } else if (positionCat1Mouse > positionCat2Mouse) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
 function fizzBuzz(bet) {
   // seu código aqui
   let matchResult = [];
-  for (let index = 0; index < bet.length; index+=1) {
+  for (let index = 0; index < bet.length; index += 1) {
     if (bet[index] % 3 === 0 && bet[index] % 5 !== 0) {
-      matchResult.push("fizz");
+      matchResult.push('fizz');
     } else if (bet[index] % 3 !== 0 && bet[index] % 5 === 0) {
-      matchResult.push("buzz");
+      matchResult.push('buzz');
     } else if (bet[index] % 3 === 0 && bet[index] % 5 === 0) {
-      matchResult.push("fizzBuzz");
+      matchResult.push('fizzBuzz');
     } else {
-      matchResult.push("bug!");
+      matchResult.push('bug!');
     }
   }
   return matchResult;
