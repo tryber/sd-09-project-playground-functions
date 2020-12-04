@@ -50,12 +50,12 @@ function highestCount(arrayNumeros) {
 function somaMaiorNumero(numero, arrayNumeros) {
   let qdt = 0;
   let tamanhoArray = arrayNumeros.length;
-  for (let i; i < tamanhoArray; i += 1) {
-    if (arrayNumero[i] === numero) {
+  for (let i = 0; i < tamanhoArray; i += 1) {
+    if (arrayNumeros[i] === numero) {
       qdt += 1;
     }
-    return qdt;
   }
+  return qdt;
 }
 
 // Desafio 7
