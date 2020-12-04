@@ -18,14 +18,23 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let arraySentence = '';
-  sentence.split('').forEach(letter => {
-    arraySentence += letter;
-  });
-  return arraySentence;
+  let arrayStrings = [];
+  let newString = '';
+  for (index = 0; index < sentence.length; index += 1) {
+    if (sentence[index] !== ' ') {
+      newString = newString + sentence[index];
+    } if (sentence[index] === ' ' && newString !== '') {
+      arrayStrings.push(newString);
+      newString = '';
+    }
+  }
+  if (newString !== '') {
+  arrayStrings.push(newString);
+  }
+  return arrayStrings;
 }
 
-console.log(splitSentence('go Trybe'));
+console.log(splitSentence(' go  Trybe ')); //apagar
 
 // Desafio 4
 function concatName() {
@@ -50,9 +59,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz([arrayNumbers]) {
+  let novaArray = [];
+  for (index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 == 0) {
+      novaArray.replace('fizz');
+    } else if (arrayNumbers[index] % 5 == 0) {
+      console.log('buzz');
+    } else if (arrayNumbers[index] % 15 == 0) {
+      console.log('fizzBuzz');
+    } else {
+      console.log('bug!');
+    }
+  }
+  return novaArray;
 }
+console.log([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
