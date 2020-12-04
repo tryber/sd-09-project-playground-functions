@@ -76,8 +76,8 @@ let cat2Distance = Math.abs(cat2 - mouse);
        // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz(ArFizzBuzz) {
-   ArFizzBuzz = [2, 15, 7, 9, 45];
+function fizzBuzz(arrayFB) {
+   ArFizzBuzz = [9, 25];
 
   //ArFizzBuzz.push();
 //criar um array
@@ -97,7 +97,7 @@ function fizzBuzz(ArFizzBuzz) {
     } else {
         console.log('bug!');
     }
-  }   return ArFizzBuzz;
+  }   return arrayFB;
 }      fizzBuzz();
 
 // Desafio 9
