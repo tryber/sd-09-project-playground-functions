@@ -2,7 +2,7 @@
 
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
+  if (value1 === true && value2 === true) {
     return true;
   }
   return false;
@@ -19,7 +19,7 @@ function splitSentence(phrase) {
   phrase += ' ';
   let n = phrase.length;
   let wordsSplited = [];
-  for (let index = 0; index < n; index += 1){
+  for (let index = 0; index < n; index += 1) {
     phrase += ' ';
     let letter = phrase.charAt(index);
     if (letter !== ' ') {
@@ -56,7 +56,7 @@ function highestCount(array) {
       higher = array[index];
     }
   }
-  for ( let index = 0; index < n; index += 1) {
+  for (let index = 0; index < n; index += 1) {
     let number = array[index];
     if (higher === number) {
       counter += 1;
@@ -70,9 +70,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
   let dist2 = mouse - cat2;
   if (dist1 < 0) {
-    dist1 = (dist1 * -1);
+    dist1 *= -1;
   } else if (dist2 < 0) {
-    dist2 = (dist2 * -1);
+    dist2 *= -1;
   }
 
   if (dist1 === dist2) {
@@ -92,7 +92,7 @@ function fizzBuzz(array) {
     } else if (array[index] % 5 === 0) {
       array2.push('buzz');
     } else if (array[index] % 3 === 0) {
-        array2.push('fizz');
+      array2.push('fizz');
     } else {
       array2.push('bug!')
     }
@@ -150,10 +150,10 @@ function techList(array, name) {
   let array2 = array.sort();
   let array3 = [];
   let n = array.length;
-  for (let index = 0; index < n; index += 1){
+  for (let index = 0; index < n; index += 1) {
     let object = {
       tech: array2[index],
-      name: name
+      name: name,
     }
     array3.push(object);
   }
@@ -162,20 +162,20 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.length != 11){
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for(let index = 0; index < array.length; index += 1){
-    if (array[index] < 0 || array[index] > 9){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     } else if (index <= 9){
       let counter = 0;
-      for (let index2 = 1; index2 < array.length; index2 += 1){
-        if (array[index] === array[index2]){
+      for (let index2 = 1; index2 < array.length; index2 += 1) {
+        if (array[index] === array[index2]) {
           counter += 1;
         }
       }
-      if (counter >= 3){
+      if (counter >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
@@ -186,27 +186,26 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
-  } else if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)){
+  } else if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
     return true;
-  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
 function hydrate(string) {
   let numbers = string.match(/\d+/g);
   let sum = 0;
-  for(let index = 0; index < numbers.length; index += 1){
-      let int = parseInt(numbers[index]);
-      sum += int;
+  for (let index = 0; index < numbers.length; index += 1) {
+    let int = parseInt(numbers[index]);
+    sum += int;
   }
-  if (sum === 1){
-      return "1 copo de água";
+  if (sum === 1) {
+    return '1 copo de água';
   }
   return sum + ' copos de água'
 }
