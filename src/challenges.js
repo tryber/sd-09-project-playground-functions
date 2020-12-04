@@ -202,6 +202,9 @@ function hydrate(string) {
   for (let index = 0; index < array.length; index += 1) {
     waterCups += parseInt(array[index], 10);
   }
+  if (waterCups === 1) {
+    return `${waterCups} copo de água`;
+  }
   return `${waterCups} copos de água`;
 }
 
