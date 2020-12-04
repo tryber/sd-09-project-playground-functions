@@ -134,18 +134,18 @@ function techList(arrayOfTech, name) {
 
 // Desafio 11
 function inadequateNumbers(number) {
-  let inadequated = false;
+  let inadequate = false;
   for (let valor in number) {
     if (number[valor] > 9) {
-      inadequated = true;
+      inadequate = true;
       break
     }
     if (number[valor] < 0) {
-      inadequated = true;
+      inadequate = true;
       break
     }
   }
-  return inadequated;
+  return inadequate;
 }
 function tooMuchRepeated(array) {
   let soMuchRepetition = false;
@@ -198,13 +198,19 @@ function triangleCheck(lineA, lineB, lineC) {
   let sideA = lineACheck(lineA, lineB, lineC);
   let sideB = lineBCheck(lineA, lineB, lineC);
   let sideC = lineCCheck(lineA, lineB, lineC);
-  let compare = (sideA === true || sideB === true || sideC === true) ? true : false;
-  return compare;
+  let compare = (sideA === true || sideB === true || sideC === true) ? 1 : 0;
+  return !!compare;
 }
-console.log(triangleCheck(10, 14, 8))
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regexForNumbers = /\d+/g;
+  let myNumbers = string.match(regexForNumbers);
+  let sumOfArrayNumbers = 0;
+  for (let number in myNumbers) {
+    sumOfArrayNumbers += Math.abs(myNumbers[number]);
+  }
+  return `${sumOfArrayNumbers} copos de água`;
 }
 
 
