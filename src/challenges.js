@@ -169,19 +169,17 @@ function testRepeatedNumber(array) {
 }
 function generatePhoneNumber(array) {
   let numberArray = testNumberArray(array);
-  let possibleNumber = testNumberRange(array);
+  let impossibleNumber = testNumberRange(array);
   let repeatedNumbers = testRepeatedNumber(array);
-
-  if (possibleNumber === false && biggestNumber(repeatedNumbers) < 3) {
-    if (numberArray === true) {
-      let phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-      return phoneNumber;
-    } else {
-      return 'Array com tamanho incorreto.';
-    }
-  } else {
-    return 'não é possível gerar um número de telefone com esses valores';
+  let phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  
+  if (numberArray === false) {
+    phoneNumber = 'Array com tamanho incorreto.';
   }
+  if (impossibleNumber === true || biggestNumber(repeatedNumbers) >= 3) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores'
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
