@@ -90,37 +90,79 @@ function fizzBuzz(numbers) {
 return array;
 }
 
-
-let test = [2, 15, 7, 9, 45]
-console.log(fizzBuzz(test));
-
 // Desafio 9
 function encode(string) {
+let codedString = '';
 
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
+      codedString += '1';
+    }
+    else if (string[i] === 'e') {
+      codedString += '2';
+    }
+    else if (string[i] === 'i') {
+      codedString += '3';
+    }
+    else if (string[i] === 'o') {
+      codedString += '4';
+    }
+    else if (string[i] === 'u') {
+      codedString += '5';
+    } else {
+      codedString += string[i];
+    }
+  }
+  return codedString;
+}
+console.log(encode('Ola mundo'));
+
+function decode(codedString) {
+let decodedString = '';
+
+for (let i = 0; i < codedString.length; i += 1) {
+  if (codedString[i] === '1') {
+    decodedString += 'a';
+  }
+  else if (codedString[i] === '2') {
+    decodedString += 'e';
+  }
+  else if (codedString[i] === '3') {
+    decodedString += 'i';
+  }
+  else if (codedString[i] === '4') {
+    decodedString += 'o';
+  }
+  else if (codedString[i] === '5') {
+    decodedString += 'u';
+  } else {
+    decodedString += codedString[i];
+  }
+}
+return decodedString;
+}
 }
 
-function decode(string) {
 
-}
+
 // Desafio 10
 function techList(techArray, name) {
-  let newArray = [];
-  let obj = {
-    tech,
-    name,
-  }
+  let array = [];
+  let object = {}
 
   for (let i = 0; i < techArray.length; i += 1) {
-
-    let obj = {
+    object = {
       tech: techArray[i],
       name: name,
     }
-    newArray.push(obj);
-
+  array.push(object);
+  object = {};
   }
-return newArray;
 }
+
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = 'luciano';
+console.log(techList(array, name))
 
 // Desafio 11
 function generatePhoneNumber() {
