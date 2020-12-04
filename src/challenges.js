@@ -71,27 +71,47 @@ function fizzBuzz(Ar) {
   return Array;
 }
 
-// Para melhorar a complexidade a utilização do .replaceAll, irá eliminar a necessidade de utilização do for para percorrer a string, e de .replace dentro de if, alterando de uma vez todas as ocorrências dos caracteres escolhidos. https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
-
 // Desafio 9
 function encode(Str) {
-  let Str1 =Str
-  let Str2 = Str1.replaceAll('a', '1');
-  let Str3 = Str2.replaceAll('e', '2');
-  let Str4 = Str3.replaceAll('i', '3');
-  let Str5 = Str4.replaceAll('o', '4');
-  let Str6 = Str5.replaceAll('u', '5');
-  return Str6;
+  for (let index = 0; index < Str.length; index += 1) {
+    if (Str.includes('a')) {
+      Str = Str.replace('a', '1');
+    }
+    if (Str.includes('e')) {
+      Str = Str.replace('e', '2');
+    }
+    if (Str.includes('i')) {
+      Str = Str.replace('i', '3');
+    }
+    if (Str.includes('o')) {
+      Str = Str.replace('o', '4');
+    }
+    if (Str.includes('u')) {
+      Str = Str.replace('u', '5');
+    }
+  }
+  return Str;
 }
 
-function decode(Str) {
-  let Str1 = Str
-  let Str2 = Str1.replaceAll('1', 'a');
-  let Str3 = Str2.replaceAll('2', 'e');
-  let Str4 = Str3.replaceAll('3', 'i');
-  let Str5 = Str4.replaceAll('4', 'o');
-  let Str6 = Str5.replaceAll('5', 'u');
-  return Str6;
+function decode(Str2) {
+  for (let index = 0; index < Str2.length; index += 1) {
+    if (Str2.includes('1')) {
+      Str2 = Str2.replace('1', 'a');
+    }
+    if (Str2.includes('2')) {
+      Str2 = Str2.replace('2', 'e');
+    }
+    if (Str2.includes('3')) {
+      Str2 = Str2.replace('3', 'i');
+    }
+    if (Str2.includes('4')) {
+      Str2 = Str2.replace('4', 'o');
+    }
+    if (Str2.includes('5')) {
+      Str2 = Str2.replace('5', 'u');
+    }
+  }
+  return Str2;
 }
 
 // Desafio 10
