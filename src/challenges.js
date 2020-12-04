@@ -175,8 +175,7 @@ function generatePhoneNumber(array) {
   
   if (numberArray === false) {
     phoneNumber = 'Array com tamanho incorreto.';
-  }
-  if (impossibleNumber === true || biggestNumber(repeatedNumbers) >= 3) {
+  } else if (impossibleNumber === true || biggestNumber(repeatedNumbers) >= 3) {
     phoneNumber = 'não é possível gerar um número de telefone com esses valores'
   }
   return phoneNumber;
