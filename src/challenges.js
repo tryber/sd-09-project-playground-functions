@@ -124,14 +124,24 @@ function encode(stringToEncode) {
   let encodedString = '';
   for (let index = 0; index < stringToEncode.length; index += 1) {
     encodedArray.push(stringToEncode[index]);
-    for (let key in translatorMap) {
-      if (encodedArray[index] === key) {
-        encodedArray[index] = translatorMap[key];
-      }
-    }
+    encodedArray[index] = encriptMessage(encodedArray[index], translatorMap);
+    
     encodedString += encodedArray[index];
   }
   return encodedString;
+}
+
+let coded = encode('Helo there, how are you');
+console.log(coded);
+console.log(decode(coded));
+
+function encriptMessage(character, charMap) {
+  for (let key in charMap) {
+    if (character === key) {
+      return charMap[key];
+    }
+  }
+  return character;
 }
 
 // Challenge Nine - Function to decode a string
@@ -148,14 +158,19 @@ function decode(stringToDecode) {
   let decodedString = '';
   for (let index = 0; index < stringToDecode.length; index += 1) {
     decodedArray.push(stringToDecode[index]);
-    for (let key in translatorMap) {
-      if (decodedArray[index] === translatorMap[key].toString()) {
-        decodedArray[index] = key;
-      }
-    }
+    decodedArray[index] = decriptMessage(stringToDecode[index], translatorMap);
     decodedString += decodedArray[index];
   }
   return decodedString;
+}
+
+function decriptMessage(character, charMap) {
+  for (let key in charMap) {
+    if (character === charMap[key].toString()) {
+      return key;
+    }
+  }
+  return character;
 }
 
 // Desafio 10
