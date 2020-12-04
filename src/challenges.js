@@ -149,7 +149,7 @@ function verifyPhoneNumbersLength(arrayNums) {
   if (lowerNum < 0 || highterNum > 9) {
     response = errorMsg[0];
   }
-  if (arrayNums.length != 11) {
+  if (arrayNums.length !== 11) {
     response = errorMsg[1];
   }
   return response;
@@ -167,7 +167,7 @@ function verifyPhoneNumbersCounterCalculator(arrayNums, number) {
 
 function verifyPhoneNumbersRepeat(arrayNums) {
   for (let index = 0; index < arrayNums.length; index += 1) {
-    let valueCounter = verifyPhoneNumbersCounterCalculator(arrayNums, arrayNums[i]);
+    let valueCounter = verifyPhoneNumbersCounterCalculator(arrayNums, arrayNums[index]);
     if (valueCounter >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -180,7 +180,7 @@ function generatePhoneNumber(arrayNums) {
   let responseVerifier2 = verifyPhoneNumbersRepeat(arrayNums);
   let baseNumberVerifiers = {
     verifier1: responseVerifier,
-    verifier2: responseVerifier2
+    verifier2: responseVerifier2,
   }
   for (let index in baseNumberVerifiers) {
     if (baseNumberVerifiers[index] !== null) {
