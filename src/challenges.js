@@ -58,17 +58,30 @@ function highestCount(repeat) {
     }
     return quantMaior
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7])) 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFizzBuzz) {
+  let array1 = []
+  for(index = 0; index < arrayFizzBuzz.length; index+=1){
+    if(arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5 ===0){
+      array1.push("fizzBuzz")
+    } else if (arrayFizzBuzz[index] % 3 ===0){
+      array1.push("fizz") 
+    } else if(arrayFizzBuzz[index] % 5 === 0){
+      array1.push("buzz") 
+    } else {
+      array1.push("bug!") 
+    }
+  }
+  return array1
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
