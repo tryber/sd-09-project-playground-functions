@@ -16,13 +16,13 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-let numbers = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+//let numbers = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(stringArray){
   let reverse = stringArray.reverse();
   let concatReverse = reverse.join(', ');
   return concatReverse;
 }
-console.log(concatName(numbers))
+//console.log(concatName(numbers))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -76,8 +76,7 @@ function fizzBuzz(array) {
   }
   return final;
 }  
-let numbers = [9, 8, 7, 5, 15, 10, 17]
-console.log(fizzBuzz(numbers))
+
 // Desafio 9
 function encode() {
   // seu código aqui
