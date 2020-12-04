@@ -64,14 +64,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function fizzBuzz(arrayOfNumbers) {
   let arrayOfStrings = [];
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+  for (let index in arrayOfNumbers) {
+    if (arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0) {
       arrayOfStrings[index] = 'fizzBuzz';
-    } else if (numbers[index] % 3 === 0) {
+    } else if (arrayOfNumbers[index] % 3 === 0) {
       arrayOfStrings[index] = 'fizz';
-    } else if (numbers[index] % 5 === 0) {
+    } else if (arrayOfNumbers[index] % 5 === 0) {
       arrayOfStrings[index] = 'buzz';
     } else {
       arrayOfStrings[index] = 'bug!';
@@ -80,14 +80,12 @@ function fizzBuzz(numbers) {
   return arrayOfStrings;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
 }
 function decode() {
-  // seu código aqui
+  
 }
 
 // Desafio 10
