@@ -86,33 +86,52 @@ function fizzBuzz(numbersArray) {
     }
   } return fizzBuzzResult;
 }
-console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 function encode(testString) {
+  let newString = '';
   for (let index = 0; index < testString.length; index += 1) {
     if (testString[index] === 'a') {
-      testString[index] = 1;
+      newString += '1';
     } else if (testString[index] === 'e') {
-      testString[index] = 2;
+      newString += '2';
     } else if (testString[index] === 'i') {
-      testString[index] = 3;
+      newString += '3';
     } else if (testString[index] === 'o') {
-      testString[index] = 4;
+      newString += '4';
     } else if (testString[index] === 'u') {
-      testString[index] = 5;
+      newString += '5';
+    } else {
+      newString += testString[index];
     }
-  } return testString;
+  } return newString;
 }
 console.log(encode('hi there!'));
 
-function decode() {
-  // seu código aqui
+function decode(testString) {
+  let newString = '';
+  for (let index = 0; index < testString.length; index += 1) {
+    if (testString[index] === '1') {
+      newString += 'a';
+    } else if (testString[index] === '2') {
+      newString += 'e';
+    } else if (testString[index] === '3') {
+      newString += 'i';
+    } else if (testString[index] === '4') {
+      newString += 'o';
+    } else if (testString[index] === '5') {
+      newString += 'u';
+    } else {
+      newString += testString[index];
+    }
+  } return newString;
 }
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList(tech, name) {
-  
+function techList() {
+  // seu código aqui
 }
 
 // Desafio 11
