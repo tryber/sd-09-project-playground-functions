@@ -117,15 +117,15 @@ let translatorMap = {
   i: 3,
   o: 4,
   u: 5,
-}
+};
 
 // Challenge Nine - Function to encode string
-function encriptAndDecriptMessage(character, charMap) {
-  for (let key in charMap) {
+function encriptAndDecriptMessage(character) {
+  for (let key in translatorMap) {
     if (character === key) {
-      return charMap[key];
+      return translatorMap[key];
     }
-    if (character === charMap[key].toString()) {
+    if (character === translatorMap[key].toString()) {
       return key;
     }
   }
@@ -133,32 +133,28 @@ function encriptAndDecriptMessage(character, charMap) {
 }
 
 // Challenge Nine - Function to encode string
-function encode(stringToEncode) {
-  let encodedArray = [];
-  let encodedString = '';
-  for (let index = 0; index < stringToEncode.length; index += 1) {
-    encodedArray.push(stringToEncode[index]);
-    encodedArray[index] = encriptAndDecriptMessage(encodedArray[index], translatorMap);
-    encodedString += encodedArray[index];
+function constructStringToCodeAndEncode(stringEntry) {
+  let codedArray = [];
+  let codedString = '';
+  for (let index = 0; index < stringEntry.length; index += 1) {
+    codedArray.push(stringEntry[index]);
+    codedArray[index] = encriptAndDecriptMessage(codedArray[index]);
+    codedString += codedArray[index];
   }
+  return codedString;
+}
+
+// Challenge Nine - Function to encode string
+function encode(stringToEncode) {
+  let encodedString = constructStringToCodeAndEncode(stringToEncode);
   return encodedString;
 }
 
 // Challenge Nine - Function to decode a string
 function decode(stringToDecode) {
-  let decodedArray = [];
-  let decodedString = '';
-  for (let index = 0; index < stringToDecode.length; index += 1) {
-    decodedArray.push(stringToDecode[index]);
-    decodedArray[index] = encriptAndDecriptMessage(stringToDecode[index], translatorMap);
-    decodedString += decodedArray[index];
-  }
+  let decodedString = constructStringToCodeAndEncode(stringToDecode);
   return decodedString;
 }
-
-let code = encode('Hello there, how ari you');
-console.log(code);
-console.log(decode(code));
 
 // Desafio 10
 function techList() {
