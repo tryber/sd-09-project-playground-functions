@@ -175,7 +175,7 @@ function generatePhoneNumber(array) {
   if (possibleNumber === false && biggestNumber(repeatedNumbers) < 3) {
     if (numberArray === true) {
       let phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-    return phoneNumber;
+      return phoneNumber;
     } else {
       return 'Array com tamanho incorreto.'
     }
