@@ -88,7 +88,7 @@ function highestCount(numbers) {
   return counter;
 }
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = 0;
   let distanceCat2 = 0;
@@ -194,7 +194,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-module.exports = {
+  module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
