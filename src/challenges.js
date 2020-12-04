@@ -174,7 +174,6 @@ function techList(techsArray, personName) {
   return techsObjectsArray;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Pablo"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
