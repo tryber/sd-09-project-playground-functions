@@ -54,8 +54,6 @@ function highestCount(recive) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanceCat1 = Math.abs(mouse - cat1);
-  let distanceCat2 = Math.abs(mouse - cat2);
   switch (true) {
     case distanceCat1 < distanceCat2:
       return 'cat1';
@@ -66,52 +64,71 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   // Desafio 8
-  function fizzBuzz(numberRecept) {
+  function fizzBuzz(arrayNumber) {
     // seu código aqui
+    let arrFizz = [];
+    for (let index in arrayNumber) {
+      switch (true) {
+        case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 === 0)):
+          arrFizz.push('fizzBuzz');
+          break;
+        case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 !== 0)):
+          arrFizz.push('buzz');
+          break;
+        case ((arrayNumber[index] % 5 !== 0) && (arrayNumber[index] % 3 === 0)):
+          arrFizz.push('fizz');
+          break;
+        case ((arrayNumber[index] % 5 != 0) && (arrayNumber[index] % 3 != 0)):
+          arrFizz.push('bug!');
+      }
+    }
+    return arrFizz;
   }
-
-  // Desafio 9
-  function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
-
-  // Desafio 10
-  function techList() {
-    // seu código aqui
-  }
-
-  // Desafio 11
-  function generatePhoneNumber() {
-    // seu código aqui
-  }
-
-  // Desafio 12
-  function triangleCheck() {
-    // seu código aqui
-  }
-
-  // Desafio 13
-  function hydrate() {
-    // seu código aqui
-  }
+}
 
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    generatePhoneNumber,
-    techList,
-    highestCount,
-    hydrate,
-    splitSentence,
-    triangleCheck,
-  }
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
+
+// Desafio 10
+function techList() {
+  // seu código aqui
+}
+
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
+
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
+
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
+
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
