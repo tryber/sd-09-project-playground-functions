@@ -89,10 +89,10 @@ function fizzBuzz(numbersArray) {
 // console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
-function encode(string) {
+function encode(string1) {
   let encodeString = '';
-  for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
+  for (let index = 0; index < string1.length; index += 1) {
+    switch (string1[index]) {
       case 'a':
         encodeString += '1';
         break;
@@ -109,16 +109,16 @@ function encode(string) {
         encodeString += '5';
         break;
       default:
-        encodeString += string[index];
+        encodeString += string1[index];
     }
   } return encodeString;
 }
 console.log(encode('hi there!'));
 
-function decode(string) {
+function decode(string2) {
   let decodeString = '';
-  for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
+  for (let index = 0; index < string2.length; index += 1) {
+    switch (string2[index]) {
       case '1':
         decodeString += 'a';
         break;
@@ -135,7 +135,7 @@ function decode(string) {
         decodeString += 'u';
         break;
       default:
-        decodeString += string[index];
+        decodeString += string2[index];
     }
   } return decodeString;
 }
