@@ -54,38 +54,35 @@ function highestCount(recive) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  switch (true) {
+  /*switch (true) {
     case distanceCat1 < distanceCat2:
       return 'cat1';
     case distanceCat2 < distanceCat1:
       return 'cat2';
     case distanceCat1 === distanceCat2:
-      return 'os gatos trombam e o rato foge';
-  }
-
-  // Desafio 8
-  function fizzBuzz(arrayNumber) {
-    // seu código aqui
-    let arrFizz = [];
-    for (let index in arrayNumber) {
-      switch (true) {
-        case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 === 0)):
-          arrFizz.push('fizzBuzz');
-          break;
-        case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 !== 0)):
-          arrFizz.push('buzz');
-          break;
-        case ((arrayNumber[index] % 5 !== 0) && (arrayNumber[index] % 3 === 0)):
-          arrFizz.push('fizz');
-          break;
-        case ((arrayNumber[index] % 5 != 0) && (arrayNumber[index] % 3 != 0)):
-          arrFizz.push('bug!');
-      }
-    }
-    return arrFizz;
-  }
+      return 'os gatos trombam e o rato foge';*/
 }
 
+// Desafio 8
+function fizzBuzz(arrayNumber) {
+  // seu código aqui
+  /*let arrayFizz = []
+  for (let index = 0; index <= arrayNumber; index += 1) {
+    switch (true) {
+      case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 === 0)):
+        arrayFizz.push('fizzBuzz');
+        break;
+      case ((arrayNumber[index] % 5 === 0) && (arrayNumber[index] % 3 !== 0)):
+        arrayFizz.push('buzz');
+        break;
+      case ((arrayNumber[index] % 5 !== 0) && (arrayNumber[index] % 3 === 0)):
+        arrayFizz.push('fizz');
+        break;
+      default
+        arrayFizz.push('bug!');
+    }*/
+}
+//return arrayFizz;
 
 // Desafio 9
 function encode() {
