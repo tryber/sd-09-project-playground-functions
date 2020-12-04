@@ -141,8 +141,6 @@ for (let i = 0; i < codedString.length; i += 1) {
 }
 return decodedString;
 }
-}
-
 
 
 // Desafio 10
