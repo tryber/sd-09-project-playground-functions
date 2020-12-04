@@ -58,11 +58,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let firstDistance = (mouse, cat1);
   let secondDistance = (mouse, cat2);
 
-  if (firstDistance < secondDistance) {
+  if (firstDistance > secondDistance) {
     console.log('cat1');
-  } else if (firstDistance > secondDistance) {
+  } else if (firstDistance < secondDistance) {
     console.log('cat2');
-  }return console.log('Os gatos trombam e o rato foge');
+  } return console.log('Os gatos trombam e o rato foge');
 }
 console.log(catAndMouse(10, 3, 6));
 
