@@ -63,11 +63,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if ((number % 3 === 0) && (number % 5 === 0)) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
       arrayFizzBuzz.push('fizzBuzz');
-    } else if (number % 3 === 0) {
+    } else if (numbers[index] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
-    } else if (number % 5 === 0) {
+    } else if (numbers[index] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
     } else {
       arrayFizzBuzz.push('bug!');
