@@ -59,10 +59,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let secondDistance = (mouse, cat2);
 
   if (firstDistance < secondDistance) {
-    return 'cat1';
+    console.log('cat1');
   } else if (firstDistance > secondDistance) {
-    return 'cat2';
-  }return 'Os gatos trombam e o rato foge';
+    console.log('cat2');
+  }return console.log('Os gatos trombam e o rato foge');
 }
 console.log(catAndMouse(10, 3, 6));
 
