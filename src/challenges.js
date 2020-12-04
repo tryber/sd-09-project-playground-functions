@@ -64,14 +64,21 @@ function highestCount(arrayNumbers) {
       }
     }
   }
-  console.log(qttyHighestRepeats);
   return qttyHighestRepeats;
 }
-console.log(highestCount([2, 34, 56, 3, 56, 56, 100, 45]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let firstCatGets = '';
+
+  if (cat1 === mouse && cat1 !== cat2) {
+    firstCatGets = 'cat1';
+  } else if (cat2 === mouse && cat2 !== cat1) {
+    firstCatGets = 'cat2';
+  } else {
+    firstCatGets = 'os gatos trombam e o rato foge'
+  }
+  return firstCatGets;
 }
 
 // Desafio 8
