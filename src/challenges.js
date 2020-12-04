@@ -62,10 +62,10 @@ function highestCount(setOfNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let positionCat1Mouse = cat1 - mouse;
-  let positionCat2Mouse = cat2 - mouse;
+  let positionCat1Mouse = Math.abs(cat1 - mouse);
+  let positionCat2Mouse = Math.abs(cat2 - mouse);
   let mouseHut;
-  
+
   if (positionCat1Mouse < positionCat2Mouse) {
     mouseHut = 'cat1';
   } else if (positionCat1Mouse > positionCat2Mouse) {
