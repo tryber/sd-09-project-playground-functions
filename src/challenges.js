@@ -141,8 +141,41 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let display = {
+    errorMessageOne: 'Array com tamanho incorreto.',
+    errorMessageTwo: 'não é possível gerar um número de telefone com esses valores',
+    phoneNumber: '(aa) aaaaa-aaaa',
+    phoneNumberArray: [],
+    phoneIndex: 0,
+    repeatCount: 0,
+    displayMessage: '',
+  };
+  for (let index = 0; index < display.phoneNumber.length; index += 1) {
+    display.phoneNumberArray[index] = display.phoneNumber[index];
+    if (display.phoneNumber[index] === 'a') {
+      display.phoneNumberArray[index] = array[display.phoneIndex].toString();
+      display.phoneIndex += 1;
+    }
+  }
+  display.displayMessage = display.phoneNumberArray.join('');
+
+  if (array.length != 11) {
+    display.displayMessage = display.errorMessageOne;
+  }
+  for (let index = 0; index < array.length; index += 1 ) {
+    display.repeatCount = 0;
+    for (let repeatIndex = 0; repeatIndex < array.length; repeatIndex += 1) {
+      if (array[repeatIndex] === array[index]) {
+        display.repeatCount += 1;
+      }
+      if (display.repeatCount > 2) {
+        display.displayMessage = display.errorMessageTwo;
+      }
+    }
+  }
+
+  return display.displayMessage;
 }
 
 // Desafio 12
