@@ -115,7 +115,6 @@ let codedString = '';
   }
   return codedString;
 }
-console.log(encode('Ola mundo'));
 
 function decode(codedString) {
 let decodedString = '';
@@ -160,17 +159,71 @@ function techList(techArray, name) {
 
 let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let name = 'luciano';
-console.log(techList(array, name))
+
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+
+  checkValidity(numbers);
+
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
+    let checkNumber = numbers[i];
+    if (numbers[i] < 0 || numbers[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+
+
+let phoneNumber = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    phoneNumber.push(numbers[i]);
+  }
+return phoneNumber;
 }
+function checkValidity(numbers) {
+  let checkNumber = 0;
+    let counter = 0;
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    checkNumber = numbers[i];
+    for (let j = 0; j < numbers.length; j += 1) {
+      if (numbers[i] === checkNumber) {
+        counter += 1;
+        if (counter > 3) {
+        return "não é possível gerar um número de telefone com esses valores";
+        break;
+        } else {
+          return numbers;
+        }
+      }
+    }
+  }
+  console.log(counter);
+}
+let phone = [1, 2, 3, 4, 5, 6, 7, 9, 9, 9, 9];
+console.log(generatePhoneNumber(phone))
+
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sum1 = lineA + lineB;
+  let sum2 = lineA + lineC;
+  let sum3 = lineB + lineC;
+  
+  if (sum1 < lineC) {
+    return false;
+  } else if (sum2 < lineB) {
+    return false;
+  } else if (sum3 < lineA) {
+    return false;
+  } else {
+  return true;
+  }
 }
+console.log(triangleCheck(10, 14, 3))
 
 // Desafio 13
 function hydrate() {
