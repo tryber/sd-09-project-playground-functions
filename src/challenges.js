@@ -120,10 +120,13 @@ let translatorMap = {
 }
 
 // Challenge Nine - Function to encode string
-function encriptMessage(character, charMap) {
+function encriptAndDecriptMessage(character, charMap) {
   for (let key in charMap) {
     if (character === key) {
       return charMap[key];
+    }
+    if (character === charMap[key].toString()) {
+      return key;
     }
   }
   return character;
@@ -135,21 +138,10 @@ function encode(stringToEncode) {
   let encodedString = '';
   for (let index = 0; index < stringToEncode.length; index += 1) {
     encodedArray.push(stringToEncode[index]);
-    encodedArray[index] = encriptMessage(encodedArray[index], translatorMap);
-    
+    encodedArray[index] = encriptAndDecriptMessage(encodedArray[index], translatorMap);
     encodedString += encodedArray[index];
   }
   return encodedString;
-}
-
-// Challenge Nine - Function to encode string
-function decriptMessage(character, charMap) {
-  for (let key in charMap) {
-    if (character === charMap[key].toString()) {
-      return key;
-    }
-  }
-  return character;
 }
 
 // Challenge Nine - Function to decode a string
@@ -158,11 +150,15 @@ function decode(stringToDecode) {
   let decodedString = '';
   for (let index = 0; index < stringToDecode.length; index += 1) {
     decodedArray.push(stringToDecode[index]);
-    decodedArray[index] = decriptMessage(stringToDecode[index], translatorMap);
+    decodedArray[index] = encriptAndDecriptMessage(stringToDecode[index], translatorMap);
     decodedString += decodedArray[index];
   }
   return decodedString;
 }
+
+let code = encode('Hello there, how ari you');
+console.log(code);
+console.log(decode(code));
 
 // Desafio 10
 function techList() {
