@@ -177,7 +177,6 @@ function techList(list, name) {
     }
     return arrayStacks;
   }
-
 }
 
 // Desafio 11
@@ -213,6 +212,8 @@ function generatePhoneNumber(arrayPhoneNumber) {
         break;
       case 10:
         phoneNumber += '-';
+        break;
+      default:
         break;
     }
     phoneNumber += arrayPhoneNumber[index];
