@@ -53,7 +53,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {}
+function fizzBuzz(n) {
+  for (let index = 1; index <= n; index += 1) {
+    if (index % 3 === 0) {
+      return "fizz";
+    } else if (index % 5 === 0) {
+      return "buzz";
+    } else if (index % 3 === 0 && index % 5 === 0) {
+      return "fizzBuzz";
+    } else {
+      return "bug!";
+    }
+  }
+}
 
 // Desafio 9
 function encode() {
@@ -99,11 +111,7 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
-console.log(compareTrue(true, false));
-console.log(calcArea(30, 20));
-console.log(splitSentence("Gabriel Castro"));
-console.log(concatName(["xurubita", "lucas", "thiago", "white"]));
-console.log(footballPoints(4, 2));
+
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(catAndMouse(5, 10, 5));
+
 console.log(fizzBuzz(10));
