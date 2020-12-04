@@ -55,14 +55,27 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let firstDistance = (mouse - cat1);
-  let secondDistance = (mouse - cat2);
+  let firstDistance = (mouse, cat1);
+  let secondDistance = (mouse, cat2);
   
   if (firstDistance < secondDistance) {
     return 'cat1';
   } else if (firstDistance > secondDistance) {
     return 'cat2';
   } return 'os gatos trombam e o rato foge';
+
+  // if (firstDistance < 0) {
+  //   firstDistance = 0;
+  //   if (firstDistance < secondDistance) {
+  //   return 'cat1'
+  //   } 
+  // }
+  // if (secondDistance < 0) {
+  //   secondDistance = 0;
+  //  if (firstDistance > secondDistance) {
+  //   return 'cat2';
+  //   }
+  // }
 }
 console.log(catAndMouse(1, 0, 2));
 
