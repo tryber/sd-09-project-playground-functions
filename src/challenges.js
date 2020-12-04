@@ -36,7 +36,7 @@ function highestCount(array) {
   let maior = ''
   let repetition = 0
   for (let index = 0 ; index < array.length ; index += 1) {
-    if (maior < array[index]) {
+    if (maior <= array[index]) {
       maior = array[index]
     }
   }
@@ -48,8 +48,6 @@ function highestCount(array) {
   }
   return repetition
 }
-
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse , cat1 , cat2) {
