@@ -47,7 +47,7 @@ function highestCount(arrayNumeros) {
   return quantMaior;
 }
 
-function somaMaiorNumero(numero, arrayNumero) {
+function somaMaiorNumero(numero, arrayNumeros) {
   let qdt = 0;
   let tamanhoArray = arrayNumeros.length;
   for (let i; i < tamanhoArray; i += 1) {
@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   responseQuestion = stringLength(stringResponse1, stringResponse2);
 
-  return resultado;
+  return responseQuestion;
 }
 
 function distanceForMouse(mouses, cats) {
@@ -108,8 +108,7 @@ function stringLength(string1, string2) {
 
   if (widthString <= 0) {
     stringCats = string2;
-  }
-
+  };
   return stringCats;
 }
 
