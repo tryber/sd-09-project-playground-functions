@@ -58,17 +58,16 @@ function highestCount(arrayHisCo) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseCat1 = Math.abs(mouse - cat1);
   let distanceMouseCat2 = Math.abs(mouse - cat2);
-  let distanceCats = Math.abs(cat1 - cat2);
 
   if (distanceMouseCat1 < distanceMouseCat2) {
       return ('cat1');
   }else if (distanceMouseCat1 > distanceMouseCat2) {
       return ('cat2');
-  }else if(distanceCats === 0) {
+  }else {
       return ('os gatos trombam e o rato foge');
   }
 }
-// console.log(catAndMouse(5 , 3 , 8));
+//console.log(catAndMouse(3 , 1 , 5));
 
 // Desafio 8
 let arrayNumber = [];

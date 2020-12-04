@@ -35,6 +35,7 @@ function encode(encodeArray) {
                 return stringU;
         }
     }
+    return encodeArray;
   }
   console.log(encode('abacaxi'));
 
