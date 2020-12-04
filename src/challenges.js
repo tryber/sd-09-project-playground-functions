@@ -215,8 +215,8 @@ function hydrate(string) {
   if (numberMatch.length > 0) {
     returnPhrase = waterCups + ' copos de água';
   }
-  if (waterCups === 0) {
-    returnPhrase =  '1 copo de água';
+  if (waterCups === 1) {
+    returnPhrase = '1 copo de água';
   }
   return returnPhrase;
 }
