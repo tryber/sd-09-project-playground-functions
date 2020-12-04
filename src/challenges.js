@@ -60,17 +60,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(n) {
-  for (let index = 1; index <= n; index += 1) {
-    if (index % 3 === 0) {
-      return "fizz";
-    } else if (index % 5 === 0) {
-      return "buzz";
-    } else if (index % 3 === 0 && index % 5 === 0) {
-      return "fizzBuzz";
+  let result = [];
+  for (let index = 0; index < n.length; index += 1) {
+    if (n[index] % 3 === 0 && n[index] % 5 === 0) {
+      result.push("fizzBuzz");
+    } else if (n[index] % 3 === 0) {
+      result.push("fizz");
+    } else if (n[index] % 5 === 0) {
+      result.push("buzz");
     } else {
-      return "bug!";
+      result.push("bug!");
     }
   }
+  return result;
 }
 
 // Desafio 9
@@ -117,4 +119,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 };
-console.log(fizzBuzz(10));
