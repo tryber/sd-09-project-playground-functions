@@ -48,21 +48,22 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(5, 3));
 
 // Desafio 6
-function highestCount(aheiNumbers) {
+function highestCount(numbers) {
   // seu código aqui
-  let maior = [0, 0];
-  for (let index = 0; index < aheiNumbers.length; index += 1) {
-    if (aheiNumbers[index] >= aheiNumbers[(aheiNumbers.length-1)-index] && aheiNumbers[index] >= maior[0]) {
-        if (aheiNumbers[index] === maior[0]) {
-          maior[0] = aheiNumbers[index];
-          maior[1] += 1; 
+  let higher = 0;
+  let times = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] >= numbers[(numbers.length-1)-index] && numbers[index] >= higher) {
+        if (numbers[index] === higher) {
+          higher = numbers[index];
+          times += 1; 
         } else {
-          maior[0] = aheiNumbers[index];
-          maior[1] = 1;
+          higher = numbers[index];
+          times = 1;
         }
     }
   }
-  return maior[1];
+  return times;
 }
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
@@ -88,21 +89,21 @@ function catAndMouse(mouse, cat1, cat2) {
 //console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
-function fizzBuzz(aheiFB) {
+function fizzBuzz(numbersTo) {
   // seu código aqui
-  for (let index = 0; index < aheiFB.length; index += 1) {
-    if ((aheiFB[index] % 3 === 0 ) && (aheiFB[index] % 5 === 0)) {
-      aheiFB[index] = 'fizzBuzz';
-    } else if(aheiFB[index] % 5 === 0) {
-      aheiFB[index] = 'buzz';
-    } else if(aheiFB[index] % 3 === 0) {
-      aheiFB[index] = 'fizz';
+  for (let index = 0; index < numbersTo.length; index += 1) {
+    if ((numbersTo[index] % 3 === 0) && (numbersTo[index] % 5 === 0)) {
+      numbersTo[index] = 'fizzBuzz';
+    } else if(numbersTo[index] % 5 === 0) {
+      numbersTo[index] = 'buzz';
+    } else if(numbersTo[index] % 3 === 0) {
+      numbersTo[index] = 'fizz';
     }
     else {
-      aheiFB[index] = 'bug!';
+      numbersTo[index] = 'bug!';
     }
   }
-  return aheiFB;
+  return numbersTo;
 }
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
