@@ -1,16 +1,16 @@
 // #VQV
 // Desafio 1
-function compareTrue(num1, num2) {
+function compareTrue(bool1, bool2) {
   // seu código aqui
 
-  if (num1 == num2 && num2 == num1) {
+  if (bool1 == true && bool2 == true) {
     return true;
   } else {
     return false;
   }
 }
 
-console.log(compareTrue( ));
+console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
