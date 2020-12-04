@@ -75,8 +75,8 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let closerCat;
-  let distance1 = Math.abs((cat1 - mouse));
-  let distance2 = Math.abs((cat2 - mouse));
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
 
   if (distance1 < distance2) {
     closerCat = 'cat1';
@@ -134,17 +134,17 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
 }
 
