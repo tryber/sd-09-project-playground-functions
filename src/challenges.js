@@ -97,8 +97,6 @@ function catAndMouse( mouse, cat1, cat2 ) {
   return gato;
 }
 
-console.log(catAndMouse(1, 0 ,2));
-
 // Desafio 8
 function fizzBuzz( myArray ) {
   // seu código aqui
