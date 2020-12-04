@@ -90,7 +90,7 @@ function catAndMouse( mouse, cat1, cat2 ) {
     gato = "cat1";
   } else if (Math.abs(cat2) - Math.abs(mouse) < Math.abs(cat1) - Math.abs(mouse)){
       gato = "cat2";
-  } else if (Math.abs(cat1) - Math.abs(mouse) == Math.abs(cat2) - Math.abs(mouse)) {
+  } else {
       gato = "os gatos trombam e o rato foge";
   }
 
