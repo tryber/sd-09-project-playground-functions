@@ -1,54 +1,168 @@
+// Project Playground Functions
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let area = 0;
+  area = (base * heigth) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let result = '';
+  result = string.split(' ');
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let first = '';
+  let last = '';
+  first = arrayStrings[0];
+  last = arrayStrings[arrayStrings.length - 1];
+  let returnString = [last, first];
+  return returnString.join(', ');
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = 0
+  result = (wins * 3) + (ties * 1);
+  return result
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maxnumber = 0;
+  let contnumber = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (maxnumber < numbers[index]) {
+      maxnumber = numbers[index];
+      contnumber = 1;
+    } else if (maxnumber === numbers[index]) {
+      contnumber += 1;
+    }
+  }
+  return contnumber
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distcat1 = 0;
+  let distcat2 = 0;
+  distcat1 = cat1 - mouse;
+  distcat2 = cat2 - mouse;
+  if (distcat1 < 0) {
+    distcat1 *= -1;
+  }
+  if (distcat2 < 0) {
+    distcat2 *= -1;
+  }
+  if (distcat1 < distcat2) {
+    return 'cat1';
+  } else if (distcat2 < distcat1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function verificateNumbers(arraynumbers) {
+  let arrayFizzBuzz = '';
+  if (arraynumbers % 15 === 0) {
+    arrayFizzBuzz = 'fizzBuzz';
+  } else if (arraynumbers % 3 === 0) {
+    arrayFizzBuzz = 'fizz';
+  } else if (arraynumbers % 5 === 0) {
+    arrayFizzBuzz = 'buzz';
+  } else {
+    arrayFizzBuzz = 'bug!';
+  }
+  return arrayFizzBuzz;
+}
+
+function fizzBuzz(arraynumbers) {
+  let arraynumbersFizzBuzz = [];
+  for (let index of arraynumbers) {
+    arraynumbersFizzBuzz.push(verificateNumbers(index));
+  }
+  return arraynumbersFizzBuzz;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let strEnc = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case 'a':
+        strEnc += 1;
+        break;
+      case 'e':
+        strEnc += 2;
+        break;
+      case 'i':
+        strEnc += 3;
+        break;
+      case 'o':
+        strEnc += 4;
+        break;
+      case 'u':
+        strEnc += 5;
+        break;
+      default:
+        strEnc += string[index];
+    }
+  }
+  return strEnc;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let strEnc = '';
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
+      case '1':
+        strEnc += 'a';
+        break;
+      case '2':
+        strEnc += 'e';
+        break;
+      case '3':
+        strEnc += 'i';
+        break;
+      case '4':
+        strEnc += 'o';
+        break;
+      case '5':
+        strEnc += 'u';
+        break;
+      default:
+        strEnc += string[index];
+    }
+  }
+  return strEnc;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayNames, name) {
+  let objectlist = [];
+  if (arrayNames.length !== 0) {
+    for (let key of arrayNames.sort()) {
+      let object = {
+        tech: key,
+        name,
+      }
+      objectlist.push(object);
+    }
+    return objectlist;
+  }
+  return 'Vazio!';
 }
 
 // Desafio 11
