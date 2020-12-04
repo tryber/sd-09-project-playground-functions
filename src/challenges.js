@@ -75,21 +75,23 @@ function fizzBuzz(Ar) {
 
 // Desafio 9
 function encode(Str) {
-    let Str2 = Str.replaceAll('a', '1');
-    let Str3 = Str2.replaceAll('e', '2');
-    let Str4 = Str3.replaceAll('i', '3');
-    let Str5 = Str4.replaceAll('o', '4');
-    let Str6 = Str5.replaceAll('u', '5');
+  let Str1 =Str
+  let Str2 = Str1.replaceAll('a', '1');
+  let Str3 = Str2.replaceAll('e', '2');
+  let Str4 = Str3.replaceAll('i', '3');
+  let Str5 = Str4.replaceAll('o', '4');
+  let Str6 = Str5.replaceAll('u', '5');
   return Str6;
 }
 
 function decode(Str) {
-  let Str2 = Str.replaceAll('1', 'a');
+  let Str1 = Str
+  let Str2 = Str1.replaceAll('1', 'a');
   let Str3 = Str2.replaceAll('2', 'e');
   let Str4 = Str3.replaceAll('3', 'i');
   let Str5 = Str4.replaceAll('4', 'o');
   let Str6 = Str5.replaceAll('5', 'u');
-return Str6;
+  return Str6;
 }
 
 // Desafio 10
