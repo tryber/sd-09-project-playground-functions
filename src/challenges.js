@@ -97,18 +97,35 @@ function fizzBuzz(arrNumbers) {
     }
   return(nomesBizarros)
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
-
-
+//console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+
+function encode(letters) {
+
+  letters = letters.split('a').join('1');
+  letters = letters.split('e').join('2');
+  letters = letters.split('i').join('3');
+  letters = letters.split('o').join('4');
+  letters = letters.split('u').join('5');
+  return letters;
 }
-function decode() {
-  // seu código aqui
+let encodeLetters = 'Kamila'
+//console.log(encode(encodeLetters));
+
+function decode(letters) {
+  letters = letters.split('1').join('a');
+  letters = letters.split('2').join('e');
+  letters = letters.split('3').join('i');
+  letters = letters.split('4').join('o');
+  letters = letters.split('5').join('u');
+  return letters;
 }
+let decodeLetters = 'K1m3l1'
+//console.log(decode(decodeLetters));
+
+
 
 // Desafio 10
 function techList() {
