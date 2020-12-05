@@ -87,9 +87,9 @@ function parse(value) {
     return 4
   } else if (value === 'u') {
     return 5
-  } else {
-    return value
   }
+  return value
+
 }
 
 function unparse(value) {
@@ -103,9 +103,9 @@ function unparse(value) {
     return 'o'
   } else if (value === '5') {
     return 'u'
-  } else {
-    return value
   }
+  return value
+
 }
 
 // Desafio 9
@@ -117,11 +117,11 @@ function encode(value) {
   return valueArr.join('')
 }
 function decode(value) {
-  let valueArr = value.split('')
-  for (let i = 0; i < valueArr.length; i += 1) {
-    valueArr[i] = unparse(valueArr[i])
+  let valueArrDecode = value.split('')
+  for (let i = 0; i < valueArrDecode.length; i += 1) {
+    valueArrDecode[i] = unparse(valueArrDecode[i])
   }
-  return valueArr.join('')
+  return valueArrDecode.join('')
 }
 
 // Desafio 10
