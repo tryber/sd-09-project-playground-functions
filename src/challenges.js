@@ -94,11 +94,44 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringToCodify) {
   // seu código aqui
+  let codifiedString = '';
+  for(i = 0; i < stringToCodify.length; i += 1) {
+    if (stringToCodify[i] === 'a') {
+      codifiedString += '1'
+    } else if (stringToCodify[i] === 'e') {
+      codifiedString += '2'
+    } else if (stringToCodify[i] === 'i') {
+      codifiedString += '3'
+    } else if (stringToCodify[i] === 'o') {
+      codifiedString += '4'
+    } else if (stringToCodify[i] === 'u') {
+      codifiedString += '5'
+    } else {
+      codifiedString += stringToCodify[i]
+    }
+  } return codifiedString
 }
-function decode() {
+
+function decode(stringToDecodify) {
   // seu código aqui
+  let decodifiedString = '';
+  for(i = 0; i < stringToDecodify.length; i += 1) {
+    if (stringToDecodify[i] === '1') {
+      decodifiedString += 'a'
+    } else if (stringToDecodify[i] === '2') {
+      decodifiedString += 'e'
+    } else if (stringToDecodify[i] === '3') {
+      decodifiedString += 'i'
+    } else if (stringToDecodify[i] === '4') {
+      decodifiedString += 'o'
+    } else if (stringToDecodify[i] === '5') {
+      decodifiedString += 'u'
+    } else {
+      decodifiedString += stringToDecodify[i]
+    }
+  } return decodifiedString
 }
 
 // Desafio 10
