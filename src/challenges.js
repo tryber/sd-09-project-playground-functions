@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length-1] + arrayString[0];
+  return arrayString[arrayString.length - 1] + arrayString[0];
 }
 
 // Desafio 5
@@ -32,23 +32,22 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let contRepeated= 0;
-  let contNumber = 0;
-  let indexNumberRepeated = 0;
-  for (let index in numbers) {
-    let verificaNumero = numbers[index];
-    for (let index2 in numbers) {
-      if (verificaNumero === numbers[index2]) {
-        contNumber += 1;
-      }
+  let higher = array[0];
+  let n = array.length;
+  let counter = 0;
+  for (let index = 0; index < n; index += 1) {
+    let number = array[index];
+    if (number > higher) {
+      higher = array[index];
     }
-    if (contNumber > contRepeated) {
-      contRepeated = contNumber;
-      indexNumberRepeated = index;
-    }
-    contNumber = 0;
   }
-  return numbers[indexNumberRepeated];
+  for (let index = 0; index < n; index += 1) {
+    let number = array[index];
+    if (higher === number) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
