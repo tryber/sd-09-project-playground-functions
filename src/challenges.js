@@ -133,7 +133,7 @@ function techList(techArr, name) {
   const techSorted = techArr.sort()
   for (let i = 0; i < techArr.length; i += 1) {
     const objj = {
-      techh: techSorted[i],
+      tech: techSorted[i],
       name: name
     }
     arrayL.push(objj)
