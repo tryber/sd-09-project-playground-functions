@@ -21,18 +21,17 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  return arrayString[arrayString.length-1]  +  arrayString[0];
+  return arrayString[arrayString.length-1] + arrayString[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-    let footballPoints = (wins * 3) + ties;
-    return footballPoints;
+  let points = (wins * 3) + ties;
+  return points;
 }
 
-
 // Desafio 6
-function highestCount (numbers) {
+function highestCount(numbers) {
   let contRepeated= 0;
   let contNumber = 0;
   let indexNumberRepeated = 0;
@@ -40,7 +39,7 @@ function highestCount (numbers) {
     let verificaNumero = numbers[index];
     for (let index2 in numbers) {
       if (verificaNumero === numbers[index2]) {
-        contNumber++;
+        contNumber += 1;
       }
     }
     if (contNumber > contRepeated) {
