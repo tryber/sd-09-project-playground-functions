@@ -158,7 +158,7 @@ function generatePhoneNumber(value) {
       return "não é possível gerar um número de telefone com esses valores"
     }
   }
-  return `(${value[0]}${value[1]}) ${value.slice(2, 6).join('')}-${value.slice(7).join('')}`
+  return `(${value[0]}${value[1]}) ${value.slice(2, 7).join('')}-${value.slice(7).join('')}`
 }
 
 // Desafio 12
