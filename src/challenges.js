@@ -78,9 +78,9 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(stringArray) {
   let coding = '';
-  for (let index = 0; index < stringArray.length; index++) {
+  for (let index = 0; index < stringArray.length; index += 1) {
     switch (stringArray[index]) {
-      case 'a': 
+      case 'a':
         coding += 1;
         break;
       case 'e':
@@ -95,7 +95,7 @@ function encode(stringArray) {
       case 'u':
         coding += 5;
         break;
-      default: 
+      default:
         coding += stringArray[index];
         break;
     }
@@ -105,9 +105,9 @@ function encode(stringArray) {
 
 function decode(codeArray) {
   let decoding = '';
-  for (let index = 0; index < codeArray.length; index++) {
+  for (let index = 0; index < codeArray.length; index += 1) {
     switch (codeArray[index]) {
-      case '1': 
+      case '1':
         decoding += 'a';
         break;
       case '2':
@@ -122,7 +122,7 @@ function decode(codeArray) {
       case '5':
         decoding += 'u';
         break;
-      default: 
+      default:
         decoding += codeArray[index];
         break;
     }
