@@ -14,7 +14,7 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence(sentence) {
+function splitSentence() {
 }
 
 
@@ -31,27 +31,27 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let highNumber = Math.max.apply(null, array);
+  let highNumber = Math.max(...array);
   let repeatNumber = 0;
   for (let cont = 0; cont < array.length; cont += 1) {
-      if (array[cont] === highNumber) {
-        repeatNumber+= 1;
+    if (array[cont] === highNumber) {
+        repeatNumber += 1;
       }
   }
   return repeatNumber
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let winner = "";
+  let winner = '';
   let distancia1 = mouse - cat1;
   let distancia2 = mouse - cat2;
-    if (distancia1 < distancia2) {
-      winner = "cat1";
-    }else if (distancia2 < distancia1) {
-      winner = "cat2";
-    }else{
-      winner = "os gatos trombam e o rato foge";
-}
+  if (distancia1 < distancia2) {
+      winner = 'cat2';
+    } else if (distancia2 < distancia1) {
+      winner = 'cat1';
+    } else {
+      winner = 'os gatos trombam e o rato foge';
+    }
   return winner
 }
 // Desafio 8
