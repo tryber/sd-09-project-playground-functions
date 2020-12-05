@@ -228,101 +228,108 @@ function errorNumberAndCount(number, array) {
   }
   return phrase;
 }
+function includeChar(number, index) {
+  let phone = '';
+
+  if (index === 0) {
+    phone += '(';
+  }
+  if (index === 2) {
+    phone += ') ';
+  }
+  if (index === 7) {
+    phone += '-';
+  }
+  phone += number;
+
+  return phone;
+}
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
   let error = '';
-  
-  if (arrayPhone.length === 0);
-  error = errorNumberAndCount('', arrayPhone);
-  if (error !== '') {
-    return error;
-  }
 
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    error = errorNumberAndCount(arrayPhone[index], arrayPhone);
+  if (arrayPhone.length === 0) {
+    error = errorNumberAndCount('', arrayPhone);
     if (error !== '') {
       return error;
     }
 
-    if (index === 0) {
-      phone += '(';
+    for (let index = 0; index < arrayPhone.length; index += 1) {
+      error = errorNumberAndCount(arrayPhone[index], arrayPhone);
+      if (error !== '') {
+        return error;
+      }
+
+      phone += includeChar(arrayPhone[index], index);
     }
-    if (index === 2) {
-      phone += ') ';
+    return phone;
+  }
+  // console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
+  // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+  // console.log(generatePhoneNumber([0, 1, 6]));
+  // console.log(generatePhoneNumber([]));
+  // console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+  // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+  // console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+  // console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+  // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+
+
+  // Desafio 12
+  function verifyTriangle(N1, N2, N3) {
+    let verify = false;
+
+    if ((N1 < Math.abs(N2 + N3)) && (N1 > Math.abs(N2 - N3))) {
+      verify = true;
     }
-    if (index === 7) {
-      phone += '-';
+    return verify;
+  }
+  function triangleCheck(lineA, lineB, lineC) {
+    let result = false;
+    let verifyA = verifyTriangle(lineA, lineB, lineC);
+    let verifyB = verifyTriangle(lineB, lineC, lineA);
+    let verifyC = verifyTriangle(lineC, lineA, lineB);
+
+    if (verifyA && verifyB && verifyC) {
+      result = true;
     }
-    phone += arrayPhone[index];
+
+    return result;
   }
-  return phone;
-}
-console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([0, 1, 6]));
-console.log(generatePhoneNumber([]));
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+  // console.log(triangleCheck(10, 14, 8));
 
+  // Desafio 13
+  function hydrate(drinks) {
+    let sum = 0;
 
-// Desafio 12
-function verifyTriangle(N1, N2, N3) {
-  let verify = false;
+    drinks = (drinks.match(/\d/g));
+    for (let index = 0; index < drinks.length; index += 1) {
+      const newLocal = drinks[index];
+      sum += parseInt(newLocal, 10);
+    }
 
-  if ((N1 < Math.abs(N2 + N3)) && (N1 > Math.abs(N2 - N3))) {
-    verify = true;
+    if (sum === 1) {
+      return `${sum} copo de água`;
+    }
+
+    return `${sum} copos de água`;
   }
-  return verify;
-}
-function triangleCheck(lineA, lineB, lineC) {
-  let result = false;
-  let verifyA = verifyTriangle(lineA, lineB, lineC);
-  let verifyB = verifyTriangle(lineB, lineC, lineA);
-  let verifyC = verifyTriangle(lineC, lineA, lineB);
+  // console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
 
-  if (verifyA && verifyB && verifyC) {
-    result = true;
+
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    generatePhoneNumber,
+    techList,
+    highestCount,
+    hydrate,
+    splitSentence,
+    triangleCheck,
   }
-
-  return result;
-}
-// console.log(triangleCheck(10, 14, 8));
-
-// Desafio 13
-function hydrate(drinks) {
-  let sum = 0;
-
-  drinks = (drinks.match(/\d/g));
-  for (let index = 0; index < drinks.length; index += 1) {
-    const newLocal = drinks[index];
-    sum += parseInt(newLocal, 10);
-  }
-
-  if (sum === 1) {
-    return `${sum} copo de água`;
-  }
-
-  return `${sum} copos de água`;
-}
-// console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
-
-
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
-}
