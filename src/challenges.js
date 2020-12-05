@@ -114,7 +114,7 @@ function techList(tech, name) {
   for (let index in tech.sort()) {
     technology.push({
       tech: tech[index],
-      name: name,
+      name,
     });
   }
   if (technology.length === 0) {
