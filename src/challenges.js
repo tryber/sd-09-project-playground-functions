@@ -130,9 +130,10 @@ function techList(techArr, name) {
   if(!techArr){
     return "Vazio!"
   }
+  const techSorted = techArr.sort()
   for (let i = 0; i < techArr.length; i += 1) {
     const objj = {
-      techh: techArr[i],
+      techh: techSorted[i],
       name: name
     }
     arrayL.push(objj)
