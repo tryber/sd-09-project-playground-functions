@@ -106,14 +106,14 @@ function translate(value) {
 function encode(value) {
   let valueArr = value.split('')
   for (let i = 0; i < valueArr.length; i += 1) {
-        valueArr[i] = translate(valueArr[i])
+    valueArr[i] = translate(valueArr[i])
   }
   return valueArr.join('')
 }
 function decode(value) {
   let valueArr = value.split('')
   for (let i = 0; i < valueArr.length; i += 1) {
-        valueArr[i] = translate(valueArr[i])
+    valueArr[i] = translate(valueArr[i])
   }
   return valueArr.join('')
 }
