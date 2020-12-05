@@ -161,71 +161,29 @@ concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6]
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9]));
 
-
-
-
-// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
-
-// Para tanto, tenha em mente algumas considerações:
-
-// Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
-
-// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada triangleCheck que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
-// let lineA = 1;
-// let lineB = 2;
-// let lineC = 3;
-
-// if(lineA <= (lineB + lineC) || lineB <= (lineC + lineA) || lineC <= (lineB + lineA)) {
-//   console.log(true);
-// } else { 
-//   console.log(false)
+//Desafio 12
+function triangleCheck() {
+  // seu código aqui  
 }
 
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
-// Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
-
-// O retorno da sua função deverá ser um booleano.
-
-// Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-
-
-// Desafio 12
-// function triangleCheck(lineA, lineB, lincC) {
-  
-// }
-// console.log(triangleCheck());
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Desafio 13
-// function hydrate() {
-//   // seu código aqui
-// }
-
-
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   generatePhoneNumber,
-//   techList,
-//   highestCount,
-//   hydrate,
-//   splitSentence,
-//   triangleCheck,
-// }
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
