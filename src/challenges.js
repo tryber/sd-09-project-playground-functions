@@ -165,15 +165,18 @@ function techList(techList, name) {
 //funcionavam as funções splice e join para conseguir juntar tudo ao final.
 // (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
 function generatePhoneNumber(numbers) {
+  // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  // para transformar o parametro em integers.
+  let teste = parseInt(numbers);
   let phoneNumber = [];
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
+  } else if (checkNumbers(teste) === false || checkIfValid(teste) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (let i = 0; i < numbers.length; i += 1) {
-      phoneNumber.push(numbers[i]);
+      phoneNumber[i] = (numbers[i]);
     }
     phoneNumber.splice(0, 0, '(');
     phoneNumber.splice(3, 0, ')');
@@ -206,13 +209,13 @@ function checkIfValid(numbers) {
       if (counter >= 3 || numbers[i] > 9 || numbers[i] < 0) {
         isValid = false;
       }
-    }    
+    }
     counter = 1;
   }
   return isValid;
 }
-let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1'];
-console.log(generatePhoneNumber(numbers));
+let teste = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0];
+console.log(generatePhoneNumber(teste));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sum1 = lineA + lineB;
