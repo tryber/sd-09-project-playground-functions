@@ -127,7 +127,7 @@ function decode(value) {
 // Desafio 10
 function techList(techArr, name) {
   let arrayL = []
-  if(!techArr){
+  if(techArr.length === 0){
     return "Vazio!"
   }
   const techSorted = techArr.sort()
