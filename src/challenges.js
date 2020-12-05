@@ -131,11 +131,13 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  let info = {};
-  info['tech'] = array.sort();
+  let info = [];
+  array.sort();
   for (let i = 0; i < array.length; i += 1) {
-    return 'tech: "' + info.tech[i] + '",\nname: "' + name + '"\n';
+    let newInfo = {tech: array[i], name: name};
+    info.push(newInfo);
   }
+  return info;
 }
 
 // Desafio 11
