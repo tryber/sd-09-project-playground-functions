@@ -20,12 +20,17 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(array) {
-  return (array[array.length - 1] + ", " + array[0]); 
+  return (array[array.length-1]+", "+array[0]); 
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsCounter = 0; 
+  for (let i = 0; i < wins; i += 1) {
+    winsCounter += 3;
+  }
+  let result = winsCounter + ties;
+  console.log (result);
 }
 
 // Desafio 6
