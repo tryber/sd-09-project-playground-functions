@@ -36,22 +36,29 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
+function verifyHighestCount(number, highest, count) {
+  if (number > highest) {
+    highest = number;
+    count = 1;
+  } else if (number === highest) {
+    count += 1;
+  }
+  return [highest, count];
+}
 function highestCount(numbersArray) {
   let highestNumber = 0;
   let highestNumberRepeat = 0;
+  let result = [];
 
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] > highestNumber) {
-      highestNumber = numbersArray[index];
-      highestNumberRepeat = 1;
-    } else if (numbersArray[index] === highestNumber) {
-      highestNumberRepeat += 1;
-    }
+    result = verifyHighestCount(numbersArray[index], highestNumber, highestNumberRepeat);
+    highestNumber = result[0];
+    highestNumberRepeat = result[1];
   }
 
   return highestNumberRepeat;
 }
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
@@ -297,7 +304,7 @@ function hydrate(drinks) {
 
   return `${sum} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
+// console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
 
 
 module.exports = {
