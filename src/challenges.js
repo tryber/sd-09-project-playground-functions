@@ -127,14 +127,14 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(array, name) {
-  if (array === '') {
+function techList(techs, name) {
+  if (techs === '') {
     return 'Vazio!';
   }
   let info = [];
-  array.sort();
-  for (let i = 0; i < array.length; i += 1) {
-    let newInfo = { tech: array[i], name };
+  techs.sort();
+  for (let i = 0; i < techs.length; i += 1) {
+    let newInfo = { tech: techs[i], name };
     info.push(newInfo);
   }
   return info;
