@@ -31,10 +31,10 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(names) {
-  let lastFirst = names.pop() + ', ' + names.shift();
+  let lastFirst = `${names.pop()+', '+ names.shift()}`;
   return lastFirst;
 }
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
