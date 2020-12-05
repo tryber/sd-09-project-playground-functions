@@ -110,8 +110,40 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkNumbers(numbers) {
+  let timesAppeared = 0;
+  let repeatCount = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    for(let index2 = 0; index2 < numbers.length; index2 += 1) {
+      if (numbers[index] === numbers[index2]) {
+        timesAppeared += 1;
+      }
+    }
+    if (repeatCount < timesAppeared){
+      repeatCount = timesAppeared;
+    }
+    timesAppeared = 0;
+  }
+  if (repeatCount > 2) {
+    return('não é possível gerar um número de telefone com esses valores');
+  } else {
+    return numbers;
+  }
+}
+
+function generatePhoneNumber(numbers) {
+  let result = checkNumbers(numbers);
+
+  if (typeof(result) === 'não é possível gerar um número de telefone com esses valores') {
+    return result;
+  } else {
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (result[index] > 9 || result[index] < 0) {
+        return('não é possível gerar um número de telefone com esses valores');
+      }
+    }
+    return `(${result.slice(0, 2).join('')}) ${result.slice(2, 7).join('')}-${result.slice(7).join('')}`;
+  }
 }
 
 // Desafio 12
