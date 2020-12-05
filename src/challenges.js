@@ -79,38 +79,39 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
-function fizzBuzz(numbersTo) {
-  for (let index = 0; index < numbersTo.length; index += 1) {
-    if (numbersTo[index] % 15 === 0) {
-      numbersTo[index] = 'fizzBuzz';
-    } else if (numbersTo[index] % 3 === 0) {
-      numbersTo[index] = 'buzz';
-    } else if (numbersTo[index] % 5 === 0) {
-      numbersTo[index] = 'fizz';
+function fizzBuzz(numbers) {
+  let num = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 15 === 0) {
+      num[index] = 'fizzBuzz';
+    } else if (numbers[index] % 3 === 0) {
+      num[index] = 'fizz';
+    } else if (numbers[index] % 5 === 0) {
+      num[index] = 'buzz';
     } else {
-      numbersTo[index] = 'bug!';
+      num[index] = 'bug!';
     }
   }
-  return numbersTo;
+  return num;
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(originalText) {
+function encode(text) {
   let wordKey = ['1', '2', '3', '4', '5'];
   let putCode = ['a', 'e', 'i', 'o', 'u'];
   let encodedText = '';
-  for (let index = 0; index < originalText.length; index += 1) {
+  for (let index = 0; index < text.length; index += 1) {
     let letterCoded = false;
     for (let indexCode = 0; indexCode < wordKey.length; indexCode += 1) {
-      if (originalText[index] === putCode[indexCode]) {
+      if (text[index] === putCode[indexCode]) {
         encodedText += wordKey[indexCode];
         letterCoded = true;
         break;
       }
     }
     if (letterCoded === false) {
-      encodedText += originalText[index];
+      encodedText += text[index];
     }
   }
   return encodedText;
