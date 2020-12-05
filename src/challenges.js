@@ -81,11 +81,11 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbersTo) {
   for (let index = 0; index < numbersTo.length; index += 1) {
-    if ((numbersTo[index] % 3 === 0) && (numbersTo[index] % 5 === 0)) {
+    if (numbersTo[index] % 15 === 0) {
       numbersTo[index] = 'fizzBuzz';
-    } else if (numbersTo[index] % 5 === 0) {
-      numbersTo[index] = 'buzz';
     } else if (numbersTo[index] % 3 === 0) {
+      numbersTo[index] = 'buzz';
+    } else if (numbersTo[index] % 5 === 0) {
       numbersTo[index] = 'fizz';
     } else {
       numbersTo[index] = 'bug!';
@@ -97,14 +97,14 @@ function fizzBuzz(numbersTo) {
 
 // Desafio 9
 function encode(originalText) {
-  let key = ['1', '2', '3', '4', '5'];
+  let wordKey = ['1', '2', '3', '4', '5'];
   let putCode = ['a', 'e', 'i', 'o', 'u'];
   let encodedText = '';
   for (let index = 0; index < originalText.length; index += 1) {
     let letterCoded = false;
-    for (let indexCode = 0; indexCode < key.length; indexCode += 1) {
+    for (let indexCode = 0; indexCode < wordKey.length; indexCode += 1) {
       if (originalText[index] === putCode[indexCode]) {
-        encodedText += key[indexCode];
+        encodedText += wordKey[indexCode];
         letterCoded = true;
         break;
       }
