@@ -234,7 +234,7 @@ function generatePhoneNumber(arrayPhone) {
       }
     }
 
-    if (differentNumber(arrayPhone[index]) || (mostRepeated(arrayPhone, arrayPhone[index]) >= 3)) {
+    if (differentNumber(arrayPhone[index] !== '') || (mostRepeated(arrayPhone, arrayPhone[index]) >= 3)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
