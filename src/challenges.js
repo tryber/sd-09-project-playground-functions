@@ -153,9 +153,22 @@ function decode(encoded) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(array, name) {
+  let tech = [];
+  if (array[0] !== undefined) {
+    for (let index in array) {
+      let object = {
+        'tech' : array[index],
+        'name' : name
+      };
+      tech.push(object);
+    };
+  } else {
+    tech = 'Vazio!';
+  }
+  console.log(tech);
+  return tech;
+};
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -200,5 +213,6 @@ catAndMouse(7, 8, 8)
 fizzBuzz([2, 15, 7, 9, 45, 25])
 encode('Boa noite meu consagrado')
 decode('B41 n43t2 m25 c4ns1gr1d4')
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Willian')
 
 // Aooba, não é que tem um segredo no Lession Learned?!
