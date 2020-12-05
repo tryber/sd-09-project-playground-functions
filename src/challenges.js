@@ -93,11 +93,11 @@ function fizzBuzz(arrayFizz) {
       } else {
         buzzArray.push('buzz');
       }
+      }
       return buzzArray;
     }
     
-  }	
-// console.log(fizzBuzz([2, 15, 7, 9, 45])
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
