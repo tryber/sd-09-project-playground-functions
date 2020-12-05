@@ -56,10 +56,10 @@ function catAndMouse() {
   cat2 = mouse - cat2;
 
   if (cat1 < cat2) {
-    return cat1;
+    return 'cat1';
   }
   else if (cat2 < cat1) {
-    return cat2;
+    return 'cat2';
   }
   else {
     return 'os gatos trombam e o rato foge';
