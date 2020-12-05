@@ -16,7 +16,7 @@ function splitSentence(sentence) {
   let wordBeingFormed = '';
 
   for (let index = 0; index <= sentence.length; index += 1) {
-    if (sentence[index] === ' ' || sentence[index] === '') {
+    if (sentence[index] === ' ' || index === sentence.length) {
       arrayOfSentence.push(wordBeingFormed)
       wordBeingFormed = ('')
     } else {
@@ -52,13 +52,32 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1Mouse = cat1 - mouse;
+  let distanciaCat2Mouse = cat2 - mouse;
+  if (distanciaCat1Mouse < distanciaCat2Mouse) {
+    return 'cat1'
+  } else if (distanciaCat1Mouse == distanciaCat2Mouse) {
+    return 'Os 2 gatos estão equidistantes do rato'
+  } else {
+    return 'cat2'
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let arrayOfStrings = [];
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    if (arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0) {
+      arrayOfStrings.push('fizzBuzz');
+    } else if (arrayOfNumbers[index] % 5 === 0) {
+      arrayOfStrings.push('buzz')
+    } else if (arrayOfNumbers[index] % 3 === 0) {
+      arrayOfStrings.push('fizz')
+    } else {
+      arrayOfStrings.push('bug!')
+    }
+  } return arrayOfStrings
 }
 
 // Desafio 9
