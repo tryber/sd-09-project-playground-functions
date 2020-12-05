@@ -76,12 +76,46 @@ function fizzBuzz(valueArray) {
   return resultArray
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function translate(value) {
+  if (value === 'a') {
+    return 1
+  } else if (value === 'e') {
+    return 2
+  } else if (value === 'i') {
+     return 3
+  } else if (value === 'o') {
+    return 4
+  } else if (value === 'u') {
+    return 5
+  } else if (value === '1') {
+    return 'a'
+  } else if (value === '2') {
+    return 'e'
+  } else if (value === '3') {
+    return 'i'
+  } else if (value === '4') {
+    return 'o'
+  } else if (value === '5') {
+    return 'u'
+  } else {
+    return value
+  }
 }
-function decode() {
-  // seu código aqui
+
+// Desafio 9
+function encode(value) {
+  let valueArr = value.split('')
+  for (let i = 0; i < valueArr.length; i += 1) {
+        valueArr[i] = translate(valueArr[i])
+  }
+  return valueArr.join('')
+}
+function decode(value) {
+  let valueArr = value.split('')
+  for (let i = 0; i < valueArr.length; i += 1) {
+        valueArr[i] = translate(valueArr[i])
+  }
+  return valueArr.join('')
 }
 
 // Desafio 10
