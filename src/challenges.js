@@ -134,7 +134,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(tech, name) {
-  let arrayOrdenado = tech.sort();
+  tech.sort();
   let arrayOrdemCrescente = [];
 
   if (tech.length !== 0) {
@@ -147,9 +147,9 @@ function techList(tech, name) {
 
     }
     return arrayOrdemCrescente;
-  } else {
-   return ('Vazio!');
-  }
+  } 
+  return ('Vazio!');
+  
 }
 
 // Desafio 11
