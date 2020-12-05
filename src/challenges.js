@@ -143,9 +143,23 @@ for(let index = 0; index < tech.length; index += 1) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let rN = []
+  if(numbers.length < [11] || numbers.length > [11]) {
+    return 'Array com tamanho incorreto.';
+  }
+for(let index = 0; index < numbers.length; index += 1){
+  if(numbers[index] < 0 || numbers[index] > 9) {
+    return 'não é possível gerar um número de telefone com esses valores';
 }
+}
+for(let index = 0; index < numbers.length; index += 1) {
+  rN[index] = Math.floor( Math.random() * 9);
+  }
+  concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
+    return(concat);
+  }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9]));
 
 // Desafio 12
 function triangleCheck() {
