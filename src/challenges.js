@@ -163,14 +163,14 @@ function techList(array, name) {
           Name: name,
         };
         techArray.push(object);
-    }
-    if ({}.hasOwnProperty.call(array, index)) {
+      }
+      if ({}.hasOwnProperty.call(array, index)) {
       let object = {
         Tech: array[index],
         Name: name,
       };
       techArray.push(object);
-  }
+    }
     }
   } else {
     techArray = 'Vazio!';
