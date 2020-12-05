@@ -162,45 +162,55 @@ function techList(techList, name) {
 // encontrada pela Raquel Picanço 
 // (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
 function generatePhoneNumber(numbers) {
-  checkValidity(numbers);
+  let phoneNumber = [];
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
+  } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    for (let i = 0; i < numbers.length; i += 1) {
+      phoneNumber.push(numbers[i]);
+    }
+    phoneNumber.splice(0, 0, '(');
+    phoneNumber.splice(3, 0, ')');
+    phoneNumber.splice(9, 0, '-');    
   }
+  return phoneNumber.join('');
+}
+function checkNumbers (numbers) {
+  let checkResult = true;
+
   for (let i = 0; i < numbers.length; i += 1) {
-    let checkNumber = numbers[i];
-    if (numbers[i] < 0 || numbers[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    if (numbers[i] < 0 || numbers[i] > 9 ) {
+      checkResult = false;
     }
   }
-
-
-let phoneNumber = [];
-  for (let i = 0; i < numbers.length; i += 1) {
-    phoneNumber.push(numbers[i]);
-  }
-return phoneNumber;
+  return checkResult;
 }
-function checkValidity(numbers) {
-  let checkNumber = 0;
-  let counter = 0;
+
+function checkIfValid(numbers) {
+  let counter = 1;
+  let isValid = true;
 
   for (let i = 0; i < numbers.length; i += 1) {
-    checkNumber = numbers[i];
-    for (let j = 0; j < numbers.length; j += 1) {
-      if (numbers[i] === checkNumber) {
+    let numberToCheck = numbers[i];
+    for (let j = 1; j < numbers.length; j += 1) {
+      if (numberToCheck == numbers[j]) {
         counter += 1;
-        if (counter > 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
-          break;
-        } else {
-          return numbers;
-        }
       }
-    }
+      if (counter >= 3 || numbers[i] > 9 || numbers[i] < 0) {
+        isValid = false;
+      }
+    }    
+    counter = 1;
   }
-  console.log(counter);
+  return isValid;
 }
+
+
+let numbers =[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(numbers));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
