@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(names) {
-  return (names[names.length - 1] + ', ' + names[0]);
+  return (`${names[names.length - 1]}, ${names[0]}`);
 }
 
 // Desafio 5
@@ -49,21 +49,23 @@ function highestCount(numbers) {
   }
   for (let index in numbers) {
     if (biggestNumber === numbers[index]) {
-        repeatCount += 1;
-      }
+      repeatCount += 1;
+    }
   }
   return repeatCount;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let result;
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return 'cat1';
+    result = 'cat1';
   } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 
 // Desafio 8
@@ -85,27 +87,39 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(phrase) {
-  let coded = phrase.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+  let coded = phrase
+  .replace(/a/g, 1)
+  .replace(/e/g, 2)
+  .replace(/i/g, 3)
+  .replace(/o/g, 4)
+  .replace(/u/g, 5);
   return coded;
 }
 
 function decode(phrase) {
-  let decoded = phrase.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  let decoded = phrase
+  .replace(/1/g, 'a')
+  .replace(/2/g, 'e')
+  .replace(/3/g, 'i')
+  .replace(/4/g, 'o')
+  .replace(/5/g, 'u');
   return decoded;
 }
 
 // Desafio 10
 function techList(tech, name) {
   let technology = [];
+  let result;
 
   for (let index in tech.sort()) {
-    technology.push({'tech': tech[index], 'name': name});
+    technology.push({tech: tech[index], name: name});
   }
-  if (technology.length === 0){
-    return 'Vazio!';
+  if (technology.length === 0) {
+    result = 'Vazio!';
   } else {
-    return technology;
+    result = technology;
   }
+  return result;
 }
 
 // Desafio 11
