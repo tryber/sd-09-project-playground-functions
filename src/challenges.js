@@ -157,11 +157,20 @@ function techList(array, name) {
   let techArray = [];
   if (array[0] !== undefined) {
     for (let index in array) {
+      if (Object.prototype.hasOwnProperty.call(index, array)) {
+        let object = {
+          Tech: array[index],
+          Name: name,
+        };
+        techArray.push(object);
+    }
+    if ({}.hasOwnProperty.call(array, index)) {
       let object = {
         Tech: array[index],
-        Name: name
+        Name: name,
       };
       techArray.push(object);
+  }
     }
   } else {
     techArray = 'Vazio!';
