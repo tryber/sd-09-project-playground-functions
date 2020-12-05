@@ -114,7 +114,7 @@ function techList(tech, name) {
   for (let index in tech.sort()) {
     technology.push({
       tech: tech[index],
-      name: name 
+      name: name,
     });
   }
   if (technology.length === 0) {
@@ -130,21 +130,25 @@ function checkNumbers(numbers) {
   let timesAppeared = 0;
   let repeatCount = 0;
   let result;
-  for (let index = 0; index < numbers.length; index += 1) {
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-      if (numbers[index] === numbers[index2]) {
-        timesAppeared += 1;
-      }
-    }
-    if (repeatCount < timesAppeared) {
-      repeatCount = timesAppeared;
-    }
-    timesAppeared = 0;
-  }
-  if (repeatCount > 2) {
-    result = ('não é possível gerar um número de telefone com esses valores');
+  if (numbers.length !== 11) {
+    result = ('Array com tamanho incorreto.');
   } else {
-    result = numbers;
+    for (let index = 0; index < numbers.length; index += 1) {
+      for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+        if (numbers[index] === numbers[index2]) {
+          timesAppeared += 1;
+        }
+      }
+      if (repeatCount < timesAppeared) {
+        repeatCount = timesAppeared;
+      }
+      timesAppeared = 0;
+    }
+    if (repeatCount > 2) {
+      result = ('não é possível gerar um número de telefone com esses valores');
+    } else {
+      result = numbers;
+    }
   }
   return result;
 }
@@ -152,18 +156,17 @@ function checkNumbers(numbers) {
 function generatePhoneNumber(numbers) {
   let checkedNumbers = checkNumbers(numbers);
   let result;
-
-  if (checkedNumbers === 'não é possível gerar um número de telefone com esses valores') {
+  if (checkedNumbers === 'não é possível gerar um número de telefone com esses valores' || checkedNumbers === 'Array com tamanho incorreto.') {
     result = checkedNumbers;
-  } else if (checkedNumbers.length !== 11) {
-    result = ('Array com tamanho incorreto.');
   } else {
     for (let index = 0; index < numbers.length; index += 1) {
       if (checkedNumbers[index] > 9 || checkedNumbers[index] < 0) {
         result = ('não é possível gerar um número de telefone com esses valores');
+        break;
+      } else {
+          result = `(${checkedNumbers.slice(0, 2).join('')}) ${checkedNumbers.slice(2, 7).join('')}-${checkedNumbers.slice(7).join('')}`;
       }
     }
-    result = `(${checkedNumbers.slice(0, 2).join('')}) ${checkedNumbers.slice(2, 7).join('')}-${checkedNumbers.slice(7).join('')}`;
   }
   return result;
 }
