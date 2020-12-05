@@ -55,15 +55,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let result = 'os gatos trombam e o rato foge';
   cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse);
-
   if (cat1 < cat2) {
     result = 'cat1';
   }
-  
   if (cat2 < cat1) {
     result = 'cat2';
   }
-
   return result;
 }
 
@@ -133,6 +130,9 @@ function decode(string) {
 function techList(array, name) {
   let info = [];
   array.sort();
+  if(array === '') {
+    return 'Vazio!';
+  }
   for (let i = 0; i < array.length; i += 1) {
     let newInfo = {tech: array[i], name: name};
     info.push(newInfo);
