@@ -200,6 +200,22 @@ function differentSize(sizePhone) {
   }
   return '';
 }
+function differentNumber(number) {
+  if ((number < 0) || (number > 9)) {
+    return true;
+  }
+  return false;
+}
+function mostRepeated(array, number) {
+  let count = 0;
+
+  for (let indexCount = 0; indexCount < array.length; indexCount += 1) {
+    if (number === array[indexCount]) {
+      count += 1;
+    }
+  }
+  return count;
+}
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
   let error = '';
@@ -218,7 +234,7 @@ function generatePhoneNumber(arrayPhone) {
       }
     }
 
-    if ((arrayPhone[index] < 0) || (arrayPhone[index] > 9) || (count >= 3)) {
+    if (differentNumber(arrayPhone[index]) || (mostRepeated(arrayPhone, arrayPhone[index]) >= 3)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
