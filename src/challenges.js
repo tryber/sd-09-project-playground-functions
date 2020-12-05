@@ -70,17 +70,18 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let firstCat = '';
+  let cat1Distance = mouse - cat1;
+  let cat2Distance = mouse - cat2;
 
-  if (cat1 < cat2 || cat1 === mouse) {  
+  if (cat1Distance < cat2Distance || cat1Distance === mouse) {
     firstCat = 'cat1';
-  } else if (cat2 < cat1 || cat2 === mouse) {
+  } else if (cat2Distance < cat1Distance || cat2Distance === mouse) {
     firstCat = 'cat2';
   } else {
     firstCat = 'os gatos trombam e o rato foge';
   }
-  return firstCat;
+return firstCat;
 }
-console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz() {}
