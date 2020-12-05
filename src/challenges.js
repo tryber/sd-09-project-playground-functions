@@ -60,13 +60,16 @@ function highestCount(arrayOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(mouse - cat1);
   let distance2 = Math.abs(mouse - cat2);
+  let winner;
 
   if (distance1 < distance2) {
-    return 'cat1';
+    winner = 'cat1';
   } else if (distance1 > distance2) {
-    return 'cat2';
+    winner = 'cat2';
+  } else {
+    winner = 'os gatos trombam e o rato foge';
   }
-  return 'os gatos trombam e o rato foge';
+ return winner;
 }
 
 // Desafio 8
@@ -135,19 +138,25 @@ function decode(codedString) {
 
 
 // Desafio 10
-function techList(techArray, name) {
-  let array = [];
-
+function techList(techList, name) {
+  let techArray = techList.sort();
+  let sortedList = [];
+  
   for (let i = 0; i < techArray.length; i += 1) {
-    array[i] = {
-      tech: techArray[i],
-      name: name,
+    sortedList[i] = {
+        tech: techArray[i],
+        name: name,
     };
   }
-  return array;
-} 
+  return sortedList;
+}
 
 // Desafio 11
+
+// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como 
+// montar o número de telefone final olhando os PR de outros colegas. Cito aqui a solução 
+// encontrada pela Raquel Picanço 
+// (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
 function generatePhoneNumber(numbers) {
   checkValidity(numbers);
 
