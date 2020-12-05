@@ -20,12 +20,12 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(array) {
-  return (array[array.length-1]+", "+array[0]); 
+  return (array[array.length-1]+", "+array[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsCounter = 0; 
+  let winsCounter = 0;
   for (let i = 0; i < wins; i += 1) {
     winsCounter += 3;
   }
@@ -67,13 +67,13 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let i in array) {
-    if (array[i] % 15 == 0) {
+    if (array[i] % 15 === 0) {
       array[i] = 'fizzBuzz';
     }
-    else if (array[i] % 3 == 0) {
+    else if (array[i] % 3 === 0) {
       array[i] = 'fizz';
     }
-    else if (array[i] % 5 == 0) {
+    else if (array[i] % 5 === 0) {
       array[i] = 'buzz';
     }
     else {
@@ -106,20 +106,20 @@ function encode(string) {
 }
 
 function decode(string) {
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] === '1') {
+  for (let j = 0; j < string.length; j += 1) {
+    if (string[j] === '1') {
       string = string.replace(/1/g, "a");
     }
-    else if (string[i] === '2') {
+    else if (string[j] === '2') {
       string = string.replace(/2/g, "e");
     }
-    else if (string[i] === '3') {
+    else if (string[j] === '3') {
       string = string.replace(/3/g, "i");
     }
-    else if (string[i] === '4') {
+    else if (string[j] === '4') {
       string = string.replace(/4/g, "o");
     }
-    else if (string[i] === '5') {
+    else if (string[j] === '5') {
       string = string.replace(/5/g, "u");
     }
   }
@@ -128,11 +128,11 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  let info = [];
-  array.sort();
   if(array === '') {
     return 'Vazio!';
   }
+  let info = [];
+  array.sort();
   for (let i = 0; i < array.length; i += 1) {
     let newInfo = {tech: array[i], name: name};
     info.push(newInfo);
