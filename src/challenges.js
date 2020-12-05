@@ -194,48 +194,78 @@ function techList(tech, name) {
 
 
 // Desafio 11
+function differentSize(sizePhone) {
+  if (sizePhone !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  return '';
+}
+function differentNumber(number) {
+  if ((number < 0) || (number > 9)) {
+    return true;
+  }
+  return false;
+}
+function mostRepeated(array, number) {
+  let count = 0;
+
+  for (let indexCount = 0; indexCount < array.length; indexCount += 1) {
+    if (number === array[indexCount]) {
+      count += 1;
+    }
+  }
+  return count;
+}
+function errorNumberAndCount(number, array) {
+  let error = differentSize(array.length);
+  let phrase = '';
+
+  if (error !== '') {
+    phrase = error;
+  }
+  if (differentNumber(number) || (mostRepeated(array, number) >= 3)) {
+    phrase = 'não é possível gerar um número de telefone com esses valores';
+  }
+  return phrase;
+}
+function includeChar(number, index) {
+  let phone = '';
+
+  if (index === 0) {
+    phone += '(';
+  }
+  if (index === 2) {
+    phone += ') ';
+  }
+  if (index === 7) {
+    phone += '-';
+  }
+  phone += number;
+
+  return phone;
+}
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
 
-  if (arrayPhone.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    let count = 0;
-
-    for (let indexCount = 0; indexCount < arrayPhone.length; indexCount += 1) {
-      if (arrayPhone[index] === arrayPhone[indexCount]) {
-        count += 1;
-      }
+    error = errorNumberAndCount(arrayPhone[index], arrayPhone);
+  
+    if (error !== '') {
+      return error;
     }
 
-    if ((arrayPhone[index] < 0) || (arrayPhone[index] > 9) || (count >= 3)) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
-
-    if (index === 0) {
-      phone += '(';
-    }
-    if (index === 2) {
-      phone += ') ';
-    }
-    if (index === 7) {
-      phone += '-';
-    }
-    phone += arrayPhone[index];
+    phone += includeChar(arrayPhone[index],index);
   }
   return phone;
 }
-// console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([0, 1, 6]));
-// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-// console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 
 // Desafio 12
