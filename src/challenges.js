@@ -246,15 +246,15 @@ function includeChar(number, index) {
 }
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
+  let error = '';
 
   for (let index = 0; index < arrayPhone.length; index += 1) {
     error = errorNumberAndCount(arrayPhone[index], arrayPhone);
-  
     if (error !== '') {
       return error;
     }
 
-    phone += includeChar(arrayPhone[index],index);
+    phone += includeChar(arrayPhone[index], index);
   }
   return phone;
 }
