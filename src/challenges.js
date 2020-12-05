@@ -143,6 +143,9 @@ let numberString = 'h3 th2r2!';
 function techList(technologies, name) {
   technologies.sort();
   newList = [];
+  if(technologies.length === 0){
+    return 'Vazio!';
+  }
   for (let index = 0; index < technologies.length; index += 1) {
     let objectTech = {tech: 'NomeTech', name: name};
     objectTech.tech = technologies[index];
