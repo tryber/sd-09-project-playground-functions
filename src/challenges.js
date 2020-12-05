@@ -79,7 +79,6 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2Distance < 0) {
     cat2Distance = (mouse - cat2) * -1;
   }
-  
   if (cat1Distance < cat2Distance || cat1 === mouse) {
     firstCat = 'cat1';
   } else if (cat2Distance < cat1Distance || cat2 === mouse) {
@@ -106,7 +105,6 @@ function fizzBuzz(arrayNumbers) {
   }
   return array;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
