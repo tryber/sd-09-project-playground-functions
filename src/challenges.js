@@ -3,26 +3,32 @@ function compareTrue (bol, bole) {
   let compare = bol && bole;
   return compare;
 }
+compareTrue(true, false);
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area; 
 }
+calcArea(10, 4);
 // Desafio 3
 function splitSentence(string) {
-  palavras = string.split(" ");
+  let palavras = string.split(" ");
   return palavras;
 }
+splitSentence("Xablau is life");
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
-
+function concatName(array) {
+  let empty= [];
+  firstLast = empty.concat(array[array.length - 1] + ', ' + array[0]);
+  return(firstLast);
+  }
+  concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ let points = (wins *3 ) + ties;
+ return points;
 }
-
+footballPoints(10, 10);
 // Desafio 6
 function highestCount() {
   // seu código aqui
