@@ -83,12 +83,61 @@ let arrayNumbers = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vowel = string.split('');
+  for (let index = 0; index < vowel.length; index += 1) {
+    switch(vowel[index]) {
+      case ' ':
+        break;
+      case 'a':
+        vowel[index] = '1';
+        break;
+      case 'e':
+        vowel[index] = '2';
+        break;
+      case 'i': 
+        vowel[index] = '3';
+        break;
+      case 'o': 
+        vowel[index] = '4';
+        break;
+          case 'u': 
+        vowel[index] = '5';
+        break;
+    }
+  }
+    return vowel.join('');
+  }
+  let vowelString = 'hi there!';
+  console.log(encode(vowelString));
+
+function decode(string) {
+  let vowel = string.split('');
+  for (let index = 0; index < vowel.length; index += 1) {
+      switch(vowel[index]) {
+        case ' ':
+          break;
+        case '1':
+          vowel[index] = 'a';
+          break;
+        case '2':
+          vowel[index] = 'e';
+          break;
+        case '3': 
+          vowel[index] = 'i';
+          break;
+        case '4': 
+          vowel[index] = 'o';
+          break;
+        case '5': 
+          vowel[index] = 'u';
+          break;
+      }
+    }
+  return vowel.join('');
 }
-function decode() {
-  // seu código aqui
-}
+let numberString = 'h3 th2r2!';
+  console.log(decode(numberString));
 
 // Desafio 10
 function techList() {
