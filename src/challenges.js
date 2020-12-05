@@ -141,6 +141,10 @@ function decode(codedString) {
 function techList(techList, name) {
   let techArray = techList.sort();
   let sortedList = [];
+
+  if (techList === '0') {
+    return 'Vazio!';
+  }
   
   for (let i = 0; i < techArray.length; i += 1) {
     sortedList[i] = {
