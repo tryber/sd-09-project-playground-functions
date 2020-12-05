@@ -120,12 +120,13 @@ function fizzBuzz(arrayNumeros) {
   let ehResto5;
   let arrayTamanho = arrayNumeros.length;
 
-  for (let ind; ind < arrayTamanho; ind += 1) {
+  for (let ind = 0; ind < arrayTamanho; ind += 1) {
     frase = '';
     ehResto3 = restCalculateTree(arrayNumeros[ind]);
     ehResto5 = restCalculateFive(arrayNumeros[ind]);
-    frase += retornoAmbos(resto3, resto5, frase);
-    frase += retornaFizz(resto3, resto5);
+    frase += retornoFizzBuzz(ehResto3, ehResto5, frase);
+    frase += verificaEhFizEhBug(ehResto3, ehResto5, frase);
+
     resultado.push(frase);
   };
 
@@ -140,13 +141,22 @@ function restCalculateFive(numberArrayFive) {
   return (numberArrayFive % 5 === 0);
 }
 
-function retornoAmbos(boleanoA01, boleanoA02, texto) {
+function retornoFizzBuzz(boleanoA01, boleanoA02, texto) {
 
   let retorno = texto;
   if (boleanoA01 && boleanoA02) {
-    retorno = 'fizzBuzz';
+    retorno = "fizzBuzz";
   }
   return retorno;
+}
+
+function verificaEhFizEhBug(ehResto3, ehResto5, frase) {
+  if (frase === '') {
+    frase += retornaFizz(ehResto3, ehResto5, frase);
+    frase += retornaBug(frase);
+    return frase;
+  }
+  return '';
 }
 
 function retornaFizz(resto3, resto5, palavra) {
@@ -160,8 +170,9 @@ function retornaFizz(resto3, resto5, palavra) {
 
 function retornoFizz(boleanoF01, boleanoF02, palavra) {
   let voltaFizz = palavra;
+
   if (boleanoF01 && !boleanoF02) {
-    voltaFizz = 'fizz'
+    voltaFizz = "fizz";
   }
   return voltaFizz;
 }
@@ -169,18 +180,19 @@ function retornoFizz(boleanoF01, boleanoF02, palavra) {
 function retornoBuzz(bolB01, bolB02, palavra) {
   let voltaBuzz = palavra;
   if (!bolB01 && bolB02) {
-    voltaBuzz = 'buzz';
+    voltaBuzz = "buzz";
+    return voltaBuzz;
   }
-  return voltaBuzz;
+  return '';
 }
 
 function retornaBug(stringBug) {
   if (stringBug === '') {
-    stringBug = 'bug!'
+    stringBug = "bug!";
+    return stringBug;
   }
-  return stringBug;
+  return '';
 }
-
 
 // Desafio 9
 function encode() {
