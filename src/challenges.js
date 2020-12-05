@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(firstValue, secondValue) {
-  if (firstValue === true && secondValue === true) {
+function compareTrue(firstvalue, secondvalue) {
+  if (firstvalue === true && secondvalue === true) {
     return true;
   }
   return false;
@@ -107,13 +107,31 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(currentString) {
+  let stringWithNumbers = '';
 
-function decode() {
-  // seu código aqui
+  stringWithNumbers = currentString.replace(/a/g, '1')
+  stringWithNumbers = stringWithNumbers.replace(/e/g, '2');
+  stringWithNumbers = stringWithNumbers.replace(/i/g, '3');
+  stringWithNumbers = stringWithNumbers.replace(/o/g, '4');
+  stringWithNumbers = stringWithNumbers.replace(/u/g, '5');
+
+  return stringWithNumbers;
 }
+console.log(encode('hi there!'));
+
+function decode(stringWithNumbers) {
+  let stringWithoutNumbers = '';
+
+  stringWithoutNumbers = stringWithNumbers.replace(/1/g, 'a');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/2/g, 'e');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/3/g, 'i');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/4/g, 'o');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/5/g, 'u');
+
+  return stringWithoutNumbers;
+}
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
