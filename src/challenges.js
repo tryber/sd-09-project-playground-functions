@@ -20,7 +20,7 @@ function splitSentence(value) {
 function concatName(value) {
   const newArray = []
   newArray.push(value[value.length - 1])
-  const firstValue = value[0] + ","
+  const firstValue = `${value[0]},`
   newArray.push(firstValue)
   return newArray.join(' ')
 }
