@@ -76,20 +76,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  for (let j = 0; j < string.length; j += 1) {
-    if (string[j] === 'a') {
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
       string = string.replace(/a/g, "1");
     }
-    else if (string[j] === 'e') {
+    else if (string[i] === 'e') {
       string = string.replace(/e/g, "2");
     }
-    else if (string[j] === 'i') {
+    else if (string[i] === 'i') {
       string = string.replace(/i/g, "3");
     }
-    else if (string[j] === 'o') {
+    else if (string[i] === 'o') {
       string = string.replace(/o/g, "4");
     }
-    else if (string[j] === 'u') {
+    else if (string[i] === 'u') {
       string = string.replace(/u/g, "5");
     }
   }
@@ -97,7 +97,24 @@ function encode(string) {
 }
 
 function decode() {
-  // seu código aqui
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === '1') {
+      string = string.replace(/1/g, "a");
+    }
+    else if (string[i] === '2') {
+      string = string.replace(/2/g, "e");
+    }
+    else if (string[i] === '3') {
+      string = string.replace(/3/g, "i");
+    }
+    else if (string[i] === '4') {
+      string = string.replace(/4/g, "o");
+    }
+    else if (string[i] === '5') {
+      string = string.replace(/5/g, "u");
+    }
+  }
+  return string;
 }
 
 // Desafio 10
