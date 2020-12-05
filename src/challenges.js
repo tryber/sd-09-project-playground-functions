@@ -31,7 +31,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(names) {
-  let lastFirst = names[names.length - 1] + ', ' + names[0];
+  let lastFirst = names.pop() + ', ' + names.shift();
   return lastFirst;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -47,31 +47,30 @@ function highestCount(numbers) {
   let higher = 0;
   let times = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === higher){
+    if (numbers[index] === higher) {
       times += 1;
-    } else if (numbers[index] > higher){
-    higher = numbers[index];
-    times = 1;
+    } else if (numbers[index] > higher) {
+      higher = numbers[index];
+      times = 1;
     }
   }
   return times;
 }
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = mouse - cat1;
   cat2 = mouse - cat2;
   if (cat1 < 0) {
-    cat1 = (cat1 * -1);
+    cat1 = cat1 * (-1);
   }
   if (cat2 < 0) {
-    cat2 = (cat2 * -1);
+    cat2 = cat2 * (-1);
   }
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
-  }
-  else if (cat1 < cat2){
+  } else if (cat1 < cat2) {
     return 'cat1';
   }
   return 'cat2';
@@ -83,12 +82,11 @@ function fizzBuzz(numbersTo) {
   for (let index = 0; index < numbersTo.length; index += 1) {
     if ((numbersTo[index] % 3 === 0) && (numbersTo[index] % 5 === 0)) {
       numbersTo[index] = 'fizzBuzz';
-    } else if(numbersTo[index] % 5 === 0) {
+    } else if (numbersTo[index] % 5 === 0) {
       numbersTo[index] = 'buzz';
-    } else if(numbersTo[index] % 3 === 0) {
+    } else if (numbersTo[index] % 3 === 0) {
       numbersTo[index] = 'fizz';
-    }
-    else {
+    } else {
       numbersTo[index] = 'bug!';
     }
   }
@@ -99,7 +97,7 @@ function fizzBuzz(numbersTo) {
 // Desafio 9
 function encode(originalText) {
   let key = ['1', '2', '3', '4', '5'];
-  let putCode = ['a','e','i','o','u'];
+  let putCode = ['a', 'e', 'i', 'o', 'u'];
   let encodedText = '';
   for (let index = 0; index < originalText.length; index += 1) {
     let letterCoded = false;
@@ -110,17 +108,17 @@ function encode(originalText) {
         break;
       }
     }
-    if (letterCoded === false){
+    if (letterCoded === false) {
       encodedText += originalText[index];
     }
   }
-return encodedText;
+  return encodedText;
 }
 // console.log(encode('hi there!'));
 
 function decode(codedText) {
   let key = ['1', '2', '3', '4', '5'];
-  let uncode = ['a','e','i','o','u'];
+  let uncode = ['a', 'e', 'i', 'o', 'u'];
   let uncodedText = '';
   for (let index = 0; index < codedText.length; index += 1) {
     let letterUncoded = false;
@@ -135,7 +133,7 @@ function decode(codedText) {
       uncodedText += codedText[index];
     }
   }
-return uncodedText;
+  return uncodedText;
 }
 // console.log(decode('h3 th2r2!'));
 
