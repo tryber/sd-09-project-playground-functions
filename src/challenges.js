@@ -1,49 +1,119 @@
+// VAMO NESSA É APENAS O COMEÇO!!!
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(meuNome) {
+  return meuNome.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let concatenando = arrayString[arrayString.length - 1];
+  concatenando += ", " + arrayString[0];
+  return concatenando;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins *= 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let number = 0;
+  let count = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > number) {
+      number = arrayNumbers[index];
+    }
+  }
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (number === arrayNumbers[index]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return "os gatos trombam e o rato foge";
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return "cat2";
+  } else {
+    return "cat1";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(n) {
+  let result = [];
+  for (let index = 0; index < n.length; index += 1) {
+    if (n[index] % 3 === 0 && n[index] % 5 === 0) {
+      result.push("fizzBuzz");
+    } else if (n[index] % 3 === 0) {
+      result.push("fizz");
+    } else if (n[index] % 5 === 0) {
+      result.push("buzz");
+    } else {
+      result.push("bug!");
+    }
+  }
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let newString = "";
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === "a") {
+      newString += "1";
+    } else if (str[index] === "e") {
+      newString += "2";
+    } else if (str[index] === "i") {
+      newString += "3";
+    } else if (str[index] === "o") {
+      newString += "4";
+    } else if (str[index] === "u") {
+      newString += "5";
+    } else {
+      newString += str[index];
+    }
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let newString = "";
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === "1") {
+      newString += "a";
+    } else if (str[index] === "2") {
+      newString += "e";
+    } else if (str[index] === "3") {
+      newString += "i";
+    } else if (str[index] === "4") {
+      newString += "o";
+    } else if (str[index] === "5") {
+      newString += "u";
+    } else {
+      newString += str[index];
+    }
+  }
+  return newString;
 }
 
 // Desafio 10
@@ -66,7 +136,6 @@ function hydrate() {
   // seu código aqui
 }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -82,4 +151,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
