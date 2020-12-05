@@ -80,16 +80,16 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2Distance = (mouse - cat2) * -1;
   }
   
-  if (cat1Distance < cat2Distance || cat1Distance === mouse) {
+  if (cat1Distance < cat2Distance || cat1 === mouse) {
     firstCat = 'cat1';
-  } else if (cat2Distance < cat1Distance || cat2Distance === mouse) {
+  } else if (cat2Distance < cat1Distance || cat2 === mouse) {
     firstCat = 'cat2';
   } else {
     firstCat = 'os gatos trombam e o rato foge';
   }
   return firstCat;
 }
-//console.log(catAndMouse(10, 4, 22));
+console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz() {}
 
