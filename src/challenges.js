@@ -31,8 +31,9 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(names) {
-  let lastFirst = `${names.pop()+', '+ names.shift()}`;
-  return lastFirst;
+  let last = names.pop();
+  let first = names.shift();
+  return last + ', ' + first;
 }
  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
