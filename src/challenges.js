@@ -47,15 +47,14 @@ let total = totalWins + totalTies;
 // Desafio 6
 let arrayys = [0, 4, 4, 4, 9, 2, 1];
 function highestCount(numbers) {
-let contador = 1;
-let maiorNumero = 0;
-  for (let i = 0; i < numbers.length; i += 1) {
-     if (numbers[i] > maiorNumero) {
-        maiorNumero = numbers[i];
+let contador = 0;
+let maiorNumero = 9;
+  for (let i = 0; i < arrayys.length; i += 1) {
+        if (maiorNumero === arrayys[i]) {
+            arrays[i] = maiorNumero; }
 //um for para descobrir o maior e outro para contar o 9
-      } else if (maiorNumero === numbers[i]) {
-                contador = contador + 1;
-    }
+ // for (let j = 0; j < )   
+    
   } return contador;
 }       
       //console.log(highestCount(arrayys));
@@ -76,8 +75,8 @@ let cat2Distance = Math.abs(cat2 - mouse);
        // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz(arrayFB) {
-   ArFizzBuzz = [9, 25];
+function fizzBuzz(ArFizzBuzz) {
+   ArFizzBuzz = [2, 15, 7, 9, 45];
 
   //ArFizzBuzz.push();
 //criar um array
@@ -97,7 +96,7 @@ function fizzBuzz(arrayFB) {
     } else {
         console.log('bug!');
     }
-  }   return arrayFB;
+  }   return ArFizzBuzz;
 }      fizzBuzz();
 
 // Desafio 9
