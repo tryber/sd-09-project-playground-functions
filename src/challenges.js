@@ -136,7 +136,7 @@ function generatePhoneNumber(numbers) {
 
   if (result === 'não é possível gerar um número de telefone com esses valores') {
     return result;
-  } else if (result.length > 11) {
+  } else if (result.length != 11) {
       return ('Array com tamanho incorreto.');
     } else {
     for (let index = 0; index < numbers.length; index += 1) {
