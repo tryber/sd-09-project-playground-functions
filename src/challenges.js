@@ -139,15 +139,15 @@ function techList(tech, name) {
     for (let index = 0; index < tech.length; index += 1) {
       let objeto = {
       };
-      objeto["tech"] = tech[index];
-      objeto["name"] = name;
+      objeto.tech = tech[index];
+      objeto.name = name;
       arrayOrdemCrescente.push(objeto);
 
     }
     return arrayOrdemCrescente;
-  } 
+  };
   return ('Vazio!');
-}
+};
 
 // Desafio 11
 function generatePhoneNumber() {
