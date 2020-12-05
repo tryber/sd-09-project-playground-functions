@@ -58,7 +58,7 @@ function highestCount(numbersArray) {
 
   return highestNumberRepeat;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
@@ -93,34 +93,36 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function divideBy(number) {
   let word = '';
-  let mod5 = number % 5 === 0;
-  let mod3 = number % 3 === 0;
+  let mod5 = number % 5;
+  let mod3 = number % 3;
 
-  if (mod3 === true) {
-    word = 'fizz';
+  if (mod3 === 0) {
+    word += 'fizz';
   }
 
-  if (mod5 === true) {
-    word = 'buzz';
-  }
-
-  if ((mod3 === true) && (mod5 === true)) {
-    word = 'fizzBuzz';
-  }
-
-  if (word === '') {
-    word = 'bug!';
+  if (mod5 === 0) {
+    word += 'buzz';
   }
 
   return word;
 }
 function fizzBuzz(arrayNumbers) {
+  let word = '';
+
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     arrayNumbers[index] = divideBy(arrayNumbers[index]);
+
+    if (arrayNumbers[index] === '') {
+      arrayNumbers[index] = 'bug!';
+    }
+
+    if (arrayNumbers[index] === 'fizzbuzz') {
+      arrayNumbers[index] = arrayNumbers[index].replace('b', 'B');
+    }
   }
   return arrayNumbers;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
 // Desafio 9
