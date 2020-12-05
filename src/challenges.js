@@ -141,8 +141,15 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let vector = Math.abs(lineA + lineB);
+  let answer = 0;
+  if (vector > lineC) {
+    answer += false;
+  } else {
+    answer = true;
+  }
+  return answer;
 }
 
 // Desafio 13
