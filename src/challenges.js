@@ -166,9 +166,9 @@ function techList(array, name) {
       }
       if ({}.hasOwnProperty.call(array, index)) {
         let object = {
-        Tech: array[index],
-        Name: name,
-      };
+          Tech: array[index],
+          Name: name,
+        };
         techArray.push(object);
       }
     }
