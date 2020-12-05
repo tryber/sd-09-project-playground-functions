@@ -195,7 +195,7 @@ function techList(tech, name) {
 
 // Desafio 11
 function differentSize(sizePhone) {
-  if (sizePhone !== 11) {
+  if ((sizePhone !== 11)) {
     return 'Array com tamanho incorreto.';
   }
   return '';
@@ -231,9 +231,15 @@ function errorNumberAndCount(number, array) {
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
   let error = '';
+  
+  if (arrayPhone.length === 0);
+  error = errorNumberAndCount('', arrayPhone);
+  if (error !== '') {
+    return error;
+  }
 
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    error = errorNumberAndCount(arrayPhone[index],arrayPhone);
+    error = errorNumberAndCount(arrayPhone[index], arrayPhone);
     if (error !== '') {
       return error;
     }
@@ -254,6 +260,7 @@ function generatePhoneNumber(arrayPhone) {
 console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([]));
 console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
