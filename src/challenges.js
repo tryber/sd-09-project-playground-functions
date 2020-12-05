@@ -142,12 +142,33 @@ function techList(arrayTech, name) {
     }
     object = {arrayTech,};
   }
-  return arrayTech, name, object; 
+  object.sort();
+  return name, object; 
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneArray) {
+  let validPhone = true;
+  let retornar;
+  let contadorDeNum = 0;
+  let phoneDD = `(${phoneArray[0],phoneArray[1]})`;
+  let phoneNumbers;
+  if (phoneArray.length === 11){
+    for (let index = 0; index < phoneArray; index += 1){
+      contadorDeNum = 0;
+      for (let index2 = 0; index2 < phoneArray; index2 += 1){
+        if (phoneArray[index] === phoneArray[index2]){
+          contadorDeNum += 1;
+          if (contadorDeNum >= 3 || phoneArray[index] > 9 || phoneArray < 0){
+            retornar = 'não é possível gerar um número de telefone com esses valores';
+          }
+        }
+      }
+    }
+    retornar = phoneNumbers +
+  } else {
+    retornar = 'Array com tamanho incorreto.';
+  }
 }
 
 // Desafio 12
@@ -177,3 +198,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
