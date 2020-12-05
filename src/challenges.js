@@ -142,13 +142,11 @@ function techList(arrayTech, name) {
     }
     object = {arrayTech,};
   }
-  return arrayTech, name, object; 
+  object.sort();
+  return name, object; 
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
 
 // Desafio 12
 function triangleCheck() {
