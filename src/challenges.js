@@ -134,15 +134,19 @@ function checkNumbers(numbers) {
 function generatePhoneNumber(numbers) {
   let result = checkNumbers(numbers);
 
-  if (typeof(result) === 'não é possível gerar um número de telefone com esses valores') {
-    return result;
+  if (result.length > 11) {
+    return ('Array com tamanho incorreto.');
   } else {
-    for (let index = 0; index < numbers.length; index += 1) {
-      if (result[index] > 9 || result[index] < 0) {
-        return('não é possível gerar um número de telefone com esses valores');
+    if (typeof(result) === 'não é possível gerar um número de telefone com esses valores') {
+      return result;
+    } else {
+      for (let index = 0; index < numbers.length; index += 1) {
+        if (result[index] > 9 || result[index] < 0) {
+          return('não é possível gerar um número de telefone com esses valores');
+        }
       }
+      return `(${result.slice(0, 2).join('')}) ${result.slice(2, 7).join('')}-${result.slice(7).join('')}`;
     }
-    return `(${result.slice(0, 2).join('')}) ${result.slice(2, 7).join('')}-${result.slice(7).join('')}`;
   }
 }
 
