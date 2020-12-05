@@ -4,8 +4,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } 
-    return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -19,8 +19,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arrayString) {
-  return `${array[arrayString.length - 1]}, ${arrayString[0]}`;
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -69,20 +69,77 @@ function fizzBuzz(numbers) {
     }
   }
   return arrayFizzBuzz;
-}
+};
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(phrase) {
+  let encoded = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+      case 'a':
+        encoded = encoded.concat('1');
+        break;
+      case 'e':
+        encoded = encoded.concat('2');
+        break;
+      case 'i':
+        encoded = encoded.concat('3');
+        break;
+      case 'o':
+        encoded = encoded.concat('4');
+        break;
+      case 'u':
+        encoded = encoded.concat('5');
+        break;
+      default:
+        encoded = encoded.concat(phrase[index]);
+        break;
+    }
+  }
+  return encoded;
+};
+
+function decode(phrase) {
+  let decoded = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+      case '1':
+        decoded = decoded.concat('a');
+        break;
+      case '2':
+        decoded = decoded.concat('e');
+        break;
+      case '3':
+        decoded = decoded.concat('i');
+        break;
+      case '4':
+        decoded = decoded.concat('o');
+        break;
+      case '5':
+        decoded = decoded.concat('u');
+        break;
+      default:
+        decoded = decoded.concat(phrase[index]);
+        break;
+    }
+  }
+  return decoded;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  if (techs == '') {
+    return 'Vazio!';
+  }
+  let techListName = [];
+  techs.sort();
+  for (let index = 0; index < techs.length; index += 1) {
+    let newItem = { tech: techs[index], name };
+    techListName.push(newItem);
+  }
+  return techListName;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
