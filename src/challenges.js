@@ -83,13 +83,13 @@ function fizzBuzz(numbers) {
   let num = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 15 === 0) {
-      num[index] = 'fizzBuzz';
+      num.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
-      num[index] = 'fizz';
+      num.push('fizz');
     } else if (numbers[index] % 5 === 0) {
-      num[index] = 'buzz';
+      num.push('buzz');
     } else {
-      num[index] = 'bug!';
+      num.push('bug!');
     }
   }
   return num;
