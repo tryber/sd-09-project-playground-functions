@@ -76,7 +76,7 @@ function fizzBuzz(valueArray) {
   return resultArray
 }
 
-function translate(value) {
+function parse(value) {
   if (value === 'a') {
     return 1
   } else if (value === 'e') {
@@ -87,7 +87,13 @@ function translate(value) {
     return 4
   } else if (value === 'u') {
     return 5
-  } else if (value === '1') {
+  } else {
+    return value
+  }
+}
+
+function unparse(value) {
+  if (value === '1') {
     return 'a'
   } else if (value === '2') {
     return 'e'
@@ -106,14 +112,14 @@ function translate(value) {
 function encode(value) {
   let valueArr = value.split('')
   for (let i = 0; i < valueArr.length; i += 1) {
-    valueArr[i] = translate(valueArr[i])
+    valueArr[i] = parse(valueArr[i])
   }
   return valueArr.join('')
 }
 function decode(value) {
   let valueArr = value.split('')
   for (let i = 0; i < valueArr.length; i += 1) {
-    valueArr[i] = translate(valueArr[i])
+    valueArr[i] = unparse(valueArr[i])
   }
   return valueArr.join('')
 }
