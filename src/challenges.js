@@ -194,78 +194,49 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function addCharToNumber(index) {
-  let char = '';
-
-  if (index === 0) {
-    char = '(';
-  }
-
-  if (index === 2) {
-    char = ') ';
-  }
-
-  if (index === 7) {
-    char = '-';
-  }
-  return char;
-}
-function verifyCountNumbersArray(num) {
-  let count = 0;
-  let number = -1;
-  let result = false;
-
-  if (num > number) {
-    number = num;
-    if (count > 2) {
-      result = true;
-    }
-    count = 1;
-  } else {
-    count += 1;
-  }
-  return result;
-}
-function countNumbersArray(array) {
-  let newArray = [...array];
-  newArray.sort();
-
-  for (let index = 0; index < newArray.length; index += 1) {
-    verifyCountNumbersArray(newArray[index]);
-  }
-  return false;
-}
-function invalidNumbers(number, arrayNumbers) {
-  let invalid = false;
-  let invalidPhrase = '';
-  let verify = countNumbersArray(arrayNumbers);
-
-  if (arrayNumbers.length !== 11) {
-    invalid = true;
-    invalidPhrase = 'Array com tamanho incorreto.';
-  }
-
-  if ((number < 0 || number > 9) || verify === true) {
-    invalid = true;
-    invalidPhrase = 'não é possível gerar um número de telefone com esses valores';
-  }
-
-  return [invalid, invalidPhrase];
-}
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
 
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    let errors = invalidNumbers(arrayPhone[index], arrayPhone);
-    if (errors[0] === true) {
-      return errors[1];
-    }
-    phone += addCharToNumber(index) + arrayPhone[index];
+  if (arrayPhone.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
 
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    let count = 0;
+
+    for (let indexCount = 0; indexCount < arrayPhone.length; indexCount += 1) {
+      if (arrayPhone[index] === arrayPhone[indexCount]) {
+        count += 1;
+      }
+    }
+
+    if ((arrayPhone[index] < 0) || (arrayPhone[index] > 9) || (count >= 3)) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
+
+    if (index === 0) {
+      phone += '(';
+    }
+    if (index === 2) {
+      phone += ') ';
+    }
+    if (index === 7) {
+      phone += '-';
+    }
+    phone += arrayPhone[index];
+  }
   return phone;
 }
+// console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([0, 1, 6]));
+// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+// console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+
 
 // Desafio 12
 function verifyTriangle(N1, N2, N3) {
@@ -277,14 +248,16 @@ function verifyTriangle(N1, N2, N3) {
   return verify;
 }
 function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
   let verifyA = verifyTriangle(lineA, lineB, lineC);
   let verifyB = verifyTriangle(lineB, lineC, lineA);
   let verifyC = verifyTriangle(lineC, lineA, lineB);
 
   if (verifyA && verifyB && verifyC) {
-    return true;
+    result = true;
   }
-  return false;
+
+  return result;
 }
 // console.log(triangleCheck(10, 14, 8));
 
