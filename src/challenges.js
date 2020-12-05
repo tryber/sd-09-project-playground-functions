@@ -96,7 +96,7 @@ function encode(string) {
   return string;
 }
 
-function decode() {
+function decode(string) {
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] === '1') {
       string = string.replace(/1/g, "a");
