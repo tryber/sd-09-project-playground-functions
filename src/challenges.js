@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 *okk*
 function compareTrue(valor1, valor2){
   if ((valor1 === true) && (valor2 === true)) {
     return true;
@@ -6,23 +6,23 @@ function compareTrue(valor1, valor2){
     return false;
 }
 
-// Desafio 2
+// Desafio 2 *okk*
 function calcArea(base, height) {
   let area = (base * height)/2
   return area;
 }
 
-// Desafio 3
+// Desafio 3 -facil -
 function splitSentence() {
   // seu código aqui
 }
 
-// Desafio 4
+// Desafio 4 *okk*
 function concatName(arrayString) {
   return arrayString[arrayString.lenght-1] + ", " + arrayString[0];
 }
 
-// Desafio 5
+// Desafio 5 *okk*
 function footballPoints(wins, ties) {
   let vict = wins *3;
   let draw = ties *1;
@@ -31,17 +31,34 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6
-function highestCount(arrayNumeros) {
-  arrayNumeros.sort((a, b) => b-a);
+// Desafio 6 *ok*
+let contNumber = 0;
+entrada: [9, 1, 2, 3, 9, 5, 7];
+
+function highestCount(arrayEntrada) {
+  
+  arrayEntrada.sort((a, b) => b-a);
+
+  for ( let i = 0 ; i < arrayEntrada.length ; i += 1) {
+    if (arrayEntrada[i] === arrayEntrada[0]) {
+      contNumber = contNumber + 1;
+    }else{ 
+      contNumber = contNumber;
+  }
+}
+return contNumber
+}
 
 
-// Desafio 7
+
+  
+
+// Desafio 7 *n comecei*
 function catAndMouse() {
   // seu código aqui
 }
 
-// Desafio 8
+// Desafio 8 *ok*
     let arrayResult = [];
 
     function fizzBuzz(arrayNumeros) {
@@ -63,11 +80,9 @@ function catAndMouse() {
       }
       console.log(arrayResult);
     }
-    /// 
+    
 
-
-
-// Desafio 9
+// Desafio 9 *okk*
 
 function encode(fr4s3) {
 
@@ -94,22 +109,22 @@ function decode(stringN) {
 
 
 
-// Desafio 10
+// Desafio 10  *n comecei*
 function techList() {
   // seu código aqui
 }
 
-// Desafio 11
+// Desafio 11 *n comecei*
 function generatePhoneNumber() {
   // seu código aqui
 }
 
-// Desafio 12
+// Desafio 12 *n comecei*
 function triangleCheck() {
   // seu código aqui
 }
 
-// Desafio 13
+// Desafio 13 *n comecei*
 function hydrate() {
   // seu código aqui
 }
