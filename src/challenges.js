@@ -246,90 +246,91 @@ function includeChar(number, index) {
 }
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
-  let error = '';
+  let phrase = '';
 
   if (arrayPhone.length === 0) {
     error = errorNumberAndCount('', arrayPhone);
     if (error !== '') {
+      phrase = error;
+    }
+  }
+  
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    error = errorNumberAndCount(arrayPhone[index], arrayPhone);
+    if (error !== '') {
       return error;
     }
 
-    for (let index = 0; index < arrayPhone.length; index += 1) {
-      error = errorNumberAndCount(arrayPhone[index], arrayPhone);
-      if (error !== '') {
-        return error;
-      }
-
-      phone += includeChar(arrayPhone[index], index);
-    }
-    return phone;
+    phone += includeChar(arrayPhone[index], index);
   }
-  // console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
-  // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-  // console.log(generatePhoneNumber([0, 1, 6]));
-  // console.log(generatePhoneNumber([]));
-  // console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
-  // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-  // console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
-  // console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
-  // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+  return phone;
+}
+// console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([0, 1, 6]));
+// console.log(generatePhoneNumber([]));
+// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+// console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 
-  // Desafio 12
-  function verifyTriangle(N1, N2, N3) {
-    let verify = false;
+// Desafio 12
+function verifyTriangle(N1, N2, N3) {
+  let verify = false;
 
-    if ((N1 < Math.abs(N2 + N3)) && (N1 > Math.abs(N2 - N3))) {
-      verify = true;
-    }
-    return verify;
+  if ((N1 < Math.abs(N2 + N3)) && (N1 > Math.abs(N2 - N3))) {
+    verify = true;
   }
-  function triangleCheck(lineA, lineB, lineC) {
-    let result = false;
-    let verifyA = verifyTriangle(lineA, lineB, lineC);
-    let verifyB = verifyTriangle(lineB, lineC, lineA);
-    let verifyC = verifyTriangle(lineC, lineA, lineB);
+  return verify;
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  let verifyA = verifyTriangle(lineA, lineB, lineC);
+  let verifyB = verifyTriangle(lineB, lineC, lineA);
+  let verifyC = verifyTriangle(lineC, lineA, lineB);
 
-    if (verifyA && verifyB && verifyC) {
-      result = true;
-    }
-
-    return result;
+  if (verifyA && verifyB && verifyC) {
+    result = true;
   }
-  // console.log(triangleCheck(10, 14, 8));
 
-  // Desafio 13
-  function hydrate(drinks) {
-    let sum = 0;
+  return result;
+}
+// console.log(triangleCheck(10, 14, 8));
 
-    drinks = (drinks.match(/\d/g));
-    for (let index = 0; index < drinks.length; index += 1) {
-      const newLocal = drinks[index];
-      sum += parseInt(newLocal, 10);
-    }
+// Desafio 13
+function hydrate(drinks) {
+  let sum = 0;
 
-    if (sum === 1) {
-      return `${sum} copo de água`;
-    }
-
-    return `${sum} copos de água`;
+  drinks = (drinks.match(/\d/g));
+  for (let index = 0; index < drinks.length; index += 1) {
+    const newLocal = drinks[index];
+    sum += parseInt(newLocal, 10);
   }
-  // console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
 
-
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    generatePhoneNumber,
-    techList,
-    highestCount,
-    hydrate,
-    splitSentence,
-    triangleCheck,
+  if (sum === 1) {
+    return `${sum} copo de água`;
   }
+
+  return `${sum} copos de água`;
+}
+// console.log(hydrate('1 cachaça, 5 cervejas e 3 copo de vinho'));
+
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
