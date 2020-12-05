@@ -75,37 +75,37 @@ let cat2Distance = Math.abs(cat2 - mouse);
        // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
+function fizzBuzz(ArFizzBuzz) {
 
-function fizzBuzz() {
-let arrayFB = [2, 15, 7, 9, 45];
   //ArFizzBuzz.push();
-//criar um array
+//criar um arraylet let let ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];zzBuzz = [2, 15, 7, 9, 45];
 //dar um push
 //retornar o array
-  for (let index = 0; index < arrayFB.length; index += 1) {
+  for (let index = 0; index < ArFizzBuzz.length; index += 1) {
 
-    if (arrayFB[index] % 3 === 0 && arrayFB[index] % 5 === 0) {
+    if (ArFizzBuzz[index] % 3 === 0 && ArFizzBuzz[index] % 5 === 0) {
        // console.log('fizzBuzz');
-        arrayFB[index] = 'fizzBuzz';
-        console.log(arrayFB[index]);
+        ArFizzBuzz[index] = 'fizzBuzz';
+        console.log(ArFizzBuzz[index]);
 
-    } else if (arrayFB[index] % 3 === 0) {
+    } else if (ArFizzBuzz[index] % 3 === 0) {
         //console.log('fizz');
-        arrayFB[index] = 'fizz';
-        console.log(arrayFB[index]);
+        ArFizzBuzz[index] = 'fizz';
+        console.log(ArFizzBuzz[index]);
         
-    } else if (arrayFB[index] % 5 === 0) {
-        //console.log('buzz');
-        arrayFB[index] = 'buzz';
-        console.log(arrayFB[index]);
+    } else if (ArFizzBuzz[index] % 5 === 0) {
+        //console.log('buzz');arrayFB
+        ArFizzBuzz[index] = 'buzz';
+        console.log(ArFizzBuzz[index]);
 
     } else {
         //console.log('bug!');
-        arrayFB[index] = 'bug!';
-        console.log(arrayFB[index]);
+        ArFizzBuzz[index] = 'bug!';
+        console.log(ArFizzBuzz[index]);
     }
-  } return arrayFB;
-}      fizzBuzz();
+  } return ArFizzBuzz;
+}      fizzBuzz([2, 15, 7, 9, 45]);
+
 
 // Desafio 9
 let letra = [];
