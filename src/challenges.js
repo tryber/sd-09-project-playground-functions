@@ -112,7 +112,10 @@ function techList(tech, name) {
   let result;
 
   for (let index in tech.sort()) {
-    technology.push({tech: tech[index], name: name});
+    technology.push({
+      tech: tech[index],
+      name: name 
+    });
   }
   if (technology.length === 0) {
     result = 'Vazio!';
@@ -126,64 +129,72 @@ function techList(tech, name) {
 function checkNumbers(numbers) {
   let timesAppeared = 0;
   let repeatCount = 0;
+  let result;
   for (let index = 0; index < numbers.length; index += 1) {
-    for(let index2 = 0; index2 < numbers.length; index2 += 1) {
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (numbers[index] === numbers[index2]) {
         timesAppeared += 1;
       }
     }
-    if (repeatCount < timesAppeared){
+    if (repeatCount < timesAppeared) {
       repeatCount = timesAppeared;
     }
     timesAppeared = 0;
   }
   if (repeatCount > 2) {
-    return('não é possível gerar um número de telefone com esses valores');
+    result = ('não é possível gerar um número de telefone com esses valores');
   } else {
-    return numbers;
+    result = numbers;
   }
+  return result;
 }
 
 function generatePhoneNumber(numbers) {
-  let result = checkNumbers(numbers);
+  let checkedNumbers = checkNumbers(numbers);
+  let result;
 
-  if (result === 'não é possível gerar um número de telefone com esses valores') {
-    return result;
-  } else if (result.length != 11) {
-      return ('Array com tamanho incorreto.');
-    } else {
+  if (checkedNumbers === 'não é possível gerar um número de telefone com esses valores') {
+    result = checkedNumbers;
+  } else if (checkedNumbers.length !== 11) {
+    result = ('Array com tamanho incorreto.');
+  } else {
     for (let index = 0; index < numbers.length; index += 1) {
-      if (result[index] > 9 || result[index] < 0) {
-        return('não é possível gerar um número de telefone com esses valores');
+      if (checkedNumbers[index] > 9 || checkedNumbers[index] < 0) {
+        result = ('não é possível gerar um número de telefone com esses valores');
       }
     }
-    return `(${result.slice(0, 2).join('')}) ${result.slice(2, 7).join('')}-${result.slice(7).join('')}`;
+    result = `(${checkedNumbers.slice(0, 2).join('')}) ${checkedNumbers.slice(2, 7).join('')}-${checkedNumbers.slice(7).join('')}`;
   }
+  return result;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let result;
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 // Desafio 13
 function hydrate(order) {
   let numbers = order.match(/\d+/g).map(Number);
   let waterCups = 0;
+  let result;
 
   for (let index in numbers) {
     waterCups += numbers[index]
   }
 
   if (waterCups === 1) {
-    return `${waterCups} copo de água`;
+    result = `${waterCups} copo de água`;
   } else {
-    return `${waterCups} copos de água`;
+    result = `${waterCups} copos de água`;
   }
+  return result;
 }
 
 module.exports = {
