@@ -74,6 +74,7 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(string) {
   let codedString = '';
+
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] === 'a') {
       codedString += '1';
@@ -94,6 +95,7 @@ function encode(string) {
 
 function decode(codedString) {
   let decodedString = '';
+
   for (let i = 0; i < codedString.length; i += 1) {
     if (codedString[i] === '1') {
       decodedString += 'a';
@@ -127,58 +129,8 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let phoneNumber = '';
-  let storageArray = [];
-  let repeatCount = 1
-    for(let i = 0; i < array.length; i+=1){
-    if(i == 0){
-      if(phoneNumber.length == 0){
-        phoneNumber+= ['(' + array[i]]
-      }else{
-        phoneNumber+= array[i]
-      }
-    }else if(i > 0 && i < 2){
-      phoneNumber+= array[i]
-    }else if(i == 2){
-      if(phoneNumber.length == 3){
-        phoneNumber+= [') ' + array[i]]
-      }else{
-        phoneNumber+= array[i]
-      }
-    }else if(i >= 3 && i < 7){
-      phoneNumber+= array[i]
-    }else if(i == 7){
-      if(phoneNumber.length == 10){
-        phoneNumber+= ['-' + array[i]]
-      }else{
-        phoneNumber+= array[i]
-      }
-    }else if(i>7){
-      phoneNumber+=array[i]
-    }
-  }
-    for(let i = 0; i <= array.length; i+=1){
-      if(array[i] < 0 || array[i] > 9){
-        phoneNumber = "não é possível gerar um número de telefone com esses valores"
-      }else if(array[i]){
-        if(storageArray.includes(array[i])){
-          repeatCount+=1
-        }else{
-          storageArray+=array[i]
-        }
-      }if(repeatCount >= 3){
-        phoneNumber = "não é possível gerar um número de telefone com esses valores"
-      }
-    }
-    for (let i in array) {
-      if(array.length !== 11){
-        phoneNumber = "Array com tamanho incorreto."
-        }else{
-          phoneNumber = phoneNumber;
-        }
-    }
-  return phoneNumber
+function generatePhoneNumber() {
+  // seu código aqui
 }
 
 // Desafio 12
