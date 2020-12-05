@@ -155,6 +155,7 @@ function decode(encoded) {
 // Desafio 10
 function techList(array, name) {
   let techArray = [];
+  array = array.sort();
   if (array[0] !== undefined) {
     for (let index in array) {
       if (Object.prototype.hasOwnProperty.call(index, array)) {
