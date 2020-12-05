@@ -36,18 +36,18 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let greaterNumber = 0;
-    let counter = 0;
-    for (let i in array) {
-      if(greaterNumber < array[i]) {
-        greaterNumber = array[i];
+  let counter = 0;
+  for (let i in array) {
+    if(greaterNumber < array[i]) {
+      greaterNumber = array[i];
+    }
+  }
+  for (let i in array) {
+      if (array[i] === greaterNumber) {
+          counter += 1;
       }
-    }
-    for (let i in array) {
-        if (array[i] === greaterNumber) {
-            counter += 1;
-        }
-    }
-    return counter;
+  }
+  return counter;
 }
 
 // Desafio 7
@@ -56,13 +56,48 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let i in array) {
+    if (array[i] % 15 == 0) {
+      return 'fizzBuzz';
+    }
+    else if (array[i] % 3 == 0) {
+      return 'fizz';
+    }
+    else if (array[i] % 5 == 0) {
+      return 'buzz';
+    }
+    else {
+      return 'bug!';
+    }
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for (let j = 0; j < string.length; j += 1) {
+    if (string[j] === 'a') {
+      let a = string.replace(/a/g, "1");
+      string = a;
+    }
+    else if (string[j] === 'e') {
+      let e = string.replace(/e/g, "2");
+      string = e;
+    }
+    else if (string[j] === 'i') {
+      let i = string.replace(/i/g, "3");
+      string = i;
+    }
+    else if (string[j] === 'o') {
+      let o = string.replace(/o/g, "4");
+      string = o;
+    }
+    else if (string[j] === 'u') {
+      let u = string.replace(/u/g, "5");
+      string = u;
+    }
+  }
+  return string;
 }
 function decode() {
   // seu código aqui
