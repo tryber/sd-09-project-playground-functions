@@ -96,8 +96,24 @@ function encode(str) {
   return newString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let newString = "";
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] === "1") {
+      newString += "a";
+    } else if (str[index] === "2") {
+      newString += "e";
+    } else if (str[index] === "3") {
+      newString += "i";
+    } else if (str[index] === "4") {
+      newString += "o";
+    } else if (str[index] === "5") {
+      newString += "u";
+    } else {
+      newString += str[index];
+    }
+  }
+  return newString;
 }
 
 // Desafio 10
