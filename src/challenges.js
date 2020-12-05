@@ -9,14 +9,14 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, altura) {
-  let area = (base*altura) / 2;
+  let area = (base * altura) / 2;
   return area
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
 }
+
 
 // Desafio 4
 function concatName() {
@@ -25,27 +25,35 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let total = (wins*3) + ties;
+  let total = (wins * 3) + ties;
   return total
 }
 
 // Desafio 6
 function highestCount(array) {
-  let highNumber =  Math.max.apply(null, array);
+  let highNumber = Math.max.apply(null, array);
   let repeatNumber = 0;
-  for (let cont=0; cont<array.length; cont+=1) {
+  for (let cont = 0; cont < array.length; cont += 1) {
       if (array[cont] === highNumber) {
-         repeatNumber+= 1;
+        repeatNumber+= 1;
       }
   }
   return repeatNumber
 }
-console.log(highestCount(5,6,7,8,9,9));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let winner = "";
+  let distancia1 = mouse - cat1;
+  let distancia2 = mouse - cat2;
+    if (distancia1 < distancia2) {
+      winner = "cat1";
+    }else if (distancia2 < distancia1) {
+      winner = "cat2";
+    }else{
+      winner = "os gatos trombam e o rato foge";
 }
-
+  return winner
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
