@@ -4,8 +4,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-} 
-  return false;
+} return false;
 }
 
 // Desafio 2
@@ -20,9 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let firstItem = arrayString[0];
-  let lastItem = arrayString[arrayString.length - 1];
-  return `${lastItem}, ${firstItem}`;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
@@ -32,33 +29,45 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumbers) {
-    let arrayOrdenad = arrayNumbers.sort(compareNumbers);
-    let numberMax = arrayOrdenad.length - 1;
-    let cont = 0;
-    for (let index = 0; index < arrayOrdenad.length; index += 1) {
-      if (arrayOrdenad[index] === arrayOrdenad[numberMax]) {
-        cont += 1;
-      }
+function highestCount(array) {
+  let maxRepeat = 0;
+  let bigger = Math.max.apply(null, array);
+  for (let number of array) {
+    if (number === bigger) {
+      maxRepeat += 1;
     }
-    return cont;
+  }
+  return maxRepeat;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse);
-  let distCat2 = Math.abs(cat2 - mouse);
-  if (distCat1 === distCat2) {
-    return 'os gatos trombam e o rato foge';
-  } else if (distCat1 < distCat2) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+
+  if (distanceCat1 < distanceCat2) {
     return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
   }
-  return 'cat2';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
