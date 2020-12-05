@@ -140,9 +140,19 @@ let numberString = 'h3 th2r2!';
   console.log(decode(numberString));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  technologies.sort();
+  newList = [];
+  for (let index = 0; index < technologies.length; index += 1) {
+    let objectTech = {tech: 'NomeTech', name: name};
+    objectTech.tech = technologies[index];
+    newList.push(objectTech);
+  }
+  return newList;
 }
+let arrayTechnologies = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+let studentName = 'Daniela'
+console.log(techList(arrayTechnologies, studentName));
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
@@ -153,8 +163,10 @@ function generatePhoneNumber(phoneNumber) {
   }
   if (phoneNumber.length === 11) {
     return toString.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+  } else if (phoneNumber < 0 || phoneNumber > 9){
+    return 'Array com tamanho incorreto.';
   } else {
-  return 'não é possível gerar um número de telefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 }
   let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
