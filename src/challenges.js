@@ -70,9 +70,9 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let firstCat = '';
-  let cat1Distance = mouse - cat1;
-  let cat2Distance = mouse - cat2;
-
+  let cat1Distance = mouse - cat1 * -1;
+  let cat2Distance = (mouse - cat2) * -1;
+  
   if (cat1Distance < cat2Distance || cat1Distance === mouse) {
     firstCat = 'cat1';
   } else if (cat2Distance < cat1Distance || cat2Distance === mouse) {
