@@ -125,8 +125,16 @@ function decode(value) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArr, name) {
+  let arrayL = []
+  for (let i = 0; i < techArr.length; i += 1) {
+    const obj = {
+      tech: techArr[i],
+      name: name
+    }
+    arrayL.push(obj)
+  }
+  return arrayL
 }
 
 // Desafio 11
