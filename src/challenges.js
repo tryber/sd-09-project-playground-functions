@@ -194,11 +194,19 @@ function techList(tech, name) {
 
 
 // Desafio 11
+function differentSize(sizePhone) {
+  if (sizePhone !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  return '';
+}
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
+  let error = '';
 
-  if (arrayPhone.length !== 11) {
-    return 'Array com tamanho incorreto.';
+  error = differentSize(arrayPhone.length);
+  if (error !== '') {
+    return error;
   }
 
   for (let index = 0; index < arrayPhone.length; index += 1) {
