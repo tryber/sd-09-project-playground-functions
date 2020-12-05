@@ -27,7 +27,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(array) {
-  return `${array[array.length - 1]},  ${array[0]}`
+  return `${array[array.length - 1]}, ${array[0]}`
 }
 
 // Desafio 5
@@ -57,11 +57,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2Mouse = cat2 - mouse;
   if (distanciaCat1Mouse < distanciaCat2Mouse) {
     return 'cat1'
-  } else if (distanciaCat1Mouse == distanciaCat2Mouse) {
-    return 'Os 2 gatos estão equidistantes do rato'
-  } else {
+  } else if (distanciaCat1Mouse > distanciaCat2Mouse) {
     return 'cat2'
-  }
+  } return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
