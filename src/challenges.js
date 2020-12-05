@@ -89,7 +89,6 @@ function parse(value) {
     return 5
   }
   return value
-
 }
 
 function unparse(value) {
@@ -105,8 +104,9 @@ function unparse(value) {
     return 'u'
   }
   return value
-
 }
+
+
 
 // Desafio 9
 function encode(value) {
