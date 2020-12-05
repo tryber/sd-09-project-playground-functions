@@ -79,8 +79,8 @@ function fizzBuzz(arrayNumbers) {
   }
   return result;
 }
-// let arrayNumbers = [2, 15, 7, 9, 45]
-// console.log(fizzBuzz(arrayNumbers))
+let arrayNumbers = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
 function encode() {
@@ -96,9 +96,20 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  let toString = '';
+  toString = toString.replace(/[^\d]/g, "");
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    toString += phoneNumber[index];
+  }
+  if (phoneNumber.length === 11) {
+    return toString.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+  } else {
+  return 'não é possível gerar um número de telefone com esses valores';
+  }
 }
+  let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+  console.log(generatePhoneNumber(number));
 
 // Desafio 12
 function triangleCheck() {
