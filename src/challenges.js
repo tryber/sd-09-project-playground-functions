@@ -40,8 +40,8 @@ function findHighest(arrayOfNumbers) {
     if (arrayOfNumbers[index] > highestNumber) {
       highestNumber = arrayOfNumbers[index];
     }
-    return highestNumber;
   }
+  return highestNumber;
 }
 function highestCount(arrayOfNumbers) {
   let counter = 0;
@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     winner = 'os gatos trombam e o rato foge';
   }
- return winner;
+  return winner;
 }
 
 // Desafio 8
@@ -144,52 +144,27 @@ function techList(techList, name) {
 
   if (techList.length === 0) {
     return 'Vazio!';
-  } else {
-    for (let i = 0; i < techArray.length; i += 1) {
-      sortedList[i] = {
-          tech: techArray[i],
-          name: name,
-      };
-    }
   }
-  return sortedList;
+
+  for (let i = 0; i < techArray.length; i += 1) {
+    sortedList[i] = {
+      tech: techArray[i],
+      name
+    };
+  }
+return sortedList;
 }
+
 // let techList0 = [];
 // let name = 'Luciano';
 // console.log(techList(techList0, name));
 
 // Desafio 11
-
-// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o número de telefone final
-// olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel Picanço e também busquei entender como 
-//funcionavam as funções splice e join para conseguir juntar tudo ao final.
-// (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
-function generatePhoneNumber(numbers) {
-  // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
-  // para transformar o parametro em integers.
-  let teste = parseInt(numbers);
-  let phoneNumber = [];
-
-  if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  } else if (checkNumbers(teste) === false || checkIfValid(teste) === false) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    for (let i = 0; i < numbers.length; i += 1) {
-      phoneNumber[i] = (numbers[i]);
-    }
-    phoneNumber.splice(0, 0, '(');
-    phoneNumber.splice(3, 0, ')');
-    phoneNumber.splice(4, 0, ' ');
-    phoneNumber.splice(10, 0, '-');    
-  }
-  return phoneNumber.join('');
-}
-function checkNumbers (numbers) {
+function checkNumbers(numbers) {
   let checkResult = true;
 
   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] < 0 || numbers[i] > 9 ) {
+    if (numbers[i] < 0 || numbers[i] > 9) {
       checkResult = false;
     }
   }
@@ -203,7 +178,7 @@ function checkIfValid(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
     let numberToCheck = numbers[i];
     for (let j = 1; j < numbers.length; j += 1) {
-      if (numberToCheck == numbers[j]) {
+      if (numberToCheck === numbers[j]) {
         counter += 1;
       }
       if (counter >= 3 || numbers[i] > 9 || numbers[i] < 0) {
@@ -214,6 +189,32 @@ function checkIfValid(numbers) {
   }
   return isValid;
 }
+// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o número de telefone
+// final olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel Picanço e também busquei entender
+// como funcionavam as funções splice e join para conseguir juntar tudo ao final.
+// (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
+function generatePhoneNumber(numbers) {
+  // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  // para transformar o parametro em integers.
+  let teste = parseInt(numbers, 10);
+  let phoneNumber = [];
+
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (checkNumbers(teste) === false || checkIfValid(teste) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    for (let i = 0; i < numbers.length; i += 1) {
+      phoneNumber[i] = (numbers[i]);
+    }
+    phoneNumber.splice(0, 0, '(');
+    phoneNumber.splice(3, 0, ')');
+    phoneNumber.splice(4, 0, ' ');
+    phoneNumber.splice(10, 0, '-');
+  }
+  return phoneNumber.join('');
+}
+
 let teste = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0];
 console.log(generatePhoneNumber(teste));
 // Desafio 12
