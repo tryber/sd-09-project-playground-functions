@@ -143,8 +143,22 @@ function techList(techArr, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(value) {
+  if (value.length > 11 || value.length < 11) {
+    return "Array com tamanho incorreto."
+  }
+  for (let i = 0; i < value.length; i += 1) {
+    let repeatTimes = 0
+    for (let j = 0; j < value.length; j += 1) {
+      if (value[i] === value[j]) {
+        repeatTimes += 1
+      }
+    }
+    if (value[i] < 0 || value[i] > 9 || repeatTimes >= 3) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+  return `(${value[0]}${value[1]}) ${value.slice(2).join('')}`
 }
 
 // Desafio 12
