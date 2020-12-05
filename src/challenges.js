@@ -33,9 +33,9 @@ function splitSentence(phrase) {
 function concatName(names) {
   let last = names.pop();
   let first = names.shift();
-  return last + ', ' + first;
+  return `${last}, ${first}`;
 }
- console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -64,10 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = mouse - cat1;
   cat2 = mouse - cat2;
   if (cat1 < 0) {
-    cat1 = cat1 * (-1);
+    cat1 *= (-1);
   }
   if (cat2 < 0) {
-    cat2 = cat2 * (-1);
+    cat2 *= (-1);
   }
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
