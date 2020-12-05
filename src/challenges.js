@@ -56,11 +56,11 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = mouse - cat1;
   cat2 = mouse - cat2;
 
-  if (distance1 < distance2) {
+  if (cat1 < cat2) {
     result = 'cat1';
   }
   
-  if (distance2 < distance1) {
+  if (cat2 < cat1) {
     result = 'cat2';
   }
 
