@@ -46,7 +46,7 @@ function highestCount(recive) {
   for (let index2 = 0; index2 < recive.length; index2 += 1) {
     if (recive[index2] === highest) {
       count += 1;
-    } 
+    }
   }
   return count
 }
@@ -54,16 +54,20 @@ function highestCount(recive) {
 // console.log(count)
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  /* 
-      distanceCat1 < distanceCat2:
-    'cat1';
-       distanceCat2 < distanceCat1:
-    'cat2';
-       distanceCat1 === distanceCat2:
-    return 'os gatos trombam e o rato foge'; */
+  const distanceCat1 = Math.abs(cat1 - mouse)
+  const distanceCat2 = Math.abs(cat2 - mouse)
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1'
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2'
+  } else if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  return 'fail'
 }
+// console.log(catAndMouse(20, 20, 20))
 
 // Desafio 8
 let array = []
