@@ -107,8 +107,6 @@ function divideBy(number) {
   return word;
 }
 function fizzBuzz(arrayNumbers) {
-  let word = '';
-
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     arrayNumbers[index] = divideBy(arrayNumbers[index]);
 
@@ -122,7 +120,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return arrayNumbers;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
 // Desafio 9
