@@ -47,7 +47,6 @@ function highestCount(setOfNumbers) {
   }
   return numberCounter
 }
-// console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -88,23 +87,59 @@ function fizzBuzz(bet) {
 function encode(insertString) {
   // seu código aqui
   let encodeResult = '';
-  
+
   for (let index = 0; index < insertString.length; index += 1) {
-    if (insertString[index === 'a']) {
-      
+    if (insertString[index] === 'a') {
+      encodeResult = encodeResult + '1';
+    } else if (insertString[index] === 'e') {
+      encodeResult = encodeResult + '2';
+    } else if (insertString[index] === 'i') {
+      encodeResult = encodeResult + '3';
+    } else if (insertString[index] === 'o') {
+      encodeResult = encodeResult + '4';
+    } else if (insertString[index] === 'u') {
+      encodeResult = encodeResult + '5';
     } else {
-      
+      encodeResult = encodeResult + insertString[index];
     }
-    
   }
+  return encodeResult;
 }
-function decode() {
+function decode(encodeResult) {
   // seu código aqui
+  let decodeResult = '';
+
+  for (let index = 0; index < encodeResult.length; index += 1) {
+    if (encodeResult[index] === '1') {
+      decodeResult = decodeResult + 'a';
+    } else if (encodeResult[index] === '2') {
+      decodeResult = decodeResult + 'e';
+    } else if (encodeResult[index] === '3') {
+      decodeResult = decodeResult + 'i';
+    } else if (encodeResult[index] === '4') {
+      decodeResult = decodeResult + 'o';
+    } else if (encodeResult[index] === '5') {
+      decodeResult = decodeResult + 'u';
+    } else {
+      decodeResult = decodeResult + encodeResult[index];
+    }
+  }
+  return decodeResult;
 }
 
 // Desafio 10
-function techList() {
+function techList(technologies, name1) {
   // seu código aqui
+  let resultsTechlist = [];
+  let orderTechnologies = technologies.sort();
+  if (technologies.length > 0) {
+    for (let index = 0; index < orderTechnologies.length; index += 1) {
+      resultsTechlist.push({tech: orderTechnologies[index], name: name1});
+    }
+  } else {
+    resultsTechlist = 'Vazio!';
+  }
+  return resultsTechlist;
 }
 
 // Desafio 11
