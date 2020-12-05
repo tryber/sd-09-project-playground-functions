@@ -131,11 +131,11 @@ function techList(techArr, name) {
     return "Vazio!"
   }
   for (let i = 0; i < techArr.length; i += 1) {
-    const obj = {
-      tech: techArr[i],
+    const objj = {
+      techh: techArr[i],
       name: name
     }
-    arrayL.push(obj)
+    arrayL.push(objj)
   }
 
   return arrayL
