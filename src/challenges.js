@@ -74,12 +74,12 @@ function catAndMouse(mouse, cat1, cat2) {
     mouCat1 = mouse - cat1;
   } else {
     mouCat1 = cat1 - mouse;
-  };
+  }
   if (mouse > cat2) {
     mouCat2 = mouse - cat2;
   } else {
     mouCat2 = cat2 - mouse;
-  };
+  }
   if (mouCat2 > mouCat1) {
     console.log('cat1');
     result = 'cat1';
@@ -98,13 +98,13 @@ function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (array[index] % 5 === 0) {
-      result.push("buzz");
+      result.push('buzz');
     } else {
-      result.push("bug!")
+      result.push('bug!')
     }
   }
   console.log(result);
@@ -115,17 +115,17 @@ function encode(string) {
   let encoded = '';
   for (let index in string) {
     if (string[index].toLowerCase() === 'a') {
-      encoded = encoded += 1;
+      encoded += 1;
     } else if (string[index].toLowerCase() === 'e') {
-      encoded = encoded += 2;
+      encoded += 2;
     } else if (string[index].toLowerCase() === 'i') {
-      encoded = encoded += 3;
+      encoded += 3;
     } else if (string[index].toLowerCase() === 'o') {
-      encoded = encoded += 4;
+      encoded += 4;
     } else if (string[index].toLowerCase() === 'u') {
-      encoded = encoded += 5;
+      encoded += 5;
     } else {
-      encoded = encoded += string[index];
+      encoded += string[index];
     }
   }
   console.log(encoded);
@@ -135,17 +135,17 @@ function decode(encoded) {
   let decoded = '';
   for (let index in encoded) {
     if (encoded[index] === '1') {
-      decoded = decoded += 'a';
+      decoded += 'a';
     } else if (encoded[index] === '2') {
-      decoded = decoded += 'e';
+      decoded += 'e';
     } else if (encoded[index] === '3') {
-      decoded = decoded += 'i';
+      decoded += 'i';
     } else if (encoded[index] === '4') {
-      decoded = decoded += 'o';
+      decoded += 'o';
     } else if (encoded[index] === '5') {
-      decoded = decoded += 'u';
+      decoded += 'u';
     } else {
-      decoded = decoded += encoded[index];
+      decoded += encoded[index];
     }
   }
   console.log(decoded);
@@ -154,21 +154,21 @@ function decode(encoded) {
 
 // Desafio 10
 function techList(array, name) {
-  let tech = [];
+  let techArray = [];
   if (array[0] !== undefined) {
     for (let index in array) {
       let object = {
-        'tech' : array[index],
-        'name' : name
+        'Tech': array[index],
+        'Name': name
       };
-      tech.push(object);
-    };
+      techArray.push(object);
+    }
   } else {
-    tech = 'Vazio!';
+    techArray = 'Vazio!';
   }
-  console.log(tech);
-  return tech;
-};
+  console.log(techArray);
+  return techArray;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -213,6 +213,6 @@ catAndMouse(7, 8, 8)
 fizzBuzz([2, 15, 7, 9, 45, 25])
 encode('Boa noite meu consagrado')
 decode('B41 n43t2 m25 c4ns1gr1d4')
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Willian')
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Willian')
 
 // Aooba, não é que tem um segredo no Lession Learned?!
