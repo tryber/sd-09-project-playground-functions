@@ -216,28 +216,27 @@ function mostRepeated(array, number) {
   }
   return count;
 }
+function errorNumberAndCount(number, array) {
+  let error = differentSize(array.length);
+  let phrase = '';
+
+  if (error !== '') {
+    phrase = error;
+  }
+  if (differentNumber(number) || (mostRepeated(array, number) >= 3)) {
+    phrase = 'não é possível gerar um número de telefone com esses valores';
+  }
+  return phrase;
+}
 function generatePhoneNumber(arrayPhone) {
   let phone = '';
   let error = '';
 
-  error = differentSize(arrayPhone.length);
-  if (error !== '') {
-    return error;
-  }
-
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    let count = 0;
-
-    for (let indexCount = 0; indexCount < arrayPhone.length; indexCount += 1) {
-      if (arrayPhone[index] === arrayPhone[indexCount]) {
-        count += 1;
-      }
+    error = errorNumberAndCount(arrayPhone[index],arrayPhone);
+    if (error !== '') {
+      return error;
     }
-
-    if (differentNumber(arrayPhone[index] !== '') || (mostRepeated(arrayPhone, arrayPhone[index]) >= 3)) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
 
     if (index === 0) {
       phone += '(';
