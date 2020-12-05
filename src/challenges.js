@@ -164,7 +164,7 @@ function generatePhoneNumber(numbers) {
         result = ('não é possível gerar um número de telefone com esses valores');
         break;
       } else {
-          result = `(${checkedNumbers.slice(0, 2).join('')}) ${checkedNumbers.slice(2, 7).join('')}-${checkedNumbers.slice(7).join('')}`;
+        result = `(${checkedNumbers.slice(0, 2).join('')}) ${checkedNumbers.slice(2, 7).join('')}-${checkedNumbers.slice(7).join('')}`;
       }
     }
   }
