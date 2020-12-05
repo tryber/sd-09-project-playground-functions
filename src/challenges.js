@@ -131,6 +131,7 @@ function decode(palavra2) {
 // Desafio 10
 function techList(arrayTech, name) {
   let object = {};
+  arrayTech.sort();
   for (let index = 0; index < arrayTech.length; index += 1) {
     if (arrayTech !== '') {
       arrayTech[index] = {
@@ -140,36 +141,12 @@ function techList(arrayTech, name) {
     } else {
       return 'Vazio';
     }
-    object = {arrayTech,};
+    object = {arrayTech};
   }
-  object.sort();
-  return name, object; 
+  return name, object, arrayTech; 
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneArray) {
-  let validPhone = true;
-  let retornar;
-  let contadorDeNum = 0;
-  let phoneDD = `(${phoneArray[0],phoneArray[1]})`;
-  let phoneNumbers;
-  if (phoneArray.length === 11){
-    for (let index = 0; index < phoneArray; index += 1){
-      contadorDeNum = 0;
-      for (let index2 = 0; index2 < phoneArray; index2 += 1){
-        if (phoneArray[index] === phoneArray[index2]){
-          contadorDeNum += 1;
-          if (contadorDeNum >= 3 || phoneArray[index] > 9 || phoneArray < 0){
-            retornar = 'não é possível gerar um número de telefone com esses valores';
-          }
-        }
-      }
-    }
-    retornar = phoneNumbers +
-  } else {
-    retornar = 'Array com tamanho incorreto.';
-  }
-}
 
 // Desafio 12
 function triangleCheck() {
