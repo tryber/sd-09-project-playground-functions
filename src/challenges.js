@@ -157,9 +157,9 @@ function techList(techList, name) {
 
 // Desafio 11
 
-// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como 
-// montar o número de telefone final olhando os PR de outros colegas. Cito aqui a solução 
-// encontrada pela Raquel Picanço 
+// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o número de telefone final
+// olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel Picanço e também busquei entender como 
+//funcionavam as funções splice e join para conseguir juntar tudo ao final.
 // (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
 function generatePhoneNumber(numbers) {
   let phoneNumber = [];
@@ -174,6 +174,7 @@ function generatePhoneNumber(numbers) {
     }
     phoneNumber.splice(0, 0, '(');
     phoneNumber.splice(3, 0, ')');
+    phoneNumber.splice(4, 0, ' ');
     phoneNumber.splice(9, 0, '-');    
   }
   return phoneNumber.join('');
