@@ -93,7 +93,7 @@ function encode(str) {
         break;
     }
   }
-  console.log(encodeIndex.join(''))
+  return encodeIndex.join('');
 }
 
 function decode(str) {
@@ -117,7 +117,7 @@ function decode(str) {
         break;
     }
   }
-  console.log(decodeIndex.join(''))
+  return decodeIndex.join('');
 }
 
 // Desafio 10
