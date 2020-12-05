@@ -38,7 +38,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maiorNumero = 0;
   let numeroDeVezes = 0;
   let var1 = 0;
   for (let index = 0; index < array.length; index += 1) {
@@ -54,7 +53,6 @@ function highestCount(array) {
     }
     if (contador > var1) {
       var1 = contador;
-      maiorNumero = array[index];
       numeroDeVezes = repeticao;
     }
   }
@@ -67,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
+  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -80,11 +78,11 @@ function fizzBuzz(array) {
     if ((array[index] % 3) === 0 && (array[index] % 5) === 0) {
       array2.push('fizzBuzz');
     } else if ((array[index] % 5) === 0) {
-        array2.push('buzz');
+      array2.push('buzz');
     } else if ((array[index] % 3) === 0) {
-        array2.push('fizz');
+      array2.push('fizz');
     } else {
-        array2.push('bug!');
+      array2.push('bug!');
     }
   }
   return array2;
@@ -141,15 +139,14 @@ function techList(tech, name) {
     for (let index = 0; index < tech.length; index += 1) {
       let objeto = {
       };
-      objeto['tech'] = tech[index];
-      objeto['name'] = name;
+      objeto["tech"] = tech[index];
+      objeto["name"] = name;
       arrayOrdemCrescente.push(objeto);
 
     }
     return arrayOrdemCrescente;
   } 
   return ('Vazio!');
-  
 }
 
 // Desafio 11
