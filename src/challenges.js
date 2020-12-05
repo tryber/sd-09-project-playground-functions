@@ -116,7 +116,7 @@ function decode(codedString) {
 
 // Desafio 10
 function techList(techs, name) {
-  if (techs === '') {
+  if (techs == '') {
     return 'Vazio!';
   }
   let techListName = [];
@@ -127,7 +127,6 @@ function techList(techs, name) {
   }
   return techListName;
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
