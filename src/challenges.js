@@ -144,14 +144,14 @@ function techList(techList, name) {
 
   if (techList === '0') {
     return 'Vazio!';
-  }
-  
-  for (let i = 0; i < techArray.length; i += 1) {
-    sortedList[i] = {
-        tech: techArray[i],
-        name: name,
-    };
-  }
+  }else {
+    for (let i = 0; i < techArray.length; i += 1) {
+      sortedList[i] = {
+          tech: techArray[i],
+          name: name,
+      };
+    }
+  } 
   return sortedList;
 }
 
@@ -208,10 +208,6 @@ function checkIfValid(numbers) {
   }
   return isValid;
 }
-
-
-let numbers =[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(numbers));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
