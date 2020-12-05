@@ -59,46 +59,43 @@ function catAndMouse() {
 function fizzBuzz(array) {
   for (let i in array) {
     if (array[i] % 15 == 0) {
-      return 'fizzBuzz';
+      array[i] = 'fizzBuzz';
     }
     else if (array[i] % 3 == 0) {
-      return 'fizz';
+      array[i] = 'fizz';
     }
     else if (array[i] % 5 == 0) {
-      return 'buzz';
+      array[i] = 'buzz';
     }
     else {
-      return 'bug!';
+      array[i] = 'bug!';
     }
   }
+  return array;
 }
 
 // Desafio 9
 function encode(string) {
   for (let j = 0; j < string.length; j += 1) {
     if (string[j] === 'a') {
-      let a = string.replace(/a/g, "1");
-      string = a;
+      string = string.replace(/a/g, "1");
     }
     else if (string[j] === 'e') {
-      let e = string.replace(/e/g, "2");
-      string = e;
+      string = string.replace(/e/g, "2");
     }
     else if (string[j] === 'i') {
-      let i = string.replace(/i/g, "3");
-      string = i;
+      string = string.replace(/i/g, "3");
     }
     else if (string[j] === 'o') {
-      let o = string.replace(/o/g, "4");
-      string = o;
+      string = string.replace(/o/g, "4");
     }
     else if (string[j] === 'u') {
-      let u = string.replace(/u/g, "5");
-      string = u;
+      string = string.replace(/u/g, "5");
     }
   }
   return string;
 }
+
 function decode() {
   // seu código aqui
 }
