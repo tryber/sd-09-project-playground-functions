@@ -76,10 +76,10 @@ function fizzBuzz(arrayFizz) {
   if (arrayFizz % 3 === 0) {
     return 'fizz'
   } else if (arrayFizz % 5 === 0) {
-    return "buzz";
+    return 'buzz'
   } else if (arrayFizz % 3 === 0 && arrayFizz % 5 === 0) {
     return 'fizzBuzz'
-  } else (arrayFizz % 3 !== 0 && arrayFizz % 5 !== 0); {
+  } else if (arrayFizz % 3 !== 0 && arrayFizz % 5 !== 0) {
     return "bug!"
   }
 }
