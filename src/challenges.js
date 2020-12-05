@@ -35,19 +35,19 @@ function highestCount(array) {
   let repeatNumber = 0;
   for (let cont = 0; cont < array.length; cont += 1) {
     if (array[cont] === highNumber) {
-        repeatNumber += 1;
-      }
+      repeatNumber += 1;
+    }
   }
   return repeatNumber
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let winner = '';
-  let distancia1 = mouse - cat1;
-  let distancia2 = mouse - cat2;
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
   if (distancia1 < distancia2) {
-      winner = 'cat2';
-    } else if (distancia2 < distancia1) {
+    winner = 'cat2';
+  } else if (distancia2 < distancia1) {
       winner = 'cat1';
     } else {
       winner = 'os gatos trombam e o rato foge';
