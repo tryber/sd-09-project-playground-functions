@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
 }
 // console.log(footballPoints(5, 3));
 
-// Desafio 6
+// Desafio 6 test
 function highestCount(numbers) {
   let higher = 0;
   let times = 0;
