@@ -19,12 +19,12 @@ function splitSentence(value) {
 // Desafio 4
 function concatName(value) {
   const newArray = []
-  newArray.push(value[value.length - 1])
-  const firstValue = `${value[0]},`
+  const lastValue = `${value[value.length - 1]},`
+  newArray.push(lastValue)
+  const firstValue = `${value[0]}`
   newArray.push(firstValue)
   return newArray.join(' ')
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1)
