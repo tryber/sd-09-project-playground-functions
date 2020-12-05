@@ -118,7 +118,6 @@ function encode(currentString) {
 
   return stringWithNumbers;
 }
-console.log(encode('hi there!'));
 
 function decode(stringWithNumbers) {
   let stringWithoutNumbers = '';
@@ -131,7 +130,6 @@ function decode(stringWithNumbers) {
 
   return stringWithoutNumbers;
 }
-console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
