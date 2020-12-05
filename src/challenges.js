@@ -13,7 +13,6 @@ function splitSentence(string) {
   palavras = string.split(" ");
   return palavras;
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
