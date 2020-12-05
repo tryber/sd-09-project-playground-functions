@@ -158,8 +158,8 @@ function techList(array, name) {
   if (array[0] !== undefined) {
     for (let index in array) {
       let object = {
-        'Tech': array[index],
-        'Name': name
+        Tech: array[index],
+        Name: name
       };
       techArray.push(object);
     }
