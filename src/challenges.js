@@ -131,6 +131,7 @@ function decode(palavra2) {
 // Desafio 10
 function techList(arrayTech, name) {
   let object = {};
+  arrayTech.sort();
   for (let index = 0; index < arrayTech.length; index += 1) {
     if (arrayTech !== '') {
       arrayTech[index] = {
@@ -140,10 +141,9 @@ function techList(arrayTech, name) {
     } else {
       return 'Vazio';
     }
-    object = {arrayTech,};
+    object = {arrayTech};
   }
-  object.sort();
-  return name, object; 
+  return name, object, arrayTech; 
 }
 
 // Desafio 11
@@ -175,3 +175,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
