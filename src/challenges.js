@@ -142,18 +142,21 @@ function techList(techList, name) {
   let techArray = techList.sort();
   let sortedList = [];
 
-  if (techList === '0') {
+  if (techList.length === 0) {
     return 'Vazio!';
-  }else {
+  } else {
     for (let i = 0; i < techArray.length; i += 1) {
       sortedList[i] = {
           tech: techArray[i],
           name: name,
       };
     }
-  } 
+  }
   return sortedList;
 }
+// let techList0 = [];
+// let name = 'Luciano';
+// console.log(techList(techList0, name));
 
 // Desafio 11
 
@@ -175,7 +178,7 @@ function generatePhoneNumber(numbers) {
     phoneNumber.splice(0, 0, '(');
     phoneNumber.splice(3, 0, ')');
     phoneNumber.splice(4, 0, ' ');
-    phoneNumber.splice(9, 0, '-');    
+    phoneNumber.splice(10, 0, '-');    
   }
   return phoneNumber.join('');
 }
@@ -208,7 +211,8 @@ function checkIfValid(numbers) {
   }
   return isValid;
 }
-
+let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1'];
+console.log(generatePhoneNumber(numbers));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sum1 = lineA + lineB;
