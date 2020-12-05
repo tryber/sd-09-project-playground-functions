@@ -76,19 +76,17 @@ function fizzBuzz(arrayFizz) {
   if (arrayFizz % 3 === 0) {
     return 'fizz'
   } else if (arrayFizz % 5 === 0) {
-    return 'buzz';
+    return 'buzz'
   } else if (arrayFizz % 3 === 0 && arrayFizz % 5 === 0) {
     return 'fizzBuzz'
-  } else if (arrayFizz % 3 !== 0 && arrayFizz % 5 !== 0); {
+  } else if (arrayFizz % 3 !== 0 && arrayFizz % 5 !== 0) {
     return 'bug!'
   }
 }
 //console.log(fizzBuzz([2, 15, 7, 9, 45])
 
-
-
 // Desafio 9
-  () => {
+function encode() {
     // seu código aqui
   }
 function decode() {
