@@ -46,9 +46,11 @@ function highestCount(numbers) {
     if (biggestNumber < numbers[index]) {
       biggestNumber = numbers[index];
     }
+  }
+  for (let index in numbers) {
     if (biggestNumber === numbers[index]) {
-      repeatCount += 1;
-    }
+        repeatCount += 1;
+      }
   }
   return repeatCount;
 }
