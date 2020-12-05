@@ -142,12 +142,11 @@ function techList(tech, name) {
       objeto.tech = tech[index];
       objeto.name = name;
       arrayOrdemCrescente.push(objeto);
-
     }
     return arrayOrdemCrescente;
-  };
+  }
   return ('Vazio!');
-};
+}
 
 // Desafio 11
 function generatePhoneNumber() {
