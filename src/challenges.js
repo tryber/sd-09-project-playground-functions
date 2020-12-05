@@ -130,8 +130,12 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let info = {};
+  info['tech'] = array.sort();
+  for (let i = 0; i < array.length; i += 1) {
+    return 'tech: "' + info.tech[i] + '",\nname: "' + name + '"\n';
+  }
 }
 
 // Desafio 11
