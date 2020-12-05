@@ -158,31 +158,29 @@ decode("h3 th2r2!");
 // Desafio 10
 function techList(arrayTechs, name) {
   // seu código aqui
+  arrayTechsOrd = []
+  arrayObjects = []
 
   if (arrayTechs.length === 0) {
     return "Vazio!";
-  } else {
-    arrayFinal = [];
-    arrayFinal2 = [];
+  } 
 
-    for (contador = 0; contador < arrayTechs.length; contador += 1) {
-      arrayFinal.push(
-        (obj = {
-          tech: arrayTechs[contador],
-          name: name,
-        })
-      );
-    }
-
-    for (index = 1; index <= arrayFinal.length; index += 1) {
-      arrayFinal2.push(arrayFinal[arrayFinal.length - index]);
-    }
-
-    console.log(arrayFinal2);
-    return arrayFinal2;
+  for (let contador = 0; contador < arrayTechs.length; contador += 1){
+    arrayTechsOrd.push(arrayTechs[contador])
   }
+    arrayTechsOrd.sort()
+  
+  for (let index = 0; index < arrayTechsOrd.length; index += 1)
+      arrayObjects.push(obj = {
+        tech: arrayTechsOrd[index],
+        name: name
+      }); return arrayObjects
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Matheus");
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
