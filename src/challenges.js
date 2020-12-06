@@ -33,7 +33,7 @@ function handlePushing(context) {
 function handleSplitSentence(context) {
   let isCharSpace = (context.currentValue === ' ');
   let isLastChar = (context.currentIndex === context.lastIndex);
-  let caseToPush = ( isCharSpace || isLastChar );
+  let caseToPush = (isCharSpace || isLastChar);
   if (caseToPush) {
     context.isLastChar = isLastChar;
     context = handlePushing(context);
