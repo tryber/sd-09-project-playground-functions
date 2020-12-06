@@ -74,7 +74,7 @@ function fizzBuzz(param) {
     } else if (multiploDe5 === 0 && multiploDe5 !== multiploDe3) {
       result.push('buzz');
     } else if (multiploDe3 === 0 && multiploDe5 === 0) {
-      result.push('fizzbuzz');
+      result.push('fizzBuzz');
     } else {
       result.push('bug!');
     }
