@@ -64,7 +64,6 @@ catAndMouse(0, 2, 3)
 // Desafio 8
 function fizzBuzz(array) {
   let arrayAnswer = [];
-  console.log(array);
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
