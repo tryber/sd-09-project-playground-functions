@@ -58,7 +58,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(inputArray) {
-  // Code here
+  const firstName = inputArray[0];
+  const lastName = inputArray[inputArray.length - 1];
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
