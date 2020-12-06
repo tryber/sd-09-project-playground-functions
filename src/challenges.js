@@ -19,12 +19,9 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(param1) {
   // seu código aqui
-  space = [' ']
-  for (let index = 0; index < param1.length; index += 1)
-  param1[index] = space.push(param1[index])
-  return space
+  return param1.split(' ')
 }
-console.log(splitSentence('Vamo qbrar td'))
+console.log(splitSentence('go trybe'))
 
 // Desafio 4
 function concatName() {
