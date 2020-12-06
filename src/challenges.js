@@ -38,7 +38,7 @@ function highestCount(array) {
   let biggestNumber = 0;
   let numberOfRepeat = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if(array[index] > biggestNumber) {
+    if (array[index] > biggestNumber) {
       biggestNumber = array[index]
     }
   }
@@ -55,17 +55,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let hunte = '';
   let cat1Distance = 0;
   let cat2Distance = 0;
-  if(mouse > cat1){
+  if (mouse > cat1) {
     cat1Distance = mouse - cat1;
   } else {
     cat1Distance = cat1 - mouse;
   }
-  if(mouse > cat2){
+  if (mouse > cat2) {
     cat2Distance = mouse - cat2;
   } else {
     cat2Distance = cat2 - mouse;
   }
-  if(cat1Distance > cat2Distance) {
+  if (cat1Distance > cat2Distance) {
     hunte = 'cat2';
   } else if (cat2Distance > cat1Distance) {
     hunte = 'cat1';
@@ -100,15 +100,15 @@ function encode(array) {
   }
   let encoding = [];
   for (let index = 0; index < divArray.length; index += 1) {
-    if(divArray[index] === 'a') {
+    if (divArray[index] === 'a') {
       divArray[index] = 1;
-    } else if(divArray[index] === 'e') {
+    } else if (divArray[index] === 'e') {
       divArray[index] = 2;
-    } else if(divArray[index] === 'i') {
+    } else if (divArray[index] === 'i') {
       divArray[index] = 3;
-    } else if(divArray[index] === 'o') {
+    } else if (divArray[index] === 'o') {
       divArray[index] = 4;
-    } else if(divArray[index] === 'u') {
+    } else if (divArray[index] === 'u') {
       divArray[index] = 5;
     }
   }
@@ -124,15 +124,15 @@ function decode(array) {
   }
   let decoding = [];
   for (let index = 0; index < divArray.length; index += 1) {
-    if(divArray[index] === '1') {
+    if (divArray[index] === '1') {
       divArray[index] = 'a';
-    } else if(divArray[index] === '2') {
+    } else if (divArray[index] === '2') {
       divArray[index] = 'e';
-    } else if(divArray[index] === '3') {
+    } else if (divArray[index] === '3') {
       divArray[index] = 'i';
-    } else if(divArray[index] === '4') {
+    } else if (divArray[index] === '4') {
       divArray[index] = 'o';
-    } else if(divArray[index] === '5') {
+    } else if (divArray[index] === '5') {
       divArray[index] = 'u';
     }
   }
@@ -152,16 +152,15 @@ function techList(array, nome) {
   if (array.length < 1) {
     list = 'Vazio!'
   } else {
-      for (let index = 0; index < arrayOrd.length; index += 1){
+    for (let index = 0; index < arrayOrd.length; index += 1){
       list.push({
-          tech: arrayOrd[index],
-          name: nome
-          })
-      }
-    }  
+        tech: arrayOrd[index],
+        name: nome
+      });
+    };
+  };
   return list;
 }
-console.log(techList([]))
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
@@ -173,8 +172,8 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     tel = 'Array com tamanho incorreto.';
   } else {
-    for (let index = 0; index < numbers.length; index += 1) {
-      if (numbers[index] < 0 || numbers[index] > 9 ) {
+    for (let key = 0; key < numbers.length; key += 1) {
+      if (numbers[key] < 0 || numbers[key] > 9) {
         invalid += 1;
       } else {
         for (let index = 0; index < numbers.length; index += 1) {
@@ -182,7 +181,7 @@ function generatePhoneNumber(numbers) {
           let repeat = 0;
           for (let index2 = 0; index2 < numbers.length; index2 += 1) {
             if (numbers[index2] === count) {
-              repeat += 1 
+              repeat += 1;
             }
             if (repeat > 2) {
               invalid += 1
@@ -192,10 +191,10 @@ function generatePhoneNumber(numbers) {
       }
     }
     if (invalid > 0) {
-      tel = "não é possível gerar um número de telefone com esses valores";
+      tel = 'não é possível gerar um número de telefone com esses valores';
     } else {
       for (let index = 0; index < numbers.length; index += 1) {
-        if(index === 0 || index ===1) {
+        if (index === 0 || index ===1) {
           ddd += `${numbers[index]}`
         } else if (index > 1 && index < 7) {
           part1 += `${numbers[index]}`
@@ -206,9 +205,7 @@ function generatePhoneNumber(numbers) {
       tel = `(${ddd}) ${part1}-${part2}`
     }
   }
-  
-  // seu código aqui
-  return tel
+  return tel;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
@@ -220,20 +217,18 @@ function triangleCheck(lineA, lineB, lineC) {
   let condition3 = false;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     condition1 = true;
-  } 
+  };
   if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     condition2 = true;
-  } 
+  };
   if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     condition3 = true;
-  }
+  };
   if (condition1 === true && condition2 === true && condition3 === true) {
     conditionFinal = true;
   }
-  // seu código aqui
   return conditionFinal;
 }
-
 
 // Desafio 13
 function hydrate(bebidas) {
@@ -241,8 +236,8 @@ function hydrate(bebidas) {
   let aux = 0;
   let sugestion;
   for (let index = 0; index < bebidas.length; index += 1) {
-    if (isNaN(bebidas[index]) == false) {
-      if(bebidas[index] == ' ') {
+    if (isNaN(bebidas[index]) === false) {
+      if(bebidas[index] === ' ') {
           sum += 0
       } else {
       aux = parseInt(bebidas[index])
@@ -250,10 +245,10 @@ function hydrate(bebidas) {
       }
     }
   }
-  if(sum === 1) {
-    sugestion = sum + ' copo de água'
+  if (sum === 1) {
+    sugestion = `${sum} copo de água`;
   } else {
-    sugestion = sum + ' copos de água'
+    sugestion = `${sum} copos de água`;
   }
   return sugestion;
 }
