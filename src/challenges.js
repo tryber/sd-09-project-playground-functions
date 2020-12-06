@@ -42,21 +42,22 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(5, 2))
 
 // Desafio 6
-function highestCount() {
-  let contaMaiorNumero = 0;
-  // encontrar o maior valor
-  let arrayDoEx6 = [9, 1, 2, 3, 9, 5, 7];
-  let maiorNumero = arrayDoEx6[0];
-  for (let index = 0; index < arrayDoEx6.length; index += 1) {
-    if (arrayDoEx6[index] > maiorNumero) {
-      maiorNumero = arrayDoEx6[index];
-    } else if (arrayDoEx6[index] === maiorNumero) {
-      contaMaiorNumero += 1;
-    }
+function highestCount(arrayEntrada) {
+
+  let contNumber = 0;
+  
+  arrayEntrada.sort((a, b) => b-a);
+
+  for ( let i = 0 ; i < arrayEntrada.length ; i += 1) {
+    if (arrayEntrada[i] === arrayEntrada[0]) {
+      contNumber = contNumber + 1;
+    }else{ 
+      contNumber = contNumber;
   }
-  return contaMaiorNumero;
-  }
-console.log(highestCount())
+}
+return contNumber
+}
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
