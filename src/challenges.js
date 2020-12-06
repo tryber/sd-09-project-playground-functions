@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNum) {
   let maiorNum = 0,
-  contadorDeRep = 0;
+      contadorDeRep = 0;
   for (let index = 0; index < arrayNum.length; index += 1) {
     if (arrayNum[index] > maiorNum) {
       maiorNum = arrayNum[index];
@@ -64,11 +64,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizz) {
   let arrayBuzz = [];
   for (let index in arrayFizz) {
-    if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 != 0) {
+    if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 !== 0) {
       arrayBuzz[index] = 'fizz';
-    } else if (arrayFizz[index] % 3 !== 0 && arrayFizz[index] % 5 == 0) {
+    } else if (arrayFizz[index] % 3 !== 0 && arrayFizz[index] % 5 === 0) {
       arrayBuzz[index] = 'buzz';
-    } else if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 == 0) {
+    } else if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 === 0) {
       arrayBuzz[index] = 'fizzBuzz';
     } else {
       arrayBuzz[index] = 'bug!';
@@ -130,9 +130,9 @@ function decode(palavra2) {
 }
 
 // Desafio 10
-function techList(arrayTech, name) { 
+function techList(arrayTech, name) {
   let object = [];
-  arrayTech.sort();
+      arrayTech.sort();
   if (arrayTech.length < 1) {
     object = 'Vazio!';
   } else {
@@ -177,9 +177,9 @@ function generatePhoneNumber(arrayNum) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let boolC,
-      boolB,
-      boolA,
-      retornaTrueOrFalse;
+    boolB,
+    boolA,
+    retornaTrueOrFalse;
   if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     boolA = true;
   }
