@@ -68,8 +68,8 @@ function fizzBuzz(arrayNumbers) {
     }
     arrayResp.push('bug!');
     }
-    
-} return arrayResp;
+   return arrayResp;
+} 
 // Desafio 9
 function encode(param) {
  let newString = [];
