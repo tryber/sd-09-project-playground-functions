@@ -119,18 +119,17 @@ function decode(stringToDecode) {
 
 // Desafio 10
 function techList(techArray, name) {
+  if (techArray == false) {
+    return 'Vazio!'
+  }
   techArray = techArray.sort()
   let arrayOfObjects = [];
   for (let index = 0; index < techArray.length; index += 1) {
     let object = {
-      tech: techArray[index],
-      name: name,
+      tech: techArray[index], name,
     }
     arrayOfObjects.push(object)
-  } 
-  if (arrayOfObjects == false) {
-    return 'Vazio!'
-  } 
+  }
   return arrayOfObjects
 }
 
