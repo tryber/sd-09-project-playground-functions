@@ -250,7 +250,6 @@ function generatePhoneNumber(arrayPhone) {
   error = errorNumberAndCount('', arrayPhone);
   if ((arrayPhone.length === 0) || (error !== '')) {
     phrase = error;
-    break;
   }
 
   for (let index = 0; index < arrayPhone.length; index += 1) {
