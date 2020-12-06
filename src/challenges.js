@@ -134,7 +134,7 @@ function techList(technologies, name1) {
   let orderTechnologies = technologies.sort();
   if (technologies.length > 0) {
     for (let index = 0; index < orderTechnologies.length; index += 1) {
-      resultsTechlist.push({tech: orderTechnologies[index], name: name1});
+      resultsTechlist.push({ tech: orderTechnologies[index], name: name1 });
     }
   } else {
     resultsTechlist = 'Vazio!';
@@ -148,8 +148,25 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let triangleExists = false;
+  let sideA1 = lineA < (lineB + lineC);
+  let sideA2 = lineA > (Math.abs(lineB - lineC));
+  let sideB1 = lineB < (lineA + lineC);
+  let sideB2 = lineB > (Math.abs(lineA - lineC));
+  let sideC1 = lineC < (lineA + lineB);
+  let sideC2 = lineC > (Math.abs(lineA - lineB));
+  let existenceConditions = [sideA1, sideA2, sideB1, sideB2, sideC1, sideC2];
+
+  for (let index = 0; index < existenceConditions.length; index += 1) {
+    if (existenceConditions[index] === true) {
+      triangleExists = true;
+    } else {
+      break;
+    }
+  }
+return triangleExists;
 }
 
 // Desafio 13
