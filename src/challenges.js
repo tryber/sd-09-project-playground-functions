@@ -82,47 +82,54 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function auxCode(string, event) {
-  let arrayLetters = string.split('');
-  let letters = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = ['1', '2', '3', '4', '5'];
-  
-  if(event == 1){
-    let before = letters;
-    let after = numbers;
-  } else {
-    let before = numbers;
-    let after = letters;
-  }
+function encode(code) {
+  let arrayLetters = code.split('');
 
   for (let index = 0; index < arrayLetters.length; index += 1) {
     switch (arrayLetters[index]) {
-      case before[0]:
-        arrayLetters[index] = after[0];
+      case 'a':
+        arrayLetters[index] = '1';
         break;
-      case before[1]:
-        arrayLetters[index] = after[1];
+      case 'e':
+        arrayLetters[index] = '2';
         break;
-      case before[2]:
-        arrayLetters[index] = after[2];
+      case 'i':
+        arrayLetters[index] = '3';
         break;
-      case before[3]:
-        arrayLetters[index] = after[3];
+      case 'o':
+        arrayLetters[index] = '4';
         break;
-      case before[4]:
-        arrayLetters[index] = after[4];
+      case 'u':
+        arrayLetters[index] = '5'
         break;
     }
   }
   return arrayLetters.join('');
 }
 
-function encode(code) {
-  return auxCode(code, 1);
-}
-
 function decode(code) {
-  return auxCode(code, 2);
+  let arrayLetters = code.split('');
+
+  for (let index = 0; index < arrayLetters.length; index += 1) {
+    switch (arrayLetters[index]) {
+      case '1':
+        arrayLetters[index] = 'a';
+        break;
+      case '2':
+        arrayLetters[index] = 'e';
+        break;
+      case '3':
+        arrayLetters[index] = 'i';
+        break;
+      case '4':
+        arrayLetters[index] = 'o';
+        break;
+      case '5':
+        arrayLetters[index] = 'u'
+        break;
+    }
+  }
+  return arrayLetters.join('');
 }
 
 // Desafio 10
