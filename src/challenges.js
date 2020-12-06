@@ -349,7 +349,7 @@ function hydrate(drinks) {
   }
   if (drinksOfWater === 1) {
     console.log(`${drinksOfWater} copos de água`)
-    return(`${drinksOfWater} copos de água`)
+    return(`${drinksOfWater} copo de água`)
   }
   console.log(`${drinksOfWater} copos de água`)
   return(`${drinksOfWater} copos de água`)
