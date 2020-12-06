@@ -65,7 +65,7 @@ function concatName(inputArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // Code here
+  return (wins * 3) + ties; 
 }
 
 // Desafio 6
