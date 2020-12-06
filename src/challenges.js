@@ -3,9 +3,9 @@
 // Desafio 1
 function compareTrue(comp1, comp2) {
   if (comp1 && comp2 == true) {
-    return (true);
+    return true;
   } else {
-    return (false);
+    return false;
   }
 }
 //compareTrue(1,1);
@@ -19,14 +19,16 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let stringSplited = string.split(" ");
-  return (stringSplited);
+  return stringSplited;
 }
 //splitSentence("go trybe");
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  return arrayString[arrayString.length - 1] +", " + arrayString[0];
 }
+let array =  ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatName(array);
 
 // Desafio 5
 function footballPoints() {
