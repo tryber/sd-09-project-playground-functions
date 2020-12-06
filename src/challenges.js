@@ -100,18 +100,18 @@ function fizzBuzz(numbers) {
   }
   return numbers;
 }
+
 function fizzOrBuzz(num) {
-  let result = 'bug!';
   if (num % 15 === 0) {
-    result = 'fizzBuzz';
+    return 'fizzBuzz';
   }
-  if (num % 3 === 0) {
-    result = 'fizz';
+  else if (num % 3 === 0) {
+    return 'fizz';
   }
-  if (num % 5 === 0) {
-    result = 'buzz';
+  else if (num % 5 === 0) {
+    return 'buzz';
   }
-  return result;
+  return 'bug!';
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
