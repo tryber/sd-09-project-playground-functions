@@ -75,12 +75,38 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 }
-console.log(catAndMouse(8, 5, 3));
+// console.log(catAndMouse(8, 5, 5));
+
+// Auxiliary function
+function divisible(dividend, divisor) {
+  if ((dividend % divisor) === 0) {
+    return true;
+  }
+  return false;
+}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  let divisorOf3;
+  let divisorOf5;
+  for (let index = 0; index < array.length; index += 1) {
+    divisorOf3 = divisible(array[index], 3);
+    divisorOf5 = divisible(array[index], 5);
+    if (divisorOf3 && divisorOf5) {
+      result.push('fizzBuzz');
+    } else if (divisorOf3) {
+      result.push('fizz');
+    } else if (divisorOf5) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
