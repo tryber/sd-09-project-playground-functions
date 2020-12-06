@@ -144,11 +144,12 @@ function techList(param,nome) {
     listaInterna['tech']=paramSorted[i];
     listaInterna['name'] = nome;
     i +=1;
-    lista[i]= listaInterna
+    lista.push(listaInterna)
   }
   return lista;
   } 
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
