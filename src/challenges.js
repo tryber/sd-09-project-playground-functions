@@ -1,10 +1,9 @@
 // Desafio 1
-function compareTrue(value1, value2) {  
-  if ( value1 === true && value2 === true){
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
     return true;
-  } else{
-    return false;
   }
+    return false;
   // seu código aqui
 }
 
@@ -16,7 +15,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(pharases) {
+  let pharaseSlice = pharases.split('');
+  let words = [''];
+  let counter = 0;
+  for (let index = 0; index < pharaseSlice.length; index += 1) {
+        if (pharaseSlice[index] !== ' ') {
+          words[counter] += pharaseSlice[index];
+        } else {
+          counter += 1;
+        }
+  }
+  return words;
   // seu código aqui
 }
 
