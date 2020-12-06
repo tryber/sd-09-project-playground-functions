@@ -82,12 +82,47 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function auxCode(string, event) {
+  let arrayLetters = string.split('');
+  let letters = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = ['1', '2', '3', '4', '5'];
+  
+  if(event == 1){
+    let before = letters;
+    let after = numbers;
+  } else {
+    let before = numbers;
+    let after = letters;
+  }
+
+  for (let index = 0; index < arrayLetters.length; index += 1) {
+    switch (arrayLetters[index]) {
+      case before[0]:
+        arrayLetters[index] = after[0];
+        break;
+      case before[1]:
+        arrayLetters[index] = after[1];
+        break;
+      case before[2]:
+        arrayLetters[index] = after[2];
+        break;
+      case before[3]:
+        arrayLetters[index] = after[3];
+        break;
+      case before[4]:
+        arrayLetters[index] = after[4];
+        break;
+    }
+  }
+  return arrayLetters.join('');
 }
 
-function decode() {
-  // seu código aqui
+function encode(code) {
+  return auxCode(code, 1);
+}
+
+function decode(code) {
+  return auxCode(code, 2);
 }
 
 // Desafio 10
