@@ -152,13 +152,13 @@ function techList(array, nome) {
   if (array.length < 1) {
     list = 'Vazio!'
   } else {
-    for (let index = 0; index < arrayOrd.length; index += 1){
+    for (let index = 0; index < arrayOrd.length; index += 1) {
       list.push({
         tech: arrayOrd[index],
-        name: nome
-      });
-    };
-  };
+        name: nome,
+      })
+    }
+  }
   return list;
 }
 
@@ -194,7 +194,7 @@ function generatePhoneNumber(numbers) {
       tel = 'não é possível gerar um número de telefone com esses valores';
     } else {
       for (let index = 0; index < numbers.length; index += 1) {
-        if (index === 0 || index ===1) {
+        if (index === 0 || index === 1) {
           ddd += `${numbers[index]}`
         } else if (index > 1 && index < 7) {
           part1 += `${numbers[index]}`
@@ -217,13 +217,13 @@ function triangleCheck(lineA, lineB, lineC) {
   let condition3 = false;
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     condition1 = true;
-  };
+  }
   if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     condition2 = true;
-  };
+  }
   if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     condition3 = true;
-  };
+  }
   if (condition1 === true && condition2 === true && condition3 === true) {
     conditionFinal = true;
   }
@@ -237,11 +237,11 @@ function hydrate(bebidas) {
   let sugestion;
   for (let index = 0; index < bebidas.length; index += 1) {
     if (isNaN(bebidas[index]) === false) {
-      if(bebidas[index] === ' ') {
-          sum += 0
+      if (bebidas[index] === ' ') {
+        sum += 0
       } else {
-      aux = parseInt(bebidas[index])
-      sum += aux;
+        aux = parseInt(bebidas[index])
+        sum += aux;
       }
     }
   }
