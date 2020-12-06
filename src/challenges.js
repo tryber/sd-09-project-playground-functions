@@ -82,11 +82,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzOrBuzz(num) {
   if (num % 15 === 0) {
     return 'fizzBuzz';
-  }
-  else if (num % 3 === 0) {
+  } else if (num % 3 === 0) {
     return 'fizz';
-  }
-  else if (num % 5 === 0) {
+  } else if (num % 5 === 0) {
     return 'buzz';
   }
   return 'bug!';
