@@ -153,8 +153,35 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function repeatedNumber(array) {
+  let count = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    let checkNumber = array [index]
+    for (let index = 0; index < array.length; index += 1) {
+      if (checkNumber === array[index]) {
+        count += 1
+      }
+      if (checkNumber >= 3) {
+        return true
+      }
+    }
+  }
+  return false
+}
+
+function generatePhoneNumber(array) {
   // seu código aqui
+  for (let index = 0; index < array.length; index += 1) {
+    if (repeatedNumber(array) || array[index] < 0 || array[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+    if (array.length !== 11) {
+        return 'Array com tamanho incorreto.'
+    }
+    else {
+      return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+    }
+  }
 }
 
 // Desafio 12
