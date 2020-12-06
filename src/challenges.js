@@ -38,21 +38,28 @@ de vezes que o maior deles se repete. Exemplo: caso o parâmetro de highestCount
 valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9
 (maior número do array) se repete.*/
 
-let numbers = [9, 1, 1, 9, 3, 9, 5, 7, 7, 9, 9, 9]
+const numbers = [9, 1, 1, 9, 3, 9, 5, 7, 7, 9, 9, 9, 13, 13, 13, 15];
+
 function highestCount(param) {
-  let maxNumber = 0;
-  let count = 1;
-  for (let index = 0; index < param.length; index+=1) {
-    if (param[index] !== maxNumber && param[index] > maxNumber) {
-      maxNumber = param[index]
-      count = 1
-    } else if (param[index] === maxNumber) {
-      count += 1
+  let current = param[0];
+  let count = 0;
+  let bigNumberRepeat;
+
+  for (let index = 0; index < param.length; index += 1) {
+    if (param[index] === bigNumberRepeat) {
+      current = bigNumberRepeat;
+      count = 1;
+      bigNumberRepeat = 0;
+    }
+    if (param[index] > current) {
+      bigNumberRepeat = param[index];
+    }
+    if (param[index] === current) {
+      count += 1;
     }
   }
   return count;
 }
-highestCount(numbers);
 
 // Desafio 7
 function catAndMouse() {
