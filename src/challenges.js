@@ -132,6 +132,7 @@ function decode(palavra2) {
 // Desafio 10
 function techList(arrayTech, name) { 
   let object = [];
+  arrayTech.sort();
   if (arrayTech.length < 1) {
     object = 'Vazio!';
   } else {
@@ -145,7 +146,7 @@ function techList(arrayTech, name) {
   return object;
 }
 
-console.log(techList([], "Lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(){
