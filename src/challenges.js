@@ -102,8 +102,28 @@ function highestCount(inputArray) {
 }
 
 // Desafio 7
+function getCatDistance(catPosition, mousePosition) {
+  return Math.abs(mousePosition - catPosition);
+}
+
+function getClosestCat(first, second) {
+  let closest = first.name;
+  if (first.distance > second.distance) {
+    closest = second.name;
+  }
+  return closest;
+}
+
 function catAndMouse(mouse, cat1, cat2) {
-  // Code here
+  let outcome = '';
+  cat1 = {name: 'cat1', distance: getCatDistance(cat1, mouse)};
+  cat2 = {name: 'cat2', distance: getCatDistance(cat2, mouse)};
+  if (cat1.distance === cat2.distance) {
+    outcome = 'os gatos trombam e o rato foge';
+  } else {
+    outcome = getClosestCat(cat1, cat2);
+  }
+  return outcome;
 }
 
 // Desafio 8
