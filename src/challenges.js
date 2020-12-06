@@ -68,22 +68,20 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayAnswer.push('fizzbuzz');
-      continue;
-    }
-    if (array[index] % 3 === 0) {
+
+    }else if (array[index] % 3 === 0) {
       arrayAnswer.push('fizz');
-      continue;
-    }
-    if (array[index] % 5 === 0) {
+  
+    }else if (array[index] % 5 === 0) {
       arrayAnswer.push('buzz');
-      continue;
+    
+    }else {
+      arrayAnswer.push('bug');
     }
-    arrayAnswer.push('bug');
+    
   }
   return arrayAnswer;
 }
-let teste = [2, 15, 7, 9, 45];
-fizzBuzz(teste);
 
 // Desafio 9
 function encode() {
