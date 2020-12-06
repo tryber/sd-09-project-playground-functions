@@ -24,7 +24,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayStrings) {
   // seu código aqui
-  return `${arrayStrings[arrayStrings.length -1]}, ${arrayStrings[0]}`;
+  return `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
 }
 
 // Desafio 5
@@ -46,9 +46,9 @@ function highestCount(array) {
   }
   for (let key = 0; key < array.length; key += 1) {
     if (numberMax === array[key]) {
-        count += 1
+          count += 1
+        }
       }
-    }
   return count;
 }
 
@@ -63,8 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
   }
-    return 'os gatos trombam e o rato foge';
-  }
+      return 'os gatos trombam e o rato foge';
+    }
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -100,8 +100,8 @@ function encode(string) {
     if (string[key] === 'a' || string[key] === 'e' || string[key] === 'i' || string[key] === 'o' || string[key] === 'u') {
       newString += vowels[string[key]];
     } else {
-        newString += string[key];
-      }
+          newString += string[key];
+        }
   }
   return newString;
 }
@@ -120,8 +120,8 @@ function decode(string) {
     if (string[key] === '1' || string[key] === '2' || string[key] === '3' || string[key] === '4' || string[key] === '5') {
       newString += vowels[string[key]];
     } else {
-        newString += string[key];
-      }
+          newString += string[key];
+        }
   }
   return newString;
 }
@@ -132,24 +132,24 @@ function techList(array, name) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < array) {
-          let outro = {tech: array[index], name: name};
-          newArray.push(outro)
+              let outro = { tech: array[index], name: name };
+              newArray.push(outro)
     }
   }
   newArray.sort(function (a, b) {
-                if (a.tech > b.tech) {
-                    return 1;
-                  }
-                if (a.tech < b.tech) {
-                    return -1;
-                  }
-                    return 0;
+      if (a.tech > b.tech) {
+            return 1;
+          }
+        if (a.tech < b.tech) {
+            return -1;
+          }
+            return 0;
   })
   if (newArray.length > 0) {
-      return newArray;
-  } else {
-      return 'Vazio!'
-    }
+        return newArray;
+      } else {
+              return 'Vazio!'
+            }
 }
 
 // Desafio 11
@@ -173,16 +173,15 @@ function repeatedNumber(array) {
 
 function generatePhoneNumber(array) {
   // seu código aqui
+  let phoneNumber = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (repeatedNumber(array) || array[index] < 0 || array[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-    else if (array.length !== 11) {
-      return 'Array com tamanho incorreto.'
-    }
-    else if (array.length === 11) {
-      return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
-    }
+    if (repeatedNumber(array) === true || array[index] < 0 || array[index] > 9) {
+          phoneNumber = 'não é possível gerar um número de telefone com esses valores'
+        } else if (array.length !== 11) {
+              phoneNumber =  'Array com tamanho incorreto.'
+            } else if (array.length === 11) {
+                  phoneNumber =  '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+                }
   }
 }
 
@@ -212,10 +211,11 @@ function hydrate(string) {
         sumNumbers += parseInt(numbers[index], 10)
   }
   if (sumNumbers === 1) {
-    return sumNumbers + ' copo de água'
+    sumNumbers + ' copo de água'
   } else {
-    return sumNumbers + ' copos de água'
+    sumNumbers + ' copos de água'
   }
+  return sumNumbers
 }
 
 
