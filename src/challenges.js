@@ -120,7 +120,7 @@ function decode(stringToDecode) {
 // Desafio 10
 function techList(techArray, name) {
   techArray = techArray.sort()
-  arrayOfObjects = [''];
+  let arrayOfObjects = [''];
   for (let index = 0; index < techArray.length; index += 1) {
     let object = {
       tech: techArray[index],
