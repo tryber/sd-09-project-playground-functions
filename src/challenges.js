@@ -26,7 +26,6 @@ function concatName(arrayStrings) {
   // seu código aqui
   return `${arrayStrings[arrayStrings.length -1]}, ${arrayStrings[0]}`;
 }
-console.log(concatName(['layo', 'kaminski', 'carol', 'joão']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -171,9 +170,21 @@ function triangleCheck(lineA, lineB, lineC) {
 };
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
-}
+  let sumNumbers = 0;
+  let numbers = string.match(/\d+/g);
+
+  for (let index = 0; index < numbers.length; index += 1) {
+        sumNumbers += parseInt(numbers[index])
+        
+  }
+  if (sumNumbers === 1) {
+    return sumNumbers + ' copo de água'
+  } else {
+    return sumNumbers + ' copos de água'
+  }
+};
 
 
 module.exports = {
