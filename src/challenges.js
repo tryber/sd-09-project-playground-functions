@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat2';
 }
- console.log(catAndMouse(8, 12, 4))
+// console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
 function fizzOrBuzz(num) {
@@ -136,9 +136,18 @@ function decode(codedText) {
 // console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList() {
+function techList(technology, name) {
   // seu código aqui
+  technology.sort(); // ordena o array passado por parâmetro
+  let arrayTech = [];
+  if (technology.length > 0) {
+    for (index = 0; index < technology.length; index += 1) {
+      arrayTech[index] = {tech: technology[index], name: name};
+    }
+    return arrayTech;
+  } return 'Vazio!';
 }
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"] ,"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
