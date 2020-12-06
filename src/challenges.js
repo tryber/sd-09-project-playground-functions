@@ -95,7 +95,7 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function changeLetter(letterKey, inText) {
   let changedText = [];
-  for (let index in inText) {
+  for (let index = 0; index < inText.length; index += 1) {
     let letter = inText[index];
     if (Object.prototype.hasOwnProperty.call(letterKey, letter) === false) {
       changedText += letter;
