@@ -1,19 +1,24 @@
 // Aluno: Emanoel Cristhian, turma 09.
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(comp1, comp2) {
+  if (comp1 && comp2 == true) {
+    return (true);
+  } else {
+    return (false);
+  }
 }
+//compareTrue(1,1);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
 }
+//calcArea(3,5);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
 }
+//splitSentence("go trybe");
 
 // Desafio 4
 function concatName() {
@@ -44,6 +49,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
