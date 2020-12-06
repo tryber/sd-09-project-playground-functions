@@ -211,9 +211,9 @@ function hydrate(string) {
         sumNumbers += parseInt(numbers[index], 10)
   }
   if (sumNumbers === 1) {
-    return sumNumbers + ' copo de água'
+      return sumNumbers + ' copo de água'
   } else {
-    return sumNumbers + ' copos de água'
+      return sumNumbers + ' copos de água'
   }
 }
 
