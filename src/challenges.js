@@ -94,20 +94,19 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(text) {
-  let wordKey = ['1', '2', '3', '4', '5'];
-  let putCode = ['a', 'e', 'i', 'o', 'u'];
-  let encodedText = '';
-  for (let index = 0; index < text.length; index += 1) {
-    let letterCoded = false;
-    for (let indexCode = 0; indexCode < wordKey.length; indexCode += 1) {
-      if (text[index] === putCode[indexCode]) {
-        encodedText += wordKey[indexCode];
-        letterCoded = true;
-        break;
-      }
-    }
-    if (letterCoded === false) {
+  let encodedText = [];
+  let wordKey = {
+    a: '1', 
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  for (let index in text) {
+    if (wordKey.hasOwnProperty(text[index]) === false) {
       encodedText += text[index];
+    } else {
+      encodedText += wordKey[text[index]];
     }
   }
   return encodedText;
@@ -115,25 +114,24 @@ function encode(text) {
 // console.log(encode('hi there!'));
 
 function decode(codedText) {
-  let key = ['1', '2', '3', '4', '5'];
-  let uncode = ['a', 'e', 'i', 'o', 'u'];
-  let uncodedText = '';
-  for (let index = 0; index < codedText.length; index += 1) {
-    let letterUncoded = false;
-    for (let indexCode = 0; indexCode < key.length; indexCode += 1) {
-      if (codedText[index] === key[indexCode]) {
-        uncodedText += uncode[indexCode];
-        letterUncoded = true;
-        break;
-      }
-    }
-    if (letterUncoded === false) {
-      uncodedText += codedText[index];
+  let decodedText = [];
+  let decodeKey = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let index in codedText) {
+    if (decodeKey.hasOwnProperty(codedText[index]) === false) {
+      decodedText += codedText[index];
+    } else {
+      decodedText += decodeKey[codedText[index]];
     }
   }
-  return uncodedText;
+  return decodedText;
 }
-// console.log(decode('h3 th2r2!'));
+// console.log(decode(encode('hi there!')));
 
 // Desafio 10
 function techList(technology, name) {
@@ -144,7 +142,7 @@ function techList(technology, name) {
     for (let index = 0; index < technology.length; index += 1) {
       arrayTech[index] = {
         tech: technology[index],
-        name
+        name,
       };
     }
     return arrayTech;
