@@ -64,24 +64,21 @@ catAndMouse(0, 2, 3)
 // Desafio 8
 function fizzBuzz(array) {
   let arrayAnswer = [];
+  console.log(array);
 
-  for (let index = 0; index < array.length; index+=1){
-    if(array[index] % 3 === 0 && array[index] % 5 === 0){
-      console.log('fizzbuzz');
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayAnswer.push('fizzbuzz');
-      break;
+      continue;
     }
-    if(array[index] % 3 === 0){
-      console.log('fizz');
+    if (array[index] % 3 === 0) {
       arrayAnswer.push('fizz');
-      break;
+      continue;
     }
-    if(array[index] % 5 === 0){
-      console.log('buzz');
+    if (array[index] % 5 === 0) {
       arrayAnswer.push('buzz');
-      break;
+      continue;
     }
-    console.log('bug');
     arrayAnswer.push('bug');
   }
   return arrayAnswer;
