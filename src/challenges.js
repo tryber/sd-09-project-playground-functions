@@ -88,30 +88,31 @@ function fizzBuzz(array) {
 const letters = ['a', 'e', 'i', 'o', 'u'];
 const numbers = ['1', '2', '3', '4', '5'];
 
-function encrypt(string) {
-  let code = string;
-  for (let i = 0; i < string.length; i += 1) {
-    for (let j = 0; j < 5; j += 1) {
-      code = code.replace(numbers[i], letters[i]);
-    }
-  }
-}
-
 function encode(string) {
-  let code = string;
+  let encrypt = string;
+  let index = 0;
 
-  encrypt(string);
-  return code;
+  while (index < string.length) {
+    for (let j = 0; j < 5; j += 1) {
+      encrypt = encrypt.replace(letters[index], numbers[index]);
+    }
+    index += 1;
+  }
+  return encrypt;
 }
-// console.log(encode('hi there!'));
+console.log(encode('hi there!'));
 
 function decode(string) {
-  let decode = string;
+  let decrypt = string;
 
-  encrypt(string);
-  return decode;
+  for (let i = 0; i < string.length; i += 1) {
+    for (let j = 0; j < 5; j += 1) {
+      decrypt = decrypt.replace(numbers[i], letters[i]);
+    }
+  }
+  return decrypt;
 }
-// console.log(decode('h3 th2r2!'));
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(array, name) {
