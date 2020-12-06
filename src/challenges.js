@@ -8,8 +8,20 @@ function calcArea(base, height) {
   return base * height / 2;
 }
 
+// General loop function
+function loopThroughIn(contextObject, applyFunction) {
+  for (let index in contextObject.input) {
+    if (Object.prototype.hasOwnProperty.call(contextObject.input, index)) {
+      contextObject.currentIndex = index;
+      contextObject.currentValue = contextObject.input[index];
+      contextObject = applyFunction(contextObject);
+    }
+  }
+  return contextObject;
+}
+
 // Desafio 3
-function splitSentence(text) {
+function splitSentence(sentence) {
   // Code here
 }
 
