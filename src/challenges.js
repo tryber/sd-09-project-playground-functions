@@ -46,7 +46,6 @@ function highestCount(array) {
    }
   } return qtidade;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distM1 = Math.abs(cat1 - mouse);
