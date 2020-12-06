@@ -138,8 +138,8 @@ function decode(codedString) {
 
 
 // Desafio 10
-function techList(techList, name) {
-  let techArray = techList.sort();
+function techList(List, name) {
+  let techArray = List.sort();
   let sortedList = [];
 
   if (techList.length === 0) {
@@ -149,10 +149,10 @@ function techList(techList, name) {
   for (let i = 0; i < techArray.length; i += 1) {
     sortedList[i] = {
       tech: techArray[i],
-      name
+      name,
     };
   }
-return sortedList;
+  return sortedList;
 }
 
 // let techList0 = [];
@@ -167,9 +167,9 @@ function checkNumbers(numbers) {
     if (numbers[i] >= 0 && numbers[i] <= 9) {
       checkResult = true;
     } else {
-        checkResult = false;
-        break;
-    }  
+      checkResult = false;
+      break;
+  }
   }
   return checkResult;
 }
@@ -178,13 +178,12 @@ function checkIfValid(numbers) {
   let counter = 1;
   let isValid = true;
 
-  for (let i = 0; i < numbers.length; i += 1) {
-    let numberToCheck = numbers[i];
-    for (let j = 1; j < numbers.length; j += 1) {
-      if (numberToCheck === numbers[j]) {
+  for (let i = 0; i < numbers.length - 1; i += 1) {
+    for (let j = i + 1; j < numbers.length; j += 1) {
+      if (numbers[i] === numbers[j]) {
         counter += 1;
       }
-      if (counter >= 3 || numbers[i] > 9 || numbers[i] < 0) {
+      if (counter > 2) {
         isValid = false;
       }
     }
@@ -192,9 +191,9 @@ function checkIfValid(numbers) {
   }
   return isValid;
 }
-// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o número de telefone
-// final olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel Picanço e também busquei entender
-// como funcionavam as funções splice e join para conseguir juntar tudo ao final.
+// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o número de 
+// telefone final olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel Picanço e também 
+// busquei entender como funcionavam as funções splice e join para conseguir juntar tudo ao final.
 // (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
 function generatePhoneNumber(numbers) {
   // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
@@ -205,7 +204,6 @@ function generatePhoneNumber(numbers) {
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-
   } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
@@ -236,13 +234,12 @@ function triangleCheck(lineA, lineB, lineC) {
   } else if (sum3 < lineA) {
     return false;
   } else {
-  return true;
+    return true;
   }
 }
 
 // Desafio 13
 function hydrate(string) {
-
   // Busquei na internet formas de extrair números em string e encontrei sobre Expressões Regulares(regex)
   // Usei (.match) para armazenar os números encontrados em um array, e então varrer o array somando-os
   // para retornar o numero final de copos de água.
@@ -250,14 +247,14 @@ function hydrate(string) {
   let drinks = string.match(/\d+/g);
   let totalDrinks = 0;
 
-  for(let i = 0; i < drinks.length; i += 1) {
+  for (let i = 0; i < drinks.length; i += 1) {
     totalDrinks += parseInt(drinks[i]);
   }
-  if(totalDrinks === 1) {
+  if (totalDrinks === 1) {
     return `${totalDrinks} copo de água`
   } else {
     return `${totalDrinks} copos de água`
-  }  
+  }
 }
 
 module.exports = {
