@@ -246,6 +246,7 @@ function includeChar(number, index) {
 }
 function generatePhoneNumber(arrayPhone) {
   let phrase = '';
+  let error = '';
 
   error = errorNumberAndCount('', arrayPhone);
   if ((arrayPhone.length === 0) || (error !== '')) {
