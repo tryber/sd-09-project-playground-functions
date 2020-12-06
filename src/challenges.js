@@ -337,9 +337,31 @@ function triangleCheck(lineA, lineb, linec) {
 console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let drinksOfWater = 0;
+  for (let word in drinks) {
+    // console.log(`Quantidade de drinks por enquanto é ${drinksOfWater}`)
+    // console.log(`Verificando a letra/palavra ${drinks[word]}`)
+    // console.log(`O retorno da função é ${verifyIsNumber(drinks[word])}`)
+    if (typeof verifyIsNumber(drinks[word]) === 'number') {
+      drinksOfWater += verifyIsNumber(drinks[word])
+    }
+  }
+  console.log(`${drinksOfWater} copos de água`)
 }
+
+function verifyIsNumber (word) {
+  let numbers = [1,2,3,4,5,6,7,8,9];
+  for (let number in numbers) {
+    // console.log(`Verifando se ${numbers[number]} é igual a ${word}`)
+    if (numbers[number] == word) {
+      // console.log(`${numbers[number]} é igual a ${word}`)
+      return numbers[number]
+    }
+  }
+}
+
+hydrate("3 cachaça, 3 cervejas e 3 copo de vinho")
 
 
 module.exports = {
