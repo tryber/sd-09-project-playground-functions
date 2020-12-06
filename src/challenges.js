@@ -36,10 +36,10 @@ console.log(concatName(arrayDeNomes))
 // Desafio 5
 // concluido
 function footballPoints(wins, ties) {
-pontos = (wins * 3) + ties
-return pontos
+  let pontos = (wins * 3) + ties
+  return pontos
 }
-console.log(footballPoints(5,2))
+console.log(footballPoints(5, 2))
 
 // Desafio 6
 function highestCount() {
@@ -47,14 +47,14 @@ function highestCount() {
   let contaMaiorNumero = 0
   // encontrar o maior valor
   for (let index = 0; index < arrayDoEx6.length; index += 1) {
-      if (arrayDoEx6[index] > maiorNumero){
-          maiorNumero = arrayDoEx6[index];
+    if (arrayDoEx6[index] > maiorNumero) {
+        maiorNumero = arrayDoEx6[index];
       }
   }
   // frequencia do maiorNumero no array
   for (let index = 0; index < arrayDoEx6.length; index += 1) {
-      if (arrayDoEx6[index] == maiorNumero){
-          contaMaiorNumero += 1;
+    if (arrayDoEx6[index] === maiorNumero) {
+        contaMaiorNumero += 1;
       }
   }
   return contaMaiorNumero;
@@ -64,15 +64,14 @@ console.log(highestCount(arrayDoEx6))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = Math.abs (cat1 - mouse) ;
-  let cat2Distance = Math.abs (cat2 - mouse) ;
+  let cat1Distance = Math.abs(cat1 - mouse);
+  let cat2Distance = Math.abs(cat2 - mouse);
   if (cat1Distance > cat2Distance) {
     return 'cat2';
   } else if (cat2Distance > cat1Distance) {
-      return 'cat1';
-  } else {
-      return 'os gatos trombam e o rato foge'
-  }
+    return 'cat1';
+  } 
+    return 'os gatos trombam e o rato foge'
 }
 console.log(catAndMouse(1, 0, 2))
 
@@ -83,11 +82,11 @@ function fizzBuzz(numberArray) {
     if (numberArray[fizzKey] % 3 === 0 && numberArray[fizzKey] % 5 === 0) {
       resultArray.push('fizzBuzz');
     } else if (numberArray[fizzKey] % 3 === 0) {
-        resultArray.push('fizz');
+      resultArray.push('fizz');
     } else if (numberArray[fizzKey] % 5 === 0) {
-        resultArray.push('buzz');
+      resultArray.push('buzz');
     } else {
-        resultArray.push('bug!');
+      resultArray.push('bug!');
     }
   }
   return resultArray
