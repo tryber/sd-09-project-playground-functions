@@ -33,14 +33,15 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNum) {
-  let maiorNum = 0, contadorDeRep = 0; 
+  let maiorNum = 0,
+  contadorDeRep = 0;
   for (let index = 0; index < arrayNum.length; index += 1) {
     if (arrayNum[index] > maiorNum) {
       maiorNum = arrayNum[index];
     }
   }
   for (let index = 0; index < arrayNum.length; index += 1) {
-    if (arrayNum[index] == maiorNum) {
+    if (arrayNum[index] === maiorNum) {
       contadorDeRep += 1;
     }
   }
@@ -54,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (Math.abs(mouse - cat2) > Math.abs(mouse - cat1)) {
     return 'cat1';
-  } else if (Math.abs(mouse - cat2) == Math.abs(mouse - cat1)){
+  } else if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -63,11 +64,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFizz) {
   let arrayBuzz = [];
   for (let index in arrayFizz) {
-    if (arrayFizz[index] % 3 == 0 && arrayFizz[index] % 5 != 0) {
+    if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 != 0) {
       arrayBuzz[index] = 'fizz';
-    } else if (arrayFizz[index] % 3 != 0 && arrayFizz[index] % 5 == 0) {
+    } else if (arrayFizz[index] % 3 !== 0 && arrayFizz[index] % 5 == 0) {
       arrayBuzz[index] = 'buzz';
-    } else if (arrayFizz[index] % 3 == 0 && arrayFizz[index] % 5 == 0) {
+    } else if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 == 0) {
       arrayBuzz[index] = 'fizzBuzz';
     } else {
       arrayBuzz[index] = 'bug!';
@@ -80,9 +81,9 @@ function fizzBuzz(arrayFizz) {
 function encode(palavra) {
   let result = [];
   let frase = '';
-  for(let index in palavra) {
+  for (let index in palavra) {
     result[index] = palavra[index];
-    console.log('1 for: ' + result);
+    console.log(`1 for: ${result}`);
   }
   for (let index in result) {
     if (result[index] === 'a') {
@@ -105,9 +106,9 @@ function encode(palavra) {
 function decode(palavra2) {
   let result2 = [];
   let frase2 = '';
-  for(let index in palavra2) {
+  for (let index in palavra2) {
     result2[index] = palavra2[index];
-    console.log('1 for: ' + result2);
+    console.log(`1 for: ${result2}`);
   }
   for (let index in result2) {
     if (result2[index] === '1') {
@@ -138,7 +139,7 @@ function techList(arrayTech, name) {
         tech: arrayTech[index],
         name: name,
         };
-      }  
+      }
     }
     return name, arrayTech;
   }
@@ -175,4 +176,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
