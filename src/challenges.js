@@ -166,6 +166,7 @@ function checkNumbers(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] < 0 || numbers[i] > 9) {
       checkResult = false;
+      break;
     }
   }
   return checkResult;
@@ -196,12 +197,13 @@ function checkIfValid(numbers) {
 function generatePhoneNumber(numbers) {
   // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
   // para transformar o parametro em integers.
-  let teste = parseInt(numbers, 10);
+
+  let testing = parseInt(numbers, 10);
   let phoneNumber = [];
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (checkNumbers(teste) === false || checkIfValid(teste) === false) {
+  } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (let i = 0; i < numbers.length; i += 1) {
@@ -215,8 +217,9 @@ function generatePhoneNumber(numbers) {
   return phoneNumber.join('');
 }
 
-let teste = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0];
+let teste = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 console.log(generatePhoneNumber(teste));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sum1 = lineA + lineB;
@@ -236,18 +239,23 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
+
+  // Busquei na internet formas de extrair números em string e encontrei sobre Expressões Regulares(regex)
+  // Usei (.match) para armazenar os números encontrados em um array, e então varrer o array somando-os
+  // para retornar o numero final de copos de água.
+
   let drinks = string.match(/\d+/g);
   let totalDrinks = 0;
 
   for(let i = 0; i < drinks.length; i += 1) {
     totalDrinks += parseInt(drinks[i]);
   }
-  return `${totalDrinks} copos de água.`
+  if(totalDrinks === 1) {
+    return `${totalDrinks} copo de água.`
+  } else {
+    return `${totalDrinks} copos de água.`
+  }  
 }
-let stringTest = '1 cachaça, 5 cervejas e 1 copo de vinho';
-console.log(hydrate(stringTest))
-
-//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
