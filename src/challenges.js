@@ -20,8 +20,8 @@ console.log(calcArea(10, 2))
 let array = 'go trybe'
 function splitSentence(string) {
   let divisor = string.split(' ');
-  console.log(divisor);
-  return string;
+  // console.log(divisor);
+  return divisor;
 }
 console.log(splitSentence(array));
 
