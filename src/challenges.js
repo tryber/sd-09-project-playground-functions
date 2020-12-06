@@ -200,7 +200,7 @@ function numbersValidator(numbersArray) {
 
 function stringConstructor(valuesArray) {
   let stringToReturn = '(';
-  for(let index = 0; index < valuesArray.length; index += 1) {
+  for (let index = 0; index < valuesArray.length; index += 1) {
     if (index === 2) {
       stringToReturn += ') ';
     }
@@ -245,11 +245,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let subBC = lineB - lineC;
   let subAB = lineA - lineB;
   let subAC = lineA - lineC;
-  if(checkSum(lineA, sumBC) === false || checkSum(lineB, sumAC) === false || 
-  checkSum(lineC, sumAB)=== false) {
+  if (checkSum(lineA, sumBC) === false || checkSum(lineB, sumAC) === false ||
+  checkSum(lineC, sumAB) === false) {
     return false;
   }
-  if(checkSubtraction(lineA, subBC) === false || checkSubtraction(lineB, subAC) === false || 
+  if(checkSubtraction(lineA, subBC) === false || checkSubtraction(lineB, subAC) === false ||
   checkSubtraction(lineA, subAB) === false) {
     return false;
   }
