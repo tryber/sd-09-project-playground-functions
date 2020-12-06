@@ -200,11 +200,11 @@ function numbersValidator(numbersArray) {
 
 function stringConstructor(valuesArray) {
   let stringToReturn = '(';
-  for (let index = 0; index < valuesArray.length; index += 1) {
-    if(index === 2) {
+  for(let index = 0; index < valuesArray.length; index += 1) {
+    if (index === 2) {
       stringToReturn += ') ';
     }
-    if(index === 7) {
+    if (index === 7) {
       stringToReturn += '-';
     }
     stringToReturn += valuesArray[index];
@@ -213,10 +213,10 @@ function stringConstructor(valuesArray) {
 }
 
 function generatePhoneNumber(numbersArray) {
-  if(numbersValidator(numbersArray) === 1) {
+  if (numbersValidator(numbersArray) === 1) {
     return 'Array com tamanho incorreto.';
   }
-  if(numbersValidator(numbersArray) === 2) {
+  if (numbersValidator(numbersArray) === 2) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   let phoneNumber = stringConstructor(numbersArray);
@@ -245,7 +245,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let subBC = lineB - lineC;
   let subAB = lineA - lineB;
   let subAC = lineA - lineC;
-  if (checkSum(lineA, sumBC) === false || checkSum(lineB, sumAC) === false || 
+  if(checkSum(lineA, sumBC) === false || checkSum(lineB, sumAC) === false || 
   checkSum(lineC, sumAB)=== false) {
     return false;
   }
@@ -257,8 +257,8 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(commandString) {
+  
 }
 
 
