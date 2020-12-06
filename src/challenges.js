@@ -36,14 +36,13 @@ function highestCount(array) {
   let higherNum = 0;
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] >= higherNum) {
-      count = 0;
+    if (higherNum < array[index]){
       higherNum = array[index];
-      for (let indexTwo = 0; indexTwo < array.length; indexTwo += 1) {
-        if (higherNum === array[indexTwo]) {
-          count += 1;
-        }
-      }
+    }
+  }
+  for (let index = 0; index < array.length; index += 1){
+    if (higherNum === array[index]){
+      count += 1;
     }
   }
   return count;
@@ -165,7 +164,7 @@ function generatePhoneNumber(array) {
   }
   return 'Array com tamanho incorreto.';
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineC))) {
