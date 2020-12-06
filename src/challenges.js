@@ -85,29 +85,31 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-let letters = ['a', 'e', 'i', 'o', 'u'];
-let numbers = ['1', '2', '3', '4', '5'];
-function encode(string) {
-  let encrypt = string;
+const letters = ['a', 'e', 'i', 'o', 'u'];
+const numbers = ['1', '2', '3', '4', '5'];
 
+function encrypt(string) {
+  let code = string;
   for (let i = 0; i < string.length; i += 1) {
     for (let j = 0; j < 5; j += 1) {
-      encrypt = encrypt.replace(letters[i], numbers[i]);
+      code = code.replace(numbers[i], letters[i]);
     }
   }
-  return encrypt;
+}
+
+function encode(string) {
+  let code = string;
+
+  encrypt(string);
+  return code;
 }
 // console.log(encode('hi there!'));
 
 function decode(string) {
-  let decrypt = string;
+  let decode = string;
 
-  for (let i = 0; i < string.length; i += 1) {
-    for (let j = 0; j < 5; j += 1) {
-      decrypt = decrypt.replace(numbers[i], letters[i]);
-    }
-  }
-  return decrypt;
+  encrypt(string);
+  return decode;
 }
 // console.log(decode('h3 th2r2!'));
 
@@ -121,16 +123,9 @@ function techList(array, name) {
       arrayList.push({ tech: array[i], name });
     }
     arrayList.sort(function (a, b) {
-      if (a.tech > b.tech) {
-        return 1;
-      }
-      if (a.tech < b.tech) {
-        return -1;
-      }
-      return 0;
-    })
+      return a.tech > b.tech ? -1 : a.tech < b.tech ? 1 : 0;
+    });
   }
-
   return arrayList;
 }
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Marcus'));
