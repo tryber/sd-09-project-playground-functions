@@ -23,7 +23,7 @@ console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
 
 // Desafio 
 function concatName(umArray) {
-  return umArray[0] + ", " + umArray[umArray.length -1]
+  return umArray[umArray.length -1] + ", " + umArray[0] 
 }
 console.log(concatName(["a","b", "c", "d"]))
 
