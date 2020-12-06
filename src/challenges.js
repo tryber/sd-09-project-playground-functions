@@ -79,7 +79,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
-function fizzBuzz(numbers) {
+/*function fizzBuzz(numbers) {
   let num = [];
   for (let index in numbers) {
     if (numbers[index] % 15 === 0) {
@@ -93,6 +93,25 @@ function fizzBuzz(numbers) {
     }
   }
   return num;
+}*/
+function fizzBuzz(numbers) {
+  for (let index in numbers) {
+    numbers[index] = fizzOrBuzz(numbers[index]);
+  }
+  return numbers;
+}
+function fizzOrBuzz(num) {
+  let result = 'bug!';
+  if (num % 15 === 0) {
+    result = 'fizzBuzz';
+  }
+  if (num % 3 === 0) {
+    result = 'fizz';
+  }
+  if (num % 5 === 0) {
+    result = 'buzz';
+  }
+  return result;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
