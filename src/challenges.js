@@ -19,7 +19,9 @@ function splitSentence(phrase) {
 
 // Desafio 4 *okk*
 function concatName(arrayString) {
-  return arrayString[arrayString.lenght-1] + ", " + arrayString[0];
+  let finalStg = arrayString[arrayString.lenght-1] + ", " + arrayString[0];
+
+  return finalStg;
 }
 
 // Desafio 5 *okk*
@@ -57,15 +59,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
  let cat1Mouse = Math.abs(cat1 -mouse);
  let cat2Mouse = Math.abs(cat2 -mouse);
+ let bestCat ='';
 
  if ( cat1Mouse < cat2Mouse ) {
-   return "cat1";
- }
- else if ( cat1Mouse > cat2Mouse ) {
-   return "cat2";
- }
- else {
-   return "os gatos trombam e o rato vai embora";
+  bestCat = 'cat1'; 
+  return bestCat;
+
+ } else if ( cat1Mouse > cat2Mouse ) {
+
+  bestCat = 'cat2'   
+  return bestCat;
+ 
+} else {
+
+  bestCat = 'os gatos trombam e o rato foge'
+  return bestCat;
  }
 
 }
@@ -74,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
     
 
     function fizzBuzz(arrayNumeros) {
-      
+
       let arrayResult = [];
 
       for (let i = 0 ; i < arrayNumeros.length ; i +=1) {
@@ -92,7 +100,7 @@ function catAndMouse(mouse, cat1, cat2) {
           }
         }
           
-      console.log(arrayResult);
+      return arrayResult;
     }
     
 
@@ -100,11 +108,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function encode(fr4s3) {
 
-    fr4s3 = fr4s3.replaceAll ('a', '1');
-    fr4s3 = fr4s3.replaceAll ('e', '2');
-    fr4s3 = fr4s3.replaceAll ('i', '3');
-    fr4s3 = fr4s3.replaceAll ('o', '4');
-    fr4s3 = fr4s3.replaceAll ('u', '5');
+    fr4s3 = fr4s3.replace ('a', '1');
+    fr4s3 = fr4s3.replace ('e', '2');
+    fr4s3 = fr4s3.replace ('i', '3');
+    fr4s3 = fr4s3.replace ('o', '4');
+    fr4s3 = fr4s3.replace ('u', '5');
     
     return fr4s3;
     }
@@ -112,20 +120,36 @@ function encode(fr4s3) {
 
 function decode(stringN) {
 
-  stringN = stringN.replaceAll ('1', 'a');
-  stringN = stringN.replaceAll ('2', 'e');
-  stringN = stringN.replaceAll ('3', 'i');
-  stringN = stringN.replaceAll ('4', 'o');
-  stringN = stringN.replaceAll ('5', 'u');
+  stringN = stringN.replace ('1', 'a');
+  stringN = stringN.replace ('2', 'e');
+  stringN = stringN.replace ('3', 'i');
+  stringN = stringN.replace ('4', 'o');
+  stringN = stringN.replace ('5', 'u');
     
   return stringN;
 }
 
 
 
-// Desafio 10  *n comecei*
-function techList() {
-  // seu código aqui
+// Desafio 10  *okk*
+function techList(tech, name) {
+
+  let tClist = [];
+  let orderList = tech.sort();
+
+  if ( tech = 0 ) {
+    return 'Vazio!';
+  }
+
+  for ( let count = 0; count < orderList.lenght ; count +=1) {
+    Tlist.push({
+      tech: orderList[count],
+      name: name,
+    })
+  }
+
+  return tClist
+
 }
 
 // Desafio 11 *n comecei*
