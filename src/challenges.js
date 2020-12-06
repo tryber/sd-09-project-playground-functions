@@ -1,3 +1,5 @@
+// Aluno: Emanoel Cristhian, turma 09.
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
