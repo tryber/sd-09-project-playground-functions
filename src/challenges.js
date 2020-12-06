@@ -27,7 +27,7 @@ console.log(splitSentence('go trybe'))
 function concatName(string) {
   // seu código aqui
   for (let i = 0; i < string.length; i += 1) {
-    return (string[string.length -1] + " " + string[0])
+    return (string[string.length -1] + ", " + string[0])
   }
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
@@ -39,8 +39,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(param1) {
   // seu código aqui
+
 }
 
 // Desafio 7
