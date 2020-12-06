@@ -84,6 +84,7 @@ function fizzBuzz(array) {
   return newArray;
 }
 
+
 // Desafio 9
 function encode(string) {
   // seu código aqui
@@ -162,8 +163,11 @@ function triangleCheck(lineA, lineB, lineC) {
   let resultA = Math.abs(lineB - lineC)
   let resultB = Math.abs(lineA - lineC)
   let resultC = Math.abs(lineA - lineB)
+  let sumA = lineB + lineC
+  let sumB = lineA + lineC
+  let sumC = lineA + lineB
 
-  if (resultA < lineA && resultA < (lineB + lineC) && resultB < lineB && resultB < (lineA + lineC) && resultC < lineC && resultC < (lineA + lineB)) {
+  if (resultA < lineA && resultA < sumA && resultB < lineB && resultB < sumB && resultC < lineC && resultC < sumC) {
     return true
   }
   return false
