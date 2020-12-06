@@ -68,17 +68,13 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayAnswer.push('fizzbuzz');
-
-    }else if (array[index] % 3 === 0) {
+    } else if (array[index] % 3 === 0) {
       arrayAnswer.push('fizz');
-  
-    }else if (array[index] % 5 === 0) {
+    } else if (array[index] % 5 === 0) {
       arrayAnswer.push('buzz');
-    
-    }else {
+    } else {
       arrayAnswer.push('bug');
     }
-    
   }
   return arrayAnswer;
 }
