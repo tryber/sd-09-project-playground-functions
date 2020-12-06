@@ -67,16 +67,17 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
+  // console.log(`cat1: ${distanceCat1}, cat2: ${distanceCat2}`);
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
-  } else if (distanceCat1 > distanceCat2) {
+  } else if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } else {
     return 'cat2';
   }
 }
-// console.log(catAndMouse(8, 5, 5));
 
+// console.log(catAndMouse(10, 7, 7));
 // Auxiliary function
 function divisible(dividend, divisor) {
   if ((dividend % divisor) === 0) {
@@ -106,15 +107,67 @@ function fizzBuzz(array) {
   return result;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let encodedText = '';
+  let character;
+  for (let index = 0; index < text.length; index += 1) {
+    character = text[index];
+    switch (character) {
+      case 'a':
+        encodedText += '1';
+        break;
+      case 'e':
+        encodedText += '2';
+        break;
+      case 'i':
+        encodedText += '3';
+        break;
+      case 'o':
+        encodedText += '4';
+        break;
+      case 'u':
+        encodedText += '5';
+        break;
+      default:
+        encodedText += text[index];
+        break;
+    }
+  }
+  return encodedText;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('hi there!'));
+
+function decode(text) {
+  let decodedText = '';
+  let character;
+  for (let index = 0; index < text.length; index += 1) {
+    character = text[index];
+    switch (character) {
+      case '1':
+        decodedText += 'a';
+        break;
+      case '2':
+        decodedText += 'e';
+        break;
+      case '3':
+        decodedText += 'i';
+        break;
+      case '4':
+        decodedText += 'o';
+        break;
+      case '5':
+        decodedText += 'u';
+        break;
+      default:
+        decodedText += text[index];
+        break;
+    }
+  }
+  return decodedText;
 }
+
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
