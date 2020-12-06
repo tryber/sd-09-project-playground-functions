@@ -18,6 +18,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
+  let stringSplited = string.split(" ");
+  return (stringSplited);
 }
 //splitSentence("go trybe");
 
