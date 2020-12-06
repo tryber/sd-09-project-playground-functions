@@ -133,8 +133,16 @@ function decode(param) {
   
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(param,nome) {
+  
+  let paramSorted = param.sort();
+  
+  for (let i in paramSorted){
+    let lista = []; 
+    lista[i]=paramSorted[i];
+    lista[i +1] = nome;
+
+  }return lista;
 }
 
 // Desafio 11
