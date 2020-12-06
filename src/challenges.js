@@ -116,8 +116,8 @@ function getClosestCat(first, second) {
 
 function catAndMouse(mouse, cat1, cat2) {
   let outcome = '';
-  cat1 = {name: 'cat1', distance: getCatDistance(cat1, mouse)};
-  cat2 = {name: 'cat2', distance: getCatDistance(cat2, mouse)};
+  cat1 = { name: 'cat1', distance: getCatDistance(cat1, mouse) };
+  cat2 = { name: 'cat2', distance: getCatDistance(cat2, mouse) };
   if (cat1.distance === cat2.distance) {
     outcome = 'os gatos trombam e o rato foge';
   } else {
