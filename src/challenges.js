@@ -169,7 +169,7 @@ function fizzBuzz(inputArray) {
 // Desafio 9
 function translate(context) {
   let value = context.currentValue;
-  if (context.currentValue in context.dictionary){
+  if (context.currentValue in context.dictionary) {
     value = context.dictionary[context.currentValue];
   }
   context.translation += value;
@@ -210,7 +210,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // Code here
+  return ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC)));
 }
 
 // Desafio 13
