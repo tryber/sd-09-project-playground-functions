@@ -140,16 +140,16 @@ function techList(arrayTech, name) {
       object[index] = {
         tech: arrayTech[index],
         name: name,
-        };
-      }
+      };
     }
+  }
   return object;
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayNum){
+function generatePhoneNumber(arrayNum) {
   let retorna,
-  contadorNum = 0;
+      contadorNum = 0;
   retorna = `(${arrayNum[0]}${arrayNum[1]}) ${arrayNum[2]}${arrayNum[3]}${arrayNum[4]}${arrayNum[5]}${arrayNum[6]}-${arrayNum[7]}${arrayNum[8]}${arrayNum[9]}${arrayNum[10]}`
   if (arrayNum.length !== 11) {
     retorna = 'Array com tamanho incorreto.';
@@ -166,7 +166,7 @@ function generatePhoneNumber(arrayNum){
       contadorNum = 0;
       for (let index2 = 0; index2 < arrayNum.length; index2 += 1) {
         if (arrayNum[index] === arrayNum[index2]) {
-          contadorNum += 1; 
+          contadorNum += 1;
         }
       }
     }
@@ -177,19 +177,19 @@ function generatePhoneNumber(arrayNum){
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let boolC,
-  boolB,
-  boolA,
-  retornaTrueOrFalse;
-  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+      boolB,
+      boolA,
+      retornaTrueOrFalse;
+  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     boolA = true;
   }
-  if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+  if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     boolB = true;
   }
-  if (lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)){
+  if (lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
     boolC = true;
   }
-  if (boolA === true && boolB === true && boolC === true){
+  if (boolA === true && boolB === true && boolC === true) {
     retornaTrueOrFalse = true;
   } else {
     retornaTrueOrFalse = false;
