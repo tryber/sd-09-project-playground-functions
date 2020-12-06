@@ -60,16 +60,16 @@ function catAndMouse() {
 function fizzBuzz(array) {
   let arrayestreng = []
   for (let x = 0; x < array.length; x += 1) {
-    if(array[x] % 3 === 0 && array[x] % 5 === 0) {
+    if (array[x] % 3 === 0 && array[x] % 5 === 0) {
       arrayestreng.push('fizzBuzz');
     }
-    else if(array[x] % 3 === 0){
+    else if (array[x] % 3 === 0) {
       arrayestreng.push('fizz');
     }
-    else if(array[x] % 5 === 0){
+    else if (array[x] % 5 === 0) {
       arrayestreng.push('buzz');
     }
-    else{
+    else {
       arrayestreng.push('bug!');
     }
   }
@@ -77,12 +77,56 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array9) {
+  let outraFrase = '';
+  for (let x = 0; x < array9.length; x += 1) {
+    if (array9[x] === 'a') {
+      outraFrase += 1;
+    }
+    else if (array9[x] === 'e') {
+      outraFrase += 2;
+    }
+    else if (array9[x] === 'i') {
+      outraFrase += 3;
+    }
+    else if (array9[x] === 'o') {
+      outraFrase += 4;
+    }
+    else if (array9[x] === 'u') {
+      outraFrase += 5;
+    }
+    else {
+      outraFrase += array9[x];
+    }
+  }
+  return outraFrase;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(array10) {
+  let outraFrase = '';
+  for (let x = 0; x < array10.length; x += 1) {
+    if (array10[x] === '1') {
+      outraFrase += 'a';
+    }
+    else if (array10[x] === '2') {
+      outraFrase += 'e';
+    }
+    else if (array10[x] === '3') {
+      outraFrase += 'i';
+    }
+    else if (array10[x] === '4') {
+      outraFrase += 'o';
+    }
+    else if (array10[x] === '5') {
+      outraFrase += 'u';
+    }
+    else {
+      outraFrase += array10[x];
+    }
+  }
+  return outraFrase;
+}console.log(decode('h5ds4n')) 
+
 
 // Desafio 10
 function techList() {
