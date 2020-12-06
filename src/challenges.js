@@ -141,8 +141,11 @@ function techList(technology, name) {
   technology.sort(); // ordena o array passado por parâmetro
   let arrayTech = [];
   if (technology.length > 0) {
-    for (index = 0; index < technology.length; index += 1) {
-      arrayTech[index] = {tech: technology[index], name: name};
+    for (let index = 0; index < technology.length; index += 1) {
+      arrayTech[index] = {
+        tech: technology[index],
+        name
+      };
     }
     return arrayTech;
   } return 'Vazio!';
