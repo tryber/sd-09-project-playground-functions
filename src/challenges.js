@@ -245,35 +245,34 @@ function includeChar(number, index) {
   return phone;
 }
 function generatePhoneNumber(arrayPhone) {
-  let phone = '';
   let phrase = '';
 
-  if (arrayPhone.length === 0) {
-    error = errorNumberAndCount('', arrayPhone);
-    if (error !== '') {
-      phrase = error;
-    }
+  error = errorNumberAndCount('', arrayPhone);
+  if ((arrayPhone.length === 0) || (error !== '')) {
+    phrase = error;
+    break;
   }
-  
+
   for (let index = 0; index < arrayPhone.length; index += 1) {
+    phrase += includeChar(arrayPhone[index], index);
+
     error = errorNumberAndCount(arrayPhone[index], arrayPhone);
     if (error !== '') {
-      return error;
+      phrase = error;
+      break;
     }
-
-    phone += includeChar(arrayPhone[index], index);
   }
-  return phone;
+  return phrase;
 }
-// console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([0, 1, 6]));
-// console.log(generatePhoneNumber([]));
-// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-// console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, -2, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 
 // Desafio 12
