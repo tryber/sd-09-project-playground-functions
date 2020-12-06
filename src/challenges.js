@@ -21,7 +21,7 @@ function splitSentence(string) {
 function concatName(array) {
   let arrayFirst = array[0];
   let arrayLast = array.reverse()[0];
-  return (stringLast + ', ' + stringFirst);
+  return (arrayLast + ', ' + arrayFirst);
 }
 
 // Desafio 5
