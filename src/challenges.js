@@ -138,8 +138,8 @@ function decode(codedString) {
 
 
 // Desafio 10
-function techList(List, name) {
-  let techArray = List.sort();
+function techList(techList, name) {
+  let techArray = techList.sort();
   let sortedList = [];
 
   if (techList.length === 0) {
