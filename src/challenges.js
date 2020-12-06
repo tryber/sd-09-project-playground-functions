@@ -164,10 +164,12 @@ function checkNumbers(numbers) {
   let checkResult = true;
 
   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] < 0 || numbers[i] > 9) {
-      checkResult = false;
-      break;
-    }
+    if (numbers[i] >= 0 && numbers[i] <= 9) {
+      checkResult = true;
+    } else {
+        checkResult = false;
+        break;
+    }  
   }
   return checkResult;
 }
@@ -203,7 +205,8 @@ function generatePhoneNumber(numbers) {
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (checkNumbers(phone) === false || checkIfValid(phone) === false) {
+
+  } else if (checkNumbers(numbers) === false && checkIfValid(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (let i = 0; i < numbers.length; i += 1) {
