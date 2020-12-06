@@ -3,8 +3,8 @@
 function compareTrue(values1, values2) {
   if (values1 === true && values2 === true) {
     return true;
-} 
-  return false;
+  }
+return false;
 }
 console.log(compareTrue(true, true))
 
@@ -36,10 +36,10 @@ console.log(compareTrue(true, true))
 // // Desafio 5
 // // concluido
 // function footballPoints(wins, ties) {
-// pontos = (wins * 3) + ties 
-//   return pontos
-//}
-//console.log(footballPoints(5,2))
+// pontos = (wins * 3) + ties
+//return pontos
+// }
+// console.log(footballPoints(5,2))
 
 // // Desafio 6
 // function highestCount() {
