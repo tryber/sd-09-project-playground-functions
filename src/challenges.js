@@ -185,26 +185,26 @@ function numberCounter(number, arrayNumbers) {
   return timesAppear;
 }
 
-function numbersValidator (numbersArray) {
+function numbersValidator(numbersArray) {
   if (numbersArray.length !== 11) {
     return 1;
   }
-  for (let index = 0; index < numbersArray.length; index++) {
+  for (let index = 0; index < numbersArray.length; index +=) {
     let timesAppear = numberCounter(numbersArray[index], numbersArray);
     if (numbersArray[index] < 0 || numbersArray[index] > 9 || timesAppear >= 3) {
       return 2;
-    }  
+    }
   }
   return true;
 }
 
 function stringConstructor(valuesArray) {
-  let stringToReturn='(';
+  let stringToReturn = '(';
   for (let index = 0; index < valuesArray.length; index += 1) {
-    if(index === 2) {
+    if (index === 2) {
       stringToReturn += ') ';
     }
-    if(index === 7) {
+    if( index === 7) {
       stringToReturn += '-';
     }
     stringToReturn += valuesArray[index];
@@ -214,16 +214,14 @@ function stringConstructor(valuesArray) {
 
 function generatePhoneNumber(numbersArray) {
   if (numbersValidator(numbersArray) === 1) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.';
   }
   if(numbersValidator(numbersArray) === 2) {
-    return "não é possível gerar um número de telefone com esses valores";
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   let phoneNumber = stringConstructor(numbersArray);
   return phoneNumber;
 }
-
-console.log(generatePhoneNumber([1,4,5,6,7,8,9,0,1]));
 
 // Desafio 12
 function triangleCheck() {
