@@ -46,9 +46,9 @@ function highestCount(array) {
   }
   for (let key = 0; key < array.length; key += 1) {
     if (numberMax === array[key]) {
-          count += 1
-        }
-      }
+    count += 1
+    }
+  }
   return count;
 }
 
@@ -63,8 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
   }
-      return 'os gatos trombam e o rato foge';
-    }
+  return 'os gatos trombam e o rato foge';
+}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -100,8 +100,8 @@ function encode(string) {
     if (string[key] === 'a' || string[key] === 'e' || string[key] === 'i' || string[key] === 'o' || string[key] === 'u') {
       newString += vowels[string[key]];
     } else {
-          newString += string[key];
-        }
+      newString += string[key];
+    }
   }
   return newString;
 }
@@ -120,8 +120,8 @@ function decode(string) {
     if (string[key] === '1' || string[key] === '2' || string[key] === '3' || string[key] === '4' || string[key] === '5') {
       newString += vowels[string[key]];
     } else {
-          newString += string[key];
-        }
+      newString += string[key];
+    }
   }
   return newString;
 }
@@ -132,24 +132,24 @@ function techList(array, name) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < array) {
-              let outro = { tech: array[index], name: name };
-              newArray.push(outro)
+      let outro = { tech: array[index], name: name }
+      newArray.push(outro)
     }
   }
   newArray.sort(function (a, b) {
-      if (a.tech > b.tech) {
-            return 1;
-          }
-        if (a.tech < b.tech) {
-            return -1;
-          }
-            return 0;
+    if (a.tech > b.tech) {
+        return 1;
+      }
+    if (a.tech < b.tech) {
+        return -1;
+      }
+    return 0;
   })
   if (newArray.length > 0) {
-        return newArray;
-      } else {
-              return 'Vazio!'
-            }
+    return newArray;
+  } else {
+    return 'Vazio!'
+  }
 }
 
 // Desafio 11
@@ -157,7 +157,7 @@ function repeatedNumber(array) {
   let trueOrFalse = false
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
-    let checkNumber = array [index]
+    let checkNumber = array[index]
     for (let index = 0; index < array.length; index += 1) {
       if (checkNumber === array[index]) {
         count += 1
@@ -211,11 +211,10 @@ function hydrate(string) {
         sumNumbers += parseInt(numbers[index], 10)
   }
   if (sumNumbers === 1) {
-    sumNumbers + ' copo de água'
+    return sumNumbers + ' copo de água'
   } else {
-    sumNumbers + ' copos de água'
+    return sumNumbers + ' copos de água'
   }
-  return sumNumbers
 }
 
 
