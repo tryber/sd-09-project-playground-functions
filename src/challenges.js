@@ -50,11 +50,7 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, gat1, gat2) {
-  let
-  if (mouse > gat1) {
-    poss1 = mouse - gat1;
-  } 
+function catAndMouse() {
 }
 
 // Desafio 8
