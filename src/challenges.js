@@ -117,30 +117,18 @@ function code(stringToCode, toBeReplaced, replaceBy) {
 
 // Desafio 9
 function encode(stringToEncode) {
-  let codeArray = ['a','e','i','o','u'];
-  let encodeArray = ['1','2','3','4','5'];
-  for (let index = 0; index < encodeArray; index += 1) {
-    stringToEncode = code(stringToEncode, codeArray[index], encodeArray[index]);
+  let encodeArray = ['a', '1', 'b', '2', 'c', '3', 'd', '4', 'e', '5'];
+  for (let index = 0; index < encodeArray; index += 2) {
+    stringToEncode = code(stringToEncode, encodeArray[index], encodeArray[index + 1]);
   }
-  // stringToEncode = code(stringToEncode, 'e', '2');
-  // stringToEncode = code(stringToEncode, 'u', '5');
-  // stringToEncode = code(stringToEncode, 'i', '3');
-  // stringToEncode = code(stringToEncode, 'a', '1');
-  // stringToEncode = code(stringToEncode, 'o', '4');
   return (stringToEncode);
 }
 
 function decode(stringToDecode) {
-  let codeArray = ['1','2','3','4','5'];
-  let decodeArray = ['a','e','i','o','u'];
-  for (let index = 0; index < decodeArray; index += 1) {
-    stringToEncode = code(stringToEncode, codeArray[index], decodeArray[index]);
+  let decodeArray = ['1', 'a', '2', 'b', '3', 'c', '4', 'd', '5', 'e'];
+  for (let index = 0; index < decodeArray; index += 2) {
+    stringToDecode = code(stringToDecode, decodeArray[index], decodeArray[index + 1]);
   }
-  // stringToDecode = code(stringToDecode, '1', 'a');
-  // stringToDecode = code(stringToDecode, '4', 'o');
-  // stringToDecode = code(stringToDecode, '2', 'e');
-  // stringToDecode = code(stringToDecode, '5', 'u');
-  // stringToDecode = code(stringToDecode, '3', 'i');
   return (stringToDecode);
 }
 
