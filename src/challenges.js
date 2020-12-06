@@ -33,10 +33,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-/*Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade
-de vezes que o maior deles se repete. Exemplo: caso o parâmetro de highestCount seja uma array com
-valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9
-(maior número do array) se repete.*/
 
 function highestCount(param) {
   let maxNumber = 0;
@@ -53,8 +49,17 @@ function highestCount(param) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(mouse, cat1, cat2) {
+  const distanceCat1 = Math.abs(mouse - cat1);
+  const distanceCat2 = Math.abs(mouse - cat2);
+  if (distanceCat1 < distanceCat2) {
+    console.log('cat1')
+  } else if (distanceCat2 < distanceCat1) {
+    console.log('cat2')
+  } else {
+    console.log('os gatos trombam e o rato foge')
+  }
 }
 
 // Desafio 8
