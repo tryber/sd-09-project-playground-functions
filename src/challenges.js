@@ -18,9 +18,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(strings) {
-  let stringFirst = strings[0];
-  let stringUl = strings.reverse()[0];
+function concatName(array) {
+  let arrayFirst = array[0];
+  let arrayUl = array.reverse()[0];
   return (stringUl + ' ' + stringFirst);
 }
 
@@ -57,17 +57,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
+  let arrayResp = [];
   for (let key = 0; key < arrayNumbers.length; key += 1) {
     if (arrayNumbers[key] % 3 === 0 && arrayNumbers[key] % 5 === 0) {
-      console.log('fizzBuzz');
+      arrayResp.push('fizzBuzz');
     } if (arrayNumbers[key] % 3 === 0) {
-      console.log('fizz');
+      arrayResp.push('fizz');
     } if (arrayNumbers[key] % 5 === 0) {
-      console.log('buzz');
+      arrayResp.push('buzz');
     }
-    console.log('bug');
+    arrayResp.push('bug!');
     }
-}
+    
+} return arrayResp;
 // Desafio 9
 function encode(param) {
  let newString = [];
