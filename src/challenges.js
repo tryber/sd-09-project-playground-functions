@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
   return points;
 }
 
-// Desafio 6 *ok*
+// Desafio 6 *okk*
 let contNumber = 0;
 entrada: [9, 1, 2, 3, 9, 5, 7];
 
@@ -52,20 +52,35 @@ return contNumber
 }
  
 
-// Desafio 7 *n comecei*
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 *okk*
+function catAndMouse(mouse, cat1, cat2) {
+
+ let cat1Mouse = Math.abs(cat1 -mouse);
+ let cat2Mouse = Math.abs(cat2 -mouse);
+
+ if ( cat1Mouse < cat2Mouse ) {
+   return "cat1";
+ }
+ else if ( cat1Mouse > cat2Mouse ) {
+   return "cat2";
+ }
+ else {
+   return "os gatos trombam e o rato vai embora";
+ }
+
 }
 
-// Desafio 8 *ok*
-    let arrayResult = [];
+// Desafio 8 *okk*
+    
 
     function fizzBuzz(arrayNumeros) {
+      
+      let arrayResult = [];
+
       for (let i = 0 ; i < arrayNumeros.length ; i +=1) {
 
         if ((arrayNumeros[i] % 3 === 0) && (arrayNumeros[i]  % 5 ===0)) {
-            arrayResult.push ("fizzBuzz");
-        
+          arrayResult.push ("fizzBuzz");
           } else if (arrayNumeros[i] % 3 === 0) {
             arrayResult.push ("fizz");
           
@@ -75,8 +90,8 @@ function catAndMouse() {
           } else {
             arrayResult.push ('bug!')
           }
-
-      }
+        }
+          
       console.log(arrayResult);
     }
     
