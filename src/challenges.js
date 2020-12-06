@@ -45,21 +45,22 @@ console.log(footballPoints(5, 2))
 function highestCount() {
   let maiorNumero = arrayDoEx6[0]
   let contaMaiorNumero = 0
+  let arrayDoEx6 = [9, 1, 2, 3, 9, 5, 7]
   // encontrar o maior valor
   for (let index = 0; index < arrayDoEx6.length; index += 1) {
     if (arrayDoEx6[index] > maiorNumero) {
-        maiorNumero = arrayDoEx6[index];
-      }
+      maiorNumero = arrayDoEx6[index];
+    }
   }
   // frequencia do maiorNumero no array
   for (let index = 0; index < arrayDoEx6.length; index += 1) {
     if (arrayDoEx6[index] === maiorNumero) {
-        contaMaiorNumero += 1;
-      }
+      contaMaiorNumero += 1;
+    }
   }
   return contaMaiorNumero;
 }
-let arrayDoEx6 = [9, 1, 2, 3, 9, 5, 7]
+
 console.log(highestCount(arrayDoEx6))
 
 // Desafio 7
