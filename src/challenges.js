@@ -20,8 +20,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let arrayFirst = array[0];
-  let arrayUl = array.reverse()[0];
-  return (stringUl + ' ' + stringFirst);
+  let arrayLast = array.reverse()[0];
+  return (stringLast + ', ' + stringFirst);
 }
 
 // Desafio 5
