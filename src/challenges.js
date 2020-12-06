@@ -218,7 +218,7 @@ function hydrate(hydrate) {
   }
   if (soma === 1) {
     return soma + ' copo de água';
-  } 
+  }
   return soma + ' copos de água';
 }
 
