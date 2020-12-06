@@ -121,8 +121,17 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, name) {
+  let techs = []
+  let sorted = arr.sort()
+
+  for (let index = 0; index < sorted.length; index += 1) {
+    techs.push({
+      tech: sorted[index],
+      name: name
+    })
+  }
+  return techs
 }
 
 // Desafio 11
