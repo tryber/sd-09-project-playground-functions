@@ -65,8 +65,8 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   // console.log(`cat1: ${distanceCat1}, cat2: ${distanceCat2}`);
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
@@ -77,7 +77,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// console.log(catAndMouse(10, 7, 7));
+// console.log(catAndMouse(10, 4, 22));
+// console.log(catAndMouse(0, 3, 2));
+// console.log(catAndMouse(1, 0, 2));
 // Auxiliary function
 function divisible(dividend, divisor) {
   if ((dividend % divisor) === 0) {
@@ -167,13 +169,19 @@ function decode(text) {
   return decodedText;
 }
 
-console.log(decode('h3 th2r2!'));
-
 // Desafio 10
-function techList() {
+function techList(technologies, name) {
   // seu código aqui
+  let myTechList = [];
+  for (let index = 0; index < technologies.length; index += 1) {
+    myTechList.push({
+      tech: technologies[index],
+      name: name
+    });
+  }
+  return myTechList;
 }
-
+console.log(techList(['Go', 'Flask', 'Node'], 'Enio'));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
