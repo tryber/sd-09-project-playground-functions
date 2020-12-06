@@ -34,13 +34,15 @@ function splitSentence(pharases) {
 // Desafio 4
 function concatName(names) {
   let finalValue = names;
-  let firstLast = finalValue[finalValue.length - 1] + ', ' + names[0];
+  let firstLast = `${finalValue[finalValue.length - 1]}, ${names[0]}`;
   return firstLast;
   // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + (ties * 1);
+  return points;
   // seu código aqui
 }
 
