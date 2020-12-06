@@ -108,8 +108,10 @@ function encodedOrdecoded(numberOrLetter) {
 function encode(string) {
   let letter = '';
   for (let index in string) {
-    if (typeof string[index] === 'string') {
+    if (isNaN(string[index])) {
       letter += encodedOrdecoded(string[index]);
+    } else {
+      letter += string[index];
     }
   }
   return letter;
@@ -117,12 +119,16 @@ function encode(string) {
 function decode(string) {
   let letter = '';
   for (let index in string) {
-    if (typeof string[index] !== 'string') {
+    if (!isNaN(string[index])) {
       letter += encodedOrdecoded(string[index]);
+    } else {
+      letter += string[index];
     }
   }
   return letter;
 }
+console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!"));
 // Desafio 10
 function techList() {
   // seu código aqui
