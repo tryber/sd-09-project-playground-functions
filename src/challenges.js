@@ -174,11 +174,27 @@ function generatePhoneNumber(arrayNum){
   return retorna;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let boolC,
+  boolB,
+  boolA,
+  retornaTrueOrFalse;
+  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+    boolA = true;
+  }
+  if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+    boolB = true;
+  }
+  if (lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)){
+    boolC = true;
+  }
+  if (boolA === true && boolB === true && boolC === true){
+    retornaTrueOrFalse = true;
+  } else {
+    retornaTrueOrFalse = false;
+  }
+  return retornaTrueOrFalse;
 }
 
 // Desafio 13
