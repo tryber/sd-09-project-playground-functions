@@ -226,7 +226,7 @@ function hydrate(arrayDrink) {
   let water = arrayDrink.split(/\D/g).join('');
   let result = 0;
   for (let i of water) {
-    result += parseInt(i);
+    result += parseInt(i, 10);
   }
   if (result <= 1) {
     return `${result} copo de água`;
