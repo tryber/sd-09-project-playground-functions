@@ -29,11 +29,11 @@ function splitSentence(streng) {
 
 // Desafio 4
 function concatName(array) {
-  ultimoEprimeroNome = [];
+  let ultimoEprimeroNome = [];
   ultimoEprimeroNome.push(array[array.length - 1]);
   ultimoEprimeroNome.push(array[0]);
   return ultimoEprimeroNome;
-}
+}console.log(concatName(['hudson','carlos','soares']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
