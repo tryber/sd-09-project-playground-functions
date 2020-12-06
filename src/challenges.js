@@ -5,7 +5,7 @@ function compareTrue(value1, value2) {
     return true
   } 
   return false
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -143,13 +143,13 @@ function techList(array, name) {
                     return -1;
                 }
                     return 0;
-  }); 
+  })
   if (newArray.length > 0) {
       return newArray;
   } else {
       return 'Vazio!'   
     }
-};
+}
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -167,7 +167,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return true
   }
   return false
-};
+}
 
 // Desafio 13
 function hydrate(string) {
@@ -176,7 +176,7 @@ function hydrate(string) {
   let numbers = string.match(/\d+/g);
 
   for (let index = 0; index < numbers.length; index += 1) {
-        sumNumbers += parseInt(numbers[index])
+        sumNumbers += parseInt(numbers[index], 10)
         
   }
   if (sumNumbers === 1) {
@@ -184,7 +184,7 @@ function hydrate(string) {
   } else {
     return sumNumbers + ' copos de água'
   }
-};
+}
 
 
 module.exports = {
