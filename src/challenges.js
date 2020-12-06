@@ -136,16 +136,19 @@ function decode(param) {
 function techList(param,nome) {
   let paramSorted = param.sort();
   let lista = []; 
-  
-  for  ( let i in param ){
-    let listaInterna = []
+  if (param.length === 0){
+    return 'Vazio!';
+  }else {
+    for  ( let i in param ){
+    let listaInterna = {}
     listaInterna['tech']=paramSorted[i];
     listaInterna['name'] = nome;
     i +=1;
-    lista.push = listaInterna
-  } return lista;
+    lista[i]= listaInterna
+  }
+  return lista;
+  } 
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
