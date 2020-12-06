@@ -208,8 +208,18 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(hydrate) {
+  let numbers = /\d+/g;
+  let result = hydrate.match(numbers);
+  let soma = 0;
+
+  for (let index = 0; index < result.length; index += 1) {
+    soma += parseInt(result[index]);
+  }
+  if (soma === 1) {
+    return soma,'copo de água';
+  } 
+  return soma,'copos de água';
 }
 
 
