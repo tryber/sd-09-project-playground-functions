@@ -3,7 +3,7 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if (value1 && value2 === true) {
     return true
-  } 
+  }
   return false
 }
 
@@ -138,16 +138,16 @@ function techList(array, name) {
   newArray.sort(function (a, b) {
                 if (a.tech > b.tech) {
                     return 1;
-                 }
+                  }
                 if (a.tech < b.tech) {
                     return -1;
-                }
+                  }
                     return 0;
   })
   if (newArray.length > 0) {
       return newArray;
   } else {
-      return 'Vazio!'   
+      return 'Vazio!'
     }
 }
 
@@ -177,7 +177,6 @@ function hydrate(string) {
 
   for (let index = 0; index < numbers.length; index += 1) {
         sumNumbers += parseInt(numbers[index], 10)
-        
   }
   if (sumNumbers === 1) {
     return sumNumbers + ' copo de água'
@@ -203,4 +202,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
