@@ -69,8 +69,36 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function countNumber(context) {
+  let numberNotCounted = (!(context.currentValue in context.counts));
+  if (numberNotCounted) {
+    context.counts[context.currentValue] = 1;
+  } else {
+    context.counts[context.currentValue] += 1;
+  }
+  return context;
+}
+
+function handleHighestCount(context) {
+  let noHighestNumber = (context.highestNumber === null);
+  let numberHigherThanHighest = (context.currentValue > context.highestNumber);
+  if (noHighestNumber || numberHigherThanHighest) {
+    context.highestNumber = context.currentValue;
+  }
+  context = countNumber(context);
+  return context;
+}
+
 function highestCount(inputArray) {
-  // Code here
+  const contextObject = loopThroughIn(
+    {
+      input: inputArray,
+      counts: {},
+      highestNumber: null,
+    },
+    handleHighestCount,
+  );
+  return contextObject.counts[contextObject.highestNumber];
 }
 
 // Desafio 7
