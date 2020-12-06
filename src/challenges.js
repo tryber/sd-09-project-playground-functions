@@ -7,12 +7,14 @@ function compareTrue(valor1, valor2) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  let area = (base * height) / 2
+  return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ');
+  let newString = string.split(' ');
+  return newString;
 }
 
 // Desafio 4
@@ -23,7 +25,7 @@ function concatName(strings) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + (ties * 1);
+  let pontos = (wins * 3) + (ties);
   return pontos;
 }
 
@@ -63,13 +65,62 @@ function fizzBuzz(arrayNumbers) {
     }
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(param) {
+ let newString = [];
+   
+ for (let key of param) {
+   switch (key){
+       case 'a':
+          newString.push('1');
+       break;
+       case 'e':
+          newString.push('2');
+       break;
+       case 'i':
+          newString.push('3');
+       break;
+       case 'o':
+          newString.push('4');
+       break;
+       case 'u':
+          newString.push('5'); 
+       break;
+       default:
+           newString.push(key);
+       
+   }
+   
+ }return newString.join(',').toString();
 }
 
+function decode(param) {
+ let newString = [];
+   
+ for (let key of param) {
+   switch (key){
+       case '1':
+          newString.push('a');
+       break;
+       case '2':
+          newString.push('e');
+       break;
+       case '3':
+          newString.push('i');
+       break;
+       case '4':
+          newString.push('o');
+       break;
+       case '5':
+          newString.push('u'); 
+       break;
+       default:
+           newString.push(key);
+       
+   }
+   
+ }return newString.join(',');
+  
+}
 // Desafio 10
 function techList() {
   // seu código aqui
