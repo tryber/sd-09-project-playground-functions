@@ -19,7 +19,7 @@ function splitSentence(streng) {
     if (streng[x] !== ' ') {
       guarda += streng[x];
     }
-    if (streng[x] === ' ' || x === streng.length - 1) {
+    else if (streng[x] === ' ' || x === streng.length - 1) {
       rel.push(guarda);
       guarda = '';
     }
@@ -33,7 +33,7 @@ function concatName(array) {
   ultimoEprimeroNome.push(array[array.length - 1]);
   ultimoEprimeroNome.push(array[0]);
   return ultimoEprimeroNome;
-}console.log(concatName(['hudson','carlos','soares']));
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -57,8 +57,23 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayestreng = []
+  for (let x = 0; x < array.length; x += 1) {
+    if(array[x] % 3 === 0 && array[x] % 5 === 0) {
+      arrayestreng.push('fizzBuzz');
+    }
+    else if(array[x] % 3 === 0){
+      arrayestreng.push('fizz');
+    }
+    else if(array[x] % 5 === 0){
+      arrayestreng.push('buzz');
+    }
+    else{
+      arrayestreng.push('bug!');
+    }
+  }
+  return arrayestreng;
 }
 
 // Desafio 9
