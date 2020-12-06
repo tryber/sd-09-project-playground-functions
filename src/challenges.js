@@ -157,7 +157,7 @@ function generatePhoneNumber(array) {
 
   for (index = 0; index < array.length; index += 1) {
     contador = 0;
-    if (array[index] > 9) {
+    if (array[index] > 9 || array[index] < 0) {
       return 'não é possível gerar um número de telefone com esses valores'
       break;
     }
