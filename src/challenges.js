@@ -28,7 +28,7 @@ console.log(splitSentence(array));
 // Desafio 4
 function concatName(arrayDeStrings) {
   let lastFirst = arrayDeStrings.pop()
-  return lastFirst , arrayDeStrings[0]
+  return lastFirst + ', ' + arrayDeStrings[0]
 }
 let arrayDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 console.log(concatName(arrayDeNomes))
@@ -43,9 +43,9 @@ console.log(footballPoints(5, 2))
 
 // Desafio 6
 function highestCount() {
+  let arrayDoEx6 = [9, 1, 2, 3, 9, 5, 7]
   let maiorNumero = arrayDoEx6[0]
   let contaMaiorNumero = 0
-  let arrayDoEx6 = [9, 1, 2, 3, 9, 5, 7]
   // encontrar o maior valor
   for (let index = 0; index < arrayDoEx6.length; index += 1) {
     if (arrayDoEx6[index] > maiorNumero) {
