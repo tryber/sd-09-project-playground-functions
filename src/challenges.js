@@ -90,18 +90,18 @@ function encodedOrdecoded(numberOrLetter) {
       return '4';
     case 'u':
       return '5';
-      case '1':
-        return 'a';
-      case '2':
-        return 'e';
-      case '3':
-        return 'i';
-      case '4':
-        return 'o';
-      case '5':
-        return 'u';
-      default: 
-        return numberOrLetter;
+    case '1':
+      return 'a';
+    case '2':
+      return 'e';
+    case '3':
+      return 'i';
+    case '4':
+      return 'o';
+    case '5':
+      return 'u';
+    default:
+      return numberOrLetter;
   }
 }
 
