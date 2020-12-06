@@ -167,12 +167,35 @@ function fizzBuzz(inputArray) {
 }
 
 // Desafio 9
+function translate(context) {
+  let value = context.currentValue;
+  if (context.currentValue in context.dictionary){
+    value = context.dictionary[context.currentValue];
+  }
+  context.translation += value;
+  return context;
+}
+
+function getTranslation(text, dictionary) {
+  const contextObject = loopThroughIn(
+    {
+      input: text,
+      dictionary,
+      translation: '',
+    },
+    translate,
+  );
+  return contextObject.translation;
+}
+
 function encode(text) {
-  // Code here
+  const dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  return getTranslation(text, dictionary);
 }
 
 function decode(text) {
-  // Code here
+  const dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  return getTranslation(text, dictionary);
 }
 
 // Desafio 10
