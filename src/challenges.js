@@ -122,6 +122,8 @@ function decode(str) {
 
 // Desafio 10
 function techList(arr, name) {
+  if (arr.length === 0) return 'Vazio!'
+
   let techs = []
   let sorted = arr.sort()
 
@@ -131,6 +133,7 @@ function techList(arr, name) {
       name: name
     })
   }
+  
   return techs
 }
 
