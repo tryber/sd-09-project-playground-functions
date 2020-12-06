@@ -43,11 +43,10 @@ function highestCount(array) {
   } return qtidade;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distM1 = cat1 - mouse;
-  let distM2 = cat2 -mouse;
+  let distM1 = Math.abs(cat1 - mouse);
+  let distM2 = Math.abs(cat2 -mouse);
   if (distM1 > distM2) {
     return 'cat2';
   } if (distM1 < distM2) {
