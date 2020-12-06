@@ -74,6 +74,7 @@ function fizzBuzz(arrayNumbers) {
   } 
 return arrayResp;
 }
+
 // Desafio 9
 function encode(param) {
  let newString = [];
