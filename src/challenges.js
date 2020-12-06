@@ -189,7 +189,7 @@ function numbersValidator(numbersArray) {
   if (numbersArray.length !== 11) {
     return 1;
   }
-  for (let index = 0; index < numbersArray.length; index +=) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
     let timesAppear = numberCounter(numbersArray[index], numbersArray);
     if (numbersArray[index] < 0 || numbersArray[index] > 9 || timesAppear >= 3) {
       return 2;
@@ -223,9 +223,35 @@ function generatePhoneNumber(numbersArray) {
   return phoneNumber;
 }
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Challenge 12 Bonus - a triangle sides checker
+function checkSum(line, sum) {
+  if (line > sum) {
+    return false;
+  }
+  return true;
+}
+
+function checkSubtraction(line, subtraction) {
+  if (line < Math.abs(subtraction)) {
+    return false;
+  }
+  return true;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let sumBC = lineB + lineC;
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let subBC = lineB - lineC;
+  let subAB = lineA - lineB;
+  let subAC = lineA - lineC;
+  if (checkSum(lineA, sumBC) === false || checkSum(lineB, sumAC) === false || checkSum(lineC, sumAB)=== false) {
+    return false;
+  }
+  if(checkSubtraction(lineA, subBC) === false || checkSubtraction(lineB, subAC) == false || checkSubtraction(lineA, subAB) === false) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
