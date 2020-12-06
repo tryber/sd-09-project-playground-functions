@@ -92,8 +92,24 @@ function encode(characterSet) {
   let characterEncode = characterArray.join("");
   return characterEncode;
 }
-function decode() {
-  // seu código aqui
+function decode(characterSetDecode) {
+  let characterArray = characterSetDecode.split("");
+  for (let i in characterArray) {
+    switch (characterArray[i]) {
+      case "1": characterArray[i] = "a";
+        break;
+      case "2": characterArray[i] = "e";
+        break;
+      case "3": characterArray[i] = "i";
+        break;
+      case "4": characterArray[i] = "o";
+        break;
+      case "5": characterArray[i] = "u";
+        break;
+    }
+  }
+  let characterDecode = characterArray.join("");
+  return characterDecode;
 }
 
 // Desafio 10
