@@ -206,7 +206,7 @@ function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
 
-  } else if (checkNumbers(numbers) === false && checkIfValid(numbers) === false) {
+  } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (let i = 0; i < numbers.length; i += 1) {
