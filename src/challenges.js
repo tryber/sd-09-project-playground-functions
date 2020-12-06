@@ -198,12 +198,12 @@ function generatePhoneNumber(numbers) {
   // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
   // para transformar o parametro em integers.
 
-  let testing = parseInt(numbers, 10);
+  let phone = parseInt(numbers, 10);
   let phoneNumber = [];
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
+  } else if (checkNumbers(phone) === false || checkIfValid(phone) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
     for (let i = 0; i < numbers.length; i += 1) {
@@ -217,7 +217,7 @@ function generatePhoneNumber(numbers) {
   return phoneNumber.join('');
 }
 
-let teste = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
+let teste = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0];
 console.log(generatePhoneNumber(teste));
 
 // Desafio 12
@@ -251,9 +251,9 @@ function hydrate(string) {
     totalDrinks += parseInt(drinks[i]);
   }
   if(totalDrinks === 1) {
-    return `${totalDrinks} copo de água.`
+    return `${totalDrinks} copo de água`
   } else {
-    return `${totalDrinks} copos de água.`
+    return `${totalDrinks} copos de água`
   }  
 }
 
