@@ -93,28 +93,30 @@ function fizzBuzz(numbers) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
+function changeLetter(letterKey, inText) {
+  let changedText = [];
+  for (let index in inText) {
+    let letter = inText[index];
+    if (letterKey.hasOwnProperty(letter) === false) {
+      changedText += letter;
+    } else {
+      changedText += letterKey[letter];
+    }
+  }
+  return changedText;
+}
 function encode(text) {
-  let encodedText = [];
-  let wordKey = {
-    a: '1', 
+  let encodeKey = {
+    a: '1',
     e: '2',
     i: '3',
     o: '4',
     u: '5',
   };
-  for (let index in text) {
-    if (wordKey.hasOwnProperty(text[index]) === false) {
-      encodedText += text[index];
-    } else {
-      encodedText += wordKey[text[index]];
-    }
-  }
-  return encodedText;
+  return changeLetter(encodeKey, text);
 }
 // console.log(encode('hi there!'));
-
 function decode(codedText) {
-  let decodedText = [];
   let decodeKey = {
     1: 'a',
     2: 'e',
@@ -122,14 +124,7 @@ function decode(codedText) {
     4: 'o',
     5: 'u',
   };
-  for (let index in codedText) {
-    if (decodeKey.hasOwnProperty(codedText[index]) === false) {
-      decodedText += codedText[index];
-    } else {
-      decodedText += decodeKey[codedText[index]];
-    }
-  }
-  return decodedText;
+  return changeLetter(decodeKey, codedText);
 }
 // console.log(decode(encode('hi there!')));
 
