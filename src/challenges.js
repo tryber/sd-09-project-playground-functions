@@ -45,19 +45,27 @@ let total = totalWins + totalTies;
       //console.log(footballPoints(5,2));
 
 // Desafio 6
-let arrayys = [0, 4, 4, 4, 9, 2, 1];
-function highestCount(numbers) {
+function highestCount(arrayys) {
 let contador = 0;
-let maiorNumero = 9;
+let maiorNumero = 0;
   for (let i = 0; i < arrayys.length; i += 1) {
-        if (maiorNumero === arrayys[i]) {
-            arrays[i] = maiorNumero; }
-//um for para descobrir o maior e outro para contar o 9
- // for (let j = 0; j < )   
-    
+     if (maiorNumero > arrayys[i]) {
+      contador = contador;
+      maiorNumero = maiorNumero;
+     } else if (maiorNumero === arrayys[i]) {
+       maiorNumero = maiorNumero;
+       contador = contador + 1;
+     } else if (maiorNumero < arrayys[i]) {
+       maiorNumero = arrayys[i];
+       contador = 1;
+     }
   } return contador;
 }       
-      //console.log(highestCount(arrayys));
+      console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+      //ArFizzBuzz.push();
+    //criar um arraylet let let ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];zzBuzz = [2, 15, 7, 9, 45];
+    //dar um push
+    //retornar o array
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -77,10 +85,6 @@ let cat2Distance = Math.abs(cat2 - mouse);
 // Desafio 8
 function fizzBuzz(ArFizzBuzz) {
 
-  //ArFizzBuzz.push();
-//criar um arraylet let let ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];zzBuzz = [2, 15, 7, 9, 45];
-//dar um push
-//retornar o array
   for (let index = 0; index < ArFizzBuzz.length; index += 1) {
 
     if (ArFizzBuzz[index] % 3 === 0 && ArFizzBuzz[index] % 5 === 0) {
@@ -104,7 +108,7 @@ function fizzBuzz(ArFizzBuzz) {
         console.log(ArFizzBuzz[index]);
     }
   } return ArFizzBuzz;
-}      fizzBuzz([2, 15, 7, 9, 45]);
+}      //fizzBuzz([2, 15, 7, 9, 45]);
 
 
 // Desafio 9
