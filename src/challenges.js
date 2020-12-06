@@ -167,20 +167,20 @@ function generatePhoneNumber(array) {
         contador += 1;
       }
       if (contador >= 3) {
-        return ('não é possível gerar um número de telefone com esses valores');
+        return 'não é possível gerar um número de telefone com esses valores';
         breaker = 1;
         break;
       }
     }
     if (array[index] > 9 || array[index] < 0) {
-      return ('não é possível gerar um número de telefone com esses valores');
+      return 'não é possível gerar um número de telefone com esses valores';
       breaker = 1;
       break;
     }
   };
   if (array.length !== 11) {
     breaker = 1;
-    return ('Array com tamanho incorreto.');
+    return 'Array com tamanho incorreto.';
   } else if(breaker !== 1){
     for (let index = 0; index < array.length; index +=1) {
       array.toString();
@@ -198,7 +198,6 @@ function generatePhoneNumber(array) {
   }
   return (numeroCompleto);
 }
-
 
 // Desafio 12
 function triangleCheck() {
