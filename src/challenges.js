@@ -154,11 +154,12 @@ function generatePhoneNumber(array) {
   let numero1 = '';
   let numero2 = '';
   let contador = 0;
+  let breaker = 0;
+  let numeroCompleto = '';
 
   for (index = 0; index < array.length; index += 1) {
     contador = 0;
-    if (array[index] > 9 || array[index] < 0) {
-      return 'não é possível gerar um número de telefone com esses valores'
+    if (breaker === 1) {
       break;
     }
     for (let index2 = 0; index2 < array.length; index2 += 1){
@@ -166,14 +167,21 @@ function generatePhoneNumber(array) {
         contador += 1;
       }
       if (contador >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores'
+        return ('não é possível gerar um número de telefone com esses valores');
+        breaker = 1;
         break;
       }
     }
+    if (array[index] > 9 || array[index] < 0) {
+      return ('não é possível gerar um número de telefone com esses valores');
+      breaker = 1;
+      break;
+    }
   };
   if (array.length > 11) {
-    return 'Array com tamanho incorreto.';
-  } else {
+    breaker = 1;
+    return ('Array com tamanho incorreto.');
+  } else if(breaker !== 1){
     for (let index = 0; index < array.length; index +=1) {
       array.toString();
       if (index <= 1) {
@@ -185,8 +193,10 @@ function generatePhoneNumber(array) {
       }
     };
   }
-  numeroCompleto = '(' + numero + ')' + ' ' + numero1 + '-' + numero2;
-  return numeroCompleto;
+  if (breaker !== 1) {
+    numeroCompleto = '(' + numero + ')' + ' ' + numero1 + '-' + numero2;
+  }
+  return (numeroCompleto);
 }
 
 
