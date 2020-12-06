@@ -235,10 +235,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  let drinks = string.match(/\d+/g);
+  let totalDrinks = 0;
 
+  for(let i = 0; i < drinks.length; i += 1) {
+    totalDrinks += parseInt(drinks[i]);
+  }
+  return `${totalDrinks} copos de água.`
+}
+let stringTest = '1 cachaça, 5 cervejas e 1 copo de vinho';
+console.log(hydrate(stringTest))
+
+//console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
