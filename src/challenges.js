@@ -4,11 +4,10 @@
 function compareTrue(comp1, comp2) {
   if (comp1 && comp2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
-// compareTrue(1,1);
+compareTrue(1,1);
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,7 +20,7 @@ function splitSentence(string) {
   let stringSplited = string.split(' ');
   return stringSplited;
 }
-//splitSentence("go trybe");
+// splitSentence("go trybe");
 
 // Desafio 4
 function concatName(arrayString) {
