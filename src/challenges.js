@@ -347,7 +347,12 @@ function hydrate(drinks) {
       drinksOfWater += verifyIsNumber(drinks[word])
     }
   }
+  if (drinksOfWater === 1) {
+    console.log(`${drinksOfWater} copos de água`)
+    return(`${drinksOfWater} copos de água`)
+  }
   console.log(`${drinksOfWater} copos de água`)
+  return(`${drinksOfWater} copos de água`)
 }
 
 function verifyIsNumber (word) {
@@ -361,7 +366,7 @@ function verifyIsNumber (word) {
   }
 }
 
-hydrate("3 cachaça, 3 cervejas e 3 copo de vinho")
+hydrate("1 cerveja")
 
 
 module.exports = {
