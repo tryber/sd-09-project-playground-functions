@@ -134,16 +134,18 @@ function decode(param) {
 }
 // Desafio 10
 function techList(param,nome) {
-  
   let paramSorted = param.sort();
+  let lista = []; 
   
-  for (let i in paramSorted){
-    let lista = []; 
-    lista[i]=paramSorted[i];
-    lista[i +1] = nome;
-
-  }return lista;
+  for  ( let i in param ){
+    let listaInterna = []
+    listaInterna['tech']=paramSorted[i];
+    listaInterna['name'] = nome;
+    i +=1;
+    lista.push = listaInterna
+  } return lista;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
