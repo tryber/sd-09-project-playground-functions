@@ -157,6 +157,26 @@ function generatePhoneNumber(array) {
   let breaker = 0;
   let numeroCompleto = '';
 
+  if (array.length !== 11) {
+    breaker = 1;
+    return 'Array com tamanho incorreto.';
+  } else if(breaker !== 1){
+    for (let index = 0; index < array.length; index +=1) {
+      array.toString();
+      if (index <= 1) {
+        numero += array[index];
+      } else if (index >= 2 && index <= 6) {
+        numero1 += array[index];
+      } else if (index > 6) {
+        numero2 += array[index];
+      }
+    };
+  }
+  if (breaker !== 1) {
+    numeroCompleto = '(' + numero + ')' + ' ' + numero1 + '-' + numero2;
+  }
+  return (numeroCompleto);
+
   for (index = 0; index < array.length; index += 1) {
     contador = 0;
     if (breaker === 1) {
@@ -178,27 +198,7 @@ function generatePhoneNumber(array) {
       break;
     }
   };
-  if (array.length !== 11) {
-    breaker = 1;
-    return 'Array com tamanho incorreto.';
-  } else if(breaker !== 1){
-    for (let index = 0; index < array.length; index +=1) {
-      array.toString();
-      if (index <= 1) {
-        numero += array[index];
-      } else if (index >= 2 && index <= 6) {
-        numero1 += array[index];
-      } else if (index > 6) {
-        numero2 += array[index];
-      }
-    };
-  }
-  if (breaker !== 1) {
-    numeroCompleto = '(' + numero + ')' + ' ' + numero1 + '-' + numero2;
-  }
-  return (numeroCompleto);
 }
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
