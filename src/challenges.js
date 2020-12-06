@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNum) {
   let maiorNum = 0,
-      contadorDeRep = 0;
+    contadorDeRep = 0;
   for (let index = 0; index < arrayNum.length; index += 1) {
     if (arrayNum[index] > maiorNum) {
       maiorNum = arrayNum[index];
@@ -132,7 +132,7 @@ function decode(palavra2) {
 // Desafio 10
 function techList(arrayTech, name) {
   let object = [];
-      arrayTech.sort();
+  arrayTech.sort();
   if (arrayTech.length < 1) {
     object = 'Vazio!';
   } else {
@@ -149,7 +149,7 @@ function techList(arrayTech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNum) {
   let retorna,
-      contadorNum = 0;
+    contadorNum = 0;
   retorna = `(${arrayNum[0]}${arrayNum[1]}) ${arrayNum[2]}${arrayNum[3]}${arrayNum[4]}${arrayNum[5]}${arrayNum[6]}-${arrayNum[7]}${arrayNum[8]}${arrayNum[9]}${arrayNum[10]}`
   if (arrayNum.length !== 11) {
     retorna = 'Array com tamanho incorreto.';
