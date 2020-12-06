@@ -19,7 +19,7 @@ function splitSentence(phrase) {
 
 // Desafio 4 *okk*
 function concatName(arrayString) {
-  let finalStg = arrayString[arrayString.lenght-1] + ", " + arrayString[0];
+  let finalStg = arrayString[arrayString.length-1] + ", " + arrayString[0];
 
   return finalStg;
 }
@@ -108,11 +108,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function encode(fr4s3) {
 
-    fr4s3 = fr4s3.replace ('a', '1');
-    fr4s3 = fr4s3.replace ('e', '2');
-    fr4s3 = fr4s3.replace ('i', '3');
-    fr4s3 = fr4s3.replace ('o', '4');
-    fr4s3 = fr4s3.replace ('u', '5');
+    fr4s3 = fr4s3.replace (/a/g , '1');
+    fr4s3 = fr4s3.replace (/e/g , '2');
+    fr4s3 = fr4s3.replace (/i/g , '3');
+    fr4s3 = fr4s3.replace (/o/g , '4');
+    fr4s3 = fr4s3.replace (/u/g , '5');
     
     return fr4s3;
     }
@@ -120,11 +120,11 @@ function encode(fr4s3) {
 
 function decode(stringN) {
 
-  stringN = stringN.replace ('1', 'a');
-  stringN = stringN.replace ('2', 'e');
-  stringN = stringN.replace ('3', 'i');
-  stringN = stringN.replace ('4', 'o');
-  stringN = stringN.replace ('5', 'u');
+  stringN = stringN.replace (/1/g , 'a');
+  stringN = stringN.replace (/2/g , 'e');
+  stringN = stringN.replace (/3/g , 'i');
+  stringN = stringN.replace (/4/g , 'o');
+  stringN = stringN.replace (/5/g , 'u');
     
   return stringN;
 }
@@ -137,7 +137,7 @@ function techList(tech, name) {
   let tClist = [];
   let orderList = tech.sort();
 
-  if ( tech = 0 ) {
+  if ( tech === 0 ) {
     return 'Vazio!';
   }
 
