@@ -5,7 +5,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // General loop function
@@ -22,8 +22,7 @@ function loopThroughIn(contextObject, applyFunction) {
 
 // Desafio 3
 function handlePushing(context) {
-  console.log(typeof(context.currentIndex));
-  if (context.currentIndex == context.input.length - 1) {
+  if (context.isLastChar) {
     context.currentWord += context.currentValue;
   }
   context.sentenceArray.push(context.currentWord);
@@ -32,10 +31,11 @@ function handlePushing(context) {
 }
 
 function handleSplitSentence(context) {
-  let caseToPush = (
-    (context.currentValue === ' ') || (context.currentIndex == context.input.length - 1)
-    );
+  let isCharSpace = (context.currentValue === ' ');
+  let isLastChar = (context.currentIndex === context.lastIndex);
+  let caseToPush = ( isCharSpace || isLastChar );
   if (caseToPush) {
+    context.isLastChar = isLastChar;
     context = handlePushing(context);
   } else {
     context.currentWord += context.currentValue;
@@ -49,8 +49,9 @@ function splitSentence(sentence) {
       input: sentence,
       sentenceArray: [],
       currentWord: [],
+      lastIndex: (sentence.length - 1).toString(),
     },
-    handleSplitSentence
+    handleSplitSentence,
   );
   return contextObject.sentenceArray;
 }
