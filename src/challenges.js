@@ -19,7 +19,7 @@ function splitSentence(streng) {
     if (streng[x] !== ' ') {
       guarda += streng[x];
     }
-    else if (streng[x] === ' ' || x === streng.length - 1) {
+    if (streng[x] === ' ' || x === streng.length - 1) {
       rel.push(guarda);
       guarda = '';
     }
