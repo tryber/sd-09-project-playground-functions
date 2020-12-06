@@ -97,7 +97,7 @@ function changeLetter(letterKey, inText) {
   let changedText = [];
   for (let index in inText) {
     let letter = inText[index];
-    if (letterKey.hasOwnProperty(letter) === false) {
+    if (Object.prototype.hasOwnProperty.call(letterKey, letter) === false) {
       changedText += letter;
     } else {
       changedText += letterKey[letter];
