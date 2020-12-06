@@ -50,17 +50,12 @@ function highestCount() {
   for (let index = 0; index < arrayDoEx6.length; index += 1) {
     if (arrayDoEx6[index] > maiorNumero) {
       maiorNumero = arrayDoEx6[index];
-    }
-  }
-  // frequencia do maiorNumero no array
-  for (let index = 0; index < arrayDoEx6.length; index += 1) {
-    if (arrayDoEx6[index] === maiorNumero) {
+    } else if (arrayDoEx6[index] === maiorNumero) {
       contaMaiorNumero += 1;
     }
   }
   return contaMaiorNumero;
-}
-
+  }
 console.log(highestCount())
 
 // Desafio 7
