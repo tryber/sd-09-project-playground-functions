@@ -29,37 +29,32 @@ function splitSentence(streng) {
 
 // Desafio 4
 function concatName(array) {
-  let nome = [];
-  nome.push(array[array.length - 1], array[0]);
-  return nome;
-}
+  return array[array.length - 1] + ' ' + array[0];
+}console.log(concatName(['hudson','carlos','soares', 'marinho']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(arrayNum) {
-  let cont = 0;
-  let maior ='';
+  let resutado = 0;
   for (let x = 0; x < arrayNum.length; x += 1) {
-    if (x === 0) {
-      maior = arrayNum[x];
-    }
-    if (maior < arrayNum[x]) {
-      maior = arrayNum[x];
-      cont = 0;
-    }
-    if (maior === arrayNum[x]) {
-      cont += 1;
+    arrayNum.sort();
+    if (arrayNum[x] === arrayNum[arrayNum.length - 1]) {
+      resutado += 1;
     }
   }
-  return cont;
+  return resutado;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, gat1, gat2) {
+  let
+  if (mouse > gat1) {
+    poss1 = mouse - gat1;
+  } 
 }
 
 // Desafio 8
