@@ -12,9 +12,9 @@ function calcArea(base, height) {
   return area;
 }
 
-// Desafio 3 -facil -
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 *okk*
+function splitSentence(phrase) {
+  return phrase.split(' ');
 }
 
 // Desafio 4 *okk*
@@ -36,6 +36,8 @@ let contNumber = 0;
 entrada: [9, 1, 2, 3, 9, 5, 7];
 
 function highestCount(arrayEntrada) {
+
+  let contNumber = 0;
   
   arrayEntrada.sort((a, b) => b-a);
 
@@ -48,10 +50,7 @@ function highestCount(arrayEntrada) {
 }
 return contNumber
 }
-
-
-
-  
+ 
 
 // Desafio 7 *n comecei*
 function catAndMouse() {
@@ -94,7 +93,7 @@ function encode(fr4s3) {
     
     return fr4s3;
     }
-  // seu código aqui
+  
 
 function decode(stringN) {
 
