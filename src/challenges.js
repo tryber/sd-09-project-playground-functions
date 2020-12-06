@@ -127,8 +127,43 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkIfIsDivider(number, divider) {
+  return ((number % divider) === 0);
+}
+
+function getFizzBuzz(context) {
+  let output = 'fizz';
+  if (context.isBuzz) {
+    output = 'buzz';
+  }
+  if (context.isFizz && context.isBuzz) {
+    output = 'fizzBuzz';
+  }
+  return output;
+}
+
+function handleFizzBuzz(context) {
+  let value;
+  context.isFizz = checkIfIsDivider(context.currentValue, 3);
+  context.isBuzz = checkIfIsDivider(context.currentValue, 5);
+  context.isFizzOrBuzz = (context.isFizz || context.isBuzz);
+  if (!(context.isFizzOrBuzz)) {
+    value = 'bug!';
+  } else {
+    value = getFizzBuzz(context);
+  }
+  context.input[context.currentIndex] = value;
+  return context;
+}
+
 function fizzBuzz(inputArray) {
-  // Code here
+  const contextObject = loopThroughIn(
+    {
+      input: inputArray,
+    },
+    handleFizzBuzz,
+  );
+  return contextObject.input;
 }
 
 // Desafio 9
