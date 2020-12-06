@@ -151,6 +151,7 @@ function generatePhoneNumber() {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let triangleExists = false;
+  let acount = 0;
   let sideA1 = lineA < (lineB + lineC);
   let sideA2 = lineA > (Math.abs(lineB - lineC));
   let sideB1 = lineB < (lineA + lineC);
@@ -161,10 +162,11 @@ function triangleCheck(lineA, lineB, lineC) {
 
   for (let index = 0; index < existenceConditions.length; index += 1) {
     if (existenceConditions[index] === true) {
-      triangleExists = true;
-    } else {
-      break;
+      acount += 1;
     }
+  }
+  if (acount === 6) {
+    triangleExists = true;
   }
 return triangleExists;
 }
