@@ -28,7 +28,7 @@ console.log(splitSentence(array));
 // Desafio 4
 function concatName(arrayDeStrings) {
   let lastFirst = arrayDeStrings.pop()
-  return lastFirst + ', ' + arrayDeStrings[0]
+  return lastFirst , arrayDeStrings[0]
 }
 let arrayDeNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 console.log(concatName(arrayDeNomes))
@@ -70,8 +70,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (cat2Distance > cat1Distance) {
     return 'cat1';
-  } 
-    return 'os gatos trombam e o rato foge'
+  }
+  return 'os gatos trombam e o rato foge'
 }
 console.log(catAndMouse(1, 0, 2))
 
