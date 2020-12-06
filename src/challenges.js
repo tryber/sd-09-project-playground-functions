@@ -52,6 +52,7 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let hunte = '';
   let cat1Distance = 0;
   let cat2Distance = 0;
   if(mouse > cat1){
@@ -96,7 +97,7 @@ function encode(array) {
   let divArray = [];
   for (let index = 0; index < array.length; index += 1) {
     divArray.push(array[index])
-  } 
+  }
   let encoding = [];
   for (let index = 0; index < divArray.length; index += 1) {
     if(divArray[index] === 'a') {
@@ -123,15 +124,15 @@ function decode(array) {
   }
   let decoding = [];
   for (let index = 0; index < divArray.length; index += 1) {
-    if(divArray[index] == 1) {
+    if(divArray[index] === '1') {
       divArray[index] = 'a';
-    } else if(divArray[index] == 2) {
+    } else if(divArray[index] === '2') {
       divArray[index] = 'e';
-    } else if(divArray[index] == 3) {
+    } else if(divArray[index] === '3') {
       divArray[index] = 'i';
-    } else if(divArray[index] == 4) {
+    } else if(divArray[index] === '4') {
       divArray[index] = 'o';
-    } else if(divArray[index] == 5) {
+    } else if(divArray[index] === '5') {
       divArray[index] = 'u';
     }
   }
@@ -141,23 +142,26 @@ function decode(array) {
   // seu código aqui
   return decoding
 }
+console.log(encode('hi there'))
+console.log(decode(encode('hi there')))
 
 // Desafio 10
-function techList(array, name) {
+function techList(array, nome) {
   let list = []
   let arrayOrd = array.sort();
-  if (array == '') {
+  if (array.length < 1) {
     list = 'Vazio!'
   } else {
       for (let index = 0; index < arrayOrd.length; index += 1){
       list.push({
           tech: arrayOrd[index],
-          name: name
+          name: nome
           })
       }
     }  
   return list;
 }
+console.log(techList([]))
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
