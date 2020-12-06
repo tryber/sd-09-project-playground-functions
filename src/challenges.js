@@ -178,7 +178,7 @@ function generatePhoneNumber(array) {
       break;
     }
   };
-  if (array.length > 11) {
+  if (array.length !== 11) {
     breaker = 1;
     return ('Array com tamanho incorreto.');
   } else if(breaker !== 1){
