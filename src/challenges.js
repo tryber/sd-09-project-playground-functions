@@ -21,10 +21,11 @@ function splitSentence(umaString) {
 }
 console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 
+function concatName(umArray) {
+  return umArray[0] + ", " + umArray[umArray.length -1]
 }
+console.log(concatName(["a","b", "c", "d"]))
 
 // Desafio 5
 function footballPoints() {
