@@ -19,10 +19,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(strings) {
-  let stringUl = strings[0];
-  let stringRev = strings.reverse();
-  console.log(stringRev[0] + '' + stringUl);
+  let stringFirst = strings[0];
+  let stringUl = strings.reverse()[0];
+  return stringUl + ' ' + stringFirst; 
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + (ties);
