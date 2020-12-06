@@ -21,8 +21,38 @@ function loopThroughIn(contextObject, applyFunction) {
 }
 
 // Desafio 3
+function handlePushing(context) {
+  console.log(typeof(context.currentIndex));
+  if (context.currentIndex == context.input.length - 1) {
+    context.currentWord += context.currentValue;
+  }
+  context.sentenceArray.push(context.currentWord);
+  context.currentWord = '';
+  return context;
+}
+
+function handleSplitSentence(context) {
+  let caseToPush = (
+    (context.currentValue === ' ') || (context.currentIndex == context.input.length - 1)
+    );
+  if (caseToPush) {
+    context = handlePushing(context);
+  } else {
+    context.currentWord += context.currentValue;
+  }
+  return context;
+}
+
 function splitSentence(sentence) {
-  // Code here
+  let contextObject = loopThroughIn(
+    {
+      input: sentence,
+      sentenceArray: [],
+      currentWord: [],
+    },
+    handleSplitSentence
+  );
+  return contextObject.sentenceArray;
 }
 
 // Desafio 4
