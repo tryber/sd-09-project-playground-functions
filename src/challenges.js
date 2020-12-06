@@ -172,11 +172,6 @@ function generatePhoneNumber(array) {
       }
     };
   }
-  if (breaker !== 1) {
-    numeroCompleto = '(' + numero + ')' + ' ' + numero1 + '-' + numero2;
-  }
-  return (numeroCompleto);
-
   for (index = 0; index < array.length; index += 1) {
     contador = 0;
     if (breaker === 1) {
@@ -198,7 +193,13 @@ function generatePhoneNumber(array) {
       break;
     }
   };
+  
+  if (breaker !== 1) {
+    numeroCompleto = '(' + numero + ')' + ' ' + numero1 + '-' + numero2;
+  }
+  return (numeroCompleto);
 }
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
