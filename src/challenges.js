@@ -32,7 +32,10 @@ function splitSentence(pharases) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(names) {
+  let finalValue = names;
+  let firstLast = finalValue[finalValue.length - 1] + ', ' + names[0];
+  return firstLast;
   // seu código aqui
 }
 
