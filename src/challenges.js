@@ -50,16 +50,16 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let result = 0;
   let high = 0;
-  for (const key in numbers) {
-    if (numbers[key] > high) {
-      high = numbers[key]
+    for (let index = 0; index < numbers.length; index += 1) {
+      if (numbers[index] > high) {
+        high = numbers[index]
+      }
     }
-  }
-  for (const key in numbers) {
-    if (numbers[key] === high) {
-      result += 1;
+    for (let counter = 0; counter < numbers.length; counter += 1) {
+      if (numbers[counter] === high) {
+        result += 1;
+      }
     }
-  }
   return result;
 // seu código aqui
 }
