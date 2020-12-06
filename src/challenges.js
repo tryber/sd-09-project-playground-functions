@@ -6,7 +6,7 @@ function compareTrue(values1, values2) {
 } 
   return false;
 }
-  console.log(compareTrue(true, true))
+console.log(compareTrue(true, true))
 
 // // Desafio 2
 // // seu código aqui
@@ -36,17 +36,15 @@ function compareTrue(values1, values2) {
 // // Desafio 5
 // // concluido
 // function footballPoints(wins, ties) {
-//   pontos = (wins * 3) + ties 
+// pontos = (wins * 3) + ties 
 //   return pontos
-// } 
-// console.log(footballPoints(5,2))
+//}
+//console.log(footballPoints(5,2))
 
 // // Desafio 6
 // function highestCount() {
-    
 //   let maiorNumero = array[0]
 //   let contaMaiorNumero = 0
-  
 //   // encontrar o maior valor
 //   for (let index = 0; index < array.length; index += 1) {
 //       if (array[index] > maiorNumero){
