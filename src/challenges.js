@@ -133,6 +133,7 @@ function decode(palavra2) {
 function techList(arrayTech, name) {
   if (arrayTech == '') {
     arrayTech = 'Vazio!';
+    name = 'Vazio!';
   } else {
     for (let index = 0; index < arrayTech.length; index += 1) {
       arrayTech[index] = {
