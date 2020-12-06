@@ -3,37 +3,44 @@ function compareTrue (bol, bole) {
   let compare = bol && bole;
   return compare;
 }
-compareTrue(true, false);
+// exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area; 
 }
-calcArea(10, 4);
+// exemplo de chamada da função: calcArea(10, 4);
 // Desafio 3
 function splitSentence(string) {
   let palavras = string.split(" ");
   return palavras;
 }
-splitSentence("Xablau is life");
+// exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
   let empty= [];
   firstLast = empty.concat(array[array.length - 1] + ', ' + array[0]);
   return(firstLast);
   }
-  concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+ // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) {
  let points = (wins *3 ) + ties;
  return points;
 }
-footballPoints(10, 10);
+// exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maxNumber = Math.max(...array);
+  let repeatCounter = 0;
+for (index=0; index < array.length ; index +=1){
+  if (maxNumber === array[index]) {
+      repeatCounter = repeatCounter + 1;
 }
-
+}
+ return repeatCounter;
+}
+// exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
