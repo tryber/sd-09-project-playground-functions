@@ -130,28 +130,22 @@ function decode(palavra2) {
 
 // Desafio 10
 function techList(arrayTech, name) {
-  let object = {};
-  arrayTech.sort();
-  for (let index = 0; index < arrayTech.length; index += 1) {
-    if (arrayTech !== '') {
+  if (arrayTech == '') {
+    arrayTech = 'Vazio!';
+  } else {
+    for (let index = 0; index < arrayTech.length; index += 1) {
       arrayTech[index] = {
         tech: arrayTech[index],
         name: name,
-      };
-    } else {
-      return 'Vazio';
+        };
+      }  
     }
-    object = {arrayTech};
+    return name, arrayTech;
   }
-  return name, object, arrayTech; 
-}
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 
-"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(){
-  
+
 }
 
 // Desafio 12
