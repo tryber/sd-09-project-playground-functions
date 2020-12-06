@@ -77,32 +77,34 @@ return arrayResp;
 
 // Desafio 9
 function encode(param) {
- let newString = [];
-   
- for (let key of param) {
-   switch (key){
-       case 'a':
-          newString.push('1');
-       break;
-       case 'e':
-          newString.push('2');
-       break;
-       case 'i':
-          newString.push('3');
-       break;
-       case 'o':
-          newString.push('4');
-       break;
-       case 'u':
-          newString.push('5'); 
-       break;
-       default:
-           newString.push(key);
-       
+  let newString = [];
+  let stringNew = 0;
+    
+  for (let key of param) {
+    switch (key){
+        case 'a':
+           newString.push('1');
+        break;
+        case 'e':
+           newString.push('2');
+        break;
+        case 'i':
+           newString.push('3');
+        break;
+        case 'o':
+           newString.push('4');
+        break;
+        case 'u':
+           newString.push('5'); 
+        break;
+        default:
+            newString.push(key);
+        
+    
+     
    }
-   
- }return newString.join(',').toString();
-}
+  }return newString.join('').toString();
+ } 
 
 function decode(param) {
  let newString = [];
@@ -129,7 +131,7 @@ function decode(param) {
        
    }
    
- }return newString.join(',');
+ }return newString.join('').toString();
   
 }
 // Desafio 10
