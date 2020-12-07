@@ -152,7 +152,7 @@ function hydrate(commandString) {
   }
   let waterDebitMessage = sumWaterCups + ' copo de água';
   return waterDebitMessage;
-};
+}
 
 module.exports = {
   calcArea,
