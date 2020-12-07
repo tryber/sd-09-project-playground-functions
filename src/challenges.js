@@ -177,8 +177,8 @@ function techListTest(index, array, name) {
   let object = {
     tech: array[index],
     name,
-    };
-    result.push(object);
+  };
+  result.push(object);
   return result;
 }
 
@@ -186,7 +186,7 @@ function techList(array, name) {
   let techArray = [];
   array = array.sort();
   if (array[0] !== undefined) {
-    for (let index = 0; index < array.length; index +=1) {
+    for (let index = 0; index < array.length; index += 1) {
       techArray.push(techListTest(index, array, name));
     }
   } else {
