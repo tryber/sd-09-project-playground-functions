@@ -65,7 +65,7 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let array = [];
+  let receiver = [];
   let result = '';
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
@@ -77,9 +77,9 @@ function fizzBuzz(arrayNumbers) {
     } else {
       result = 'bug!';
     }
-    array.push(result) 
+    receiver.push(result);
   }
-  return array;
+  return receiver;
 }
 let arrayNumbers = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayNumbers));
@@ -97,13 +97,13 @@ function encode(string) {
       case 'e':
         vowel[index] = '2';
         break;
-      case 'i': 
+      case 'i':
         vowel[index] = '3';
         break;
-      case 'o': 
+      case 'o':
         vowel[index] = '4';
         break;
-          case 'u': 
+          case 'u':
         vowel[index] = '5';
         break;
     }
@@ -125,13 +125,13 @@ function decode(string) {
         case '2':
           vowel[index] = 'e';
           break;
-        case '3': 
+        case '3':
           vowel[index] = 'i';
           break;
-        case '4': 
+        case '4':
           vowel[index] = 'o';
           break;
-        case '5': 
+        case '5':
           vowel[index] = 'u';
           break;
       }
@@ -162,14 +162,25 @@ console.log(techList(arrayTechnologies, studentName));
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   let toString = '';
+  
   for (let index = 0; index < phoneNumber.length; index += 1) {
+    let number = phoneNumber[index];
+    let popsUp = 1;
+    for (let position = 0; position < phoneNumber.length; position += 1) {
+      if ( phoneNumber[position] === number) {
+        popsUp += 1;
+      }
+    }
+    if(phoneNumber[index] < 0 || phoneNumber[index] > 9 || popsUp > 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
     toString += phoneNumber[index];
   }
-   if (phoneNumber.length === 11) {
-    return toString.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-  } else {
-    return 'Array com tamanho incorreto.';
-  } 
+    if (phoneNumber.length === 11) {
+      return toString.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+    } else {
+      return 'Array com tamanho incorreto.';
+    } 
 }
   let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
   console.log(generatePhoneNumber(number));
