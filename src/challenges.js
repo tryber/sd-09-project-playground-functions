@@ -152,18 +152,26 @@ function techList(array, name) {
 }
 
 // Desafio 11
+function verifyNumberRepetition(array, number) {
+  for (let index = 0; index < array.length; index += 1)
+  let cont = 0;
+  for (let index2 = 0; index2 < array.length; index2 += 1) {
+    if (array[index] === array[index2]) {
+      cont += 1;
+      if (cont >= 3) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 function generatePhoneNumber(array) {
   let telephone = '';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
-      let cont = 0;
-      for (let index2 = 0; index2 < array.length; index2 += 1) {
-        if (array[index] === array[index2]) {
-          cont += 1;
-          if (cont >= 3) {
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
-        }
+      if (verifyNumberRepetition(array, array[index]) === true){
+        return 'não é possível gerar um número de telefone com esses valores';
       }
       switch (true) {
         case ((array[index] < 0) || (array[index] > 9)):
