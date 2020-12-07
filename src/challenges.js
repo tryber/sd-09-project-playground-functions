@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
-    console.log('Desafio 1 Ta indo');
+    console.log('Desafio 1: Ta indo');
     return true;
   }
   return false;
@@ -10,7 +10,7 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   let calc = (base * height) / 2;
-  console.log(`desafio 2 ${calc}`);
+  console.log(`Desafio 2: ${calc}`);
   return calc;
 }
 
@@ -27,14 +27,14 @@ function splitSentence(string) {
     }
   }
   array.push(storage);
-  console.log(array);
+  console.log(`Desafio 3: ${array}`);
   return array;
 }
 
 // Desafio 4
 function concatName(array) {
   let seiLaEu = `${array[array.length - 1]}, ${array[0]}`;
-  console.log(seiLaEu);
+  console.log(`Desafio 4: ${seiLaEu}`);
   return seiLaEu;
 }
 
@@ -42,26 +42,31 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let result = 0;
   result += (wins * 3) + ties;
-  console.log(result);
+  console.log(`Desafio 5: ${result}`);
   return result;
 }
 
 // Desafio 6
 function highestCount(array) {
   let high = 0;
-  let result = 0;
   for (let index in array) {
     if (array[index] > high) {
       high = array[index];
     }
   }
-  for (let index2 in array) {
-    if (array[index2] === high) {
-      result += 1;
+  let result = addHigher(array, high);
+  console.log(`Desafio 6: ${result}`);
+  return result;
+}
+
+function addHigher(test, high) {
+  let sum = 0;
+  for (let index in test) {
+    if (test[index] === high) {
+       sum += 1;
     }
   }
-  console.log(result);
-  return result;
+  return sum;
 }
 
 // Desafio 7
@@ -81,13 +86,13 @@ function catAndMouse(mouse, cat1, cat2) {
     mouCat2 = cat2 - mouse;
   }
   if (mouCat2 > mouCat1) {
-    console.log('cat1');
+    console.log('Desafio 7: cat1');
     result = 'cat1';
   } else if (mouCat1 === mouCat2) {
-    console.log('os gatos trombam e o rato foge');
+    console.log('Desafio 7: os gatos trombam e o rato foge');
     result = 'os gatos trombam e o rato foge';
   } else {
-    console.log('cat2');
+    console.log('Desafio 7: cat2');
     result = 'cat2';
   }
   return result;
@@ -107,7 +112,7 @@ function fizzBuzz(array) {
       result.push('bug!')
     }
   }
-  console.log(result);
+  console.log(`Desafio 8: ${result}`);
   return result;
 }
 
@@ -129,7 +134,7 @@ function encode(string) {
       encoded += string[index];
     }
   }
-  console.log(encoded);
+  console.log(`Desafio 8: Codificando: ${encoded}`);
   return encoded;
 }
 function decode(encoded) {
@@ -149,7 +154,7 @@ function decode(encoded) {
       decoded += encoded[index];
     }
   }
-  console.log(decoded);
+  console.log(`Desafio 8: Decodificando: ${decoded}`);
   return decoded;
 }
 
@@ -177,7 +182,7 @@ function techList(array, name) {
   } else {
     techArray = 'Vazio!';
   }
-  console.log(techArray);
+  console.log(`Desafio 10: ${techArray}`);
   return techArray;
 }
 
