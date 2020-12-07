@@ -58,11 +58,11 @@ function fizzBuzz(meuArray) {
   let res = []
   for (i = 0 ; i < meuArray.length; i++) {
     if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
-      res.push("fizz")
+      res.push("fizzBuzz")
     } else if (meuArray[i] % 5 === 0) {
        res.push("buzz")
     } else if (meuArray[i] % 3 === 0){
-       res.push("fizBuzz")
+       res.push("fiz")
     } else {
       res.push("bug!")
     }
