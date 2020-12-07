@@ -1,10 +1,11 @@
 // Desafio 1 ===================================================================================================================
-function compareTrue(B1, B2) {
-  if((B1 == true) && (B2 == true)){
-    return('true');
+function compareTrue(b1, b2) {
+  if((b1 == true) && (b2 == true)){
+    out = ('true');
   } else {
-    return('false');
+    out = ('false');
   }
+  return(out);
 }
 // Testes da função:--------------------------------------------------------------------------------------
 console.log('Se Ambos os parâmetros forem verdadeiros, a função retorna: ' + compareTrue (true, true));
@@ -102,12 +103,13 @@ function catAndMouse(mouse, cat1, cat2) {
   getmouse1 = (mouse - cat1);
   getmouse2 = (mouse - cat2);
   if(getmouse1 == getmouse2){
-    return("os gatos trombam e o rato foge");
+    out = ("os gatos trombam e o rato foge");
   } else if (getmouse1 < getmouse2){
-    return("cat1");
+    out = ("cat1");
   } else if (getmouse2 < getmouse1){
-    return("cat2");
+    out = ("cat2");
   }
+  return (out);
 }
 // Testes da função: --------------
 console.log(catAndMouse(10, 8, 5));
