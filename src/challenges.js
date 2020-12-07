@@ -143,15 +143,16 @@ function techList(arrayTech, name) {
 
   if (!arrayTech) {
     return 'Vazio!';
-  }
-  for (let index = 0; index < arrayTechSort.length; index += 1) {
-    let objt = {
-      tech: arrayTechSort[index],
-      name: name
+  } else {
+    for (let index = 0; index < arrayTechSort.length; index += 1) {
+      let objt = {
+        tech: arrayTechSort[index],
+        name: name
+      }
+      objtArray.push(objt);
     }
-    objtArray.push(objt);
+    return objtArray;
   }
-  return objtArray;
 }
 
 
