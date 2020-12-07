@@ -207,10 +207,18 @@ function generatePhoneNumber(array) {
     return arrayTrueFalse;
   }
 
-  let ddd = '';
-  let ddd = array.slice(0, 2);
-  let primeiroNumero = array.slice(2, 7);
-  let segundoNumero = array.slice(7, 12);
+  function arrayString(array) {
+    let telefone = '';
+    for (let contador of array) {
+      telefone += contador;
+    }
+    return telefone;
+  }
+
+  let telefoneString = arrayString(array);
+  let ddd = telefoneString.slice(0, 2);
+  let primeiroNumero = telefoneString.slice(2, 7);
+  let segundoNumero = telefoneString.slice(7, 12);
 
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -219,10 +227,10 @@ function generatePhoneNumber(array) {
   } else if (numeroMenorMaior(array) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  let telefone = '';
-  telefone = `(${ddd}) ${primeiroNumero}-${segundoNumero}`;
+  let telefoneFinal = '';
+  telefoneFinal = `(${ddd}) ${primeiroNumero}-${segundoNumero}`;
 
-  return telefone;
+  return telefoneFinal;
 }
 console.log(generatePhoneNumber(array))
 // Desafio 12
