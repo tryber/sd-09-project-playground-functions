@@ -14,15 +14,17 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
+  return sentence.split(" ")
+
 }
 
-
-// Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(namesArray) {
+  let lastItem = namesArray.pop();
+  let firstItem = namesArray[0];
+  let finalArray = [lastItem, firstItem];
+  return finalArray
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let total = (wins * 3) + ties;
@@ -45,9 +47,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let winner = '';
   let distancia1 = Math.abs(mouse - cat1);
   let distancia2 = Math.abs(mouse - cat2);
-  if (distancia1 < distancia2) {
+  if (distancia1 > distancia2) {
     winner = 'cat2';
-  } else if (distancia2 < distancia1) {
+  } else if (distancia2 > distancia1) {
       winner = 'cat1';
     } else {
       winner = 'os gatos trombam e o rato foge';
@@ -55,8 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return winner
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
 }
 
 // Desafio 9
