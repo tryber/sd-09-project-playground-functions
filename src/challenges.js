@@ -55,96 +55,52 @@ function highestCount(count) {
   }// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9, 8, 9, 9]));
 
 // Desafio 7
-
-function getCatDistance(catPosition, mousePosition) {
-  return Math.abs(mousePosition - catPosition);
-}
-function getClosestCat(first, second) {
-  let closest = first.name;
-  if (first.distance > second.distance) {
-    closest = second.name;
-  }
-  return closest;
-}
 function catAndMouse(mouse, cat1, cat2) {
-  let outcome = '';
-  cat1 = { name: 'cat1', distance: getCatDistance(cat1, mouse) };
-  cat2 = { name: 'cat2', distance: getCatDistance(cat2, mouse) };
-  if (cat1.distance === cat2.distance) {
-    outcome = 'Os gatos trombam e o rato foge!';
-  } else {
-    outcome = getClosestCat(cat1, cat2);
+  
+  if (cat1 <= mouse && cat1 > cat2) {
+    console.log('cat1');
+  } else if (cat2 <= mouse && cat2 > cat1) {
+    console.log('cat2');
+  } else if(cat1 == cat2 < mouse) {
+    console.log('os gatos trombam e o rato foge')
   }
-  return outcome;
-}console.log(catAndMouse(2, 4, 4));
+}//console.log(catAndMouse(2, 4, 4));
 
 // Desafio 8
-function fizzBuzz() {
+function getFizzBuzz(number) {
+  let remainderBy3 = number % 3;
+  let remainderBy5 = number % 5;
+  let output = '';
+  if ((remainderBy3 === 0) && (remainderBy5 === 0)) {
+    output = 'fizzBuzz';
+  } else if (remainderBy3 === 0) {
+    output = 'fizz';
+  } else if (remainderBy5 === 0) {
+    output = 'buzz';
+  } else {
+    output = 'bug!';
+  }
+  return output;
+}
+function fizzBuzz(inputArray) {
+  for (let index in inputArray) {
+    let number = inputArray[index];
+    let resultStr = getFizzBuzz(number);
+    inputArray[index] = resultStr;
+  }
+  return inputArray;
+}console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
   // seu código aqui
 }
 
-// Desafio 9
-function encode() {
-// seu código aqui
-}
-
-// function translate(context) {
-//   let value = context.currentValue;
-//   if (context.currentValue in context.dictionary){
-//     value = context.dictionary[context.currentValue];
-//   }
-//   context.translation += value;
-//   return context;
-// }
-
-// function getTranslation(text, dictionary) {
-//   const contextObject = loopThroughIn(
-//     {
-//       input: text,
-//       dictionary,
-//       translation: '',
-//     },
-//     translate,
-//   );
-//   return contextObject.translation;
-// }
-
-// function encode(text) {
-//   const dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-//   return getTranslation(text, dictionary);
-// }
-
-function decode(text) {
-//   const dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
-//   return getTranslation(text, dictionary);
-}
-
 // Desafio 10
-function addObject(context) {
-  context.techList.push({ tech: context.currentValue, name: context.name });
-  return context;
-}
-function orderAscending(context) {
-  let nextIndex = parseInt(context.currentIndex) + 1;
-  let nextValue = context.input[nextIndex.toString()];
-  let currentGreaterThanNext = (context.currentValue > nextValue);
-  let nextIndexExists = (nextIndex in context.input);
-  if (currentGreaterThanNext && nextIndexExists) {
-    context.input[context.currentIndex] = nextValue;
-    context.input[nextIndex] = context.currentValue;
-  }
-  return context;
-}
+function techList() {
 
-function techList(array, name) {
-  let contextObject = { input: array };
-  for (let cycles = array.length - 1; cycles > 0; cycles -= 1) {
-    contextObject = loopThroughIn(contextObject, orderAscending);
-  }
-  contextObject.name = name;
-  contextObject.techList = [];
-  contextObject = loopThroughIn(contextObject, addObject);
-  return contextObject.techList;
 }
 
 // Desafio 11
