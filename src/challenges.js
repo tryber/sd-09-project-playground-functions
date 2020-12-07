@@ -84,25 +84,25 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui  
+  // seu código aqui
   let string = 'Boa tarde, iluminados!'
   let stringAux = ''
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
-        stringAux += '1'
-      } else if (string[index] === 'e') {
-        stringAux += '2'
-      } else if (string[index] === 'i') {
-        stringAux += '3'
-      } else if (string[index] === 'o') {
-        stringAux += '4'
-      } else if (string[index] === 'u') {
-        stringAux += '5'
-      } else {
-        stringAux += string[index]
-      }
+      stringAux += '1'
+    } else if (string[index] === 'e') {
+      stringAux += '2'
+    } else if (string[index] === 'i') {
+      stringAux += '3'
+    } else if (string[index] === 'o') {
+      stringAux += '4'
+    } else if (string[index] === 'u') {
+      stringAux += '5'
+    } else {
+      stringAux += string[index]
     }
-    return stringAux
+  }
+  return stringAux
 }
 function decode(numbers) {
   // seu código aqui
@@ -127,8 +127,7 @@ function decode(numbers) {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
-  
+  // seu código aqui  
 }
 
 // Desafio 11
@@ -145,7 +144,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-decode()
+
 module.exports = {
   calcArea,
   catAndMouse,
