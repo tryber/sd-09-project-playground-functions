@@ -106,7 +106,7 @@ function decode(stringToDecode) {
 
 // Desafio 10
 function techList(techs, name) {
-  if (techs === '') {
+  if (techs == '') {
     return 'Vazio!';
   }
   let techListName = [];
