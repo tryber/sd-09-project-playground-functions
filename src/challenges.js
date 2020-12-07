@@ -41,9 +41,9 @@ function highestCount(values) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  function calcPosition (pos1, pos2) {
-    return Math.abs (pos1 - pos2);
+function catAndMouse(mouse, cat1, cat2) {
+  function calcPosition(pos1, pos2) {
+    return Math.abs(pos1 - pos2);
   }
   
   if (calcPosition(mouse, cat1) <  calcPosition(mouse, cat2)) {
