@@ -174,6 +174,7 @@ function numberLess0(arrayNumber) {
 }
 function verificationNumber(arrayNumber) {
   let repeatNumber = 0
+  let result = true;
   for (let count = 0; count < arrayNumber.length; count += 1) {
     repeatNumber = 0;
     for (let count2 = 0; count2 < arrayNumber.length; count2 += 1) {
@@ -182,10 +183,10 @@ function verificationNumber(arrayNumber) {
       }
     }
     if (repeatNumber > 2) {
-      return false;
+      result = false;
     }
   }
-  return true;
+  return result;
 }
 function transformeArrayString(arrayNumber) {
   let stringNumber = '';
@@ -214,12 +215,8 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let result = false;
   let totalLines = lineA + lineB + lineC;
-  if (lineA < Math.abs(totalLines - lineA)) {
-    if (lineB < Math.abs(totalLines - lineB)) {
-      if (lineC < Math.abs(totalLines - lineC)) {
-        result = true;
-      }
-    }
+  if (lineA < Math.abs(totalLines - lineA) && lineB < Math.abs(totalLines - lineB) && lineC < Math.abs(totalLines - lineC)) {
+    result = true;
   }
   return result;
 }
