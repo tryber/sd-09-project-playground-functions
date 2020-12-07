@@ -78,9 +78,9 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numberArray) {
   let resultado = [];
-  for (let i = 0; i <= numberArray.length; i += 1) {
+  for (let i = 0; i < numberArray.length; i += 1) {
     if ((numberArray[i] % 3 === 0) && (numberArray[i] % 5 === 0)) {
-      resultado.push('fizz', 'buzz');
+      resultado.push('fizzBuzz');
     } else if ((numberArray[i] % 3 === 0)) {
       resultado.push('fizz');
     } else if ((numberArray[i] % 5 === 0)) {
@@ -96,7 +96,7 @@ function fizzBuzz(numberArray) {
 function encode(letter) {
   let letters = letter.split('');
   let result = '';
-  for (let i = 0; i <= letters.length; i += 1) {
+  for (let i = 0; i < letters.length; i += 1) {
     switch (letters[i]) {
       case 'a':
         letters[i] = '1';
@@ -123,8 +123,8 @@ function encode(letter) {
 
 function decode(letter) {
   let letters = letter.split('');
-  console.log(letter);
-  for (let i = 0; i <= letters.length; i += 1) {
+  let result = '';
+  for (let i = 0; i < letters.length; i += 1) {
     switch (letters[i]) {
       case '1':
         letters[i] = 'a';
@@ -144,21 +144,25 @@ function decode(letter) {
       default:
         console.log('Repita o processo')
     }
+    result += letters[i];
   }
-  return letters
+  return result
 }
 
 // Desafio 10
 function techList(tecnologia, name) {
-  let resultado = []
-  for (let i in tecnologia) {
-    let objeto = {
-      tecnologia: tecnologia[i],
-      nome: name,
-    }
-    resultado.push(objeto);
+  let resultado = [];
+  if (tecnologia.length !== 0){
+      for (let i in tecnologia) {
+          let objeto = {
+          tech: tecnologia[i],
+          nome: name
+          }
+      resultado.push(objeto);
+      }
+      return resultado
   }
-  return resultado
+  return 'Vazio!' 
 }
 
 
