@@ -32,14 +32,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function getNumberRepetition(number1, number2, count){
+  if (number1 === number2) {
+    count += 1;
+  }
+  return count;
+}
+
 function highestCount(array) {
   let higherNum = 0;
   let count = 0;
   higherNum = Math.max(...array);
   for (let index = 0; index < array.length; index += 1) {
-    if (higherNum === array[index]) {
-      count += 1;
-    }
+    count = getNumberRepetition(higherNum, array[index], count);
   }
   return count;
 }
@@ -153,13 +158,11 @@ function techList(array, name) {
 
 // Desafio 11
 function verifyNumberRepetition(array, number) {
-  let cont = 0;
+  let count = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (number === array[index]) {
-      cont += 1;
-    }
+    count = getNumberRepetition(number, array[index], count);
   }
-  if (cont >= 3) {
+  if (count >= 3) {
     return true;
   }
   return false;
@@ -169,7 +172,7 @@ function generatePhoneNumber(array) {
   let telephone = '';
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  }for (let index = 0; index < array.length; index += 1) {
+  } for (let index = 0; index < array.length; index += 1) {
     switch (true) {
       case (verifyNumberRepetition(array, array[index])):
         return 'não é possível gerar um número de telefone com esses valores';
