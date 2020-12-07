@@ -288,7 +288,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let number2 = false;
   let number3 = false;
 
-  function menorQueSomaDasMedidas(numberMenor1, numberMenor2, numberMenor3) {
+  function menorMedidas(numberMenor1, numberMenor2, numberMenor3) {
     let somaNumero = numberMenor2 + numberMenor3;
 
     if (numberMenor1 < somaNumero) {
@@ -306,13 +306,13 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 
-  if (menorQueSomaDasMedidas(lineA, lineB, lineC) === true && numeroAbsoluto(lineA, lineB, lineC) === true) {
+  if (menorMedidas(lineA, lineB, lineC) === true && numeroAbsoluto(lineA, lineB, lineC) === true) {
     number1 = true;
   }
-  if (menorQueSomaDasMedidas(lineB, lineA, lineC) === true && numeroAbsoluto(lineB, lineA, lineC) === true) {
+  if (menorMedidas(lineB, lineA, lineC) === true && numeroAbsoluto(lineB, lineA, lineC) === true) {
     number2 = true;
   }
-  if (menorQueSomaDasMedidas(lineC, lineA, lineB) === true && numeroAbsoluto(lineC, lineA, lineB) === true) {
+  if (menorMedidas(lineC, lineA, lineB) === true && numeroAbsoluto(lineC, lineA, lineB) === true) {
     number3 = true;
   }
 
