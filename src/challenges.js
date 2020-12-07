@@ -168,7 +168,6 @@ function generatePhoneNumber(array) {
       switch (true) {
         case ((array[index] < 0) || (array[index] > 9)):
           return 'não é possível gerar um número de telefone com esses valores';
-          break;
         case (index === 0):
           telephone += `(${array[index]}`;
           break;
@@ -184,8 +183,9 @@ function generatePhoneNumber(array) {
       }
     }
     return telephone;
+  } else {
+    return 'Array com tamanho incorreto.';
   }
-  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
