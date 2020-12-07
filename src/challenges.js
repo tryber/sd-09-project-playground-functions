@@ -130,10 +130,10 @@ function techList(arr, name) {
   for (let index = 0; index < sorted.length; index += 1) {
     techs.push({
       tech: sorted[index],
-      name: name
+      name: name,
     })
   }
-  
+
   return techs
 }
 
