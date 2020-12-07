@@ -128,17 +128,23 @@ function decode(numbers) {
 // Desafio 10
 function techList(techArray, name) {
   // seu código aqui
-  let returArray = []
+  let rawArray = []
   for (let index = 0; index < techArray.length; index += 1) {
     let objeto = {}
     objeto.tech = techArray[index]
     objeto.name = name
-    returArray.push(objeto)
+    rawArray.push(objeto)
   }
-  if (returArray == null) {
+  if (rawArray == null) {
     return 'Vazio!'
+  } else {
+    return sortList(rawArray)
   }
-  return returArray
+
+  function sortList(arr) {
+    let sortedArray = returArray.sort()
+    return sortedArray
+  }
 }
 
 // Desafio 11
