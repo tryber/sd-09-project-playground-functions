@@ -153,10 +153,22 @@ function generatePhoneNumber(numbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  for(let index = 0; index < numbers.length; index += 1) {
-  rN.push(numbers[index])  
-    }
-concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
+  var sortedNumbers = numbers.sort();
+  var results = [];
+  for (let index = 0; index < sortedNumbers.length - 1; index+= 1) {
+      if (sortedNumbers[index + 1] == sortedNumbers[index]) {
+        results.push(sortedNumbers[index]);
+      }
+  }
+ for(let index = 0; index < results.length; index += 1){
+  if(results[index +1] === results[index]) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }  
+ }
+ for(let index = 0; index < numbers.length; index += 1) {
+  rN[index] = Math.floor( Math.random(numbers) * 9);
+  }
+  concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
   return(concat);
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9]));
