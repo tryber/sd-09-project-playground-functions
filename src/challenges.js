@@ -173,7 +173,7 @@ function repeatedNumber(array) {
 
 function lengthArray(array) {
     let verificando = false
-    if (array.length === 0) {
+    if (array.length <= 0) {
       verificando = true
     } else if (array.length !== 11) {
       verificando = true
@@ -192,7 +192,7 @@ function numberArray (array) {
 
 function generatePhoneNumber(array) {
   // seu código aqui
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index <= array.length; index += 1) {
     if (numberArray(array) || repeatedNumber(array)) {
     return 'não é possível gerar um número de telefone com esses valores'  
     }
