@@ -1,6 +1,12 @@
-function concatName(array) {
-    let empty= [];
-    firstLast = empty.concat(array[array.length - 1] + ', ' + array[0]);
-    console.log(firstLast);
+function catAndMouse(mouse,cat1,cat2) {
+    let mCat1= mouse-cat1; 
+    let mCat2= mouse-cat2; 
+    if( mCat1 < mCat2){
+      return "cat1";
+    } else if ( mCat1 > mCat2){
+      return "cat2";
+    } else {
+      return "os gatos trombam e o rato foge"
     }
-    concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+  }
+  catAndMouse (10,5,3)

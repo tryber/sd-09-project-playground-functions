@@ -42,10 +42,18 @@ for (index=0; index < array.length ; index +=1){
 }
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let mCat1= mouse-cat1; 
+  let mCat2= mouse-cat2; 
+  if( mCat1 < mCat2){
+    return "cat1";
+  } else if ( mCat1 > mCat2){
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
-
+// exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
