@@ -141,15 +141,13 @@ function techList(arrayTech, name) {
   let objtArray = [];
   let arrayTechSort = arrayTech.sort();
 
-  if(arrayTech == null){
-    return "Vazio!";
+  if (!arrayTech) {
+    return 'Vazio!';
   }
-  
-  for(let index = 0 ; index < arrayTechSort.length; index +=1){
-    
+  for (let index = 0; index < arrayTechSort.length; index += 1) {
     let objt = {
-      tech : arrayTechSort[index], 
-      name : name
+      tech: arrayTechSort[index],
+      name: name
     }
     objtArray.push(objt);
   }
