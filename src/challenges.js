@@ -51,10 +51,10 @@ function footballPoints(wins, ties) {
 
 
 // Desafio 6
-let teste = [7, 1, 2, 3, 8, 10, 10, 5, 7];
+let teste = [7, 1,12,12,12, 2, 3, 8, 10, 31,10,31, 31, 5, 7, 11, 11, 11];
 function highestCount(numbers) {
   let dicionario ={};
-  let maiorN = 1;
+  let maiorN = 0;
   for (i in numbers){
         if (!( numbers[i] in dicionario)) {
             dicionario[numbers[i]] = 1
@@ -63,16 +63,17 @@ function highestCount(numbers) {
             dicionario[numbers[i]] += 1
         }
     }
+  // console.log(dicionario)
   for (j in dicionario){
         if (parseInt(j) > maiorN){
             maiorN = j
         }
     }
+  // console.log(maiorN)
   return dicionario[maiorN];
   // seu código aqui
 }
-
-console.log(highestCount(teste))
+// console.log(highestCount(teste))
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
