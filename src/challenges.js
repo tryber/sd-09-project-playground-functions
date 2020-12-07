@@ -146,8 +146,9 @@ function validRange(arrayNumber) {
   return true;
 }
 
-function validNumber(arrayNumber) {
+function validArray(arrayNumber) {
   let count = 0;
+  
   for (let number of arrayNumber) {
     for (let index = 0; index < arrayNumber.length; index += 1) {
       if (number === arrayNumber[index]) {
@@ -168,7 +169,7 @@ function generatePhoneNumber(arrayNumber) {
   }
 
   let phoneNumber = arrayNumber.join('');
-  if (validRange(arrayNumber) && validNumber(arrayNumber)) {
+  if (validRange(arrayNumber) && validArray(arrayNumber)) {
     phoneNumber = `(${phoneNumber.substr(0, 2)}) ${phoneNumber.substr(2, 5)}-${phoneNumber.substr(7, 11)}`;
   } else {
     phoneNumber = 'não é possível gerar um número de telefone com esses valores';
