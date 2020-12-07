@@ -142,41 +142,47 @@ for(let index = 0; index < tech.length; index += 1) {
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
-// Desafio 11
-function generatePhoneNumber(numbers) {
-  let rN = []
+//Desafio 11
+function invalidValue(numbers){
+  let sorted_arr = numbers.sort(); 
+  let results = []; 
+  for (var i = 0; i < sorted_arr.length; i++) {
+      if (sorted_arr[i + 1] == sorted_arr[i]) {
+          results.push(sorted_arr[i]);
+      }
+  }
+  for(let index = 0; index < results.length; index += 1){
+    if(results[index +1] === results[index]) {
+      return false
+    }
+  }
+}
+function generatePhoneNumber(numbers) {  
   if(numbers.length < [11] || numbers.length > [11]) {
       return 'Array com tamanho incorreto.';
-    }
+    }    
   for(let index = 0; index < numbers.length; index += 1){
-    if(numbers[index] < 0 || numbers[index] > 9) {
+    if(numbers[index] < 0 || numbers[index] > 9 || invalidValue(numbers) == false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  var sortedNumbers = numbers.sort();
-  var results = [];
-  for (let index = 0; index < sortedNumbers.length - 1; index+= 1) {
-      if (sortedNumbers[index + 1] == sortedNumbers[index]) {
-        results.push(sortedNumbers[index]);
-      }
-  }
- for(let index = 0; index < results.length; index += 1){
-  if(results[index +1] === results[index]) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }  
- }
+ let rN = [] 
  for(let index = 0; index < numbers.length; index += 1) {
-  rN[index] = Math.floor( Math.random(numbers) * 9);
-  }
-  concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
+   rN.push(numbers[index])}    
+concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
   return(concat);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9]));
+console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 1, 7, 7, 9]));
 
 //Desafio 12
-function triangleCheck() {
-  // seu código aqui  
+function triangleCheck(lineA, lineB, lineC) {
+if(lineA < (lineB + lineC) && lineA > (lineB % lineC) && lineB < (lineC + lineA) && lineB > (lineC % lineA) && lineC < (lineB + lineA) && lineC > (lineB % lineA)) {
+  return(true)
+  } else {
+    return false
+  }   
 }
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
