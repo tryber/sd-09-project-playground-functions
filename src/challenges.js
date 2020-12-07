@@ -106,7 +106,7 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   let output = 'Array com tamanho incorreto!';
   if (array.length === 11) {
     output = 'Não é possível gerar um número de telefone com esses valores!';
