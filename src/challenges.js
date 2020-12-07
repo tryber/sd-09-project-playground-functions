@@ -179,19 +179,22 @@ function isValid(array) {
   return true;
 }
 
-function isSafeToPass(array){
+function isSafeToPass(array) {
   if (!isValid(array)) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    return false;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (checkDuplicate(array, array[index]) > 2) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return false;
     }
   }
+  return true;
 }
 
 function generatePhoneNumber(arrayNumber) {
-  isSafeToPass(arrayNumber);
+  if (!isSafeToPass(arrayNumber)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   if (arrayNumber.length === 11) {
     return '(' + arrayNumber[0] + '' + arrayNumber[1] + ') ' + arrayNumber[2] + '' + arrayNumber[3] + '' + arrayNumber[4] + '' + arrayNumber[5] + '' + arrayNumber[6] + '-' + arrayNumber[7] + '' + arrayNumber[8] + '' + arrayNumber[9] + '' + arrayNumber[10]
   }
