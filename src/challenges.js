@@ -100,7 +100,7 @@ function encode(string) {
   }
   return encrypt;
 }
-console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
 function decode(string) {
   let decrypt = string;
@@ -112,7 +112,7 @@ function decode(string) {
   }
   return decrypt;
 }
-console.log(decode('h3 th2r2!'));
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(array, name) {
@@ -133,8 +133,43 @@ function techList(array, name) {
 // console.log(techList([], 'Marcus'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  if (arrayNumber.length < 11) {
+    return 'Array com tamanho incorreto';
+  }
+
+  if (validRange(arrayNumber) && validNumber(arrayNumber)) {
+    let phoneNumber = arrayNumber.join('');
+    return phoneNumber = '(' + phoneNumber.substr(0, 2) + ') ' + phoneNumber.substr(2, 5) + '-' + phoneNumber.substr(7, 11);
+  } else {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+}
+console.log(generatePhoneNumber([1, 1, 9, 8, 6, 2, 4, 8, 7, 0, 7]));
+
+function validRange(arrayNumber) {
+  for (let number of arrayNumber) {
+    if (number < 0 || number > 9) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function validNumber(arrayNumber) {
+  let count = 0;
+  for (let number of arrayNumber) {
+    for (let index = 0; index < arrayNumber.length; index += 1) {
+      if (number === arrayNumber[index]) {
+        count += 1;
+      }
+    }
+    if (count >= 3) {
+      return false;
+    }
+    count = 0;
+  }
+  return true;
 }
 
 // Desafio 12
