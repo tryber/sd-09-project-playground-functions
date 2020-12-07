@@ -102,18 +102,20 @@ console.log('');
 
 // Desafio 7 ===================================================================================================================
 function catAndMouse(mouse, cat1, cat2) {
-  getmouse1 = (mouse - cat1);
-  getmouse2 = (mouse - cat2);
+  getmouse1 = Math.abs(mouse - cat1);
+  getmouse2 = Math.abs(mouse - cat2);
   if(getmouse1 == getmouse2){
     out = ("os gatos trombam e o rato foge");
   } else if (getmouse1 < getmouse2){
-    out = ("cat2");
-  } else if (getmouse2 < getmouse1){
     out = ("cat1");
+  } else if (getmouse2 < getmouse1){
+    out = ("cat2");
   }
   return (out);
 }
 // Testes da função: --------------
+console.log(catAndMouse(2, -1, 5));
+console.log(catAndMouse(2, -1, 1));
 console.log(catAndMouse(10, 8, 5));
 console.log(catAndMouse(10, 1, 9));
 console.log(catAndMouse(10, 9, 9));
