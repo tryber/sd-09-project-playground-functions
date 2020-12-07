@@ -10,14 +10,14 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-return ((base * height) / 2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-let array = [];
-let word = '';
+  let array = [];
+  let word = '';
 
   for (let contador = 0; contador < string.length; contador += 1) {
     if (string[contador] !== ' ') {
@@ -27,42 +27,53 @@ let word = '';
       word = '';
     }
   }
-array.push(word);
-return array;
+  array.push(word);
+  return array;
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
 
-let string = '';
+  function primeiroItem(array1) {
+    let primeiroNome = '';
+    primeiroNome += array1[array1.length - 1];
+    return primeiroNome;
+  }
 
-string = string.concat(`${array[array.length - 1]} , ${array[0]}`);
+  function segundoItem(array2) {
+    let segundoNome = '';
+    segundoNome += array2[0];
+    return segundoNome;
+  }
 
-return string;
+  let string = '';
+
+  string = string.concat(`${primeiroItem(array)}, ${segundoItem(array)}`);
+
+  return string;
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-let pontos = 0;
+  let pontos = 0;
 
   function pontosWins(wins) {
-    let pontosWins = 0;
-    pontosWins = wins * 3;
-    return pontosWins;
+    let pontosW = 0;
+    pontosW = wins * 3;
+    return pontosW;
   }
 
   function pontosTies(ties) {
-    let pontosTies = 0;
-    pontosTies = ties * 1;
-    return pontosTies;
+    let pontosT = 0;
+    pontosT = ties * 1;
+    return pontosT;
   }
 
-pontos = pontosWins(wins) + pontosTies(ties);
+  pontos = pontosWins(wins) + pontosTies(ties);
 
-return pontos;
+  return pontos;
 }
 
 // Desafio 6
@@ -117,9 +128,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (catFunct1(mouse, cat1) > catFunct2(mouse, cat2)) {
     return 'cat2';
-  } else if (catFunct1(mouse, cat1) === catFunct2(mouse, cat2)) {
-    return 'os gatos trombam e o rato foge'
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
