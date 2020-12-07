@@ -108,7 +108,7 @@ function fizzBuzz(arrayN) {
     // else if (!(arrayN[i] % 3 == 0) && !(arrayN[i] % 5 == 0)){
     //   bzfz.push('bug!')
     // }
-    else{
+    else if ((!(arrayN[i] % 5 == 0) && !(arrayN[i] % 3 == 0)) || arrayN[i] === 0){
       bzfz.push("bug!")
     }
   }
