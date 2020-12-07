@@ -52,7 +52,13 @@ function highestCount(vd6) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  
+  let distIgual = 'os gatos trombam e o rato foge';
+  if(cat1 > cat2)
+    return cat1;
+  else if (cat2 > cat1)
+    return cat2;
+  else
+    return distIgual;
 }
 
 // Desafio 8
