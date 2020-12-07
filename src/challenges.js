@@ -144,7 +144,8 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
 //Desafio 11
 function invalidValue(numbers){
-  let sorted_arr = numbers.sort(); 
+  let teste = numbers
+  let sorted_arr = teste.sort(); 
   let results = []; 
   for (var i = 0; i < sorted_arr.length; i++) {
       if (sorted_arr[i + 1] == sorted_arr[i]) {
@@ -176,11 +177,11 @@ console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 1, 7, 7, 9]));
 
 //Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-if(lineA < (lineB + lineC) && lineA > (lineB % lineC) && lineB < (lineC + lineA) && lineB > (lineC % lineA) && lineC < (lineB + lineA) && lineC > (lineB % lineA)) {
-  return(true)
+if(lineA < (lineB + lineC) && lineA > (lineB - lineC) && lineB < (lineC + lineA) && lineB > (lineC - lineA) && lineC < (lineB + lineA) && lineC > (lineB - lineA)) {
+  return true;
   } else {
-    return false
-  }   
+    return false;
+  }
 }
 console.log(triangleCheck(10, 14, 8))
 
