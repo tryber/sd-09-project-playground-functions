@@ -138,25 +138,37 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function encodeYes(string, index) {
+  let encoded = 0;
+  if (string[index].toLowerCase() === 'a') {
+    encoded = 1;
+  } else if (string[index].toLowerCase() === 'e') {
+    encoded = 2;
+  } else if (string[index].toLowerCase() === 'i') {
+    encoded = 3;
+  } else if (string[index].toLowerCase() === 'o') {
+    encoded = 4;
+  } else {
+    encoded = 5;
+  }
+  return encoded;
+}
+
 function encode(string) {
   let encoded = '';
   for (let index in string) {
-    if (string[index].toLowerCase() === 'a') {
-      encoded += 1;
-    } else if (string[index].toLowerCase() === 'e') {
-      encoded += 2;
-    } else if (string[index].toLowerCase() === 'i') {
-      encoded += 3;
-    } else if (string[index].toLowerCase() === 'o') {
-      encoded += 4;
-    } else if (string[index].toLowerCase() === 'u') {
-      encoded += 5;
+    if (string[index].toLowerCase() === 'a' || string[index].toLowerCase() === 'e' || string[index].toLowerCase() === 'i' || string[index].toLowerCase() === 'o' || string[index].toLowerCase() === 'u') {
+      encoded += encodeYes(string, index, encoded)
     } else {
       encoded += string[index];
     }
   }
-  console.log(`Desafio 8: Codificando: ${encoded}`);
+  console.log(`Desafio 9: Codificando: ${encoded}`);
   return encoded;
+}
+
+function decodeYes(encoded) {
+
 }
 
 function decode(encoded) {
@@ -176,7 +188,7 @@ function decode(encoded) {
       decoded += encoded[index];
     }
   }
-  console.log(`Desafio 8: Decodificando: ${decoded}`);
+  console.log(`Desafio 9: Decodificando: ${decoded}`);
   return decoded;
 }
 
