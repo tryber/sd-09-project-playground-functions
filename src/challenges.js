@@ -1,4 +1,4 @@
-   // Desafio 1
+    // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
@@ -15,7 +15,6 @@ function calcArea(base, heigth) {
 }
 //console.log(calcArea(10, 5));
 
-
 // Desafio 3
 let array = 'go trybe';
 function splitSentence(string) {
@@ -25,7 +24,6 @@ function splitSentence(string) {
 //console.log(splitSentence(array));
 
 //Desafio 4
-
 let arrays = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(nomes) {
 let firstName = nomes[0];
@@ -49,24 +47,20 @@ function highestCount(arrayys) {
 let contador = 0;
 let maiorNumero = 0;
   for (let i = 0; i < arrayys.length; i += 1) {
-     if (maiorNumero > arrayys[i]) {
+      if (maiorNumero > arrayys[i]) {
       contador = contador;
       maiorNumero = maiorNumero;
-     } else if (maiorNumero === arrayys[i]) {
+      } else if (maiorNumero === arrayys[i]) {
        maiorNumero = maiorNumero;
        contador = contador + 1;
-     } else if (maiorNumero < arrayys[i]) {
+      } else if (maiorNumero < arrayys[i]) {
        maiorNumero = arrayys[i];
        contador = 1;
      }
   } return contador;
 }       
       console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-      //ArFizzBuzz.push();
-    //criar um arraylet let let ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];ArFizzBuzz = [2, 15, 7, 9, 45]; ArFizzBuzz = [2, 15, 7, 9, 45];zzBuzz = [2, 15, 7, 9, 45];
-    //dar um push
-    //retornar o array
-
+      
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 let cat1Distance = Math.abs(cat1 - mouse);
@@ -88,48 +82,59 @@ function fizzBuzz(ArFizzBuzz) {
   for (let index = 0; index < ArFizzBuzz.length; index += 1) {
 
     if (ArFizzBuzz[index] % 3 === 0 && ArFizzBuzz[index] % 5 === 0) {
-       // console.log('fizzBuzz');
         ArFizzBuzz[index] = 'fizzBuzz';
         console.log(ArFizzBuzz[index]);
 
     } else if (ArFizzBuzz[index] % 3 === 0) {
-        //console.log('fizz');
         ArFizzBuzz[index] = 'fizz';
         console.log(ArFizzBuzz[index]);
         
     } else if (ArFizzBuzz[index] % 5 === 0) {
-        //console.log('buzz');arrayFB
         ArFizzBuzz[index] = 'buzz';
         console.log(ArFizzBuzz[index]);
 
     } else {
-        //console.log('bug!');
         ArFizzBuzz[index] = 'bug!';
         console.log(ArFizzBuzz[index]);
     }
   } return ArFizzBuzz;
 }      //fizzBuzz([2, 15, 7, 9, 45]);
 
-
 // Desafio 9
-let letra = [];
-//let soma = 0;
-function encode(changeLtoN) {
- for (let index = 0; index < letra.length; index += 1){
-//changeLtoN = letra[index].replace('a', 1);
-              //soma += letra[index];
-      if (letra[index] === 'a') {        
-      } else ('a' === 1); 
+function encode(resultado) {
+for (let index = 0; index < resultado.length; index += 1) {
+   if(resultado[index] === 'a') {
+     resultado = resultado.replace('a', 1);
+ } else if (resultado[index] === 'e') {
+    resultado = resultado.replace('e', 2);
+ } else if ( resultado[index] === 'i') {
+  resultado = resultado.replace('i', 3);
+ } else if (resultado[index] === 'o') {
+  resultado = resultado.replace('o', 4);
+ } else if (resultado[index] === 'u') {
+  resultado = resultado.replace('u', 4);
+ }
+  }
+    return resultado;
+}       console.log(encode('hi there'));
 
-      console.log(letra);
- }  
-  
-
-}       encode();
-
-function decode() {
-  // seu código aqui
+function decode(result) {
+  for (let i = 0; i < result.length; i += 1) {
+    if(result[i] === '1') {
+      result = result.replace('1', 'a');
+  } else if (result[i] === '2') {
+     result = result.replace('2', 'e');
+  } else if (result[i] === '3') {
+   result = result.replace('3', 'i');
+  } else if (result[i] === '4') {
+   result = result.replace('4', 'o');
+  } else if (result[i] === '5') {
+   result = result.replace('5', 'u');
+  }
 }
+return result;
+}
+     console.log(decode('h3 th2r2'.toLowerCase()));
 
 // Desafio 10
 function techList() {
