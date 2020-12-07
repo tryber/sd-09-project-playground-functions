@@ -1,0 +1,1 @@
+let letters = letter.split('');
