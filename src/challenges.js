@@ -47,6 +47,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function addHigher(test, high) {
+  let sum = 0;
+  for (let index in test) {
+    if (test[index] === high) {
+        sum += 1;
+    }
+  }
+  return sum;
+}
+
 function highestCount(array) {
   let high = 0;
   for (let index in array) {
@@ -57,16 +67,6 @@ function highestCount(array) {
   let result = addHigher(array, high);
   console.log(`Desafio 6: ${result}`);
   return result;
-}
-
-function addHigher(test, high) {
-  let sum = 0;
-  for (let index in test) {
-    if (test[index] === high) {
-       sum += 1;
-    }
-  }
-  return sum;
 }
 
 // Desafio 7
