@@ -1,14 +1,18 @@
-function catAndMouse(mouse, cat1, cat2) {
-  let cat = 0 ;
-  if (cat1 < cat2) {
-    cat = 'cat2';
-  } else {
-      cat = 'cat1';
+function highestCount(NumbersArray) {
+
+  let result = 0;
+  
+  for (let index = 0; index <= NumbersArray.length; index += 1) {
+    if (NumbersArray[index] === high) {
+      high = NumbersArray[index];
+    } 
   }
-  if (cat1 === cat2) {
-    return "os gatos trombam e o rato foge"
-  }
-  return cat
+  for (let j = 0; j <= highestCount.length; j += 1) {
+    if(highestCount[j] == high) {
+      result += 1;
+    }
+  } return result
 }
 
-catAndMouse(3,3,2);
+let array = [2,3,1,3,4,5,4,5];
+highestCount(array);

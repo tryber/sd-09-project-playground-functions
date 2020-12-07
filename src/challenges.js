@@ -142,8 +142,8 @@ function decode(letter) {
 }
 
 // Desafio 10
-Function techList (tecnologia, name) {
-  let resultado = [];
+function techList (tecnologia, name) {
+  let resultado = []
     for (let i in tecnologia) {
       let objeto = {
         tecnologia: tecnologia[i],
