@@ -172,8 +172,22 @@ return triangleExists;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(order) {
   // seu código aqui
+  let regex = /\d+/g;
+  let matches = order.match(regex);
+  let addingNumbers = 0;
+  let glassesOfWater;
+
+  for (let index = 0; index < matches.length; index += 1) {
+    addingNumbers = addingNumbers + Number(matches[index]);
+  }
+  if (addingNumbers === 1) {
+    glassesOfWater = addingNumbers + '  copo de água';
+  } else {
+    glassesOfWater = addingNumbers + '  copos de água';
+  }
+return (glassesOfWater)
 }
 
 
