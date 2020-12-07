@@ -1,11 +1,8 @@
 // → Projeto Playground Functions!
 
 // Desafio 1
-function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  }
-  return false;
+function compareTrue(valueOne, valueTwo) {
+  return valueOne && valueTwo 
 }
 
 // Desafio 2
@@ -17,6 +14,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   return string.split(' ');
 }
+//MDN Documentation
 
 // Desafio 4
 function concatName(array) {
