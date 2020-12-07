@@ -135,7 +135,7 @@ function encode(phrase1) {
 
 function decode(phrase2) {
   let new_phrase2 = "";
-  let vogais = {1:'a', 2:'e', 3:'i', 'o':4, 'u':5}
+  let vogais = {1:'a', 2:'e', 3:'i', 4:'o', 5:'u'}
   for (i in phrase2){
     if (phrase2[i] in vogais){
       new_phrase2+= vogais[phrase2[i]]
@@ -147,7 +147,10 @@ function decode(phrase2) {
   return new_phrase2
   // seu código aqui
 }
-
+// let teste901 = "aeiou"
+// let teste902 = "12345"
+// console.log(encode(teste901))
+// console.log(decode(teste902))
 // Desafio 10
 let teste101 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 let teste100 = []
