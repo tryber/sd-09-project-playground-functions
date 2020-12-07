@@ -111,10 +111,8 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(text) {
   let encodedText = '';
-  let character;
   for (let index = 0; index < text.length; index += 1) {
-    character = text[index];
-    switch (character) {
+    switch (text[index]) {
       case 'a':
         encodedText += '1';
         break;
@@ -137,14 +135,11 @@ function encode(text) {
   }
   return encodedText;
 }
-// console.log(encode('hi there!'));
 
 function decode(text) {
   let decodedText = '';
-  let character;
   for (let index = 0; index < text.length; index += 1) {
-    character = text[index];
-    switch (character) {
+    switch (text[index]) {
       case '1':
         decodedText += 'a';
         break;
@@ -231,17 +226,46 @@ function generatePhoneNumber(numbers) {
   }
   return phoneNumber;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+function getNumber(character) {
+  let checkNumber = {};
+  const numbers = [0, 1, 2 ,3 ,4 ,5 ,6 ,7 ,8 ,9];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] == character) {
+      checkNumber.number = numbers[index];
+      checkNumber.isNumber = true;
+      return checkNumber;
+    }
+  }
+  checkNumber.number = character;
+  checkNumber.isNumber = false;
+  return checkNumber;
 }
 
+// console.log(getNumber('a'));
+
+// Desafio 13
+function hydrate(amountOfDrink) {
+  // seu código aqui
+  let checkNumber;
+  let glasseOfWater = 0;
+  for (let index = 0; index < amountOfDrink.length; index += 1) {
+    checkNumber = getNumber(amountOfDrink[index]);
+    if (checkNumber.isNumber) {
+      glasseOfWater += checkNumber.number;
+    }
+  }
+  if (glasseOfWater === 1) {
+    return glasseOfWater + " copo de água";
+  }
+  return glasseOfWater + " copos de água";
+}
+console.log(hydrate('1 cachaça'));
 
 module.exports = {
   calcArea,
