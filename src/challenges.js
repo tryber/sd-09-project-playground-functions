@@ -1,7 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aquia
-}
+function compareTrue(param1, param2) {
+    return param1 && param2;
+  }
+
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
