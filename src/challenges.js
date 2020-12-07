@@ -59,15 +59,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = Math.abs(cat1 - mouse);
   let cat2Distance = Math.abs(cat2 - mouse);
   if (cat1Distance < cat2Distance) {
-    return "cat1";
+    return 'cat1';
   }
   else if (cat1Distance > cat2Distance) {
-    return "cat2";
+    return 'cat2';
   }
   else {
-    return "Os gatos trombam e o rato foge!!";
+    return 'Os gatos trombam e o rato foge!!';
   }
-}// console.log(catAndMouse(2, 2, 6));
+}console.log(catAndMouse(2, 2, 6));
 
 // Desafio 8
 function getFizzBuzz(number) {
