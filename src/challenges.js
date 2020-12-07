@@ -71,11 +71,15 @@ function highestCount(array) {
 
 // Desafio 7
 function moucat1Result(mouse, cat1) {
+  let result1 = 0;
   let result = 0;
   if (mouse > cat1) {
-    result = mouse - cat1;
+    result1 = mouse - cat1;
   } else {
     result = cat1 - mouse;
+  }
+  if (result1 > 0) {
+    result = result1
   }
   return result;
 }
