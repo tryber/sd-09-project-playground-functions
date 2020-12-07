@@ -142,19 +142,18 @@ function decode(letter) {
 }
 
 // Desafio 10
-function techList() {
-  function listaTech (tecnologia, name) {
-    let resultado = [];
+Function techList (tecnologia, name) {
+  let resultado = [];
     for (let i in tecnologia) {
       let objeto = {
         tecnologia: tecnologia[i],
         nome: name
-      }
-      console.log(objeto)
-      resultado.push(objeto);
     }
+      resultado.push(objeto);
   }
+  return resultado
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {

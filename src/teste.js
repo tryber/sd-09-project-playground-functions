@@ -1,26 +1,14 @@
-
-  function decode(letter) {
-    let letters = letter.split('');
-    console.log(letter);
-    for(let i = 0; i <= letters.length; i += 1) {
-      switch (letters[i]) {
-        case '1': 
-          letters[i] = 'a';
-          break;
-        case '2':
-          letters[i] = 'e';
-          break;
-        case '3':
-          letters[i] = 'i';
-          break;
-        case '4':
-          letters[i] = 'o';
-        case '5':
-          letters[i] = 'u';
-          break;
-      }
-    }
-    return letters
+function catAndMouse(mouse, cat1, cat2) {
+  let cat = 0 ;
+  if (cat1 < cat2) {
+    cat = cat1;
+  } else {
+      cat = cat2;
   }
+  if (cat1 === cat2) {
+    return "os gatos trombam e o rato foge"
+  }
+  return cat
+}
 
-decode('h3 th2r2');
+catAndMouse(3,2,3);
