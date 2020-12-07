@@ -157,22 +157,22 @@ function verifyNumberRepetition(array, number) {
   for (let index = 0; index < array.length; index += 1) {
     if (number === array[index]) {
       cont += 1;
-      if (cont >= 3) {
-        return true;
-      }
     }
   }
-  return false;
+  if (cont >= 3) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function generatePhoneNumber(array) {
   let telephone = '';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
-      if (verifyNumberRepetition(array, array[index]) === true){
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
       switch (true) {
+        case (verifyNumberRepetition(array, array[index])):
+          return 'não é possível gerar um número de telefone com esses valores';
         case ((array[index] < 0) || (array[index] > 9)):
           return 'não é possível gerar um número de telefone com esses valores';
         case (index === 0):
