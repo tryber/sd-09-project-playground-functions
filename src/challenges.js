@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  }
-  return false;
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -13,37 +10,32 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(word) {
-  let result = word.split(' ');
-  return result;
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return (array[array.length - 1] + ', ' + array[0]);
+  let commaSpace = ', ';
+  return (array[array.length - 1] + commaSpace + array[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsCounter = 0;
-  for (let i = 0; i < wins; i += 1) {
-    winsCounter += 3;
-  }
-  let result = winsCounter + ties;
+  let result = wins * 3 + ties;
   return result;
 }
 
 // Desafio 6
-function highestCount(array) {
-  let greaterNumber = 0;
-  let counter = 0;
-  for (let i in array) {
-    if (greaterNumber < array[i]) {
-      greaterNumber = array[i];
+function highestCount(numbers) {
+  let greaterNumber = 0, counter = 0;
+  for (let i in numbers) {
+    if (greaterNumber < numbers[i]) {
+      greaterNumber = numbers[i];
     }
   }
-  for (let i in array) {
-    if (array[i] === greaterNumber) {
+  for (let i in numbers) {
+    if (numbers[i] === greaterNumber) {
       counter += 1;
     }
   }
@@ -65,19 +57,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  for (let i in array) {
-    if (array[i] % 15 === 0) {
-      array[i] = 'fizzBuzz';
-    } else if (array[i] % 3 === 0) {
-      array[i] = 'fizz';
-    } else if (array[i] % 5 === 0) {
-      array[i] = 'buzz';
+function fizzBuzz(numbers) {
+  for (let i in numbers) {
+    if (numbers[i] % 15 === 0) {
+      numbers[i] = 'fizzBuzz';
+    } else if (numbers[i] % 3 === 0) {
+      numbers[i] = 'fizz';
+    } else if (numbers[i] % 5 === 0) {
+      numbers[i] = 'buzz';
     } else {
-      array[i] = 'bug!';
+      numbers[i] = 'bug!';
     }
   }
-  return array;
+  return numbers;
 }
 
 // Desafio 9
