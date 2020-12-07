@@ -32,15 +32,15 @@ function splitSentence(string) {
 }
 
 // Desafio 4
+let asd = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(array) {
   // seu código aqui
   let string = '';
-
-  string = string.concat(`${array[array.length - 1]}}, ${array[0]}`);
+  string = string.concat(`${array[array.length - 1]}, ${array[0]}`);
 
   return string;
 }
-
+console.log(concatName(asd))
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -50,9 +50,7 @@ function footballPoints(wins, ties) {
     pontosW = winsP * 3;
     return pontosW;
   }
-
   let pontos = 0;
-
   pontos = pontosWins(wins) + (ties * 1);
 
   return pontos;
