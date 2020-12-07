@@ -96,7 +96,7 @@ function encrypt(string, functionName) {
       for (let j = 0; j < 5; j += 1) {
         code = code.replace(letters[i], numbers[i]);
       }
-    }  
+    }
   } else if (functionName === 'decode') {
     for (let i = 0; i < string.length; i += 1) {
       for (let j = 0; j < 5; j += 1) {
@@ -113,7 +113,7 @@ function encode(string) {
 console.log(encode('hi there!'));
 
 function decode(string) {
- return encrypt(string, 'decode');
+  return encrypt(string, 'decode');
 }
 console.log(decode('h3 th2r2!'));
 
