@@ -85,6 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let asd = [2, 15, 7, 9, 45];
 // Refecencia do for (... of ...) usado no desafio:
 // // https://imasters.com.br/front-end/diferenca-entre-for-of-e-for-in
 function fizzBuzz(array) {
@@ -99,7 +100,7 @@ function fizzBuzz(array) {
       case contador % 5 === 0:
         retornoArray.push('buzz');
         break;
-      case array[contador] % 3 === 0:
+      case contador % 3 === 0:
         retornoArray.push('fizz');
         break;
       default:
@@ -108,6 +109,7 @@ function fizzBuzz(array) {
   }
   return retornoArray;
 }
+console.log(fizzBuzz(asd));
 
 // Desafio 9
 function encode(string) {
@@ -173,7 +175,6 @@ function techList(array, name) {
 }
 
 // Desafio 11
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // Referencia da funcao slice():
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 function generatePhoneNumber(array) {
@@ -207,9 +208,9 @@ function generatePhoneNumber(array) {
     return arrayTrueFalse;
   }
 
-  function arrayString(array) {
+  function arrayString(string) {
     let telefone = '';
-    for (let contador of array) {
+    for (let contador of string) {
       telefone += contador;
     }
     return telefone;
@@ -232,7 +233,7 @@ function generatePhoneNumber(array) {
 
   return telefoneFinal;
 }
-console.log(generatePhoneNumber(array))
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
