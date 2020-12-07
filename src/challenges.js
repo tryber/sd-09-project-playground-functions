@@ -225,13 +225,13 @@ function generatePhoneNumber(array) {
   }
   for (let index in array) {
     if (index === '0') {
-      phoneNumber = `(,${array[index]}`;
+      phoneNumber = `(${array[index]}`;
     } else if (index === '1') {
-      phoneNumber += `${array[index]},)`;
+      phoneNumber += `${array[index]})`;
     } else if (index === '2') {
-      phoneNumber += ` ,${array[index]}`;
+      phoneNumber += ` ${array[index]}`;
     } else if (index === '7') {
-      phoneNumber += `-,${array[index]}`;
+      phoneNumber += `-${array[index]}`;
     } else {
       phoneNumber += array[index];
     }
