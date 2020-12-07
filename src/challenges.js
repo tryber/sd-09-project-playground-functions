@@ -28,11 +28,8 @@ function splitSentence(streng) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let ultimoEprimeroNome = [];
-  ultimoEprimeroNome.push(array[array.length - 1]);
-  ultimoEprimeroNome.push(array[0]);
-  return ultimoEprimeroNome;
+function concatName(array) { 
+  return array[0]+', '+array[array.length-1];
 }
 
 // Desafio 5
@@ -70,7 +67,7 @@ function catAndMouse(mouse, gat1, gat2) {
   }
   if (mouse > gat1 && mouse < gat2) {
     posicaogat1 = mouse - gat1;
-    posicaogat2 = mouse - gat2;
+    posicaogat2 = gat2 - mouse;
   }
   if (posicaogat1 < posicaogat2) {
     return 'gat1'
@@ -81,7 +78,7 @@ function catAndMouse(mouse, gat1, gat2) {
   else {
     return 'os gatos trombam e o rato foge';
   }
-}console.log(catAndMouse(9, 9, 9));
+}
 
 // Desafio 8
 function fizzBuzz(array) {
