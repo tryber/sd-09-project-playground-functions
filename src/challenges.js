@@ -164,7 +164,6 @@ function numberInterval(arrayNumbers) {
       isValid = false;
     }
   }
-  console.log(isValid);
   return (isValid);
 }
 
@@ -186,12 +185,12 @@ function countNumbers(arrayNumbers) {
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
-  phoneNumber = '';
-  if (arrayNumbers.length !== 11) {
-    phoneNumber = 'Array com tamanho incorreto.';
-  }
+  let phoneNumber = '';
   if (!numberInterval(arrayNumbers) || !countNumbers(arrayNumbers)) {
     phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (arrayNumbers.length !== 11) {
+    phoneNumber = 'Array com tamanho incorreto.';
   }
   if (!phoneNumber) {
     phoneNumber = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
