@@ -136,9 +136,9 @@ function techList(techArray, name) {
     rawArray.push(techObject)
   }
   if (rawArray.length === 0) {
-    console.log('Vazio!')
+    return 'Vazio!'
   } else {
-    console.log(sortList(rawArray))
+    return sortList(rawArray)
   }
 
   function sortList(arr) {
