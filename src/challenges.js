@@ -188,7 +188,7 @@ function generatePhoneNumber(telNumber) {
     else{
       dicionario[telNumber[i]] += 1
       if(i === 2){
-        finalNumber += ")"
+        finalNumber += ") "
         finalNumber += telNumber[i]
       }
       else if(i === 7){
@@ -207,8 +207,8 @@ function generatePhoneNumber(telNumber) {
     return finalNumber
   }
 }
-// let teste11 = [1, 2, 3, 4, 5, 6, 7, 1, 9, 0, 1]
-// console.log(generatePhoneNumber(teste11))
+let teste11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
+console.log(generatePhoneNumber(teste11))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -220,7 +220,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   // seu código aqui
 }
-console.log(triangleCheck(10,14,8))
+// console.log(triangleCheck(10,14,8))
 
 // Desafio 13
 function hydrate() {
