@@ -51,9 +51,6 @@ function highestCount(vd6) {
 }
 
 // Desafio 7
-let mouse = 5;
-let cat1 = 6;
-let cat2 = 7;
 function catAndMouse(mouse,cat1,cat2) {
   let distIgual = 'os gatos trombam e o rato foge';
   let cat1s = 'cat1';
@@ -63,10 +60,10 @@ function catAndMouse(mouse,cat1,cat2) {
   if(cat1 === cat2)
   phrase = distIgual;
 
-  else if ((mouse - cat1) > (mouse - cat2))
+  if ((mouse - cat1) > (mouse - cat2))
   phrase = cat1s;
 
-  else if ((mouse - cat1) < (mouse - cat2))
+  if ((mouse - cat1) < (mouse - cat2))
   phrase = cat2s;
 
   return phrase;
