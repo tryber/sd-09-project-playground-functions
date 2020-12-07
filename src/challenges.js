@@ -217,14 +217,18 @@ function orderAscending(context) {
 }
 
 function techList(array, name) {
-  let contextObject = { input: array };
-  for (let cycles = array.length - 1; cycles > 0; cycles -= 1) {
-    contextObject = loopThroughIn(contextObject, orderAscending);
+  let output = 'Vazio!';
+  if (array.length > 0) {
+    let contextObject = { input: array };
+    for (let cycles = array.length - 1; cycles > 0; cycles -= 1) {
+      contextObject = loopThroughIn(contextObject, orderAscending);
+    }
+    contextObject.name = name;
+    contextObject.techList = [];
+    contextObject = loopThroughIn(contextObject, addObject);
+    output = contextObject.techList;
   }
-  contextObject.name = name;
-  contextObject.techList = [];
-  contextObject = loopThroughIn(contextObject, addObject);
-  return contextObject.techList;
+  return output;
 }
 
 // Desafio 11
