@@ -34,7 +34,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let string =  `${array[array.length - 1]}, ${array[0]}`;
+  let string = `${array[array.length - 1]}, ${array[0]}`;
   return string;
 }
 
@@ -85,13 +85,15 @@ function distanceBetween(element1, element2) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let result = '';
   if (distanceBetween(mouse, cat1) === distanceBetween(mouse, cat2)) {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   } else if (distanceBetween(mouse, cat1) > distanceBetween(mouse, cat2)) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'cat1';
+    result = 'cat1';
   }
+  return result;
 }
 
 // Desafio 8
@@ -119,7 +121,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5,
+    u: 5
   };
   for (let index in string) {
     let status = false;
@@ -143,7 +145,7 @@ function decode(string) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u',
+    5: 'u'
   };
   for (let index in string) {
     let status = false;
@@ -171,7 +173,7 @@ function createNewTec(technology, name) {
 // Função retorna array ordenado
 function sortArrayObjects(array) {
   for (let index = 0; index < array.length - 1; index += 1) {
-    for (let index2 = index + 1; index2 < array.length; index2 += 1){
+    for (let index2 = (index + 1); index2 < array.length; index2 += 1) {
       if (array[index].tech > array[index2].tech) {
         let aux = createNewTec(array[index2].tech, array[index2].name);
         array[index2] = array[index];
@@ -202,7 +204,7 @@ function counterArray(array, value) {
   let count = 0;
   for (let index in array) {
     if (array[index] === value) {
-      count++;
+      count += 1;
     }
   }
   return count;
@@ -211,7 +213,7 @@ function counterArray(array, value) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let phoneNumber = '';
-  if ((array.length < 11) ||  (array.length > 11)) {
+  if ((array.length < 11) || (array.length > 11)) {
     return 'Array com tamanho incorreto.'
   }
   for (let index in array) {
@@ -223,13 +225,13 @@ function generatePhoneNumber(array) {
   }
   for (let index in array) {
     if (index === '0') {
-      phoneNumber = '(' + array[index];
+      phoneNumber = `(,${array[index]}`;
     } else if (index === '1') {
-      phoneNumber += array[index] + ')';
+      phoneNumber += `${array[index]},)`;
     } else if (index === '2') {
-      phoneNumber += ' ' + array[index];
+      phoneNumber += ` ,${array[index]}`;
     } else if (index === '7') {
-      phoneNumber += '-' + array[index];
+      phoneNumber += `-,${array[index]}`;
     } else {
       phoneNumber += array[index];
     }
@@ -239,19 +241,15 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
   if ((lineA < (lineB + lineC)) && (lineA > distanceBetween(lineB, lineC))) {
     if ((lineB < (lineA + lineC)) && (lineB > distanceBetween(lineA, lineC))) {
       if ((lineC < (lineB + lineA)) && (lineC > distanceBetween(lineB, lineA))) {
-        return true;
-      } else {
-        return false;
+        result = true;
       }
-    } else {
-      return false;
     }
-  } else {
-    return false;
   }
+  return result;
 }
 
 // Função retorna a somatoria do array
@@ -281,12 +279,13 @@ function addArray(array) {
 
 // Função retorna true se caractere é numero e false se não for
 function isNumeral(caractere) {
-  for (let number = 1;number <= 9;number += 1) {
+  let result = false;
+  for (let number = 1; number <= 9; number += 1) {
     if (Number(caractere) === number) {
-      return true;
+      result = true;
     }
   }
-  return false;
+  return result;
 }
 
 // Desafio 13
@@ -306,7 +305,6 @@ function hydrate(string) {
   return frase;
 }
  
-
 module.exports = {
   calcArea,
   catAndMouse,
