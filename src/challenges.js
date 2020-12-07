@@ -234,10 +234,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinksString) {
+  let numbers = drinksString.match(/\d/g);
+  let sum = 0;
+  let glasses = ' copos de água';
+  for (let index = 0; index < numbers.length; index += 1) {
+    sum += parseInt(numbers[index]);
+  }
+  if (sum === 1) {
+    glasses = ' copo de água'
+  }
+  let glassesOfWater = sum.toString();
+  glassesOfWater += glasses;
+  return (glassesOfWater);
 }
-
 
 module.exports = {
   calcArea,
