@@ -159,10 +159,11 @@ function verifyNumberRepetition(array, number) {
       cont += 1;
     }
   }
-  if (cont >= 3) {
-    return true;
-  } else {
-    return false;
+  switch (cont >= 3) {
+    case true:
+      return true;
+    case false:
+      return false;
   }
 }
 
@@ -193,7 +194,7 @@ function generatePhoneNumber(array) {
   }
   return 'Array com tamanho incorreto.';
 }
-
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sumBC = lineB + lineC;
