@@ -238,19 +238,25 @@ function checkSubtraction(line, subtraction) {
   return true;
 }
 
-function triangleCheck(lineA, lineB, lineC) {
-  let sumBC = lineB + lineC;
-  let sumAB = lineA + lineB;
-  let sumAC = lineA + lineC;
-  let subBC = lineB - lineC;
-  let subAB = lineA - lineB;
-  let subAC = lineA - lineC;
-  if (checkSum(lineA, sumBC) === false || checkSum(lineB, sumAC) === false ||
-  checkSum(lineC, sumAB) === false) {
-    return false;
+function checkSidesRules(sidesOperatedArray) {
+  for (let index = 0; index < sidesOperatedArray.length; index += 1) {
+    if (sidesOperatedArray[index] === false) {
+      return false;
+    }
   }
-  if (checkSubtraction(lineA, subBC) === false || checkSubtraction(lineB, subAC) === false ||
-  checkSubtraction(lineA, subAB) === false) {
+  return true;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let sidesOperatedArray = [];
+  sidesOperatedArray.push(checkSum(lineC, lineA + lineB));
+  sidesOperatedArray.push(checkSum(lineA, lineB + lineC));
+  sidesOperatedArray.push(checkSum(lineB, lineC + lineA));
+  sidesOperatedArray.push(checkSubtraction(lineC, lineA - lineB));
+  sidesOperatedArray.push(checkSubtraction(lineA, lineB - lineC));
+  sidesOperatedArray.push(checkSubtraction(lineB, lineC - lineA));
+  let triangleMatch = checkSidesRules(sidesOperatedArray);
+  if (triangleMatch === false) {
     return false;
   }
   return true;
