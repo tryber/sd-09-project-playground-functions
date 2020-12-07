@@ -180,28 +180,30 @@ function isValid(array) {
 }
 
 function isSafeToPass(array) {
-  if (array.length > 11 || array.length < 11) {
-    return 1;
-  }
   if (!isValid(array)) {
     return 2;
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (checkDuplicate(array, array[index]) > 2) {
+      return 2;
+    }
   }
   return 3;
 }
 
+function checkLength(array){
+  if (array.length > 11 || array.length < 11) {
+    return 1;
+  }
+}
+
 function generatePhoneNumber(arrayNumber) {
-  if (isSafeToPass(arrayNumber) === 1) {
+  if (checkLength(arrayNumber) === 1) {
     return 'Array com tamanho incorreto.';
   }
 
   if (isSafeToPass(arrayNumber) === 2) {
     return 'não é possível gerar um número de telefone com esses valores';
-  }
-
-  for (let index = 0; index < array.length; index += 1) {
-    if (checkDuplicate(array, array[index]) > 2) {
-      return 'não é possível gerar um número de telefone com esses valores';;
-    }
   }
 
   if (isSafeToPass(arrayNumber) === 3) {
