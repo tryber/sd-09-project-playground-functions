@@ -166,19 +166,24 @@ function triangleCheck(lineA, lineB, lineC) {
   const differenceBC = lineB - lineC
   const differenceAC = lineA - lineC
   const differenceBA = lineB - lineA
+  console.log(differenceBA)
+  console.log(differenceAC)
+  console.log(differenceBA)
   if (
-    lineA < lineB + lineC ||
-    lineC < lineB + lineA ||
-    lineB < lineA + lineC
+    lineA > lineB + lineC ||
+    lineC > lineB + lineA ||
+    lineB > lineA + lineC
     &&
-    lineA > Math.abs(differenceBC) ||
-    lineB > Math.abs(differenceAC) ||
-    lineC > Math.abs(differenceBA)
+    lineA < Math.abs(differenceBC) ||
+    lineB < Math.abs(differenceAC) ||
+    lineC < Math.abs(differenceBA)
     ){
     return false
   }
   return true
 }
+
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate(value) {
@@ -207,6 +212,7 @@ function hydrate(value) {
 
   return `${drinkTimes} copos de água`
 }
+
 
 
 module.exports = {
