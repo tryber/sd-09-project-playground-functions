@@ -178,8 +178,27 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(value) {
+   const arr = value.split('')
+    let drinkTimes = 0
+   for (let i = 0; i < arr.length; i += 1) {
+    if (
+      arr[i] === '1' ||
+      arr[i] === '2' ||
+      arr[i] === '3' ||
+      arr[i] === '4' ||
+      arr[i] === '5' ||
+      arr[i] === '6' ||
+      arr[i] === '7' ||
+      arr[i] === '8' ||
+      arr[i] === '9' ||
+      arr[i] === '0'
+      ) {
+      drinkTimes += parseInt(arr[i])
+    }
+  }
+
+  return `${drinkTimes} copos de água`
 }
 
 
