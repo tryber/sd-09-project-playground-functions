@@ -186,9 +186,20 @@ if(lineA < (lineB + lineC) && lineA > (lineB - lineC) && lineB < (lineC + lineA)
 console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(waterBottle) { 
+let regex = /\d+/g;
+let matches = waterBottle.match(regex);
+let soma = 0
+for(let index = 0; index < matches.length; index += 1) {
+soma = soma + Number(matches[index])
 }
+if(soma === 1) {
+  return soma + " copo de água"
+} else {
+  return soma + " copos de água"
+}
+}
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   calcArea,
