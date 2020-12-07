@@ -105,6 +105,34 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+
+//function auxCode(array1, array2) {
+//  let arrayLetters = code.split('');
+//
+//  for (let index = 0; index < arrayLetters.length; index += 1) {
+//    switch (arrayLetters[index]) {
+//      case 'a':
+//        arrayLetters[index] = '1';
+//        break;
+//      case 'e':
+//        arrayLetters[index] = '2';
+//        break;
+//      case 'i':
+//        arrayLetters[index] = '3';
+//        break;
+//      case 'o':
+//        arrayLetters[index] = '4';
+//        break;
+//      case 'u':
+//        arrayLetters[index] = '5'
+//        break;
+//      default:
+//        break;
+//    }
+//  }
+//  return arrayLetters.join('');
+//}
+
 function encode(code) {
   let arrayLetters = code.split('');
 
