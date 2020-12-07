@@ -88,31 +88,34 @@ function fizzBuzz(array) {
 const letters = ['a', 'e', 'i', 'o', 'u'];
 const numbers = ['1', '2', '3', '4', '5'];
 
-function encode(string) {
-  let encrypt = string;
-  let index = 0;
+function encrypt(string, functionName) {
+  let code = string;
 
-  while (index < string.length) {
-    for (let j = 0; j < 5; j += 1) {
-      encrypt = encrypt.replace(letters[index], numbers[index]);
+  if (functionName === 'encode') {
+    for (let i = 0; i < string.length; i += 1) {
+      for (let j = 0; j < 5; j += 1) {
+        code = code.replace(letters[i], numbers[i]);
+      }
+    }  
+  } else if (functionName === 'decode') {
+    for (let i = 0; i < string.length; i += 1) {
+      for (let j = 0; j < 5; j += 1) {
+        code = code.replace(numbers[i], letters[i]);
+      }
     }
-    index += 1;
   }
-  return encrypt;
+  return code;
 }
-// console.log(encode('hi there!'));
+
+function encode(string) {
+  return encrypt(string, 'encode');
+}
+console.log(encode('hi there!'));
 
 function decode(string) {
-  let decrypt = string;
-
-  for (let i = 0; i < string.length; i += 1) {
-    for (let j = 0; j < 5; j += 1) {
-      decrypt = decrypt.replace(numbers[i], letters[i]);
-    }
-  }
-  return decrypt;
+ return encrypt(string, 'decode');
 }
-// console.log(decode('h3 th2r2!'));
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(array, name) {
@@ -198,19 +201,19 @@ function hydrate(string) {
   let glassWater = 0;
   let result = '';
 
-  for (drink of drinks) {
+  for (let drink of drinks) {
     glassWater += Number(drink);
   }
-  
+
   if (glassWater === 1) {
     result = `${glassWater} copo de água`;
-  }else {
+  } else {
     result = `${glassWater} copos de água`;
   }
 
   return result;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
+// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 
 module.exports = {
