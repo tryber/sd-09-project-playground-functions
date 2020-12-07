@@ -148,6 +148,7 @@ function validRange(arrayNumber) {
 
 function validArray(arrayNumber) {
   let count = 0;
+  let valid = true;
   
   for (let number of arrayNumber) {
     for (let index = 0; index < arrayNumber.length; index += 1) {
@@ -156,11 +157,11 @@ function validArray(arrayNumber) {
       }
     }
     if (count >= 3) {
-      return false;
+      valid = false;
     }
     count = 0;
   }
-  return true;
+  return valid;
 }
 
 function generatePhoneNumber(arrayNumber) {
