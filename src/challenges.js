@@ -162,7 +162,7 @@ function repeatedNumber(array) {
       if (checkNumber === array[index]) {
         count += 1
       }
-      if (count >= 3) {
+      if (count > 3) {
         trueOrFalse = false
       }
     }
