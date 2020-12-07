@@ -163,14 +163,17 @@ function generatePhoneNumber(value) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  const differenceBC = lineB - lineC
+  const differenceAC = lineA - lineC
+  const differenceBA = lineB - lineA
   if (
     lineA < lineB + lineC ||
     lineC < lineB + lineA ||
     lineB < lineA + lineC
     &&
-    lineA > (Math.abs(lineB - lineC)) ||
-    lineB > (Math.abs(lineA - lineC)) ||
-    lineC > (Math.abs(lineB - lineA))
+    lineA > Math.abs(differenceBC) ||
+    lineB > Math.abs(differenceAC) ||
+    lineC > Math.abs(differenceBA)
     ){
     return false
   }
@@ -196,6 +199,10 @@ function hydrate(value) {
       ) {
       drinkTimes += parseInt(arr[i])
     }
+  }
+  if (drinkTimes === 1) {
+
+  return `${drinkTimes} copo de água`
   }
 
   return `${drinkTimes} copos de água`
