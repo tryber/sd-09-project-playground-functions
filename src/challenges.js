@@ -138,27 +138,51 @@ function decode(code) {
 
 // Desafio 10
 function techList(arrayTech, name) {
-  if (arrayTech.length == 0) {
+  if (arrayTech.length === 0) {
     return 'Vazio!';
-  } else {
-    let objtArray = [];
-    let arrayTechSort = arrayTech.sort();
-
-    for (let index = 0; index < arrayTechSort.length; index += 1) {
-      let objt = {
-        tech: arrayTechSort[index],
-        name: name
-      }
-      objtArray.push(objt);
-    }
-    return objtArray;
   }
+  let objtArray = [];
+  let arrayTechSort = arrayTech.sort();
+
+  for (let index = 0; index < arrayTechSort.length; index += 1) {
+    let objt = {
+      tech: arrayTechSort[index],
+      name: name
+    }
+    objtArray.push(objt);
+  }
+  return objtArray;
 }
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkDuplicate(array, element) {
+  let count = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === element) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+function generatePhoneNumber(arrayNumber) {
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (9 >= arrayNumber[index] > 0) {
+      let numberAvaliated = checkDuplicate(arrayNumber, arrayNumber[index])
+      if (numberAvaliated > 2) {
+        return 'não é possível gerar um número de telefone com esses valores1';
+      }
+    } else {
+      return 'não é possível gerar um número de telefone com esses valores2';
+    }
+  }
+
+  if (arrayNumber.length === 11) {
+    return "(" + number[0] + '' + number[1] + ') ' + arrayNumber[2] + '' + arrayNumber[3] + '' + arrayNumber[4] + '' + arrayNumber[5] + '' + arrayNumber[6] + '-' + arrayNumber[7] + '' + arrayNumber[8] + '' + arrayNumber[9] + '' + arrayNumber[10]
+  }
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
