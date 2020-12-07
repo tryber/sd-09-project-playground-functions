@@ -1,8 +1,8 @@
 //ok
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 == true && valor2 == true){
-    return true; 
+  if (valor1 === true && valor2 === true){
+    return true;
   }else{
     return false;
   }
@@ -43,7 +43,7 @@ function highestCount(arrayNumbers) {
     if (biggerNumber == arrayNumbers[index]){
       repeatNumber = repeatNumber + 1;
     }
-  } 
+  }
   return repeatNumber;
 }
 
@@ -55,17 +55,16 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let array = [];
-  let input;
-      for (let index in arrayNumbers) {
-         if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 !== 0) {
-             input = "fizz";
-         } else if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 === 0){
+  for (let index in arrayNumbers) {
+      if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 !== 0) {
+         input = "fizz";
+      } else if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 === 0){
              input = "buzz";
-         } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-             input = "fizzBuzz";
-         } else {
-             input = "bug!";
-         }
+      } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+          input = "fizzBuzz";
+      } else {
+           input = "bug!";
+      }
       array.push(input);
       input = "";
       }
