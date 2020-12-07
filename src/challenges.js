@@ -88,32 +88,31 @@ function fizzBuzz(array) {
 const letters = ['a', 'e', 'i', 'o', 'u'];
 const numbers = ['1', '2', '3', '4', '5'];
 
-function encrypt(string, functionName) {
-  let code = string;
-
-  if (functionName === 'encode') {
-    for (let i = 0; i < string.length; i += 1) {
-      for (let j = 0; j < 5; j += 1) {
-        code = code.replace(letters[i], numbers[i]);
-      }
-    }
-  } else if (functionName === 'decode') {
-    for (let i = 0; i < string.length; i += 1) {
-      for (let j = 0; j < 5; j += 1) {
-        code = code.replace(numbers[i], letters[i]);
-      }
-    }
-  }
-  return code;
-}
-
 function encode(string) {
-  return encrypt(string, 'encode');
+  let encrypt = string;
+  let index = 0;
+  
+  while (index < string.length) {
+    let jindex = 0;
+    while (jindex < 5) {
+      encrypt = encrypt.replace(letters[jindex], numbers[jindex]);
+      jindex += 1;
+    }
+    index += 1;
+  }
+  return encrypt;
 }
 console.log(encode('hi there!'));
 
 function decode(string) {
-  return encrypt(string, 'decode');
+  let decrypt = string;
+
+  for (let i = 0; i < string.length; i += 1) {
+    for (let j = 0; j < 5; j += 1) {
+      decrypt = decrypt.replace(numbers[i], letters[i]);
+    }
+  }
+  return decrypt;
 }
 console.log(decode('h3 th2r2!'));
 
@@ -213,7 +212,7 @@ function hydrate(string) {
 
   return result;
 }
-// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
+// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 
 module.exports = {
