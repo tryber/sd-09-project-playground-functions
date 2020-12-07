@@ -281,7 +281,7 @@ function hydrate(text) {
   let numbersInText = text.match(numberPattern);
   let totalWater = 0;
   let cupsText = 'copo';
-  contextObject = loopThroughIn({ input: numbersInText, totalWater }, countCupsOfWater);
+  const contextObject = loopThroughIn({ input: numbersInText, totalWater }, countCupsOfWater);
   if (contextObject.totalWater > 1) {
     cupsText += 's'
   }
