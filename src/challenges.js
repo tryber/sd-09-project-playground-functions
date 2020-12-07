@@ -212,9 +212,10 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    if (lineB < lineA + lineC && Math.abs(lineA - lineC)) {
-      if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+  let totalLines = lineA + lineB + lineC;
+  if (lineA < Math.abs(totalLines - lineA)) {
+    if (lineB < Math.abs(totalLines - lineB)) {
+      if (lineC < Math.abs(totalLines - lineC)) {
         return true;
       }
     }
