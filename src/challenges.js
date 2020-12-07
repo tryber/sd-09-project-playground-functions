@@ -112,19 +112,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzBuzzResult(array, index) {
+  let result = '';
+  if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    result = ('fizzBuzz');
+  } else if (array[index] % 3 === 0) {
+    result = ('fizz');
+  } else if (array[index] % 5 === 0) {
+    result = ('buzz');
+  }
+  return result;
+}
+
 function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-      result.push('fizz');
-    } else if (array[index] % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!')
-    }
-  }
+    if (array[index] % 3 === 0 || array[index] % 5 === 0) {
+      result.push(fizzBuzzResult(array, index));
+    } else 
+    result.push('bug!')
+    } 
   console.log(`Desafio 8: ${result}`);
   return result;
 }
@@ -150,6 +157,7 @@ function encode(string) {
   console.log(`Desafio 8: Codificando: ${encoded}`);
   return encoded;
 }
+
 function decode(encoded) {
   let decoded = '';
   for (let index in encoded) {
