@@ -102,7 +102,7 @@ function encode(string) {
   }
   return encrypt;
 }
-console.log(encode('hi there!'));
+// console.log(encode('hi there!'));
 
 function decode(string) {
   let decrypt = string;
@@ -114,7 +114,7 @@ function decode(string) {
   }
   return decrypt;
 }
-console.log(decode('h3 th2r2!'));
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList(array, name) {
@@ -149,12 +149,10 @@ function validRange(arrayNumber) {
 function validNumber(arrayNumber) {
   let count = 0;
   for (let number of arrayNumber) {
-    let index = 0;
-    while (index < arrayNumber.length) {
+    for (let index = 0; index < arrayNumber.length; index += 1) {
       if (number === arrayNumber[index]) {
         count += 1;
       }
-      index += 1;
     }
     if (count >= 3) {
       return false;
@@ -177,7 +175,7 @@ function generatePhoneNumber(arrayNumber) {
   }
   return phoneNumber;
 }
-// console.log(generatePhoneNumber([1, 1, 9, 8, 6, 2, 4, 8, 7, 0, 7]));
+console.log(generatePhoneNumber([1, 1, 9, 8, 6, 2, 4, 8, 7, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
