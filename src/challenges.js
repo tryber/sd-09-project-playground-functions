@@ -61,6 +61,28 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(0, 2, 3)
 
 // Desafio 8
+
+function checkFizzBuzz(fizz, buzz) {
+  if (fizz === 0 && buzz === 0) {
+    return true;
+  }
+  return false;
+}
+
+function checkFizz(fizz) {
+  if (fizz === 0) {
+    return true;
+  }
+  return false;
+}
+
+function checkBuzz(buzz) {
+  if (buzz === 0) {
+    return true;
+  }
+  return false;
+}
+
 function fizzBuzz(array) {
   let arrayAnswer = [];
 
@@ -68,15 +90,16 @@ function fizzBuzz(array) {
     let fizz = array[index] % 3;
     let buzz = array[index] % 5;
 
-    if (fizz === 0 && buzz === 0) {
+    if (checkFizzBuzz(fizz, buzz)) {
       arrayAnswer.push('fizzBuzz');
-    } else if (fizz === 0) {
-      arrayAnswer.push('fizz');
-    } else if (buzz === 0) {
-      arrayAnswer.push('buzz');
-    } else {
-      arrayAnswer.push('bug!');
     }
+    if (checkFizz(fizz)) {
+      arrayAnswer.push('fizz');
+    }
+    if (checkBuzz(buzz)) {
+      arrayAnswer.push('Buzz');
+    }
+    arrayAnswer.push('bug!');
   }
   return arrayAnswer;
 }
