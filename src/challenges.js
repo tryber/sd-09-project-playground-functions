@@ -45,14 +45,14 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(count) {
   let cont = 0;
-    for (let index = 0; index < count.length; index += 1) {
-      for (let index2 = 0; index < count.length; index += 1) {
-        if (count[index] === count[index2]) {
-          cont ++;
-        }
-      }return cont;
-    }
-  }// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9, 8, 9, 9]));
+  for (let index = 0; index < count.length; index += 1) {
+    for (let index2 = 0; index < count.length; index += 1) {
+      if (count[index] === count[index2]) {
+        cont++;
+      }
+    } return cont;
+  }
+}// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9, 8, 9, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -102,23 +102,12 @@ function decode() {
 
 // Desafio 10
 function techList() {
- // seu código aqui
+  // seu código aqui
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let output = 'Array com tamanho incorreto!';
-  if (array.length === 11) {
-    output = 'Não é possível gerar um número de telefone com esses valores!';
-    let contextObject = { input: array, counts: {} };
-    contextObject = loopThroughIn(contextObject, validateNumbers);
-    if (!(contextObject.invalidNumber)) {
-      contextObject.output = '';
-      contextObject.formats = { 0: '(', 2: ') ', 7: '-' };
-      output = loopThroughIn(contextObject, getPhoneFormat).output;
-    }
-  }
-  return output;
+  // seu código aqui
 }
 
 // Desafio 12
