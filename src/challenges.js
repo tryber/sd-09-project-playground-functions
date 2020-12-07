@@ -174,9 +174,10 @@ function repeatedNumber(array) {
 function generatePhoneNumber(array) {
   // seu código aqui
   let phoneNumber = 0;
-  for (let index = 0; index < array.length; index += 1) {
-      if (array.length !== 11 || array.length <= 0) {
-          phoneNumber =  'Array com tamanho incorreto.'
+  
+  for (let index = 0; index <= array.length; index += 1) {
+      if (array.length !== 11) {
+          phoneNumber = 'Array com tamanho incorreto.'
       }   else if (repeatedNumber(array) === false || array[index] < 0 || array[index] > 9) {
                   phoneNumber = 'não é possível gerar um número de telefone com esses valores'
           }       else if (array.length === 11) {
