@@ -92,7 +92,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let teste8 = [2, 15, 7, 9, 45];
+let teste8 = [2, 15, 7, 9, 45, 0];
 function fizzBuzz(arrayN) {
   let bzfz = []
   for (i in arrayN){
@@ -102,7 +102,7 @@ function fizzBuzz(arrayN) {
     else if (arrayN[i] % 5 == 0 && !(arrayN[i] % 3 == 0)){
       bzfz.push("buzz")
     }
-    else if (arrayN[i] % 3 == 0 && arrayN[i] % 5 == 0){
+    else if (arrayN[i] % 3 == 0 && arrayN[i] % 5 == 0  && arrayN[i] !== 0){
       bzfz.push("fizzbuzz")
     }
     // else if (!(arrayN[i] % 3 == 0) && !(arrayN[i] % 5 == 0)){
@@ -115,6 +115,7 @@ function fizzBuzz(arrayN) {
   return bzfz
   // seu código aqui
 }
+// let teste801 = []
 // console.log(fizzBuzz(teste8))
 
 // Desafio 9
