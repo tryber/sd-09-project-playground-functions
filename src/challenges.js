@@ -179,18 +179,20 @@ function isValid(array) {
   return true;
 }
 
-function generatePhoneNumber(arrayNumber) {
-
-  if (arrayNumber.length === 11) {
-    if (!isValid(arrayNumber)) {
+function isSafeToPass(array){
+  if (!isValid(array)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (checkDuplicate(array, array[index]) > 2) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let index = 0; index < arrayNumber.length; index += 1) {
-      if (checkDuplicate(arrayNumber, arrayNumber[index]) > 2) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-    }
+  }
+}
 
+function generatePhoneNumber(arrayNumber) {
+  isSafeToPass(arrayNumber);
+  if (arrayNumber.length === 11) {
     return '(' + arrayNumber[0] + '' + arrayNumber[1] + ') ' + arrayNumber[2] + '' + arrayNumber[3] + '' + arrayNumber[4] + '' + arrayNumber[5] + '' + arrayNumber[6] + '-' + arrayNumber[7] + '' + arrayNumber[8] + '' + arrayNumber[9] + '' + arrayNumber[10]
   }
   return 'Array com tamanho incorreto.';
