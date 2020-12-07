@@ -89,6 +89,7 @@ function fizzBuzz(arrayNumber) {
 // console.log(fizzBuzz([ 2 , 15 , 7 , 9 , 45]));
 
 // Desafio 9
+// fonte de pesquisa : pessoal da trybe no slack + https://www.alura.com.br/artigos/trocando-caracteres-de-uma-string-no-java#:~:text=Para%20isso%20podemos%20usar%20o,que%20passarmos%20por%20outro%20caractere.
 function encode(arrayEncode) {
   let encodeVocals = {
     a: '1',
@@ -120,7 +121,24 @@ return arrayDecode;
 //   console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList(name, programList) {}
+let programList = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+let name = 'Pedro';
+
+function techList(array , name) {
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  array.sort();
+  for (let index = 0; index < array.length; index += 1) {
+    array[index] = {
+      tech: array[index],
+      name: name,
+    }
+  }
+  return array;
+}
+
+//console.log(techList(programList , name));
 
 // Desafio 11
 function generatePhoneNumber() {
