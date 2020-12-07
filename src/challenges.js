@@ -79,18 +79,24 @@ function encode(str) {
       case 'a':
         encodeIndex[index] = 1;
         break;
+
       case 'e':
         encodeIndex[index] = 2;
         break;
+
       case 'i':
         encodeIndex[index] = 3;
         break;
+
       case 'o':
         encodeIndex[index] = 4;
         break;
+
       case 'u':
         encodeIndex[index] = 5;
         break;
+      
+      // no default
     }
   }
   return encodeIndex.join('');
@@ -103,25 +109,31 @@ function decode(str) {
       case '1':
         decodeIndex[index] = 'a';
         break;
+
       case '2':
         decodeIndex[index] = 'e';
         break;
+
       case '3':
         decodeIndex[index] = 'i';
         break;
+
       case '4':
         decodeIndex[index] = 'o';
         break;
+
       case '5':
         decodeIndex[index] = 'u';
         break;
+
+      // no default
     }
   }
   return decodeIndex.join('');
 }
 
 // Desafio 10
-function techList(arr, name) {
+function techList(arr, nome) {
   if (arr.length === 0) return 'Vazio!'
 
   let techs = []
@@ -130,7 +142,7 @@ function techList(arr, name) {
   for (let index = 0; index < sorted.length; index += 1) {
     techs.push({
       tech: sorted[index],
-      name: name,
+      name: nome,
     })
   }
 
