@@ -32,7 +32,6 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-let asd = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(array) {
   // seu código aqui
   let string = '';
@@ -40,7 +39,7 @@ function concatName(array) {
 
   return string;
 }
-console.log(concatName(asd))
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -48,24 +47,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+let asd = [9, 1, 2, 3, 9, 5, 7];
 function highestCount(array) {
   // seu código aqui
   let somaNumero = 0;
   let maiorNumero = 0;
 
-  for (let contador = 0; contador < array.length; contador += 1) {
-    if (array[contador] > maiorNumero) {
-      maiorNumero = array[contador];
+  function maiorNumeroList(arrayNumbers) {
+    for (let contador = 0; contador < array.length; contador += 1) {
+      if (array[contador] > maiorNumero) {
+        maiorNumero = array[contador];
+      }
     }
+    return maiorNumero;
   }
   for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
-    if (maiorNumero === array[contadorNumero]) {
+    if (maiorNumeroList(array) === array[contadorNumero]) {
       somaNumero += 1;
     }
   }
   return somaNumero;
 }
-
+console.log(highestCount(asd));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
