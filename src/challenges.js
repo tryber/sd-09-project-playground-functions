@@ -54,9 +54,9 @@ function highestCount(array) {
   let maiorNumero = 0;
 
   function maiorNumeroList(arrayNumbers) {
-    for (let contador = 0; contador < array.length; contador += 1) {
-      if (array[contador] > maiorNumero) {
-        maiorNumero = array[contador];
+    for (let contador = 0; contador < arrayNumbers.length; contador += 1) {
+      if (arrayNumbers[contador] > maiorNumero) {
+        maiorNumero = arrayNumbers[contador];
       }
     }
     return maiorNumero;
