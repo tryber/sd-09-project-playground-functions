@@ -62,7 +62,7 @@ function fizzBuzz(meuArray) {
     } else if (meuArray[i] % 5 === 0) {
        res.push("buzz")
     } else if (meuArray[i] % 3 === 0){
-       res.push("fiz")
+       res.push("fizz")
     } else {
       res.push("bug!")
     }
