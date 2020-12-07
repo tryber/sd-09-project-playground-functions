@@ -205,7 +205,7 @@ function addObject(context) {
 }
 
 function orderAscending(context) {
-  let nextIndex = parseInt(context.currentIndex) + 1;
+  let nextIndex = parseInt(context.currentIndex, 10) + 1;
   let nextValue = context.input[nextIndex.toString()];
   let currentGreaterThanNext = (context.currentValue > nextValue);
   let nextIndexExists = (nextIndex in context.input);
@@ -231,7 +231,7 @@ function techList(array, name) {
 function validateNumbers(context) {
   context = countNumber(context);
   let invalidNumber = (
-    (context.counts[context.currentValue] > 2) || 
+    (context.counts[context.currentValue] > 2) ||
     (context.currentValue < 0) ||
     (context.currentValue > 9)
   )
