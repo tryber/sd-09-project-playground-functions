@@ -115,30 +115,30 @@ let vowelString = 'hi there!';
 console.log(encode(vowelString));
 
 function decode(string) {
-  let vowel = string.split('');
-  for (let index = 0; index < vowel.length; index += 1) {
-    let numbers = vowel[index]
+  let vowelAndNumbers = string.split('');
+  for (let index = 0; index < vowelAndNumbers.length; index += 1) {
+    let numbers = vowelAndNumbers[index]
     switch (numbers) {
       case ' ':
         break;
       case '1':
-        vowel[index] = 'a';
+        vowelAndNumbers[index] = 'a';
         break;
       case '2':
-        vowel[index] = 'e';
+        vowelAndNumbers[index] = 'e';
         break;
       case '3':
-        vowel[index] = 'i';
+        vowelAndNumbers[index] = 'i';
         break;
       case '4':
-        vowel[index] = 'o';
+        vowelAndNumbers[index] = 'o';
         break;
       case '5':
-        vowel[index] = 'u';
+        vowelAndNumbers[index] = 'u';
         break;
     }
   }
-  return vowel.join('');
+  return vowelAndNumbers.join('');
 }
 let numberString = 'h3 th2r2!';
 console.log(decode(numberString));
@@ -147,7 +147,7 @@ console.log(decode(numberString));
 function techList(technologies, name) {
   technologies.sort();
   let newList = [];
-  if (technologies.length === 0){
+  if (technologies.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < technologies.length; index += 1) {
@@ -166,25 +166,32 @@ function generatePhoneNumber(phoneNumber) {
   let toString = '';
   let phone = 'Array com tamanho incorreto.';
   for (let index = 0; index < phoneNumber.length; index += 1) {
+    toString += phoneNumber[index];
+    if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || timesAppers(phoneNumber) >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  if (phoneNumber.length === 11) {
+    phone = toString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  }
+  return phone;
+}
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1];
+console.log(generatePhoneNumber(number));
+
+function timesAppers (phoneNumber) {
+  for (let index = 0; index < phoneNumber.length; index += 1) {
     let number = phoneNumber[index];
-    let popsUp = 1;
+    let popsUp = 0;
     for (let position = 0; position < phoneNumber.length; position += 1) {
       if (phoneNumber[position] === number) {
         popsUp += 1;
       }
     }
-    if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || popsUp > 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    toString += phoneNumber[index];
+    return popsUp;
   }
-  if (phoneNumber.length === 11) {
-    phone =  toString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-  }
-  return phone;
 }
-let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(number));
+console.log(timesAppers(number));
 
 // Desafio 12
 function triangleCheck() {
