@@ -152,7 +152,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function verifyNumberRepetition(array, number) {
+function verifyNumberRepetition(array) {
   for (let index = 0; index < array.length; index += 1)
   let cont = 0;
   for (let index2 = 0; index2 < array.length; index2 += 1) {
@@ -170,7 +170,7 @@ function generatePhoneNumber(array) {
   let telephone = '';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
-      if (verifyNumberRepetition(array, array[index]) === true){
+      if (verifyNumberRepetition(array) === true){
         return 'não é possível gerar um número de telefone com esses valores';
       }
       switch (true) {
