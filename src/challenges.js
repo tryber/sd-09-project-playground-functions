@@ -126,8 +126,16 @@ function decode(numbers) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui  
+function techList(techArray, name) {
+  // seu código aqui
+  let returArray = []
+  for (let index = 0; index < techArray.length; index += 1) {
+    let objeto = {}
+    objeto.tech = techArray[index]
+    objeto.name = name
+    returArray.push(objeto)
+  }
+  return returArray
 }
 
 // Desafio 11
