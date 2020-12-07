@@ -183,13 +183,13 @@ function hydrate(order) {
     addingNumbers = addingNumbers + Number(matches[index]);
   }
   if (addingNumbers === 1) {
-    glassesOfWater = addingNumbers + '  copo de água';
+    glassesOfWater = addingNumbers + ' copo de água';
   } else {
-    glassesOfWater = addingNumbers + '  copos de água';
+    glassesOfWater = addingNumbers + ' copos de água';
   }
 return (glassesOfWater)
 }
-
+// console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
