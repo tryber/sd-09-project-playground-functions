@@ -268,8 +268,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+function countCupsOfWater(context) {
+  let number = parseInt(context.currentValue, 10);
+  context.totalWater += number;
+  return context;
+}
+
 function hydrate(text) {
-  // Code here
+  // Referência para o código de regex no JS (MDN web docs):
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+  let numberPattern = /\d+/g;
+  let numbersInText = text.match(numberPattern);
+  let totalWater = 0;
+  let cupsText = 'copo';
+  contextObject = loopThroughIn({ input: numbersInText, totalWater }, countCupsOfWater);
+  if (contextObject.totalWater > 1) {
+    cupsText += 's'
+  }
+  return `${contextObject.totalWater} ${cupsText} de água`;
 }
 
 module.exports = {
