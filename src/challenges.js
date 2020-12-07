@@ -1,9 +1,10 @@
 // Desafio 1 =====================================================================================
 function compareTrue(b1, b2) {
+  let out
   if ((b1 === true) && (b2 === true)) {
-    var out = (true);
+    out = (true);
   } else {
-    var out = (false);
+    out = (false);
   }
   return (out);
 }
@@ -27,7 +28,7 @@ console.log('');
 
 // Desafio 3 =====================================================================================
 function splitSentence(sentence) {
-  var array = sentence.split(' ');
+  let array = sentence.split(' ');
   return (array);
 }
 // Testes da função: ------------------
@@ -36,10 +37,10 @@ console.log('');
 
 // Desafio 4 =====================================================================================
 function concatName(sequence) {
-  var lastIndex = (sequence.length - 1);
-  var firstItem = sequence[0];
-  lastItem = sequence[lastIndex];
-  var newSequence = (lastItem + ', ' + firstItem);
+  let lastIndex = (sequence.length - 1);
+  let firstItem = sequence[0];
+  let lastItem = sequence[lastIndex];
+  let newSequence = (lastItem + ', ' + firstItem);
   return (newSequence);
 }
 // Testes da função: ------------------------------------------------
@@ -48,13 +49,14 @@ console.log('');
 
 // Desafio 5 =====================================================================================
 function footballPoints(wins, ties) {
+  let score = 0;
   if ((wins < 0) || (ties < 0)){
-    return('Não existe vitória ou empate negativo!');
+    return ('Não existe vitória ou empate negativo!');
   }
   if ((wins >= 0) && (ties >= 0)){
     score = ((wins * 3) + (ties));
   }
-  return(score);
+  return (score);
   // Assim ficaria melhor: return('Total de pontos que o time marcou no campeonato = ' + score + '.');
 }
 // Testes da função: --------------
@@ -67,8 +69,8 @@ console.log('');
 
 // Desafio 6 =====================================================================================
 function highestCount(sample) {
-  compare = -100000;
-  cont = 0;
+  let compare = -100000;
+  let cont = 0;
   for (index = 0 ; index < sample.length ; index = index + 1) {
     if (sample[index] > compare) {
       compare = sample[index];
@@ -93,8 +95,9 @@ console.log('');
 
 // Desafio 7 =====================================================================================
 function catAndMouse(mouse, cat1, cat2) {
-  getmouse1 = Math.abs(mouse - cat1);
-  getmouse2 = Math.abs(mouse - cat2);
+  let getmouse1 = Math.abs(mouse - cat1);
+  let getmouse2 = Math.abs(mouse - cat2);
+  let out = undefined;
   if(getmouse1 == getmouse2) {
     out = ("os gatos trombam e o rato foge");
   } else if (getmouse1 < getmouse2) {
@@ -114,7 +117,7 @@ console.log('');
 
 // Desafio 8 =====================================================================================
 function fizzBuzz(matriz) {
-  newMatriz = [];
+  let newMatriz = [];
   for (index = 0 ; index < matriz.length ; index = index + 1) {
     if ((matriz[index] % 3 == 0) && (matriz[index] % 5 == 0)) {
       newMatriz[index] = ('fizzBuzz');
@@ -161,8 +164,9 @@ console.log('');
 
 // Desafio 10 =====================================================================================
 function techList(tech, name) {
+  tech.sort();
+  let receive = [];
   if (tech.length != 0) {
-    receive = [];
     for (index = 0 ; index < tech.length ; index = index +1) {
       let object = {
       name: name,
@@ -182,12 +186,10 @@ console.log('');
 
 // Desafio 11 =====================================================================================
 function generatePhoneNumber(matriz) {
-  cont = 0;
-  checker1 = 0;
-  checker2 = 9;
-  inspector = 2;
-  phoneNumber = [];
-  comparator = matriz;
+  let cont = 0;
+  let inspector = 2;
+  let phoneNumber = [];
+  let comparator = matriz;
   // condição 1: array com número de elementos diferente de 11 -------------------------------
   if (matriz.length != 11) {
     inspector = 0;
@@ -253,10 +255,10 @@ console.log('');
 
 // Desafio 12 =====================================================================================
 function triangleCheck(lineA, lineB, lineC) {
-  checkLineA = 0;
-  checkLineB = 0;
-  checkLineC = 0;
-  possible = false;
+  let checkLineA = 0;
+  let checkLineB = 0;
+  let checkLineC = 0;
+  let possible = false;
   // condição-01: a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
   if (((lineA) < (lineB + lineC)) && ((lineA) > Math.abs(lineB - lineC))){
     checkLineA = 1;
@@ -276,12 +278,13 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8)); // deve retornar true
 console.log(triangleCheck(1, 14, 8)); // deve retornar false
 console.log(triangleCheck(10, 1400, 8)); // deve retornar false
-console.log(triangleCheck(10, 14, 800)); // deve retornar true
+console.log(triangleCheck(10, 14, 800)); // deve retornar false
 console.log('');
 
 // Desafio 13 =====================================================================================
 function hydrate(str) {
-  soma = 0;
+  let soma = 0;
+  let sugestion = ('');
   var numbers = str.match(/\d+/g).map(Number);
   for (index = 0 ; index < numbers.length ; index = index + 1) {
     soma = soma + numbers[index];
