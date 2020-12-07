@@ -102,7 +102,7 @@ function encode(frase) {
   }
   return frase
 }
-function decode() {
+function decode(frase) {
   for (let i = 0; i < frase.length; i++){
     frase = frase.replace('1' , 'a');
     frase = frase.replace('2' , 'e');
