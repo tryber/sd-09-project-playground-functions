@@ -129,9 +129,10 @@ function fizzBuzz(array) {
   for (let index in array) {
     if (array[index] % 3 === 0 || array[index] % 5 === 0) {
       result.push(fizzBuzzResult(array, index));
-    } else 
+    } else {
     result.push('bug!')
-    } 
+    }
+  }
   console.log(`Desafio 8: ${result}`);
   return result;
 }
