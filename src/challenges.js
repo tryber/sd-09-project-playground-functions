@@ -55,21 +55,56 @@ function highestCount(count) {
   }// console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9, 8, 9, 9]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  
+  if (cat1 <= mouse && cat1 > cat2) {
+    console.log('cat1');
+  } else if (cat2 <= mouse && cat2 > cat1) {
+    console.log('cat2');
+  } else if(cat1 == cat2 < mouse) {
+    console.log('os gatos trombam e o rato foge')
+  }
+}console.log(catAndMouse(2, 4, 4));
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// // Desafio 9
+// function encode() {
+//   // seu código aqui
+// }
+
+function translate(context) {
+  let value = context.currentValue;
+  if (context.currentValue in context.dictionary){
+    value = context.dictionary[context.currentValue];
+  }
+  context.translation += value;
+  return context;
 }
-function decode() {
-  // seu código aqui
+
+function getTranslation(text, dictionary) {
+  const contextObject = loopThroughIn(
+    {
+      input: text,
+      dictionary,
+      translation: '',
+    },
+    translate,
+  );
+  return contextObject.translation;
+}
+
+function encode(text) {
+  const dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  return getTranslation(text, dictionary);
+}
+
+function decode(text) {
+  const dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  return getTranslation(text, dictionary);
 }
 
 // Desafio 10
