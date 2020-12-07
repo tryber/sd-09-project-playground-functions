@@ -154,7 +154,7 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  let trueOrFalse = true
+  let trueOrFalse = false
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     let checkNumber = array[index]
@@ -163,7 +163,7 @@ function repeatedNumber(array) {
         count += 1
       }
       if (count >= 3) {
-        trueOrFalse = false
+        trueOrFalse = true
       }
     }
     count = 0;
@@ -172,29 +172,38 @@ function repeatedNumber(array) {
 }
 
 function lengthArray(array) {
-  if (array.length < 0) {
-    console.log('aqui')
-    return false
-  } else if (array.length !== 11) {
-    return false
+    let verificando = false
+    if (array.length === 0) {
+      verificando = true
+    } else if (array.length !== 11) {
+      verificando = true
+    }
+    return verificando
+}
+
+function numberArray (array) {
+  let vericacao = false
+  for (let index = 0; index < array.length; index += 1)
+  if (array[index] < 0 || array[index] > 9) {
+    vericacao = true
   }
-  return true
+  return vericacao
 }
 
 function generatePhoneNumber(array) {
   // seu código aqui
-  let phoneNumber = ''
   
-  for (let index = 0; index <= array.length; index += 1) {
-      if (lengthArray(array) === false) {
-          phoneNumber = 'Array com tamanho incorreto.'
-      }   else if (repeatedNumber(array) === false || array[index] < 0 || array[index] > 9) {
-                  phoneNumber = 'não é possível gerar um número de telefone com esses valores'
-          }       else if (array.length === 11) {
-                            phoneNumber =  '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+  for (let index = 0; index < array.length; index += 1) {
+    if (numberArray(array) || repeatedNumber(array)) {
+    return 'não é possível gerar um número de telefone com esses valores'  
+    }
+      else if (lengthArray(array)) {
+          return 'Array com tamanho incorreto.'
+      }  
+                 else if (array.length === 11) {
+                            return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
                 }
   }
-  return phoneNumber;
 }
 
 // Desafio 12
