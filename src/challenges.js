@@ -91,7 +91,7 @@ const numbers = ['1', '2', '3', '4', '5'];
 function encode(string) {
   let encrypt = string;
   let index = 0;
-  
+
   while (index < string.length) {
     let jindex = 0;
     while (jindex < 5) {
@@ -149,10 +149,12 @@ function validRange(arrayNumber) {
 function validNumber(arrayNumber) {
   let count = 0;
   for (let number of arrayNumber) {
-    for (let index = 0; index < arrayNumber.length; index += 1) {
+    let index = 0;
+    while (index < arrayNumber.length) {
       if (number === arrayNumber[index]) {
         count += 1;
       }
+      index += 1;
     }
     if (count >= 3) {
       return false;
