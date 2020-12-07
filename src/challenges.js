@@ -1,4 +1,4 @@
-// #VQV
+// → Projeto Playground Functions!
 
 // Desafio 1
 function compareTrue(value1, value2) {
@@ -147,12 +147,12 @@ function hydrate(commandString) {
     sumWaterCups += parseInt(numbersArray[index], 10);
   }
   if (sumWaterCups > 1) {
-    let waterDebitMessage = `${sumWaterCups} + ' copos de água'`;
+    let waterDebitMessage = sumWaterCups + ' copos de água';
     return waterDebitMessage;
   }
-  let waterDebitMessage = `${sumWaterCups} + ' copo de água'`;
+  let waterDebitMessage = sumWaterCups + ' copo de água';
   return waterDebitMessage;
-}
+};
 
 module.exports = {
   calcArea,
