@@ -169,15 +169,18 @@ function checkDuplicate(array, element) {
 
 function isValid(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9) {
-      return true;
+    if (0 > array[index]) {
+      return false;
     }
-    return false;
+    if (array[index] > 9) {
+      return false;
+    }
   }
+  return true;
 }
 
 function generatePhoneNumber(arrayNumber) {
-  if (isValid(arrayNumber)) {
+  if (!isValid(arrayNumber)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < arrayNumber.length; index += 1) {
