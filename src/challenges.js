@@ -41,7 +41,7 @@ function footballPoints(wins, ties) {
 
 // Funcao auxiliar
 function countsRepeatedNumbers(array, number) {
-  repeat = 0;
+  let repeat = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === number) {
       repeat += 1;
@@ -49,7 +49,6 @@ function countsRepeatedNumbers(array, number) {
   }
   return repeat;
 }
-// console.log(countsRepeatedNumbers([9, 9, 9, 3, 9, 5, 7], 9));
 
 // Desafio 6
 function highestCount(array) {
@@ -64,14 +63,13 @@ function highestCount(array) {
   return highestValueAmount;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
-  // console.log(`cat1: ${distanceCat1}, cat2: ${distanceCat2}`);
   if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   } else if (distanceCat1 < distanceCat2) {
@@ -174,31 +172,36 @@ function decode(text) {
 function techList(technologies, name) {
   // seu código aqui
   let myTechList = [];
-  if (technologies.length === 0) {
+  let orderedTechnologies = technologies.sort();
+  console.log(orderedTechnologies);
+  if (orderedTechnologies.length === 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < technologies.length; index += 1) {
+  for (let index = 0; index < orderedTechnologies.length; index += 1) {
     myTechList.push({
-      tech: technologies[index],
+      tech: orderedTechnologies[index],
       name: name,
     });
   }
   return myTechList;
 }
-// console.log(techList([], 'Enio'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 function checkArrayIsValid(array) {
-  /* for (let index = 0; index < array.length; index++) {
+  let repeat;
+  for (let index = 0; index < array.length; index++) {
+    repeat = countsRepeatedNumbers(array, array[index]);
     if (array[index] < 0 || array[index] > 9 || repeat > 2) {
-      
+      return false;
     }
-  } */
-  // return tru
+  }
+  return true;
 }
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
+
 }
 
 // Desafio 12
