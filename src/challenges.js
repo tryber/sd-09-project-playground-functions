@@ -86,73 +86,76 @@ function fizzBuzz(array) {
   return result;
 }
 
-// Desafio 9 Ok (codeclimate repetição)
+// Desafio 9 Ok 
 function encode(transLettersNumbers) {
   // seu código aqui
-  let texteDecode = '';
-  for (let letter of transLettersNumbers) {
-    switch (letter) {
+  let number = '';
+  for (let index = 0; index < transLettersNumbers.length; index += 1) {
+    switch (transLettersNumbers[index]) {
       case 'a':
-        texteDecode += '1';
+        number += 1;
         break;
       case 'e':
-        texteDecode += '2';
+        number += 2;
         break;
       case 'i':
-        texteDecode += '3';
+        number += 3;
         break;
       case 'o':
-        texteDecode += '4';
+        number += 4;
         break;
       case 'u':
-        texteDecode += '5';
+        number += 5;
         break;
       default:
-        texteDecode += letter;
+        number += transLettersNumbers[index];
+        break;
     }
   }
-  return texteDecode;
-}
-// (codeclimate repetição)
-function decode(transNumbersLettes) {
+  return number;
+}	
+
+function decode(transNumbersLetter) {
   // seu código aqui
-  let decodeTexte = '';
-  for (let number of transNumbersLettes) {
-    switch (number) {
+  let string = '';
+  for (let index = 0; index < transNumbersLetter.length; index += 1) {
+    switch (transNumbersLetter[index]) {
       case '1':
-        decodeTexte += 'a';
+        string += 'a';
         break;
       case '2':
-        decodeTexte += 'e';
+        string += 'e';
         break;
       case '3':
-        decodeTexte += 'i';
+        string += 'i';
         break;
       case '4':
-        decodeTexte += 'o';
+        string += 'o';
         break;
       case '5':
-        decodeTexte += 'u';
+        string += 'u';
         break;
       default:
-        decodeTexte += number;
+        string += transNumbersLetter[index];
+        break;
     }
   }
-  return decodeTexte;
-}
+  return string;
+}	
 
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let arrayNames = [];
-  for (let count = 0; count < tech.length; count += 1) {
-    let obj = {};
-    obj.tech = tech[count];
-    obj.name = name;
-    arrayNames.push(obj);
+  let obj = [];
+  let array = tech.sort();
+  if (tech.length < 1) {
+    return 'Vazio!'
   }
-  let arrayOrdenado = arrayNames.sort((a, b) => (a.tech > b.tech) ? 1 : -1);
-  return tech.length > 0 ? arrayOrdenado : 'Vazio!'
+  for (let index = 0; index < tech.length; index += 1) {
+    let x = { tech: array[index], name };
+    obj.push(x);
+  }
+  return obj;
 }
 
 // Desafio 11
