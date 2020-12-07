@@ -42,7 +42,20 @@ function highestCount(values) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  function calcPosition (pos1, pos2) {
+    return Math.abs (pos1 - pos2);
+  }
+  
+  if (calcPosition(mouse, cat1) <  calcPosition(mouse, cat2)) {
+    returnString = 'cat1';
+  }
+  else if (calcPosition(mouse, cat1) >  calcPosition(mouse, cat2)) {
+    returnString = 'cat2';
+  }
+  else {
+    returnString = 'os gatos trombam e o rato foge';
+  }
+  return returnString
 }
 
 // Desafio 8
