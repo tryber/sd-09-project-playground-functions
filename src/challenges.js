@@ -88,35 +88,61 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(arrayToEncode) {
-  let encodedArray = [];
+  let encodedArray = '';
   for (let index = 0; index < arrayToEncode.length; index += 1) {
     switch (arrayToEncode[index]) {
       case 'a':
-        encodedArray.push(arrayToEncode.replace(/a/gi, '1'));
+        encodedArray += '1';
         break;
       case 'e':
-        encodedArray.push(arrayToEncode.replace(/e/gi, '2'));
+        encodedArray += '2';
         break;
       case 'i':
-        encodedArray.push(arrayToEncode.replace(/i/gi, '3'));
+        encodedArray += '3';
         break;
       case 'o':
-        encodedArray.push(arrayToEncode.replace(/o/gi, '4'));
+        encodedArray += '4';
         break;
       case 'u':
-        encodedArray.push(arrayToEncode.replace(/u/gi, '5'));
+        encodedArray += '5';
         break;
       default:
+        encodedArray += arrayToEncode[index];
         break;
     }
   }
-  return encodedArray.join('');
+  return encodedArray;
 }
 console.log(encode('hi there'));
 
-function decode() {
-
+function decode(arrayToEncode) {
+  let decodedArray = '';
+  for (let index = 0; index < arrayToEncode.length; index += 1) {
+    switch (arrayToEncode[index]) {
+      case '1':
+        decodedArray += 'a';
+        break;
+      case '2':
+        decodedArray += 'e';
+        break;
+      case '3':
+        decodedArray += 'i';
+        break;
+      case '4':
+        decodedArray += 'o';
+        break;
+      case '5':
+        decodedArray += 'u';
+        break;
+      default:
+        decodedArray += arrayToEncode[index];
+        break;
+    }
+  }
+  return decodedArray;
 }
+console.log(decode('h3 th2r2'));
+
 
 // Desafio 10
 function techList() {
