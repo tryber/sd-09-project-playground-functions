@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   for (let index = 0; index < array.length; index += 1) {
-    switch (true){
+    switch (true) {
       case ((array[index] % 3 === 0) && (array[index] % 5 === 0)):
         result.push('fizzBuzz');
         break;
@@ -165,16 +165,22 @@ function generatePhoneNumber(array) {
           }
         }
       }
-      if ((array[index] < 0) || (array[index] > 9)) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } else if (index === 0) {
-        telephone += `(${array[index]}`;
-      } else if (index === 1) {
-        telephone += `${array[index]}) `;
-      } else if (index === 6) {
-        telephone += `${array[index]}-`;
-      } else {
-        telephone += array[index];
+      switch (true) {
+        case ((array[index] < 0) || (array[index] > 9)):
+          return 'não é possível gerar um número de telefone com esses valores';
+          break;
+        case (index === 0):
+          telephone += `(${array[index]}`;
+          break;
+        case (index === 1):
+          telephone += `${array[index]}) `;
+          break;
+        case (index === 6):
+          telephone += `${array[index]}-`;
+          break;
+        default:
+          telephone += array[index];
+          break;
       }
     }
     return telephone;
