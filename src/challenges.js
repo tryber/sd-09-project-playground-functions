@@ -58,34 +58,35 @@ function catAndMouse(mouse,cat1,cat2) {
   let distIgual = 'os gatos trombam e o rato foge';
   let cat1s = 'cat1';
   let cat2s = 'cat2';
-  let resulta;
+  let phrase = '';
 
   if(cat1 === cat2)
-  resulta = distIgual;
+  phrase = distIgual;
 
   else if ((mouse - cat1) > (mouse - cat2))
-  resulta = cat1s;
+  phrase = cat1s;
 
   else if ((mouse - cat1) < (mouse - cat2))
-  resulta = cat2s;
+  phrase = cat2s;
 
-  return resulta;
+  return phrase;
 }
 
 // Desafio 8
 function fizzBuzz(vd8) {
-  let result;
+  let result = '';
 
   for(let index = 0; index < vd8.length; index += 1){
     if (vd8[index] % 3 === 0 && vd8[index] % 5 === 0)
-    result.push = 'fizzBuzz';
+    result += 'fizzBuzz';
     else if(vd8[index] % 3 === 0)
-    result.push = 'fizz';
+    result += 'fizz';
     else if (vd8[index] % 5 === 0)
-    result.push = 'buzz';
+    result += 'buzz';
     else
-    result.push = 'bug!';
+    result += 'bug!';
   }
+  return result;
 }
 
 // Desafio 9
