@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
   return totalPoints;
 }
 
-// Funcao auxiliar
+// Auxiliary function
 function countsRepeatedNumbers(array, number) {
   let repeat = 0;
   for (let index = 0; index < array.length; index += 1) {
@@ -185,11 +185,11 @@ function techList(technologies, name) {
   }
   return myTechList;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
+// Auxiliary function
 function checkArrayIsValid(array) {
   let repeat;
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     repeat = countsRepeatedNumbers(array, array[index]);
     if (array[index] < 0 || array[index] > 9 || repeat > 2) {
       return false;
@@ -201,9 +201,37 @@ function checkArrayIsValid(array) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-
+  let phoneNumber = '';
+  let isValid = checkArrayIsValid(numbers);
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } if (!isValid) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let indexNumbers = 0;
+  for (let index = 0; index < 15; index += 1) {
+    switch (index) {
+      case 0:
+        phoneNumber += '(';
+        break;
+      case 3:
+        phoneNumber += ')';
+        break;
+      case 4:
+        phoneNumber += ' ';
+        break;
+      case 10:
+        phoneNumber += '-';
+        break;
+      default:
+        phoneNumber += numbers[indexNumbers];
+        indexNumbers += 1;
+        break;
+    }
+  }
+  return phoneNumber;
 }
-
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
