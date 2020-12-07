@@ -2,9 +2,9 @@
 function compareTrue(valor1, valor2) {
   if ((valor1 === true) && (valor2 === true)) {
     return true;
-  } else {
+  }  
     return false;
-  }
+  
 }
 
 // Desafio 2
@@ -40,7 +40,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let vitoria = 3 * wins;
   let empate = 1 * ties;
-  let postosTotais = vitoria + empate;
+  let pontosTotais = vitoria + empate;
   return pontosTotais
 }
 
@@ -93,7 +93,7 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode(letters) {
+function encode(letter) {
   let letters = letter.split('');
   let result = '';
   for (let i = 0; i <= letters.length; i += 1) {
