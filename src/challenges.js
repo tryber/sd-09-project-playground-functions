@@ -147,10 +147,10 @@ function validRange(arrayNumber) {
 }
 
 function validArray(arrayNumber) {
-  let count = 0;
   let valid = true;
   
   for (let number of arrayNumber) {
+    let count = 0;
     for (let index = 0; index < arrayNumber.length; index += 1) {
       if (number === arrayNumber[index]) {
         count += 1;
@@ -159,7 +159,6 @@ function validArray(arrayNumber) {
     if (count >= 3) {
       valid = false;
     }
-    count = 0;
   }
   return valid;
 }
