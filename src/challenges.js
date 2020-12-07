@@ -154,7 +154,7 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  let trueOrFalse = false
+  let trueOrFalse = true
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     let checkNumber = array[index]
@@ -163,7 +163,7 @@ function repeatedNumber(array) {
         count += 1
       }
       if (count >= 3) {
-        trueOrFalse = true
+        trueOrFalse = false
       }
     }
     count = 0;
