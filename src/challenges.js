@@ -28,8 +28,9 @@ function splitSentence(streng) {
 }
 
 // Desafio 4
-function concatName(array) { 
-  return array[0]+', '+array[array.length-1];
+function concatName(array) {
+  let ultimoEprimeiro = array[array.length - 1] + ', ' + array[0];
+  return ultimoEprimeiro;
 }
 
 // Desafio 5
@@ -50,30 +51,30 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, gat1, gat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let posicaogat1 = '';
   let posicaogat2 = '';
-  if (mouse > gat1 && mouse > gat2) {
-    posicaogat1 = mouse - gat1;
-    posicaogat2 = mouse - gat2;
+  if (mouse > cat1 && mouse > cat2) {
+    posicaogat1 = mouse - cat1;
+    posicaogat2 = mouse - cat2;
   }
-  if (mouse < gat1 && mouse < gat2) {
-    posicaogat1 = gat1 - mouse;
-    posicaogat2 = gat2 - mouse;
+  if (mouse < cat1 && mouse < cat2) {
+    posicaogat1 = cat1 - mouse;
+    posicaogat2 = cat2 - mouse;
   }
-  if (mouse < gat1 && mouse > gat2) {
-    posicaogat1 = gat1 - mouse;
-    posicaogat2 = mouse - gat2;
+  if (mouse < cat1 && mouse > cat2) {
+    posicaogat1 = cat1 - mouse;
+    posicaogat2 = mouse - cat2;
   }
-  if (mouse > gat1 && mouse < gat2) {
-    posicaogat1 = mouse - gat1;
-    posicaogat2 = gat2 - mouse;
+  if (mouse > cat1 && mouse < cat2) {
+    posicaogat1 = mouse - cat1;
+    posicaogat2 = cat2 - mouse;
   }
   if (posicaogat1 < posicaogat2) {
-    return 'gat1'
+    return 'cat1'
   }
   if (posicaogat1 > posicaogat2) {
-    return 'gat2'
+    return 'cat2'
   }
   else {
     return 'os gatos trombam e o rato foge';
