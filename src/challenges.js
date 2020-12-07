@@ -47,7 +47,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Referência para usar o Math.max(...array) no desafio:
+// Referência para usar o Math.max(...array) e o for (... in ...) no desafio:
+// https://imasters.com.br/front-end/diferenca-entre-for-of-e-for-in
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(array) {
   // seu código aqui
@@ -84,19 +85,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Refecencia do for (... of ...) usado no desafio:
+// // https://imasters.com.br/front-end/diferenca-entre-for-of-e-for-in
 function fizzBuzz(array) {
   // seu código aqui
   let retornoArray = [];
 
-  for (let contador = 0; contador < array.length; contador += 1) {
-    if (array[contador] % 5 === 0 && array[contador] % 3 === 0) {
-      retornoArray.push('fizzBuzz');
-    } else if (array[contador] % 5 === 0) {
-      retornoArray.push('buzz');
-    } else if (array[contador] % 3 === 0) {
-      retornoArray.push('fizz');
-    } else {
-      retornoArray.push('bug!');
+  for (let contador of array) {
+    switch (true) {
+      case contador % 5 === 0 && contador % 3 === 0:
+        retornoArray.push('fizzBuzz');
+        break;
+      case contador % 5 === 0:
+        retornoArray.push('buzz');
+        break;
+      case array[contador] % 3 === 0:
+        retornoArray.push('fizz');
+        break;
+      default:
+        retornoArray.push('bug!');
     }
   }
   return retornoArray;
@@ -278,7 +285,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   // seu código aqui
   let regExpNumber = /\d+/g;
-  let number = string.match(regexNumber);
+  let number = string.match(regExpNumber);
   let totalNumber = 0;
 
   for (let contador = 0; contador < number.length; contador += 1) {
