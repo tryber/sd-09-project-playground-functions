@@ -44,9 +44,9 @@ function handleSplitSentence(context) {
 }
 
 function splitSentence(sentence) {
+  const lastIndex = (sentence.length - 1).toString();
   let contextObject = loopThroughIn(
-    { input: sentence, sentenceArray: [], currentWord: [],
-      lastIndex: (sentence.length - 1).toString() },
+    { input: sentence, sentenceArray: [], currentWord: '', lastIndex },
     handleSplitSentence);
   return contextObject.sentenceArray;
 }
@@ -148,11 +148,8 @@ function handleFizzBuzz(context) {
 
 function fizzBuzz(inputArray) {
   const contextObject = loopThroughIn(
-    {
-      input: inputArray,
-    },
-    handleFizzBuzz,
-  );
+    { input: inputArray },
+    handleFizzBuzz);
   return contextObject.input;
 }
 
@@ -169,8 +166,7 @@ function translate(context) {
 function getTranslation(text, dictionary) {
   const contextObject = loopThroughIn(
     { input: text, dictionary, translation: '' },
-    translate,
-  );
+    translate);
   return contextObject.translation;
 }
 
