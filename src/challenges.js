@@ -83,16 +83,22 @@ function fizzBuzz(array) {
 function encode(str) {
   let array = str.split('');
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === 'a') {
-      array[index] = 1;
-    } else if (array[index] === 'e') {
-      array[index] = 2;
-    } else if (array[index] === 'i') {
-      array[index] = 3;
-    } else if (array[index] === 'o') {
-      array[index] = 4;
-    } else if (array[index] === 'u') {
-      array[index] = 5;
+    switch (true) {
+      case (array[index] === 'a'):
+        array[index] = 1;
+        break;
+      case (array[index] === 'e'):
+        array[index] = 2;
+        break;
+      case (array[index] === 'i'):
+        array[index] = 3;
+        break;
+      case (array[index] === 'o'):
+        array[index] = 4;
+        break;
+      case (array[index] === 'u'):
+        array[index] = 5;
+        break;
     }
   }
   str = array.join('');
@@ -102,16 +108,22 @@ function encode(str) {
 function decode(str) {
   let array = str.split('');
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === '1') {
-      array[index] = 'a';
-    } else if (array[index] === '2') {
-      array[index] = 'e';
-    } else if (array[index] === '3') {
-      array[index] = 'i';
-    } else if (array[index] === '4') {
-      array[index] = 'o';
-    } else if (array[index] === '5') {
-      array[index] = 'u';
+    switch (true){
+      case (array[index] === '1'):
+        array[index] = 'a';
+        break;
+      case (array[index] === '2'):
+        array[index] = 'e';
+        break;
+      case (array[index] === '3'):
+        array[index] = 'i';
+        break;
+      case (array[index] === '4'):
+        array[index] = 'o';
+        break;
+      case (array[index] === '5'):
+        array[index] = 'u';
+        break;
     }
   }
   str = array.join('');
