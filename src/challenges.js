@@ -162,7 +162,7 @@ function repeatedNumber(array) {
       if (checkNumber === array[index]) {
         count += 1
       }
-      if (count > 3) {
+      if (count >= 3) {
         trueOrFalse = false
       }
     }
@@ -175,12 +175,12 @@ function generatePhoneNumber(array) {
   // seu código aqui
   let phoneNumber = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (repeatedNumber(array) === false || array[index] < 0 || array[index] > 9) {
-          phoneNumber = 'não é possível gerar um número de telefone com esses valores'
-        } else if (array.length !== 11) {
-              phoneNumber =  'Array com tamanho incorreto.'
-            } else if (array.length === 11) {
-                  phoneNumber =  '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+      if (array.length !== 11) {
+          phoneNumber =  'Array com tamanho incorreto.'
+      }   else if (repeatedNumber(array) === false || array[index] < 0 || array[index] > 9) {
+                  phoneNumber = 'não é possível gerar um número de telefone com esses valores'
+          }       else if (array.length === 11) {
+                            phoneNumber =  '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
                 }
   }
   return phoneNumber;
