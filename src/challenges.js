@@ -198,12 +198,10 @@ function decode(encoded) {
 
 // Desafio 10
 function techListTest(index, array, name) {
-  let result = [];
-  let object = {
+  let result = {
     tech: array[index],
     name,
   };
-  result.push(object);
   return result;
 }
 
@@ -253,5 +251,17 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+compareTrue(true, true)
+calcArea(5, 4)
+splitSentence('Go Trybe')
+concatName(['primeira', 'segunda', 'Ultima'])
+footballPoints(3, 1)
+highestCount([9, 1, 2, 41, 3, 9, 5, 7, 9, 41, 17, 41])
+catAndMouse(7, 8, 8)
+fizzBuzz([2, 15, 7, 9, 45, 25])
+encode('Boa noite meu consagrado')
+decode('B41 n43t2 m25 c4ns1gr1d4')
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Willian')
 
 // Aooba, não é que tem um segredo no Lession Learned?!
