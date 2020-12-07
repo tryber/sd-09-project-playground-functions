@@ -1,21 +1,20 @@
-//ok
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true){
+  if (valor1 === true && valor2 === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let result = string.split(" ");
+  let result = string.split(' ');
   return result;
 }
 
@@ -23,15 +22,15 @@ function splitSentence(string) {
 function concatName(arrayS) {
   let primaryString = arrayS[0];
   let lastString = arrayS[arrayS.length - 1];
-  let result = lastString + ', ' + primaryString;
+  let result = `${lastString}, ${primaryString}`;
   return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  pointsWins = wins * 3;
-  pointsTies = ties * 1;
-  totPoints = pointsWins + pointsTies;
+  let pointsWins = wins * 3;
+  let pointsTies = ties * 1;
+  let totPoints = pointsWins + pointsTies;
   return totPoints;
 }
 
@@ -39,9 +38,9 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumbers) {
   let biggerNumber = Math.max(...arrayNumbers);
   let repeatNumber = 0;
-  for (let index = 0; index < arrayNumbers.length; index += 1){
-    if (biggerNumber == arrayNumbers[index]){
-      repeatNumber = repeatNumber + 1;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (biggerNumber == arrayNumbers[index]) {
+      repeatNumber += 1;
     }
   }
   return repeatNumber;
@@ -56,58 +55,58 @@ function catAndMouse() {
 function fizzBuzz(arrayNumbers) {
   let array = [];
   for (let index in arrayNumbers) {
-      if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 !== 0) {
-         input = "fizz";
-      } else if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 === 0){
-             input = "buzz";
-      } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-          input = "fizzBuzz";
-      } else {
-           input = "bug!";
-      }
-      array.push(input);
-      input = "";
-      }
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 !== 0) {
+        input = 'fizz';
+    } else if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 === 0){
+        input = 'buzz';
+    } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+        input = 'fizzBuzz';
+    } else {
+        input = 'bug!';
+    }
+    array.push(input);
+    input = '';
+    }
   return array;
 }
 
 // Desafio 9
 function encode(characterSet) {
-  let characterArray = characterSet.split("");
+  let characterArray = characterSet.split('');
   for (let i in characterArray) {
     switch (characterArray[i]) {
-      case "a": characterArray[i] = 1;
+      case 'a': characterArray[i] = 1;
         break;
-      case "e": characterArray[i] = 2;
+      case 'e': characterArray[i] = 2;
         break;
-      case "i": characterArray[i] = 3;
+      case 'i': characterArray[i] = 3;
         break;
-      case "o": characterArray[i] = 4;
+      case 'o': characterArray[i] = 4;
         break;
-      case "u": characterArray[i] = 5;
+      case 'u': characterArray[i] = 5;
         break;
     }
   }
-  let characterEncode = characterArray.join("");
+  let characterEncode = characterArray.join('');
   return characterEncode;
 }
 function decode(characterSetDecode) {
-  let characterArray = characterSetDecode.split("");
+  let characterArray = characterSetDecode.split('');
   for (let i in characterArray) {
     switch (characterArray[i]) {
-      case "1": characterArray[i] = "a";
+      case '1': characterArray[i] = 'a';
         break;
-      case "2": characterArray[i] = "e";
+      case '2': characterArray[i] = 'e';
         break;
-      case "3": characterArray[i] = "i";
+      case '3': characterArray[i] = 'i';
         break;
-      case "4": characterArray[i] = "o";
+      case '4': characterArray[i] = 'o';
         break;
-      case "5": characterArray[i] = "u";
+      case '5': characterArray[i] = 'u';
         break;
-    }
-  }
-  let characterDecode = characterArray.join("");
+    };
+  };
+  let characterDecode = characterArray.join('');
   return characterDecode;
 }
 
