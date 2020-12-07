@@ -198,8 +198,39 @@ function generatePhoneNumber(arrayNumbers) {
   return (phoneNumber);
 }
 
+function checkSides(lineA, lineB, lineC) {
+  let isValid = true;
+  if (lineA > lineB + lineC) {
+    isValid = false;
+  }
+  if (lineB > lineA + lineC) {
+    isValid = false;
+  }
+  if (lineC > lineA + lineB) {
+    isValid = false;
+  }
+  return (isValid);
+}
+
+function checkAbsDiff(lineA, lineB, lineC) {
+  let isValid = true;
+  if (lineA < Math.abs(lineB - lineC)) {
+    isValid = false;
+  }
+  if (lineA < Math.abs(lineC - lineB)) {
+    isValid = false;
+  }
+  return (isValid);
+}
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  let isValid = false;
+  isValid = checkSides(lineA, lineB, lineC);
+  isValid = checkAbsDiff(lineA, lineB, lineC);
+  isValid = checkAbsDiff(lineB, lineA, lineC);
+  isValid = checkAbsDiff(lineC, lineA, lineB);
+  return isValid;
 }
 
 // Desafio 13
