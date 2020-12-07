@@ -89,10 +89,10 @@ function fizzBuzz(numbersArray) {
 // console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
-function encode(string1) {
+function encode(string) {
   let encodeString = '';
-  for (let index1 = 0; index1 < string1.length; index1 += 1) {
-    switch (string1[index1]) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
       case 'a':
         encodeString += '1';
         break;
@@ -109,16 +109,16 @@ function encode(string1) {
         encodeString += '5';
         break;
       default:
-        encodeString += string1[index1];
+        encodeString += string[index];
     }
   } return encodeString;
 }
 // console.log(encode('hi there!'));
 
-function decode(string2) {
+function decode(string) {
   let decodeString = '';
-  for (let index2 = 0; index2 < string2.length; index2 += 1) {
-    switch (string2[index2]) {
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]) {
       case '1':
         decodeString += 'a';
         break;
@@ -135,16 +135,29 @@ function decode(string2) {
         decodeString += 'u';
         break;
       default:
-        decodeString += string2[index2];
+        decodeString += string[index];
     }
   } return decodeString;
 }
 // console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  if (array.length == 0) {
+    return 'Vazio!'
+  }
+
+  array.sort();
+
+  for (let index = 0; index < array.length; index += 1) {
+    array[index] = {
+      tech: array[index],
+      name: name,
+    }
+  }
+  return array;
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Fernanda'));
 
 // Desafio 11
 function generatePhoneNumber() {
