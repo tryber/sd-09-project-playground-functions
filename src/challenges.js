@@ -64,15 +64,9 @@ function footballPoints(wins, ties) {
     return pontosW;
   }
 
-  function pontosTies(tiesP) {
-    let pontosT = 0;
-    pontosT = tiesP * 1;
-    return pontosT;
-  }
-
   let pontos = 0;
 
-  pontos = pontosWins(wins) + pontosTies(ties);
+  pontos = pontosWins(wins) + (ties * 1);
 
   return pontos;
 }
@@ -143,46 +137,46 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let fraseFinal = '';
+  let fraseEncode = '';
 
   for (let contador = 0; contador < string.length; contador += 1) {
     if (string[contador] === 'a') {
-      fraseFinal += '1';
+      fraseEncode += '1';
     } else if (string[contador] === 'e') {
-      fraseFinal += '2';
+      fraseEncode += '2';
     } else if (string[contador] === 'i') {
-      fraseFinal += '3'
+      fraseEncode += '3'
     } else if (string[contador] === 'o') {
-      fraseFinal += '4';
+      fraseEncode += '4';
     } else if (string[contador] === 'u') {
-      fraseFinal += '5'
+      fraseEncode += '5'
     } else {
-      fraseFinal += string[contador];
+      fraseEncode += string[contador];
     }
   }
-  return fraseFinal;
+  return fraseEncode;
 }
 
 function decode(string) {
   // seu código aqui
-  let fraseFinal = '';
+  let fraseDecode = '';
 
   for (let contador = 0; contador < string.length; contador += 1) {
     if (string[contador] === '1') {
-      fraseFinal += 'a';
+      fraseDecode += 'a';
     } else if (string[contador] === '2') {
-      fraseFinal += 'e';
+      fraseDecode += 'e';
     } else if (string[contador] === '3') {
-      fraseFinal += 'i'
+      fraseDecode += 'i'
     } else if (string[contador] === '4') {
-      fraseFinal += 'o';
+      fraseDecode += 'o';
     } else if (string[contador] === '5') {
-      fraseFinal += 'u'
+      fraseDecode += 'u'
     } else {
-      fraseFinal += string[contador];
+      fraseDecode += string[contador];
     }
   }
-  return fraseFinal;
+  return fraseDecode;
 }
 
 // Desafio 10
