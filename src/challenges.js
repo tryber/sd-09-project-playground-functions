@@ -234,11 +234,11 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let numberString = string.replace(/\D/g, "");
+  let numberString = string.replace(/\D/g, '');
   let total = 0;
 
-  for (let index = 0; index < numberString.length; index++) {
-    total += parseInt(numberString[index]);
+  for (let index = 0; index < numberString.length; index += 1) {
+    total += parseInt(numberString[index], 10);
   }
 
   if (total > 1) {
