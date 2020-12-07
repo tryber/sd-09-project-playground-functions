@@ -31,6 +31,7 @@ function footballPoints(wins, ties) {
 // exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
 function highestCount(array) {
+  let array [];
   let maxNumber = Math.max(...array);
   let repeatCounter = 0;
 for (index=0; index < array.length ; index +=1){
@@ -55,9 +56,21 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let mensage=[];
+  for (index=0; index < array.length ; index +=1){
+  if (array[index] % 3 === 0 && array[index] % 5 === 0){
+    mensage.push("fizzbuzz");
+  } else if (array[index] % 3 === 0 && array[index] % 5 != 0){
+    mensage.push("fizz");
+  } else if (array[index] % 3 != 0 && array[index] % 5 === 0){
+    mensage.push("buzz");
+  } else 
+  mensage.push("bug!");
+  }
+  return mensage;
 }
+// exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 
 // Desafio 9
 function encode() {
