@@ -127,8 +127,8 @@ function techList(tech, name) {
       }
       objetoTech[i] = obj
     }
+    return objetoTech;
   }
-return objetoTech;
 }
 
 
