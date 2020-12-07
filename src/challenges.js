@@ -10,14 +10,14 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return ((base * height) / 2);
+return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let array = [];
-  let word = '';
+let array = [];
+let word = '';
 
   for (let contador = 0; contador < string.length; contador += 1) {
     if (string[contador] !== ' ') {
@@ -27,37 +27,26 @@ function splitSentence(string) {
       word = '';
     }
   }
-  array.push(word);
-  return array;
+array.push(word);
+return array;
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
 
-  function primeiroItem(array1) {
-    let primeiroItem = '';
-    primeiroItem += array1[array1.length - 1];
-    return primeiroItem;
-  }
+let string = '';
 
-  function segundoItem(array2) {
-    let segundoItem = '';
-    segundoItem += array2[0];
-    return segundoItem;
-  }
+string = string.concat(`${array[array.length - 1]} , ${array[0]}`);
 
-  let string = '';
-
-  string = (primeiroItem(array) + ', ' + segundoItem(array));
-
-  return string;
+return string;
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let pontos = 0;
+let pontos = 0;
 
   function pontosWins(wins) {
     let pontosWins = 0;
@@ -71,9 +60,9 @@ function footballPoints(wins, ties) {
     return pontosTies;
   }
 
-  pontos = pontosWins(wins) + pontosTies(ties);
+pontos = pontosWins(wins) + pontosTies(ties);
 
-  return pontos;
+return pontos;
 }
 
 // Desafio 6
@@ -178,7 +167,7 @@ return fraseFinal;
 
 function decode(string) {
   // seu código aqui
-  let fraseFinal = '';
+let fraseFinal = '';
 
   for (let contador = 0; contador < string.length; contador += 1) {
     if (string[contador] === '1') {
