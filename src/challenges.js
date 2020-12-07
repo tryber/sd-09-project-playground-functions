@@ -152,7 +152,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function getNumberRepetition(number1, number2, count){
+function getNumberRepetition(number1, number2, count) {
   if (number1 === number2) {
     count += 1;
   }
