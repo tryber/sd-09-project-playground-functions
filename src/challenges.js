@@ -122,7 +122,7 @@ function decode(numbers) {
       stringAux += numbers[index]
     }
   }
-  console.log(stringAux);
+  return stringAux
 }
 
 // Desafio 10
