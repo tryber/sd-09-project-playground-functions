@@ -15,15 +15,14 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ")
-
+  return sentence.split('')
 }
 
+// Desafio 4
 function concatName(namesArray) {
   let lastItem = namesArray.pop();
   let firstItem = namesArray[0];
-  let finalArray = [lastItem, firstItem];
-  return finalArray
+  return lastItem+ ", " +firstItem;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -50,16 +49,28 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distancia1 > distancia2) {
     winner = 'cat2';
   } else if (distancia2 > distancia1) {
-      winner = 'cat1';
-    } else {
-      winner = 'os gatos trombam e o rato foge';
-    }
+    winner = 'cat1';
+  } else {
+    winner = 'os gatos trombam e o rato foge';
+  }
   return winner
 }
 // Desafio 8
-function fizzBuzz(array) {
-}
-
+function fizzBuzz(numberArray) {
+  let finalArray =[];
+  for (let cont = 0; cont<numberArray.length; cont +=1) {
+    if(numberArray[cont] %3 == 0) {
+ let arrayManipulation =  finalArray.push('fizz');
+   } else if(numberArray[cont] % 5 == 0) {
+    let arrayManipulation =   finalArray.push('buzz');
+    } else if(numberArray[cont] %3 === 0 && numberArray[cont] % 5 === 0) {
+  let arrayManipulation = finalArray.push('fizzBuzz');
+    } else if(numberArray[cont] %3 !== 0 && numberArray[cont] % 5 !== 0) {
+  let arrayManipulation = finalArray.push('bug!');
+    }
+    }
+    return finalArray
+    }
 // Desafio 9
 function encode() {
   // seu código aqui
