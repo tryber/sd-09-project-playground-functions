@@ -110,13 +110,12 @@ function fizzBuzz(arrayN) {
     // }
     else{
       bzfz.push("bug!")
-      console.log("OK")
     }
   }
   return bzfz
   // seu código aqui
 }
-console.log(fizzBuzz(teste8))
+// console.log(fizzBuzz(teste8))
 
 // Desafio 9
 function encode(phrase1) {
@@ -150,8 +149,17 @@ function decode(phrase2) {
 }
 
 // Desafio 10
+let teste101 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let teste100 = []
+let teste102 = "Lucas"
 function techList(toLearn, name) {
   let infoList = []
+  toLearn = toLearn.sort()
+  if (toLearn.length === 0){
+    let vazio = 'Vazio!'
+    return vazio
+  }
+  else {
   for (i in toLearn){
     infoList.push({
     "tech": toLearn[i],
@@ -160,7 +168,9 @@ function techList(toLearn, name) {
   }
   return infoList
   // seu código aqui
+  }
 }
+// console.log(techList(teste100, teste102))
 
 // Desafio 11
 function generatePhoneNumber() {
