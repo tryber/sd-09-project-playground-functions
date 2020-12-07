@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return 'cat2';
   }
-} console.log(catAndMouse(1, 1 , 5))
+}// console.log(catAndMouse(1, 1 , 5))
 
 // Desafio 8
 function getFizzBuzz(number) {
@@ -102,12 +102,23 @@ function decode() {
 
 // Desafio 10
 function techList() {
-
+ // seu código aqui
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  let output = 'Array com tamanho incorreto!';
+  if (array.length === 11) {
+    output = 'Não é possível gerar um número de telefone com esses valores!';
+    let contextObject = { input: array, counts: {} };
+    contextObject = loopThroughIn(contextObject, validateNumbers);
+    if (!(contextObject.invalidNumber)) {
+      contextObject.output = '';
+      contextObject.formats = { 0: '(', 2: ') ', 7: '-' };
+      output = loopThroughIn(contextObject, getPhoneFormat).output;
+    }
+  }
+  return output;
 }
 
 // Desafio 12
