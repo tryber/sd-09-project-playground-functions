@@ -130,19 +130,29 @@ function techList(techArray, name) {
   // seu código aqui
   let rawArray = []
   for (let index = 0; index < techArray.length; index += 1) {
-    let objeto = {}
-    objeto.tech = techArray[index]
-    objeto.name = name
-    rawArray.push(objeto)
+    let techObject = {}
+    techObject.tech = techArray[index]
+    techObject.name = name
+    rawArray.push(techObject)
   }
-  if (rawArray == null) {
-    return 'Vazio!'
+  if (rawArray.length === 0) {
+    console.log('Vazio!')
   } else {
-    return sortList(rawArray)
+    console.log(sortList(rawArray))
   }
 
   function sortList(arr) {
-    let sortedArray = returArray.sort()
+    let sortedArray = arr.sort(function (a, b) {
+      var techA = a.tech.toUpperCase();
+      var techB = b.tech.toUpperCase();
+      if (techA < techB) {
+        return -1;
+      }
+      if (techA > techB) {
+        return 1;
+      }
+      return 0;
+    })
     return sortedArray
   }
 }
