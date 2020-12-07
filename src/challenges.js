@@ -207,13 +207,20 @@ function generatePhoneNumber(telNumber) {
     return finalNumber
   }
 }
-// let teste11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
+// let teste11 = [1, 2, 3, 4, 5, 6, 7, 1, 9, 0, 1]
 // console.log(generatePhoneNumber(teste11))
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) && (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA))){
+    return true
+  }
+  else{
+    return false
+  }
   // seu código aqui
 }
+console.log(triangleCheck(10,14,8))
 
 // Desafio 13
 function hydrate() {
