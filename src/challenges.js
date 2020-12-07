@@ -249,7 +249,7 @@ function triangleCheck(lineA, lineB, lineC) {
   checkSum(lineC, sumAB) === false) {
     return false;
   }
-  if(checkSubtraction(lineA, subBC) === false || checkSubtraction(lineB, subAC) === false ||
+  if (checkSubtraction(lineA, subBC) === false || checkSubtraction(lineB, subAC) === false ||
   checkSubtraction(lineA, subAB) === false) {
     return false;
   }
@@ -257,19 +257,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Challenge 13 - Bonus a debit water calculator from Trybe Bar
-//Regex solution provided by:
-//https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+// Regex solution provided by:
+// https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
 function hydrate(commandString) {
   let waterDebits = commandString.match(/\d+/g);
   let numbersArray = Array.from(waterDebits);
   let sumWaterCups = 0;
-  for (let index = 0; index < numbersArray.length; index++) {
-    sumWaterCups += parseInt(numbersArray[index]); 
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    sumWaterCups += parseInt(numbersArray[index]);
   }
   if (sumWaterCups > 1) {
-    return sumWaterCups + ' copos de água';
+    let waterDebitMessage = sumWaterCups + ' copos de água';
+    return waterDebitMessage;
   }
-  return sumWaterCups + ' copo de água';
+  let waterDebitMessage = sumWaterCups + ' copo de água';
+  return waterDebitMessage;
 }
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
