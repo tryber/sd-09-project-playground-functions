@@ -32,19 +32,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function getNumberRepetition(number1, number2, count){
-  if (number1 === number2) {
-    count += 1;
-  }
-  return count;
-}
-
 function highestCount(array) {
   let higherNum = 0;
   let count = 0;
   higherNum = Math.max(...array);
   for (let index = 0; index < array.length; index += 1) {
-    count = getNumberRepetition(higherNum, array[index], count);
+    if (higherNum === array[index]) {
+      count += 1;
+    }
   }
   return count;
 }
@@ -157,6 +152,13 @@ function techList(array, name) {
 }
 
 // Desafio 11
+function getNumberRepetition(number1, number2, count){
+  if (number1 === number2) {
+    count += 1;
+  }
+  return count;
+}
+
 function verifyNumberRepetition(array, number) {
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
