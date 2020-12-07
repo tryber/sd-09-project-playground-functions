@@ -135,6 +135,11 @@ function techList(techArray, name) {
     objeto.name = name
     returArray.push(objeto)
   }
+
+  if (returArray === []) {
+    return 'Vazio!'
+  }
+  
   return returArray
 }
 
