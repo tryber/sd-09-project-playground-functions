@@ -169,7 +169,7 @@ function checkDuplicate(array, element) {
 
 function isValid(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index < 0]) {
+    if (array[index] < 0) {
       return false;
     }
     if (array[index] > 9) {
@@ -209,7 +209,7 @@ function generatePhoneNumber(arrayNumber) {
 
   if (isSafeToPass(arrayNumber) === 3) {
     return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`; 
-    
+
   }
   return 'Não rolou nada!';
 }
