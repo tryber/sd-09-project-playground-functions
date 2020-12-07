@@ -144,7 +144,7 @@ function techList(techNames, name) {
     for (let indexTechNames = 0; indexTechNames < techNames.length; indexTechNames += 1) {
       let techObject = {
         tech: techNames[indexTechNames],
-        name: name
+        name: name,
       };
       techListArray.push(techObject);
     }
@@ -154,9 +154,49 @@ function techList(techNames, name) {
   return (techListArray);
 }
 
+function numberInterval(arrayNumbers) {
+  let isValid = true;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] < 0) {
+      isValid = false;
+    }
+    if (arrayNumbers[index > 9]) {
+      isValid = false;
+    }
+  }
+  console.log(isValid);
+  return (isValid);
+}
+
+function countNumbers(arrayNumbers) {
+  let isValid = true;
+  for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {
+    let count = 1;
+    for (let index2 = index1 + 1; index2 < arrayNumbers.length; index2 += 1) {
+      if (arrayNumbers[index1] === arrayNumbers[index2]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        isValid = false;
+      }
+    }
+  }
+  return (isValid);
+}
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumbers) {
+  phoneNumber = '';
+  if (arrayNumbers.length !== 11) {
+    phoneNumber = 'Array com tamanho incorreto.';
+  }
+  if (!numberInterval(arrayNumbers) || !countNumbers(arrayNumbers)) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (!phoneNumber) {
+    phoneNumber = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
+  }
+  return (phoneNumber);
 }
 
 // Desafio 12
