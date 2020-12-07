@@ -251,13 +251,16 @@ function getPhoneFormat(context) {
 }
 
 function generatePhoneNumber(array) {
-  let output = 'não é possível gerar um número de telefone com esses valores';
-  let contextObject = { input: array, counts: {} };
-  contextObject = loopThroughIn(contextObject, validateNumbers);
-  if (!(contextObject.invalidNumber)) {
-    contextObject.output = '';
-    contextObject.formats = { 0: '(', 2: ') ', 7: '-' };
-    output = loopThroughIn(contextObject, getPhoneFormat).output;
+  let output = 'Array com tamanho incorreto.';
+  if (array.length === 11) {
+    output = 'não é possível gerar um número de telefone com esses valores';
+    let contextObject = { input: array, counts: {} };
+    contextObject = loopThroughIn(contextObject, validateNumbers);
+    if (!(contextObject.invalidNumber)) {
+      contextObject.output = '';
+      contextObject.formats = { 0: '(', 2: ') ', 7: '-' };
+      output = loopThroughIn(contextObject, getPhoneFormat).output;
+    }
   }
   return output;
 }
