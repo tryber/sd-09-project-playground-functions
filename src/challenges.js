@@ -92,6 +92,7 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
+let teste8 = [2, 15, 7, 9, 45];
 function fizzBuzz(arrayN) {
   let bzfz = []
   for (i in arrayN){
@@ -104,13 +105,18 @@ function fizzBuzz(arrayN) {
     else if (arrayN[i] % 3 == 0 && arrayN[i] % 5 == 0){
       bzfz.push("fizzbuzz")
     }
-    else if (!(arrayN[i] % 3 == 0) && !(arrayN[i] % 5 == 0)){
-      bzfz.push('bug!')
+    // else if (!(arrayN[i] % 3 == 0) && !(arrayN[i] % 5 == 0)){
+    //   bzfz.push('bug!')
+    // }
+    else{
+      bzfz.push("bug!")
+      console.log("OK")
     }
   }
   return bzfz
   // seu código aqui
 }
+console.log(fizzBuzz(teste8))
 
 // Desafio 9
 function encode(phrase1) {
