@@ -1,3 +1,4 @@
+# Renato Pereira Feitosa
 # Boas vindas ao repositório do Projeto Playground Functions!
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #VQV 🚀
