@@ -34,22 +34,9 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-
-  function primeiroItem(array1) {
-    let primeiroNome = '';
-    primeiroNome += array1[array1.length - 1];
-    return primeiroNome;
-  }
-
-  function segundoItem(array2) {
-    let segundoNome = '';
-    segundoNome += array2[0];
-    return segundoNome;
-  }
-
   let string = '';
 
-  string = string.concat(`${primeiroItem(array)}, ${segundoItem(array)}`);
+  string = string.concat(`${array[array.length - 1]}}, ${array[0]}`);
 
   return string;
 }
@@ -74,7 +61,6 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-
   let somaNumero = 0;
   let maiorNumero = 0;
 
@@ -94,7 +80,6 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-
   function catFunct(mouseD, catD) {
     let distancia = 0;
 
@@ -117,7 +102,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-
   let retornoArray = [];
 
   for (let contador = 0; contador < array.length; contador += 1) {
@@ -182,7 +166,6 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-
   let lista = [];
   array.sort()
 
@@ -201,7 +184,6 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-
   function repita(arrayRepitaNumero) {
     let repitaNumero = 0;
     let repitaMaior = 0;
@@ -266,7 +248,6 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-
   let number1 = false;
   let number2 = false;
   let number3 = false;
@@ -308,7 +289,6 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
-
   let regExNumber = /\d+/g;
   let number = string.match(regExNumber);
   let totalNumber = 0;
