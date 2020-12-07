@@ -115,7 +115,6 @@ function decode(string) {
 // console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-
 function techList(array, name) {
   let arrayList = [];
   if (array.length === 0) {
@@ -163,7 +162,7 @@ function validNumber(arrayNumber) {
 
 function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length < 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   
   let phoneNumber = arrayNumber.join('');
