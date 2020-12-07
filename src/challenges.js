@@ -16,11 +16,12 @@ function calcArea(base, height) {
 calcArea(10, 15);
 
 // Desafio 3 - Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original. Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
-function splitSentence(stringToSplit, separator) {
+function splitSentence(stringToSplit) {
+  let separator = ' ';
   let arraySplit = stringToSplit.split(separator);
   return arraySplit;
 }
-splitSentence('go Trybe', ' ');
+splitSentence('go Trybe');
 // Desafio 4 - Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 
 function concatName(arrayNames) {
