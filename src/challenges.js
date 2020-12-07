@@ -173,7 +173,7 @@ function repeatedNumber(array) {
 
 function lengthArray(array) {
     let verificando = false
-    if (array.length <= 0) {
+    if (array.length == 0) {
       verificando = true
     } else if (array.length !== 11) {
       verificando = true
@@ -192,18 +192,19 @@ function numberArray (array) {
 
 function generatePhoneNumber(array) {
   // seu código aqui
-  for (let index = 0; index <= array.length; index += 1) {
-    if (numberArray(array) || repeatedNumber(array)) {
-    return 'não é possível gerar um número de telefone com esses valores'  
+  for (let index = 0; index <= array.length; index += 1) { 
+    if (lengthArray(array)) {
+    return 'Array com tamanho incorreto.'
     }
-      else if (lengthArray(array)) {
-          return 'Array com tamanho incorreto.'
+      else if (numberArray(array) || repeatedNumber(array)) {
+        return 'não é possível gerar um número de telefone com esses valores'  
       }  
                  else if (array.length === 11) {
                             return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
                 }
   }
 }
+console.log(generatePhoneNumber([]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
