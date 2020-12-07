@@ -70,21 +70,26 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let mouCat1 = 0;
-  let mouCat2 = 0;
-  let result = '';
-
+function moucat1Result(mouse, cat1) {
   if (mouse > cat1) {
-    mouCat1 = mouse - cat1;
+    return mouse - cat1;
   } else {
-    mouCat1 = cat1 - mouse;
+    return cat1 - mouse;
   }
+}
+
+function moucat2Result(mouse, cat2) {
   if (mouse > cat2) {
-    mouCat2 = mouse - cat2;
+    return mouse - cat2;
   } else {
-    mouCat2 = cat2 - mouse;
+    return cat2 - mouse;
   }
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let mouCat1 = moucat1Result(mouse, cat1);
+  let mouCat2 = moucat2Result(mouse, cat2);
+  let result = '';
   if (mouCat2 > mouCat1) {
     console.log('Desafio 7: cat1');
     result = 'cat1';
