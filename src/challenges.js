@@ -138,12 +138,12 @@ function decode(code) {
 
 // Desafio 10
 function techList(arrayTech, name) {
-  let objtArray = [];
-  let arrayTechSort = arrayTech.sort();
-
-  if (!arrayTech) {
+  if (arrayTech.length == 0) {
     return 'Vazio!';
   } else {
+    let objtArray = [];
+    let arrayTechSort = arrayTech.sort();
+
     for (let index = 0; index < arrayTechSort.length; index += 1) {
       let objt = {
         tech: arrayTechSort[index],
