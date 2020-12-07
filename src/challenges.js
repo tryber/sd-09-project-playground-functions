@@ -44,8 +44,6 @@ function highestCount(array) {
   return count;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 10]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = '';
@@ -63,14 +61,19 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let result = [];
   for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
-      result.push('fizzBuzz');
-    } else if (array[index] % 5 === 0) {
-      result.push('buzz');
-    } else if (array[index] % 3 === 0) {
-      result.push('fizz');
-    } else {
-      result.push('bug!');
+    switch (true){
+      case ((array[index] % 3 === 0) && (array[index] % 5 === 0)):
+        result.push('fizzBuzz');
+        break;
+      case (array[index] % 5 === 0):
+        result.push('buzz');
+        break;
+      case (array[index] % 3 === 0):
+        result.push('fizz');
+        break;
+      default:
+        result.push('bug!');
+        break;
     }
   }
   return result;
