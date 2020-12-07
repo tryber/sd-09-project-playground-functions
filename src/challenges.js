@@ -31,7 +31,7 @@ function concatName(array) {
     if (array[i] === array[(array.length - 1)]) {
       arrayCom1 = array[i];
     }
-  } 
+  }
   let final = arrayCom1 + ', ' + arrayCom;
   return final;
 }
@@ -51,7 +51,7 @@ function highestCount() {
   for (let i = 0; i <= highestCount.length; i += 1) {
     if (highestCount[i] == high) {
       high = highestCount;
-    } 
+    }
   }
   for (let j = 0; j <= highestCount.length; j += 1) {
     if(highestCount[j] == high) {
@@ -78,7 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberArray) {
   let resultado = [];
   for(let i = 0; i <= numberArray.length; i += 1) {
-    
     if ((numberArray[i] % 3 === 0) & (numberArray[i] % 5 === 0)) {
       resultado.push("fizzBuzz");
     } else if ((numberArray[i] % 3 === 0)) {
@@ -88,7 +87,7 @@ function fizzBuzz(numberArray) {
     } else {
       resultado.push("bug!");
     }
-  } 
+  }
     return resultado
 }
 
@@ -98,7 +97,7 @@ function encode(letter) {
   console.log(letter);
   for(let i = 0; i <= letters.length; i += 1) {
     switch (letters[i]) {
-      case 'a': 
+      case 'a':
         letters[i] = '1';
         break;
       case 'e':
@@ -122,7 +121,7 @@ function decode(letter) {
   console.log(letter);
   for(let i = 0; i <= letters.length; i += 1) {
     switch (letters[i]) {
-      case '1': 
+      case '1':
         letters[i] = 'a';
         break;
       case '2':
