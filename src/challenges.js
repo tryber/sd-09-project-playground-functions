@@ -169,31 +169,29 @@ function generatePhoneNumber(array) {
   let telephone = '';
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let index = 0; index < array.length; index += 1) {
-      switch (true) {
-        case (verifyNumberRepetition(array, array[index])):
-          return 'não é possível gerar um número de telefone com esses valores';
-        case ((array[index] < 0) || (array[index] > 9)):
-          return 'não é possível gerar um número de telefone com esses valores';
-        case (index === 0):
-          telephone += `(${array[index]}`;
-          break;
-        case (index === 1):
-          telephone += `${array[index]}) `;
-          break;
-        case (index === 6):
-          telephone += `${array[index]}-`;
-          break;
-        default:
-          telephone += array[index];
-          break;
-      }
+  }for (let index = 0; index < array.length; index += 1) {
+    switch (true) {
+      case (verifyNumberRepetition(array, array[index])):
+        return 'não é possível gerar um número de telefone com esses valores';
+      case ((array[index] < 0) || (array[index] > 9)):
+        return 'não é possível gerar um número de telefone com esses valores';
+      case (index === 0):
+        telephone += `(${array[index]}`;
+        break;
+      case (index === 1):
+        telephone += `${array[index]}) `;
+        break;
+      case (index === 6):
+        telephone += `${array[index]}-`;
+        break;
+      default:
+        telephone += array[index];
+        break;
     }
   }
   return telephone;
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,1]));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sumBC = lineB + lineC;
