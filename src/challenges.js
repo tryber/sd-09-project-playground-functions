@@ -96,6 +96,7 @@ function encode(string9) {
   }
   return string9;
 }
+// teste
 
 function decode(string9) {
   let object = { '1':'a','2':'e','3':'i','4':'o','5':'u'};
