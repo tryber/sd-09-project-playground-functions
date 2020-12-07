@@ -47,13 +47,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let asd = [9, 1, 2, 3, 9, 5, 7];
 function highestCount(array) {
   // seu código aqui
-  let somaNumero = 0;
-  let maiorNumero = 0;
-
   function maiorNumeroList(arrayNumbers) {
+    let maiorNumero = 0;
     for (let contador = 0; contador < arrayNumbers.length; contador += 1) {
       if (arrayNumbers[contador] > maiorNumero) {
         maiorNumero = arrayNumbers[contador];
@@ -61,14 +58,19 @@ function highestCount(array) {
     }
     return maiorNumero;
   }
-  for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
-    if (maiorNumeroList(array) === array[contadorNumero]) {
-      somaNumero += 1;
+
+  function somaNumberoList(array) {
+    let somaNumero = 0;
+    for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
+      if (maiorNumeroList(array) === array[contadorNumero]) {
+        somaNumero += 1;
+      }
     }
+    return somaNumero;
   }
-  return somaNumero;
+  return somaNumberoList(array);
 }
-console.log(highestCount(asd));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
