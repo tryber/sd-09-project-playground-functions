@@ -135,12 +135,11 @@ function techList(techArray, name) {
     objeto.name = name
     returArray.push(objeto)
   }
-
   if (returArray === []) {
     return 'Vazio!'
+  } else {
+    return returArray
   }
-  
-  return returArray
 }
 
 // Desafio 11
