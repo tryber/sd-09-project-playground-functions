@@ -2,7 +2,7 @@
 
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
-  return valueOne && valueTwo 
+  return valueOne && valueTwo
 }
 
 // Desafio 2
