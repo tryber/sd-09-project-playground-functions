@@ -103,11 +103,8 @@ function fizzBuzz(arrayN) {
       bzfz.push("buzz")
     }
     else if (arrayN[i] % 3 == 0 && arrayN[i] % 5 == 0  && arrayN[i] !== 0){
-      bzfz.push("fizzbuzz")
+      bzfz.push("fizzBuzz")
     }
-    // else if (!(arrayN[i] % 3 == 0) && !(arrayN[i] % 5 == 0)){
-    //   bzfz.push('bug!')
-    // }
     else if ((!(arrayN[i] % 5 == 0) && !(arrayN[i] % 3 == 0)) || arrayN[i] === 0){
       bzfz.push("bug!")
     }
@@ -177,8 +174,12 @@ function techList(toLearn, name) {
 // console.log(techList(teste100, teste102))
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(telNumber) {
   // seu código aqui
+  if (telNumber.length !== 11){
+    return "Array com tamanho incorreto."
+  }
+
 }
 
 // Desafio 12
