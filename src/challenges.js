@@ -270,7 +270,7 @@ function hydrate(commandString) {
   let numbersArray = Array.from(waterDebits);
   let sumWaterCups = 0;
   for (let index = 0; index < numbersArray.length; index += 1) {
-    sumWaterCups += parseInt(numbersArray[index]);
+    sumWaterCups += parseInt(numbersArray[index], 10);
   }
   if (sumWaterCups > 1) {
     let waterDebitMessage = sumWaterCups + ' copos de água';
