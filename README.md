@@ -136,7 +136,11 @@ Caso os gatos estejam na mesma distância do rato, a função deverá retornar a
 
 **8 - FizzBuzz**
 -
-Crie uma função chamada `fizzBuzz` que receba uma array de números e retorne uma array da seguinte forma:
+Crie uma funbug!
+fizzBuzz
+bug!
+fizz
+fizzBuzz chamada `fizzBuzz` que receba uma array de números e retorne uma array da seguinte forma:
 
 - Para cada número da Array que seja divisível apenas por 3, apresente uma string `"fizz"`;
 - Para cada número da Array que seja divisível apenas por 5, apresente uma string `"buzz"`;
