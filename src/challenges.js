@@ -71,45 +71,68 @@ function fizzBuzz() {
   // seu código aqui
 }
 
-// // Desafio 9
-// function encode() {
-//   // seu código aqui
+// Desafio 9
+function encode() {
+// seu código aqui
+}
+
+// function translate(context) {
+//   let value = context.currentValue;
+//   if (context.currentValue in context.dictionary){
+//     value = context.dictionary[context.currentValue];
+//   }
+//   context.translation += value;
+//   return context;
 // }
 
-function translate(context) {
-  let value = context.currentValue;
-  if (context.currentValue in context.dictionary){
-    value = context.dictionary[context.currentValue];
-  }
-  context.translation += value;
-  return context;
-}
+// function getTranslation(text, dictionary) {
+//   const contextObject = loopThroughIn(
+//     {
+//       input: text,
+//       dictionary,
+//       translation: '',
+//     },
+//     translate,
+//   );
+//   return contextObject.translation;
+// }
 
-function getTranslation(text, dictionary) {
-  const contextObject = loopThroughIn(
-    {
-      input: text,
-      dictionary,
-      translation: '',
-    },
-    translate,
-  );
-  return contextObject.translation;
-}
-
-function encode(text) {
-  const dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  return getTranslation(text, dictionary);
-}
+// function encode(text) {
+//   const dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+//   return getTranslation(text, dictionary);
+// }
 
 function decode(text) {
-  const dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
-  return getTranslation(text, dictionary);
+//   const dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+//   return getTranslation(text, dictionary);
 }
 
 // Desafio 10
-function techList() {
+function addObject(context) {
+  context.techList.push({ tech: context.currentValue, name: context.name });
+  return context;
+}
+function orderAscending(context) {
+  let nextIndex = parseInt(context.currentIndex) + 1;
+  let nextValue = context.input[nextIndex.toString()];
+  let currentGreaterThanNext = (context.currentValue > nextValue);
+  let nextIndexExists = (nextIndex in context.input);
+  if (currentGreaterThanNext && nextIndexExists) {
+    context.input[context.currentIndex] = nextValue;
+    context.input[nextIndex] = context.currentValue;
+  }
+  return context;
+}
 
+function techList(array, name) {
+  let contextObject = { input: array };
+  for (let cycles = array.length - 1; cycles > 0; cycles -= 1) {
+    contextObject = loopThroughIn(contextObject, orderAscending);
+  }
+  contextObject.name = name;
+  contextObject.techList = [];
+  contextObject = loopThroughIn(contextObject, addObject);
+  return contextObject.techList;
 }
 
 // Desafio 11
