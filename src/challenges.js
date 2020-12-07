@@ -55,12 +55,18 @@ function catAndMouse(mouse,cat1,cat2) {
   let distIgual = 'os gatos trombam e o rato foge';
   let cat1s = 'cat1';
   let cat2s = 'cat2';
+  let resulta;
+
   if(cat1 === cat2)
-    return distIgual;
-  else if ((mouse - cat1) < (mouse - cat2)
-    return cat1s;
-  else if ((mouse - cat) > (mouse - cat2))
-    return cat2s;
+  resulta = distIgual;
+
+  else if ((mouse - cat1) < (mouse - cat2))
+  resulta = cat1s;
+
+  else if ((mouse - cat1) > (mouse - cat2))
+  resulta = cat2s;
+
+  return resulta;
 }
 
 // Desafio 8
@@ -124,3 +130,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
