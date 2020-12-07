@@ -6,11 +6,13 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
+// endof Desafio 1
 
 // Desafio 2
 function calcArea(base, heigth) {
   return ((base * heigth) / 2);
 }
+// endof Desafio 2
 
 // Desafio 3
 function splitSentence(stringToSplit) {
@@ -29,6 +31,7 @@ function splitSentence(stringToSplit) {
   }
   return (stringSplitted);
 }
+// endof Desafio 3
 
 // Desafio 4
 function concatName(stringArray) {
@@ -38,11 +41,13 @@ function concatName(stringArray) {
   concatenadedString += stringArray[0];
   return (concatenadedString);
 }
+// endof Desafio 4
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
+// endof Desafio 5
 
 // Desafio 6
 function highestCount(valuesArray) {
@@ -59,6 +64,7 @@ function highestCount(valuesArray) {
   }
   return (highestRepeat);
 }
+// endof Desafio 6
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -76,7 +82,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return (result);
 }
+// endof Desafio 7
 
+// Desafio 8
 function fizzOrBuzz(number) {
   let result;
   if (number % 3 === 0) {
@@ -91,7 +99,6 @@ function fizzOrBuzz(number) {
   return (result);
 }
 
-// Desafio 8
 function fizzBuzz(numbersArray) {
   let fizzBuzzArray = [];
   for (let indexNumbers = 0; indexNumbers < numbersArray.length; indexNumbers += 1) {
@@ -102,7 +109,9 @@ function fizzBuzz(numbersArray) {
   }
   return (fizzBuzzArray);
 }
+// endof Desafio 8
 
+// Desafio 9
 function code(stringToCode, toBeReplaced, replaceBy) {
   let codedString = '';
   for (let stringIndex = 0; stringIndex < stringToCode.length; stringIndex += 1) {
@@ -115,7 +124,6 @@ function code(stringToCode, toBeReplaced, replaceBy) {
   return (codedString);
 }
 
-// Desafio 9
 function encode(stringToEncode) {
   stringToEncode = code(stringToEncode, 'e', '2');
   stringToEncode = code(stringToEncode, 'u', '5');
@@ -135,6 +143,7 @@ function decode(stringToDecode) {
 
   return (stringToDecode);
 }
+// endof Desafio 9
 
 // Desafio 10
 function techList(techNames, name) {
@@ -153,7 +162,9 @@ function techList(techNames, name) {
   }
   return (techListArray);
 }
+// endof Desafio 10
 
+// Desafio 11
 function numberInterval(arrayNumbers) {
   let isValid = true;
   for (let index = 0; index < arrayNumbers.length; index += 1) {
@@ -183,7 +194,6 @@ function countNumbers(arrayNumbers) {
   return (isValid);
 }
 
-// Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let phoneNumber = '';
   if (!numberInterval(arrayNumbers) || !countNumbers(arrayNumbers)) {
@@ -197,7 +207,9 @@ function generatePhoneNumber(arrayNumbers) {
   }
   return (phoneNumber);
 }
+// endof Desafio 11
 
+// Desafio 12
 function checkSides(lineA, lineB, lineC) {
   let isValid = true;
   if (lineA > lineB + lineC) {
@@ -223,7 +235,6 @@ function checkAbsDiff(lineA, lineB, lineC) {
   return (isValid);
 }
 
-// Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let isValid = false;
   isValid = checkSides(lineA, lineB, lineC);
@@ -232,6 +243,7 @@ function triangleCheck(lineA, lineB, lineC) {
   isValid = checkAbsDiff(lineC, lineA, lineB);
   return isValid;
 }
+// endof Desafio 12
 
 // Desafio 13
 function hydrate(drinksString) {
@@ -248,6 +260,7 @@ function hydrate(drinksString) {
   glassesOfWater += glasses;
   return (glassesOfWater);
 }
+// endof Desafio 13
 
 module.exports = {
   calcArea,
