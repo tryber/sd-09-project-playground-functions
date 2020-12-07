@@ -1,6 +1,6 @@
 // Desafio 1 ===================================================================================================================
 function compareTrue(B1, B2) {
-  if(B1 === true && B2 === true){
+  if((B1 == true) && (B2 == true)){
     return('true');
   } else {
     return('false');
@@ -15,7 +15,8 @@ console.log('');
 
 // Desafio 2 ===================================================================================================================
 function calcArea(base, height) {
-  if(base > 0 && height > 0){
+  return((base * height)/2);
+  /*if(base > 0 && height > 0){
     return('Um triângulo de base = ' + base + ' e de altura = ' + height + ', possui área = ' + (base * height)/2 + ' u.a.');
   } else if((base <= 0) && (height > 0)){
     return('Não existe triângulo, com valor de base = ' + base);
@@ -23,7 +24,7 @@ function calcArea(base, height) {
     return('Não existe triângulo, com valor de altura = ' + height);
   } else {
     return('Não existe triângulo, com os respectivos valores de base e altura iguais a: ' + base + ' e ' + height);
-  }
+  }*/
 }
 // Testes da função:----------
 console.log(calcArea(6, 4));
