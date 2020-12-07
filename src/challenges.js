@@ -125,9 +125,12 @@ function techList(tech, name) {
         name: name,
         tech: tech[i],
       }
+      objetoTech[i] = obj
     }
   }
+return objetoTech;
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
