@@ -85,6 +85,7 @@ function fizzBuzz(array) {
   }
   return result;
 }
+
 // Desafio 9 Ok
 function encode(transLettersNumbers) {
   // seu código aqui
@@ -112,7 +113,7 @@ function encode(transLettersNumbers) {
     }
   }
   return number;
-
+}
 function decode(transNumbersLetter) {
   // seu código aqui
   let string = '';
@@ -140,6 +141,7 @@ function decode(transNumbersLetter) {
   }
   return string;
 }
+
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
