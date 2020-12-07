@@ -160,7 +160,7 @@ function numberInterval(arrayNumbers) {
     if (arrayNumbers[index] < 0) {
       isValid = false;
     }
-    if (arrayNumbers[index > 9]) {
+    if (arrayNumbers[index] > 9) {
       isValid = false;
     }
   }
@@ -200,7 +200,6 @@ function generatePhoneNumber(arrayNumbers) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
 }
 
 // Desafio 13
