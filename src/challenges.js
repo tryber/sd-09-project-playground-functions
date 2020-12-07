@@ -1,9 +1,9 @@
 // Desafio 1 ===================================================================================================================
 function compareTrue(b1, b2) {
-  if((b1 == true) && (b2 == true)){
-    out = ('true');
+  if((b1 === true) && (b2 === true)){
+    out = (true);
   } else {
-    out = ('false');
+    out = (false);
   }
   return(out);
 }
@@ -105,9 +105,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if(getmouse1 == getmouse2){
     out = ("os gatos trombam e o rato foge");
   } else if (getmouse1 < getmouse2){
-    out = ("cat1");
-  } else if (getmouse2 < getmouse1){
     out = ("cat2");
+  } else if (getmouse2 < getmouse1){
+    out = ("cat1");
   }
   return (out);
 }
