@@ -71,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array8) {
   let index = 0
-  for (index = 0; index < array8.length; index =+1) {
+  for (index = 0; index < array8.length; index =+ 1) {
     if (array8[index] % 3 === 0 && array8[index] % 5 === 0) {
         array8[index] = "fizzBuzz";
     } else if (array8[index] % 3 === 0) {
@@ -85,7 +85,7 @@ function fizzBuzz(array8) {
   return array8;
 }
 
-
+// teste
 // Desafio 9
 function encode(string9) {
   let object = { 'a':'1','e':'2','i':'3','o':'4','u':'5'};
