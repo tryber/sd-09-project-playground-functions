@@ -112,7 +112,7 @@ for (let index = 0; index < resultado.length; index += 1) {
  } else if (resultado[index] === 'o') {
   resultado = resultado.replace('o', 4);
  } else if (resultado[index] === 'u') {
-  resultado = resultado.replace('u', 4);
+  resultado = resultado.replace('u', 5);
  }
   }
     return resultado;
