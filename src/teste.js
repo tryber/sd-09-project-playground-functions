@@ -1,9 +1,9 @@
 function catAndMouse(mouse, cat1, cat2) {
   let cat = 0 ;
   if (cat1 < cat2) {
-    cat = cat1;
+    cat = 'cat2';
   } else {
-      cat = cat2;
+      cat = 'cat1';
   }
   if (cat1 === cat2) {
     return "os gatos trombam e o rato foge"
@@ -11,4 +11,4 @@ function catAndMouse(mouse, cat1, cat2) {
   return cat
 }
 
-catAndMouse(3,2,3);
+catAndMouse(3,3,2);
