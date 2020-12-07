@@ -165,26 +165,30 @@ function numberequal11(arrayNumber) {
   return true;
 }
 function numberLess0(arrayNumber) {
-  for (let key of arrayNumber) {
-    if (key < 0 || key > 9) {
+  for (let value of arrayNumber) {
+    if (value < 0 || value > 9) {
       return false;
     }
   }
   return true;
 }
-function verificationNumber(arrayNumber) {
-  let repeatNumber = 0
-  let result = true;
-  for (let count = 0; count < arrayNumber.length; count += 1) {
-    repeatNumber = 0;
-    for (let count2 = 0; count2 < arrayNumber.length; count2 += 1) {
-      if (arrayNumber[count] === arrayNumber[count2]) {
-        repeatNumber += 1;
-      }
+function verificationNumber1(arrayNumber, index, result) {
+  let count = 0;
+  for (let value2 of arrayNumber) {
+    if (index === value2) {
+      count += 1;
     }
-    if (repeatNumber > 2) {
+    if (count > 2) {
       result = false;
     }
+  }
+  return result
+}
+
+function verificationNumber2(arrayNumber) {
+  let result = true;
+  for (let index of arrayNumber) {
+    result = verificationNumber1(arrayNumber, index, result);
   }
   return result;
 }
@@ -199,7 +203,7 @@ function generatePhoneNumber(arrayNumber) {
   // seu código aqui
   let stringNumber = transformeArrayString(arrayNumber);
   if (numberequal11(arrayNumber) === true) {
-    if (numberLess0(arrayNumber) === false || verificationNumber(arrayNumber) === false) {
+    if (numberLess0(arrayNumber) === false || verificationNumber2(arrayNumber) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     let inittialNumbers = stringNumber.slice(0, 2);
