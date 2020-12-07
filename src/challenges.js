@@ -53,12 +53,25 @@ return "os gatos trombam e o rato foge"
 }
 console.log(catAndMouse(-2,10,3))
 
-
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(meuArray) {
+  let res = []
+  for (i = 0 ; i < meuArray.length; i++) {
+    if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
+      res.push("fizz")
+    } else if (meuArray[i] % 5 === 0) {
+       res.push("buzz")
+    } else if (meuArray[i] % 3 === 0){
+       res.push("fizBuzz")
+    } else {
+      res.push("bug!")
+    }
+  }
+  return res
 }
+
+console.log(fizzBuzz([5,3,4,8]))
+
 
 // Desafio 9
 function encode() {
@@ -70,7 +83,6 @@ function decode() {
 
 // Desafio 10
 function techList() {
-  // seu código aqui
 }
 
 // Desafio 11
