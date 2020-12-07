@@ -70,7 +70,7 @@ function fizzBuzz(meuArray) {
   return res
 }
 
-console.log(fizzBuzz([5,3,4,8]))
+console.log(fizzBuzz([5,3,4,30]))
 
 
 // Desafio 9
