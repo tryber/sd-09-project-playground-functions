@@ -142,9 +142,27 @@ function techList(tech, name) {
 //console.log(techList(["React", "Jest", "HTML"], "Kamila"));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+  if (arr.length != 11) return "Array com tamanho incorreto.";
+  for (let index in arr) {
+    if (arr[index] < 0 || arr[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    let contador = 0;
+    for (let jindex in arr) {
+      if (arr[index] === arr[jindex]) {
+        contador++;
+        if (contador > 2) {
+          return "não é possível gerar um número de telefone com esses valores";
+        }
+      }
+    }
+  }
+  return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 0, 1, 0]));
+//Exercício 11 feito em colaboração com Daniel da turma 8.
 
 // Desafio 12
 function triangleCheck() {
