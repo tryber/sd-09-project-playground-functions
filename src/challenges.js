@@ -180,25 +180,32 @@ function isValid(array) {
 }
 
 function isSafeToPass(array) {
+  if (array.length > 11) {
+    return 1;
+  }
   if (!isValid(array)) {
-    return false;
+    return 2;
   }
   for (let index = 0; index < array.length; index += 1) {
     if (checkDuplicate(array, array[index]) > 2) {
-      return false;
+      return 2;
     }
   }
-  return true;
+  return 3;
 }
 
 function generatePhoneNumber(arrayNumber) {
-  if (!isSafeToPass(arrayNumber)) {
+  if (isSafeToPass(arrayNumber) === 1) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (isSafeToPass(arrayNumber) === 2) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  if (arrayNumber.length === 11) {
+
+  if (isSafeToPass(arrayNumber) === 3) {
     return '(' + arrayNumber[0] + '' + arrayNumber[1] + ') ' + arrayNumber[2] + '' + arrayNumber[3] + '' + arrayNumber[4] + '' + arrayNumber[5] + '' + arrayNumber[6] + '-' + arrayNumber[7] + '' + arrayNumber[8] + '' + arrayNumber[9] + '' + arrayNumber[10]
   }
-  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
