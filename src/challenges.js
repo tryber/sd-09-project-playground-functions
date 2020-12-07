@@ -171,12 +171,22 @@ function repeatedNumber(array) {
   return trueOrFalse
 }
 
+function lengthArray(array) {
+  if (array.length < 0) {
+    console.log('aqui')
+    return false
+  } else if (array.length !== 11) {
+    return false
+  }
+  return true
+}
+
 function generatePhoneNumber(array) {
   // seu código aqui
-  let phoneNumber = 0;
+  let phoneNumber = ''
   
   for (let index = 0; index <= array.length; index += 1) {
-      if (array.length !== 11) {
+      if (lengthArray(array) === false) {
           phoneNumber = 'Array com tamanho incorreto.'
       }   else if (repeatedNumber(array) === false || array[index] < 0 || array[index] > 9) {
                   phoneNumber = 'não é possível gerar um número de telefone com esses valores'
