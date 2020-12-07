@@ -164,27 +164,27 @@ console.log(techList(arrayTechnologies, studentName));
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   let toString = '';
-  let phone = 'Array com tamanho incorreto.';
+  let repetitions  = timesAppers(phoneNumber)
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
   for (let index = 0; index < phoneNumber.length; index += 1) {
     toString += phoneNumber[index];
-    if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || timesAppers(phoneNumber) >= 3) {
+    if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || repetitions >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  if (phoneNumber.length === 11) {
-    phone = toString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-  }
-  return phone;
+   return toString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 }
-let number = [1, 2, 3, 4, 5, 6, 7, 8, 1, 0, 1];
+let number = [2, 2, 3, 2, 5, 2, 7, 8, 2, 0, 10];
 console.log(generatePhoneNumber(number));
 
-function timesAppers (phoneNumber) {
-  for (let index = 0; index < phoneNumber.length; index += 1) {
-    let number = phoneNumber[index];
+function timesAppers (numberAppers) {
+  for (let index = 0; index < numberAppers.length; index += 1) {
+    let number = numberAppers[index];
     let popsUp = 0;
-    for (let position = 0; position < phoneNumber.length; position += 1) {
-      if (phoneNumber[position] === number) {
+    for (let position = 0; position < numberAppers.length; position += 1) {
+      if (numberAppers[position] === number) {
         popsUp += 1;
       }
     }
