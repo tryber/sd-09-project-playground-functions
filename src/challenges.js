@@ -105,10 +105,10 @@ function encode(arrayEncode) {
     i: '3',
     o: '4',
     u: '5',
- }
- arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding){
-   return encodeVocals[encoding];
- })
+}
+arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding){
+  return encodeVocals[encoding];
+})
 return arrayEncode;
 }
 console.log(encode('hi there!'));
@@ -136,41 +136,42 @@ function techList(tech , name) {
     return 'Vazio!';
   }  
 for(let index = 0; index < tech.length; index += 1) {
-  wantLearn.push({ tech: tech[index],  name: name }); 
+  wantLearn.push({ tech: tech[index],  name: name });
 }
  return wantLearn;
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
 //Desafio 11
-function invalidValue(numbers){  
+function invalidValue(numbers) {
   let numbersSlice = numbers.slice();
-  let sortArray = numbersSlice.sort()
-  let results = []; 
-  for (let index = 0; index < sortArray.length; index++) {
-      if (sortArray[index + 1] == sortArray[index]) {
-          results.push(sortArray[index]);
-      }
+  let sortArray = numbersSlice.sort();
+  let results = [];
+  for(let index = 0; index < sortArray.length; index++) {
+    if (sortArray[index + 1] == sortArray[index]) {
+      results.push(sortArray[index]);
+    }
   }
-  for(let index = 0; index < results.length; index += 1){
+  for(let index = 0; index < results.length; index += 1) {
     if(results[index +1] === results[index]) {
       return false
     }
   }
 }
-function generatePhoneNumber(numbers) {  
+function generatePhoneNumber(numbers) {
   if(numbers.length < [11] || numbers.length > [11]) {
-      return 'Array com tamanho incorreto.';
-    }    
-  for(let index = 0; index < numbers.length; index += 1){
+    return 'Array com tamanho incorreto.';
+  }
+  for(let index = 0; index < numbers.length; index += 1) {
     if(numbers[index] < 0 || numbers[index] > 9 || invalidValue(numbers) == false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
- let rN = [] 
- for(let index = 0; index < numbers.length; index += 1) {
-   rN.push(numbers[index])}    
-concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10];
+  let rN = [];
+  for(let index = 0; index < numbers.length; index += 1) {
+    rN.push(numbers[index]);
+  }
+  concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10];
   return(concat);
 }
 console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 9, 7, 7, 0]));
@@ -179,27 +180,27 @@ console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 9, 7, 7, 0]));
 function triangleCheck(lineA, lineB, lineC) {
 if(lineA < (lineB + lineC) && lineA > (lineB - lineC) && lineB < (lineC + lineA) && lineB > (lineC - lineA) && lineC < (lineB + lineA) && lineC > (lineB - lineA)) {
   return true;
-  } else {
-    return false;
-  }
+} else {
+  return false;
 }
-console.log(triangleCheck(10, 14, 8))
+}
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate(waterBottle) { 
-let regex = /\d+/g;
-let matches = waterBottle.match(regex);
-let soma = 0
-for(let index = 0; index < matches.length; index += 1) {
-soma = soma + Number(matches[index])
+function hydrate(waterBottle) {
+  let regex = /\d+/g;
+  let matches = waterBottle.match(regex);
+  let soma = 0;
+  for(let index = 0; index < matches.length; index += 1) {
+    soma = soma + Number(matches[index]);
+  }
+  if(soma === 1) {
+    return soma + " copo de água";
+  } else {
+    return soma + " copos de água";
+  }
 }
-if(soma === 1) {
-  return soma + " copo de água"
-} else {
-  return soma + " copos de água"
-}
-}
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
