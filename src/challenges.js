@@ -70,15 +70,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let hunt1 = 0;
   if (mouse < cat1) {
     hunt = cat1 - mouse;
-  } else {
+  } else{
     hunt = mouse - cat1;
   }
   if (mouse < cat2) {
     hunt1 = cat2 - mouse;
-  } else { 
+  } else{ 
     hunt1 = mouse - cat2;
   }
-  if (hunt < hunt1){
+  if (hunt < hunt1) {
     return 'cat1';
   } else if (hunt1 < hunt) {
     return 'cat2';
@@ -88,7 +88,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
+  let result = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    result.push('');
+    if (numbers[index] % 3 == 0) {
+      result[index] = 'fizz';
+    }
+    if (numbers[index] % 5 == 0) {
+      if (result[index] === 'fizz') {
+        result[index] = 'fizzBuzz';
+      } else{
+        result[index] = 'buzz';
+      }
+    }
+    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0) {
+      result[index] = 'bug!';
+    }
+  }
+  return result;
   // seu código aqui
 }
 
