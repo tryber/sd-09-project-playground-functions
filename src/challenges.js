@@ -101,31 +101,20 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 
-  function catFunct1(mouseD1, catD1) {
-    let distancia1 = 0;
+  function catFunct(mouseD, catD) {
+    let distancia = 0;
 
-    if (mouseD1 < catD1) {
-      distancia1 = cat1 - mouseD1;
-    } else if (mouseD1 > catD1) {
-      distancia1 = mouseD1 - catD1;
+    if (mouseD < catD) {
+      distancia = catD - mouseD;
+    } else if (mouseD > catD) {
+      distancia = mouseD - catD;
     }
-    return distancia1;
+    return distancia;
   }
 
-  function catFunct2(mouseD2, catD2) {
-    let distancia2 = 0;
-
-    if (mouseD2 < catD2) {
-      distancia2 = cat2 - mouseD2;
-    } else if (mouseD2 > catD2) {
-      distancia2 = mouseD2 - catD2;
-    }
-    return distancia2;
-  }
-
-  if (catFunct1(mouse, cat1) < catFunct2(mouse, cat2)) {
+  if (catFunct(mouse, cat1) < catFunct(mouse, cat2)) {
     return 'cat1';
-  } else if (catFunct1(mouse, cat1) > catFunct2(mouse, cat2)) {
+  } else if (catFunct(mouse, cat1) > catFunct(mouse, cat2)) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
