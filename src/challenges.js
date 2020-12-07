@@ -191,7 +191,7 @@ function isSafeToPass(array) {
   return 3;
 }
 
-function checkLength(array){
+function checkLength(array) {
   if (array.length > 11 || array.length < 11) {
     return 1;
   }
@@ -208,7 +208,7 @@ function generatePhoneNumber(arrayNumber) {
   }
 
   if (isSafeToPass(arrayNumber) === 3) {
-    return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`; 
+    return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
 
   }
   return 'Não rolou nada!';
