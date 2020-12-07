@@ -51,7 +51,7 @@ function addHigher(test, high) {
   let sum = 0;
   for (let index in test) {
     if (test[index] === high) {
-        sum += 1;
+      sum += 1;
     }
   }
   return sum;
@@ -165,17 +165,11 @@ function techList(array, name) {
   if (array[0] !== undefined) {
     for (let index in array) {
       if (Object.prototype.hasOwnProperty.call(index, array)) {
-        let object = {
-          tech: array[index],
-          name: name,
-        };
+        let object = {tech: array[index], name: name};
         techArray.push(object);
       }
       if ({}.hasOwnProperty.call(array, index)) {
-        let object = {
-          tech: array[index],
-          name: name,
-        };
+        let object = {tech: array[index], name: name};
         techArray.push(object);
       }
     }
