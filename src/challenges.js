@@ -167,20 +167,27 @@ function checkDuplicate(array, element) {
   return count;
 }
 
+function isValid(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
+      return true;
+    }
+    return false;
+  }
+}
+
 function generatePhoneNumber(arrayNumber) {
+  if (isValid(arrayNumber)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (9 >= arrayNumber[index] > 0) {
-      let numberAvaliated = checkDuplicate(arrayNumber, arrayNumber[index])
-      if (numberAvaliated > 2) {
-        return 'não é possível gerar um número de telefone com esses valores1';
-      }
-    } else {
-      return 'não é possível gerar um número de telefone com esses valores2';
+    if (checkDuplicate(arrayNumber, arrayNumber[index]) > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
   if (arrayNumber.length === 11) {
-    return "(" + number[0] + '' + number[1] + ') ' + arrayNumber[2] + '' + arrayNumber[3] + '' + arrayNumber[4] + '' + arrayNumber[5] + '' + arrayNumber[6] + '-' + arrayNumber[7] + '' + arrayNumber[8] + '' + arrayNumber[9] + '' + arrayNumber[10]
+    return '(' + arrayNumber[0] + '' + arrayNumber[1] + ') ' + arrayNumber[2] + '' + arrayNumber[3] + '' + arrayNumber[4] + '' + arrayNumber[5] + '' + arrayNumber[6] + '-' + arrayNumber[7] + '' + arrayNumber[8] + '' + arrayNumber[9] + '' + arrayNumber[10]
   }
   return 'Array com tamanho incorreto.';
 }
