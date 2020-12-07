@@ -99,6 +99,8 @@ function encode(str) {
       case (array[index] === 'u'):
         array[index] = 5;
         break;
+      default:
+        break;
     }
   }
   str = array.join('');
@@ -108,7 +110,7 @@ function encode(str) {
 function decode(str) {
   let array = str.split('');
   for (let index = 0; index < array.length; index += 1) {
-    switch (true){
+    switch (true) {
       case (array[index] === '1'):
         array[index] = 'a';
         break;
@@ -123,6 +125,8 @@ function decode(str) {
         break;
       case (array[index] === '5'):
         array[index] = 'u';
+        break;
+      default:
         break;
     }
   }
