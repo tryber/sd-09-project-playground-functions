@@ -63,7 +63,8 @@ function footballPoints(wins, ties) {
   if ((wins >= 0) && (ties >= 0)){
     score = ((wins * 3) + (ties));
   }
-  return('Total de pontos que o time marcou no campeonato = ' + score + '.');
+  return(score);
+  // Assim ficaria melhor: return('Total de pontos que o time marcou no campeonato = ' + score + '.');
 }
 // Testes da função: --------------
 console.log(footballPoints(0, -1));
@@ -87,11 +88,12 @@ function highestCount(sample) {
       cont = (cont + 1);
     }
   }
-  if (cont > 1){
+  return(cont);
+  /* if (cont > 1){
     return('O maior valor deste array é: '+ compare + '. Ele se repete '+ cont +' vezes dentro do array.');
   } else {
     return('O maior valor deste array é: '+ compare + '. Ele aparece apenas '+ cont +' vez dentro do array.');
-  }
+  } */
 }
 // Testes da função: -----------------------------
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
@@ -170,10 +172,10 @@ function techList(tech, name) {
     receive = [];
     for(index = 0 ; index < tech.length ; index = index +1){
       let object = {
+      name: name,
       tech: tech[index],
-      name: name
       }
-      receive [index] = object;
+      receive[index] = object;
     }
   } else {
     receive = 'Vazio!';
