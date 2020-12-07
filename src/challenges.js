@@ -53,8 +53,35 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
-}
+function catAndMouse(mouse, gat1, gat2) {
+  let posicaogat1 = '';
+  let posicaogat2 = '';
+  if (mouse > gat1 && mouse > gat2) {
+    posicaogat1 = mouse - gat1;
+    posicaogat2 = mouse - gat2;
+  }
+  if (mouse < gat1 && mouse < gat2) {
+    posicaogat1 = gat1 - mouse;
+    posicaogat2 = gat2 - mouse;
+  }
+  if (mouse < gat1 && mouse > gat2) {
+    posicaogat1 = gat1 - mouse;
+    posicaogat2 = mouse - gat2;
+  }
+  if (mouse > gat1 && mouse < gat2) {
+    posicaogat1 = mouse - gat1;
+    posicaogat2 = mouse - gat2;
+  }
+  if (posicaogat1 < posicaogat2) {
+    return 'gat1'
+  }
+  if (posicaogat1 > posicaogat2) {
+    return 'gat2'
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
+}console.log(catAndMouse(9, 9, 9));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -125,7 +152,7 @@ function decode(array10) {
     }
   }
   return outraFrase;
-}console.log(decode('h5ds4n')) 
+}
 
 
 // Desafio 10
