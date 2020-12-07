@@ -72,46 +72,36 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(string) {
+function code(stringToCode, toBeReplaced, replaceBy) {
   let codedString = '';
-
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] === 'a') {
-      codedString += '1';
-    } else if (string[i] === 'e') {
-      codedString += '2';
-    } else if (string[i] === 'i') {
-      codedString += '3';
-    } else if (string[i] === 'o') {
-      codedString += '4';
-    } else if (string[i] === 'u') {
-      codedString += '5';
+  for (let stringIndex = 0; stringIndex < stringToCode.length; stringIndex += 1) {
+    if (stringToCode[stringIndex] === toBeReplaced) {
+      codedString += replaceBy;
     } else {
-      codedString += string[i];
+      codedString += stringToCode[stringIndex];
     }
   }
-  return codedString;
+  return (codedString);
 }
 
-function decode(codedString) {
-  let decodedString = '';
+function encode(stringToEncode) {
+  stringToEncode = code(stringToEncode, 'e', '2');
+  stringToEncode = code(stringToEncode, 'u', '5');
+  stringToEncode = code(stringToEncode, 'i', '3');
+  stringToEncode = code(stringToEncode, 'a', '1');
+  stringToEncode = code(stringToEncode, 'o', '4');
 
-  for (let i = 0; i < codedString.length; i += 1) {
-    if (codedString[i] === '1') {
-      decodedString += 'a';
-    } else if (codedString[i] === '2') {
-      decodedString += 'e';
-    } else if (codedString[i] === '3') {
-      decodedString += 'i';
-    } else if (codedString[i] === '4') {
-      decodedString += 'o';
-    } else if (codedString[i] === '5') {
-      decodedString += 'u';
-    } else {
-      decodedString += codedString[i];
-    }
-  }
-  return decodedString;
+  return (stringToEncode);
+}
+
+function decode(stringToDecode) {
+  stringToDecode = code(stringToDecode, '1', 'a');
+  stringToDecode = code(stringToDecode, '4', 'o');
+  stringToDecode = code(stringToDecode, '2', 'e');
+  stringToDecode = code(stringToDecode, '5', 'u');
+  stringToDecode = code(stringToDecode, '3', 'i');
+
+  return (stringToDecode);
 }
 
 // Desafio 10
