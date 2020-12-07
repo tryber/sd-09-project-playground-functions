@@ -45,8 +45,9 @@ function handleSplitSentence(context) {
 
 function splitSentence(sentence) {
   let contextObject = loopThroughIn(
-    { input: sentence, sentenceArray: [], currentWord: [], lastIndex: (sentence.length - 1).toString() },
-    handleSplitSentence );
+    { input: sentence, sentenceArray: [], currentWord: [],
+      lastIndex: (sentence.length - 1).toString() },
+    handleSplitSentence);
   return contextObject.sentenceArray;
 }
 
@@ -86,8 +87,7 @@ function handleHighestCount(context) {
 function highestCount(inputArray) {
   const contextObject = loopThroughIn(
     { input: inputArray, counts: {}, highestNumber: null },
-    handleHighestCount,
-  );
+    handleHighestCount);
   return contextObject.counts[contextObject.highestNumber];
 }
 
