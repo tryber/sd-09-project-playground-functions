@@ -58,15 +58,15 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   // seu código aqui
 
-  function pontosWins(wins) {
+  function pontosWins(winsP) {
     let pontosW = 0;
-    pontosW = wins * 3;
+    pontosW = winsP * 3;
     return pontosW;
   }
 
-  function pontosTies(ties) {
+  function pontosTies(tiesP) {
     let pontosT = 0;
-    pontosT = ties * 1;
+    pontosT = tiesP * 1;
     return pontosT;
   }
 
@@ -104,7 +104,7 @@ function catAndMouse(mouse, cat1, cat2) {
   function catFunct1(mouseD1, catD1) {
     let distancia1 = 0;
 
-    if (mouseD1 < catD1){
+    if (mouseD1 < catD1) {
       distancia1 = cat1 - mouseD1;
     } else if (mouseD1 > catD1) {
       distancia1 = mouseD1 - catD1;
@@ -115,7 +115,7 @@ function catAndMouse(mouse, cat1, cat2) {
   function catFunct2(mouseD2, catD2) {
     let distancia2 = 0;
 
-    if (mouseD2 < catD2){
+    if (mouseD2 < catD2) {
       distancia2 = cat2 - mouseD2;
     } else if (mouseD2 > catD2) {
       distancia2 = mouseD2 - catD2;
@@ -129,7 +129,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
-
 }
 
 // Desafio 8
@@ -207,7 +206,7 @@ function techList(array, name) {
   for (let contador = 0; contador < array.length; contador += 1) {
     lista.push({
       tech: array[contador],
-      name: name
+      name,
     });
   }
   if (lista.length === 0) {
@@ -220,15 +219,13 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
   // seu código aqui
 
-  let telefone = '';
-
-  function repita(array) {
+  function repita(arrayRepitaNumero) {
     let repitaNumero = 0;
     let repitaMaior = 0;
 
-    for (let contador1 = 0; contador1 < array.length; contador1 += 1) {
-      for (let contador2 = 0; contador2 < array.length; contador2 += 1) {
-        if (array[contador1] === array[contador2]) {
+    for (let contador1 = 0; contador1 < arrayRepitaNumero.length; contador1 += 1) {
+      for (let contador2 = 0; contador2 < arrayRepitaNumero.length; contador2 += 1) {
+        if (arrayRepitaNumero[contador1] === arrayRepitaNumero[contador2]) {
           repitaNumero += 1;
         }
       }
@@ -240,44 +237,45 @@ function generatePhoneNumber(array) {
     return repitaMaior;
   }
 
-  function numeroMenorMaior(array) {
+  function numeroMenorMaior(arrayMenorMaior) {
     let arrayTrueFalse = false;
 
-    for (let contador = 0; contador < array.length; contador += 1) {
-      if (array[contador] < 0 || array[contador] > 9) {
+    for (let contador = 0; contador < arrayMenorMaior.length; contador += 1) {
+      if (arrayMenorMaior[contador] < 0 || arrayMenorMaior[contador] > 9) {
         arrayTrueFalse = true;
       }
     }
     return arrayTrueFalse;
   }
 
-  function telefoneNumero(array) {
+  function telefoneNumero(arrayTelefone) {
     let ddd = '';
     let primeiroNumero = '';
     let segundoNumero = '';
 
     for (let dddContador = 0; dddContador < 2; dddContador += 1) {
-      ddd += array[dddContador];
+      ddd += arrayTelefone[dddContador];
     }
     for (let primeiroNumeroContador = 2; primeiroNumeroContador < 7; primeiroNumeroContador += 1) {
-      primeiroNumero += array[primeiroNumeroContador];
+      primeiroNumero += arrayTelefone[primeiroNumeroContador];
     }
     for (let segundoNumeroContador = 7; segundoNumeroContador < 11; segundoNumeroContador += 1) {
-      segundoNumero += array[segundoNumeroContador];
+      segundoNumero += arrayTelefone[segundoNumeroContador];
     }
-    let telefone = '(' + ddd + ')' + ' ' + primeiroNumero + '-' + segundoNumero;
+    let telefone = '';
+    telefone = `(${ddd}) ${primeiroNumero}-${segundoNumero}`;
     return telefone;
   }
 
-  if (array.length != 11) {
-      return 'Array com tamanho incorreto.';
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   } else if (repita(array) >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   } else if (numeroMenorMaior(array) === true) {
-      return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    telefone = telefoneNumero(array);
+    return 'não é possível gerar um número de telefone com esses valores';
   }
+  telefone = telefoneNumero(array);
+  
   return telefone;
 }
 
@@ -289,21 +287,19 @@ function triangleCheck(lineA, lineB, lineC) {
   let number2 = false;
   let number3 = false;
 
-  function menorQueSomaDasMedidas(number1, number2, number3) {
+  function menorQueSomaDasMedidas(numberMenor1, numberMenor2, numberMenor3) {
+    let somaNumero = numberMenor2 + numberMenor3;
 
-    let somaNumero = number2 + number3;
-
-    if (number1 < somaNumero) {
+    if (numberMenor1 < somaNumero) {
       return true;
     }
     return false;
   }
 
-  function numeroAbsoluto(number1, number2, number3) {
+  function numeroAbsoluto(numberAbs1, numberAbs2, numberAbs3) {
+    let diferencaNumero = Math.abs(numberAbs2) - Math.abs(numberAbs3);
 
-  let diferencaNumero = Math.abs(number2) - Math.abs(number3);
-
-    if (number1 > diferencaNumero) {
+    if (numberAbs1 > diferencaNumero) {
       return true;
     }
     return false;
@@ -336,10 +332,10 @@ function hydrate(string) {
   for (let contador = 0; contador < number.length; contador += 1) {
     totalNumber += Math.abs(number[contador]);
   }
-  if( totalNumber === 1) {
-    return (totalNumber + ' copo de água')
+  if (totalNumber === 1) {
+    return `${totalNumber} copo de água`;
   }
-  return (totalNumber + ' copos de água');
+  return `${totalNumber} copos de água`;
 }
 
 module.exports = {
