@@ -228,8 +228,38 @@ function techList(array, name) {
 }
 
 // Desafio 11
+function validateNumbers(context) {
+  context = countNumber(context);
+  let invalidNumber = (
+    (context.counts[context.currentValue] > 2) || 
+    (context.currentValue < 0) ||
+    (context.currentValue > 9)
+  )
+  if (invalidNumber) {
+    context.invalidNumber = true;
+  }
+  return context;
+}
+
+function getPhoneFormat(context) {
+  let format = '';
+  if (context.currentIndex in context.formats) {
+    format = context.formats[context.currentIndex];
+  }
+  context.output += format + context.currentValue;
+  return context;
+}
+
 function generatePhoneNumber(array) {
-  // Code here
+  let output = 'não é possível gerar um número de telefone com esses valores';
+  let contextObject = { input: array, counts: {} };
+  contextObject = loopThroughIn(contextObject, validateNumbers);
+  if (!(contextObject.invalidNumber)) {
+    contextObject.output = '';
+    contextObject.formats = { 0: '(', 2: ') ', 7: '-' };
+    output = loopThroughIn(contextObject, getPhoneFormat).output;
+  }
+  return output;
 }
 
 // Desafio 12
