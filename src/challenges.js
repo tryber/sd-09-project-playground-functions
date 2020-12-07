@@ -143,13 +143,13 @@ for(let index = 0; index < tech.length; index += 1) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'] , 'Lucas'));
 
 //Desafio 11
-function invalidValue(numbers){
-  let teste = numbers
-  let sorted_arr = teste.sort(); 
+function invalidValue(numbers){  
+  let numbersSlice = numbers.slice();
+  let sortArray = numbersSlice.sort()
   let results = []; 
-  for (var i = 0; i < sorted_arr.length; i++) {
-      if (sorted_arr[i + 1] == sorted_arr[i]) {
-          results.push(sorted_arr[i]);
+  for (let index = 0; index < sortArray.length; index++) {
+      if (sortArray[index + 1] == sortArray[index]) {
+          results.push(sortArray[index]);
       }
   }
   for(let index = 0; index < results.length; index += 1){
@@ -173,7 +173,7 @@ function generatePhoneNumber(numbers) {
 concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
   return(concat);
 }
-console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 1, 7, 7, 9]));
+console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 9, 7, 7, 0]));
 
 //Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
