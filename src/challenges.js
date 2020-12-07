@@ -173,12 +173,24 @@ function generatePhoneNumber(arrayNumber) {
   }
   return phoneNumber;
 }
-console.log(generatePhoneNumber([1, 1, 9, 8, 6, 2, 4, 8, 7, 0, 7]));
+// console.log(generatePhoneNumber([1, 1, 9, 8, 6, 2, 4, 8, 7, 0, 7]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumLines = [lineA + lineB, lineB + lineC, lineC + lineA];
+  let diffBettween = [Math.abs(lineA - lineB), Math.abs(lineB - lineC), Math.abs(lineC - lineA)];
+  let result = false;
+
+  if (lineA < sumLines[1] && lineA > diffBettween[1]) {
+    result = true;
+  } else if (lineB < sumLines[2] && lineB > diffBettween[2]) {
+    result = true;
+  } else if (lineC < sumLines[0] && lineC > diffBettween[0]) {
+    result = true;
+  }
+  return result;
 }
+console.log(triangleCheck(12, 12, 12));
 
 // Desafio 13
 function hydrate() {
