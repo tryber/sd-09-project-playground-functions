@@ -1,7 +1,6 @@
 // Desafio 1
 function compareTrue (bol, bole) {
-  let compare = bol && bole;
-  return compare;
+  return bol && bole;
 }
 // exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
@@ -25,7 +24,8 @@ function concatName(array) {
  // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) {
- let points = (wins *3 ) + ties;
+ let pointsForWin = 3;
+ let points = (wins * pointsForWin) + ties;
  return points;
 }
 // exemplo de chamada da função: footballPoints(10, 10);
@@ -71,12 +71,16 @@ function fizzBuzz(array) {
   return mensage;
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string1) {
+ let= string2 string1.replace("a", "1");
+ let= string2 string1.replace("e", "2"); 
+ let= string2 string1.replace("i", "3"); 
+ let= string2 string1.replace("o", "4"); 
+ let= string2 string1.replace("u", "5"); 
+    return string2;
 }
-function decode() {
+function decode(string2) {
   // seu código aqui
 }
 
