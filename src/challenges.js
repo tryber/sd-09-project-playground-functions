@@ -44,16 +44,7 @@ console.log(concatName(asd))
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-
-  function pontosWins(winsP) {
-    let pontosW = 0;
-    pontosW = winsP * 3;
-    return pontosW;
-  }
-  let pontos = 0;
-  pontos = pontosWins(wins) + (ties * 1);
-
-  return pontos;
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
