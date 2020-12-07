@@ -89,10 +89,11 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  
- let distCat1 = cat1 - mouse;
- let distCat2 = cat2 - mouse; 
+  // Math.abs => transforma em valor absoluto
+ let distCat1 = Math.abs(cat1 - mouse);
+ let distCat2 = Math.abs(cat2 - mouse); 
 
+ 
   if (distCat1 === distCat2) {
     return "Os gatos trombam e o rato foge";
   } else if (distCat1 < distCat2) {
