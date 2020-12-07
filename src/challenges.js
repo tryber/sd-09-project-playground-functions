@@ -93,11 +93,12 @@ function encode(param1) {
     } else if (param1[index] === 'u') {
       firstParam += '5'
     } else {
-      firstParam = param1
+      firstParam += param1[index]
     }
   }
   return firstParam
 }
+console.log(encode('hi there!'))
 
 function decode(Param2) {
   // seu código aqui
@@ -115,11 +116,12 @@ function decode(Param2) {
     } else if (Param2[index] === '5') {
       secondParam += 'u'
     } else {
-      secondParam = Param2
+      secondParam += Param2[index]
     }
   }
   return secondParam
 }
+console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList() {
