@@ -156,8 +156,7 @@ function generatePhoneNumber(array) {
   let telephone = '';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
-      verifyNumRepetition(array[index], array);
-      if (cont >= 3) {
+      if (verifyNumRepetition(array[index], array) >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
       switch (true) {
@@ -185,7 +184,7 @@ function generatePhoneNumber(array) {
 function verifyNumRepetition (number, array) {
   let cont = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (number === array[index2]) {
+    if (number === array[index]) {
       cont += 1;
     }
   }
