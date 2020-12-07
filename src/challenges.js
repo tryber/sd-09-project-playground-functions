@@ -1,44 +1,88 @@
-// VQV!
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-}
+function compareTrue(diaUtil, haveraAula) {
+  if (diaUtil && haveraAula === true){
+    return true;
+  } else {
+    return false;
+  }
+} console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return base * height / 2;
 }
+  console.log(calcArea(5, 6));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let arraySentence = [];
+function splitSentence(stringSentence) {
+  arraySentence = stringSentence.split(' ');
+  return arraySentence;
 }
+  console.log(splitSentence('vqv trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let arrays = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(names) {
+  let primeiroNome = names[0];
+  let ultimoNome = names[names.length - 1];
+  let concatenacao = ultimoNome + ', ' + primeiroNome;
+    return concatenacao;  
 }
+console.log(concatName(arrays));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+ let vitoria = 3;
+ let empate = 1;
+ let total = vitoria + empate;
+  if (wins === vitoria && ties === empate) {
+    return total;
+  }  
 }
+console.log(footballPoints(total));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDNumeros) {
+  let highestNumArray = arrayDNumeros[index -1];
+  let highestNumCount = 0;
+  for (let index = 1; index < arrayDNumeros.length; index += 1) {
+    if (arrayDNumeros[index] >= arrayDNumeros[index -1]) {
+      highestNumArray = arrayDNumeros[index]
+    }
+  }
+  for (let index = 0; index < arrayDNumeros.length; index += 1) {
+    if (arrayDNumeros[index] === highestNumArray) {
+      highestNumCount += 1;
+    }
+  } return highestNumCount;
 }
+console.log(arrayDNumeros([9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let resultadoArray = [];
+  for (let fizzDivisible in arrayDeNumeros) {
+    if (arrayDeNumeros[fizzDivisible] % 3 === 0 && arrayDeNumeros[fizzDivisible] % 5 === 0) {
+      resultadoArray.push('fizzBuzz');
+    } else if (arrayDeNumeros[fizzDivisible] % 3 === 0) {
+      resultadoArray.push('fizz'); 
+    } else if (arrayDeNumeros[fizzDivisible] % 5 === 0) {
+      resultadoArray.push('buzz');
+    } else {
+      resultadoArray.push('bug!')
+    }
+  }
+  return resultadoArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
