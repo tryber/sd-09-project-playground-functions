@@ -2,10 +2,12 @@
 function compareTrue(value1, value2) {
   return (value1 === true && value2 === true);
 }
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
+
 // General loop function
 function loopThroughIn(contextObject, applyFunction) {
   for (let index in contextObject.input) {
@@ -17,6 +19,7 @@ function loopThroughIn(contextObject, applyFunction) {
   }
   return contextObject;
 }
+
 // Desafio 3
 function handlePushing(context) {
   if (context.isLastChar) {
@@ -26,6 +29,7 @@ function handlePushing(context) {
   context.currentWord = '';
   return context;
 }
+
 function handleSplitSentence(context) {
   let isCharSpace = (context.currentValue === ' ');
   let isLastChar = (context.currentIndex === context.lastIndex);
@@ -38,28 +42,26 @@ function handleSplitSentence(context) {
   }
   return context;
 }
+
 function splitSentence(sentence) {
   let contextObject = loopThroughIn(
-    {
-      input: sentence,
-      sentenceArray: [],
-      currentWord: [],
-      lastIndex: (sentence.length - 1).toString(),
-    },
-    handleSplitSentence,
-  );
+    { input: sentence, sentenceArray: [], currentWord: [], lastIndex: (sentence.length - 1).toString() },
+    handleSplitSentence );
   return contextObject.sentenceArray;
 }
+
 // Desafio 4
 function concatName(inputArray) {
   const firstName = inputArray[0];
   const lastName = inputArray[inputArray.length - 1];
   return `${lastName}, ${firstName}`;
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
+
 // Desafio 6
 function countNumber(context) {
   let numberNotCounted = (!(context.currentValue in context.counts));
@@ -70,6 +72,7 @@ function countNumber(context) {
   }
   return context;
 }
+
 function handleHighestCount(context) {
   let noHighestNumber = (context.highestNumber === null);
   let numberHigherThanHighest = (context.currentValue > context.highestNumber);
@@ -79,21 +82,20 @@ function handleHighestCount(context) {
   context = countNumber(context);
   return context;
 }
+
 function highestCount(inputArray) {
   const contextObject = loopThroughIn(
-    {
-      input: inputArray,
-      counts: {},
-      highestNumber: null,
-    },
+    { input: inputArray, counts: {}, highestNumber: null },
     handleHighestCount,
   );
   return contextObject.counts[contextObject.highestNumber];
 }
+
 // Desafio 7
 function getCatDistance(catPosition, mousePosition) {
   return Math.abs(mousePosition - catPosition);
 }
+
 function getClosestCat(first, second) {
   let closest = first.name;
   if (first.distance > second.distance) {
@@ -101,6 +103,7 @@ function getClosestCat(first, second) {
   }
   return closest;
 }
+
 function catAndMouse(mouse, cat1, cat2) {
   let outcome = '';
   cat1 = { name: 'cat1', distance: getCatDistance(cat1, mouse) };
@@ -112,10 +115,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return outcome;
 }
+
 // Desafio 8
 function checkIfIsDivider(number, divider) {
   return ((number % divider) === 0);
 }
+
 function getFizzBuzz(context) {
   let output = 'fizz';
   if (context.isBuzz) {
@@ -126,6 +131,7 @@ function getFizzBuzz(context) {
   }
   return output;
 }
+
 function handleFizzBuzz(context) {
   let value;
   context.isFizz = checkIfIsDivider(context.currentValue, 3);
@@ -139,6 +145,7 @@ function handleFizzBuzz(context) {
   context.input[context.currentIndex] = value;
   return context;
 }
+
 function fizzBuzz(inputArray) {
   const contextObject = loopThroughIn(
     {
@@ -148,6 +155,7 @@ function fizzBuzz(inputArray) {
   );
   return contextObject.input;
 }
+
 // Desafio 9
 function translate(context) {
   let value = context.currentValue;
@@ -157,30 +165,31 @@ function translate(context) {
   context.translation += value;
   return context;
 }
+
 function getTranslation(text, dictionary) {
   const contextObject = loopThroughIn(
-    {
-      input: text,
-      dictionary,
-      translation: '',
-    },
+    { input: text, dictionary, translation: '' },
     translate,
   );
   return contextObject.translation;
 }
+
 function encode(text) {
   const dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   return getTranslation(text, dictionary);
 }
+
 function decode(text) {
   const dictionary = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   return getTranslation(text, dictionary);
 }
+
 // Desafio 10
 function addObject(context) {
   context.techList.push({ tech: context.currentValue, name: context.name });
   return context;
 }
+
 function orderAscending(context) {
   let nextIndex = parseInt(context.currentIndex, 10) + 1;
   let nextValue = context.input[nextIndex.toString()];
@@ -192,6 +201,7 @@ function orderAscending(context) {
   }
   return context;
 }
+
 function techList(array, name) {
   let output = 'Vazio!';
   if (array.length > 0) {
@@ -206,6 +216,7 @@ function techList(array, name) {
   }
   return output;
 }
+
 // Desafio 11
 function validateNumbers(context) {
   context = countNumber(context);
@@ -219,6 +230,7 @@ function validateNumbers(context) {
   }
   return context;
 }
+
 function getPhoneFormat(context) {
   let format = '';
   if (context.currentIndex in context.formats) {
@@ -227,6 +239,7 @@ function getPhoneFormat(context) {
   context.output += format + context.currentValue;
   return context;
 }
+
 function generatePhoneNumber(array) {
   let output = 'Array com tamanho incorreto.';
   if (array.length === 11) {
@@ -241,29 +254,32 @@ function generatePhoneNumber(array) {
   }
   return output;
 }
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   return ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC)));
 }
+
 // Desafio 13
 function countCupsOfWater(context) {
   let number = parseInt(context.currentValue, 10);
   context.totalWater += number;
   return context;
 }
+
 function hydrate(text) {
   // Referência para o código de regex no JS (MDN web docs):
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
   let numberPattern = /\d+/g;
   let numbersInText = text.match(numberPattern);
-  let totalWater = 0;
   let cupsText = 'copo';
-  const contextObject = loopThroughIn({ input: numbersInText, totalWater }, countCupsOfWater);
+  const contextObject = loopThroughIn({ input: numbersInText, totalWater: 0 }, countCupsOfWater);
   if (contextObject.totalWater > 1) {
     cupsText += 's'
   }
   return `${contextObject.totalWater} ${cupsText} de água`;
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
