@@ -2,10 +2,9 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } else {
+  } 
     return false;
   }
-}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -39,7 +38,7 @@ function highestCount(arrayNumbers) {
   let biggerNumber = Math.max(...arrayNumbers);
   let repeatNumber = 0;
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (biggerNumber == arrayNumbers[index]) {
+    if (biggerNumber === arrayNumbers[index]) {
       repeatNumber += 1;
     }
   }
@@ -57,16 +56,16 @@ function fizzBuzz(arrayNumbers) {
   for (let index in arrayNumbers) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 !== 0) {
         input = 'fizz';
-    } else if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 === 0){
+     } else if (arrayNumbers[index] % 3 !== 0 && arrayNumbers[index] % 5 === 0){
         input = 'buzz';
-    } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+     } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
         input = 'fizzBuzz';
-    } else {
+     } else {
         input = 'bug!';
-    }
-    array.push(input);
-    input = '';
-    }
+     }
+     array.push(input);
+     input = '';
+     };
   return array;
 }
 
@@ -111,8 +110,16 @@ function decode(characterSetDecode) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nameTech, nameDev) {
+  let obj = [];
+    nameTech = nameTech.sort();
+    if (nameTech.length === 0){
+        return "Vazio!";
+    }
+    for(let indexArray = 0; indexArray < nameTech.length; indexArray += 1){
+       obj.push({tech: nameTech[indexArray],name: nameDev});
+    };
+    return obj;
 }
 
 // Desafio 11
