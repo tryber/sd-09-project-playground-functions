@@ -164,12 +164,12 @@ function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  
+
   let phoneNumber = arrayNumber.join('');
   if (validRange(arrayNumber) && validNumber(arrayNumber)) {
-    phoneNumber = '(' + phoneNumber.substr(0, 2) + ') ' + phoneNumber.substr(2, 5) + '-' + phoneNumber.substr(7, 11);
+    phoneNumber = `(${phoneNumber.substr(0, 2)}) ${phoneNumber.substr(2, 5)}-${phoneNumber.substr(7, 11)}`;
   } else {
-    phoneNumber ='não é possível gerar um número de telefone com esses valores';
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
   }
   return phoneNumber;
 }
@@ -190,12 +190,27 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return result;
 }
-console.log(triangleCheck(12, 12, 12));
+// console.log(triangleCheck(12, 12, 12));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let drinks = string.match(/\d+/g);
+  let glassWater = 0;
+  let result = '';
+
+  for (drink of drinks) {
+    glassWater += Number(drink);
+  }
+  
+  if (glassWater === 1) {
+    result = `${glassWater} copo de água`;
+  }else {
+    result = `${glassWater} copos de água`;
+  }
+
+  return result;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 
 module.exports = {
