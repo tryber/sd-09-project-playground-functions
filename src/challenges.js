@@ -82,10 +82,10 @@ function moucat1Result(mouse, cat1) {
 
 function moucat2Result(mouse, cat2) {
   let result = 0;
-  if (mouse > cat2) {
-    result = mouse - cat2;
-  } else {
+  if (mouse < cat2) {
     result = cat2 - mouse;
+  } else {
+    result = mouse - cat2;
   }
   return result;
 }
