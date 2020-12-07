@@ -165,11 +165,17 @@ function techList(array, name) {
   if (array[0] !== undefined) {
     for (let index in array) {
       if (Object.prototype.hasOwnProperty.call(index, array)) {
-        let object = {tech: array[index], name: name};
+        let object = {
+          tech: array[index],
+          name,
+        };
         techArray.push(object);
       }
       if ({}.hasOwnProperty.call(array, index)) {
-        let object = {tech: array[index], name: name};
+        let object = {
+          tech: array[index],
+          name,
+        };
         techArray.push(object);
       }
     }
