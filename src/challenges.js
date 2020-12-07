@@ -43,6 +43,7 @@ function highestNumber(array6) {
     }
   }
   return highest;
+  // teste
 }
 function highestCount(array6) {
   let index = 0;
