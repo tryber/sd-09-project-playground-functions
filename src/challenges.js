@@ -239,7 +239,7 @@ function hydrate(drinksString) {
   let sum = 0;
   let glasses = ' copos de água';
   for (let index = 0; index < numbers.length; index += 1) {
-    sum += parseInt(numbers[index]);
+    sum += parseInt(numbers[index], 10);
   }
   if (sum === 1) {
     glasses = ' copo de água'
