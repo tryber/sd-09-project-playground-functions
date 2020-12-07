@@ -173,6 +173,9 @@ function techList(array, name) {
 }
 
 // Desafio 11
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// Referencia da funcao slice():
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 function generatePhoneNumber(array) {
   // seu código aqui
   function repita(arrayRepitaNumero) {
@@ -180,8 +183,8 @@ function generatePhoneNumber(array) {
     let repitaMaior = 0;
 
     for (let contador1 = 0; contador1 < arrayRepitaNumero.length; contador1 += 1) {
-      for (let contador2 = 0; contador2 < arrayRepitaNumero.length; contador2 += 1) {
-        if (arrayRepitaNumero[contador1] === arrayRepitaNumero[contador2]) {
+      for (let contador2 of arrayRepitaNumero) {
+        if (arrayRepitaNumero[contador1] === contador2) {
           repitaNumero += 1;
         }
       }
@@ -196,32 +199,18 @@ function generatePhoneNumber(array) {
   function numeroMenorMaior(arrayMenorMaior) {
     let arrayTrueFalse = false;
 
-    for (let contador = 0; contador < arrayMenorMaior.length; contador += 1) {
-      if (arrayMenorMaior[contador] < 0 || arrayMenorMaior[contador] > 9) {
+    for (let contador of arrayMenorMaior) {
+      if (contador < 0 || contador > 9) {
         arrayTrueFalse = true;
       }
     }
     return arrayTrueFalse;
   }
 
-  function telefoneNumero(arrayTelefone) {
-    let ddd = '';
-    let primeiroNumero = '';
-    let segundoNumero = '';
-
-    for (let dddContador = 0; dddContador < 2; dddContador += 1) {
-      ddd += arrayTelefone[dddContador];
-    }
-    for (let primeiroNumeroContador = 2; primeiroNumeroContador < 7; primeiroNumeroContador += 1) {
-      primeiroNumero += arrayTelefone[primeiroNumeroContador];
-    }
-    for (let segundoNumeroContador = 7; segundoNumeroContador < 11; segundoNumeroContador += 1) {
-      segundoNumero += arrayTelefone[segundoNumeroContador];
-    }
-    let telefone = '';
-    telefone = `(${ddd}) ${primeiroNumero}-${segundoNumero}`;
-    return telefone;
-  }
+  let ddd = '';
+  let ddd = array.slice(0, 2);
+  let primeiroNumero = array.slice(2, 7);
+  let segundoNumero = array.slice(7, 12);
 
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -230,12 +219,12 @@ function generatePhoneNumber(array) {
   } else if (numeroMenorMaior(array) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  let telefoneFinal = '';
-  telefoneFinal = telefoneNumero(array);
+  let telefone = '';
+  telefone = `(${ddd}) ${primeiroNumero}-${segundoNumero}`;
 
-  return telefoneFinal;
+  return telefone;
 }
-
+console.log(generatePhoneNumber(array))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
