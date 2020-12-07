@@ -192,7 +192,6 @@ function numberArray (array) {
 
 function generatePhoneNumber(array) {
   // seu código aqui
-  
   for (let index = 0; index < array.length; index += 1) {
     if (numberArray(array) || repeatedNumber(array)) {
     return 'não é possível gerar um número de telefone com esses valores'  
