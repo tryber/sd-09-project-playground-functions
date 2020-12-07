@@ -24,11 +24,11 @@ function splitSentence(string) {
 function concatName(array) {
   let arrayCom = 0;
   let arrayCom1 = 0 ;
-  for (let i = 0; i <= array.length; i+=0) {
+  for (let i = 0; i <= array.length; i += 1) {
     if(array[i] === array[0]) {
       arrayCom = array[i];
     }
-    if (array[i] === array[(array.length-1)]) {
+    if (array[i] === array[(array.length - 1)]) {
       arrayCom1 = array[i];
     }
   } 
@@ -39,13 +39,9 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontosTotais = 0;
-  for(let i = 0; i <= wins.length; i += 1) {
-    wins += 3;
-  }
-  for (let j = 0; j <= ties.length; j += 1) {
-    ties += 1;
-  }
-  return pontosTotais = wins + ties;
+  let vitoria = 3 * wins;
+  let empate = 1* ties;
+  return pontosTotais = vitoria + empate;
 }
 
 // Desafio 6
@@ -82,45 +78,67 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberArray) {
   let resultado = [];
   for(let i = 0; i <= numberArray.length; i += 1) {
-    if ((numberArray[i] % 3 === 0) && (numberArray[i] % 5 === 0)) {
+    
+    if ((numberArray[i] % 3 === 0) & (numberArray[i] % 5 === 0)) {
       resultado.push("fizzBuzz");
-    } else if ((numberArray[i] % 3 === 0) && (numberArray[i] % 5 !== 0)) {
+    } else if ((numberArray[i] % 3 === 0)) {
       resultado.push("fizz");
-    } else if ((numberArray[i] % 5 === 0) && (numberArray[i] % 3 !== 0)) {
+    } else if ((numberArray[i] % 5 === 0)) {
       resultado.push("buzz");
     } else {
       resultado.push("bug!");
     }
-  } return resultado
+  } 
+    return resultado
 }
 
 // Desafio 9
 function encode(letter) {
-  let letters = split(letter);
-  console.log(letters);
-  let newL = [];
+  let letters = letter.split('');
+  console.log(letter);
   for(let i = 0; i <= letters.length; i += 1) {
     switch (letters[i]) {
       case 'a': 
-        'a' = 1;
+        letters[i] = '1';
         break;
       case 'e':
-        'e' = 2;
+        letters[i] = '2';
         break;
       case 'i':
-        'i' = 3;
+        letters[i] = '3';
         break;
       case 'o':
-        'o' = 4;
+        letters[i] = '4';
       case 'u':
-        'u' = 5;
+        letters[i] = '5';
         break;
     }
-    
   }
+  return letters
+}
 
-function decode() {
-  // seu código aqui
+function decode(letter) {
+  let letters = letter.split('');
+  console.log(letter);
+  for(let i = 0; i <= letters.length; i += 1) {
+    switch (letters[i]) {
+      case '1': 
+        letters[i] = 'a';
+        break;
+      case '2':
+        letters[i] = 'e';
+        break;
+      case '3':
+        letters[i] = 'i';
+        break;
+      case '4':
+        letters[i] = 'o';
+      case '5':
+        letters[i] = 'u';
+        break;
+    }
+  }
+  return letters
 }
 
 // Desafio 10
