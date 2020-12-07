@@ -6,13 +6,13 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
-console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
 // Desafio 2 OK
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(3, 8));
+// console.log(calcArea(3, 8));
 
 // Desafio 3
 function splitSentence(string3) {
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } 
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1, 2, 0));
+// console.log(catAndMouse(1, 2, 0));
 
 // Desafio 8
 function fizzBuzz(array8) {
