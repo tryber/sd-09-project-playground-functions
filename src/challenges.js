@@ -121,7 +121,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
   for (let index in string) {
     let status = false;
@@ -145,7 +145,7 @@ function decode(string) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u',
   };
   for (let index in string) {
     let status = false;
@@ -256,16 +256,16 @@ function triangleCheck(lineA, lineB, lineC) {
 function addArray(array) {
   let add = 0;
   let numbers = {
-    "0": 0,
-    "1": 1,
-    "2": 2,
-    "3": 3,
-    "4": 4,
-    "5": 5,
-    "6": 6,
-    "7": 7,
-    "8": 8,
-    "9": 9,
+    '0': 0,
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
   }
   for (let item in array) {
     for (let number in numbers) {
@@ -304,7 +304,8 @@ function hydrate(string) {
   }
   return frase;
 }
- 
+
+
 module.exports = {
   calcArea,
   catAndMouse,
