@@ -137,9 +137,8 @@ function techList(techArray, name) {
   }
   if (returArray == null) {
     return 'Vazio!'
-  } else {
-    return returArray
   }
+  return returArray
 }
 
 // Desafio 11
