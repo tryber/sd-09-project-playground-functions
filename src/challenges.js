@@ -153,10 +153,10 @@ function techList(array, name) {
 
 // Desafio 11
 function verifyNumberRepetition(array, number) {
-  let count = 0;
+  let cont = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (number === array[index]) {
-      count += 1;
+      cont += 1;
     }
   }
   if (cont >= 3) {
@@ -167,7 +167,9 @@ function verifyNumberRepetition(array, number) {
 
 function generatePhoneNumber(array) {
   let telephone = '';
-  if (array.length === 11) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else {
     for (let index = 0; index < array.length; index += 1) {
       switch (true) {
         case (verifyNumberRepetition(array, array[index])):
@@ -188,11 +190,10 @@ function generatePhoneNumber(array) {
           break;
       }
     }
-    return telephone;
   }
-  return 'Array com tamanho incorreto.';
+  return telephone;
 }
-
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sumBC = lineB + lineC;
