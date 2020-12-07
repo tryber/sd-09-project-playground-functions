@@ -199,8 +199,32 @@ function decode(text) {
 }
 
 // Desafio 10
+function addObject(context) {
+  context.techList.push({ tech: context.currentValue, name: context.name });
+  return context;
+}
+
+function orderAscending(context) {
+  let nextIndex = parseInt(context.currentIndex) + 1;
+  let nextValue = context.input[nextIndex.toString()];
+  let currentGreaterThanNext = (context.currentValue > nextValue);
+  let nextIndexExists = (nextIndex in context.input);
+  if (currentGreaterThanNext && nextIndexExists) {
+    context.input[context.currentIndex] = nextValue;
+    context.input[nextIndex] = context.currentValue;
+  }
+  return context;
+}
+
 function techList(array, name) {
-  // Code here
+  let contextObject = { input: array };
+  for (let cycles = array.length - 1; cycles > 0; cycles -= 1) {
+    contextObject = loopThroughIn(contextObject, orderAscending);
+  }
+  contextObject.name = name;
+  contextObject.techList = [];
+  contextObject = loopThroughIn(contextObject, addObject);
+  return contextObject.techList;
 }
 
 // Desafio 11
