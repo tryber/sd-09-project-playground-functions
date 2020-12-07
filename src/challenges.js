@@ -274,9 +274,10 @@ function generatePhoneNumber(array) {
   } else if (numeroMenorMaior(array) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  telefone = telefoneNumero(array);
-  
-  return telefone;
+  let telefoneFinal = '';
+  telefoneFinal = telefoneNumero(array);
+
+  return telefoneFinal;
 }
 
 // Desafio 12
