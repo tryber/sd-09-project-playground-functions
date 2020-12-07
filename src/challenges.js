@@ -50,7 +50,7 @@ function footballPoints(wins, ties) {
 // Referência para usar o Math.max(...array) no desafio:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(array) {
-  // seu código aqui 
+  // seu código aqui
   let maiorNumero = Math.max(...array);
   let somaNumero = 0;
   for (let contadorNumero in array) {
@@ -271,10 +271,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Referencia para usar o RegExp
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
 function hydrate(string) {
   // seu código aqui
-  let regExNumber = /\d+/g;
-  let number = string.match(regExNumber);
+  let regExpNumber = /\d+/g;
+  let number = string.match(regexNumber);
   let totalNumber = 0;
 
   for (let contador = 0; contador < number.length; contador += 1) {
