@@ -47,28 +47,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Referência para usar o Math.max(...array) no desafio:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(array) {
-  // seu código aqui
-  function maiorNumeroList(arrayNumbers) {
-    let maiorNumero = 0;
-    for (let contador = 0; contador < arrayNumbers.length; contador += 1) {
-      if (arrayNumbers[contador] > maiorNumero) {
-        maiorNumero = arrayNumbers[contador];
-      }
+  // seu código aqui 
+  let maiorNumero = Math.max(...array);
+  let somaNumero = 0;
+  for (let contadorNumero in array) {
+    if (maiorNumero === array[contadorNumero]) {
+      somaNumero += 1;
     }
-    return maiorNumero;
   }
-
-  function somaNumberoList(array) {
-    let somaNumero = 0;
-    for (let contadorNumero = 0; contadorNumero < array.length; contadorNumero += 1) {
-      if (maiorNumeroList(array) === array[contadorNumero]) {
-        somaNumero += 1;
-      }
-    }
-    return somaNumero;
-  }
-  return somaNumberoList(array);
+  return somaNumero;
 }
 
 // Desafio 7
