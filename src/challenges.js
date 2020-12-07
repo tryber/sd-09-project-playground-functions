@@ -50,14 +50,14 @@ console.log('');
 // Desafio 5 =====================================================================================
 function footballPoints(wins, ties) {
   let score = 0;
-  if ((wins < 0) || (ties < 0)){
+  if ((wins < 0) || (ties < 0)) {
     return ('Não existe vitória ou empate negativo!');
   }
-  if ((wins >= 0) && (ties >= 0)){
+  if ((wins >= 0) && (ties >= 0)) {
     score = ((wins * 3) + (ties));
   }
   return (score);
-  // Assim ficaria melhor: return('Total de pontos que o time marcou no campeonato = ' + score + '.');
+  // Assim seria melhor: return('Pontos que o time marcou no campeonato = ' + score + '.');
 }
 // Testes da função: --------------
 console.log(footballPoints(0, -1));
@@ -71,22 +71,18 @@ console.log('');
 function highestCount(sample) {
   let compare = -100000;
   let cont = 0;
-  for (index = 0 ; index < sample.length ; index = index + 1) {
+  let index = 0;
+  for (index = 0; index < sample.length; index = index + 1) {
     if (sample[index] > compare) {
       compare = sample[index];
     }
   }
-  for (index = 0 ; index < sample.length ; index = index + 1) {
+  for (index = 0; index < sample.length; index = index + 1) {
     if (sample[index] === compare) {
       cont = (cont + 1);
     }
   }
   return (cont);
-  /* if (cont > 1){
-    return('O maior valor deste array é: '+ compare + '. Ele se repete '+ cont +' vezes dentro do array.');
-  } else {
-    return('O maior valor deste array é: '+ compare + '. Ele aparece apenas '+ cont +' vez dentro do array.');
-  } */
 }
 // Testes da função: -----------------------------
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
@@ -98,7 +94,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let getmouse1 = Math.abs(mouse - cat1);
   let getmouse2 = Math.abs(mouse - cat2);
   let out = undefined;
-  if(getmouse1 == getmouse2) {
+  if (getmouse1 == getmouse2) {
     out = ("os gatos trombam e o rato foge");
   } else if (getmouse1 < getmouse2) {
     out = ("cat1");
@@ -118,7 +114,7 @@ console.log('');
 // Desafio 8 =====================================================================================
 function fizzBuzz(matriz) {
   let newMatriz = [];
-  for (index = 0 ; index < matriz.length ; index = index + 1) {
+  for (index = 0; index < matriz.length; index = index + 1) {
     if ((matriz[index] % 3 == 0) && (matriz[index] % 5 == 0)) {
       newMatriz[index] = ('fizzBuzz');
     } else if ((matriz[index] % 3 != 0) && (matriz[index] % 5 != 0)) {
@@ -162,7 +158,7 @@ function decode(encodeIn) {
 console.log(decode('1l2, l3x4 5m!'));
 console.log('');
 
-// Desafio 10 =====================================================================================
+// Desafio 10 ====================================================================================
 function techList(tech, name) {
   tech.sort();
   let receive = [];
@@ -184,7 +180,7 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 console.log(techList([], "Lucas"));
 console.log('');
 
-// Desafio 11 =====================================================================================
+// Desafio 11 ====================================================================================
 function generatePhoneNumber(matriz) {
   let cont = 0;
   let inspector = 2;
@@ -241,25 +237,25 @@ function generatePhoneNumber(matriz) {
   }
   return phoneNumber;
 }
-// Testes da função: ------------------------------------------------------------------------------------------------------------------
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // deve retornar (12) 34567-8901
+// Testes da função: -----------------------------------------------------------------------------
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // retorna (12) 34567-8901
 console.log('');
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1])); // "não é possível gerar um número de telefone com esses valores"
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));// "não é possível gerar um número de telefone com esses valores"
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 20]));// "não é possível gerar um número de telefone com esses valores"
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1])); // "não gera um número"
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));// "não gera um número"
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 20]));// "não gera um número"
 console.log('');
 console.log(generatePhoneNumber([]));// deve retornar: "Array com tamanho incorreto."
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));// deve retornar: "Array com tamanho incorreto."
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 7]));// deve retornar: "Array com tamanho incorreto."
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));// "Tamanho incorreto."
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 7]));// "Tamanho incorreto."
 console.log('');
 
-// Desafio 12 =====================================================================================
+// Desafio 12 ====================================================================================
 function triangleCheck(lineA, lineB, lineC) {
   let checkLineA = 0;
   let checkLineB = 0;
   let checkLineC = 0;
   let possible = false;
-  // condição-01: a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
+  // condição-01: (l1 < l2 + l3) e (l1 > l2 - l3)---------------------------
   if (((lineA) < (lineB + lineC)) && ((lineA) > Math.abs(lineB - lineC))){
     checkLineA = 1;
   }
@@ -281,12 +277,12 @@ console.log(triangleCheck(10, 1400, 8)); // deve retornar false
 console.log(triangleCheck(10, 14, 800)); // deve retornar false
 console.log('');
 
-// Desafio 13 =====================================================================================
+// Desafio 13 ====================================================================================
 function hydrate(str) {
   let soma = 0;
   let sugestion = ('');
   var numbers = str.match(/\d+/g).map(Number);
-  for (index = 0 ; index < numbers.length ; index = index + 1) {
+  for (index = 0; index < numbers.length; index = index + 1) {
     soma = soma + numbers[index];
   }
   if (soma > 1) {
