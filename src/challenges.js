@@ -110,17 +110,22 @@ function decode(stringToDecode) {
 }
 
 // Desafio 10
-function techList(techs, name) {
-  if (techs == '') {
+function techList(techsArray, personName) {
+  let techProperty = '';
+  let techsObjectsArray = [];
+  techsArray.sort();
+  if (techsArray.length === 0) {
     return 'Vazio!';
   }
-  let techListName = [];
-  techs.sort();
-  for (let index = 0; index < techs.length; index += 1) {
-    let newItem = { tech: techs[index], name };
-    techListName.push(newItem);
+  for (let index = 0; index < techsArray.length; index += 1) {
+    techProperty = techsArray[index];
+    let techObject = {
+      tech: techProperty,
+      name: personName,
+    };
+    techsObjectsArray.push(techObject);
   }
-  return techListName;
+  return techsObjectsArray;
 }
 
 // Desafio 11
@@ -134,8 +139,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(commandString) {
+  let waterDebits = commandString.match(/\d+/g);
+  let numbersArray = Array.from(waterDebits);
+  let sumWaterCups = 0;
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    sumWaterCups += parseInt(numbersArray[index], 10);
+  }
+  if (sumWaterCups > 1) {
+    let waterDebitMessage = sumWaterCups + ' copos de água';
+    return waterDebitMessage;
+  }
+  let waterDebitMessage = sumWaterCups + ' copo de água';
+  return waterDebitMessage;
 }
 
 module.exports = {
