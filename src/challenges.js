@@ -67,7 +67,7 @@ function fizzBuzz(arrayNumber) {
       array.push('fizz')
     } else if (arrayNumber[i] % 5 === 0) {
       array.push('buzz')
-    } else if (arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 === 0)) {
+    } else if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 === 0)) {
       array.push('fizzBuzz')
     }
     return 'bug!'
@@ -78,6 +78,7 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
