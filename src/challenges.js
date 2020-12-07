@@ -180,7 +180,7 @@ function isValid(array) {
 }
 
 function isSafeToPass(array) {
-  if (array.length > 11) {
+  if (array.length > 11 || array.length < 11) {
     return 1;
   }
   if (!isValid(array)) {
