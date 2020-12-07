@@ -186,11 +186,6 @@ function isSafeToPass(array) {
   if (!isValid(array)) {
     return 2;
   }
-  for (let index = 0; index < array.length; index += 1) {
-    if (checkDuplicate(array, array[index]) > 2) {
-      return 2;
-    }
-  }
   return 3;
 }
 
@@ -201,6 +196,12 @@ function generatePhoneNumber(arrayNumber) {
 
   if (isSafeToPass(arrayNumber) === 2) {
     return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (checkDuplicate(array, array[index]) > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';;
+    }
   }
 
   if (isSafeToPass(arrayNumber) === 3) {
