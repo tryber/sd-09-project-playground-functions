@@ -174,20 +174,11 @@ function decode(encoded) {
 // Desafio 10
 function techListTest(index, array, name) {
   let result = [];
-  if (Object.prototype.hasOwnProperty.call(index, array)) {
-    let object = {
-      tech: array[index],
-      name,
+  let object = {
+    tech: array[index],
+    name,
     };
     result.push(object);
-  }
-  if ({}.hasOwnProperty.call(array, index)) {
-    let object = {
-      tech: array[index],
-      name,
-    };
-    result.push(object);
-  }
   return result;
 }
 
@@ -195,7 +186,7 @@ function techList(array, name) {
   let techArray = [];
   array = array.sort();
   if (array[0] !== undefined) {
-    for (let index in array) {
+    for (let index = 0; index < array.length; index +=1) {
       techArray.push(techListTest(index, array, name));
     }
   } else {
