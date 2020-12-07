@@ -88,7 +88,8 @@ console.log(fizzBuzz(arrayNumbers));
 function encode(string) {
   let vowel = string.split('');
   for (let index = 0; index < vowel.length; index += 1) {
-    switch(vowel[index]) {
+    let volwes = vowel[index]
+    switch (volwes) {
       case ' ':
         break;
       case 'a':
@@ -103,87 +104,87 @@ function encode(string) {
       case 'o':
         vowel[index] = '4';
         break;
-          case 'u':
+      case 'u':
         vowel[index] = '5';
         break;
     }
   }
-    return vowel.join('');
-  }
-  let vowelString = 'hi there!';
-  console.log(encode(vowelString));
+  return vowel.join('');
+}
+let vowelString = 'hi there!';
+console.log(encode(vowelString));
 
 function decode(string) {
   let vowel = string.split('');
   for (let index = 0; index < vowel.length; index += 1) {
-      switch(vowel[index]) {
-        case ' ':
-          break;
-        case '1':
-          vowel[index] = 'a';
-          break;
-        case '2':
-          vowel[index] = 'e';
-          break;
-        case '3':
-          vowel[index] = 'i';
-          break;
-        case '4':
-          vowel[index] = 'o';
-          break;
-        case '5':
-          vowel[index] = 'u';
-          break;
-      }
+    let numbers = vowel[index]
+    switch (numbers) {
+      case ' ':
+        break;
+      case '1':
+        vowel[index] = 'a';
+        break;
+      case '2':
+        vowel[index] = 'e';
+        break;
+      case '3':
+        vowel[index] = 'i';
+        break;
+      case '4':
+        vowel[index] = 'o';
+        break;
+      case '5':
+        vowel[index] = 'u';
+        break;
     }
+  }
   return vowel.join('');
 }
 let numberString = 'h3 th2r2!';
-  console.log(decode(numberString));
+console.log(decode(numberString));
 
 // Desafio 10
 function techList(technologies, name) {
   technologies.sort();
-  newList = [];
-  if(technologies.length === 0){
+  let newList = [];
+  if (technologies.length === 0){
     return 'Vazio!';
   }
   for (let index = 0; index < technologies.length; index += 1) {
-    let objectTech = {tech: 'NomeTech', name: name};
+    let objectTech = { tech: '', name: name };
     objectTech.tech = technologies[index];
     newList.push(objectTech);
   }
   return newList;
 }
-let arrayTechnologies = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+let arrayTechnologies = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript']
 let studentName = 'Daniela'
 console.log(techList(arrayTechnologies, studentName));
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   let toString = '';
-  
+  let phone = 'Array com tamanho incorreto.';
   for (let index = 0; index < phoneNumber.length; index += 1) {
     let number = phoneNumber[index];
     let popsUp = 1;
     for (let position = 0; position < phoneNumber.length; position += 1) {
-      if ( phoneNumber[position] === number) {
+      if (phoneNumber[position] === number) {
         popsUp += 1;
       }
     }
-    if(phoneNumber[index] < 0 || phoneNumber[index] > 9 || popsUp > 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+    if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || popsUp > 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     toString += phoneNumber[index];
   }
-    if (phoneNumber.length === 11) {
-      return toString.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-    } else {
-      return 'Array com tamanho incorreto.';
-    } 
+  if (phoneNumber.length === 11) {
+    phone =  toString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  }
+  return phone;
 }
-  let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-  console.log(generatePhoneNumber(number));
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(number));
 
 // Desafio 12
 function triangleCheck() {
