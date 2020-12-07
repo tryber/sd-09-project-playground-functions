@@ -40,27 +40,31 @@ function footballPoints(wins, ties) {
 }
 
 // Funcao auxiliar
-function highestValue(array) {
+function countsRepeatedNumbers(array, number) {
+  repeat = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === number) {
+      repeat += 1;
+    }
+  }
+  return repeat;
+}
+// console.log(countsRepeatedNumbers([9, 9, 9, 3, 9, 5, 7], 9));
+
+// Desafio 6
+function highestCount(array) {
+  let highestValueAmount;
   let bigger = array[0];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > bigger) {
       bigger = array[index];
     }
   }
-  return bigger;
-}
-
-// Desafio 6
-function highestCount(array) {
-  let bigger = highestValue(array);
-  let highestValueAmount = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === bigger) {
-      highestValueAmount += 1;
-    }
-  }
+  highestValueAmount = countsRepeatedNumbers(array, bigger);
   return highestValueAmount;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -77,9 +81,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// console.log(catAndMouse(10, 4, 22));
-// console.log(catAndMouse(0, 3, 2));
-// console.log(catAndMouse(1, 0, 2));
 // Auxiliary function
 function divisible(dividend, divisor) {
   if ((dividend % divisor) === 0) {
@@ -173,17 +174,30 @@ function decode(text) {
 function techList(technologies, name) {
   // seu código aqui
   let myTechList = [];
+  if (technologies.length === 0) {
+    return 'Vazio!';
+  }
   for (let index = 0; index < technologies.length; index += 1) {
     myTechList.push({
       tech: technologies[index],
-      name: name
+      name: name,
     });
   }
   return myTechList;
 }
-console.log(techList(['Go', 'Flask', 'Node'], 'Enio'));
+// console.log(techList([], 'Enio'));
+
+function checkArrayIsValid(array) {
+  /* for (let index = 0; index < array.length; index++) {
+    if (array[index] < 0 || array[index] > 9 || repeat > 2) {
+      
+    }
+  } */
+  // return tru
+}
+
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
 }
 
