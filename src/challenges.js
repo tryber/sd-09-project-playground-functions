@@ -47,7 +47,6 @@ function calcPosition(pos1, pos2) {
 
 function catAndMouse(mouse, cat1, cat2) {
   let returnString;
-  
   if (calcPosition(mouse, cat1) <  calcPosition(mouse, cat2)) {
     returnString = 'cat1';
   }
