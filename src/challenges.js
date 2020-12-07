@@ -92,6 +92,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+
 function encode(string) {
   let encodedString = '';
   for (let letter of string) {
@@ -147,12 +148,11 @@ function decode(string) {
 function techList(array, name) {
   let arrayTechObjects = [];
   if (array.length !== 0) {
-    for (let tec of array.sort()) {
+    for (let tech of array.sort()) {
       let techObject = {
-        tech: undefined,
+        tech,
         name,
       };
-      techObject.tech = tec;
       arrayTechObjects.push(techObject);
     }
     return arrayTechObjects;
