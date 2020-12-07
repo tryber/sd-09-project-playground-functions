@@ -170,7 +170,7 @@ function generatePhoneNumber(numbers) {
  let rN = [] 
  for(let index = 0; index < numbers.length; index += 1) {
    rN.push(numbers[index])}    
-concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10] + '.';
+concat = '(' + rN[0] + rN[1] + ')' + ' ' + rN[2] + rN[3] + rN[4] + rN[5] + rN[6] + '-' + rN[7] + rN[8] + rN[9] + rN[10];
   return(concat);
 }
 console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 9, 7, 7, 0]));
