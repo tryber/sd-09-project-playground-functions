@@ -167,23 +167,27 @@ function encode(string) {
   return encoded;
 }
 
-function decodeYes(encoded) {
-
+function decodeYes(encoded, index) {
+  let decodedYes = '';
+  if (encoded[index] === '1') {
+    decodedYes += 'a';
+  } else if (encoded[index] === '2') {
+    decodedYes += 'e';
+  } else if (encoded[index] === '3') {
+    decodedYes += 'i';
+  } else if (encoded[index] === '4') {
+    decodedYes += 'o';
+  } else {
+    decodedYes += 'u';
+  }
+  return decodedYes;
 }
 
 function decode(encoded) {
   let decoded = '';
   for (let index in encoded) {
-    if (encoded[index] === '1') {
-      decoded += 'a';
-    } else if (encoded[index] === '2') {
-      decoded += 'e';
-    } else if (encoded[index] === '3') {
-      decoded += 'i';
-    } else if (encoded[index] === '4') {
-      decoded += 'o';
-    } else if (encoded[index] === '5') {
-      decoded += 'u';
+    if (encoded[index] === '1' || encoded[index] === '2' || encoded[index] === '3' || encoded[index] === '4' || encoded[index] === '5') {
+      decoded += decodeYes(encoded, index);
     } else {
       decoded += encoded[index];
     }
