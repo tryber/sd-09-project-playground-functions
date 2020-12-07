@@ -65,19 +65,21 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
+  let array = [];
   let result = '';
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-      result += 'fizzBuzz ';
+      result = 'fizzBuzz';
     } else if (arrayNumbers[index] % 5 === 0) {
-      result += 'buzz ';
+      result = 'buzz';
     } else if (arrayNumbers[index] % 3 === 0) {
-      result += 'fizz ';
+      result = 'fizz';
     } else {
-      result += 'bug! ';
+      result = 'bug!';
     }
+    array.push(result) 
   }
-  return result;
+  return array;
 }
 let arrayNumbers = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayNumbers));
@@ -160,17 +162,14 @@ console.log(techList(arrayTechnologies, studentName));
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   let toString = '';
-  toString = toString.replace(/[^\d]/g, "");
   for (let index = 0; index < phoneNumber.length; index += 1) {
     toString += phoneNumber[index];
   }
-  if (phoneNumber.length === 11) {
+   if (phoneNumber.length === 11) {
     return toString.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
-  } else if (phoneNumber < 0 || phoneNumber > 9){
-    return 'Array com tamanho incorreto.';
   } else {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
+    return 'Array com tamanho incorreto.';
+  } 
 }
   let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
   console.log(generatePhoneNumber(number));
