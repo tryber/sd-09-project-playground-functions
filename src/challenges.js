@@ -153,18 +153,16 @@ function techList(array, name) {
 
 // Desafio 11
 function verifyNumberRepetition(array, number) {
-  let cont = 0;
+  let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (number === array[index]) {
-      cont += 1;
+      count += 1;
     }
   }
-  switch (cont >= 3) {
-    case true:
-      return true;
-    case false:
-      return false;
+  if (cont >= 3) {
+    return true;
   }
+  return false;
 }
 
 function generatePhoneNumber(array) {
@@ -194,7 +192,7 @@ function generatePhoneNumber(array) {
   }
   return 'Array com tamanho incorreto.';
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,1]));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let sumBC = lineB + lineC;
