@@ -27,7 +27,7 @@ console.log(splitSentence('go trybe'))
 function concatName(string) {
   // seu código aqui
   for (let i = 0; i < string.length; i += 1) {
-    return (string[string.length -1] + ", " + string[0])
+    return (string[string.length -1] + ', ' + string[0])
   }
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(param1) {
+function highestCount() {
   // seu código aqui
 
 }
@@ -51,17 +51,28 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(cat2 - mouse)
 
   if (distanceCat1 < distanceCat2) {
-    return "cat1"
+    return 'cat1'
   } else if (distanceCat2 < distanceCat1) {
-    return "cat2"
-  } else {
-    return "os gatos trombam e o rato foge"
+    return 'cat2'
   }
+  return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumber) {
   // seu código aqui
+  let array = []
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+    if (arrayNumber[i] % 3 === 0) {
+      array.push('fizz')
+    } else if (arrayNumber[i] % 5 === 0) {
+      array.push('buzz')
+    } else if (arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 === 0)) {
+      array.push('fizzBuzz')
+    }
+    return 'bug!'
+  }
+  return array;
 }
 
 // Desafio 9
