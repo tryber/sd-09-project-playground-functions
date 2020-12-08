@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else {
     returnString = 'os gatos trombam e o rato foge';
   }
-  return returnString
+  return returnString;
 }
 
 // Desafio 8
@@ -142,11 +142,11 @@ function techList(baseArray, name) {
       };
       baseObject.tech = baseArray[index];
       baseObject.name = name;
-      outputArray.push (baseObject);
+      outputArray.push(baseObject);
     }
   }
   else {
-    outputArray = 'Vazio';
+    outputArray = 'Vazio!';
   }
   return outputArray;
 }
