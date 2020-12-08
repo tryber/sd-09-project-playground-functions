@@ -153,7 +153,7 @@ function techList(baseArray, name) {
 
 // Desafio 11
 function invalidNunmber(value){
-  flagInvalid = false;
+  let flagInvalid = false;
   for (let index = 0; index < value.length; index += 1){
     if(parseInt(value[index], 10) < 0 || parseInt(value[index], 10) > 9) {
       flagInvalid = true;
@@ -163,7 +163,7 @@ function invalidNunmber(value){
 }
 
 function formatPhone(value){
-  returnValue = '';
+  let returnValue = '';
   for (let index = 0; index < value.length; index += 1){
     switch (index) {
       case 0:
