@@ -16,7 +16,7 @@ function splitSentence(string3) {
 
 // Desafio 4 OK
 function concatName(frase4) {
-  let answer = (frase4[frase4.length-1] + ", " + frase4[0]);
+  let answer = (frase4[frase4.length -1] + ', ' + frase4[0]);
   return answer;
 }
 
@@ -80,7 +80,7 @@ function fizzBuzz(array8) {
 
 // Desafio 9
 function encode(string9) {
-  let object = { a:'1', e:'2', i:'3', o:'4', u:'5'};
+  let object = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   for (let key in object) {
     let substitute = key;
     let re = new RegExp(substitute, 'g');
@@ -90,7 +90,7 @@ function encode(string9) {
 }
 
 function decode(string9) {
-  let object2 = { 1:'a', 2:'e', 3:'i', 4:'o', 5:'u'};
+  let object2 = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   for (let key2 in object2) {
     let substitute2 = key2;
     let re2 = new RegExp(substitute2, 'g');
