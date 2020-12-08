@@ -79,17 +79,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let object = {
-    1: 'bug!',
-    3: 'fizz',
-    5: 'buzz',
-    15: 'fizzBuzz',
-  };
+  let divisions = [1, 3, 5, 15];
+  let results = ['bug!', 'fizz', 'buzz', 'fizzBuzz'];
   let fizzBuzzArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    for (let key in object) {
-      if (array[index] % key === 0) {
-        fizzBuzzArray[index] = object[key];
+    for (let divisionsIndex = 0; divisionsIndex < divisions.length; divisionsIndex += 1) {
+      if (array[index] % divisions[divisionsIndex] === 0) {
+        fizzBuzzArray[index] = results[divisionsIndex];
       }
     }
   }
@@ -210,7 +206,7 @@ function hydrate(string) {
   let waterCups = 0;
   let returnPhrase = '';
   for (let index = 0; index < numberMatch.length; index += 1) {
-    waterCups += parseInt(numberMatch[index]);
+    waterCups += parseInt(numberMatch[index], 10);
   }
   if (numberMatch.length > 0) {
     returnPhrase = waterCups + ' copos de água';
