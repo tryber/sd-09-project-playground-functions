@@ -16,9 +16,9 @@ console.log(calcArea(10, 5))
 
 // Desafio 3
   function splitSentence(umaString) {
-    return umaString.split(" ")
+    return umaString.split(' ')
   }
-  console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
+  console.log(splitSentence('Estou aprendendo a programar com a Trybe'))
 
 // Desafio 4
 function concatName(umArray) {
@@ -34,25 +34,25 @@ console.log(footballPoints(3, 2))
 
 // Desafio 6
 function highestCount(numeros) {
-  let numMaximo = numeros.reduce(function(a,b){ //reduce vai comparar o item um com o dois, ficar com o maior e comparar com o seguinte, e assim até terminar o array. Também funciona como a soma de Gauss. Fonte : https://developer.mozilla.org/
+  let numMaximo = numeros.reduce(function(a, b){ //reduce vai comparar o item um com o dois, ficar com o maior e comparar com o seguinte, e assim até terminar o array. Também funciona como a soma de Gauss. Fonte : https://developer.mozilla.org/  
     return Math.max(a, b);
   })
   let contagemFinal = 0
-  for (i = 0 ; i < numeros.length ; i++) {
+  for (i = 0 ; i < numeros.length ; i+= 1){
     if (numeros[i] === numMaximo) {
     contagemFinal += 1
     }
   }
   return contagemFinal
-  }
-  console.log(highestCount([1, 2, 4, 2 , 4]))
+}
+console.log(highestCount([1, 2, 4, 2, 4]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let dist1 = Math.abs(mouse - cat1)
-let dist2 = Math.abs(mouse - cat2)
+  let dist1 = Math.abs(mouse - cat1)
+  let dist2 = Math.abs(mouse - cat2)
 
-if ( dist1 > dist2){
+  if (dist1 > dist2){
 return 'cat2'
 } else if (dist1 < dist2) {
 return 'cat1'
