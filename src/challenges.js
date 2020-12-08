@@ -79,7 +79,7 @@ function fizzBuzz(numeros) {
   for (let index = 0; index < numeros.length; index += 1) {
     if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
       result.push('fizzBuzz');
-    }
+      }
     else if (numeros[index] % 5 === 0) {
       result.push('buzz');
     }
@@ -95,11 +95,60 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  function encode(param1) {
+    let letters = param1.split('');
+    let results = '';
+    for (let index = 0; index < letters.length; index += 1) {
+      switch (letters[index]) {
+        case 'a':
+          results += '1';
+          break;
+        case 'e':
+          results += '2';
+          break;
+        case 'i':
+          results += '3';
+          break;
+        case 'o':
+          results += '4';
+          break;
+        case 'u':
+          results += '5';
+          break;
+        default:
+          results += letters[index];
+          break;
+      }
+    }
+    return results;
 }
 function decode() {
-  // seu código aqui
-}
+  function decode(param2) {
+    let letters2 = param2.split('');
+    let results2 = '';
+    for (let index = 0; index < letters2.length; index += 1) {
+      switch (letters2[index]) {
+        case '1':
+          results2 += 'a';
+          break;
+        case '2':
+          results2 += 'e';
+          break;
+        case '3':
+          results2 += 'i';
+          break;
+        case '4':
+          results2 += 'o';
+          break;
+        case '5':
+          results2 += 'u';
+          break;
+        default:
+          results2 += letters2[index];
+          break;
+      }
+    }
+    return results2;
 
 // Desafio 10
 function techList() {
