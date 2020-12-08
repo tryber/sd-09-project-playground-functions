@@ -75,21 +75,21 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(chaaracters) {
-  for (let i = 0; i < chaaracters.length; i += 1) {
-    if (chaaracters[i] === 'a') {
-      chaaracters = chaaracters.replace(/a/g, '1');
-    } else if (chaaracters[i] === 'e') {
-      chaaracters = chaaracters.replace(/e/g, '2');
-    } else if (chaaracters[i] === 'i') {
-      chaaracters = chaaracters.replace(/i/g, '3');
-    } else if (chaaracters[i] === 'o') {
-      chaaracters = chaaracters.replace(/o/g, '4');
-    } else if (chaaracters[i] === 'u') {
-      chaaracters = chaaracters.replace(/u/g, '5');
+function encode(string) {
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
+      string = string.replace(/a/g, '1');
+    } else if (string[i] === 'e') {
+      string = string.replace(/e/g, '2');
+    } else if (string[i] === 'i') {
+      string = string.replace(/i/g, '3');
+    } else if (string[i] === 'o') {
+      string = string.replace(/o/g, '4');
+    } else if (string[i] === 'u') {
+      string = string.replace(/u/g, '5');
     }
   }
-  return chaaracters;
+  return string;
 }
 
 function decode(numbers) {
@@ -110,14 +110,14 @@ function decode(numbers) {
 }
 
 // Desafio 10
-function techList(array, name) {
-  if (array === ' ') {
+function techList(techs, name) {
+  if (techs == '') {
     return 'Vazio!';
   }
   let info = [];
-  array.sort();
-  for (let i = 0; i < array.length; i += 1) {
-    let newInfo = { tech: array[i], name };
+  techs.sort();
+  for (let i = 0; i < techs.length; i += 1) {
+    let newInfo = { tech: techs[i], name };
     info.push(newInfo);
   }
   return info;
