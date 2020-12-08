@@ -17,19 +17,17 @@ function splitSentence(frase) {
 console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
-let arrayString = ['Valdeci', 'Lucas', 'Jean', 'Paolillo', 'Patricia'];
-
 function concatName(arrayString) {
 return `${arrayString[arrayString.length-1]}, ${arrayString[0]}`;
-}  
-console.log(concatName(arrayString));
+}
+console.log(concatName(['Valdeci', 'Lucas', 'Jean', 'Paolillo', 'Patricia']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pointsMatchWins = 3;
   let pointsMatchTies = 1;
-  wins = wins * pointsMatchWins;
-  ties = ties * pointsMatchTies;
+  wins *= pointsMatchWins;
+  ties *= pointsMatchTies;
   return wins + ties;
 }
 console.log(footballPoints(5, 5));
