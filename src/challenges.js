@@ -235,52 +235,17 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let number1 = false;
-  let number2 = false;
-  let number3 = false;
-
-  function menorMedidas(numberMenor1, numberMenor2, numberMenor3) {
-    let somaNumero = numberMenor2 + numberMenor3;
-
-    if (numberMenor1 < somaNumero) {
+    if (lineA < lineB + lineC && lineA > Math.abs(lineB) - Math.abs(lineC)) {
       return true;
-    }
-    return false;
-  }
-
-  function numeroAbsoluto(numberAbs1, numberAbs2, numberAbs3) {
-    let diferencaNumero = Math.abs(numberAbs2) - Math.abs(numberAbs3);
-
-    if (numberAbs1 > diferencaNumero) {
+    } else if (lineB < lineA + lineC && lineB > Math.abs(lineA) - Math.abs(lineC)) {
       return true;
+    } else if (lineC < lineA + lineB && lineC > Math.abs(lineA) - Math.abs(lineB)) {
+      return true;
+    } else {
+      return false;
     }
-    return false;
-  }
-
-  switch (true) {
-    case menorMedidas(lineA, lineB, lineC) && numeroAbsoluto(lineA, lineB, lineC):
-      number1 = true;
-    case menorMedidas(lineB, lineA, lineC) && numeroAbsoluto(lineB, lineA, lineC):
-      number2 = true;
-    case menorMedidas(lineC, lineA, lineB) && numeroAbsoluto(lineC, lineA, lineB):
-      number3 = true;
-  }
-  // if (menorMedidas(lineA, lineB, lineC) === true && numeroAbsoluto(lineA, lineB, lineC) === true) {
-  //   number1 = true;
-  // }
-  // if (menorMedidas(lineB, lineA, lineC) === true && numeroAbsoluto(lineB, lineA, lineC) === true) {
-  //   number2 = true;
-  // }
-  // if (menorMedidas(lineC, lineA, lineB) === true && numeroAbsoluto(lineC, lineA, lineB) === true) {
-  //   number3 = true;
-  // }
-
-  if (number1 === true && number2 === true && number3 === true) {
-    return true;
-  }
-  return false;
 }
-console.log(triangleCheck(10, 2, 3))
+
 // Desafio 13
 // Referencia para usar o RegExp
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
