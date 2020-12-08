@@ -19,8 +19,11 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(namesArray) {
-  return '${namesArray[namesArray.length -1]}, ${namesArray[0]}'
+function concatName(arrayName) {
+  let lastName = arrayName.pop;
+  let firstName = arrayName[0];
+  let newArray = [lastName,firstName]
+  return newArray
 }
 // Desafio 5
 function footballPoints(wins, ties) {
