@@ -50,7 +50,6 @@ function highestCount(numberArray) {
   let highestNumber = 0;
   let counter = 0;
   for(i = 0; i < numberArray.length; i+= 1) {
-    highestNumber = numberArray[i]
     if (numberArray[i] > highestNumber) {
       highestNumber = numberArray[i]
     }
