@@ -158,7 +158,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
   let numberX  = '(';
   if (checkNumbers(array)) {
