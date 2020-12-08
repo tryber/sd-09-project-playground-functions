@@ -135,14 +135,15 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let objectList = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === '') {
+  let sortArray = array.sort();
+  for (let index = 0; index < sortArray.length; index += 1) {
+    if (sortArray[index] === '') {
       objectList.push('Vazio');
     } else {
-    objectList.push({
-      tech: array[index],
-      name: name,
-    });
+      objectList.push({
+        tech: sortArray[index],
+        name: name,
+      });
     }
   }
   return objectList;
