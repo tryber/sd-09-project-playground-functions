@@ -50,6 +50,7 @@ function highestCount(numberArray) {
   let highestNumber = 0;
   let counter = 0;
   for(i = 0; i < numberArray.length; i+= 1) {
+    highestNumber = numberArray[i]
     if (numberArray[i] > highestNumber) {
       highestNumber = numberArray[i]
     }
@@ -134,9 +135,29 @@ function decode(stringToDecodify) {
   } return decodifiedString
 }
 
+// Suporte Desafio 10
+function compare(a, b) {
+  if (a.tech < b.tech) return -1;
+  if (a.tech > b.tech) return 1;
+  return 0;
+}
 // Desafio 10
-function techList() {
+function techList(techsToLearn, name) {
   // seu código aqui
+  let objectsArray = [];
+  let techObjects = {
+  }
+  for(let i = 0; i < techsToLearn.length; i += 1) {
+    if(techsToLearn.length === 0) {
+      return 'Vazio!'
+    } else {
+    techObjects['tech'] = techsToLearn[i]
+    techObjects['name'] = name
+    objectsArray.push(techObjects)
+    techObjects = {
+    }
+    }
+  } return objectsArray.sort(compare)
 }
 
 // Desafio 11
