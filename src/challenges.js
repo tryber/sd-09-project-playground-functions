@@ -219,12 +219,12 @@ function somador(string) {
         break;
       case '7': sum += parseInt(arrayString[i], 10);
         break;
-      case '8': sum += parseInt(arrayString[i], 10);
-        break;
-      case '9': sum += parseInt(arrayString[i], 10);
-        break;
+      case '8': sum += parseInt(arrayString[i], 10); break;
+      case '9': sum += parseInt(arrayString[i], 10); break;
       default: break;
-    } } return (sum); }
+    }
+  } return (sum); 
+}
 function hydrate(str) {
   let sum = somador(str);
   if (sum < 2) {
