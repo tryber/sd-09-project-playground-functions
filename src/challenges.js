@@ -63,11 +63,8 @@ function highestCount(array) {
   return highestValueAmount;
 }
 
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 === distanceCat2) {
@@ -165,7 +162,6 @@ function decode(text) {
 
 // Desafio 10
 function techList(technologies, name) {
-  // seu código aqui
   let myTechList = [];
   let orderedTechnologies = technologies.sort();
   console.log(orderedTechnologies);
@@ -195,7 +191,6 @@ function checkArrayIsValid(array) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  // seu código aqui
   let phoneNumber = '';
   let isValid = checkArrayIsValid(numbers);
   if (numbers.length !== 11) {
@@ -226,7 +221,6 @@ function generatePhoneNumber(numbers) {
   }
   return phoneNumber;
 }
-// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 function checkTriangleSide(side1, side2, side3) {
   let absoluteValue = Math.abs(side2 - side3);
@@ -239,7 +233,6 @@ function checkTriangleSide(side1, side2, side3) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
   let sideA = checkTriangleSide(lineA, lineB, lineC);
   let sideB = checkTriangleSide(lineB, lineC, lineA);
   let sideC = checkTriangleSide(lineC, lineA, lineB);
@@ -252,7 +245,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 function getNumber(character) {
   let checkNumber = {};
-  const numbers = [0, 1, 2 ,3 ,4 ,5 ,6 ,7 ,8 ,9];
+  const numbers = [0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] == character) {
       checkNumber.number = numbers[index];
@@ -265,11 +258,8 @@ function getNumber(character) {
   return checkNumber;
 }
 
-// console.log(getNumber('a'));
-
 // Desafio 13
 function hydrate(amountOfDrink) {
-  // seu código aqui
   let checkNumber;
   let glasseOfWater = 0;
   for (let index = 0; index < amountOfDrink.length; index += 1) {
@@ -279,11 +269,10 @@ function hydrate(amountOfDrink) {
     }
   }
   if (glasseOfWater === 1) {
-    return glasseOfWater + " copo de água";
+    return glasseOfWater + ' copo de água';
   }
-  return glasseOfWater + " copos de água";
+  return glasseOfWater + ' copos de água';
 }
-// console.log(hydrate('1 cachaça'));
 
 module.exports = {
   calcArea,
