@@ -95,60 +95,11 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode() {
-  function encode(word) {
-    let character = word.split('');
-    let result = '';
-    for (let counter = 0; counter < character.length; counter += 1) {
-      switch (character[counter]) {
-        case 'a':
-          result += '1';
-          break;
-        case 'e':
-          result += '2';
-          break;
-        case 'i':
-          result += '3';
-          break;
-        case 'o':
-          result += '4';
-          break;
-        case 'u':
-          result += '5';
-          break;
-        default:
-          result += character[counter];
-          break;
-      }
-    }
-    return result;
+  // seu código aqui
 }
 function decode() {
-  function decode(wor) {
-    let char = wor.split('');
-    let res = '';
-    for (let index = 0; index < char.length; index += 1) {
-      switch (char[index]) {
-        case '1':
-          res += 'a';
-          break;
-        case '2':
-          res += 'e';
-          break;
-        case '3':
-          res += 'i';
-          break;
-        case '4':
-          res += 'o';
-          break;
-        case '5':
-          res += 'u';
-          break;
-        default:
-          res += char[index];
-          break;
-      }
-    }
-    return res;}
+  // seu código aqui
+}
 
 // Desafio 10
 function techList() {
