@@ -101,20 +101,15 @@ function auxCode(code, array1, array2) {
   let arayToCode = array2;
   for (let index = 0; index < arrayLetters.length; index += 1) {
     switch (arrayLetters[index]) {
-      case arrayCode[0]:
-        arrayLetters[index] = arayToCode[0];
+      case arrayCode[0]: arrayLetters[index] = arayToCode[0];
         break;
-      case arrayCode[1]:
-        arrayLetters[index] = arayToCode[1];
+      case arrayCode[1]: arrayLetters[index] = arayToCode[1];
         break;
-      case arrayCode[2]:
-        arrayLetters[index] = arayToCode[2];
+      case arrayCode[2]: arrayLetters[index] = arayToCode[2];
         break;
-      case arrayCode[3]:
-        arrayLetters[index] = arayToCode[3];
+      case arrayCode[3]: arrayLetters[index] = arayToCode[3];
         break;
-      case arrayCode[4]:
-        arrayLetters[index] = arayToCode[4];
+      case arrayCode[4]: arrayLetters[index] = arayToCode[4];
         break;
       default:
         break;
@@ -227,32 +222,23 @@ function somador(string) {
   let sum = 0;
   for (let i = 0; i < arrayString.length; i += 1) {
     switch (arrayString[i]) {
-      case '1':
-        sum += parseInt(arrayString[i], 10);
+      case '1': sum += parseInt(arrayString[i], 10);
         break;
-      case '2':
-        sum += parseInt(arrayString[i], 10);
+      case '2': sum += parseInt(arrayString[i], 10);
         break;
-      case '3':
-        sum += parseInt(arrayString[i], 10);
+      case '3': sum += parseInt(arrayString[i], 10);
         break;
-      case '4':
-        sum += parseInt(arrayString[i], 10);
+      case '4': sum += parseInt(arrayString[i], 10);
         break;
-      case '5':
-        sum += parseInt(arrayString[i], 10);
+      case '5': sum += parseInt(arrayString[i], 10);
         break;
-      case '6':
-        sum += parseInt(arrayString[i], 10);
+      case '6': sum += parseInt(arrayString[i], 10);
         break;
-      case '7':
-        sum += parseInt(arrayString[i], 10);
+      case '7': sum += parseInt(arrayString[i], 10);
         break;
-      case '8':
-        sum += parseInt(arrayString[i], 10);
+      case '8': sum += parseInt(arrayString[i], 10);
         break;
-      case '9':
-        sum += parseInt(arrayString[i], 10);
+      case '9': sum += parseInt(arrayString[i], 10);
         break;
       default:
         break;
