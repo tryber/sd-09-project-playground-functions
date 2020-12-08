@@ -217,8 +217,7 @@ function generatePhoneNumber(array) {
     let numero = `(${DDD}) ${firstPart}-${secondPart}`;
     return numero;
   }
-  let errorMessage = validateIfPossiblePhoneNumber(array);
-  return errorMessage;
+  return  validateIfPossiblePhoneNumber(array);
 }
 
 // Desafio 12
