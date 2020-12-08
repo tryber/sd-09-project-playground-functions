@@ -122,7 +122,7 @@ function techList(arraytech, name) {
 function generatePhoneNumber() {
 }
 
-
+// tt
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
