@@ -20,10 +20,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(namesArray) {
-  let lastItem = namesArray.pop();
-  let firstItem = namesArray[0];
-  return lastItem + firstItem
-}
+  return '$namesArray[namesArray.length -1]}, ${namesArray[0]}'
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let total = (wins * 3) + ties;
@@ -58,17 +56,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numberArray) {
   let finalArray = [];
-  for (let cont = 0; cont<numberArray.length; cont += 1) {
-    if (numberArray[cont] %3 === 0 && numberArray[cont] % 5 === 0) {
+  for (let cont of numberArray) {
+    switch (true) {
+    case cont %3 === 0 && cont % 5 === 0 :
     finalArray.push('fizzBuzz');
-    } else if (numberArray[cont] % 5 === 0) {
+    break;
+    case cont % 5 === 0:
     finalArray.push('buzz');
-    } else if (numberArray[cont] %3 === 0) {
+    break;
+    case cont %3 === 0:
     finalArray.push('fizz');
-    } else {
+    break;
+    default:
     finalArray.push('bug!');
     }
-    }
+  }
   return finalArray
 }
 // Desafio 9
