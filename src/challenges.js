@@ -85,7 +85,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let asd = [2, 15, 7, 9, 45];
 // Refecencia do for (... of ...) usado no desafio:
 // // https://imasters.com.br/front-end/diferenca-entre-for-of-e-for-in
 function fizzBuzz(array) {
@@ -109,7 +108,6 @@ function fizzBuzz(array) {
   }
   return retornoArray;
 }
-console.log(fizzBuzz(asd));
 
 // Desafio 9
 function encode(string) {
