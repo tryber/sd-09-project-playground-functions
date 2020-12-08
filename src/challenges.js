@@ -78,8 +78,6 @@ function fizzBuzz(vd8) {
   
   let result = [];
 
-  vd8.sort
-
   for(let index = 0; index < vd8.length; index += 1){
     
     if ((vd8[index] % 3) === 0 && (vd8[index] % 5) === 0)
