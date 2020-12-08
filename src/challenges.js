@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-if (num1 && num2) {
-    return true
+  if (num1 && num2) {
+  return true
 }
-    return false
+  return false
 }
 console.log(compareTrue(0, 2))
 
@@ -16,15 +16,15 @@ console.log(calcArea(10, 5))
 
 // Desafio 3
 function splitSentence(umaString) {
-  return umaString.split(" ")
+  return umaString.split('')
 }
-console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
+console.log(splitSentence('Estou aprendendo a programar com a Trybe'))
 
 // Desafio 4
 function concatName(umArray) {
-  return umArray[umArray.length -1] + umArray[0]
+  return umArray[umArray.length - 1] + ' ' + umArray[0]
 }
-console.log(concatName(["a","b", "c", "d"]))
+console.log(concatName(['a', 'b', 'c', 'd']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -45,7 +45,7 @@ function highestCount(numeros) {
   }
   return contagemFinal
   }
-  console.log(highestCount([1, 2, 4, 2, 4]))
+  console.log(highestCount([1, 2, 4, 2 , 4]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -53,11 +53,11 @@ let dist1 = Math.abs(mouse - cat1)
 let dist2 = Math.abs(mouse - cat2)
 
 if ( dist1 > dist2){
-return "cat2"
+return 'cat2'
 } else if (dist1 < dist2) {
-return "cat1"
+return 'cat1'
 } else {
-return "os gatos trombam e o rato foge"
+return 'os gatos trombam e o rato foge'
 }
 }
 console.log(catAndMouse(-2,10,3))
@@ -66,20 +66,20 @@ console.log(catAndMouse(-2,10,3))
 function fizzBuzz(meuArray) {
   let res = []
   for (i = 0 ; i < meuArray.length; i++) {
-    if (meuArray[i] % 3 === 0 && meuArray[i] % 5 === 0) {
-          res.push("fizzBuzz")
+    if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
+          res.push('fizzBuzz')
     } else if (meuArray[i] % 3 === 0) {
-          res.push("buzz")
+          res.push('buzz')
     } else if (meuArray[i] % 5 === 0){
-          res.push("fizz")
+          res.push('fizz')
     } else {
-      res.push("bug!")
+      res.push('bug!')
     }
   }
   return res
 }
 
-console.log(fizzBuzz([5,3,4,30]))
+console.log(fizzBuzz([5, 3, 4, 30]))
 
 
 // Desafio 9
