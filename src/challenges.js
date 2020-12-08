@@ -142,8 +142,8 @@ function decode(string) {
 // console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList(array, name) {
-  if (array.length == 0) {
+function techList(array, nome) {
+  if (array.length === 0) {
     return 'Vazio!'
   }
 
@@ -152,12 +152,12 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     array[index] = {
       tech: array[index],
-      name: name,
+      name: nome,
     }
   }
   return array;
 }
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Fernanda'));
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Fernanda'));
 
 // Desafio 11
 function generatePhoneNumber() {
