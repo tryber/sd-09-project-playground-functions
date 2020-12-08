@@ -95,8 +95,9 @@ function fizzBuzz(array) {
       arrayAnswer.push('fizz');
     } else if (checkBuzz(buzz)) {
       arrayAnswer.push('buzz');
+    } else {
+      arrayAnswer.push('bug!');
     }
-    arrayAnswer.push('bug!');
   }
   return arrayAnswer;
 }
