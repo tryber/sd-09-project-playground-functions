@@ -15,9 +15,8 @@ function splitSentence(string) {
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
-  let firstLast;
-  firstLast = (array[array.length - 1] + ', ' + array[0]);
-  return firstLast;
+  let space = ', ';
+  return array[array.length - 1] + space + array[0];
 }
 // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
@@ -42,34 +41,20 @@ function highestCount(array) {
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let pow = 'os gatos trombam e o rato foge';
   let mCat1 = Math.abs(mouse - cat1);
   let mCat2 = Math.abs(mouse - cat2);
+  let pow = 'os gatos trombam e o rato foge';
   if (mCat1 < mCat2) {
     return 'cat1';
   }
   if (mCat1 > mCat2) {
-   return 'cat2';
- }
+    return 'cat2';
+  }
   return pow;
-}
+ }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz(array) {
-  let mensage = [];
-  let index;
-  for (index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      mensage.push('fizzbuzz');
-    } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-      mensage.push('fizz');
-    } else if (array[index] % 3 !== 0 && array[index] % 5 === 0) {
-      mensage.push('buzz');
-    } else {
-      mensage.push('bug!');
-    }
-  }
-  return mensage;
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
