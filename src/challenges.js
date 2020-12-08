@@ -143,14 +143,14 @@ function generatePhoneNumber(arrayPhoneNumber) {
   let lastPartOfNumber = '';
   let numberOfAppearances = 0;
 
-  for (index = 0; index < arrayPhoneNumber.length; index += 1) {
+  for (let index = 0; index < arrayPhoneNumber.length; index += 1) {
     if (arrayPhoneNumber[index] > 9 || arrayPhoneNumber[index] < 0) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  
-  for (index = 0; index < arrayPhoneNumber.length; index += 1) {
-    for (k = 0; k < arrayPhoneNumber.length; k += 1) {
+
+  for (let index = 0; index < arrayPhoneNumber.length; index += 1) {
+    for (let k = 0; k < arrayPhoneNumber.length; k += 1) {
       if (arrayPhoneNumber[index] === arrayPhoneNumber[k]) {
         numberOfAppearances += 1;
       }
@@ -174,8 +174,12 @@ function generatePhoneNumber(arrayPhoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineC - lineA) && lineC > Math.abs(lineB - lineA)) {
+      return true
+    }
+  } return false
 }
 
 // Desafio 13
