@@ -227,8 +227,30 @@ function generatePhoneNumber(arrayNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkLineLow(lineA, lineB, lineC) {
+  let result;
+
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) {
+    result = true;
+  }
+  return result;
+}
+
+function checkLinehigh(lineA, lineB, lineC) {
+  let result;
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+    result = true;
+  }
+  return result;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (checkLineLow(lineA, lineB, lineC)){
+    if(checkLinehigh(lineA, lineB, lineC)){
+      return true;
+    }
+  }
+  return false;
 }
 
 // Desafio 13
