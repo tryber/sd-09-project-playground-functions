@@ -15,10 +15,10 @@ function calcArea(base, height) {
 console.log(calcArea(10, 5))
 
 // Desafio 3
-function splitSentence(umaString) {
-  return umaString.split('')
-}
-console.log(splitSentence('Estou aprendendo a programar com a Trybe'))
+  function splitSentence(umaString) {
+    return umaString.split(" ")
+  }
+  console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
 
 // Desafio 4
 function concatName(umArray) {
@@ -69,11 +69,11 @@ function fizzBuzz(meuArray) {
     if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
           res.push('fizzBuzz')
     } else if (meuArray[i] % 3 === 0) {
-          res.push('buzz')
-    } else if (meuArray[i] % 5 === 0){
           res.push('fizz')
+    } else if (meuArray[i] % 5 === 0){
+          res.push('buzz')
     } else {
-      res.push('bug!')
+          res.push('bug!')
     }
   }
   return res
