@@ -86,7 +86,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzOrBuzz(number) {
-  let result;
+  let result = 'bug!';
   if (number % 3 === 0) {
     result = 'fizz';
   }
@@ -103,9 +103,6 @@ function fizzBuzz(numbersArray) {
   let fizzBuzzArray = [];
   for (let indexNumbers = 0; indexNumbers < numbersArray.length; indexNumbers += 1) {
     fizzBuzzArray[indexNumbers] = fizzOrBuzz(numbersArray[indexNumbers]);
-    if (fizzBuzzArray[indexNumbers] === undefined) {
-      fizzBuzzArray[indexNumbers] = 'bug!';
-    }
   }
   return (fizzBuzzArray);
 }
@@ -153,7 +150,7 @@ function techList(techNames, name) {
     for (let indexTechNames = 0; indexTechNames < techNames.length; indexTechNames += 1) {
       let techObject = {
         tech: techNames[indexTechNames],
-        name: name,
+        name,
       };
       techListArray.push(techObject);
     }
@@ -254,7 +251,7 @@ function hydrate(drinksString) {
     sum += parseInt(numbers[index], 10);
   }
   if (sum === 1) {
-    glasses = ' copo de água'
+    glasses = ' copo de água';
   }
   let glassesOfWater = sum.toString();
   glassesOfWater += glasses;
