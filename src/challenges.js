@@ -246,9 +246,10 @@ function checkLinehigh(lineA, lineB, lineC) {
       resultLineHigh = true;
     }
   }
+  return resultLineHigh;
 }
-return resultLineHigh;
-}
+
+
 
 function triangleCheck(lineA, lineB, lineC) {
   if (checkLineLow(lineA, lineB, lineC)) {
