@@ -79,8 +79,7 @@ function makeAnswer(fizz, buzz) {
     answer = 'buzz';
   } else {
     answer = 'bug!';
-  }
-  return answer;
+  } return answer;
 }
 function fizzBuzz(array) {
   let arrayAnswer = [];
@@ -91,14 +90,11 @@ function fizzBuzz(array) {
     arrayAnswer.push(makeAnswer(fizz, buzz));
   }
   return arrayAnswer;
-}
-// Desafio 9
+}// Desafio 9
 let arrayOfLetter = ['a', 'e', 'i', 'o', 'u'];
 let arrayOfNumber = ['1', '2', '3', '4', '5']
 function auxCode(code, array1, array2) {
-  let arrayLetters = code.split('');
-  let arrayCode = array1;
-  let arayToCode = array2;
+  let arrayLetters = code.split(''); let arrayCode = array1; let arayToCode = array2;
   for (let index = 0; index < arrayLetters.length; index += 1) {
     switch (arrayLetters[index]) {
       case arrayCode[0]: arrayLetters[index] = arayToCode[0];
@@ -114,15 +110,10 @@ function auxCode(code, array1, array2) {
       default:
         break;
     }
-  }
-  return arrayLetters.join('');
+  } return arrayLetters.join('');
 }
-function encode(code) {
-  return auxCode(code, arrayOfLetter, arrayOfNumber);
-}
-function decode(code) {
-  return auxCode(code, arrayOfNumber, arrayOfLetter)
-}
+function encode(code) {return auxCode(code, arrayOfLetter, arrayOfNumber);}
+function decode(code) {return auxCode(code, arrayOfNumber, arrayOfLetter)}
 // Desafio 10
 function techList(arrayTech, name) {
   if (arrayTech.length === 0) {
@@ -136,8 +127,7 @@ function techList(arrayTech, name) {
       name,
     }
     objtArray.push(objt);
-  }
-  return objtArray;
+  } return objtArray;
 }
 // Desafio 11
 function checkDuplicate(array, element) {
@@ -146,8 +136,7 @@ function checkDuplicate(array, element) {
     if (array[index] === element) {
       count += 1;
     }
-  }
-  return count;
+  } return count;
 }
 function isValid(array) {
   for (let index = 0; index < array.length; index += 1) {
@@ -157,8 +146,7 @@ function isValid(array) {
     if (array[index] > 9) {
       return false;
     }
-  }
-  return true;
+  } return true;
 }
 function isSafeToPass(array) {
   if (!isValid(array)) {
@@ -168,14 +156,12 @@ function isSafeToPass(array) {
     if (checkDuplicate(array, array[index]) > 2) {
       return 2;
     }
-  }
-  return 3;
+  } return 3;
 }
 function checkLength(array) {
   if (array.length > 11 || array.length < 11) {
     return 1;
-  }
-  return 'ok';
+  } return 'ok';
 }
 function generatePhoneNumber(arrayNumber) {
   if (checkLength(arrayNumber) === 1) {
@@ -186,8 +172,7 @@ function generatePhoneNumber(arrayNumber) {
   }
   if (isSafeToPass(arrayNumber) === 3) {
     return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
-  }
-  return 'Não rolou nada!';
+  } return 'Não rolou nada!';
 }
 // Desafio 12
 function checkLineLow(lineA, lineB, lineC) {
@@ -195,8 +180,7 @@ function checkLineLow(lineA, lineB, lineC) {
   let sum = [lineB + lineC, lineA + lineC, lineB + lineA];
   if (lineA < sum[0] && lineB < sum[1] && lineC < sum[2]) {
     resultLineLow = true;
-  }
-  return resultLineLow;
+  } return resultLineLow;
 }
 function checkLinehigh(lineA, lineB, lineC) {
   let resultLineHigh;
