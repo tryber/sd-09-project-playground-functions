@@ -19,7 +19,7 @@ function splitSentence(string) {
 function concatName(array) {
   let empty = [];
   firstLast = empty.concat(array[array.length - 1] + ', ' + array[0]);
-  return (firstLast);
+  return firstLast;
 }
 // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
@@ -72,9 +72,6 @@ function fizzBuzz(array) {
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
-
-}
-
 function decode(string2) {
   // seu código aqui
 }
