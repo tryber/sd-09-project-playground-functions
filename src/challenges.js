@@ -183,8 +183,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Este desafio só foi resolvido graças ao Ivan Ferrer, em (https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript) e ao blog Go Make Things (https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/)
+
+function hydrate(string) {
+  let numbersOfString = string.replace(/([^\d])+/gim, '');
+  let sumOfWaterCups = 0;
+  if (numbersOfString.length > 1) {
+    for (let index = 0; index < numbersOfString.length; index += 1) {
+      let stringToNumber = Number(numbersOfString[index])
+      sumOfWaterCups = sumOfWaterCups + stringToNumber
+    } return `${sumOfWaterCups} copos de água`
+  } return `${numbersOfString} copo de água`
 }
 
 
