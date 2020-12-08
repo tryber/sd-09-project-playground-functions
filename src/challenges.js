@@ -220,7 +220,7 @@ function hydrate() {
   let numberInString = string.match(/\d+/g); // criamos um array com os numeros capturados na string
   // percorre o array somando os numeros
   for (let index = 0; index < numberInString.length; index += 1){
-      sum += parseInt(numberInString[index]); // parseInt está transformando o numeros em tipo Number
+      sum += parseInt(numberInString[index], 10); // parseInt está transformando o numeros em tipo Number
   }
 
   if (sum == 1){
