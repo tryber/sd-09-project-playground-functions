@@ -42,7 +42,6 @@ function highestCount(arrayNumber) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
   let distanceCat2 = Math.abs(cat2 - mouse);
-
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } else if (distanceCat1 === distanceCat2) {
@@ -58,24 +57,20 @@ function checkFizzBuzz(fizz, buzz) {
   }
   return false;
 }
-
 function checkFizz(fizz) {
   if (fizz === 0) {
     return true;
   }
   return false;
 }
-
 function checkBuzz(buzz) {
   if (buzz === 0) {
     return true;
   }
   return false;
 }
-
 function makeAnswer(fizz, buzz) {
   let answer;
-
   if (checkFizzBuzz(fizz, buzz)) {
     answer = 'fizzBuzz';
   } else if (checkFizz(fizz)) {
@@ -87,10 +82,8 @@ function makeAnswer(fizz, buzz) {
   }
   return answer;
 }
-
 function fizzBuzz(array) {
   let arrayAnswer = [];
-
   for (let index = 0; index < array.length; index += 1) {
     let fizz = array[index] % 3;
     let buzz = array[index] % 5;
@@ -102,12 +95,10 @@ function fizzBuzz(array) {
 // Desafio 9
 let arrayOfLetter = ['a', 'e', 'i', 'o', 'u'];
 let arrayOfNumber = ['1', '2', '3', '4', '5']
-
 function auxCode(code, array1, array2) {
   let arrayLetters = code.split('');
   let arrayCode = array1;
   let arayToCode = array2;
-
   for (let index = 0; index < arrayLetters.length; index += 1) {
     switch (arrayLetters[index]) {
       case arrayCode[0]:
@@ -131,11 +122,9 @@ function auxCode(code, array1, array2) {
   }
   return arrayLetters.join('');
 }
-
 function encode(code) {
   return auxCode(code, arrayOfLetter, arrayOfNumber);
 }
-
 function decode(code) {
   return auxCode(code, arrayOfNumber, arrayOfLetter)
 }
@@ -146,7 +135,6 @@ function techList(arrayTech, name) {
   }
   let objtArray = [];
   let arrayTechSort = arrayTech.sort();
-
   for (let index = 0; index < arrayTechSort.length; index += 1) {
     let objt = {
       tech: arrayTechSort[index],
@@ -159,7 +147,6 @@ function techList(arrayTech, name) {
 // Desafio 11
 function checkDuplicate(array, element) {
   let count = 0;
-
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === element) {
       count += 1;
@@ -167,7 +154,6 @@ function checkDuplicate(array, element) {
   }
   return count;
 }
-
 function isValid(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0) {
@@ -179,7 +165,6 @@ function isValid(array) {
   }
   return true;
 }
-
 function isSafeToPass(array) {
   if (!isValid(array)) {
     return 2;
@@ -191,23 +176,19 @@ function isSafeToPass(array) {
   }
   return 3;
 }
-
 function checkLength(array) {
   if (array.length > 11 || array.length < 11) {
     return 1;
   }
   return 'ok';
 }
-
 function generatePhoneNumber(arrayNumber) {
   if (checkLength(arrayNumber) === 1) {
     return 'Array com tamanho incorreto.';
   }
-
   if (isSafeToPass(arrayNumber) === 2) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
   if (isSafeToPass(arrayNumber) === 3) {
     return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
   }
@@ -217,17 +198,14 @@ function generatePhoneNumber(arrayNumber) {
 function checkLineLow(lineA, lineB, lineC) {
   let resultLineLow;
   let sum = [lineB + lineC, lineA + lineC, lineB + lineA];
-
   if (lineA < sum[0] && lineB < sum[1] && lineC < sum[2]) {
     resultLineLow = true;
   }
   return resultLineLow;
 }
-
 function checkLinehigh(lineA, lineB, lineC) {
   let resultLineHigh;
   let subtraction = [Math.abs(lineB - lineC), Math.abs(lineA - lineC), Math.abs(lineB - lineA)];
-
   if (lineA > subtraction[0]) {
     if (lineB > subtraction[1] && lineC > subtraction[2]) {
       resultLineHigh = true;
@@ -235,7 +213,6 @@ function checkLinehigh(lineA, lineB, lineC) {
   }
   return resultLineHigh;
 }
-
 function triangleCheck(lineA, lineB, lineC) {
   if (checkLineLow(lineA, lineB, lineC)) {
     if (checkLinehigh(lineA, lineB, lineC)) {
@@ -251,7 +228,7 @@ function somador(string) {
   for (let i = 0; i < arrayString.length; i += 1) {
     switch (arrayString[i]) {
       case '1':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '2':
         sum += parseInt(arrayString[i], 10);
@@ -283,7 +260,6 @@ function somador(string) {
   }
   return (sum);
 }
-
 function hydrate(str) {
   let sum = somador(str);
   if (sum < 2) {
