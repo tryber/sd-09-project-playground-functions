@@ -99,17 +99,19 @@ function decode(paramer2) {
 
 // Desafio 10
 function techList(array, name) {
+  array.sort();
+  let newArray = []
   if (array.length != 0) {
-    for (let i = 0; i < 1; i++) {
-      array.push({
+    for (let i = 0; i < array.length; i++) {
+      let object = {
         tech: array[i],
-        name: name,
-      });
+        name: name
+      }
+      newArray.push(object)
     }
-  } else { array = 'Vazio'}
-  return array;
+  } else { newArray = 'Vazio'}
+  return newArray;
 }
-console.log(techList(["java", "react", "python", "nodejs"], "Felipe"));
 
 // Desafio 11
 function generatePhoneNumber() {
