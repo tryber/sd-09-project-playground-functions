@@ -54,7 +54,7 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distancia = '';
   let resultado = '';
-  
+
   if (cat1 < cat2) {
     resultado = cat1;
   }
@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     resultado = cat2;
   }
   else {
-    resultado = 'os gatos trombam e o rato foge'
+    resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
