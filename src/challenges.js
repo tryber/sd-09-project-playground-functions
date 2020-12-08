@@ -44,9 +44,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let result = '';
+  let result = 'os gatos trombam e o rato foge';
   let c1 = 0;
-  let c2 = 0
+  let c2 = 0;
   if (mouse > cat1) {
     c1 = mouse - cat1;
   } else {
@@ -61,8 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
     result = 'cat1';
   } else if (c2 < c1) {
     result = 'cat2';
-  } else {
-    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
@@ -85,16 +83,43 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let string = text;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let result = '';
+  for (let index = 0; index < string.length; index += 1) {
+      for (let count = 0; count < vowels.length; count += 1) {
+          let aux = count + 1;
+          if (string[index] === vowels[count]) {
+              result = string.replace(string[index], aux);
+              aux = 0;
+          }
+      }
+  }
+return result;
 }
+
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, name) {
+  let technologies = arrayTech;
+  let selectName = name;
+  let object = [];
+  if (technologies.length !== 0) {
+    technologies.sort();
+    for (let index = 0; index < technologies.length; index += 1) {
+      object.push({
+        tech: technologies[index],
+        name: selectName
+      })
+    }
+    return object;
+  } else {
+    return 'Vazio!';
+  }
 }
 
 // Desafio 11
