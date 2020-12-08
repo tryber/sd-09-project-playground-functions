@@ -150,14 +150,16 @@ function generatePhoneNumber(arrayPhoneNumber) {
   }
   
   for (index = 0; index < arrayPhoneNumber.length; index += 1) {
-    for (j = 0; j < arrayPhoneNumber.length; j += 1) {
-      if (arrayPhoneNumber[index] === arrayPhoneNumber[j]) {
+    for (k = 0; k < arrayPhoneNumber.length; k += 1) {
+      if (arrayPhoneNumber[index] === arrayPhoneNumber[k]) {
         numberOfAppearances += 1;
       }
     } if (numberOfAppearances >= 3) {
       return 'não é possível gerar um número de telefone com esses valores'
+    } else {
+      numberOfAppearances = 0;
     }
-  }
+  } 
 
   for (let index = 0; index <= 1; index += 1) {
     ddd += arrayPhoneNumber[index]
