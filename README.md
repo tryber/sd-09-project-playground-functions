@@ -223,7 +223,7 @@ Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], `
 
 - Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, `generatePhoneNumber` deverá retornar a string `"não é possível gerar um número de telefone com esses valores"`.
 
-**12 - Condição de existência de um triângulo**
+**12 - Condição de existência de um triângulo** :heavy_check_mark:
 -
 Um triângulo é composto de três linhas: `lineA`, `lineB` e `lineC`. Crie uma função chamada `triangleCheck` que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
 
@@ -237,7 +237,7 @@ Para tanto, tenha em mente algumas considerações:
 
 Exemplo: o retorno de `triangleCheck(10, 14, 8)` deverá ser `true`.
 
-**13 - Bem vindo ao Bar da Trybe!**
+**13 - Bem vindo ao Bar da Trybe!** :heavy_check_mark:
 -
 Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
 
