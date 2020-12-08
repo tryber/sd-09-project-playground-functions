@@ -157,7 +157,7 @@ function techList(desejos, name) {
   }
   for (let index = 0; index < desejos.length; index += 1) {
     novaArray.push({
-       tech:desejos[index],
+        tech: desejos[index],
       name,
     });
   } return novaArray;
