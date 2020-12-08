@@ -191,18 +191,7 @@ function generatePhoneNumber(array) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let isTriangle = false;
-  let absolutoBC = Math.abs(lineB - lineC);
-  let absolutoAC = Math.abs(lineA - lineC);
-  let absolutoAB = Math.abs(lineA - lineB);
-
-  if (
-    lineA > absolutoBC &&
-    lineA < lineB + lineC &&
-    lineB > absolutoAC &&
-    lineB < lineA + lineC &&
-    lineC > absolutoAB &&
-    lineC < lineA + lineC
-  ) {
+  if (lineA < lineB + lineC && lineC < lineA + lineB) {
     isTriangle = true;
   }
   return isTriangle;
