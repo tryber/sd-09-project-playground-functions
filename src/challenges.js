@@ -131,7 +131,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
         repetitionPhoneNumber = 0;
       }
     }
-    if (repetitionPhoneNumber >= 3 || errorNumber !== false) {
+    if (repetitionPhoneNumber >= 3 || errorNumber === true) {
       return 'não é possível gerar um número de telefone com esses valores'
     } else {
       let phoneNumber = '('+ arrayPhoneNumber[0] + '' + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + '' + arrayPhoneNumber[3] + '' + arrayPhoneNumber[4] + '' + arrayPhoneNumber[5] + '' + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + '' + arrayPhoneNumber[8] + '' + arrayPhoneNumber[9] + '' + arrayPhoneNumber[10];
@@ -139,7 +139,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
     }
   }
 }
-
+//console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC) && lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC) && lineC < (lineA + lineB) && lineC < Math.abs(lineA + lineB)) {
@@ -150,9 +150,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringDrinks) {
+  let glassOfWater = 0;
+  let copos = stringDrinks.match(/\d/g);
+  for (let index6 = 0; index6 < copos.length; index6 += 1) {
+    glassOfWater = glassOfWater + parseInt(copos[index6]);
+  }
+  if (glassOfWater === 1) {
+    return glassOfWater + " copo de água"
+  } else if (glassOfWater > 1) {
+    return glassOfWater + " copos de água"
+  }
 }
+console.log(hydrate("9 9 9  cachaças"));
 
 
 module.exports = {
