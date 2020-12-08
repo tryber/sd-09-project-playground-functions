@@ -195,88 +195,11 @@ function retornaBug(stringBug) {
 }
 
 // Desafio 9
-function encode(encodeString) {
+function encode() {
   // seu código aqui
-  let palavraInicial = encodeString;
-  let palavResult = '';
-  let newLetter = '';
-  let oldLetter = '';
-
-  const arrayString = encodeString.split('');
-
-  for (index = 0; index < arrayString.length; index += 1 ){
-
-    oldLetter = arrayString[index];
-
-    newLetter = convertLetter(oldLetter);
-    palavResult += newLetter
-  }
-  return palavResult
-}
-
-function convertLetter(oldLetter) {
-
-  switch (oldLetter){
-    case '1':
-      return 'a';
-      break;
-    case '2':
-      return 'e';
-      break;
-    case '3':
-      return 'i';
-      break;
-    case '4':
-      return 'o';
-      break;
-    case '5':
-      return 'u';
-      break;
-    default:
-      return oldLetter;
-  }
 }
 
 function decode(stringDecode) {
-  // seu código aqui
-  let palavraInicial = stringDecode;
-  let palavResult = '';
-  let newLetter = '';
-  let palavraDecode = '';
-
-  const objetoDecode = palavraInicial.split('');
-
-  for (index = 0; index < arrayString.length; index += 1 ){
-
-    palavraDecode = arrayString[index];
-
-    newLetter = passaString(palavraDecode);
-    palavResult += newLetter
-  }
-  return palavResult
-}
-
-function passaString(palavraDecode) {
-
-  switch (palavraDecode){
-    case 'a':
-      return '1';
-      break;
-    case 'e':
-      return '2';
-      break;
-    case 'i':
-      return '3';
-      break;
-    case 'o':
-      return '4';
-      break;
-    case 'u':
-      return '5';
-      break;
-    default:
-      return saidaDecode;
-  }
 }
 
 // Desafio 10
