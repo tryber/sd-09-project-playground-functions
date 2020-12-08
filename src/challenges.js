@@ -5,13 +5,11 @@ function compareTrue(bool1, bool2) {
   }
   return false;
 }
-// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-// console.log(calcArea(35, 58));
 
 // Desafio 3
 function splitSentence(phrase) {
@@ -27,7 +25,6 @@ function splitSentence(phrase) {
   }
   return wordArray;
 }
-// console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(names) {
@@ -35,13 +32,11 @@ function concatName(names) {
   let first = names.shift();
   return `${last}, ${first}`;
 }
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
-// console.log(footballPoints(5, 3));
 
 // Desafio 6 test
 function highestCount(numbers) {
@@ -57,7 +52,6 @@ function highestCount(numbers) {
   }
   return times;
 }
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -70,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat2';
 }
-// console.log(catAndMouse(8, 12, 4))
 
 // Desafio 8
 function fizzOrBuzz(num) {
@@ -83,14 +76,12 @@ function fizzOrBuzz(num) {
   }
   return 'bug!';
 }
-
 function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     numbers[index] = fizzOrBuzz(numbers[index]);
   }
   return numbers;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function changeLetter(letterKey, inText) {
@@ -115,7 +106,6 @@ function encode(text) {
   };
   return changeLetter(encodeKey, text);
 }
-// console.log(encode('hi there!'));
 function decode(codedText) {
   let decodeKey = {
     1: 'a',
@@ -126,11 +116,9 @@ function decode(codedText) {
   };
   return changeLetter(decodeKey, codedText);
 }
-// console.log(decode(encode('hi there!')));
 
 // Desafio 10
 function techList(technology, name) {
-  // seu código aqui
   technology.sort(); // ordena o array passado por parâmetro
   let arrayTech = [];
   if (technology.length > 0) {
@@ -143,7 +131,6 @@ function techList(technology, name) {
     return arrayTech;
   } return 'Vazio!';
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"] ,"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
