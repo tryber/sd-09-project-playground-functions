@@ -22,8 +22,7 @@ function splitSentence(sentence) {
 function concatName(namesArray) {
   let lastItem = namesArray.pop();
   let firstItem = namesArray[0];
-  return lastItem+ ", " +firstItem;
-}
+  return lastItem + firstItem
 // Desafio 5
 function footballPoints(wins, ties) {
   let total = (wins * 3) + ties;
@@ -57,20 +56,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(numberArray) {
-  let finalArray =[];
-  for (let cont = 0; cont<numberArray.length; cont +=1) {
-    if(numberArray[cont] %3 == 0) {
- let arrayManipulation =  finalArray.push('fizz');
-   } else if(numberArray[cont] % 5 == 0) {
-    let arrayManipulation =   finalArray.push('buzz');
-    } else if(numberArray[cont] %3 === 0 && numberArray[cont] % 5 === 0) {
-  let arrayManipulation = finalArray.push('fizzBuzz');
-    } else if(numberArray[cont] %3 !== 0 && numberArray[cont] % 5 !== 0) {
-  let arrayManipulation = finalArray.push('bug!');
+  let finalArray = [];
+  for (let cont = 0; cont<numberArray.length; cont += 1) {
+    if (numberArray[cont] %3 === 0) {
+    finalArray.push('fizz');
+    } else if (numberArray[cont] % 5 === 0) {
+    finalArray.push('buzz');
+    } else if (numberArray[cont] %3 === 0 && numberArray[cont] % 5 === 0) {
+    finalArray.push('fizzBuzz');
+    } else if (numberArray[cont] %3 !== 0 && numberArray[cont] % 5 !== 0) {
+    finalArray.push('bug!');
     }
     }
-    return finalArray
-    }
+  return finalArray
+}
 // Desafio 9
 function encode() {
   // seu código aqui
