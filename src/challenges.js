@@ -46,8 +46,8 @@ return contador
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2- mouse;
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
   
   if(distanceCat1 < distanceCat2){
     return 'cat1';
