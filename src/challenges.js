@@ -155,7 +155,7 @@ function generatePhoneNumber(number) {
     if (index === 2){
       result +=') '
     }
-    if (index === 6){
+    if (index === 7){
       result += '-'
     }
     result += number[index]
