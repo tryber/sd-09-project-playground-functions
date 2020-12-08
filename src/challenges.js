@@ -112,8 +112,8 @@ function auxCode(code, array1, array2) {
     }
   } return arrayLetters.join('');
 }
-function encode(code) {return auxCode(code, arrayOfLetter, arrayOfNumber);}
-function decode(code) {return auxCode(code, arrayOfNumber, arrayOfLetter)}
+function encode(code) { return auxCode(code, arrayOfLetter, arrayOfNumber); }
+function decode(code) { return auxCode(code, arrayOfNumber, arrayOfLetter); }
 // Desafio 10
 function techList(arrayTech, name) {
   if (arrayTech.length === 0) {
@@ -202,8 +202,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 // Desafio 13
 function somador(string) {
-  let arrayString = string.split('');
-  let sum = 0;
+  let arrayString = string.split(''); let sum = 0;
   for (let i = 0; i < arrayString.length; i += 1) {
     switch (arrayString[i]) {
       case '1': sum += parseInt(arrayString[i], 10);
@@ -224,12 +223,8 @@ function somador(string) {
         break;
       case '9': sum += parseInt(arrayString[i], 10);
         break;
-      default:
-        break;
-    }
-  }
-  return (sum);
-}
+      default: break;
+    } } return (sum); }
 function hydrate(str) {
   let sum = somador(str);
   if (sum < 2) {
