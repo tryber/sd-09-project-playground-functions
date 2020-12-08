@@ -18,7 +18,7 @@ console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(arrayString) {
-return `${ arrayString[arrayString.length - 1] }, ${ arrayString[0] }`;
+return ` ${arrayString[arrayString.length - 1]}, ${arrayString[0]} `;
 }
 console.log(concatName(['Valdeci', 'Lucas', 'Jean', 'Paolillo', 'Patricia']));
 
