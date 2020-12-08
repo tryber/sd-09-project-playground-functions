@@ -12,19 +12,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let arrayPalavras = [];
-  let palavra = '';
+function splitSentence(sentence) {
+  let wordsArray = [];
+  let word = '';
 
-  for (let index = 0; index <= frase.length; index += 1) {
-    if (frase[index] !== ' ' && index !== frase.length) {
-      palavra += frase[index];
+  for (let index = 0; index <= sentence.length; index += 1) {
+    if (sentence[index] !== ' ' && index !== sentence.length) {
+      word += sentence[index];
     } else {
-      arrayPalavras.push(palavra);
-      palavra = '';
+      wordsArray.push(word);
+      word = '';
     }
   }
-  return arrayPalavras;
+  return wordsArray;
 }
 
 // Desafio 4
