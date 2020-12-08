@@ -5,7 +5,7 @@ function compareTrue(x, y) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -17,13 +17,13 @@ function splitSentence(frase) {
 function concatName(array) {
   let primeiro = array.shift();
   let ultimo = array[array.length - 1]
-  array = ultimo + ', ' + primeiro;
+  array = `${ultimo}, ${primeiro}`;
   return array;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties
+  return (wins * 3) + ties
 }
 
 // Desafio 6
@@ -43,7 +43,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) return 'cat1';
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) return 'cat2';
-  else return 'os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(1, 0, 2))
 
@@ -95,11 +95,12 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList(arrayTec, name) {
+function techList(arrayTec,name) {
 
   if (arrayTec.length === 0) {
     return 'Vazio!';
   } 
+
   else {
     let arrayTecGrowing = arrayTec.sort();
     let objList = [];
@@ -107,17 +108,16 @@ function techList(arrayTec, name) {
     for (let i in arrayTecGrowing) {
       objList[i] = {
         tech: arrayTecGrowing[i],
-        name: name
-      }
+        name: name,
+      };
     }
     return objList;
   }
-};
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Felipe'));
+}
 
 // Desafio 11
 function generatePhoneNumber(arrayNumb) {
-  if (arrayNumb.length !== 11) return "Array com tamanho incorreto.";
+  if (arrayNumb.length !== 11) return 'Array com tamanho incorreto.';
 
   else {
     arrayNumb.splice(0, 0, '(');
@@ -137,7 +137,7 @@ function generatePhoneNumber(arrayNumb) {
     numArray = arrayNumb[index1];
     for (let index2 in arrayNumb) {
       if (numArray === arrayNumb[index2]) {
-        count++;
+        count += 1;
       }
     }
     if (count > numRepeat) {
@@ -153,17 +153,12 @@ function generatePhoneNumber(arrayNumb) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (
-    lineA < lineB + lineC &&
-    lineB < lineA + lineC &&
-    lineC < lineB + lineA &&
-    lineA > Math.abs(lineB - lineC) &&
-    lineB > Math.abs(lineC - lineA) &&
-    lineC > Math.abs(lineB - lineA)
-  ) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true
-  } else return false;
+  }
+  return false;
 }
+console.log(triangleCheck(10, 14, 38))
 
 // Desafio 13
 function hydrate(frase) {
@@ -172,11 +167,12 @@ function hydrate(frase) {
 
   let sum = 0;
   for (let i in arrayListaNum) {
-    sum = sum + Number(arrayListaNum[i]);
+    sum += + Number(arrayListaNum[i]);
   }
   if (sum === 1) {
     return `${sum} copo de água`;
-  } else return `${sum} copos de água`;
+  }
+  return `${sum} copos de água`;
 }
 
 
