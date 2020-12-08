@@ -18,8 +18,10 @@ console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  return arrayString[arrayString.length-1]+ ', ' + arrayString[0];
 }
+let arrayString = ['Valdeci','Lucas', 'jean','leonardo', 'Paolillo','Patricia'];
+console.log(concatName(arrayString));
 
 // Desafio 5
 function footballPoints() {
