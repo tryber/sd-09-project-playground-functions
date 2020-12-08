@@ -44,8 +44,8 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = 'os gatos trombam e o rato foge';
-  cat1 *= -(cat1 - mouse);
-  cat2 *= -(cat2 - mouse);
+  cat1 = Math.abs(cat1 - mouse);
+  cat2 = Math.abs(cat2 - mouse);
   if (cat1 < cat2) {
     result = 'cat1';
   }
@@ -113,7 +113,7 @@ function techList(techs, name) {
   }
   let info = [];
   techs.sort();
-  for (let i in techs) {
+  for (let i = 0; i < techs.length; i += 1) {
     let newInfo = { tech: techs[i], name };
     info.push(newInfo);
   }
