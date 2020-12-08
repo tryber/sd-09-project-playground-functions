@@ -83,11 +83,11 @@ function fizzBuzz(lista) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-let novaString = '';
-let phrase = 'hi there!';
-function encode(phrase) {
-  for (let index = 0; index < phrase.length; index += 1) {
-  let word = phrase[index];
+let frase = 'hi there!';
+function encode(frase) {
+  let novaString = '';
+  for (let index = 0; index < frase.length; index += 1) {
+  let word = frase[index];
     switch (word) {
     case 'a':
       novaString += '1';
@@ -107,9 +107,9 @@ function encode(phrase) {
     default:
       novaString += word;
     }
-  }console.log(novaString);
+  }return novaString;
 }
-encode(phrase);
+encode(frase);
 
 let outraString = 'h3 th2r2!';
 function decode(outraString) {
@@ -135,7 +135,7 @@ function decode(outraString) {
     default:
       novaString += word;
     }
-  }console.log(novaString);
+  }return novaString;
 }
 decode(outraString);
 
