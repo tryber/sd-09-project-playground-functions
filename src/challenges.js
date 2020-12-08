@@ -144,52 +144,68 @@ function techList(technologies, name1) {
   return resultsTechlist;
 }
 
-// Desafio 11
-function generatePhoneNumber(potentialNumbers) {
-  // seu código aqui
-  let answer;
 
+
+function checkingConditions(potentialNumbers) {
+
+  let answer1 = '';
   if (potentialNumbers.length !== 11) {
-    answer = "Array com tamanho incorreto.";
+    answer1 = 'Array com tamanho incorreto.';
+    return answer1;
   }
 
   for (let index = 0; index < potentialNumbers.length; index += 1) {
     if (potentialNumbers[index] < 0) {
-      answer = "não é possível gerar um número de telefone com esses valores";
+      answer1 = 'não é possível gerar um número de telefone com esses valores';
+      return answer1;
     }
     if (potentialNumbers[index] > 9) {
-      answer = "não é possível gerar um número de telefone com esses valores";
+      answer1 = 'não é possível gerar um número de telefone com esses valores';
+      return answer1;
     }
   }
 
   for (let index2 = 0; index2 < potentialNumbers.length; index2 += 1) {
     let count = 0;
-    for (let index3 = 0; index3 < potentialNumbers.length; index3++) {
+    for (let index3 = 0; index3 < potentialNumbers.length; index3 += 1) {
       if (potentialNumbers[index2] === potentialNumbers[index3]) {
         count += 1;
       }
       if (count >= 3) {
-        answer = "não é possível gerar um número de telefone com esses valores";
+        answer1 = 'não é possível gerar um número de telefone com esses valores';
+        return answer1;
       }
     }
   }
-  
-  let firstPart = '(' + potentialNumbers[0] + potentialNumbers[1] + ') ';
-
-  let secondPart = '';
-  for (let index3 = 2; index3 < 7; index3 += 1) {
-    secondPart = secondPart + potentialNumbers[index3];
-  }
-
-  let thirdPart = '';
-  for (let index4 = 7; index4 < potentialNumbers.length; index += 1) {
-    thirdPart = thirdPart + potentialNumbers[index4];
-  }
-  answer = firstPart + secondPart + '-' + thirdPart;
-
-  return answer;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+// Desafio 11
+function generatePhoneNumber(potentialNumbers) {
+  // seu código aqui
+
+  let answer1 = checkingConditions(potentialNumbers);
+
+  let finalAnswer;
+
+  if (answer1 === 'Array com tamanho incorreto.' || answer1 === 'não é possível gerar um número de telefone com esses valores') {
+    finalAnswer = answer1;
+  } else {
+    let firstPart = '(' + potentialNumbers[0] + potentialNumbers[1] + ') ';
+  
+    let secondPart = '';
+    for (let index3 = 2; index3 < 7; index3 += 1) {
+      secondPart = secondPart + potentialNumbers[index3];
+    }
+  
+    let thirdPart = '';
+    for (let index4 = 7; index4 < potentialNumbers.length; index4 += 1) {
+      thirdPart = thirdPart + potentialNumbers[index4];
+    }
+  
+    finalAnswer = firstPart + secondPart + '-' + thirdPart;
+  }
+  return finalAnswer;
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -212,7 +228,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (acount === 6) {
     triangleExists = true;
   }
-return triangleExists;
+  return triangleExists;
 }
 
 // Desafio 13
@@ -231,9 +247,8 @@ function hydrate(order) {
   } else {
     glassesOfWater = addingNumbers + ' copos de água';
   }
-return (glassesOfWater)
+  return (glassesOfWater)
 }
-// console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'));
 
 module.exports = {
   calcArea,
