@@ -3,9 +3,7 @@ function compareTrue(firstBoolean, secondBoolean) {
   if (firstBoolean && secondBoolean) {
     return true;
   }
-  {
     return false;
-  }
 }
 
 // Desafio 2
@@ -33,9 +31,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let max = 0; 
+  let max = 0;
   let contador = 0;
-  
   for (let index = 0; index < array.length; index += 1) {
     if(max < array[index]){
       max = array[index];
