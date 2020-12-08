@@ -1,19 +1,18 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-
 if (num1 && num2) {
     return true
-} 
+}
     return false
 }
-console.log(compareTrue(0 , 2))
+console.log(compareTrue(0, 2))
 
 // Desafio 2
 function calcArea(base, height) {
-    let area = (base*height)/2
-return area
+  let area = (base * height) / 2
+    return area
 }
-console.log(calcArea(10 , 5))
+console.log(calcArea(10, 5))
 
 // Desafio 3
 function splitSentence(umaString) {
@@ -23,7 +22,7 @@ console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
 
 // Desafio 4
 function concatName(umArray) {
-  return umArray[umArray.length -1] + ", " + umArray[0]
+  return umArray[umArray.length -1] + umArray[0]
 }
 console.log(concatName(["a","b", "c", "d"]))
 
@@ -31,22 +30,22 @@ console.log(concatName(["a","b", "c", "d"]))
 function footballPoints(wins, ties) {
   return wins * 3  + ties
 }
-console.log(footballPoints(3,2))
+console.log(footballPoints(3, 2))
 
 // Desafio 6
 function highestCount(numeros) {
   let numMaximo = numeros.reduce(function(a,b){ //reduce vai comparar o item um com o dois, ficar com o maior e comparar com o seguinte, e assim até terminar o array. Também funciona como a soma de Gauss. Fonte : https://developer.mozilla.org/
-   return Math.max(a, b);
+    return Math.max(a, b);
   })
   let contagemFinal = 0
   for (i = 0 ; i < numeros.length ; i++) {
-    if (numeros[i] === numMaximo) { 
+    if (numeros[i] === numMaximo) {
     contagemFinal += 1
     }
   }
   return contagemFinal
   }
-  console.log(highestCount([1 , 2 , 4 , 2 , 4]))
+  console.log(highestCount([1, 2, 4, 2, 4]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -67,11 +66,11 @@ console.log(catAndMouse(-2,10,3))
 function fizzBuzz(meuArray) {
   let res = []
   for (i = 0 ; i < meuArray.length; i++) {
-    if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
+    if (meuArray[i] % 3 === 0 && meuArray[i] % 5 === 0) {
           res.push("fizzBuzz")
-    } else if (meuArray[i] % 5 === 0) {
+    } else if (meuArray[i] % 3 === 0) {
           res.push("buzz")
-    } else if (meuArray[i] % 3 === 0){
+    } else if (meuArray[i] % 5 === 0){
           res.push("fizz")
     } else {
       res.push("bug!")
@@ -86,7 +85,7 @@ console.log(fizzBuzz([5,3,4,30]))
 // Desafio 9
 function encode() {
 }
-console.log(encode("Hi there!"))
+
 function decode() {
   // seu código aqui
 }
