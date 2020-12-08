@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 function concatName(arrayName) {
   let lastName = arrayName.pop();
   let firstName = arrayName[0];
-  let spaceGambiarra = ', ' ;
+  let spaceGambiarra = ',' ;
   let stringNames = lastName + spaceGambiarra + firstName
   return stringNames
 }
