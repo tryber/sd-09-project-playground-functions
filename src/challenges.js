@@ -109,8 +109,8 @@ function fizzBuzz(array) {
   return arrayAnswer;
 }
 // Desafio 9
-let arrayLetter = ['a', 'e', 'i', 'o', 'u'];
-let arrayNumber = ['1', '2', '3', '4', '5']
+let arrayOfLetter = ['a', 'e', 'i', 'o', 'u'];
+let arrayOfNumber = ['1', '2', '3', '4', '5']
 
 function auxCode(code, array1, array2) {
   let arrayLetters = code.split('');
@@ -142,11 +142,11 @@ function auxCode(code, array1, array2) {
 }
 
 function encode(code) {
-  return auxCode(code, arrayLetter, arrayNumber);
+  return auxCode(code, arrayOfLetter, arrayOfNumber);
 }
 
 function decode(code) {
-  return auxCode(code, arrayNumber, arrayLetter)
+  return auxCode(code, arrayOfNumber, arrayOfLetter)
 }
 
 // Desafio 10
