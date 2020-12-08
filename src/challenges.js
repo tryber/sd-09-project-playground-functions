@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2; 
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -62,13 +62,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNum) {
   let arrayNum2 = [];
   for (let index2 = 0; index2 < arrayNum.length; index2 += 1) {
-    if (arrayNum [index2] % 3 === 0 && arrayNum[index2] % 5 === 0) {
-      arrayNum2 [index2] = 'fizzBuzz';
-    }
-    else if (arrayNum[index2] % 3 === 0) {
-      arrayNum2 [index2] = 'fizz';
+    if (arrayNum[index2] % 3 === 0 && arrayNum[index2] % 5 === 0) {
+      arrayNum2[index2] = 'fizzBuzz';
+    } else if (arrayNum[index2] % 3 === 0) {
+      arrayNum2[index2] = 'fizz';
     } else if (arrayNum[index2] % 5 === 0) {
-      arrayNum2 [index2] = 'buzz';
+      arrayNum2[index2] = 'buzz';
     } else {
       arrayNum2[index2] = 'bug!';
     }
@@ -96,27 +95,49 @@ function decode(stringToDecode) {
 }
 
 // Desafio 10
-let arrayTechs = [];
 function techList(arrayTechs, name) {
-  if (arrayTechs.length===0){
+  if (arrayTechs.length === 0) {
     return 'Vazio!'
-  }
-  else {
-    arrayTechs = arrayTechs.sort();
-    for (let index3 = 0; index3 < arrayTechs.length; index3 += 1){
-      object = {
-        tech: arrayTechs[index3],
-        name: name
+  }  else {
+      arrayTechs = arrayTechs.sort();
+      for (let index3 = 0; index3 < arrayTechs.length; index3 += 1) {
+        object = {
+          tech: arrayTechs[index3],
+          name: name
+        }
+        arrayTechs [index3] = object;
       }
-      arrayTechs [index3] = object;
-    }
-    return arrayTechs;
+      return arrayTechs;
   }
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+let repetitionPhoneNumber = 0;
+let errorNumber = false;
+function generatePhoneNumber(arrayPhoneNumber) {
+  if (arrayPhoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  } else {
+    for (let index4 = 0; index4 < arrayPhoneNumber.length; index4 += 1) {
+      if (arrayPhoneNumber[index4] < 0 || arrayPhoneNumber[index4] > 9) {
+        errorNumber = true;
+      }
+      for (let index5 = 0; index5 < arrayPhoneNumber.length; index5 +=1) {
+        if (arrayPhoneNumber[index4] === arrayPhoneNumber[index5]) {
+          repetitionPhoneNumber += 1;
+        }
+      }
+      if (repetitionPhoneNumber < 3) {
+        repetitionPhoneNumber = 0;
+      }
+    }
+    if (repetitionPhoneNumber >= 3 || errorNumber !== false) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    } else {
+      let phoneNumber = '('+ arrayPhoneNumber[0] + '' + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + '' + arrayPhoneNumber[3] + '' + arrayPhoneNumber[4] + '' + arrayPhoneNumber[5] + '' + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + '' + arrayPhoneNumber[8] + '' + arrayPhoneNumber[9] + '' + arrayPhoneNumber[10];
+      return phoneNumber
+    }
+  }
 }
 
 // Desafio 12
