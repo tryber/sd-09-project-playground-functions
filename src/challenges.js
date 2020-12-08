@@ -21,7 +21,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = (wins * 3) + ties;
+  let pointsForWin = 3;
+  let result = (wins * pointsForWin) + ties;
   return result;
 }
 
@@ -33,8 +34,6 @@ function highestCount(numbers) {
     if (greaterNumber < numbers[i]) {
       greaterNumber = numbers[i];
     }
-  }
-  for (let i in numbers) {
     if (greaterNumber === numbers[i]) {
       counter += 1;
     }
@@ -45,8 +44,8 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result = 'os gatos trombam e o rato foge';
-  cat1 = Math.abs(cat1 - mouse);
-  cat2 = Math.abs(cat2 - mouse);
+  cat1 *= -(cat1 - mouse);
+  cat2 *= -(cat2 - mouse);
   if (cat1 < cat2) {
     result = 'cat1';
   }
@@ -74,7 +73,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(string) {
-  for (let i = 0; i < string.length; i += 1) {
+  for (let i in string) {
     if (string[i] === 'a') {
       string = string.replace(/a/g, '1');
     } else if (string[i] === 'e') {
@@ -91,7 +90,7 @@ function encode(string) {
 }
 
 function decode(numbers) {
-  for (let j = 0; j < numbers.length; j += 1) {
+  for (let j in numbers) {
     if (numbers[j] === '1') {
       numbers = numbers.replace(/1/g, 'a');
     } else if (numbers[j] === '2') {
@@ -114,7 +113,7 @@ function techList(techs, name) {
   }
   let info = [];
   techs.sort();
-  for (let i = 0; i < techs.length; i += 1) {
+  for (let i in techs) {
     let newInfo = { tech: techs[i], name };
     info.push(newInfo);
   }
