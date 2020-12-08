@@ -181,9 +181,9 @@ function generatePhoneNumber(array) {
     count = 0;
 
     phoneNumber += array[indice];
-    if (phoneNumber[indice] === phoneNumber[1]) {
+    if (indice === 1) {
       phoneNumber += ') ';
-    } else if (phoneNumber[indice] === phoneNumber[6]) {
+    } else if (indice === 6) {
       phoneNumber += '-';
     }
   }
