@@ -18,7 +18,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(vD3) {
-  return vD3.split('');
+  return vD3.split(' ');
 }
 
 // Desafio 4
