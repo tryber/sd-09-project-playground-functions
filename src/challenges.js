@@ -138,11 +138,12 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === '') {
       objectList.push('Vazio');
-    }
+    } else {
     objectList.push({
       tech: array[index],
       name: name,
     });
+    }
   }
   return objectList;
 }
