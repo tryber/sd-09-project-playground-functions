@@ -213,7 +213,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
   // let regex = ;  // retorna os numeros encontrados na string
   let sum = 0; // a gente vai utilizar pra somar os numeros
