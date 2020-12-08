@@ -34,16 +34,16 @@ console.log(footballPoints(3, 2))
 
 // Desafio 6
 function highestCount(numeros) {
-  let numMaximo = numeros.reduce(function(a, b){ //reduce vai comparar o item um com o dois, ficar com o maior e comparar com o seguinte, e assim até terminar o array. Também funciona como a soma de Gauss. Fonte : https://developer.mozilla.org/  
+  let numMaximo = numeros.reduce(function(a, b) { //reduce vai comparar o item um com o dois, ficar com o maior e comparar com o seguinte, e assim até terminar o array. Também funciona como a soma de Gauss. Fonte : https://developer.mozilla.org/  
     return Math.max(a, b);
   })
   let contagemFinal = 0
-  for (i = 0 ; i < numeros.length ; i+= 1){
+  for (i = 0; i < numeros.length ; i+= 1) {
     if (numeros[i] === numMaximo) {
     contagemFinal += 1
     }
   }
-  return contagemFinal
+    return contagemFinal
 }
 console.log(highestCount([1, 2, 4, 2, 4]))
 
@@ -52,28 +52,28 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(mouse - cat1)
   let dist2 = Math.abs(mouse - cat2)
 
-  if (dist1 > dist2){
-return 'cat2'
+  if  (dist1 > dist2){
+  return 'cat2'
 } else if (dist1 < dist2) {
-return 'cat1'
-} else {
-return 'os gatos trombam e o rato foge'
+  return 'cat1'
+} 
+  return 'os gatos trombam e o rato foge'
 }
-}
-console.log(catAndMouse(-2,10,3))
+
+console.log(catAndMouse(-2, 10, 3))
 
 // Desafio 8
 function fizzBuzz(meuArray) {
   let res = []
-  for (i = 0 ; i < meuArray.length; i++) {
+  for (i = 0; i < meuArray.length; i+=1) {
     if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
-          res.push('fizzBuzz')
+      res.push('fizzBuzz')
     } else if (meuArray[i] % 3 === 0) {
-          res.push('fizz')
-    } else if (meuArray[i] % 5 === 0){
-          res.push('buzz')
+      res.push('fizz')
+    } else if (meuArray[i] % 5 === 0) {
+      res.push('buzz')
     } else {
-          res.push('bug!')
+      res.push('bug!')
     }
   }
   return res
