@@ -173,20 +173,21 @@ function techList(array, name) {
 }
 
 // Desafio 11
+// Referencia da funcao slice():
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 function repita(arrayRepitaNumero) {
-  let repitaNumero = 0;
   let repitaMaior = 0;
 
-  for (let contador1 = 0; contador1 < arrayRepitaNumero.length; contador1 += 1) {
-    for (let contador2 of arrayRepitaNumero) {
-      if (arrayRepitaNumero[contador1] === contador2) {
+  for (let contador1 of arrayRepitaNumero) {
+    let repitaNumero = 0;
+    for (let contador2 = 0; contador2 <arrayRepitaNumero.length; contador2 += 1) {
+      if (contador1 === arrayRepitaNumero[contador2]) {
         repitaNumero += 1;
       }
     }
     if (repitaNumero > repitaMaior) {
       repitaMaior = repitaNumero;
     }
-    repitaNumero = 0;
   }
   return repitaMaior;
 }
@@ -209,12 +210,9 @@ function arrayString(string) {
   }
   return telefone;
 }
-// Referencia da funcao slice():
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
 function generatePhoneNumber(array) {
   // seu código aqui
-  
-
   let telefoneString = arrayString(array);
   let ddd = telefoneString.slice(0, 2);
   let primeiroNumero = telefoneString.slice(2, 7);
