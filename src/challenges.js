@@ -87,7 +87,7 @@ function fizzBuzz(numeros) {
       result.push('fizz');
     }
     else {
-      result.push('bug');
+      result.push('bug!');
     }
   }
   return result;
