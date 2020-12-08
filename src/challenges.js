@@ -133,7 +133,15 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
+  let objectList = [];
+  for (let index = 0; index < array.length; index += 1) {
+    objectList.push({
+      tech: array[index],
+      name: name,
+    });
+  }
+  return objectList;
 }
 
 // Desafio 11
