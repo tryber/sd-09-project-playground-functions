@@ -104,10 +104,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (cat1Dist === cat2Dist) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
+
 
 // console.log(catAndMouse(1, -4, -9));
 // --------------------------------------------------------------------
@@ -240,7 +240,7 @@ function techList(techNameArray, name) {
   for (let index = 0; index < techNameArray.length; index += 1) {
     techObjList.push({
       tech: techNameArray[index],
-      name: name,
+      name,
     })
   }
   return techObjList;
