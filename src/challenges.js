@@ -32,9 +32,9 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-    arraySorted = array.sort();
-    arrayReverse = arraySorted.reverse();
-    maior = arrayReverse[0];
+    let arraySorted = array.sort();
+    let arrayReverse = arraySorted.reverse();
+    let maior = arrayReverse[0];
     let qtidade = 1;
   for (let i = 1; i < array.length; i += 1) {
     if (arrayReverse[i] > maior) {
@@ -42,8 +42,8 @@ function highestCount(array) {
     } else if (arrayReverse[i] < maior) {
         maior = maior;
     } else {
-     qtidade += 1;
-   }
+      qtidade += 1;
+    }
   } return qtidade;
 }
 // Desafio 7
@@ -64,13 +64,13 @@ function fizzBuzz(arrayNumbers) {
   for (let key in arrayNumbers) {
     if (arrayNumbers[key] % 3 === 0 && arrayNumbers[key] % 5 === 0) {
       arrayResp[key] = 'fizzBuzz';
-   } else if (arrayNumbers[key] % 3 === 0) {
-       arrayResp[key] ='fizz';
+    } else if (arrayNumbers[key] % 3 === 0) {
+        arrayResp[key] ='fizz';
     } else if (arrayNumbers[key] % 5 === 0) {
         arrayResp[key]= 'buzz';
-     } else {
-         arrayResp[key] = 'bug!';
-       }
+      } else {
+          arrayResp[key] = 'bug!';
+        }
   }
 return arrayResp;
 }
@@ -79,55 +79,53 @@ return arrayResp;
 function encode(param) {
   let newString = [];
   let stringNew = 0;
-    
   for (let key of param) {
     switch (key){
         case 'a':
            newString.push('1');
-        break;
+         break;
         case 'e':
            newString.push('2');
-        break;
+         break;
         case 'i':
            newString.push('3');
-        break;
+         break;
         case 'o':
            newString.push('4');
-        break;
+         break;
         case 'u':
            newString.push('5');
-        break;
+         break;
         default:
             newString.push(key);
    }
-  }return newString.join('').toString();
- }
+   }return newString.join('').toString();
+  }
 
 function decode(param) {
  let newString = [];
-   
- for (let key of param) {
-   switch (key){
+  for (let key of param) {
+    switch (key){
        case '1':
-          newString.push('a');
-       break;
+           newString.push('a');
+        break;
        case '2':
-          newString.push('e');
-       break;
+           newString.push('e');
+        break;
        case '3':
-          newString.push('i');
-       break;
+           newString.push('i');
+        break;
        case '4':
-          newString.push('o');
-       break;
+           newString.push('o');
+        break;
        case '5':
-          newString.push('u');
-       break;
+           newString.push('u');
+        break;
        default:
-           newString.push(key);       
-   }
- }return newString.join('').toString();  
-}
+            newString.push(key);       
+    }
+  } return newString.join('').toString();
+ }
 
 // Desafio 10
 function techList(param,nome) {
@@ -149,8 +147,6 @@ function techList(param,nome) {
 
 // Desafio 11
 function generatePhoneNumber() {
- 
-
 }
 
 // Desafio 12
