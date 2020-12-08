@@ -196,13 +196,42 @@ function generatePhoneNumber(arrayNums) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck (lineA, lineB, lineC) {
+  let lineAB = Math.abs(lineA) + Math.abs(lineB);
+  let lineBC = Math.abs(lineB) + Math.abs(lineC);
+  let lineAC = Math.abs(lineA) + Math.abs(lineC);
+  let message = true;
+  if (Math.abs(lineA) > lineBC) {
+    message = false;
+  }
+  if (Math.abs(lineB) > lineAC) {
+    message = false;
+  }
+  if (Math.abs(lineC) > lineAB) {
+    message = false;
+  }
+  return message;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrateVerifier(arrayDrink) {
+  let sumNumbers = 0;
+  for (index = 0; index < arrayDrink.length; index += 1) {
+    if (Number(arrayDrink[index])) {
+      sumNumbers += Number(arrayDrink[index]);
+    }
+  }
+  return sumNumbers;
+}
+
+function hydrate (stringDrinks) {
+  let arrayString = stringDrinks.split(" ");
+  let glassOfWater = hydrateVerifier (arrayString);
+  let drinkWater = `${glassOfWater}` + ' copos de água';
+  if (glassOfWater === 1) {
+    drinkWater = `${glassOfWater}` + ' copo de água';
+  }
+  return drinkWater;
 }
 
 
