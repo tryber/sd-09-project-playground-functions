@@ -155,8 +155,9 @@ function techList(baseArray, name) {
 function invalidNunmber(value) {
   let flagInvalid = false;
   for (let index = 0; index < value.length; index += 1){
-    if (parseInt(value[index], 10) < 0 || parseInt(value[index], 10) > 9) {
+    if (parseInt(value[index], 10) < 0 || parseInt(value[index], 10) > 9 || value[0] === 0) {
       flagInvalid = true;
+      break;
     }
   }
   return flagInvalid;
@@ -170,7 +171,7 @@ function formatPhone(value) {
         returnValue += '(' + value[index];
         break;
       case 1:
-        returnValue += value[index] + ')';
+        returnValue += value[index] + ') ';
         break;
       case 7:
         returnValue += '-' + value[index];
