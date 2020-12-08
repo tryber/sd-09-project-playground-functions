@@ -166,31 +166,19 @@ function decode(encodeNumbers) {
 // Desafio 10
 function techList(nameList, name) {
   // seu código aqui
-
   if(nameList.length > 0) {
     let listObject = [];
-
-    listObject.sort();
-
+    nameList.sort();
     for (index = 0; index < nameList.length; index += 1) {
-
-      listObject[index] = {
-      tech: nameList[index],
-      name: name
+      listObject.push({
+        tech: nameList[index],
+        name
+        })   
     }
-
-    return listObject
-  
-  }
-    return 'Vazio'
-  }
-  
-  
-  /*let list = nameList;
-  list.push(name)
- 
-  return list*/
-
+    return listObject   
+  } else {
+    return 'Vazio!'
+  }  
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas"))
