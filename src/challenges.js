@@ -52,7 +52,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
     return 'os gatos trombam e o rato fogem';
   }
-}
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz(array) {
