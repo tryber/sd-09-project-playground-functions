@@ -22,7 +22,7 @@ console.log(calcArea(10, 5))
 
 // Desafio 4
 function concatName(umArray) {
-  return umArray[umArray.length - 1] + ' ' + umArray[0]
+  return umArray[umArray.length - 1] + ', ' + umArray[0]
 }
 console.log(concatName(['a', 'b', 'c', 'd']))
 
