@@ -205,25 +205,19 @@ function somador(string) {
   let arrayString = string.split(''); let sum = 0;
   for (let i = 0; i < arrayString.length; i += 1) {
     switch (arrayString[i]) {
-      case '1': sum += parseInt(arrayString[i], 10);
-        break;
-      case '2': sum += parseInt(arrayString[i], 10);
-        break;
-      case '3': sum += parseInt(arrayString[i], 10);
-        break;
-      case '4': sum += parseInt(arrayString[i], 10);
-        break;
-      case '5': sum += parseInt(arrayString[i], 10);
-        break;
-      case '6': sum += parseInt(arrayString[i], 10);
-        break;
-      case '7': sum += parseInt(arrayString[i], 10);
-        break;
+      case '1': sum += parseInt(arrayString[i], 10); break;
+      case '2': sum += parseInt(arrayString[i], 10); break;
+      case '3': sum += parseInt(arrayString[i], 10); break;
+      case '4': sum += parseInt(arrayString[i], 10); break;
+      case '5': sum += parseInt(arrayString[i], 10); break;
+      case '6': sum += parseInt(arrayString[i], 10); break;
+      case '7': sum += parseInt(arrayString[i], 10); break;
       case '8': sum += parseInt(arrayString[i], 10); break;
       case '9': sum += parseInt(arrayString[i], 10); break;
       default: break;
     }
-  } return (sum); 
+  } 
+  return (sum); 
 }
 function hydrate(str) {
   let sum = somador(str);
