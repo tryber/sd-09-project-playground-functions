@@ -1,7 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  let compare = value1 && value2;
-  return compare;
+  return value1 && value2; 
 }
 
 // Desafio 2
@@ -63,16 +62,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNum) {
   let arrayNum2 = [];
   for (let index2 = 0; index2 < arrayNum.length; index2 += 1) {
-    if (arrayNum[index2] % 3 === 0 && arrayNum[index2] % 5 === 0) {
-      arrayNum2[index2] = 'fizzBuzz'; 
+    if (arrayNum [index2] % 3 === 0 && arrayNum[index2] % 5 === 0) {
+      arrayNum2 [index2] = 'fizzBuzz';
     }
     else if (arrayNum[index2] % 3 === 0) {
-      arrayNum2[index2] = 'fizz';
-    }
-    else if (arrayNum[index2] % 5 === 0) {
-      arrayNum2[index2] = 'buzz';
-    }
-    else {
+      arrayNum2 [index2] = 'fizz';
+    } else if (arrayNum[index2] % 5 === 0) {
+      arrayNum2 [index2] = 'buzz';
+    } else {
       arrayNum2[index2] = 'bug!';
     }
   }
@@ -81,26 +78,35 @@ function fizzBuzz(arrayNum) {
 
 // Desafio 9
 function encode(stringToEncode) {
-  stringToEncode =  stringToEncode.replace(/a/g, 1);
-  stringToEncode =  stringToEncode.replace(/e/g, 2);
-  stringToEncode =  stringToEncode.replace(/i/g, 3);
-  stringToEncode =  stringToEncode.replace(/o/g, 4);
-  stringToEncode =  stringToEncode.replace(/u/g, 5);
+  stringToEncode = stringToEncode.replace(/a/g, 1);
+  stringToEncode = stringToEncode.replace(/e/g, 2);
+  stringToEncode = stringToEncode.replace(/i/g, 3);
+  stringToEncode = stringToEncode.replace(/o/g, 4);
+  stringToEncode = stringToEncode.replace(/u/g, 5);
   return stringToEncode;
 }
 
 function decode(stringToDecode) {
-  stringToDecode =  stringToDecode.replace(/1/g, 'a');
-  stringToDecode =  stringToDecode.replace(/2/g, 'e');
-  stringToDecode =  stringToDecode.replace(/3/g, 'i');
-  stringToDecode =  stringToDecode.replace(/4/g, 'o');
-  stringToDecode =  stringToDecode.replace(/5/g, 'u');
+  stringToDecode = stringToDecode.replace(/1/g, 'a');
+  stringToDecode = stringToDecode.replace(/2/g, 'e');
+  stringToDecode = stringToDecode.replace(/3/g, 'i');
+  stringToDecode = stringToDecode.replace(/4/g, 'o');
+  stringToDecode = stringToDecode.replace(/5/g, 'u');
   return stringToDecode;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+let arrayTechs = [];
+function techList(arrayTechs, name) {
+arrayTechs = arrayTechs.sort();
+for (let index3 = 0; index3 < arrayTechs.length; index3 += 1){
+  object = {
+    tech: arrayTechs[index3],
+    name: name
+  }
+  arrayTechs [index3] = object;
+}
+return arrayTechs;
 }
 
 // Desafio 11
