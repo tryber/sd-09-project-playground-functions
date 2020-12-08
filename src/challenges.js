@@ -18,7 +18,7 @@ console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(arrayString) {
-return ` ${arrayString[arrayString.length - 1]}, ${arrayString[0]} `;
+  return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
 console.log(concatName(['Valdeci', 'Lucas', 'Jean', 'Paolillo', 'Patricia']));
 
@@ -37,7 +37,7 @@ let arrayNumbers = [9, 1, 2, 9, 9, 5, 7];
 let maior = 0;
 let count = 0;
 
-function highestCount(arrayNumbers) {
+function highestCount(param1) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > maior) {
       maior = arrayNumbers[index];
