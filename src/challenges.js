@@ -34,32 +34,25 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numberArray) {
   let bigBoy = Math.max(...numberArray);
-
+  let counter = 0;
   for (let index = 0; index <= numberArray.length; index = index + 1) {
     if (numberArray[index] == bigBoy){
-      let counter = numberArray.pop(numberArray[index]);
+       counter = counter + 1
     }
   }
-  return counter.length
+  return counter
 }
 
 // Desafio 7javascriptjavascriptjavascript
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = [abscissePointMouse, orderedPointMouse];
-  cat1 = [abscissePointCat1, orderedPointCat1];
-  cat2 = [abscissePointCat2, orderedPointCat2];
-  let deltaAbscisse1 = [abscissePointMouse, abscissePointCat1];
-  let deltaOrdenated1 = [orderedPointMouse, orderedPointCat1];
-  let deltaAbscisse2 = [abscissePointMouse, abscissePointCat2];
-  let deltaOrdenated2 = [orderedPointMouse, orderedPointCat2];
-  let distanceCat1 = Math.sqrt(Math.pow(deltaAbscisse1, 2) + Math.pow(deltaOrdenated1, 2));
-  let distanceCat2 = Math.sqrt(Math.pow(deltaAbscisse2, 2) + Math.pow(deltaOrdenated2, 2));
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
 
   if(distanceCat1 < distanceCat2) {
-    return "Cat1";
+    return "cat1";
   }
   else if (distanceCat2 < distanceCat1) {
-    return "Cat2";
+    return "cat2";
   }
   else {
     return "os gatos trombam e o rato foge"
