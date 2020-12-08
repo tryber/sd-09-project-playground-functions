@@ -135,21 +135,19 @@ function decode(stringWithNumbers) {
 function techList(arrayTechnology, name) {
   let finalList = [];
   let newOrderedList = arrayTechnology.sort();
-  
+
   if (arrayTechnology.length === 0) {
     finalList = 'Vazio!';
   }
-  
-  for (let index = 0; index < newOrderedList.length; index += 1){
+
+  for (let index = 0; index < newOrderedList.length; index += 1) {
     finalList.push({
       tech: arrayTechnology[index],
-      name: name,
-    })
+      name: name, })
   }
-  
+
   return finalList;
 }
-console.log(techList([], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
