@@ -1,10 +1,14 @@
 // #VQV - LRLODI
 // Desafio 1
+
+// true + true = true;
+// true + false = false;
+// false + false = false;
+// Então podemos simplificar a função simplesmente pedindo para retornar os dois valores linkados com
+// um operador lógico, no caso o &&. Caso ambos valores sejam verdadeiros ele retorna true, ou então 
+// retorna false.
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  }
-  return false;
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -28,7 +32,8 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints;
-  totalPoints = (wins * 3) + (ties);
+  let winnerPoints = wins * 3;
+  totalPoints = winnerPoints + ties; //criada a variável winnerPoints por boa prática.
   return totalPoints;
 }
 
