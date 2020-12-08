@@ -83,9 +83,8 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-  let string = 'Boa tarde, iluminados!'
   let stringAux = ''
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
@@ -152,32 +151,31 @@ function techList(techArray, name) {
   if (rawArray.length === 0) {
     return 'Vazio!'
   }
-  return sortList(rawArray)  
+  return sortList(rawArray)
 }
-
 
 let position = 0
 let response = ''
+let lastNumber = ''
 
 function positionAndLastNumber(thisNumber) {
   if (position === 0) {
-    response += '(' + thisNumber
+    response += `(${thisNumber}`
   } else if (position === 2) {
-    response += ') ' + thisNumber
+    response += `) ${thisNumber}`
   } else if (position === 7) {
-    response += '-' + thisNumber
+    response += `-${thisNumber}`
   } else {
     response += thisNumber
   }
+  lastNumber = thisNumber
   position += 1
 }
-
 
 // Desafio 11
 function generatePhoneNumber(inputArray) {
   // seu código aqui
   let controlRepeat = 0
-  let lastNumber = ''
   if (inputArray.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
@@ -189,10 +187,8 @@ function generatePhoneNumber(inputArray) {
     }
     if (inputArray[index] < 0 || inputArray[index] > 9 || controlRepeat > 1) {
       return 'não é possível gerar um número de telefone com esses valores'
-    } else {
-      lastNumber = inputArray[index]
-      positionAndLastNumber(inputArray[index])
     }
+    positionAndLastNumber(inputArray[index])    
   }
   return response
 }
