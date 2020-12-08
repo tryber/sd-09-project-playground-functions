@@ -202,7 +202,7 @@ function hydrate(waterBottle) {
   if (soma === 1) {
     return `${soma} copo de água`;
   }
-  return `${soma} copos de água`;  
+  return `${soma} copos de água`;
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
