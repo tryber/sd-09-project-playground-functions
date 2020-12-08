@@ -24,8 +24,7 @@ console.log(splitSentence('go Trybe'));
 function concatName(arraySTR) {
   let firstName = arraySTR[0];
   let lastName = arraySTR[arraySTR.length - 1];
-  let stringNames = lastName + ', ' + firstName;
-  return stringNames;
+  return `${lastName}, ${firstName}`;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
