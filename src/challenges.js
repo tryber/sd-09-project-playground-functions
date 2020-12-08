@@ -108,7 +108,7 @@ function encode(arrayEncode) {
     o: 4,
     u: 5,
   }
-  arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding) {
+  arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function (encoding) {
     return encodeVocals[encoding];
   })
   return arrayEncode;
@@ -123,10 +123,10 @@ function decode(arrayDecode) {
     4: 'o',
     5: 'u',
   }
-  arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function(decoding) {
+  arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function (decoding) {
     return decodeVocals[decoding];
   })
-return arrayDecode;
+  return arrayDecode;
 }
 console.log(decode('h3 th2r2!'));
 
