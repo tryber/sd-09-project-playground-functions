@@ -95,60 +95,60 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode() {
-  function encode(param1) {
-    let letters = param1.split('');
-    let results = '';
-    for (let index = 0; index < letters.length; index += 1) {
-      switch (letters[index]) {
+  function encode(word) {
+    let character = word.split('');
+    let result = '';
+    for (let counter = 0; counter < character.length; counter += 1) {
+      switch (character[counter]) {
         case 'a':
-          results += '1';
+          result += '1';
           break;
         case 'e':
-          results += '2';
+          result += '2';
           break;
         case 'i':
-          results += '3';
+          result += '3';
           break;
         case 'o':
-          results += '4';
+          result += '4';
           break;
         case 'u':
-          results += '5';
+          result += '5';
           break;
         default:
-          results += letters[index];
+          result += character[counter];
           break;
       }
     }
-    return results;
+    return result;
 }
 function decode() {
-  function decode(param2) {
-    let letters2 = param2.split('');
-    let results2 = '';
-    for (let index = 0; index < letters2.length; index += 1) {
-      switch (letters2[index]) {
+  function decode(wor) {
+    let char = wor.split('');
+    let res = '';
+    for (let index = 0; index < char.length; index += 1) {
+      switch (char[index]) {
         case '1':
-          results2 += 'a';
+          res += 'a';
           break;
         case '2':
-          results2 += 'e';
+          res += 'e';
           break;
         case '3':
-          results2 += 'i';
+          res += 'i';
           break;
         case '4':
-          results2 += 'o';
+          res += 'o';
           break;
         case '5':
-          results2 += 'u';
+          res += 'u';
           break;
         default:
-          results2 += letters2[index];
+          res += char[index];
           break;
       }
     }
-    return results2;
+    return res;}
 
 // Desafio 10
 function techList() {
