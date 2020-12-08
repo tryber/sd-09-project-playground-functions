@@ -145,12 +145,11 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     finalArray.push({
       tech: sortArray[index],
-      name: name,
+      name,
     });
   }
   return finalArray;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Pamela'))
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
