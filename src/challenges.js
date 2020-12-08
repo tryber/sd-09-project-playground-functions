@@ -15,7 +15,8 @@ function splitSentence(string) {
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ', ' + array[0];
+  let space=' ';
+  return array[array.length - 1] + space + array[0];
 }
 // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
