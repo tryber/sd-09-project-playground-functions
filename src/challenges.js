@@ -195,44 +195,152 @@ function retornaBug(stringBug) {
 }
 
 // Desafio 9
-function encode() {
+function encode(encodeString) {
   // seu código aqui
+  let palavraInicial = encodeString;
+  let palavResult = '';
+  let newLetter = '';
+  let oldLetter = '';
 
+  const arrayString = encodeString.split('');
+
+  for (index = 0; index < arrayString.length; index += 1 ){
+
+    oldLetter = arrayString[index];
+
+    newLetter = convertLetter(oldLetter);
+    palavResult += newLetter
+  }
+  return palavResult
 }
 
-function decode() {
+function decode(decodeString) {
+  let palavraInicial = encodeString;
+  let palavResult = '';
+  let newLetter = '';
+  let oldLetter = '';
 
+  const arrayString = encodeString.split('');
+
+  for (index = 0; index < arrayString.length; index += 1 ){
+
+    oldLetter = arrayString[index];
+
+    newLetter = convertLetter(oldLetter);
+    palavResult += newLetter
+  }
+  return palavResult
+}
+
+function convertLetter(oldLetter) {
+
+  switch (oldLetter){
+    case '1':
+      return 'a';
+      break;
+    case '2':
+      return 'e';
+      break;
+    case '3':
+      return 'i';
+      break;
+    case '4':
+      return 'o';
+      break;
+    case '5':
+      return 'u';
+      break;
+    case 'a':
+      return '1';
+      break;
+    case 'e':
+      return '2';
+      break;
+    case 'i':
+      return '3';
+      break;
+    case 'o':
+      return '4';
+      break;
+    case 'u':
+      return '5';
+      break;
+    default:
+      return oldLetter;
+  }
 }
 
 // Desafio 10
 function techList(arrayTech) {
   // seu código aqui
-  const arrayTechSort = arrayTech.sort();
+  const arrayTechSort = arrayTecno.sort();
   let tamanhoTechSort = arrayTechSort.length;
-  let objetoResultado = {};
+  let objetoResultado = [];
   let obj;
 
   for (let index = 0; index < tamanhoTechSort; index += 1) {
-    obj = '{tech: ' + arrayTechSort[index]
-    obj = criaObj("HTML", nameTech);
+
+    obj = criaObj(arrayTechSort[index], nameInterested);
     objetoResultado.push(obj);
   }
   return objetoResultado;
 }
 
 function criaObj(tecnologia, pessoa) {
-  let objeto = `{tech: ${tecnologia}, name: ${pessoa}`
+  let objeto = `{tech: ${tecnologia}, name: ${pessoa}}`
   return objeto;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
+  let lengthArrayPhone = arrayNumberPhone.length;
+  let numberArray = 0;
+  let numberString = ''
+  let numberPhoneGenerate = '';
+  if (lengthArrayPhone !== 11){
+    return 'Array com tamanho incorreto.';
+  }
+
+  for (let index = 0; index < lengthArrayPhone; index += 1) {
+    numberArray = arrayNumberPhone[index];
+
+    if (numberArray < 0 || numberArray > 9){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
+    numberString += numberArray.toString();
+  }
+  numberPhoneGenerate = phoneNumber(numberString);
+
+  return numberPhoneGenerate;
+}
+
+function phoneNumber(numberString) {
+  let ddd = numberString.substr(0,2);
+  let primeiraParte = numberString.substr(2,5);
+  let segundaParte = numberString.substr(7,4);
+  let numeroFormatado = `(${ddd}) ${primeiraParte}-${segundaParte}`
+
+  return numeroFormatado;  
 }
 
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
+  let somaLados = (lineB + lineC);
+  let subsLados = (lineB - lineC);
+  let absoluto = Math.abs(subsLados);
+
+  if (lineA >= somaLados){
+    return false;
+  }
+
+  if (lineA > absoluto){
+    return true;
+  }
+
+  return false;
 }
 
 // Desafio 13
