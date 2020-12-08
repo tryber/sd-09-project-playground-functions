@@ -137,14 +137,13 @@ function techList(array, name) {
   let objectList = [];
   let sortArray = array.sort();
   if (sortArray === '') {
-    objectList = 'Vazio!';
-  } else {
+    return 'Vazio!';
+  }
   for (let index = 0; index < sortArray.length; index += 1) {
       objectList.push({
         tech: sortArray[index],
         name: name,
       });
-  }
   }
   return objectList;
 }
