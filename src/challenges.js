@@ -19,15 +19,18 @@ function splitSentence(string) {
   stringArray[wordSeparator] = '';
 
   for (let i = 0; i < string.length; i += 1) {
-    stringArray[wordSeparator] += string[i];
     if (string[i] === ' ') {
       wordSeparator += 1;
       stringArray[wordSeparator] = '';
+    } else {
+      stringArray[wordSeparator] += string[i];
     }
   }
 
   return stringArray;
 }
+
+console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
 function concatName(arrayString) {
@@ -86,61 +89,19 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(str) {
-  for (let i in str) {
-    switch (str[i]) {
-      case 'a':
-        str[i] = '1';
-        break;
-      case '2':
-        str[i] = 'e';
-        break;
-      case '3':
-        str[i] = 'i';
-        break;
-      case '4':
-        str[i] = 'o';
-        break;
-      case '5':
-        str[i] = 'u';
-        break;
-    }
-  }
-
-  return str;
 }
 function decode(str) {
-  for (let i = 0; i < str.length; i += 1) {
-    switch (str[i]) {
-      case '1':
-        str[i] = "a";
-        break;
-      case '2':
-        str[i] = 'e';
-        break;
-      case '3':
-        str[i] = 'i';
-        break;
-      case '4':
-        str[i] = 'o';
-        break;
-      case '5':
-        str[i] = 'u';
-        break;
-    }
-  }
-
-  return str;
 }
 
-let str = 'meu nome é gabriel galdino';
-console.log("Codificação:");
-console.log(encode(str));
-console.log("Decodificação:");
-console.log(decode(str));
+// let str = 'meu nome é gabriel galdino';
+// console.log("Codificação:");
+// console.log(encode(str));
+// console.log("Decodificação:");
+// console.log(decode(str));
 
 // Desafio 10
-function techList(techArray, nome) {
-  let objList = []
+function techList(techArray, name) {
+  let objList = [];
   techArray = techArray.sort();
 
   if (techArray.length === 0) {
@@ -148,16 +109,54 @@ function techList(techArray, nome) {
   }
 
   for (let i = 0; i < techArray.length; i += 1) {
-    objList.push({ tech: techArray[i], name: nome });
+    objList.push({ tech: techArray[i], name: name });
   }
 
   return objList;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  let phoneNumber = [];
+  phoneNumber.push('(');
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] < 0 || array[i] > 9 || checkPhoneNumberRepeat(array)) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
+    return phoneNumber;
+  }
 }
+
+function checkPhoneNumberRepeat(array) {
+  let number = 0;
+  let count = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    number = array[i];
+    count = 1;
+
+    for (let j = i+1; j < array.length; j += 1) {
+      if (number === array[j]) {
+        count += 1;
+      }
+    }
+
+    if (count >= 3) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+let array = [1, 2, 3, 3, 5, 6, 4, 3, 9, 0, 1];
+console.log(checkPhoneNumberRepeat(array));
 
 // Desafio 12
 function triangleCheck() {
