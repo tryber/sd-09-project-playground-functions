@@ -157,7 +157,7 @@ function techList(desejos, name) {
   }
   for (let index = 0; index < desejos.length; index += 1) {
     novaArray.push({
-      tech:desejos[index] ,
+      tech :desejos[index],
       name,
     });
   } return novaArray;
@@ -167,7 +167,7 @@ console.log(techList([], 'Lucas'));
 
 // Desafio 11
 // _______________________________________________________________
-function generatePhoneNumber(){
+function generatePhoneNumber() {
   // seu código aqui
 }
 
