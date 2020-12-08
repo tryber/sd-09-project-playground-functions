@@ -184,26 +184,15 @@ techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Matheus');
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // seu código aqui
-  
-  for (let contador in arrayNumber) {
-    if (arrayNumber[contador] < 0 || arrayNumber[contador] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }
-
-    let contador2 = 0;
-    for (let contador3 in arrayNumber) {
-      if (arrayNumber[contador] === arr[contador3]) {
-        contador2++;
-        if (contador2 > 2) {
-          return "não é possível gerar um número de telefone com esses valores";
-        }
-   
-    
-    if (arrayNumber.length !== 11) {
+  if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else {
     let telefone = '(';
     for (let contador = 0; contador < 11; contador += 1) {
+      for (let indice = 0; indice < 11; indice += 1) {
+        if (arrayNumber[indice] === arrayNumber[contador]) {
+          repetido += 1;
+        }
       }
       if (contador === 2) {
         telefone = telefone + ')' + ' ' + arrayNumber[contador];
@@ -214,6 +203,7 @@ function generatePhoneNumber(arrayNumber) {
       }
     }
     console.log(telefone);
+    console.log(repetido);
   }
 }
 generatePhoneNumber([1, 2, 3, 2, 5, 6, 7, 8, 9, 0, 1]);
