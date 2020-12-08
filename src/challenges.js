@@ -235,15 +235,14 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-    if (lineA < lineB + lineC && lineA > Math.abs(lineB) - Math.abs(lineC)) {
-      return true;
-    } else if (lineB < lineA + lineC && lineB > Math.abs(lineA) - Math.abs(lineC)) {
-      return true;
-    } else if (lineC < lineA + lineB && lineC > Math.abs(lineA) - Math.abs(lineB)) {
-      return true;
-    } else {
-      return false;
-    }
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB) - Math.abs(lineC)) {
+    return true;
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
