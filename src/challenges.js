@@ -67,6 +67,7 @@ function fizzBuzz(array) {
     } else {
         mensage.push('bug!');
   }
+  }
   return mensage;
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
@@ -114,5 +115,4 @@ module.exports = {
   highestCount,
   hydrate,
   splitSentence,
-  triangleCheck,
-}
+  triangleCheck,}
