@@ -62,22 +62,24 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numArray) {
   let fbArray = [];
-  for (let indexFiBu = 0; indexFiBu <= numArray.length; indexFiBu = indexFiBu + 1) {
-    if (numArray[indexFiBu] % 3 == 0) {
-      fbArray.push("fizz"); 
+  for (let indexFiBu = 0; indexFiBu < numArray.length; indexFiBu = indexFiBu + 1) {
+    if (numArray[indexFiBu] % 3 == 0 && numArray[indexFiBu] % 5 == 0) {
+      fbArray.push("fizzBuzz");
+     
     }
     else if (numArray[indexFiBu] % 5 == 0) {
       fbArray.push("buzz");
     }
-    else if (numArray[indexFiBu] % 3 == 0 && numArray[indexFiBu] % 5 == 0) {
-      fbArray.push("fizzBuzz");
+    else if (numArray[indexFiBu] % 3 == 0) {
+      fbArray.push("fizz");
     }
     else {
       fbArray.push("bug");
     }
   } 
   return fbArray 
-}
+} 
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(encodedVocals) {
