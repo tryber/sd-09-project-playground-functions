@@ -242,13 +242,12 @@ function checkLinehigh(lineA, lineB, lineC) {
   let subtraction = [Math.abs(lineB - lineC), Math.abs(lineA - lineC), Math.abs(lineB - lineA)];
 
   if (lineA > subtraction[0]) {
-    if (lineB > subtraction[1]) {
-      if (lineC > subtraction[2]) {
-        resultLineHigh = true;
-      }
+    if (lineB > subtraction[1] && lineC > subtraction[2]) {
+      resultLineHigh = true;
     }
   }
-  return resultLineHigh;
+}
+return resultLineHigh;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
