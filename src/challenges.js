@@ -227,9 +227,27 @@ function generatePhoneNumber(numbers) {
   return phoneNumber;
 }
 // console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+
+function checkTriangleSide(side1, side2, side3) {
+  let absoluteValue = Math.abs(side2 - side3);
+  let sumOfSides = side2 + side3;
+  if (absoluteValue < side1 && side1 < sumOfSides) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let sideA = checkTriangleSide(lineA, lineB, lineC);
+  let sideB = checkTriangleSide(lineB, lineC, lineA);
+  let sideC = checkTriangleSide(lineC, lineA, lineB);
+
+  if (sideA === true && sideB === true && sideC === true) {
+    return true;
+  }
+  return false;
 }
 
 function getNumber(character) {
@@ -265,7 +283,7 @@ function hydrate(amountOfDrink) {
   }
   return glasseOfWater + " copos de água";
 }
-console.log(hydrate('1 cachaça'));
+// console.log(hydrate('1 cachaça'));
 
 module.exports = {
   calcArea,
