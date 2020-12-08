@@ -5,19 +5,18 @@ function compareTrue(bol, bole) {
 // exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  return area;
+  return (base * height) / 2;
 }
 // exemplo de chamada da função: calcArea(10, 4);
 // Desafio 3
 function splitSentence(string) {
-  let palavras = string.split(" ");
-  return palavras;
+  return string.split(' ');
 }
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
   let empty = [];
+  let firstLast = [];
   firstLast = empty.concat(array[array.length - 1] + ', ' + array[0]);
   return firstLast;
 }
@@ -31,12 +30,12 @@ function footballPoints(wins, ties) {
 // exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
 function highestCount(array) {
-  let array=[];
   let maxNumber = Math.max(...array);
   let repeatCounter = 0;
+  let index;
   for (index = 0; index < array.length; index += 1) {
-      if (maxNumber === array[index]) {
-          repeatCounter = repeatCounter + 1;
+    if (maxNumber === array[index]) {
+        repeatCounter = repeatCounter +=1;
       }
   }
   return repeatCounter;
@@ -47,32 +46,37 @@ function catAndMouse(mouse, cat1, cat2) {
   let mCat1 = mouse - cat1;
   let mCat2 = mouse - cat2;
   if (mCat1 < mCat2) {
-      return "cat1";
+    return 'cat1';
   } else if (mCat1 > mCat2) {
-      return "cat2";
-  } else {
-      return "os gatos trombam e o rato foge"
+    return 'cat2';
+  }
+    return 'os gatos trombam e o rato fogem';
   }
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz(array) {
   let mensage = [];
+  let index;
   for (index = 0; index < array.length; index += 1) {
-      if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-          mensage.push("fizzbuzz");
-      } else if (array[index] % 3 === 0 && array[index] % 5 != 0) {
-          mensage.push("fizz");
-      } else if (array[index] % 3 != 0 && array[index] % 5 === 0) {
-          mensage.push("buzz");
-      } else
-          mensage.push("bug!");
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+        mensage.push('fizzbuzz');
+    } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+        mensage.push('fizz');
+    } else if (array[index] % 3 !== 0 && array[index] % 5 === 0) {
+        mensage.push('buzz');
+    } else {
+        mensage.push('bug!');
   }
   return mensage;
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
-function decode(string2) {
+function encode() {
+  // seu código aqui
+}
+
+function decode() {
   // seu código aqui
 }
 
