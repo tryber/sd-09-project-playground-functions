@@ -211,13 +211,13 @@ function hydrate(stringDrink) {
   let numberInString = stringDrink.match(/\d+/g);
 
   for (let index = 0; index < numberInString.length; index += 1) {
-    sum += parseInt(numberInString[index]);
+    sum += parseInt(numberInString[index], 10);
   }
 
   if (sum === 1) {
     return `${sum} copo de água`;
   }
-    return `${sum} copos de água`;
+  return `${sum} copos de água`;
 }
 // console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
