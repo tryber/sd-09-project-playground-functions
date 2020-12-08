@@ -11,7 +11,6 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(10, 10));
 
 // Desafio 3
 function splitSentence(string) {
@@ -32,15 +31,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  function ordenaNum(a, b) {
-    return a - b;
+  let highesNumber = array[0];
+  let repetNumber = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > highesNumber) {
+      highesNumber = array[index];
+    } 
+    for (index = 0; index < array.length; index += 1) {
+      if (highesNumber === array[index]) {
+        repetNumber += 1;
+      }
+    }
+  }
+return repetNumber;
 }
-  array.sort(ordenaNum);
-  return array
-
-
-}
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
