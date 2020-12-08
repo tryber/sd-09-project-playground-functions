@@ -259,15 +259,45 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(string) {
-  // Regex e Loop retirados de https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
-  let regex = /\d/g;
+function somador(string) {
+  let arrayString = string.split('');
   let sum = 0;
-  let match;
-
-  while (match = regex.exec(string)) {
-    sum += parseInt(match[0], 10);
+  for (let i = 0; i < arrayString.length; i += 1) {
+    switch (arrayString[i]) {
+      case '1':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '2':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '3':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '4':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '5':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '6':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '7':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '8':
+        sum += parseInt(arrayString[i]);
+        break;
+      case '9':
+        sum += parseInt(arrayString[i]);
+        break;
+    }
   }
+  return (sum);
+}
+
+function hydrate(str) {
+  let sum = somador(str);
   if (sum < 2) {
     return `${sum} copo de água`;
   }
