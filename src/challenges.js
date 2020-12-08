@@ -72,16 +72,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function fizzBuzz(arrayFizz) {
-  // seu código aqui
-  /*if (arrayFizz % 3 === 0) {
-    return 'fizz'
-  } else if (arrayFizz % 5 === 0) {
-    return 'buzz'
-  } else if (arrayFizz % 3 === 0 && arrayFizz % 5 === 0) {
-    return 'fizzBuzz'
-  } else if (arrayFizz % 3 !== 0 && arrayFizz % 5 !== 0) {
-    return 'bug!'
-  }*/
   let buzzArray = [];
   for (let index of arrayFizz) {
     if (index % 3 !== 0 && index % 5 !== 0) {
@@ -100,87 +90,21 @@ function fizzBuzz(arrayFizz) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(stri) {
+function encode() {
   // seu código aqui
-  let voltaStr = '';
-  let str = stri;
-  for (let index = 0; index < str.length; index += 1) {
-    switch (str[index]) {
-      case 'a':
-
-        function decode(stri) {
-          // seu código aqui
-          let voltaStr = '';
-          let str = stri;
-          for (let index = 0; index < str.length; index += 1) {
-            switch (str[index]) {
-              case '1':
-            }
-          }
-        }
-    }
-  }
+}
+function decode() {
+  // seu código aqui
 }
 
 // Desafio 10
-function techList(array, name) {
+function techList() {
   // seu código aqui
-  let arrayTechObjects = [];
-  if (array.length !== 0) {
-    for (let tec of array.sort()) {
-      let techObject = {
-        tech: undefined,
-        name
-      };
-      techObject.tech = tec;
-      arrayTechObjects.push(techObject);
-    }
-    return arrayTechObjects;
-  }
-  return 'Vazio!';
 }
-
-
-
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  // seu código aqui	  let numero = '(';
-  if (checkNumbers(array)) {
-    if (array.length === 11) {
-      for (let number in array) {
-        if (number === '1') {
-          numero += array[number] + ') ';
-        } else if (number === '6') {
-          numero += array[number] + '-';
-        } else {
-          numero += array[number];
-        }
-      }
-      return numero;
-    }
-    return 'Array com tamanho incorreto.';
-  }
-  return 'não é possível gerar um número de telefone com esses valores';
-}
-
-function checkNumbers(array) {
-  let validate = true;
-  for (let number in array) {
-    let count = 0;
-    for (let num in array) {
-      if (array[num] === array[number]) {
-        count += 1;
-      }
-    }
-    if (count >= 3) {
-      validate = false;
-    }
-    if (array[number] < 0 || array[number] > 9) {
-      validate = false
-    }
-  }
-  return validate;
+function generatePhoneNumber() {
+  // seu código aqui
 }
 
 // Desafio 12
