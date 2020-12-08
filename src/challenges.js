@@ -16,9 +16,8 @@ function calcArea(base, height) {
 console.log(calcArea(10, 5));
 
 // Desafio 3
-function splitSentence(split) {
-  let string = split;
-  return string.split(' ');
+function splitSentence(sentence) {  
+  return sentence.split(' ');
 }
 console.log(splitSentence('go Trybe'));
 
@@ -33,31 +32,30 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + ties;
-  return totalPoints;
+  return (wins * 3) + ties;
 }
 console.log(footballPoints(10, 5));
 
 // Desafio 6
-function greatestValue(arrayNumbers) {
-  let greatest = 0;
+function highterValue(arrayNumbers) {
+  let highter = 0;
   for (let element of arrayNumbers) {
-    if (element > greatest) {
-      greatest = element;
+    if (element > highter) {
+      highter = element;
     }
   }
-  return greatest;
+  return highter;
 }
 
 function highestCount(arrayNumbers) {
-  let greatestNumber = greatestValue(arrayNumbers);
-  let greatestCounter = 0;
+  let highterNumber = highterValue(arrayNumbers);
+  let highterCounter = 0;
   for (let element of arrayNumbers) {
-    if (element === greatestNumber) {
-      greatestCounter += 1;
+    if (element === highterNumber) {
+      highterCounter += 1;
     }
   }
-  return greatestCounter;
+  return highterCounter;
 }
 
 console.log(highestCount([9, 1, 2, 3, 5, 5, 7]));
