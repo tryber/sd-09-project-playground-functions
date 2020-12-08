@@ -112,9 +112,10 @@ function techList(arrayTechs, name) {
 }
 
 // Desafio 11
-let repetitionPhoneNumber = 0;
-let errorNumber = false;
+
 function generatePhoneNumber(arrayPhoneNumber) {
+  let repetitionPhoneNumber = 0;
+  let errorNumber = false;
   if (arrayPhoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.'
   } else {
@@ -162,8 +163,6 @@ function hydrate(stringDrinks) {
     return glassOfWater + " copos de água"
   }
 }
-console.log(hydrate("9 9 9  cachaças"));
-
 
 module.exports = {
   calcArea,
