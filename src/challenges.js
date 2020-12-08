@@ -89,11 +89,57 @@ function fizzBuzz(arrayFizz) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  // seu código aqui	  
+  let encodedString = '';
+  for (let letter of string) {
+    switch (letter) {
+      case 'a':
+        encodedString += '1';
+        break;
+      case 'e':
+        encodedString += '2';
+        break;
+      case 'i':
+        encodedString += '3';
+        break;
+      case 'o':
+        encodedString += '4';
+        break;
+      case 'u':
+        encodedString += '5';
+        break;
+      default:
+        encodedString += letter;
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  // seu código aqui	  
+  let decodedString = "";
+  for (let letter of string) {
+    switch (letter) {
+      case "1":
+        decodedString += "a";
+        break;
+      case "2":
+        decodedString += "e";
+        break;
+      case "3":
+        decodedString += "i";
+        break;
+      case "4":
+        decodedString += "o";
+        break;
+      case "5":
+        decodedString += "u";
+        break;
+      default:
+        decodedString += letter;
+    }
+  }
+  return decodedString;
 }
 
 // Desafio 10
@@ -101,13 +147,13 @@ function techList(array, name) {
   // seu código aqui	 
   let arrayTechObjects = [];
   if (array.length !== 0) {
-  for (let tec of array.sort()) {
-     let techObject = {tech: undefined,name: name,};
-    techObject.tech = tec;
-    arrayTechObjects.push(techObject);
+    for (let tec of array.sort()) {
+      let techObject = { tech: undefined, name: name, };
+      techObject.tech = tec;
+      arrayTechObjects.push(techObject);
+    }
+    return arrayTechObjects;
   }
-  return arrayTechObjects;
-} 
   return 'Vazio!'
 }
 
