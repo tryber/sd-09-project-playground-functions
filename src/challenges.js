@@ -47,7 +47,7 @@ function highestCount(array) {
       maior = array[index];
       qtdVezes = 0;
     }
-    if (array[index] == maior) {
+    if (array[index] === maior) {
       qtdVezes += 1;
     }
   }
@@ -72,12 +72,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (distanciaMouseGato1 > distanciaMouseGato2) {
-    return "cat2";
+    return 'cat2';
   } else if (distanciaMouseGato1 < distanciaMouseGato2) {
-    return "cat1";
-  } else {
-    return "os gatos trombam e o rato foge";
+    return 'cat1';
   }
+
+  return 'os gatos trombam e o rato foge';  
 }
 
 // Desafio 8
