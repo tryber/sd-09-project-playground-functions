@@ -188,6 +188,7 @@ function generatePhoneNumber(arrayNumber) {
     return 'Array com tamanho incorreto.';
   } else {
     let telefone = '(';
+    let repetido = 0;
     for (let contador = 0; contador < 11; contador += 1) {
       for (let indice = 0; indice < 11; indice += 1) {
         if (arrayNumber[indice] === arrayNumber[contador]) {
