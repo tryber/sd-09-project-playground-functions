@@ -93,55 +93,39 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function encodeDecode(string, code) {
+    let newString = "";
+    for (let letter of string) {
+      if (letter in code) {
+        newString += code[letter];
+      } else {
+        newString += letter;
+      }
+    }
+    return newString;
+}
 
 function encode(string) {
-  let encodedString = '';
-  for (let letter of string) {
-    switch (letter) {
-      case 'a':
-        encodedString += '1';
-        break;
-      case 'e':
-        encodedString += '2';
-        break;
-      case 'i':
-        encodedString += '3';
-        break;
-      case 'o':
-        encodedString += '4';
-        break;
-      case 'u':
-        encodedString += '5';
-        break;
-      default:
-        encodedString += letter;
-    }
-  }
-  return encodedString;
+  const code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  encodedString = encodeDecode(string, code);
+  return encodedString;  
 }
+
 function decode(string) {
-  let decodedString = '';
-  for (let character of string) {
-    switch (character) {
-      case '1':
-        decodedString += 'a';
-        break;
-      case '2':
-        decodedString += 'e';
-        break;
-      case '3':
-        decodedString += 'i';
-        break;
-      case '4':
-        decodedString += 'o';
-        break;
-      case '5':
-        decodedString += 'u';
-        break;
-      default:
-        decodedString += letter;
-    }
-  }
+  const code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let decodedString = encodeDecode(string, code);
   return decodedString;
 }
 
