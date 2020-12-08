@@ -152,17 +152,17 @@ function techList(baseArray, name) {
 }
 
 // Desafio 11
-function invalidNunmber(value){
+function invalidNunmber(value) {
   let flagInvalid = false;
   for (let index = 0; index < value.length; index += 1){
-    if(parseInt(value[index], 10) < 0 || parseInt(value[index], 10) > 9) {
+    if (parseInt(value[index], 10) < 0 || parseInt(value[index], 10) > 9) {
       flagInvalid = true;
     }
   }
   return flagInvalid;
 }
 
-function formatPhone(value){
+function formatPhone(value) {
   let returnValue = '';
   for (let index = 0; index < value.length; index += 1){
     switch (index) {
@@ -184,7 +184,7 @@ function formatPhone(value){
 
 function generatePhoneNumber(baseArray) {
   let returnArray = [];
-  if (invalidNunmber(baseArray) || highestCount > 2 ) {
+  if (invalidNunmber(baseArray) || highestCount > 2) {
     returnArray = 'não é possível gerar um número de telefone com esses valores'
   }
   if (baseArray.length != 11) {
