@@ -22,8 +22,9 @@ function splitSentence(sentence) {
 function concatName(arrayName) {
   let lastName = arrayName.pop();
   let firstName = arrayName[0];
-  let newArray = [lastName, firstName]
-  return newArray
+  let spaceGambiarra = ", ";
+  let stringNames = lastName + spaceGambiarra + firstName
+  return stringNames
 }
 // Desafio 5
 function footballPoints(wins, ties) {
