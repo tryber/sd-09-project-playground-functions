@@ -51,22 +51,21 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  let distancia1 = '';
-  let distancia2 = '';
-  let result = '';
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia = '';
+  let resultado = '';
   
-  if (mouse < cat1 || mouse < cat2) {
-      distancia1 = cat1 - mouse; //1
-      distancia2 = cat2 - mouse; //6
-      result = cat2
+  if (cat1 < cat2) {
+    resultado = cat1;
   }
-  else if (mouse > cat1 || mouse < cat2)
+  else if (cat2 < cat1) {
+    resultado = cat2;
+  }
   else {
-    mouse = 'os gatos trombam e o rato foge'
-    result = mouse;
+    resultado = 'os gatos trombam e o rato foge'
   }
-  return result;}
+  return resultado;
+}
 
 // Desafio 8
 function fizzBuzz() {
