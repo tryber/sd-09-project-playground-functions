@@ -142,9 +142,9 @@ function techList(techArray, name) {
   if (techArray.length !== 0) {
     for (let cont = 0; cont < techArray.length; cont += 1) {
       let techno = {
-      tech: techArray[cont],
-      name
-    }
+        tech: techArray[cont],
+        name,
+      }
       arrayTech.push(techno);
     //  source do sort: https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
       arrayTech.sort((a, b) => a.tech.localeCompare(b.tech))
