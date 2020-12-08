@@ -21,7 +21,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(namesArray) {
   return '$namesArray[namesArray.length -1]}, ${namesArray[0]}'
-
+}
 // Desafio 5
 function footballPoints(wins, ties) {
   let total = (wins * 3) + ties;
