@@ -163,7 +163,7 @@ function techList(tecnologia, name) {
       for (let i in arrayOr) {
           let objeto = {
           tech: arrayOr[i],
-          nome: name
+          name: name
           }
       resultado.push(objeto);
       }
