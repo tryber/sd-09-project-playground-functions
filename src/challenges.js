@@ -184,9 +184,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let testeA = lineA < lineB + lineC && lineA > lineB - lineC
   let testeB = lineB < lineC + lineA && lineB > lineC - lineA
   let testeC = lineC < lineB + lineA && lineC > lineB - lineA
-  if (testeA && testeB && testeC === true){
-  return true;
-}
+  if (testeA && testeB && testeC === true) {
+    return true;
+  }
   return false;
 }
 console.log(triangleCheck(10, 14, 10));
