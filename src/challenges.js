@@ -241,8 +241,12 @@ function checkLinehigh(lineA, lineB, lineC) {
   let resultLineHigh;
   let subtraction = [Math.abs(lineB - lineC), Math.abs(lineA - lineC), Math.abs(lineB - lineA)];
 
-  if (lineA > subtraction[0] && lineB > subtraction[1] && lineC > subtraction[2]) {
-    resultLineHigh = true;
+  if (lineA > subtraction[0]) {
+    if (lineB > subtraction[1]) {
+      if (lineC > subtraction[2]) {
+        resultLineHigh = true;
+      }
+    }
   }
   return resultLineHigh;
 }
