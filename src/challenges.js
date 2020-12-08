@@ -204,12 +204,13 @@ function checkPhoneNumberRepeat(array) {
   return true;
 }
 
-let array = [1, 2, 3, 2, 5, 6, 4, 3, 9, 0, 1];
-console.log(generatePhoneNumber(array));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let firstCheck = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC));
+  let secondCheck = (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC));
+  let thirdCheck = (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA));
+    
+  return firstCheck && secondCheck && thirdCheck;
 }
 
 // Desafio 13
