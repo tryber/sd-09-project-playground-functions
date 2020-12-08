@@ -37,7 +37,7 @@ let arrayNumbers = [9, 1, 2, 9, 9, 5, 7];
 let maior = 0;
 let count = 0;
 
-function highestCount(param1) {
+function highestCount() {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > maior) {
       maior = arrayNumbers[index];
@@ -46,13 +46,13 @@ function highestCount(param1) {
   // return maior;
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (maior === arrayNumbers[index]){
+    if (maior === arrayNumbers[index]) {
       count += 1;
     }
   }
   return count;
 }
-  console.log(highestCount(arrayNumbers));
+console.log(highestCount(arrayNumbers));
 
 // Desafio 7
 function catAndMouse() {
