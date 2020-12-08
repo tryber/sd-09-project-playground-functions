@@ -100,7 +100,7 @@ for (let iVocals = 0; iVocals <= encodedVocals.length; iVocals = iVocals + 1); {
   else if (encodedVocals[iVocals] == "o") {
     encodedVocals[iVocals] = "4";
   }
-  else (encodedVocals[iVocals] == "u") {
+  else if (encodedVocals[iVocals] == "u") {
     encodedVocals[iVocals] = "5";
   }
 
@@ -123,7 +123,7 @@ function decode(stringToMix) {
     else if (stringToMix[iNumbers] == "4") {
       stringToMix[iNumbers] = "o";
     }
-    else (stringToMix[iNumbers] == "5") {
+    else if (stringToMix[iNumbers] == "5") {
       stringToMix[iNumbers] = "u";
     }
     
