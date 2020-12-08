@@ -52,9 +52,10 @@ function highestCount(vd6) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
+  
   let distIgual = 'os gatos trombam e o rato foge';
-  let cat1s = math(cat1 - mouse);
-  let cat2s = math(cat2 - mouse);
+  let cat1s = Math.abs (cat1 - mouse);
+  let cat2s = Math.abs (cat2 - mouse);
   let phrase = '';
 
   if(cat1s < cat2s){
@@ -74,7 +75,10 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(vd8) {
+  
   let result = '';
+
+  vd8.sort
 
   for(let index = 0; index < vd8.length; index += 1){
     if (vd8[index] % 3 === 0 && vd8[index] % 5 === 0)
