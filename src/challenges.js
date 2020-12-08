@@ -134,31 +134,31 @@ function fizzBuzz(numerosArray) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(currentString) {
+function encode(str) {
   // seu código aqui
-  let stringWithNumbers = '';
+  let encodeNumbers = '';
 
-  stringWithNumbers = currentString.replace(/a/g, '1')
-  stringWithNumbers = stringWithNumbers.replace(/e/g, '2');
-  stringWithNumbers = stringWithNumbers.replace(/i/g, '3');
-  stringWithNumbers = stringWithNumbers.replace(/o/g, '4');
-  stringWithNumbers = stringWithNumbers.replace(/u/g, '5');
+  encodeNumbers = str.replace(/a/g, '1')
+  encodeNumbers = encodeNumbers.replace(/e/g, '2');
+  encodeNumbers = encodeNumbers.replace(/i/g, '3');
+  encodeNumbers = encodeNumbers.replace(/o/g, '4');
+  encodeNumbers = encodeNumbers.replace(/u/g, '5');
 
-  return stringWithNumbers;
+  return encodeNumbers;
 
 }   
 
-function decode(stringWithNumbers) {
+function decode(encodeNumbers) {
   // seu código aqui
-  let stringWithoutNumbers = '';
+  let decodeNunbers = '';
 
-  stringWithoutNumbers = stringWithNumbers.replace(/1/g, 'a');
-  stringWithoutNumbers = stringWithoutNumbers.replace(/2/g, 'e');
-  stringWithoutNumbers = stringWithoutNumbers.replace(/3/g, 'i');
-  stringWithoutNumbers = stringWithoutNumbers.replace(/4/g, 'o');
-  stringWithoutNumbers = stringWithoutNumbers.replace(/5/g, 'u');
+  decodeNunbers = encodeNumbers.replace(/1/g, 'a');
+  decodeNunbers = decodeNunbers.replace(/2/g, 'e');
+  decodeNunbers = decodeNunbers.replace(/3/g, 'i');
+  decodeNunbers = decodeNunbers.replace(/4/g, 'o');
+  decodeNunbers = decodeNunbers.replace(/5/g, 'u');
 
-  return stringWithoutNumbers;
+  return decodeNunbers;
   
 }
 
