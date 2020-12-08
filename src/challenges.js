@@ -62,19 +62,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (firstDistance > secondDistance) {
     return 'cat2';
   } return 'os gatos trombam e o rato foge';
-
-  // if (firstDistance < 0) {
-  //   firstDistance = 0;
-  //   if (firstDistance < secondDistance) {
-  //   return 'cat1'
-  //   } 
-  // }
-  // if (secondDistance < 0) {
-  //   secondDistance = 0;
-  //  if (firstDistance > secondDistance) {
-  //   return 'cat2';
-  //   }
-  // }
 }
 console.log(catAndMouse(1, 0, 2));
 
@@ -100,24 +87,24 @@ let novaString = '';
 let phrase = 'hi there!';
 function encode(phrase) {
   for (let index = 0; index < phrase.length; index += 1) {
-      let word = phrase[index];
+  let word = phrase[index];
     switch (word) {
-      case 'a':
+    case 'a':
       novaString += '1';
-        break;
-      case 'e':
+      break;
+    case 'e':
       novaString += '2';
       break;
-      case 'i':
+    case 'i':
       novaString += '3';
       break;
-      case 'o':
+    case 'o':
       novaString += '4';
       break;
-      case 'u':
+    case 'u':
       novaString += '5';
       break;
-      default:
+    default:
       novaString += word;
     }
   }console.log(novaString);
@@ -130,22 +117,22 @@ function decode(outraString) {
   for (let index = 0; index < outraString.length; index += 1) {
   let word = outraString[index];
     switch (word) {
-      case '1':
+    case '1':
       novaString += 'a';
       break;
-      case '2':
+    case '2':
       novaString += 'e';
       break;
-      case '3':
+    case '3':
       novaString += 'i';
       break;
-      case '4':
+    case '4':
       novaString += 'o';
       break;
-      case '5':
+    case '5':
       novaString += 'u';
       break;
-      default:
+    default:
       novaString += word;
     }
   }console.log(novaString);
