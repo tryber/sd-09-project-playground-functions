@@ -228,23 +228,23 @@ function generatePhoneNumber(arrayNumber) {
 
 // Desafio 12
 function checkLineLow(lineA, lineB, lineC) {
-  let result;
+  let resultLineLow;
   let sum = [lineB + lineC, lineA + lineC, lineB + lineA];
 
   if (lineA < sum[0] && lineB < sum[1] && lineC < sum[2]) {
-    result = true;
+    resultLineLow = true;
   }
-  return result;
+  return resultLineLow;
 }
 
 function checkLinehigh(lineA, lineB, lineC) {
-  let result;
+  let resultLineHigh;
   let subtraction = [Math.abs(lineB - lineC), Math.abs(lineA - lineC), Math.abs(lineB - lineA)];
 
   if (lineA > subtraction[0] && lineB > subtraction[1] && lineC > subtraction[2]) {
-    result = true;
+    resultLineHigh = true;
   }
-  return result;
+  return resultLineHigh;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
