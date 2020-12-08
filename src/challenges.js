@@ -52,7 +52,7 @@ function highestCount(numbers) {
   let high = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > high) {
-      high = numbers[index]
+      high = numbers[index];
     }
   }
   for (let counter = 0; counter < numbers.length; counter += 1) {
@@ -139,44 +139,46 @@ function encode(word) {
   return result;
   // seu código aqui
 }
-function decode(word1) {
-  let character1 = word1.split('');
-  let result1 = '';
-  for (let counter = 0; counter < character1.length; counter += 1) {
-    switch (character1[counter]) {
+function decode(wor) {
+  let char = wor.split('');
+  let res = '';
+  for (let index = 0; index < char.length; index += 1) {
+    switch (char[index]) {
       case '1':
-        result1 += 'a';
+        res += 'a';
         break;
       case '2':
-        result1 += 'e';
+        res += 'e';
         break;
       case '3':
-        result1 += 'i';
+        res += 'i';
         break;
       case '4':
-        result1 += 'o';
+        res += 'o';
         break;
       case '5':
-        result1 += 'u';
+        res += 'u';
         break;
       default:
-        result1 += character1[counter];
+        res += char[index];
         break;
     }
   }
-  return result1;
+  return res;
   // seu código aqui
 }
 
 // Desafio 10
 function techList(tech, name) {
+  if (tech.length === 0){
+  return 'Vazio!';
   let list = tech.sort();
   let objectList = [];
-  for (let counter = 0; counter < list.length; counter += 1){
-   objectList.push({
-     tech: list[counter],
-     name: name
-   });
+  for (let counter = 0; counter < list.length; counter += 1) {
+    objectList.push({
+      tech: list[counter],
+      name: name
+    });
   }
   return objectList;
   // seu código aqui
