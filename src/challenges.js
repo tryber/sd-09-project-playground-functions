@@ -91,13 +91,10 @@ function fizzBuzz(array) {
 
     if (checkFizzBuzz(fizz, buzz)) {
       arrayAnswer.push('fizzBuzz');
-      continue;
     } else if (checkFizz(fizz)) {
       arrayAnswer.push('fizz');
-      continue;
-    }else if (checkBuzz(buzz)) {
+    } else if (checkBuzz(buzz)) {
       arrayAnswer.push('Buzz');
-      continue;
     }
     arrayAnswer.push('bug!');
   }
@@ -106,7 +103,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 
-//function auxCode(array1, array2) {
+// function auxCode(array1, array2) {
 //  let arrayLetters = code.split('');
 //
 //  for (let index = 0; index < arrayLetters.length; index += 1) {
@@ -131,7 +128,7 @@ function fizzBuzz(array) {
 //    }
 //  }
 //  return arrayLetters.join('');
-//}
+// }
 
 function encode(code) {
   let arrayLetters = code.split('');
