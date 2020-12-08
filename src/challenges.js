@@ -70,12 +70,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let hunt1 = 0;
   if (mouse < cat1) {
     hunt = cat1 - mouse;
-  } else{
+  } else {
     hunt = mouse - cat1;
   }
   if (mouse < cat2) {
     hunt1 = cat2 - mouse;
-  } else{
+  } else {
     hunt1 = mouse - cat2;
   }
   if (hunt < hunt1) {
@@ -92,13 +92,13 @@ function fizzBuzz(numbers) {
   let result = [];
   for (let index = 0; index < numbers.length; index += 1) {
     result.push('');
-    if (numbers[index] % 3 == 0) {
+    if (numbers[index] % 3 === 0) {
       result[index] = 'fizz';
     }
-    if (numbers[index] % 5 == 0) {
+    if (numbers[index] % 5 === 0) {
       if (result[index] === 'fizz') {
         result[index] = 'fizzBuzz';
-      } else{
+      } else {
         result[index] = 'buzz';
       }
     }
@@ -139,7 +139,32 @@ function encode(word) {
   return result;
   // seu código aqui
 }
-function decode() {
+function decode(word) {
+  let character = word.split('');
+  let result = '';
+  for (let counter = 0; counter < character.length; counter += 1) {
+    switch (character[counter]) {
+      case '1':
+        result += 'a';
+        break;
+      case '2':
+        result += 'e';
+        break;
+      case '3':
+        result += 'i';
+        break;
+      case '4':
+        result += 'o';
+        break;
+      case '5':
+        result += 'u';
+        break;
+      default:
+        result += character[counter];
+        break;
+    }
+  }
+  return result;
   // seu código aqui
 }
 
