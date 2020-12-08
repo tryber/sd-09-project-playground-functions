@@ -263,14 +263,15 @@ function hydrate(string) {
   // Regex e Loop retirados de https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
   let regex = /\d/g;
   let sum = 0;
+  let match;
 
   while (match = regex.exec(string)) {
-    sum += parseInt(match[0]);
+    sum += parseInt(match[0], 10);
   }
   if (sum < 2) {
     return `${sum} copo de água`;
   }
-  return `${sum} copo de água`;
+  return `${sum} copos de água`;
 }
 
 module.exports = {
