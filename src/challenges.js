@@ -15,7 +15,7 @@ function splitSentence(string) {
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
-  let firstLast = [];
+  let firstLast;
   firstLast = (array[array.length - 1] + ', ' + array[0]);
   return firstLast;
 }
@@ -49,10 +49,12 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (mCat1 > mCat2) {
     return 'cat2';
   }
-return 'os gatos trombam e o rato fogem';
+  return 'os gatos trombam e o rato fogem';
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
+function fizzBuzz() {
+}
 
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
