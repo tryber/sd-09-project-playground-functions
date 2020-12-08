@@ -134,8 +134,41 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayPhoneNumber) {
+  if (arrayPhoneNumber.length != 11) {
+    return 'Array com tamanho incorreto'
+  }
+  let ddd = '';
+  let firstPartOfNumber = '';
+  let lastPartOfNumber = '';
+  let numberOfAppearances = 0;
+
+  for (index = 0; index < arrayPhoneNumber.length; index += 1) {
+    if (arrayPhoneNumber[index] > 9 || arrayPhoneNumber[index] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+  
+  for (index = 0; index < arrayPhoneNumber.length; index += 1) {
+    for (j = 0; j < arrayPhoneNumber.length; j += 1) {
+      if (arrayPhoneNumber[index] === arrayPhoneNumber[j]) {
+        numberOfAppearances += 1;
+      }
+    } if (numberOfAppearances >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+
+  for (let index = 0; index <= 1; index += 1) {
+    ddd += arrayPhoneNumber[index]
+  }
+  for (let index = 2; index <= 6; index += 1) {
+    firstPartOfNumber += arrayPhoneNumber[index]
+  }
+  for (let index = 7; index <= 10; index += 1) {
+    lastPartOfNumber += arrayPhoneNumber[index]
+  }
+  return `(${ddd}) ${firstPartOfNumber}-${lastPartOfNumber}`
 }
 
 // Desafio 12
