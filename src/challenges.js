@@ -94,15 +94,15 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encodeDecode(string, code) {
-    let newString = "";
-    for (let letter of string) {
-      if (letter in code) {
-        newString += code[letter];
-      } else {
-        newString += letter;
-      }
+  let newString = '';
+  for (let letter of string) {
+    if (letter in code) {
+      newString += code[letter];
+    } else {
+      newString += letter;
     }
-    return newString;
+  }
+  return newString;
 }
 
 function encode(string) {
@@ -113,8 +113,8 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-  encodedString = encodeDecode(string, code);
-  return encodedString;  
+  let encodedString = encodeDecode(string, code);
+  return encodedString;
 }
 
 function decode(string) {
