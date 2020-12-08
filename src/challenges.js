@@ -83,61 +83,59 @@ function fizzBuzz(lista) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-let frase = 'hi there!';
 function encode(frase) {
   let novaString = '';
   for (let index = 0; index < frase.length; index += 1) {
-  let word = frase[index];
+    let word = frase[index];
     switch (word) {
-    case 'a':
-      novaString += '1';
-      break;
-    case 'e':
-      novaString += '2';
-      break;
-    case 'i':
-      novaString += '3';
-      break;
-    case 'o':
-      novaString += '4';
-      break;
-    case 'u':
-      novaString += '5';
-      break;
-    default:
-      novaString += word;
+      case 'a':
+        novaString += '1';
+        break;
+      case 'e':
+        novaString += '2';
+        break;
+      case 'i':
+        novaString += '3';
+        break;
+      case 'o':
+        novaString += '4';
+        break;
+      case 'u':
+        novaString += '5';
+        break;
+      default:
+        novaString += word;
     }
-  }return novaString;
+  } return novaString;
 }
-encode(frase);
+encode('hi there!');
 
-let outraString = 'h3 th2r2!';
 function decode(outraString) {
   let novaString = '';
   for (let index = 0; index < outraString.length; index += 1) {
-  let word = outraString[index];
+    let word = outraString[index];
     switch (word) {
-    case '1':
-      novaString += 'a';
-      break;
-    case '2':
-      novaString += 'e';
-      break;
-    case '3':
-      novaString += 'i';
-      break;
-    case '4':
-      novaString += 'o';
-      break;
-    case '5':
-      novaString += 'u';
-      break;
-    default:
-      novaString += word;
+      case '1':
+        novaString += 'a';
+        break;
+      case '2':
+        novaString += 'e';
+        break;
+      case '3':
+        novaString += 'i';
+        break;
+      case '4':
+        novaString += 'o';
+        break;
+      case '5':
+        novaString += 'u';
+        break;
+      default:
+        novaString += word;
     }
-  }return novaString;
+  } return novaString;
 }
-decode(outraString);
+decode('h3 th2r2!');
 
 // Desafio 10
 function techList() {
