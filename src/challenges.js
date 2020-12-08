@@ -20,7 +20,7 @@ function concatName(array) {
   for (let index = 0; index < 1; index += 1) {
     result.push(array[index]);
   }
-  return result.join(', ');
+  return result.join(", ");
 }
 
 // Desafio 5
@@ -34,14 +34,14 @@ function highestCount(array) {
   let repeat = 0;
 
   for (let i = 0; i < array.length; i += 1) {
-    let number = array[i]
+    let number = array[i];
     if (count < number) {
-      count = array[i]
+      count = array[i];
     }
   }
   for (let j = 0; j < array.length; j += 1) {
     if (count === array[j]) {
-      repeat +=1
+      repeat += 1;
     }
   }
   return repeat;
@@ -53,9 +53,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = Math.abs(mouse - cat2);
 
   if (distance > distance2) {
-    return 'cat2'
+    return "cat2";
   } else if (distance < distance2) {
-    return 'cat1'
+    return "cat1";
   }
   return "os gatos trombam e o rato foge";
 }
@@ -65,27 +65,26 @@ function fizzBuzz(array) {
   let string = [];
   for (const key in array) {
     if (array[key] % 5 === 0 && array[key] % 3 === 0) {
-      string.push("fizzBuzz")
+      string.push("fizzBuzz");
     } else if (array[key] % 5 === 0) {
-      string.push("buzz")
+      string.push("buzz");
     } else if (array[key] % 3 === 0 && array[key] % 5 !== 0) {
-      string.push("fizz")
+      string.push("fizz");
     } else {
-      string.push("bug!")
+      string.push("bug!");
     }
-
   }
   return string;
 }
 
 // Desafio 9
-let numbers = ['1', '2', '3', '4', '5'];
-let letters = ['a', 'e', 'i', 'o', 'u'];
+let numbers = ["1", "2", "3", "4", "5"];
+let letters = ["a", "e", "i", "o", "u"];
 
 function changes(string, codeLetters, codeNumbers) {
   let result = string;
   for (let i = 0; i < codeLetters.length; i += 1) {
-    let arrReg = new RegExp(codeLetters[i], 'g');
+    let arrReg = new RegExp(codeLetters[i], "g");
     result = result.replace(arrReg, codeNumbers[i]);
   }
   return result;
@@ -98,32 +97,19 @@ function decode(paramer2) {
   return changes(paramer2, numbers, letters);
 }
 
-console.log(encode('How are you today?'));
-console.log(decode("h3 th2r2!"));
-
 // Desafio 10
-let java = {
-  tech: "javascript",
-  nome: "Felipe",
-};
-let react = {
-  tech: "react",
-  nome: "Felipe",
-};
-let python = {
-  tech: "python",
-  nome: "Felipe",
-};
-let nodejs = {
-  tech: "nodejs",
-  nome: "Felipe",
-};
-function techList(array) {
-  for (let key in array) {
-  }
+function techList(array, name) {
+  if (array.length != 0) {
+    for (let i = 0; i < 1; i++) {
+      array.push({
+        tech: array[i],
+        name: name,
+      });
+    }
+  } else { array = 'Vazio'}
+  return array;
 }
-
-techList([java, react, python, nodejs]);
+console.log(techList(["java", "react", "python", "nodejs"], "Felipe"));
 
 // Desafio 11
 function generatePhoneNumber() {
