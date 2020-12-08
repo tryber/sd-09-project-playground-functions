@@ -5,8 +5,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;
-  return area;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -22,8 +21,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins *= 3;
-  let result = wins + ties;
+  let result = (wins * 3) + ties;
   return result;
 }
 
@@ -111,7 +109,7 @@ function decode(numbers) {
 
 // Desafio 10
 function techList(techs, name) {
-  if (techs == '') {
+  if (techs.length === 0) {
     return 'Vazio!';
   }
   let info = [];
