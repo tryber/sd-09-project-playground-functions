@@ -2,18 +2,18 @@
 function compareTrue(num1, num2) {
 
 if (num1 && num2) {
-return true
-} else {
-return false
-}}
-console.log(compareTrue(0,2))
+    return true
+} 
+    return false
+}
+console.log(compareTrue(0 , 2))
 
 // Desafio 2
-function calcArea(base,height) {
-let area = (base*height)/2 
+function calcArea(base, height) {
+    let area = (base*height)/2
 return area
 }
-console.log(calcArea(10,5))
+console.log(calcArea(10 , 5))
 
 // Desafio 3
 function splitSentence(umaString) {
@@ -23,13 +23,13 @@ console.log(splitSentence("Estou aprendendo a programar com a Trybe"))
 
 // Desafio 4
 function concatName(umArray) {
-  return umArray[umArray.length -1] + ", " + umArray[0] 
+  return umArray[umArray.length -1] + ", " + umArray[0]
 }
 console.log(concatName(["a","b", "c", "d"]))
 
 // Desafio 5
-function footballPoints(wins,ties) {
- return wins * 3  + ties
+function footballPoints(wins, ties) {
+  return wins * 3  + ties
 }
 console.log(footballPoints(3,2))
 
@@ -46,17 +46,17 @@ function highestCount(numeros) {
   }
   return contagemFinal
   }
-  console.log(highestCount([1,2,4,2,4]))
+  console.log(highestCount([1 , 2 , 4 , 2 , 4]))
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
 let dist1 = Math.abs(mouse - cat1)
 let dist2 = Math.abs(mouse - cat2)
 
-if ( dist1 > dist2){ 
+if ( dist1 > dist2){
 return "cat2"
 } else if (dist1 < dist2) {
-return "cat1" 
+return "cat1"
 } else {
 return "os gatos trombam e o rato foge"
 }
@@ -68,11 +68,11 @@ function fizzBuzz(meuArray) {
   let res = []
   for (i = 0 ; i < meuArray.length; i++) {
     if (meuArray[i] % 5 === 0 && meuArray[i] % 3 === 0) {
-      res.push("fizzBuzz")
+          res.push("fizzBuzz")
     } else if (meuArray[i] % 5 === 0) {
-       res.push("buzz")
+          res.push("buzz")
     } else if (meuArray[i] % 3 === 0){
-       res.push("fizz")
+          res.push("fizz")
     } else {
       res.push("bug!")
     }
