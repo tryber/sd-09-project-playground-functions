@@ -180,7 +180,7 @@ function repita(arrayRepitaNumero) {
 
   for (let contador1 of arrayRepitaNumero) {
     let repitaNumero = 0;
-    for (let contador2 = 0; contador2 <arrayRepitaNumero.length; contador2 += 1) {
+    for (let contador2 = 0; contador2 < arrayRepitaNumero.length; contador2 += 1) {
       if (contador1 === arrayRepitaNumero[contador2]) {
         repitaNumero += 1;
       }
