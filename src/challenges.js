@@ -82,6 +82,21 @@ function checkBuzz(buzz) {
   return false;
 }
 
+function makeAnswer(fizz, buzz) {
+  let answer;
+
+  if (checkFizzBuzz(fizz, buzz)) {
+    answer = 'fizzBuzz';
+  } else if (checkFizz(fizz)) {
+    answer = 'fizz';
+  } else if (checkBuzz(buzz)) {
+    answer = 'buzz';
+  } else {
+    answer = 'bug!';
+  }
+  return answer;
+}
+
 function fizzBuzz(array) {
   let arrayAnswer = [];
 
@@ -89,19 +104,10 @@ function fizzBuzz(array) {
     let fizz = array[index] % 3;
     let buzz = array[index] % 5;
 
-    if (checkFizzBuzz(fizz, buzz)) {
-      arrayAnswer.push('fizzBuzz');
-    } else if (checkFizz(fizz)) {
-      arrayAnswer.push('fizz');
-    } else if (checkBuzz(buzz)) {
-      arrayAnswer.push('buzz');
-    } else {
-      arrayAnswer.push('bug!');
-    }
+    arrayAnswer.push(makeAnswer(fizz, buzz));
   }
   return arrayAnswer;
 }
-
 // Desafio 9
 
 // function auxCode(array1, array2) {
