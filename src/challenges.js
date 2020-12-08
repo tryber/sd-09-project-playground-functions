@@ -161,7 +161,7 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     array[index] = {
       tech: array[index],
-      firstName: name,
+      nome: name,
     };
   }
   return array;
