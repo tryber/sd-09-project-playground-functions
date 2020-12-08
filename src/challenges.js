@@ -74,11 +74,12 @@ function fizzBuzz(numArray) {
       fbArray.push("fizz");
     }
     else {
-      fbArray.push("bug");
+      fbArray.push("bug!");
     }
   } 
   return fbArray 
 } 
+
 
 // Desafio 9
 function encode(encodedVocals) {
