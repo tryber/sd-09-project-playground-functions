@@ -92,10 +92,12 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 // href "https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings"
-// buscando soluções para o desafio 09 encontrei esta trhead no StackOverflow onde a estrutura do codigo cabia perfeitamente na problematica
+// buscando soluções para o desafio 09 encontrei esta trhead no StackOverflow
+// onde a estrutura do codigo cabia perfeitamente na problematica
 // param = param.replace(strings/gi, function(novoParam){return resultado[novoParam];
 // Neste codigo apliquei replace para subustituir as strings por outras strings conforme solicitado
-// utilizei o comando /gi para fosse aplicado o replace não só na primeira ocorrencia e uma função de retorno aplicando o novo parametro na string
+// utilizei o comando /gi para fosse aplicado o replace não só na primeira ocorrencia
+// e uma função de retorno aplicando o novo parametro na string
 // parametro do desafio.
 
 function encode(arrayEncode) {
@@ -106,7 +108,7 @@ function encode(arrayEncode) {
     o: 4,
     u: 5,
   }
-  arrayEncode = arrayEncode.replace ( /a|e|i|o|u/gi, function(encoding){
+  arrayEncode = arrayEncode.replace(/a|e|i|o|u/gi, function(encoding) {
     return encodeVocals[encoding];
   })
   return arrayEncode;
@@ -121,9 +123,9 @@ function decode(arrayDecode) {
     4: 'o',
     5: 'u',
   }
-  arrayDecode = arrayDecode.replace ( /1|2|3|4|5/gi, function(decoding){
-  return decodeVocals[decoding];
-})
+  arrayDecode = arrayDecode.replace(/1|2|3|4|5/gi, function(decoding) {
+    return decodeVocals[decoding];
+  })
 return arrayDecode;
 }
 console.log(decode('h3 th2r2!'));
@@ -136,7 +138,7 @@ function techList(tech, name) {
     return 'Vazio!';
   }
   for (let index = 0; index < tech.length; index += 1) {
-    wantLearn.push({ tech:tech[index], name:name });
+    wantLearn.push({ tech: tech[index], name: name });
   }
   return wantLearn;
 }
@@ -180,8 +182,11 @@ console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 9, 7, 7, 0]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > lineB - lineC && lineB < lineC + lineA && lineB > lineC - lineA && lineC < lineB + lineA && lineC > lineB - lineA)
-  {
+  if (lineA < lineB + lineC && lineA > lineB - lineC) {
+    return true;
+  } else if (lineB < lineC + lineA && lineB > lineC - lineA) {
+    return true;
+  } else if (lineC < lineB + lineA && lineC > lineB - lineA) {
     return true;
   }
   return false;
