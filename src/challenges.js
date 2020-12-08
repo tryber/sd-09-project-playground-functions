@@ -164,7 +164,7 @@ function techList(desejos, name) {
   }  
   return novaArray;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Perycles'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 
 // Desafio 11
