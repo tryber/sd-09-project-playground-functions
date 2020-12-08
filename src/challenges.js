@@ -196,7 +196,7 @@ function generatePhoneNumber(arrayNums) {
 }
 
 // Desafio 12
-function triangleCheck (lineA, lineB, lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   let lineAB = Math.abs(lineA) + Math.abs(lineB);
   let lineBC = Math.abs(lineB) + Math.abs(lineC);
   let lineAC = Math.abs(lineA) + Math.abs(lineC);
@@ -216,7 +216,7 @@ function triangleCheck (lineA, lineB, lineC) {
 // Desafio 13
 function hydrateVerifier(arrayDrink) {
   let sumNumbers = 0;
-  for (index = 0; index < arrayDrink.length; index += 1) {
+  for (let index = 0; index < arrayDrink.length; index += 1) {
     if (Number(arrayDrink[index])) {
       sumNumbers += Number(arrayDrink[index]);
     }
@@ -224,12 +224,12 @@ function hydrateVerifier(arrayDrink) {
   return sumNumbers;
 }
 
-function hydrate (stringDrinks) {
-  let arrayString = stringDrinks.split(" ");
-  let glassOfWater = hydrateVerifier (arrayString);
-  let drinkWater = `${glassOfWater}` + ' copos de água';
+function hydrate(stringDrinks) {
+  let arrayString = stringDrinks.split(' ');
+  let glassOfWater = hydrateVerifier(arrayString);
+  let drinkWater = glassOfWater + ' copos de água';
   if (glassOfWater === 1) {
-    drinkWater = `${glassOfWater}` + ' copo de água';
+    drinkWater = glassOfWater + ' copo de água';
   }
   return drinkWater;
 }
