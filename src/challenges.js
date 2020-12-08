@@ -48,10 +48,10 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mCat1 < mCat2) {
     return 'cat1';
   }
- if (mCat1 > mCat2) {
-    return 'cat2';
-  }
- return pow;
+  if (mCat1 > mCat2) {
+   return 'cat2';
+ }
+  return pow;
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
