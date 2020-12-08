@@ -164,18 +164,18 @@ function generatePhoneNumber(array) {
   let phoneNumber = '(';
   let count = 0;
 
-  if (array.length != 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto';
   }
-  
-  for (let indice = 0; indice < array.length; indice += 1) {        
+
+  for (let indice = 0; indice < array.length; indice += 1) {
     for (let index = 0; index < array.length; index += 1) {
-      if (array[indice] === array[index]) {                  
+      if (array[indice] === array[index]) { 
         count += 1;
       }
     }
-    
-    if(array[indice] < 0 || array[indice] > 9 || count >= 3) {
+  
+    if (array[indice] < 0 || array[indice] > 9 || count >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     count = 0;
