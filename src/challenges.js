@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2;
+  return (value1 === true) && (value2 === true);
 }
 
 // Desafio 2
@@ -34,7 +34,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
+  return (wins * 3) + ties;
 }
 
 // Função retorna maior do array
@@ -105,7 +105,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let result;
+  let result = '';
   let table = {
     a: 1,
     e: 2,
