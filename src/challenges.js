@@ -15,9 +15,7 @@ function splitSentence(string) {
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
-  let firstLast;
-  firstLast = (array[array.length - 1] + ', ' + array[0]);
-  return firstLast;
+  return array[array.length - 1] + ', ' + array[0];
 }
 // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
@@ -42,8 +40,8 @@ function highestCount(array) {
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mCat1= Math.abs(mouse - cat1);
-  let mCat2= Math.abs(mouse - cat2);
+  let mCat1 = Math.abs(mouse - cat1);
+  let mCat2 = Math.abs(mouse - cat2);
   if (mCat1 < mCat2) {
     return 'cat1';
   } else if (mCat1 > mCat2) {
