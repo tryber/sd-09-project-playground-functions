@@ -34,9 +34,19 @@ function footballPoints(wins,ties) {
 console.log(footballPoints(3,2))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numeros) {
+  let numMaximo = numeros.reduce(function(a,b){ //reduce vai comparar o item um com o dois, ficar com o maior e comparar com o seguinte, e assim até terminar o array. Também funciona como a soma de Gauss. Fonte : https://developer.mozilla.org/
+   return Math.max(a, b);
+  })
+  let contagemFinal = 0
+  for (i = 0 ; i < numeros.length ; i++) {
+    if (numeros[i] === numMaximo) { 
+    contagemFinal += 1
+    }
+  }
+  return contagemFinal
+  }
+  console.log(highestCount([1,2,4,2,4]))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -75,8 +85,8 @@ console.log(fizzBuzz([5,3,4,30]))
 
 // Desafio 9
 function encode() {
-  // seu código aqui
 }
+console.log(encode("Hi there!"))
 function decode() {
   // seu código aqui
 }
