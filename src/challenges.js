@@ -264,10 +264,13 @@ function hydrate(string) {
   let regex = /\d/g;
   let sum = 0;
   let match;
-
-  while (match = regex.exec(string)) {
+  do {
     sum += parseInt(match[0], 10);
-  }
+  } while (match = regex.exec(string))
+
+  // while (match = regex.exec(string)) {
+  //   sum += parseInt(match[0], 10);
+  // }
   if (sum < 2) {
     return `${sum} copo de água`;
   }
