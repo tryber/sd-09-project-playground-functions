@@ -163,12 +163,39 @@ function decode(encodeNumbers) {
 }
 
 
-
-
 // Desafio 10
-function techList() {
+function techList(nameList, name) {
   // seu código aqui
+
+  if(nameList.length > 0) {
+    let listObject = [];
+
+    listObject.sort();
+
+    for (index = 0; index < nameList.length; index += 1) {
+
+      listObject[index] = {
+      tech: nameList[index],
+      name: name
+    }
+
+    return listObject
+  
+  }
+    return 'Vazio'
+  }
+  
+  
+  /*let list = nameList;
+  list.push(name)
+ 
+  return list*/
+
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"))
+//console.log(techList([{tech: "CSS"}], "Lucas"))
+
 
 // Desafio 11
 function generatePhoneNumber() {
