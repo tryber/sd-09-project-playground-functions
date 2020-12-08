@@ -146,17 +146,17 @@ function techList(techsToLearn, name) {
   let objectsArray = [];
   let techObjects = {
   }
+  if(techsToLearn.length === 0) {
+    return 'vazio!'
+  } else {
   for(let i = 0; i < techsToLearn.length; i += 1) {
-    if(techsToLearn.length === 0) {
-      return 'Vazio!'
-    } else {
     techObjects['tech'] = techsToLearn[i]
     techObjects['name'] = name
     objectsArray.push(techObjects)
     techObjects = {
     }
-    }
   } return objectsArray.sort(compare)
+}
 }
 
 // Desafio 11
