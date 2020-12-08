@@ -61,7 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(0, 2, 3)
 
 // Desafio 8
-
 function checkFizzBuzz(fizz, buzz) {
   if (fizz === 0 && buzz === 0) {
     return true;
