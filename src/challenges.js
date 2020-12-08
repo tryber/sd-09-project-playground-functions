@@ -249,8 +249,6 @@ function checkLinehigh(lineA, lineB, lineC) {
   return resultLineHigh;
 }
 
-
-
 function triangleCheck(lineA, lineB, lineC) {
   if (checkLineLow(lineA, lineB, lineC)) {
     if (checkLinehigh(lineA, lineB, lineC)) {
