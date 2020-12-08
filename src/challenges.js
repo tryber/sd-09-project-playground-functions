@@ -149,10 +149,10 @@ decode('h3 th2r2!');
 // Desafio 10
 // ____________________________________________________________________________________________________________
 function techList(desejos, name) {
-  let objeto = {};
   let novaArray = [];
   desejos.sort();
-  if (desejos === ([], name) ) {
+
+  if (desejos.length < 1 ) {
     return 'Vazio!';
   }
   for (let index = 0; index < desejos.length; index += 1) {
@@ -164,7 +164,7 @@ function techList(desejos, name) {
   }  
   return novaArray;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
+console.log(techList([], 'Lucas'));
 
 
 // Desafio 11
