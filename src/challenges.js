@@ -147,7 +147,7 @@ function techList(techsToLearn, name) {
   let techObjects = {
   }
   if(techsToLearn.length === 0) {
-    return 'vazio!'
+    return 'Vazio!'
   } else {
   for(let i = 0; i < techsToLearn.length; i += 1) {
     techObjects['tech'] = techsToLearn[i]
@@ -160,8 +160,9 @@ function techList(techsToLearn, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(elevenNumbers) {
   // seu código aqui
+  
 }
 
 // Desafio 12
