@@ -160,9 +160,9 @@ function techList(array, name) {
   array.sort();
   for (let index = 0; index < array.length; index += 1) {
     array[index] = {
-        tech: array[index],
-        name: name,
-        }
+      tech: array[index],
+      name: name,
+    }
   }
   return array;
 }
