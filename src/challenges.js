@@ -1,69 +1,298 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  return (value1 === true) && (value2 === true);
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let word = '';
+  for (let index in string) {
+    if (string[index] === ' ') {
+      array.push(word);
+      word = '';
+    } else if (index === String(string.length - 1)) {
+      word += string[index];
+      array.push(word);
+    } else {
+      word += string[index];
+    }
+  }
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let string = `${array[array.length - 1]}, ${array[0]}`;
+  return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
+}
+
+// Função retorna maior do array
+function biggerInArray(array) {
+  let bigger = null;
+  bigger = array[0];
+  for (let index in array) {
+    if (array[index] > bigger) {
+      bigger = array[index];
+    }
+  }
+  return bigger;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let bigger = biggerInArray(array);
+  let count = 0;
+  for (let index in array) {
+    if (array[index] === bigger) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+// Função retorna distacia positiva entre dois pontos
+function distanceBetween(element1, element2) {
+  let result = element1 - element2;
+  let out = Number;
+  if (result < 0) {
+    out = result * -1;
+  } else {
+    out = result;
+  }
+  return out;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let result = '';
+  if (distanceBetween(mouse, cat1) === distanceBetween(mouse, cat2)) {
+    result = 'os gatos trombam e o rato foge';
+  } else if (distanceBetween(mouse, cat1) > distanceBetween(mouse, cat2)) {
+    result = 'cat2';
+  } else {
+    result = 'cat1';
+  }
+  return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (!(array[index] % 3 === 0) && !(array[index] % 5 === 0)) {
+      result.push('bug!');
+    } else if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+      result.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      result.push('buzz');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let result = '';
+  let table = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let index in string) {
+    let status = false;
+    for (let item in table) {
+      if (string[index] === item) {
+        result += table[item];
+        status = true;
+      }
+    }
+    if (status === false) {
+      result += string[index];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let result = '';
+  let table = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let index in string) {
+    let status = false;
+    for (let item in table) {
+      if (string[index] === item) {
+        result += table[item];
+        status = true;
+      }
+    }
+    if (status === false) {
+      result += string[index];
+    }
+  }
+  return result;
+}
+
+// Função retorna ogjeto tec
+function createNewTec(technology, name) {
+  let tec = {};
+  tec.tech = technology;
+  tec.name = name;
+  return tec;
+}
+
+// Função retorna array ordenado
+function sortArrayObjects(array) {
+  for (let index = 0; index < array.length - 1; index += 1) {
+    for (let index2 = (index + 1); index2 < array.length; index2 += 1) {
+      if (array[index].tech > array[index2].tech) {
+        let aux = createNewTec(array[index2].tech, array[index2].name);
+        array[index2] = array[index];
+        array[index] = aux;
+      }
+    }
+  }
+  return array;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  let result = null;
+  if (technologies.length === 0) {
+    result = 'Vazio!';
+  } else {
+    let tecno = [];
+    for (let index in technologies) {
+      tecno.push(createNewTec(technologies[index], name));
+    }
+    result = sortArrayObjects(tecno);
+  }
+  return result;
+}
+
+// Funcão retorna quantidade de vezes que value aparece no array
+function counterArray(array, value) {
+  let count = 0;
+  for (let index in array) {
+    if (array[index] === value) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let phoneNumber = '';
+  if ((array.length < 11) || (array.length > 11)) {
+    return 'Array com tamanho incorreto.'
+  }
+  for (let index in array) {
+    if (array[index] < 0 || array[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else if (counterArray(array, array[index]) >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  for (let index in array) {
+    if (index === '0') {
+      phoneNumber = `(${array[index]}`;
+    } else if (index === '1') {
+      phoneNumber += `${array[index]})`;
+    } else if (index === '2') {
+      phoneNumber += ` ${array[index]}`;
+    } else if (index === '7') {
+      phoneNumber += `-${array[index]}`;
+    } else {
+      phoneNumber += array[index];
+    }
+  }
+  return phoneNumber;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  if ((lineA < (lineB + lineC)) && (lineA > distanceBetween(lineB, lineC))) {
+    if ((lineB < (lineA + lineC)) && (lineB > distanceBetween(lineA, lineC))) {
+      if ((lineC < (lineB + lineA)) && (lineC > distanceBetween(lineB, lineA))) {
+        result = true;
+      }
+    }
+  }
+  return result;
+}
+
+// Função retorna a somatoria do array
+function addArray(array) {
+  let add = 0;
+  let numbers = {
+    '0': 0,
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+  }
+  for (let item in array) {
+    for (let number in numbers) {
+      if (array[item] === number) {
+        add += numbers[number];
+      }
+    }
+  }
+  return add;
+}
+
+// Função retorna true se caractere é numero e false se não for
+function isNumeral(caractere) {
+  let result = false;
+  for (let number = 1; number <= 9; number += 1) {
+    if (Number(caractere) === number) {
+      result = true;
+    }
+  }
+  return result;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let count = [];
+  let frase = '';
+  for (let letra in string) {
+    if (isNumeral(string[letra])) {
+      count.push(string[letra]);
+    }
+  }
+  if (addArray(count) > 1) {
+    frase = `${addArray(count)} copos de água`;
+  } else {
+    frase = `${addArray(count)} copo de água`;
+  }
+  return frase;
 }
 
 
