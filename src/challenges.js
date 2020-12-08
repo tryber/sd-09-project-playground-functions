@@ -152,7 +152,7 @@ function techList(desejos, name) {
   let objeto = {};
   let novaArray = [];
   desejos.sort();
-  if (desejos === []) {
+  if (desejos === ([], name) ) {
     return 'Vazio!';
   }
   for (let index = 0; index < desejos.length; index += 1) {
