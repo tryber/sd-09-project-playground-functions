@@ -136,7 +136,7 @@ function decode(string) {
 function techList(array, name) {
   let objectList = [];
   let sortArray = array.sort();
-  if (sortArray === '') {
+  if (sortArray[0] === '') {
     return 'Vazio!';
   }
   for (let index = 0; index < sortArray.length; index += 1) {
