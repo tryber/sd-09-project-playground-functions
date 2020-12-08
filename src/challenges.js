@@ -66,22 +66,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // Desafio 8
 function fizzBuzz(array) {
-  let fizzBuzz = [];
+  let fizzBuzzArray = [];
   for(index = 0; index < array.length; index += 1){
     if(array[index] %5 === 0 && array[index] %3 === 0 ){
-      fizzBuzz.push('fizzbuzz')
+      fizzBuzzArray.push('fizzbuzz')
   
     }else if(array[index] %5 === 0){
-      fizzBuzz.push('buzz');
+      fizzBuzzArray.push('buzz');
   
     }else if(array[index] %3 === 0){
-      fizzBuzz.push('fizz');
+      fizzBuzzArray.push('fizz');
   
     }else {
-      fizzBuzz.push('bug!')
+      fizzBuzzArray.push('bug!')
     }
   }
-  return fizzBuzz
+  return fizzBuzzArray
   }
 
 
