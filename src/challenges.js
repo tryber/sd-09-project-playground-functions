@@ -1,12 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  let result = Boolean;
-  if (value1 === true && value2 === true) {
-    result = true;
-  } else {
-    result = false;
-  }
-  return result;
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -46,14 +40,10 @@ function footballPoints(wins, ties) {
 // Função retorna maior do array
 function biggerInArray(array) {
   let bigger = null;
-  if (array.length === 0) {
-    console.log('Array Vazio');
-  } else {
-    bigger = array[0];
-    for (let index in array) {
-      if (array[index] > bigger) {
-        bigger = array[index];
-      }
+  bigger = array[0];
+  for (let index in array) {
+    if (array[index] > bigger) {
+      bigger = array[index];
     }
   }
   return bigger;
@@ -99,7 +89,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
-  for (let index in array) {
+  for (let index = 0; index < array.length; index += 1) {
     if (!(array[index] % 3 === 0) && !(array[index] % 5 === 0)) {
       result.push('bug!');
     } else if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
@@ -115,7 +105,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let result = '';
+  let result;
   let table = {
     a: 1,
     e: 2,
