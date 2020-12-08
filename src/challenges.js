@@ -109,7 +109,7 @@ function techList(array, name) {
       }
       newArray.push(object)
     }
-  } else { newArray = 'Vazio'}
+  } else { newArray = 'Vazio!'}
   return newArray;
 }
 
