@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 function highestNumber(array6) {
   let index = 0;
   let highest = array6[index];
-  for (index = 0; index < array6.length; index=+ 1) {
+  for (index = 0; index < array6.length; index += 1) {
     if (highest < array6[index]) {
       highest = array6[index];
     }
@@ -42,7 +42,7 @@ function highestNumber(array6) {
 function highestCount(array6) {
   let index = 0;
   let counter = 0;
-  for (index = 0; index < array6.length; index=+1) {
+  for (index = 0; index < array6.length; index += 1) {
     if (highestNumber(array6) === array6[index]) {
       counter = counter + 1;
     }
@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array8) {
   let index = 0
-  for (index = 0; index < array8.length; index =+ 1) {
+  for (index = 0; index < array8.length; index += 1) {
     if (array8[index] % 3 === 0 && array8[index] % 5 === 0) {
         array8[index] = "fizzBuzz";
     } else if (array8[index] % 3 === 0) {
@@ -105,7 +105,7 @@ function techList(arraytech, name) {
 // seu código aqui
   let arrayTech = [];
   arraytech.sort();
-  for (let index = 0; index < arraytech.length; index =+ 1) {
+  for (let index = 0; index < arraytech.length; index += 1) {
     arrayTech.push({
       tech: arraytech[index],
       name,
@@ -132,6 +132,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
