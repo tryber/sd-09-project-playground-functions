@@ -154,16 +154,7 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  if (!array.length) { // negacao 
-    return 'Vazio!';
-  }
-  array.sort();
-  for (let index = 0; index < array.length; index += 1) {
-    array[index] = {
-      tech: array[index],      
-    };
-  }
-  return array;
+  
 }
 
 // Desafio 11
