@@ -22,13 +22,15 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = wins * 3 + ties;
+  wins = wins * 3;
+  let result = wins + ties;
   return result;
 }
 
 // Desafio 6
 function highestCount(numbers) {
-  let greaterNumber = 0, counter = 0;
+  let greaterNumber = 0;
+  let counter = 0;
   for (let i in numbers) {
     if (greaterNumber < numbers[i]) {
       greaterNumber = numbers[i];
