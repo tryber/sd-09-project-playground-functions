@@ -182,16 +182,12 @@ console.log(generatePhoneNumber([8, 9, 3, 4, 5, 6, 2, 9, 7, 7, 0]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > lineB - lineC) {
-    return true;
-  } else if (lineB < lineC + lineA && lineB > lineC - lineA) {
-    return true;
-  } else if (lineC < lineB + lineA && lineC > lineB - lineA) {
+  if (lineA < lineB + lineC && lineA > lineB - lineC && lineB < lineC + lineA && lineB > lineC - lineA && lineC < lineB + lineA && lineC > lineB - lineA) {
     return true;
   }
-  return false;
-}
-console.log(triangleCheck(10, 14, 8));
+  return false;  
+  }
+  console.log(triangleCheck(10, 14, 500));
 
 // Desafio 13
 function hydrate(waterBottle) {
