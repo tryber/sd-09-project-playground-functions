@@ -12,19 +12,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let arrayPalavras = [];
-  let palavra = '';
+function splitSentence(sentence) {
+  let wordsArray = [];
+  let word = '';
 
-  for (let index = 0; index <= frase.length; index += 1) {
-    if (frase[index] !== ' ' && index !== frase.length) {
-      palavra += frase[index];
+  for (let index = 0; index <= sentence.length; index += 1) {
+    if (sentence[index] !== ' ' && index !== sentence.length) {
+      word += sentence[index];
     } else {
-      arrayPalavras.push(palavra);
-      palavra = '';
+      wordsArray.push(word);
+      word = '';
     }
   }
-  return arrayPalavras;
+  return wordsArray;
 }
 
 // Desafio 4
@@ -34,7 +34,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  const winnerPoints = 3;
+  return (wins * winnerPoints) + ties;
 }
 
 // Desafio 6
@@ -208,23 +209,19 @@ function validateIfPossiblePhoneNumber(array) {
 }
 
 function generatePhoneNumber(array) {
-  if (validateIfPossiblePhoneNumber(array) === true) {
-    let numero = '(';
-    for (let number in array) {
-      if (number === '1') {
-        numero += `${array[number]}) `;
-      } else if (number === '6') {
-        numero += `${array[number]}-`;
-      } else {
-        numero += array[number];
-      }
-    }
+  if (validateIfPossiblePhoneNumber(array)) {
+    const joinedArray = array.join('');
+    let DDD = joinedArray.slice(0, 2);
+    let firstPart = joinedArray.slice(2, 7);
+    let secondPart = joinedArray.slice(7, 11);
+    let numero = `(${DDD}) ${firstPart}-${secondPart}`;
     return numero;
-  } return validateIfPossiblePhoneNumber(array);
+  }
+  let errorMessage = validateIfPossiblePhoneNumber(array);
+  return errorMessage;
 }
 
 // Desafio 12
-
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true;
