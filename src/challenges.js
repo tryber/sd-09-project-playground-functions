@@ -88,14 +88,15 @@ function encode(string9) {
   }
   return string9;
 }
+
 function decode(string9) {
   let object2 = { 1:'a', 2:'e', 3:'i', 4:'o', 5:'u'};
   for (let key2 in object2) {
     let substitute2 = key2;
     let re2 = new RegExp(substitute2, 'g');
-    string92 = string92.replace(re2, object2[key2]);
+    string9 = string9.replace(re2, object2[key2]);
   }
-  return string92;
+  return string9;
 }
 
 // Desafio 10
