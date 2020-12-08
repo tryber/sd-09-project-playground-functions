@@ -139,37 +139,46 @@ function encode(word) {
   return result;
   // seu código aqui
 }
-function decode(word) {
-  let character = word.split('');
-  let result = '';
-  for (let counter = 0; counter < character.length; counter += 1) {
-    switch (character[counter]) {
+function decode(word1) {
+  let character1 = word1.split('');
+  let result1 = '';
+  for (let counter = 0; counter < character1.length; counter += 1) {
+    switch (character1[counter]) {
       case '1':
-        result += 'a';
+        result1 += 'a';
         break;
       case '2':
-        result += 'e';
+        result1 += 'e';
         break;
       case '3':
-        result += 'i';
+        result1 += 'i';
         break;
       case '4':
-        result += 'o';
+        result1 += 'o';
         break;
       case '5':
-        result += 'u';
+        result1 += 'u';
         break;
       default:
-        result += character[counter];
+        result1 += character1[counter];
         break;
     }
   }
-  return result;
+  return result1;
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
+  let list = tech.sort();
+  let objectList = [];
+  for (let counter = 0; counter < list.length; counter += 1){
+   objectList.push({
+     tech: list[counter],
+     name: name
+   });
+  }
+  return objectList;
   // seu código aqui
 }
 
