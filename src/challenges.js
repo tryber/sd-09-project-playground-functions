@@ -109,53 +109,30 @@ function fizzBuzz(array) {
   return arrayAnswer;
 }
 // Desafio 9
+let arrayLetters = ['a', 'e', 'i', 'o', 'u'];
+let arrayNumbers = ['1', '2', '3', '4', '5']
 
-// function auxCode(array1, array2) {
-//  let arrayLetters = code.split('');
-//
-//  for (let index = 0; index < arrayLetters.length; index += 1) {
-//    switch (arrayLetters[index]) {
-//      case 'a':
-//        arrayLetters[index] = '1';
-//        break;
-//      case 'e':
-//        arrayLetters[index] = '2';
-//        break;
-//      case 'i':
-//        arrayLetters[index] = '3';
-//        break;
-//      case 'o':
-//        arrayLetters[index] = '4';
-//        break;
-//      case 'u':
-//        arrayLetters[index] = '5'
-//        break;
-//      default:
-//        break;
-//    }
-//  }
-//  return arrayLetters.join('');
-// }
-
-function encode(code) {
+function auxCode(code, array1, array2) {
   let arrayLetters = code.split('');
+  let arrayCode = array1;
+  let arayToCode = array2;
 
   for (let index = 0; index < arrayLetters.length; index += 1) {
     switch (arrayLetters[index]) {
-      case 'a':
-        arrayLetters[index] = '1';
+      case arrayCode[0]:
+        arrayLetters[index] = arayToCode[0];
         break;
-      case 'e':
-        arrayLetters[index] = '2';
+      case arrayCode[1]:
+        arrayLetters[index] = arayToCode[1];
         break;
-      case 'i':
-        arrayLetters[index] = '3';
+      case arrayCode[2]:
+        arrayLetters[index] = arayToCode[2];
         break;
-      case 'o':
-        arrayLetters[index] = '4';
+      case arrayCode[3]:
+        arrayLetters[index] = arayToCode[3];
         break;
-      case 'u':
-        arrayLetters[index] = '5'
+      case arrayCode[4]:
+        arrayLetters[index] = arayToCode[0];
         break;
       default:
         break;
@@ -164,31 +141,12 @@ function encode(code) {
   return arrayLetters.join('');
 }
 
-function decode(code) {
-  let arrayLetters = code.split('');
+function encode(code) {
+  return auxCode(code, arrayLetters, arrayNumbers);
+}
 
-  for (let index = 0; index < arrayLetters.length; index += 1) {
-    switch (arrayLetters[index]) {
-      case '1':
-        arrayLetters[index] = 'a';
-        break;
-      case '2':
-        arrayLetters[index] = 'e';
-        break;
-      case '3':
-        arrayLetters[index] = 'i';
-        break;
-      case '4':
-        arrayLetters[index] = 'o';
-        break;
-      case '5':
-        arrayLetters[index] = 'u'
-        break;
-      default:
-        break;
-    }
-  }
-  return arrayLetters.join('');
+function decode(code) {
+  return auxCode(code, arrayNumbers, arrayLetters)
 }
 
 // Desafio 10
