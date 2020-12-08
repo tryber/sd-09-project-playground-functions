@@ -216,8 +216,8 @@ function somador(string) {
       case '9': sum += parseInt(arrayString[i], 10); break;
       default: break;
     }
-  } 
-  return (sum); 
+  }
+  return (sum);
 }
 function hydrate(str) {
   let sum = somador(str);
