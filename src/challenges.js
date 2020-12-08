@@ -280,7 +280,7 @@ function checkRepeatedNum(numArray) {
 }
 
 function generatePhoneNumber(numArray) {
-  if (numArray.length !== 11) return 'Array com tamanho incorreto';
+  if (numArray.length !== 11) return 'Array com tamanho incorreto.';
 
   if (checkNum(numArray) || checkRepeatedNum(numArray)) {
     return 'não é possível gerar um número de telefone com esses valores';
