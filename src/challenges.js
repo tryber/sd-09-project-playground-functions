@@ -172,6 +172,7 @@ function decode(wor) {
 function techList(tech, name) {
   if (tech.length === 0){
   return 'Vazio!';
+  }
   let list = tech.sort();
   let objectList = [];
   for (let counter = 0; counter < list.length; counter += 1) {
