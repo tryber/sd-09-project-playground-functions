@@ -23,6 +23,7 @@ function concatName(namesArray) {
   let lastItem = namesArray.pop();
   let firstItem = namesArray[0];
   return lastItem + firstItem
+}
 // Desafio 5
 function footballPoints(wins, ties) {
   let total = (wins * 3) + ties;
