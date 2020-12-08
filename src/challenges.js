@@ -81,13 +81,13 @@ function fizzBuzz(vd8) {
   for(let index = 0; index < vd8.length; index += 1){
     
     if ((vd8[index] % 3) === 0 && (vd8[index] % 5) === 0)
-    result += 'fizzBuzz';
+    result.push ('fizzBuzz');
     else if((vd8[index] % 3) === 0)
-    result += 'fizz';
+    result.push ('fizz');
     else if ((vd8[index] % 5) === 0)
-    result += 'buzz';
+    result.push ('buzz');
     else
-    result += 'bug!';
+    result.push ('bug!');
   }
   return result;
 }
