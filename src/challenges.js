@@ -1,41 +1,120 @@
 // Desafio 1
-function compareTrue() {
+
+function compareTrue( value1, value2 ) {
   // seu código aqui
+  if ( value1 === true && value2 === true ) {
+    return true;
+  } 
+  
+  return false;
+
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea( base , height ) {
   // seu código aqui
+  let valueArea = ( base * height ) / 2;
+
+  return valueArea;
+
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence( phrase ) {
   // seu código aqui
+  let array = phrase.split( " " );
+
+  return array;
+
 }
 
 // Desafio 4
-function concatName() {
+function concatName( arrayString ) {
   // seu código aqui
+  let itemOne = "";
+  let itemTwo = "";
+
+  for (let index = 0; index < arrayString.length; index += 1){
+    if (index === 0){
+      itemOne = arrayString[index];
+    } else if (index === arrayString.length - 1) {
+      itemTwo = arrayString[index];
+      
+    }
+  }
+  let result = itemTwo+ ',' + ' ' + itemOne;
+  return result;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints( wins, ties) {
   // seu código aqui
+
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+
+  let result = winsPoints + tiesPoints;
+  return result;
+
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount( arrayNumbers ) {
   // seu código aqui
+  let maiorValor = arrayNumbers[0]
+  let cont = 0;
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+
+    if (maiorValor < arrayNumbers[index]) {
+      maiorValor = arrayNumbers[index];
+
+    }
+  }
+
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+    if (maiorValor === arrayNumbers[index] ){
+      cont += 1;
+    }
+  }
+
+  return cont; 
 }
 
+
 // Desafio 7
-function catAndMouse() {
+function catAndMouse( mouse, cat1, cat2 ) {
   // seu código aqui
+  let gato = "";
+  if ( Math.abs(cat1 - mouse)  < Math.abs(cat2 - mouse)){
+    gato = "cat1";
+  } else if (Math.abs(cat2 - mouse)  < Math.abs(cat1 - mouse)){
+      gato = "cat2";
+  } else {
+      gato = "os gatos trombam e o rato foge";
+  }
+
+  return gato;
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz( myArray ) {
   // seu código aqui
+  let resultArray = [];
+
+  for (let index in myArray) {
+    if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
+      resultArray.push("fizzBuzz");
+    } else if (myArray[index] % 3 === 0 ) {
+        resultArray.push("fizz");
+    } else if (myArray[index] % 5 === 0 ) {
+        resultArray.push("buzz");
+    } else{
+        resultArray.push("bug!");
+    }
+  }
+  return resultArray;
+
 }
 
 // Desafio 9
@@ -83,3 +162,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
