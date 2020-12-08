@@ -80,7 +80,7 @@ function fizzBuzz(array8) {
 
 // Desafio 9
 function encode(string9) {
-  let object = { 'a':'1', 'e':'2', 'i':'3', 'o':'4', 'u':'5'};
+  let object = { a:'1', e:'2', i:'3', o:'4', u:'5'};
   for (let key in object) {
     let substitute = key;
     let re = new RegExp(substitute, 'g');
