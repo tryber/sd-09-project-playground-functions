@@ -177,7 +177,7 @@ function generatePhoneNumber(inputArray) {
   // seu código aqui
   let controlRepeat = 0
   if (inputArray.length !== 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.'
   }
   for (let index = 0; index < inputArray.length; index += 1) {
     if (inputArray[index] === lastNumber) {
@@ -185,8 +185,8 @@ function generatePhoneNumber(inputArray) {
     } else {
       controlRepeat = 0
     }
-    if (inputArray[index] < 0 || inputArray[index] > 9 || inputArray[index] === undefined || controlRepeat > 1) {
-      return "não é possível gerar um número de telefone com esses valores"
+    if (inputArray[index] < 0 || inputArray[index] > 9 || inputArray[index] === undefined || controlRepeat > 1 || inputArray[index] === '') {
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     positionAndLastNumber(inputArray[index])
   }
