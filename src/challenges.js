@@ -1,12 +1,12 @@
 // Desafio 1
-function compareTrue (bol, bole) {
+function compareTrue(bol, bole) {
   return bol && bole;
 }
 // exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
-  return area; 
+  return area;
 }
 // exemplo de chamada da função: calcArea(10, 4);
 // Desafio 3
@@ -17,38 +17,38 @@ function splitSentence(string) {
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName(array) {
-  let empty= [];
+  let empty = [];
   firstLast = empty.concat(array[array.length - 1] + ', ' + array[0]);
-  return(firstLast);
-  }
- // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+  return (firstLast);
+}
+// exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints(wins, ties) {
- let pointsForWin = 3;
- let points = (wins * pointsForWin) + ties;
- return points;
+  let pointsForWin = 3;
+  let points = (wins * pointsForWin) + ties;
+  return points;
 }
 // exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
 function highestCount(array) {
-  let array [];
+  let array[];
   let maxNumber = Math.max(...array);
   let repeatCounter = 0;
-for (index=0; index < array.length ; index +=1){
-  if (maxNumber === array[index]) {
+  for (index = 0; index < array.length; index += 1) {
+    if (maxNumber === array[index]) {
       repeatCounter = repeatCounter + 1;
-}
-}
- return repeatCounter;
+    }
+  }
+  return repeatCounter;
 }
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  let mCat1= mouse-cat1; 
-  let mCat2= mouse-cat2; 
-  if( mCat1 < mCat2){
+function catAndMouse(mouse, cat1, cat2) {
+  let mCat1 = mouse - cat1;
+  let mCat2 = mouse - cat2;
+  if (mCat1 < mCat2) {
     return "cat1";
-  } else if ( mCat1 > mCat2){
+  } else if (mCat1 > mCat2) {
     return "cat2";
   } else {
     return "os gatos trombam e o rato foge"
@@ -57,16 +57,16 @@ function catAndMouse(mouse,cat1,cat2) {
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz(array) {
-  let mensage=[];
-  for (index=0; index < array.length ; index +=1){
-  if (array[index] % 3 === 0 && array[index] % 5 === 0){
-    mensage.push("fizzbuzz");
-  } else if (array[index] % 3 === 0 && array[index] % 5 != 0){
-    mensage.push("fizz");
-  } else if (array[index] % 3 != 0 && array[index] % 5 === 0){
-    mensage.push("buzz");
-  } else 
-  mensage.push("bug!");
+  let mensage = [];
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      mensage.push("fizzbuzz");
+    } else if (array[index] % 3 === 0 && array[index] % 5 != 0) {
+      mensage.push("fizz");
+    } else if (array[index] % 3 != 0 && array[index] % 5 === 0) {
+      mensage.push("buzz");
+    } else
+      mensage.push("bug!");
   }
   return mensage;
 }
@@ -74,6 +74,7 @@ function fizzBuzz(array) {
 // Desafio 9
 
 }
+
 function decode(string2) {
   // seu código aqui
 }
