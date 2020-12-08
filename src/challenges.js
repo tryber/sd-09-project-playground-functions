@@ -96,10 +96,24 @@ function decode(frase) {
 
 // Desafio 10
 function techList(arrayTec, name) {
-  let tecObj = {
-    tech,
+
+  if (arrayTec.length === 0) {
+    return 'Vazio!';
+  } 
+  else {
+    let arrayTecGrowing = arrayTec.sort();
+    let objList = [];
+
+    for (let i in arrayTecGrowing) {
+      objList[i] = {
+        tech: arrayTecGrowing[i],
+        name: name
+      }
+    }
+    return objList;
   }
-}
+};
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Felipe'));
 
 // Desafio 11
 function generatePhoneNumber(arrayNumb) {
@@ -140,14 +154,13 @@ function generatePhoneNumber(arrayNumb) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (
-    lineA < lineB + lineC 
-    && lineB < lineA + lineC 
-    && lineC < lineB + lineA
-    && lineA > Math.abs(lineB - lineC) 
-    && lineB > Math.abs(lineC - lineA) 
-    && lineC > Math.abs(lineB - lineA)
-  ) 
-  {
+    lineA < lineB + lineC &&
+    lineB < lineA + lineC &&
+    lineC < lineB + lineA &&
+    lineA > Math.abs(lineB - lineC) &&
+    lineB > Math.abs(lineC - lineA) &&
+    lineC > Math.abs(lineB - lineA)
+  ) {
     return true
   } else return false;
 }
