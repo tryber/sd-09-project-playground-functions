@@ -64,18 +64,19 @@ function fizzBuzz(numArray) {
   let fbArray = [];
   for (let indexFiBu = 0; indexFiBu <= numArray.length; indexFiBu = indexFiBu + 1) {
     if (numArray[indexFiBu] % 3 == 0) {
-      return fbArray[indexFiBu] = "fizz"; 
+      fbArray.push("fizz"); 
     }
     else if (numArray[indexFiBu] % 5 == 0) {
-      return fbArray[indexFiBu] = "buzz";
+      fbArray.push("buzz");
     }
     else if (numArray[indexFiBu] % 3 == 0 && numArray[indexFiBu] % 5 == 0) {
-      return fbArray[indexFiBu] = "fizzBuzz";
+      fbArray.push("fizzBuzz");
     }
     else {
-      return fbArray[indexFiBu] = "bug";
+      fbArray.push("bug");
     }
-  }  
+  } 
+  return fbArray 
 }
 
 // Desafio 9
