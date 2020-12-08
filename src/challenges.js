@@ -1,5 +1,3 @@
-// Aluno: Emanoel Cristhian, turma 09.
-
 // Desafio 1
 function compareTrue(comp1, comp2) {
   if (comp1 && comp2) {
@@ -7,30 +5,25 @@ function compareTrue(comp1, comp2) {
   }
   return false;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
-
 // Desafio 3
 function splitSentence(string) {
   let stringSplited = string.split(' ');
   return stringSplited;
 }
-
 // Desafio 4
 function concatName(arrayString) {
   return `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let winsPoints = 3;
   let tiesPoints = 1;
   return (wins * winsPoints) + (ties * tiesPoints);
 }
-
 // Desafio 6
 function highestCount(arrayNumber) {
   let bigNumber = arrayNumber[0];
@@ -45,7 +38,6 @@ function highestCount(arrayNumber) {
   }
   return countNumber;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
@@ -59,7 +51,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 catAndMouse(0, 2, 3)
-
 // Desafio 8
 function checkFizzBuzz(fizz, buzz) {
   if (fizz === 0 && buzz === 0) {
@@ -148,7 +139,6 @@ function encode(code) {
 function decode(code) {
   return auxCode(code, arrayOfNumber, arrayOfLetter)
 }
-
 // Desafio 10
 function techList(arrayTech, name) {
   if (arrayTech.length === 0) {
@@ -166,8 +156,6 @@ function techList(arrayTech, name) {
   }
   return objtArray;
 }
-
-
 // Desafio 11
 function checkDuplicate(array, element) {
   let count = 0;
@@ -225,7 +213,6 @@ function generatePhoneNumber(arrayNumber) {
   }
   return 'Não rolou nada!';
 }
-
 // Desafio 12
 function checkLineLow(lineA, lineB, lineC) {
   let resultLineLow;
@@ -257,7 +244,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-
 // Desafio 13
 function somador(string) {
   let arrayString = string.split('');
@@ -268,28 +254,30 @@ function somador(string) {
         sum += parseInt(arrayString[i]);
         break;
       case '2':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '3':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '4':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '5':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '6':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '7':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '8':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
         break;
       case '9':
-        sum += parseInt(arrayString[i]);
+        sum += parseInt(arrayString[i], 10);
+        break;
+      default:
         break;
     }
   }
@@ -303,7 +291,6 @@ function hydrate(str) {
   }
   return `${sum} copos de água`;
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
