@@ -227,9 +227,9 @@ function hydrateVerifier(arrayDrink) {
 function hydrate(stringDrinks) {
   let arrayString = stringDrinks.split(' ');
   let glassOfWater = hydrateVerifier(arrayString);
-  let drinkWater = glassOfWater + ' copos de água';
+  let drinkWater = `${glassOfWater} copos de água`;
   if (glassOfWater === 1) {
-    drinkWater = glassOfWater + ' copo de água';
+    drinkWater = `${glassOfWater} copo de água`;
   }
   return drinkWater;
 }
