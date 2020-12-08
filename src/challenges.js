@@ -62,17 +62,22 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat = 0;
-  if (cat1 < cat2) {
-    cat = 'cat2';
+  let distancemc1 = Math.abs(cat1 - mouse);
+  let distancemc2 = Math.abs(cat2 - mouse);
+  let mouseEscape = 'os gatos trombam e o rato foge';
+  console.log(distancemc2)
+  console.log(distancemc1)
+
+  if (distancemc1 < distancemc2) {
+      return 'cat1'
+  } else if (distancemc2 < distancemc1) {
+      return 'cat2'
+  } else if (distancemc1 === distancemc2) {
+      return mouseEscape
   } else {
-    cat = 'cat1';
+      return 'Inválido'
   }
-  if (cat1 === cat2) {
-    let gatos = 'os gatos trombam e o rato foge';
-    return gatos
-  }
-  return cat
+
 }
 
 // Desafio 8
@@ -152,12 +157,12 @@ function decode(letter) {
 // Desafio 10
 function techList(tecnologia, name) {
   let resultado = [];
-  tecnologia.sort(tecnologia);
-  
+  let arrayOr = tecnologia.sort();
+
   if (tecnologia.length !== 0){
-      for (let i in tecnologia) {
+      for (let i in arrayOr) {
           let objeto = {
-          tech: tecnologia[i],
+          tech: arrayOr[i],
           nome: name
           }
       resultado.push(objeto);
