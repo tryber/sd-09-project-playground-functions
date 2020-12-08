@@ -85,22 +85,64 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(text) {
   let string = text;
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
   let result = '';
   for (let index = 0; index < string.length; index += 1) {
-      for (let count = 0; count < vowels.length; count += 1) {
-          let aux = count + 1;
-          if (string[index] === vowels[count]) {
-              result = string.replace(string[index], aux);
-              aux = 0;
-          }
-      }
+    if(string[index] === 'a') {
+      string = string.replace(string[index], '1');
+    }
   }
-return result;
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === 'e') {
+      string = string.replace(string[index], '2');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === 'i') {
+      string = string.replace(string[index], '3');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === 'o') {
+      string = string.replace(string[index], '4');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === 'u') {
+      string = string.replace(string[index], '5');
+    }
+  }
+    return string;
 }
 
-function decode() {
-  // seu código aqui
+function decode(text) {
+  let string = text;
+  let result = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === '1') {
+      string = string.replace(string[index], 'a');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === '2') {
+      string = string.replace(string[index], 'e');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === '3') {
+      string = string.replace(string[index], 'i');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === '4') {
+      string = string.replace(string[index], 'o');
+    }
+  }
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === '5') {
+      string = string.replace(string[index], 'u');
+    }
+  }
+    return string;
 }
 
 // Desafio 10
@@ -113,13 +155,12 @@ function techList(arrayTech, name) {
     for (let index = 0; index < technologies.length; index += 1) {
       object.push({
         tech: technologies[index],
-        name: selectName
+        name: selectName,
       })
     }
     return object;
-  } else {
-    return 'Vazio!';
   }
+    return 'Vazio!';
 }
 
 // Desafio 11
