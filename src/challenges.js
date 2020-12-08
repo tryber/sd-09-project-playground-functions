@@ -185,9 +185,9 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > lineB - lineC && lineB < lineC + lineA && lineB > lineC - lineA && lineC < lineB + lineA && lineC > lineB - lineA) {
     return true;
   }
-  return false;  
-  }
-  console.log(triangleCheck(10, 14, 500));
+  return false;
+}
+console.log(triangleCheck(10, 14, 10));
 
 // Desafio 13
 function hydrate(waterBottle) {
