@@ -37,7 +37,7 @@ function highestCount(numbers) {
     }
   }
   for (let i in numbers) {
-    if (numbers[i] === greaterNumber) {
+    if (greaterNumber === numbers[i]) {
       counter += 1;
     }
   }
@@ -75,43 +75,43 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(char) {
-  for (let i = 0; i < char.length; i += 1) {
-    if (char[i] === 'a') {
-      char = char.replace(/a/g, '1');
-    } else if (char[i] === 'e') {
-      char = char.replace(/e/g, '2');
-    } else if (char[i] === 'i') {
-      char = char.replace(/i/g, '3');
-    } else if (char[i] === 'o') {
-      char = char.replace(/o/g, '4');
-    } else if (char[i] === 'u') {
-      char = char.replace(/u/g, '5');
+function encode(chaaracters) {
+  for (let i = 0; i < chaaracters.length; i += 1) {
+    if (chaaracters[i] === 'a') {
+      chaaracters = chaaracters.replace(/a/g, '1');
+    } else if (chaaracters[i] === 'e') {
+      chaaracters = chaaracters.replace(/e/g, '2');
+    } else if (chaaracters[i] === 'i') {
+      chaaracters = chaaracters.replace(/i/g, '3');
+    } else if (chaaracters[i] === 'o') {
+      chaaracters = chaaracters.replace(/o/g, '4');
+    } else if (chaaracters[i] === 'u') {
+      chaaracters = chaaracters.replace(/u/g, '5');
     }
   }
-  return char;
+  return chaaracters;
 }
 
-function decode(number) {
-  for (let j = 0; j < number.length; j += 1) {
-    if (number[j] === '1') {
-      number = number.replace(/1/g, 'a');
-    } else if (number[j] === '2') {
-      number = number.replace(/2/g, 'e');
-    } else if (number[j] === '3') {
-      number = number.replace(/3/g, 'i');
-    } else if (number[j] === '4') {
-      number = number.replace(/4/g, 'o');
-    } else if (number[j] === '5') {
-      number = number.replace(/5/g, 'u');
+function decode(numbers) {
+  for (let j = 0; j < numbers.length; j += 1) {
+    if (numbers[j] === '1') {
+      numbers = numbers.replace(/1/g, 'a');
+    } else if (numbers[j] === '2') {
+      numbers = numbers.replace(/2/g, 'e');
+    } else if (numbers[j] === '3') {
+      numbers = numbers.replace(/3/g, 'i');
+    } else if (numbers[j] === '4') {
+      numbers = numbers.replace(/4/g, 'o');
+    } else if (numbers[j] === '5') {
+      numbers = numbers.replace(/5/g, 'u');
     }
   }
-  return number;
+  return numbers;
 }
 
 // Desafio 10
 function techList(array, name) {
-  if (array == '') {
+  if (array === ' ') {
     return 'Vazio!';
   }
   let info = [];
