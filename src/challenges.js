@@ -92,12 +92,10 @@ function fizzBuzz(array) {
     if (checkFizzBuzz(fizz, buzz)) {
       arrayAnswer.push('fizzBuzz');
       continue;
-    }
-    if (checkFizz(fizz)) {
+    } else if (checkFizz(fizz)) {
       arrayAnswer.push('fizz');
       continue;
-    }
-    if (checkBuzz(buzz)) {
+    }else if (checkBuzz(buzz)) {
       arrayAnswer.push('Buzz');
       continue;
     }
