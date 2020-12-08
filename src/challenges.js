@@ -36,14 +36,14 @@ function highestCount(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > highesNumber) {
       highesNumber = array[index];
-    } 
+    }
     for (index = 0; index < array.length; index += 1) {
       if (highesNumber === array[index]) {
         repetNumber += 1;
       }
     }
   }
-return repetNumber;
+  return repetNumber;
 }
 /*function highestCount (array) {
   let maiorNumero = array[0];
@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distance1 < 0) {
     distance1 = (cat1 - mouse) * -1;
     //console.log(distance1);
-  } 
+  }
   if (distance2 < 0) {
     distance2 = (cat2 - mouse) * -1;
     //console.log(distance2);
@@ -90,13 +90,28 @@ function catAndMouse(mouse, cat1, cat2) {
 //console.log(catAndMouse(0, -2, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber) {
+  let arrayNew = [];
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 !== 0) {
+      arrayNew.push('fizz');
+    } else if (arrayNumber[index] % 5 === 0 && arrayNumber[index] % 3 !== 0) {
+      arrayNew.push('buzz');
+    } else if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
+      arrayNew.push('fizzBuzz');
+    } else {
+      arrayNew.push('bug!');
+    }
+  }
+  return arrayNew;
 }
+//console.log(fizzBuzz([10, 20, 5, 3, 15, 6]));
+
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
