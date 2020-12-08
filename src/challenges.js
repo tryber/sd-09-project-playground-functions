@@ -130,7 +130,7 @@ function decode(letter) {
         letters[i] = 'a';
         break;
       case '2':
-        letters[i] = 'e';
+        letters[i] = 'e'; 
         break;
       case '3':
         letters[i] = 'i';
@@ -152,6 +152,8 @@ function decode(letter) {
 // Desafio 10
 function techList(tecnologia, name) {
   let resultado = [];
+  tecnologia.sort(tecnologia);
+  
   if (tecnologia.length !== 0){
       for (let i in tecnologia) {
           let objeto = {
