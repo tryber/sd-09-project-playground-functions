@@ -185,10 +185,10 @@ function generatePhoneNumber(inputArray) {
     } else {
       controlRepeat = 0
     }
-    if (inputArray[index] < 0 || inputArray[index] > 9 || controlRepeat > 1) {
+    if (inputArray[index] < 0 || inputArray[index] > 9 || inputArray[index] === undefined || controlRepeat > 1) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
-    positionAndLastNumber(inputArray[index])    
+    positionAndLastNumber(inputArray[index])
   }
   return response
 }
