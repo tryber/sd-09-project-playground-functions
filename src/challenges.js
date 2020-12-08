@@ -257,22 +257,30 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 
-  if (menorMedidas(lineA, lineB, lineC) === true && numeroAbsoluto(lineA, lineB, lineC) === true) {
-    number1 = true;
+  switch (true) {
+    case menorMedidas(lineA, lineB, lineC) && numeroAbsoluto(lineA, lineB, lineC):
+      number1 = true;
+    case menorMedidas(lineB, lineA, lineC) && numeroAbsoluto(lineB, lineA, lineC):
+      number2 = true;
+    case menorMedidas(lineC, lineA, lineB) && numeroAbsoluto(lineC, lineA, lineB):
+      number3 = true;
   }
-  if (menorMedidas(lineB, lineA, lineC) === true && numeroAbsoluto(lineB, lineA, lineC) === true) {
-    number2 = true;
-  }
-  if (menorMedidas(lineC, lineA, lineB) === true && numeroAbsoluto(lineC, lineA, lineB) === true) {
-    number3 = true;
-  }
+  // if (menorMedidas(lineA, lineB, lineC) === true && numeroAbsoluto(lineA, lineB, lineC) === true) {
+  //   number1 = true;
+  // }
+  // if (menorMedidas(lineB, lineA, lineC) === true && numeroAbsoluto(lineB, lineA, lineC) === true) {
+  //   number2 = true;
+  // }
+  // if (menorMedidas(lineC, lineA, lineB) === true && numeroAbsoluto(lineC, lineA, lineB) === true) {
+  //   number3 = true;
+  // }
 
   if (number1 === true && number2 === true && number3 === true) {
     return true;
   }
   return false;
 }
-
+console.log(triangleCheck(10, 2, 3))
 // Desafio 13
 // Referencia para usar o RegExp
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
