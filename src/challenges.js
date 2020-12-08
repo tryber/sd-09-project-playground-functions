@@ -82,23 +82,23 @@ function fizzBuzz(numberArray) {
 // Desafio 9
 function encode(phrase) {
   let phraseArray = [];
-  for (let cont = 0; cont < phrase.length; cont +=1 ) { 
-    switch (true) {
-      case "a" :
-      phraseArray += "1";
-     break;
-      case "e" :
-        phraseArray += "2";
-      break;
-    case "i" :
-      phraseArray += "3";
-     break;
-      case "o" :
-        phraseArray += "4";
-      break;
-      case "u" :
-        phraseArray += "5";
-      break;
+  for (let cont = 0; cont < phrase.length; cont += 1) { 
+    switch (phrase[cont]) {
+      case 'a' :
+        phraseArray += '1';
+        break;
+      case 'e' :
+        phraseArray += '2';
+        break;
+      case 'i' :
+        phraseArray += '3';
+        break;
+      case 'o' :
+        phraseArray += '4';
+        break;
+      case 'u' :
+        phraseArray += '5';
+        break;
       default:
         phraseArray += phrase[cont];
         break;
@@ -106,31 +106,32 @@ function encode(phrase) {
   }
   return phraseArray
 }
-function decode() {
-  let phraseArray = [];
-  for (let cont = 0; cont < phrase.length; cont +=1 ) { 
-    switch (true) {
-      case "a" :
-      phraseArray += "a";
-     break;
-      case "e" :
-        phraseArray += "e";
-      break;
-    case "i" :
-      phraseArray += "i";
-     break;
-      case "o" :
-        phraseArray += "o";
-      break;
-      case "u" :
-        phraseArray += "u";
-      break;
+
+function decode(newPhrase) {
+  let newPhraseArray = [];
+  for (let cont = 0; cont < newPhrase.length; cont +=1 ) { 
+    switch (newPhrase[cont]) {
+      case '1' :
+        newPhraseArray += 'a';
+        break;
+      case '2' :
+        newPhraseArray += 'e';
+        break;
+      case '3' :
+        newPhraseArray += 'i';
+        break;
+      case '4' :
+        newPhraseArray += 'o';
+        break;
+      case '5' :
+        newPhraseArray += 'u';
+        break;
       default:
-        phraseArray += phrase[cont];
+        newPhraseArray += newPhrase[cont];
         break;
     }
   }
-  return phraseArray
+  return newPhraseArray
 }
 
 
