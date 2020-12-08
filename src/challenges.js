@@ -45,7 +45,7 @@ function highestCount(param1) {
   }
   // return maior;
 
-  for (index = 0; index < arrayNumbers.length; index += 1) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (maior === arrayNumbers[index]){
       count += 1;
     }
