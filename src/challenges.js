@@ -4,9 +4,9 @@
 // true + true = true;
 // true + false = false;
 // false + false = false;
-// Então podemos simplificar a função simplesmente pedindo para retornar os dois valores linkados com
-// um operador lógico, no caso o &&. Caso ambos valores sejam verdadeiros ele retorna true, ou então 
-// retorna false.
+// Então podemos simplificar a função simplesmente pedindo para retornar os dois valores linkados
+// com um operador lógico, no caso o &&. Caso ambos valores sejam verdadeiros ele retorna true,
+// ou então retorna false.
 function compareTrue(value1, value2) {
   return value1 && value2;
 }
@@ -33,7 +33,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let totalPoints;
   let winnerPoints = wins * 3;
-  totalPoints = winnerPoints + ties; //criada a variável winnerPoints por boa prática.
+  totalPoints = winnerPoints + ties; // criada a variável winnerPoints por boa prática.
   return totalPoints;
 }
 
@@ -174,7 +174,7 @@ function checkNumbers(numbers) {
     } else {
       checkResult = false;
       break;
-  }
+    }
   }
   return checkResult;
 }
@@ -196,23 +196,23 @@ function checkIfValid(numbers) {
   }
   return isValid;
 }
-// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o número de 
-// telefone final olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel Picanço e também 
-// busquei entender como funcionavam as funções splice e join para conseguir juntar tudo ao final.
-// (https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca)
+// Estava com dificuldade em checar a repetição dos números e consegui entender melhor Como montar o 
+// número de telefone final olhando os PR de outros colegas. Cito aqui a solução encontrada pela Raquel
+// Picanço e também busquei entender como funcionavam as funções splice e join para conseguir juntar
+// tudo ao final 
+// https://github.com/tryber/sd-09-project-playground-functions/pull/18/commits/0bf0907452a62b74dec851d2c15eb4c5195a52ca
 function generatePhoneNumber(numbers) {
   // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
   // para transformar o parametro em integers.
 
-  let phone = parseInt(numbers, 10);
   let phoneNumber = [];
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    for (let i = 0; i < numbers.length; i += 1) {
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
       phoneNumber[i] = (numbers[i]);
     }
     phoneNumber.splice(0, 0, '(');
@@ -238,9 +238,9 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   } else if (sum3 < lineA) {
     return false;
-  } else {
-    return true;
   }
+  return true;
+  
 }
 
 // Desafio 13
