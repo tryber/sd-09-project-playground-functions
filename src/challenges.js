@@ -174,8 +174,8 @@ function generatePhoneNumber(array) {
     let count = 0;   
 
     // se o array for diferente de 11
-    if (array.length != 11) {
-        return 'Array com tamanho incorreto';
+    if (array.length !== 11) {
+        return 'Array com tamanho incorreto.';
     }
 
     // se o array tiver numeros menores que 0, maiores que 9 ou se repetir 3 vezes ou mais
