@@ -205,14 +205,15 @@ function generatePhoneNumber(numbers) {
   // busquei em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
   // para transformar o parametro em integers.
 
+  let phone = parseInt(numbers, 10);
   let phoneNumber = [];
 
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (checkNumbers(numbers) === false || checkIfValid(numbers) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
-  }
-  for (let i = 0; i < numbers.length; i += 1) {
+  } else {
+    for (let i = 0; i < numbers.length; i += 1) {
       phoneNumber[i] = (numbers[i]);
     }
     phoneNumber.splice(0, 0, '(');
@@ -238,9 +239,9 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   } else if (sum3 < lineA) {
     return false;
+  } else {
+    return true;
   }
-  return true;
-  
 }
 
 // Desafio 13
