@@ -14,7 +14,6 @@ function calcArea(base, height) {
 function splitSentence(string) {
   return string.split(' ');
 }
-//MDN Documentation
 
 // Desafio 4
 function concatName(array) {
@@ -75,36 +74,38 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function code(stringToCode, toBeReplaced, replaceBy) {
-  let codedString = '';
-  for (let stringIndex = 0; stringIndex < stringToCode.length; stringIndex += 1) {
-    if (stringToCode[stringIndex] === toBeReplaced) {
-      codedString += replaceBy;
-    } else {
-      codedString += stringToCode[stringIndex];
+function codeBase(phrase) {
+  let objectReference = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  objectReference.arrayPhrase = phrase.split('');
+  return objectReference;
+}
+function encode(phrase) {
+  let baseCopy;
+  baseCopy = codeBase(phrase);
+  for (let index in baseCopy.arrayPhrase) {
+    if (baseCopy.arrayPhrase[index] in baseCopy) {
+      baseCopy.arrayPhrase[index] = baseCopy[baseCopy.arrayPhrase[index]];
     }
   }
-  return (codedString);
+  return baseCopy.arrayPhrase.join('');
 }
 
-function encode(stringToEncode) {
-  stringToEncode = code(stringToEncode, 'e', '2');
-  stringToEncode = code(stringToEncode, 'u', '5');
-  stringToEncode = code(stringToEncode, 'i', '3');
-  stringToEncode = code(stringToEncode, 'a', '1');
-  stringToEncode = code(stringToEncode, 'o', '4');
-
-  return (stringToEncode);
-}
-
-function decode(stringToDecode) {
-  stringToDecode = code(stringToDecode, '1', 'a');
-  stringToDecode = code(stringToDecode, '4', 'o');
-  stringToDecode = code(stringToDecode, '2', 'e');
-  stringToDecode = code(stringToDecode, '5', 'u');
-  stringToDecode = code(stringToDecode, '3', 'i');
-
-  return (stringToDecode);
+function decode(phrase) {
+  let baseCopy;
+  baseCopy = codeBase(phrase);
+  for (let index in baseCopy.arrayPhrase) {
+    if (baseCopy.arrayPhrase[index] in (Object.keys(baseCopy))) {
+      baseCopy.arrayPhrase[index] = Object.keys(baseCopy)
+        .slice(baseCopy.arrayPhrase[index] - 1, baseCopy.arrayPhrase[index]);
+    }
+  }
+  return baseCopy.arrayPhrase.join('');
 }
 
 // Desafio 10
@@ -127,8 +128,61 @@ function techList(techsArray, personName) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function verifyPhoneNumbersLength(arrayNums) {
+  let lowerNum = Math.min(...arrayNums);
+  let highterNum = Math.max(...arrayNums);
+  let response = null;
+  let errorMsg = {
+    0: 'não é possível gerar um número de telefone com esses valores',
+    1: 'Array com tamanho incorreto.',
+  }
+  if (lowerNum < 0 || highterNum > 9) {
+    response = errorMsg[0];
+  }
+  if (arrayNums.length !== 11) {
+    response = errorMsg[1];
+  }
+  return response;
+}
+
+function verifyPhoneNumbersCounterCalculator(arrayNums, number) {
+  let counter = 0;
+  for (let i in arrayNums) {
+    if (arrayNums[i] === number) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+
+function verifyPhoneNumbersRepeat(arrayNums) {
+  for (let index = 0; index < arrayNums.length; index += 1) {
+    let valueCounter = verifyPhoneNumbersCounterCalculator(arrayNums, arrayNums[index]);
+    if (valueCounter >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return null;
+}
+
+function generatePhoneNumber(arrayNums) {
+  let responseVerifier = verifyPhoneNumbersLength(arrayNums);
+  let responseVerifier2 = verifyPhoneNumbersRepeat(arrayNums);
+  let baseNumberVerifiers = {
+    verifier1: responseVerifier,
+    verifier2: responseVerifier2,
+  }
+  for (let index in baseNumberVerifiers) {
+    if (baseNumberVerifiers[index] !== null) {
+      return baseNumberVerifiers[index];
+    }
+  }
+  // after verification then create the phone number
+  arrayNums.splice(0, 0, '(');
+  arrayNums.splice(3, 0, ')', ' ');
+  arrayNums.splice(10, 0, '-');
+  let numberCreated = arrayNums.join('');
+  return numberCreated;
 }
 
 // Desafio 12
@@ -137,19 +191,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(commandString) {
-  let waterDebits = commandString.match(/\d+/g);
-  let numbersArray = Array.from(waterDebits);
-  let sumWaterCups = 0;
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    sumWaterCups += parseInt(numbersArray[index], 10);
+function hydrateVerifier(arrayDrink) {
+  let sumNumbers = 0;
+  for (let index = 0; index < arrayDrink.length; index += 1) {
+    if (Number(arrayDrink[index])) {
+      sumNumbers += Number(arrayDrink[index]);
+    }
   }
-  if (sumWaterCups > 1) {
-    let waterDebitMessage = sumWaterCups + ' copos de água';
-    return waterDebitMessage;
+  return sumNumbers;
+}
+
+function hydrate(stringDrinks) {
+  let arrayString = stringDrinks.split(' ');
+  let glassOfWater = hydrateVerifier(arrayString);
+  let drinkWater = `${glassOfWater} copos de água`;
+  if (glassOfWater === 1) {
+    drinkWater = `${glassOfWater} copo de água`;
   }
-  let waterDebitMessage = sumWaterCups + ' copo de água';
-  return waterDebitMessage;
+  return drinkWater;
 }
 
 module.exports = {
