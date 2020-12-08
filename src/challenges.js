@@ -97,32 +97,32 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 let novaString = '';
-let string = 'hi there!';
-function encode(string) {
-  for (let index = 0; index < string.length; index += 1) {
-      let word = string[index];
+let phrase = 'hi there!';
+function encode(phrase) {
+  for (let index = 0; index < phrase.length; index += 1) {
+      let word = phrase[index];
     switch (word) {
       case 'a':
-      novaString = novaString + '1';
+      novaString += '1';
         break;
       case 'e':
-      novaString = novaString + '2';
+      novaString += '2';
       break;
       case 'i':
-      novaString = novaString + '3';
+      novaString += '3';
       break;
       case 'o':
-      novaString = novaString + '4';
+      novaString += '4';
       break;
       case 'u':
-      novaString = novaString + '5';
+      novaString += '5';
       break;
       default:
-      novaString = novaString + word;
+      novaString += word;
     }
   }console.log(novaString);
 }
-encode(string);
+encode(phrase);
 
 let outraString = 'h3 th2r2!';
 function decode(outraString) {
@@ -131,22 +131,22 @@ function decode(outraString) {
   let word = outraString[index];
     switch (word) {
       case '1':
-      novaString = novaString + 'a';
+      novaString += 'a';
       break;
       case '2':
-      novaString = novaString + 'e';
+      novaString += 'e';
       break;
       case '3':
-      novaString = novaString+ 'i';
+      novaString += 'i';
       break;
       case '4':
-      novaString = novaString + 'o';
+      novaString += 'o';
       break;
       case '5':
-      novaString = novaString + 'u';
+      novaString += 'u';
       break;
       default:
-      novaString = novaString + word;
+      novaString += word;
     }
   }console.log(novaString);
 }
