@@ -134,14 +134,19 @@ function decode(decodeString) {
 function techList(baseArray, name) {
   let outputArray = [];
   baseArray = baseArray.sort();
-  for (let index = 0; index < baseArray.length; index += 1) {
-    let baseObject = {
-      tech: '',
-      name: ''
-    };
-    baseObject.tech = baseArray[index];
-    baseObject.name = name;
-    outputArray.push (baseObject);
+  if (baseArray.length > 0) {
+    for (let index = 0; index < baseArray.length; index += 1) {
+      let baseObject = {
+        tech: '',
+        name: '',
+      };
+      baseObject.tech = baseArray[index];
+      baseObject.name = name;
+      outputArray.push (baseObject);
+    }
+    else {
+      outputArray = 'Vazio';
+    }
   }
   return outputArray;
 }
