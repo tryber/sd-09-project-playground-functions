@@ -1,18 +1,12 @@
-// Teste
 // Desafio 1 OK
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true) {
-    return true;
-  }
-  return false;
+  return bool1&&bool2
 }
-// console.log(compareTrue(true, true));
 
 // Desafio 2 OK
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-// console.log(calcArea(3, 8));
 
 // Desafio 3
 function splitSentence(string3) {
@@ -66,7 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } 
   return 'os gatos trombam e o rato foge';
 }
-// console.log(catAndMouse(1, 2, 0));
 
 // Desafio 8
 function fizzBuzz(array8) {
@@ -96,7 +89,7 @@ function encode(string9) {
   }
   return string9;
 }
-// teste
+
 
 function decode(string9) {
   let object = { '1':'a','2':'e','3':'i','4':'o','5':'u'};
@@ -130,47 +123,18 @@ function techList(arraytech, name) {
 
 // Desafio 11
 function generatePhoneNumber(arraytelephone) {
-//   if (arraytelephone.length !== 10) {
-//     console.log('Array com tamanho incorreto.');
-//   } else {
-//     for (let index=0; index < arraytelephone.length; index =+1){
-//       if (arraytelephone[index] < 0 || arraytelephone[index] < 9){
-//         console.log('tem negativo ou maior q 10');
-//       }
-//     }
-//     for (let index=0; index < 8; index =+1){
-//       if (arraytelephone[index] === arraytelephone[index+1] === arraytelephone[index+2]) {
-//         console.log('não é possível gerar um número de telefone com esses valores');
-//       }
-//   }
-//   return
-}
-// function generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7]);
-// Desafio 12
-// lineA = 15;
-// lineB = -12
-// lineC = 2
-// let res = (Math.abs(lineB)- Math.abs(lineC));
-//   console.log(res);
-function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
-  // let result = false;
-  // if (lineA*lineB*lineC != 0) {
-  //   if (lineA > (lineB + lineC)) && (Math.abs(lineA) > (Math.abs(lineB)- Math.abs(lineC)));{
-  //     result = true;
-  //   }
-  // }
-  // return result
-  // console.log(result);
 }
 
+
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  // seu código aqui
+}
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
 }
-
-
 module.exports = {
   calcArea,
   catAndMouse,
