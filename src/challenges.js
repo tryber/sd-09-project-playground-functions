@@ -4,14 +4,12 @@ function compareTrue(value1, value2) {
     return true;
   } return false;
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(10, 5));
 
 // Desafio 3
 function splitSentence(stringToSplit) {
@@ -19,7 +17,6 @@ function splitSentence(stringToSplit) {
   splitedArray = stringToSplit.split(' ');
   return splitedArray;
 }
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(firstAndLastIndex) {
@@ -27,14 +24,12 @@ function concatName(firstAndLastIndex) {
   string = `${firstAndLastIndex[firstAndLastIndex.length - 1]}, ${firstAndLastIndex[0]}`;
   return string;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalScore = (wins * 3) + (ties * 1);
   return totalScore;
 }
-console.log(footballPoints(3, 1));
 
 // Desafio 6
 function highestCount(numbersArray) {
@@ -53,7 +48,6 @@ function highestCount(numbersArray) {
   }
   return timesHighestNumberAppears;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -66,7 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(fizzBuzzArray) {
@@ -84,7 +77,6 @@ function fizzBuzz(fizzBuzzArray) {
   }
   return fizzBuzzResult;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(arrayToEncode) {
@@ -113,7 +105,6 @@ function encode(arrayToEncode) {
   }
   return encodedArray;
 }
-console.log(encode('hi there'));
 
 function decode(arrayToEncode) {
   let decodedArray = '';
@@ -141,17 +132,43 @@ function decode(arrayToEncode) {
   }
   return decodedArray;
 }
-console.log(decode('h3 th2r2'));
-
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let sortArray = array.sort();
+  let finalArray = [];
+
+  if (array.length === 0) {
+    return 'Vazio!'
+  }
+
+  for (let index = 0; index < array.length; index += 1) {
+    finalArray.push({
+      tech: sortArray[index],
+      name: name,
+    });
+  }
+  return finalArray;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  let count = 0;
+  if (arrayNumber.length != 11) {
+    return 'Array com tamanho incorreto';
+  }
+  for (let index = 0; index < arrayNumber.length; index += 1) {        
+    for (let index2 = 0; index2 < arrayNumber.length; index2 += 1) {
+      if (arrayNumber[index] === arrayNumber[index2]) {                  
+        count += 1;
+      }
+    }
+    if(arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    count = 0;
+  }
+  return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
 }
 
 // Desafio 12
