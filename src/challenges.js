@@ -141,15 +141,15 @@ function techList(techArray, name) {
   let finalList = '';
   if (techArray.length !== 0) {
     for (let cont = 0; cont < techArray.length; cont += 1) {
-    let techno = {
+      let techno = {
       tech: techArray[cont],
-      name: name,
+      name
     }
-    arrayTech.push(techno);
+      arrayTech.push(techno);
     //  source do sort: https://stackoverflow.com/questions/6712034/sort-array-by-firstname-alphabetically-in-javascript
-    arrayTech.sort((a, b) => a.tech.localeCompare(b.tech))
-    finalList = arrayTech
-  }
+      arrayTech.sort((a, b) => a.tech.localeCompare(b.tech))
+      finalList = arrayTech
+    }
   } else {
     finalList = 'Vazio!'
   }
