@@ -136,7 +136,7 @@ function techList(techArray, name) {
 // Desafio 11
 function generatePhoneNumber(arrayPhoneNumber) {
   if (arrayPhoneNumber.length != 11) {
-    return 'Array com tamanho incorreto'
+    return 'Array com tamanho incorreto.'
   }
   let ddd = '';
   let firstPartOfNumber = '';
