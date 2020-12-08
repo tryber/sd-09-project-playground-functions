@@ -299,6 +299,7 @@ function generatePhoneNumber(numArray) {
 // console.log(generatePhoneNumber([2, 2, 2, 2, 2, 2, 2, 2, 9, 9, 9]));
 // --------------------------------------------------------------------
 
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let cond1 = (lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC));
@@ -307,10 +308,25 @@ function triangleCheck(lineA, lineB, lineC) {
   return cond1 && cond2 && cond3;
 }
 
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let regex = /\d+/g;
+  let numbers = string.match(regex);
+  let waterCup = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    waterCup += parseInt(numbers[index]);
+  }
+
+  if (waterCup === 1) {
+    return `${waterCup} copo de água`;
+  }
+
+  return `${waterCup} copos de água`;
 }
+
+// console.log(hydrate('1 pitú'));
 
 
 module.exports = {
