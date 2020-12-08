@@ -250,13 +250,13 @@ function decode(stringDecode) {
 
     palavraDecode = arrayString[index];
 
-    newLetter = convertePalavra(palavraDecode);
+    newLetter = passaString(palavraDecode);
     palavResult += newLetter
   }
   return palavResult
 }
 
-function convertePalavra(palavraDecode) {
+function passaString(palavraDecode) {
 
   switch (palavraDecode){
     case 'a':
@@ -278,49 +278,6 @@ function convertePalavra(palavraDecode) {
       return saidaDecode;
   }
 }
-
-function decode(decodePalavra) {
-  // seu código aqui
-  let palavraDecode = decodePalavra;
-  let palavResult = '';
-  let newLetter = '';
-  let oldLetter = '';
-
-  const arrayString = encodeString.split('');
-
-  for (index = 0; index < arrayString.length; index += 1 ){
-
-    oldLetter = arrayString[index];
-
-    newLetter = convertLetter(oldLetter);
-    palavResult += newLetter
-  }
-  return palavResult
-}
-
-function convertLetter(oldLetter) {
-
-  switch (oldLetter){
-    case 'a':
-      return '1';
-      break;
-    case 'e':
-      return '2';
-      break;
-    case 'i':
-      return '3';
-      break;
-    case 'o':
-      return '4';
-      break;
-    case 'u':
-      return '5';
-      break;
-    default:
-      return oldLetter;
-  }
-}
-
 
 // Desafio 10
 function techList(arrayTech) {
