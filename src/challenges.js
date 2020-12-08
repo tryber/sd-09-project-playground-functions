@@ -163,16 +163,23 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   }
 
-  let phoneNumber = [];
-  phoneNumber.push('(');
+  let finalPhoneNumber = '(';
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9 || checkPhoneNumberRepeat(array)) {
+    if (array[i] < 0 || array[i] > 9 || !checkPhoneNumberRepeat(array)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
 
-    return phoneNumber;
+    if (i === 1) {
+      finalPhoneNumber += array[i] + ')';
+    } else if (i === 6) {
+      finalPhoneNumber += array[i] + '-';
+    } else {
+      finalPhoneNumber += array[i];
+    }
   }
+
+  return finalPhoneNumber;
 }
 
 function checkPhoneNumberRepeat(array) {
@@ -197,8 +204,8 @@ function checkPhoneNumberRepeat(array) {
   return true;
 }
 
-let array = [1, 2, 3, 3, 5, 6, 4, 3, 9, 0, 1];
-console.log(checkPhoneNumberRepeat(array));
+let array = [1, 2, 3, 2, 5, 6, 4, 3, 9, 0, 1];
+console.log(generatePhoneNumber(array));
 
 // Desafio 12
 function triangleCheck() {
