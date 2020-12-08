@@ -127,24 +127,10 @@ function decode(numbers) {
 
 // Desafio 10
 function techList(techArray, name) {
-  // seu código aqui
-  let rawArray = []
-  for (let index = 0; index < techArray.length; index += 1) {
-    let techObject = {}
-    techObject.tech = techArray[index]
-    techObject.name = name
-    rawArray.push(techObject)
-  }
-  if (rawArray.length === 0) {
-    return 'Vazio!'
-  } else {
-    return sortList(rawArray)
-  }
-
   function sortList(arr) {
     let sortedArray = arr.sort(function (a, b) {
-      var techA = a.tech.toUpperCase();
-      var techB = b.tech.toUpperCase();
+      let techA = a.tech.toUpperCase();
+      let techB = b.tech.toUpperCase();
       if (techA < techB) {
         return -1;
       }
@@ -155,46 +141,57 @@ function techList(techArray, name) {
     })
     return sortedArray
   }
+  // seu código aqui
+  let rawArray = []
+  for (let index = 0; index < techArray.length; index += 1) {
+    let techObject = {}
+    techObject.tech = techArray[index]
+    techObject.name = name
+    rawArray.push(techObject)
+  }
+  if (rawArray.length === 0) {
+    return 'Vazio!'
+  }
+  return sortList(rawArray)  
 }
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-  let inputArray = [6, 5, 1, 2, 1, 1, 1, 1, 8, 9, 0]
-  let controlRepeat = 1
-  let lastNumber = ''
-  let position = 0
-  let response = ''
-  if (inputArray.length !== 11) {
-    return "Array com tamanho incorreto."
+
+let position = 0
+let response = ''
+
+function positionAndLastNumber(thisNumber) {
+  if (position === 0) {
+    response += '(' + thisNumber
+  } else if (position === 2) {
+    response += ') ' + thisNumber
+  } else if (position === 7) {
+    response += '-' + thisNumber
   } else {
-    for (let index = 0; index < inputArray.length; index += 1) {
-      if (inputArray[index] === lastNumber) {
-        controlRepeat += 1
-      } else {
-        controlRepeat = 1
-      }
-      if (inputArray[index] < 0 || inputArray[index] > 9 || controlRepeat > 2) {
-        return "não é possível gerar um número de telefone com esses valores"
-      } else {
-        function positionAndLastNumber (thisNumber) {
-          position += 1
-          lastNumber = thisNumber
-        }
-        if (position === 0) {
-          response += '(' + inputArray[index]
-          positionAndLastNumber(inputArray[index])
-        } else if (position === 2) {
-          response += ') ' + inputArray[index]
-          positionAndLastNumber(inputArray[index])
-        } else if (position === 7) {
-          response += '-' + inputArray[index]
-          positionAndLastNumber(inputArray[index])
-        } else {
-          response += inputArray[index]
-          positionAndLastNumber(inputArray[index])
-        }
-      }
+    response += thisNumber
+  }
+  position += 1
+}
+
+
+// Desafio 11
+function generatePhoneNumber(inputArray) {
+  // seu código aqui
+  let controlRepeat = 0
+  let lastNumber = ''
+  if (inputArray.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+  for (let index = 0; index < inputArray.length; index += 1) {
+    if (inputArray[index] === lastNumber) {
+      controlRepeat += 1
+    } else {
+      controlRepeat = 0
+    }
+    if (inputArray[index] < 0 || inputArray[index] > 9 || controlRepeat > 1) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    } else {
+      lastNumber = inputArray[index]
+      positionAndLastNumber(inputArray[index])
     }
   }
   return response
