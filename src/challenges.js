@@ -171,7 +171,7 @@ function generatePhoneNumber(array) {
     }
 
     if (i === 1) {
-      finalPhoneNumber += array[i] + ')';
+      finalPhoneNumber += array[i] + ') ';
     } else if (i === 6) {
       finalPhoneNumber += array[i] + '-';
     } else {
