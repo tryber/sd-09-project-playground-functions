@@ -259,10 +259,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  // Regex e Loop retirados de https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  var regex = /\d/g;
+  let sum = 0;
 
+  while (match = regex.exec(string)) {
+    sum += parseInt(match[0]);
+  }
+  if (sum < 2) {
+    return sum + ' copo de água';
+  } else {
+    return sum + ' copos de água';
+  }
+}
 
 module.exports = {
   calcArea,
