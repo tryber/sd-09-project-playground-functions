@@ -134,12 +134,36 @@ function fizzBuzz(numerosArray) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(currentString) {
   // seu código aqui
-}
-function decode() {
+  let stringWithNumbers = '';
+
+  stringWithNumbers = currentString.replace(/a/g, '1')
+  stringWithNumbers = stringWithNumbers.replace(/e/g, '2');
+  stringWithNumbers = stringWithNumbers.replace(/i/g, '3');
+  stringWithNumbers = stringWithNumbers.replace(/o/g, '4');
+  stringWithNumbers = stringWithNumbers.replace(/u/g, '5');
+
+  return stringWithNumbers;
+
+}   
+
+function decode(stringWithNumbers) {
   // seu código aqui
+  let stringWithoutNumbers = '';
+
+  stringWithoutNumbers = stringWithNumbers.replace(/1/g, 'a');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/2/g, 'e');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/3/g, 'i');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/4/g, 'o');
+  stringWithoutNumbers = stringWithoutNumbers.replace(/5/g, 'u');
+
+  return stringWithoutNumbers;
+  
 }
+
+
+
 
 // Desafio 10
 function techList() {
