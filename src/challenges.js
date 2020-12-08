@@ -144,9 +144,9 @@ function techList(baseArray, name) {
       baseObject.name = name;
       outputArray.push (baseObject);
     }
-    else {
-      outputArray = 'Vazio';
-    }
+  }
+  else {
+    outputArray = 'Vazio';
   }
   return outputArray;
 }
