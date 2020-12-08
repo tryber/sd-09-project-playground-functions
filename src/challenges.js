@@ -71,7 +71,7 @@ function fizzBuzz(arrayNumbers) {
      } else {
          arrayResp[key] = 'bug!';
        }
-  } 
+  }
 return arrayResp;
 }
 
@@ -95,16 +95,13 @@ function encode(param) {
            newString.push('4');
         break;
         case 'u':
-           newString.push('5'); 
+           newString.push('5');
         break;
         default:
             newString.push(key);
-        
-    
-     
    }
   }return newString.join('').toString();
- } 
+ }
 
 function decode(param) {
  let newString = [];
@@ -124,20 +121,18 @@ function decode(param) {
           newString.push('o');
        break;
        case '5':
-          newString.push('u'); 
+          newString.push('u');
        break;
        default:
-           newString.push(key);
-       
+           newString.push(key);       
    }
-   
- }return newString.join('').toString();
-  
+ }return newString.join('').toString();  
 }
+
 // Desafio 10
 function techList(param,nome) {
   let paramSorted = param.sort();
-  let lista = []; 
+  let lista = [];
   if (param.length === 0){
     return 'Vazio!';
   }else {
@@ -146,16 +141,16 @@ function techList(param,nome) {
     listaInterna['tech']=paramSorted[i];
     listaInterna['name'] = nome;
     i +=1;
-    lista.push(listaInterna)
+    lista.push(listaInterna);
   }
   return lista;
-  } 
+  }
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+ 
+
 }
 
 // Desafio 12
