@@ -1,7 +1,5 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  value1 = true;
-  value2 = true;
   
   return value1 && value2  
 }
@@ -16,14 +14,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(anyStringLiteral) {
-  let arrayStrings = anyStringLiteral.split(' ');
+  let arrayStrings = anyStringLiteral.split(" ");
 
   return arrayStrings
 }
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let lastFirstValues = arrayOfStrings[arrayOfStrings.length - 1] + ', ' + arrayOfStrings[0];
+  let lastFirstValues = arrayOfStrings[arrayOfStrings.length - 1] + ", " + arrayOfStrings[0];
   
   return lastFirstValues
 }
@@ -58,13 +56,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.sqrt(Math.pow(deltaAbscisse2, 2) + Math.pow(deltaOrdenated2, 2));
 
   if(distanceCat1 < distanceCat2) {
-    return '"Cat1"'
+    return "Cat1";
   }
   else if (distanceCat2 < distanceCat1) {
-    return '"Cat2"'
+    return "Cat2";
   }
   else {
-    return '"os gatos trombam e o rato foge"'
+    return "os gatos trombam e o rato foge"
   }
 }
 
@@ -73,16 +71,16 @@ function fizzBuzz(numArray) {
   let fbArray = [];
   for (let indexFiBu = 0; indexFiBu <= numArray.length; indexFiBu = indexFiBu + 1) {
     if (numArray[indexFiBu] % 3 == 0) {
-      return fbArray[indexFiBu] = '"fizz"' 
+      return fbArray[indexFiBu] = "fizz"; 
     }
     else if (numArray[indexFiBu] % 5 == 0) {
-      return fbArray[indexFiBu] = '"buzz"';
+      return fbArray[indexFiBu] = "buzz";
     }
     else if (numArray[indexFiBu] % 3 == 0 && numArray[indexFiBu] % 5 == 0) {
-      return fbArray[indexFiBu] = '"fizzBuzz"';
+      return fbArray[indexFiBu] = "fizzBuzz";
     }
     else {
-      return fbArray[indexFiBu] = '"bug"';
+      return fbArray[indexFiBu] = "bug";
     }
   }  
 }
