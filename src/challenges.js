@@ -42,14 +42,16 @@ function highestCount(array) {
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let pow = 'os gatos trombam e o rato foge';
   let mCat1 = Math.abs(mouse - cat1);
   let mCat2 = Math.abs(mouse - cat2);
   if (mCat1 < mCat2) {
     return 'cat1';
-  } else if (mCat1 > mCat2) {
+  }
+ if (mCat1 > mCat2) {
     return 'cat2';
   }
-  return 'os gatos trombam e o rato fogem';
+ return pow;
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
