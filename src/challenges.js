@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (mouse < cat2) {
     hunt1 = cat2 - mouse;
-  } else{ 
+  } else{
     hunt1 = mouse - cat2;
   }
   if (hunt < hunt1) {
@@ -111,7 +111,32 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(word) {
+  let character = word.split('');
+  let result = '';
+  for (let counter = 0; counter < character.length; counter += 1) {
+    switch (character[counter]) {
+      case 'a':
+        result += '1';
+        break;
+      case 'e':
+        result += '2';
+        break;
+      case 'i':
+        result += '3';
+        break;
+      case 'o':
+        result += '4';
+        break;
+      case 'u':
+        result += '5';
+        break;
+      default:
+        result += character[counter];
+        break;
+    }
+  }
+  return result;
   // seu código aqui
 }
 function decode() {
