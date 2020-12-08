@@ -20,7 +20,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(namesArray) {
-  return '$namesArray[namesArray.length -1]}, ${namesArray[0]}'
+  return '${namesArray[namesArray.length -1]}, ${namesArray[0]}'
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -39,6 +39,7 @@ function highestCount(array) {
   }
   return repeatNumber
 }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let winner = '';
@@ -53,22 +54,23 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return winner
 }
+
 // Desafio 8
 function fizzBuzz(numberArray) {
   let finalArray = [];
   for (let cont of numberArray) {
     switch (true) {
-    case cont %3 === 0 && cont % 5 === 0 :
-    finalArray.push('fizzBuzz');
-    break;
-    case cont % 5 === 0:
-    finalArray.push('buzz');
-    break;
-    case cont %3 === 0:
-    finalArray.push('fizz');
-    break;
-    default:
-    finalArray.push('bug!');
+      case cont % 3 === 0 && cont % 5 === 0 :
+        finalArray.push('fizzBuzz');
+        break;
+      case cont % 5 === 0:
+        finalArray.push('buzz');
+        break;
+      case cont % 3 === 0:
+        finalArray.push('fizz');
+        break;
+      default:
+        finalArray.push('bug!');
     }
   }
   return finalArray
