@@ -266,7 +266,7 @@ function hydrate(string) {
   let match;
   do {
     sum += parseInt(match[0], 10);
-  } while (match = regex.exec(string))
+  } while (match = regex.exec(string) !== null);
 
   // while (match = regex.exec(string)) {
   //   sum += parseInt(match[0], 10);
