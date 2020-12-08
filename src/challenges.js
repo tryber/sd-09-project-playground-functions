@@ -101,11 +101,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (cat1Dist < cat2Dist) {
-      return 'cat1';
+    return 'cat1';
   } else if (cat1Dist === cat2Dist) {
-      return 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   } else {
-      return 'cat2';
+    return 'cat2';
   }
 }
 
@@ -300,8 +300,11 @@ function generatePhoneNumber(numArray) {
 // --------------------------------------------------------------------
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let cond1 = (lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC));
+  let cond2 = (lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC));
+  let cond3 = (lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB));
+  return cond1 && cond2 && cond3;
 }
 
 // Desafio 13
