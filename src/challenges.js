@@ -96,12 +96,61 @@ function fizzBuzz(lista) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let novaString = '';
+let string = 'hi there!';
+function encode(string) {
+  for (let index = 0; index < string.length; index += 1) {
+      let word = string[index];
+    switch (word) {
+      case 'a':
+      novaString = novaString + '1';
+        break;
+      case 'e':
+      novaString = novaString + '2';
+      break;
+      case 'i':
+      novaString = novaString + '3';
+      break;
+      case 'o':
+      novaString = novaString + '4';
+      break;
+      case 'u':
+      novaString = novaString + '5';
+      break;
+      default:
+      novaString = novaString + word;
+    }
+  }console.log(novaString);
 }
-function decode() {
-  // seu código aqui
+encode(string);
+
+let outraString = 'h3 th2r2!';
+function decode(outraString) {
+  let novaString = '';
+  for (let index = 0; index < outraString.length; index += 1) {
+  let word = outraString[index];
+    switch (word) {
+      case '1':
+      novaString = novaString + 'a';
+      break;
+      case '2':
+      novaString = novaString + 'e';
+      break;
+      case '3':
+      novaString = novaString+ 'i';
+      break;
+      case '4':
+      novaString = novaString + 'o';
+      break;
+      case '5':
+      novaString = novaString + 'u';
+      break;
+      default:
+      novaString = novaString + word;
+    }
+  }console.log(novaString);
 }
+decode(outraString);
 
 // Desafio 10
 function techList() {
