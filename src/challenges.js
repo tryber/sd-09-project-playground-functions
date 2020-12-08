@@ -28,7 +28,7 @@ function concatName(arrayOfStrings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  
+  return (wins * 3 + ties);
 }
 
 // Desafio 6
@@ -43,7 +43,7 @@ function highestCount(numberArray) {
   return counter
 }
 
-// Desafio 7javascriptjavascriptjavascript
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
