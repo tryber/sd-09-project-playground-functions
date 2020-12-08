@@ -136,15 +136,14 @@ function decode(string) {
 function techList(array, name) {
   let objectList = [];
   let sortArray = array.sort();
+  if (sortArray === '') {
+    objectList = 'Vazio!';
+  }
   for (let index = 0; index < sortArray.length; index += 1) {
-    if (sortArray[index] === '') {
-      objectList.push('Vazio');
-    } else {
       objectList.push({
         tech: sortArray[index],
         name: name,
       });
-    }
   }
   return objectList;
 }
