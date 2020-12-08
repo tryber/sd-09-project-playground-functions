@@ -58,13 +58,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberArray) {
   let finalArray = [];
   for (let cont = 0; cont<numberArray.length; cont += 1) {
-    if (numberArray[cont] %3 === 0) {
-    finalArray.push('fizz');
+    if (numberArray[cont] %3 === 0 && numberArray[cont] % 5 === 0) {
+    finalArray.push('fizzBuzz');
     } else if (numberArray[cont] % 5 === 0) {
     finalArray.push('buzz');
-    } else if (numberArray[cont] %3 === 0 && numberArray[cont] % 5 === 0) {
-    finalArray.push('fizzBuzz');
-    } else if (numberArray[cont] %3 !== 0 && numberArray[cont] % 5 !== 0) {
+    } else if (numberArray[cont] %3 === 0) {
+    finalArray.push('fizz');
+    } else {
     finalArray.push('bug!');
     }
     }
