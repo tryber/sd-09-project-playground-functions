@@ -1,5 +1,5 @@
 // Desafio 1
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
@@ -9,7 +9,7 @@ console.log(compareTrue(true, true));
 console.log(compareTrue(true, false));
 
 // Desafio 2
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function calcArea(base, height) {
   if (base !== 0 && height !== 0) {
     let areaTriangulo = (base * height) / 2;
@@ -20,7 +20,7 @@ console.log(`A área do triângulo é: ${calcArea(10, 50)}`);
 console.log(`A área do triângulo é: ${calcArea(10, 0)}`);
 
 // Desafio 3
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function splitSentence(string) {
   let novaString = string.split(' ');
   return novaString;
@@ -28,7 +28,7 @@ function splitSentence(string) {
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function concatName(words) {
   let ultimoPalavra = words.pop();
   return `${ultimoPalavra}, ${words[0]}`;
@@ -36,14 +36,14 @@ function concatName(words) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 console.log(footballPoints(10, 5));
 
 // Desafio 6
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function highestCount(numeros) {
   let contador = 0;
   let maiorNum = 0;
@@ -60,7 +60,7 @@ function highestCount(numeros) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function catAndMouse(mouse, cat1, cat2) {
   let firstDistance = Math.abs(mouse - cat1);
   let secondDistance = Math.abs(mouse - cat2);
@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function fizzBuzz(lista) {
   let proxima = [];
   let proximaCont = 0;
@@ -91,7 +91,7 @@ function fizzBuzz(lista) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function encode(frase) {
   let novaString = '';
   for (let index = 0; index < frase.length; index += 1) {
@@ -147,40 +147,38 @@ function decode(outraString) {
 decode('h3 th2r2!');
 
 // Desafio 10
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function techList(desejos, name) {
   let novaArray = [];
   desejos.sort();
 
-  if (desejos.length < 1 ) {
+  if (desejos.length < 1) {
     return 'Vazio!';
   }
   for (let index = 0; index < desejos.length; index += 1) {
     novaArray.push({
-      tech: desejos[index] ,
-      name
-       });
-
-  }  
-  return novaArray;
+      tech:desejos[index] ,
+      name,
+    });
+  } return novaArray;
 }
 console.log(techList([], 'Lucas'));
 
 
 // Desafio 11
-// ____________________________________________________________________________________________________________
-function generatePhoneNumber() {
+// _______________________________________________________________
+function generatePhoneNumber(){
   // seu código aqui
 }
 
 // Desafio 12
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function triangleCheck() {
   // seu código aqui
 }
 
 // Desafio 13
-// ____________________________________________________________________________________________________________
+// _______________________________________________________________
 function hydrate() {
   // seu código aqui
 }
