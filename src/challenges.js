@@ -150,6 +150,7 @@ function techList(array, name) {
   }
   return finalArray;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Pamela'))
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
@@ -180,10 +181,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(drinksString) {
+  let regexp = /\d+?/g;
+  let extractNumbersFromString = drinksString.match(regexp);
+  let sum = 0;
 
+  for (let index = 0; index < extractNumbersFromString.length; index += 1) {
+    sum += parseInt(extractNumbersFromString[index], 10);
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
+}
 
 module.exports = {
   calcArea,
