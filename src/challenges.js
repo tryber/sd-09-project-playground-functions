@@ -12,19 +12,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(sentence) {
-  let wordsArray = [];
-  let word = '';
+function splitSentence(frase) {
+  let arrayPalavras = [];
+  let palavra = '';
 
-  for (let index = 0; index <= sentence.length; index += 1) {
-    if (sentence[index] !== ' ' && index !== sentence.length) {
-      word += sentence[index];
+  for (let index = 0; index <= frase.length; index += 1) {
+    if (frase[index] !== ' ' && index !== frase.length) {
+      palavra += frase[index];
     } else {
-      wordsArray.push(word);
-      word = '';
+      arrayPalavras.push(palavra);
+      palavra = '';
     }
   }
-  return wordsArray;
+  return arrayPalavras;
 }
 
 // Desafio 4
@@ -209,7 +209,7 @@ function validateIfPossiblePhoneNumber(array) {
 }
 
 function generatePhoneNumber(array) {
-  if (validateIfPossiblePhoneNumber(array)) {
+  if (validateIfPossiblePhoneNumber(array) === true) {
     const joinedArray = array.join('');
     let DDD = joinedArray.slice(0, 2);
     let firstPart = joinedArray.slice(2, 7);
@@ -217,7 +217,7 @@ function generatePhoneNumber(array) {
     let numero = `(${DDD}) ${firstPart}-${secondPart}`;
     return numero;
   }
-  return  validateIfPossiblePhoneNumber(array);
+  return validateIfPossiblePhoneNumber(array);
 }
 
 // Desafio 12
