@@ -17,7 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(text) {
   // seu código aqui
-  let saida = text.split(" ");
+  let saida = text.split(' ');
   return saida;
 }
 
@@ -26,7 +26,7 @@ function concatName(array) {
   // seu código aqui
   let str1 = array[0];
   let str2 = array[array.length - 1];
-  let str3 = str2 + ", " + str1;
+  let str3 = `${str2}, ${str1}`;
   return str3;
 }
 
