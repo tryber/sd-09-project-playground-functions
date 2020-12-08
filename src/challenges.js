@@ -41,7 +41,6 @@ function highestCount(recive) {
     if (recive[index] > highest) {
       highest = recive[index];
     }
-
   }
   for (let index2 = 0; index2 < recive.length; index2 += 1) {
     if (recive[index2] === highest) {
@@ -98,8 +97,18 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  // seu código aqui	 
+  let arrayTechObjects = [];
+  if (array.length !== 0) {
+  for (let tec of array.sort()) {
+     let techObject = {tech: undefined,name: name,};
+    techObject.tech = tec;
+    arrayTechObjects.push(techObject);
+  }
+  return arrayTechObjects;
+} 
+  return 'Vazio!'
 }
 
 // Desafio 11
