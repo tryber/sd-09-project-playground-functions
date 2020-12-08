@@ -134,30 +134,29 @@ function decode(stringN) {
 // Desafio 10  *okk*
 function techList(tech, name) {
 
-  let technologies = tech;
-  let orderList = technologies.sort();
-  let technolist = [];
+ 
+  let orderList = tech.sort();
+  let technoList = [];
   
 
-  if ( tech === 0 ) {
+  if ( tech.length === 0 ) {
     return 'Vazio!';
   
   } else {
 
-    for ( let count = 0; count < orderList.lenght ; count +=1) {
+    for ( let count = 0; count < tech.lenght ; count += 1) {
 
       let technoObject = {
         tech: orderList[count],
         name: name,
       }
 
-      technolist.push(technoObject)
-        
-      
+      technoList.push(technoObject)
+             
     }
   }
 
-  return technolist
+  return technoList
 
 }
 
