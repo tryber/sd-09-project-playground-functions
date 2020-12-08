@@ -98,15 +98,20 @@ function decode(stringToDecode) {
 // Desafio 10
 let arrayTechs = [];
 function techList(arrayTechs, name) {
-arrayTechs = arrayTechs.sort();
-for (let index3 = 0; index3 < arrayTechs.length; index3 += 1){
-  object = {
-    tech: arrayTechs[index3],
-    name: name
+  if (arrayTechs.length===0){
+    return 'Vazio!'
   }
-  arrayTechs [index3] = object;
-}
-return arrayTechs;
+  else {
+    arrayTechs = arrayTechs.sort();
+    for (let index3 = 0; index3 < arrayTechs.length; index3 += 1){
+      object = {
+        tech: arrayTechs[index3],
+        name: name
+      }
+      arrayTechs [index3] = object;
+    }
+    return arrayTechs;
+  }
 }
 
 // Desafio 11
