@@ -17,10 +17,11 @@ function splitSentence(frase) {
 console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
+let arrayString = ['Valdeci', 'Lucas', 'Jean', 'Paolillo', 'Patricia'];
+
 function concatName() {
-  return arrayString[arrayString.length-1]+ ', ' + arrayString[0];
+  return arrayString[arrayString.length-1] + ', ' + arrayString[0];
 }
-let arrayString = ['Valdeci','Lucas', 'jean','leonardo', 'Paolillo','Patricia'];
 console.log(concatName(arrayString));
 
 // Desafio 5
