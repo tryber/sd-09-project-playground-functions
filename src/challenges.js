@@ -1,59 +1,175 @@
+// Bora pra cima de mais um projeto :)
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  return value1 === true && value2 === true
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ')
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  // return `${vetor[vetor.length - 1]}, ${vetor[0]}.`
+  let resposta = vetor[vetor.length - 1];
+  let resposta2 = vetor[0];
+  return (resposta +', ' + resposta2);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = 0;
+  let cont = 0;
+  for (let index in array){
+    if (maiorNumero < array[index]){
+      maiorNumero = array[index]
+    }
+  }
+  for (let index2 in array){
+    if (maiorNumero === array[index2]){
+      cont += 1
+    }
+  }
+  return cont
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+  if(Math.abs(distanciaCat1) < Math.abs(distanciaCat2)){
+    return 'cat1'
+  }else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)){
+    return 'cat2'
+  }else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let newArray = [];
+  for (let index in array){
+    if (array[index]%3 === 0 && array[index]%5 === 0){
+      newArray[index] = 'fizzBuzz'
+    }else if (array[index]%3 === 0){
+      newArray[index] = 'fizz'
+    }else if (array[index]%5 === 0){
+      newArray[index] = 'buzz'
+    } else {
+      newArray[index] = 'bug!'
+    }
+  }
+  return newArray
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let newCode = '';
+  for (index in frase){
+    switch (frase[index]){
+      case 'a':
+        newCode += 1;
+        break;
+      case 'e':
+        newCode += 2;
+        break;
+      case 'i':
+        newCode += 3;
+        break;
+      case 'o':
+        newCode += 4;
+        break;
+      case 'u':
+        newCode += 5;
+        break;
+      default:
+        newCode += frase[index];
+    }
+  }
+  return newCode
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let oldCode = '';
+  for (index in frase){
+    switch (frase[index]){
+      case '1':
+        oldCode += 'a';
+        break;
+      case '2':
+        oldCode += 'e';
+        break;
+      case '3':
+        oldCode += 'i';
+        break;
+      case '4':
+        oldCode += 'o';
+        break;
+      case '5':
+        oldCode += 'u';
+        break;
+      default:
+        oldCode += frase[index];
+    }
+  }
+  return oldCode
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let arrayTechs = techs.sort()
+  if (arrayTechs.length === 0){
+    return 'Vazio!'
+  }
+  let listaComObjetos = [];
+  for (let index = 0; index < arrayTechs.length; index += 1){
+    listaComObjetos[index] = {
+      tech:arrayTechs[index],
+      name: name,}
+  }
+  return listaComObjetos
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let repeat = 0;
+  let maiorRepeat = 0;
+  let result = '(';
+  if (number.length != 11){
+    return 'Array com tamanho incorreto.'
+  }
+  for (let index = 0; index < number.length; index += 1){
+    repeat = 0;
+    if (index === 2){
+      result +=') '
+    }
+    if (index === 7){
+      result += '-'
+    }
+    result += number[index]
+    for (let second = 0; second < number.length; second += 1){
+      if(number[index] === number[second]){
+        repeat += 1
+      }
+    }
+    maiorRepeat = repeat
+      if (maiorRepeat >= 3 || number[index] < 0 || number[index] > 9){
+        return 'não é possível gerar um número de telefone com esses valores'
+      }
+  }
+  return result
 }
 
 // Desafio 12
