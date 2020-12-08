@@ -45,10 +45,50 @@ function highestCount(array) {
   }
 return repetNumber;
 }
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+/*function highestCount (array) {
+  let maiorNumero = array[0];
+  let contagemNumero = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (maiorNumero < array[index]) {
+      maiorNumero = array[index];
+      console.log(maiorNumero);
+    } 
+    for (index = 0; index < array.length; index += 1) {
+      if (maiorNumero === array[index]) {
+        contagemNumero += 1;
+        //console.log(contagemNumero);
+      }
+    } 
+  }
+  return contagemNumero;
 }
+console.log(highestCount([8, 6, 5, 4, 8, 5]));*/
+
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let firstCat = '';
+  let distance1 = cat1 - mouse;
+  let distance2 = cat2 - mouse;
+  if (distance1 < 0) {
+    distance1 = (cat1 - mouse) * -1;
+    //console.log(distance1);
+  } 
+  if (distance2 < 0) {
+    distance2 = (cat2 - mouse) * -1;
+    //console.log(distance2);
+  }
+  if (distance1 < distance2) {
+    firstCat = 'cat1';
+  } else {
+    firstCat = 'cat2';
+  }
+  if (distance1 === distance2) {
+    firstCat = 'os gatos trombam e o rato foge';
+  }
+  return firstCat;
+}
+//console.log(catAndMouse(0, -2, 2));
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
