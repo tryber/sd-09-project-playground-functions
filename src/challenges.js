@@ -34,7 +34,7 @@ function highestCount(array) {
   let index;
   for (index = 0; index < array.length; index += 1) {
     if (maxNumber === array[index]) {
-      repeatCounter = repeatCounter + 1;
+      repeatCounter += 1;
     }
   }
   return repeatCounter;
@@ -42,33 +42,18 @@ function highestCount(array) {
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mCat1 = Math.abs (mouse - cat1);
-  let mCat2 = Math.abs (mouse - cat2);
+  let mCat1= Math.abs(mouse - cat1);
+  let mCat2= Math.abs(mouse - cat2);
   if (mCat1 < mCat2) {
-    return 'cat1' ;
-  } else if (mCat1 > mCat2){
-    return 'cat2' ;
-} else 
+    return 'cat1';
+  } else if (mCat1 > mCat2) {
+    return 'cat2';
+  }
 return 'os gatos trombam e o rato fogem';
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
-function fizzBuzz(array) {
-  let mensage = [];
-  let index;
-  for (index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      mensage.push('fizzbuzz');
-    } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-      mensage.push('fizz');
-    } else if (array[index] % 3 !== 0 && array[index] % 5 === 0) {
-      mensage.push('buzz');
-    } else {
-      mensage.push('bug!');
-  }
-  }
-  return mensage;
-}
+
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
 function encode() {
