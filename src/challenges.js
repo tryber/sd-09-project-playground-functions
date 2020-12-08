@@ -20,7 +20,7 @@ console.log(splitSentence('Go Trybe'));
 let arrayString = ['Valdeci', 'Lucas', 'Jean', 'Paolillo', 'Patricia'];
 
 function concatName() {
-  return arrayString[arrayString.length-1] + ', ' + arrayString[0];
+  return arrayString [arrayString.length - 1] + ', ' + arrayString [0];
 }
 console.log(concatName(arrayString));
 
