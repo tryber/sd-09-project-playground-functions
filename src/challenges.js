@@ -215,6 +215,18 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  // let regex = ;  // retorna os numeros encontrados na string
+  let sum = 0; // a gente vai utilizar pra somar os numeros
+  let numberInString = string.match(/\d+/g); // criamos um array com os numeros capturados na string
+  // percorre o array somando os numeros
+  for (let index = 0; index < numberInString.length; index += 1){
+      sum += parseInt(numberInString[index]); // parseInt está transformando o numeros em tipo Number
+  }
+
+  if (sum == 1){
+      return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
   
 }
 
