@@ -79,7 +79,7 @@ function encode(frase) {
   let newCode = '';
   for (index in frase){
     switch (frase[index]){
-      case 'a': 
+      case 'a':
         newCode += 1;
         break;
       case 'e':
@@ -87,7 +87,7 @@ function encode(frase) {
         break;
       case 'i':
         newCode += 3;
-        break;  
+        break;
       case 'o':
         newCode += 4;
         break;
@@ -105,7 +105,7 @@ function decode(frase) {
   let oldCode = '';
   for (index in frase){
     switch (frase[index]){
-      case '1': 
+      case '1':
         oldCode += 'a';
         break;
       case '2':
@@ -113,7 +113,7 @@ function decode(frase) {
         break;
       case '3':
         oldCode += 'i';
-        break;  
+        break;
       case '4':
         oldCode += 'o';
         break;
@@ -124,7 +124,7 @@ function decode(frase) {
         oldCode += frase[index];
     }
   }
-  return oldCode  
+  return oldCode
 }
 
 // Desafio 10
@@ -136,7 +136,7 @@ function techList(techs, name) {
   let listaComObjetos = [];
   for (let index = 0; index < arrayTechs.length; index += 1){
     listaComObjetos[index] = {
-      tech:arrayTechs[index], 
+      tech:arrayTechs[index],
       name: name,}
   }
   return listaComObjetos
@@ -145,27 +145,29 @@ function techList(techs, name) {
 // Desafio 11
 function generatePhoneNumber(number) {
   let repeat = 0;
-  let result = '('; 
+  let maiorRepeat = 0;
+  let result = '(';
   if (number.length != 11){
     return 'Array com tamanho incorreto.'
   }
   for (let index = 0; index < number.length; index += 1){
     repeat = 0;
     if (index === 2){
-      result +=') ' 
+      result +=') '
     }
     if (index === 6){
       result += '-'
     }
-    result += number[index] 
-    for (let second = 1; second < number.length; second += 1){
+    result += number[index]
+    for (let second = 0; second < number.length; second += 1){
       if(number[index] === number[second]){
         repeat += 1
       }
     }
-    if (repeat > 3 || number[index] < 0 || number[index] > 9){
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
+    maiorRepeat = repeat
+      if (maiorRepeat >= 3 || number[index] < 0 || number[index] > 9){
+        return 'não é possível gerar um número de telefone com esses valores'
+      }
   }
   return result
 }
