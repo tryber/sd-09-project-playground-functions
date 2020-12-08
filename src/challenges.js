@@ -121,8 +121,8 @@ function encode(string) {
 }
 function decode(string) {
   let decodedString = '';
-  for (let letter of string) {
-    switch (letter) {
+  for (let character of string) {
+    switch (character) {
       case '1':
         decodedString += 'a';
         break;
