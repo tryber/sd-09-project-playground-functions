@@ -251,9 +251,53 @@ function techList(techNameArray, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkNum(numArray) {
+  for (let index = 0; index < numArray.length; index += 1) {
+    if (numArray[index] < 0 || numArray[index] > 9) {
+      return true;
+    }
+  }
 }
+
+function countNum(numArray, number) {
+  let count = 0;
+  for (let index = 0; index < numArray.length; index += 1) {
+    if (numArray[index] === number) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+function checkRepeatedNum(numArray) {
+  let total;
+  for (let index = 0; index < numArray.length; index += 1) {
+    total = countNum(numArray, numArray[index]);
+    if (total >= 3) {
+      return true;
+    }
+  }
+}
+
+function generatePhoneNumber(numArray) {
+  if (numArray.length !== 11) return 'Array com tamanho incorreto.';
+
+  if (checkNum(numArray) || checkRepeatedNum(numArray)) {
+    return 'não é possível gerar um número de telefone com esses valores.';
+  }
+
+  const joinedNumArray = numArray.join('');
+
+  let DDD = joinedNumArray.slice(0, 2);
+  let prefix = joinedNumArray.slice(2, 7);
+  let sufix = joinedNumArray.slice(7, 11);
+  let phoneNumber = `(${DDD}) ${prefix}-${sufix}`;
+
+  return phoneNumber;
+}
+
+// console.log(generatePhoneNumber([2, 2, 2, 2, 2, 2, 2, 2, 9, 9, 9]));
+// --------------------------------------------------------------------
 
 // Desafio 12
 function triangleCheck() {
