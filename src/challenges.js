@@ -35,8 +35,8 @@ function highestCount(array) {
   let index;
   for (index = 0; index < array.length; index += 1) {
     if (maxNumber === array[index]) {
-        repeatCounter = repeatCounter +=1;
-      }
+      repeatCounter = repeatCounter += 1;
+    }
   }
   return repeatCounter;
 }
@@ -50,8 +50,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (mCat1 > mCat2) {
     return 'cat2';
   }
-    return 'os gatos trombam e o rato fogem';
-  }
+  return 'os gatos trombam e o rato fogem';
+}
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz(array) {
@@ -59,13 +59,13 @@ function fizzBuzz(array) {
   let index;
   for (index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-        mensage.push('fizzbuzz');
+      mensage.push('fizzbuzz');
     } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-        mensage.push('fizz');
+      mensage.push('fizz');
     } else if (array[index] % 3 !== 0 && array[index] % 5 === 0) {
-        mensage.push('buzz');
+      mensage.push('buzz');
     } else {
-        mensage.push('bug!');
+      mensage.push('bug!');
   }
   }
   return mensage;
@@ -115,4 +115,5 @@ module.exports = {
   highestCount,
   hydrate,
   splitSentence,
-  triangleCheck,}
+  triangleCheck,
+}
