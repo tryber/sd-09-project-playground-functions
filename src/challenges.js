@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 function concatName(arrayName) {
   let lastName = arrayName.pop();
   let firstName = arrayName[0];
-  let spaceGambiarra = ',' ;
+  let spaceGambiarra = ', ';
   let stringNames = lastName + spaceGambiarra + firstName
   return stringNames
 }
@@ -109,7 +109,7 @@ function encode(phrase) {
 
 function decode(newPhrase) {
   let newPhraseArray = [];
-  for (let cont = 0; cont < newPhrase.length; cont +=1 ) { 
+  for (let cont = 0; cont < newPhrase.length; cont += 1) { 
     switch (newPhrase[cont]) {
       case '1' :
         newPhraseArray += 'a';
@@ -136,8 +136,17 @@ function decode(newPhrase) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  let arrayTech = []
+  for (let cont= 0; cont<techArray.length; cont+= 1){
+    let techno = {
+      tech : techArray[cont],
+      name : name
+    }
+    arrayTech.push(techno);
+    arrayTech.sort((a, b) => a.tech.localeCompare(b.tech))
+  }
+  return arrayTech
 }
 
 // Desafio 11
