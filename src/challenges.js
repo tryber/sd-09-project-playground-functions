@@ -192,11 +192,11 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let isTriangle = false;
   if (
-    Math.abs(lineB - lineC) < lineA &&
+    lineA > Math.abs(lineB - lineC) &&
     lineA < lineB + lineC &&
-    Math.abs(lineA - lineC) < lineB &&
+    lineB > Math.abs(lineA - lineC) &&
     lineB < lineA + lineC &&
-    Math.abs(lineA - lineB) < lineC &&
+    lineC > Math.abs(lineA - lineB) &&
     lineC < lineA + lineC
   ) {
     isTriangle = true;
