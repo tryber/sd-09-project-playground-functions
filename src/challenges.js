@@ -78,7 +78,6 @@ function fizzBuzz(array8) {
   return array8;
 }
 
-// teste
 // Desafio 9
 function encode(string9) {
   let object = { 'a':'1','e':'2','i':'3','o':'4','u':'5'};
@@ -89,8 +88,6 @@ function encode(string9) {
   }
   return string9;
 }
-
-
 function decode(string9) {
   let object = { '1':'a','2':'e','3':'i','4':'o','5':'u'};
   for (let key in object) {
@@ -122,12 +119,12 @@ function techList(arraytech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arraytelephone) {
+function generatePhoneNumber() {
 }
 
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck() {
   // seu código aqui
 }
 
