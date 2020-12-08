@@ -79,45 +79,26 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+let numbers = ['1', '2', '3', '4', '5'];
+let letters = ['a', 'e', 'i', 'o', 'u'];
+
+function changes(string, codeLetters, codeNumbers) {
+  let result = string;
+  for (let i = 0; i < codeLetters.length; i += 1) {
+    let arrReg = new RegExp(codeLetters[i], 'g');
+    result = result.replace(arrReg, codeNumbers[i]);
+  }
+  return result;
+}
 function encode(paramer1) {
-  let phrase = paramer1.split('')
-  let numbers = [1, 2, 3, 4, 5]
-
-  for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] === 'a') {
-      phrase[index] = numbers[0]
-    } else if (phrase[index] === 'e') {
-      phrase[index] = numbers[1]
-    } else if (phrase[index] === 'i') {
-      phrase[index] = numbers[2]
-    } else if (phrase[index] === 'o') {
-      phrase[index] = numbers[3]
-    } else if ((phrase[index] === 'u')) {
-      phrase[index] = numbers[4]
-    }
-  }
-  return phrase
+  return changes(paramer1, letters, numbers);
 }
 
-function decode(paramer1) {
-  let phrase = paramer1.split('')
-  let letters = ['A', 'B', 'C', 'D', 'E']
-
-  for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] === '1') {
-      phrase[index] = letters[0]
-    } else if (phrase[index] === '2') {
-      phrase[index] = letters[1]
-    } else if (phrase[index] === '3') {
-      phrase[index] = letters[2]
-    } else if (phrase[index] === '4') {
-      phrase[index] = letters[3]
-    } else if ((phrase[index] === '5')) {
-      phrase[index] = letters[4]
-    }
-  }
-  return phrase
+function decode(paramer2) {
+  return changes(paramer2, numbers, letters);
 }
+
+console.log(encode('How are you today?'));
 console.log(decode("h3 th2r2!"));
 
 // Desafio 10
