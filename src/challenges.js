@@ -85,64 +85,28 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(text) {
   let string = text;
-  let result = '';
+  let vogais = ['a', 'e', 'i', 'o', 'u']
   for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === 'a') {
-      string = string.replace(string[index], '1');
+    for (let cont = 0; cont < vogais.length; cont += 1) {
+      if (string[index] === vogais[cont]) {
+        string = string.replace(string[index], (cont + 1));
+      }
     }
   }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === 'e') {
-      string = string.replace(string[index], '2');
-    }
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === 'i') {
-      string = string.replace(string[index], '3');
-    }
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === 'o') {
-      string = string.replace(string[index], '4');
-    }
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === 'u') {
-      string = string.replace(string[index], '5');
-    }
-  }
-    return string;
+  return string;
 }
 
 function decode(text) {
   let string = text;
-  let result = '';
+  let vogais = ['a', 'e', 'i', 'o', 'u']
   for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === '1') {
-      string = string.replace(string[index], 'a');
+    for (let cont = 0; cont < vogais.length; cont += 1) {
+      if (string[index] == (cont+1)) {
+        string = string.replace(string[index], vogais[cont]);
+      }
     }
   }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === '2') {
-      string = string.replace(string[index], 'e');
-    }
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === '3') {
-      string = string.replace(string[index], 'i');
-    }
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === '4') {
-      string = string.replace(string[index], 'o');
-    }
-  }
-  for (let index = 0; index < string.length; index += 1) {
-    if(string[index] === '5') {
-      string = string.replace(string[index], 'u');
-    }
-  }
-    return string;
+  return string;
 }
 
 // Desafio 10
@@ -160,12 +124,40 @@ function techList(arrayTech, name) {
     }
     return object;
   }
-    return 'Vazio!';
+  return 'Vazio!';
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  let result = '';
+  if (arrayNumber.length === 11) {
+    for (let index = 0; index < arrayNumber; index += 1) {
+      if (arrayNumber[index] < 0 || arrayNumber[index] > 9) {
+        result = 'não é possível gerar um número de telefone com esses valores';
+        return result;
+      }
+      if (index > 1) {
+        for (let index2 = 2; index2 < arrayNumber; index2 += 1) {
+          if (arrayNumber[index] === arrayNumber[index2]) {
+            cont += 1;
+          }
+        }
+        if (cont >= 3) {
+          result = 'não é possível gerar um número de telefone com esses valores';
+          return result;
+        }
+        cont = 0;
+      }
+    }
+    let phoneNumber = arrayNumber.join('');
+    let ddd = phoneNumber[0] + phoneNumber[1];
+    let num1 = phoneNumber[2]+phoneNumber[3]+phoneNumber[4]+phoneNumber[5]+phoneNumber[6];
+    let num2 = phoneNumber[7]+phoneNumber[8]+phoneNumber[9]+phoneNumber[10];
+    result = `(${ddd}) ${num1}-${num2}`;
+    return result;
+  }
+  result = 'Array com tamanho incorreto';
+  return result;
 }
 
 // Desafio 12
