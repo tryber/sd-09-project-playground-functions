@@ -72,13 +72,7 @@ function fizzBuzz(array) {
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
-function encode(string1) {
- let= string2 string1.replace("a", "1");
- let= string2 string1.replace("e", "2"); 
- let= string2 string1.replace("i", "3"); 
- let= string2 string1.replace("o", "4"); 
- let= string2 string1.replace("u", "5"); 
-    return string2;
+
 }
 function decode(string2) {
   // seu código aqui
