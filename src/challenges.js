@@ -136,6 +136,9 @@ function decode(string) {
 function techList(array, name) {
   let objectList = [];
   for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === '') {
+      objectList.push('Vazio');
+    }
     objectList.push({
       tech: array[index],
       name: name,
