@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   let result = [];
 
   for (let index = 0; index < numeros.length; index += 1) {
