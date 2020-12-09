@@ -127,7 +127,7 @@ function generatePhoneNumber(arrayNumber) {
     return 'Array com tamanho incorreto.'
   }
   for ( let search = 0; search < arrayNumber.length; search = search + 1) {
-    if (arrayNumber[search] < 0 || arrayNumber[search] > 9) {
+    if (arrayNumber[search] < 0 || arrayNumber[search] >= 9) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
@@ -168,8 +168,12 @@ function hydrate(orderBill) {
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     amountAcohol = amountAcohol + parseInt(arrayNumbers[i]);
   }
-  
- return  amountAcohol + ' copos de água'
+  if ( amountAcohol = 1) {
+    return amountAcohol + ' copo de água'
+  }else{
+    return  amountAcohol + ' copos de água'
+  }
+ 
 }
 
 module.exports = {
