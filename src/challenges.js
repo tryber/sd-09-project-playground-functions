@@ -270,8 +270,8 @@ function hydrate(order) {
     glassesOfWater += parseInt(dividedOrder[index], 10);
   }
   if (glassesOfWater === 1) {
-  let answer = `${glassesOfWater} copo de água`;
-  return answer;
+    let answer = `${glassesOfWater} copo de água`;
+    return answer;
   }
   let answer = `${glassesOfWater} copos de água`;
   return answer;
