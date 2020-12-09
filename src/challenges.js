@@ -67,7 +67,7 @@ function highestCount(numbers) {
       equalsCount += 1;
     }
   }
-  return highestEqualsCount;
+  return equalsCount;
 }
 
 // Desafio 7
