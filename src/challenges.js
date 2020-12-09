@@ -4,7 +4,7 @@ function compareTrue(bool1, bool2) {
   if (bool1 && bool2) {
     check = true;
   }
-  return console.log(check);
+  return check;
 }
 
 
