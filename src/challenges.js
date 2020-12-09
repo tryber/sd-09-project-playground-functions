@@ -87,14 +87,13 @@ function isItdivisibleByThreeOrFive(number) {
     return byFive;
   } else if (number % 3 === 0) {
     return byThree;
-  } else {
-    return byNone;
   }
+  return byNone;
 }
 
 function fizzBuzz(numberList) {
   let answer = [];
-  for (let index in numberList) {
+  for (let index = 0; index < numberList.length; index += 1) {
     answer.push(isItdivisibleByThreeOrFive(numberList[index]));
   }
   return answer;
@@ -193,7 +192,7 @@ function numberSize(number) {
 }
 
 function repeatedNumber(number) {
-  for (let index in number) {
+  for (let index = 0; index < number.length; index += 1) {
     let count = 0;
     for (let indexRepeat in number) {
       if (number[indexRepeat] === number[index]) {
@@ -225,7 +224,7 @@ function generatePhoneNumber(number) {
   for (let index = 0; index < number.length; index += 1) {
     switch (index) {
       case 0:
-      phoneNumber += `(${number[index]}`;
+        phoneNumber += `(${number[index]}`;
         break;
       case 1:
         phoneNumber += `${number[index]}) `;
@@ -250,10 +249,33 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function notEmpty(order) {
+  if (order === '') {
+    let message = 'por favor insira um pedido';
+    return message;
+  }
 }
 
+function hydrate(order) {
+  // Observar se a string está vazia antes de fazer a função
+  // Usar ParseInt() para recuperar os números na frase usando radix 10
+  // Quebrar o texto onde existir uma vírgula
+  // Usei o conteúdo em geek for geeks para utilizar .split().join().split(): <https://www.geeksforgeeks.org/javascript-split-a-string-with-multiple-separators/>
+  if (notEmpty(order) !== undefined) {
+    return notEmpty(order);
+  }
+  let dividedOrder = order.split(' e ').join(', ').split(',');
+  let glassesOfWater = 0;
+  for (let index = 0; index < dividedOrder.length; index += 1) {
+    glassesOfWater += parseInt(dividedOrder[index], 10);
+  }
+  if (glassesOfWater === 1) {
+  let answer = `${glassesOfWater} copo de água`;
+  return answer;
+  }
+  let answer = `${glassesOfWater} copos de água`;
+  return answer;
+}
 
 module.exports = {
   calcArea,
