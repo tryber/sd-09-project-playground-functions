@@ -11,14 +11,17 @@ function compareTrue(bool1, bool2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let result = (base*height) / 2;
+  let result = (base * height) / 2;
   return result;
 }
 
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let result = '';
+  result = string.split(' ');
+  return result;
 }
 
 // Desafio 4
