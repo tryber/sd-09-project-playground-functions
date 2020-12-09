@@ -29,16 +29,12 @@ function concatName(namesArray) {
   // seu código aqui
   let keepNames = [];
   let formater = '';
-  keepNames.push(namesArray[namesArray.length -1]);
+  keepNames.push(namesArray[namesArray.length - 1]);
   keepNames.push(namesArray[0]);
   formater = keepNames.join(', ');
   return formater;
 }
 
-let array = ['marcos', 'mantovani'];
-let formater = '';
-formater = array+'';
-console.log(formater);
 
 // Desafio 5
 function footballPoints() {
