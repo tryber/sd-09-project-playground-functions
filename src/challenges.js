@@ -176,7 +176,6 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-
 function numberLength(number) {
   if (number.length !== 11) {
     let message = 'Array com tamanho incorreto.';
@@ -207,30 +206,39 @@ function repeatedNumber(number) {
     }
   }
 }
-
-function generatePhoneNumber(digitedNumber) {
-  numberLength(digitedNumber);
-  numberSize(digitedNumber);
-  repeatedNumber(digitedNumber);
-  let message = '';
-  for (let index = 0; index < digitedNumber.length; index += 1) {
+function wrongNumber(number) {
+  if (numberLength(number) !== undefined) {
+    return numberLength(number);
+  }
+  if (numberSize(number) !== undefined) {
+    return numberSize(number);
+  }
+  if (repeatedNumber(number) !== undefined) {
+    return repeatedNumber(number);
+  }
+}
+function generatePhoneNumber(number) {
+  if (wrongNumber(number) !== undefined) {
+    return wrongNumber(number);
+  }
+  let phoneNumber = '';
+  for (let index = 0; index < number.length; index += 1) {
     switch (index) {
       case 0:
-      message += `(${digitedNumber[index]}`;
+      phoneNumber += `(${number[index]}`;
         break;
       case 1:
-        message += `${digitedNumber[index]}) `;
+        phoneNumber += `${number[index]}) `;
         break;
       case 6:
-        message += `${digitedNumber[index]}-`;
+        phoneNumber += `${number[index]}-`;
         break;
       default:
-        message += digitedNumber[index];
+        phoneNumber += number[index];
     }
   }
-  return message;
+  return phoneNumber;
 }
-console.log(generatePhoneNumber([8, 1, 9, 9, 9, 3, 7, 7, 2, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
