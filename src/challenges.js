@@ -72,21 +72,30 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return message;
 }
-console.log(catAndMouse(0, 3, 2));
+
 // Desafio 8
 // switch  if() to switch()
+
+function isItdivisibleByThreeOrFive(number) {
+  let byFiveAndThree = 'fizzBuzz';
+  let byThree = 'fizz';
+  let byFive = 'buzz';
+  let byNone = 'bug!';
+  if (number % 3 === 0 && number % 5 === 0) {
+    return byFiveAndThree;
+  } else if (number % 5 === 0) {
+    return byFive;
+  } else if (number % 3 === 0) {
+    return byThree;
+  } else {
+    return byNone;
+  }
+}
+
 function fizzBuzz(numberList) {
   let answer = [];
   for (let index in numberList) {
-    if (numberList[index] % 3 === 0 && numberList[index] % 5 === 0) {
-      answer.push('fizzBuzz');
-    } else if (numberList[index] % 3 === 0) {
-      answer.push('fizz');
-    } else if (numberList[index] % 5 === 0) {
-      answer.push('buzz');
-    } else {
-      answer.push('bug!');
-    }
+    answer.push(isItdivisibleByThreeOrFive(numberList[index]));
   }
   return answer;
 }
@@ -94,7 +103,7 @@ function fizzBuzz(numberList) {
 // Desafio 9
 function encode(word) {
   let codedWord = '';
-  for (let index in word) {
+  for (let index = 0; index < word.length; index += 1) {
     switch (word[index]) {
       default:
         codedWord += word[index];
@@ -120,7 +129,7 @@ function encode(word) {
 
 function decode(codedWord) {
   let decodedWord = '';
-  for (let index in codedWord) {
+  for (let index = 0; index < codedWord.length; index += 1) {
     switch (codedWord[index]) {
       default:
         decodedWord += codedWord[index];
@@ -157,65 +166,80 @@ function techList(tech, name) {
   }
   tech.sort();
   let arrayReturn = [];
-  for (let index in tech) {
+  for (let index = 0; index < tech.length; index += 1) {
     let objectTech = {};
-    objectTech['tech'] = tech[index];
-    objectTech['name'] = name;
+    objectTech.tech = tech[index];
+    objectTech.name = name;
     arrayReturn.push(objectTech);
   }
   return arrayReturn;
 }
 
 // Desafio 11
-function generatePhoneNumber(digitedNumber) {
-  if (digitedNumber.length != 11) {
-    let message = "Array com tamanho incorreto.";
+
+function numberLength(number) {
+  if (number.length !== 11) {
+    let message = 'Array com tamanho incorreto.';
     return message;
   }
-  for (let index in digitedNumber) {
-    if (digitedNumber[index] < 0 || digitedNumber[index] > 9) {
-      let message = "não é possível gerar um número de telefone com esses valores";
+}
+
+function numberSize(number) {
+  for (let index in number) {
+    if (number[index] < 0 || number[index] > 9) {
+      let message = 'não é possível gerar um número de telefone com esses valores';
       return message;
     }
+  }
+}
+
+function repeatedNumber(number) {
+  for (let index in number) {
     let count = 0;
-    for (let indexRepeat in digitedNumber) {
-      if (digitedNumber[indexRepeat] === digitedNumber[index]) {
+    for (let indexRepeat in number) {
+      if (number[indexRepeat] === number[index]) {
         count += 1;
       }
     }
     if (count >= 3) {
-      let message = "não é possível gerar um número de telefone com esses valores";
+      let message = 'não é possível gerar um número de telefone com esses valores';
       return message;
     }
   }
+}
+
+function generatePhoneNumber(digitedNumber) {
+  numberLength(digitedNumber);
+  numberSize(digitedNumber);
+  repeatedNumber(digitedNumber);
   let message = '';
   for (let index = 0; index < digitedNumber.length; index += 1) {
     switch (index) {
       case 0:
       message += `(${digitedNumber[index]}`;
-      break;
+        break;
       case 1:
-      message += `${digitedNumber[index]}) `;
-      break;
+        message += `${digitedNumber[index]}) `;
+        break;
       case 6:
-      message += `${digitedNumber[index]}-`;
-      break;
-      default: 
-      message += digitedNumber[index];
+        message += `${digitedNumber[index]}-`;
+        break;
+      default:
+        message += digitedNumber[index];
     }
   }
   return message;
 }
+console.log(generatePhoneNumber([8, 1, 9, 9, 9, 3, 7, 7, 2, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  sumSides = lineA + lineB + lineC;
-  sumCheck = lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA+ lineB;
-  absolutCheck = lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA);
-  allCheck = sumCheck && absolutCheck;
+  let sumCheck = lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA+ lineB;
+  let absolutCheck = lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA);
+  let allCheck = sumCheck && absolutCheck;
   return allCheck;
 }
-console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
