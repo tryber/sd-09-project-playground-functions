@@ -72,7 +72,7 @@ function fizzBuzz(array) {
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
 function encode(entrada) {
-  let resultado; 
+  let resultado;
   for (let index = 0; index < entrada.length; index += 1) {
     if (entrada[index] === 'a') {
       resultado = entrada.replace(/a/g, '1');
@@ -90,8 +90,7 @@ function encode(entrada) {
 // exemplo de chamada da função:  encode("palavra");
 function decode(saida) {
   let amostra;
-  let index =0; 
-  for (index = 0; index < saida.length; index += 1) {
+  for (let index = 0; index < saida.length; index += 1) {
     if (saida[index] === '1'){
       amostra = saida.replace(/1/g, 'a');
     } else if (saida[index] === '2') {
