@@ -72,14 +72,42 @@ function fizzBuzz(array) {
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(entrada) {
+  let resultado;
+  let index =0; 
+    for (index = 0; index < entrada.length; index += 1)
+      if (entrada[index] === 'a'){
+        resultado = entrada.replace(/a/g, '1');
+      } else if (entrada[index] === 'e'){
+        resultado = entrada.replace(/e/g, '2');
+      } else if (entrada[index] === 'i'){
+        resultado = entrada.replace(/i/g, '3');
+      } else if (entrada[index] === 'o'){
+        resultado = entrada.replace(/o/g, '4');
+      } else if (entrada[index] === 'u'){
+        resultado = entrada.replace(/u/g, '5');
+      } else resultado = entrada[index];
+  return resultado;
 }
-
-function decode() {
-  // seu código aqui
+// exemplo de chamada da função:  encode("palavra");
+function decode(saida) {
+  let amostra;
+  let index =0; 
+    for (index = 0; index < saida.length; index += 1)
+      if (saida[index] === '1'){
+        resultado = saida.replace(/1/g, 'a');
+      } else if (saida[index] === '2'){
+        resultado = saida.replace(/2/g, 'e');
+      } else if (saida[index] === '3'){
+        resultado = saida.replace(/3/g, 'i');
+      } else if (saida[index] === '4'){
+        resultado = saida.replace(/4/g, 'o');
+      } else if (saida[index] === '5'){
+        resultado = saida.replace(/5/g, 'u');
+      } else resultado = saida[index];
+  return amostra;
 }
-
+// exemplo de chamada da função: decode('p1l1vr1');
 // Desafio 10
 function techList() {
   // seu código aqui
