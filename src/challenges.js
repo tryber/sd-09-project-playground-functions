@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 15 === 0) {
-      array[index] = 'fizzBuzz' ;
+      array[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
       array[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
@@ -66,7 +66,7 @@ function fizzBuzz(array) {
       array[index] = 'bug!';
     }
   }
-  return mensage;
+  return array;
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
@@ -91,7 +91,7 @@ function encode(entrada) {
 function decode(saida) {
   let amostra;
   for (let index = 0; index < saida.length; index += 1) {
-    if (saida[index] === '1'){
+    if (saida[index] === '1') {
       amostra = saida.replace(/1/g, 'a');
     } else if (saida[index] === '2') {
       amostra = saida.replace(/2/g, 'e');
