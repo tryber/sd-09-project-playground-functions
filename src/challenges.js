@@ -71,19 +71,20 @@ function fizzBuzz(array) {
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
 function encode(entrada) {
-  let resultado;
+  let resultado ='';
   for (let index = 0; index < entrada.length; index += 1) {
     if (entrada[index] === 'a') {
-      resultado = entrada.replace(/a/g, '1');
-    } else if (entrada[index] === 'e') {
-      resultado = entrada.replace(/e/g, '2');
-    } else if (entrada[index] === 'i') {
-      resultado = entrada.replace(/i/g, '3');
+      resultado +="1"; 
+    } else if (entrada[index] === 'e' ) {
+      resultado +="2"; 
+    } else if (entrada[index] === 'i' ) {
+      resultado +="3"; 
     } else if (entrada[index] === 'o') {
-      resultado = entrada.replace(/o/g, '4');
-    } else if (entrada[index] === 'u') {
-      resultado = entrada.replace(/u/g, '5');
-    } else resultado = entrada[index];
+      resultado +="4"; 
+    } else if (entrada[index] === 'u' ) {
+      resultado +="5"; 
+    } else  
+      resultado +=entrada[index];
   }
   return resultado;
 }
