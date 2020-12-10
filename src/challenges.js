@@ -72,9 +72,11 @@ function catAndMouse(mouse, cat1, cat2) {
   for (let pos = 0; pos < mouse; pos += 1) {
     if (cat1 <= mouse && cat1 > cat2) {
       result = 'cat1';
-    }
-    else {
+    } else {
       result = 'cat2';
+    }
+    if (cat1 === cat2) {
+      result = 'os gatos trombam e o rato foge';
     }
   }
   return result;
