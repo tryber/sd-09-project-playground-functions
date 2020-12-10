@@ -57,7 +57,7 @@ function highestCount(numbers) {
   // seu código aqui
   let equalsCount = 0;
   numbers.sort(function (a, b) { return b - a });
-  for (pos = 0; pos < numbers.length; pos += 1) {
+  for (let pos = 0; pos < numbers.length; pos += 1) {
     if (numbers[0] === numbers[pos]) {
       equalsCount += 1;
     }
