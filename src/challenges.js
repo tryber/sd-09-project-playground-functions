@@ -43,23 +43,40 @@ function highestCount(valueArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let resultDraw = 0;
+  let equalDistance = 'os gatos trombam e o rato foge';
+  let resultCat1 = 0;
+  let cat1Wins = 'cat1';
+  let resultCat2 = 0;
+  let cat2Wins = 'cat2';
+  let resultArray = [];
   if ((cat1 - mouse) === (mouse - cat2)) {
-    let resultDraw = cat1 - mouse;
-    let equalDistance = 'os gatos trombam e o rato foge';
-    return equalDistance;
-  } else if ((cat1 - mouse) < (mouse - cat2)) {
-    let resultCat1 = cat1 - mouse;
-    let cat1Wins = 'cat1';
-    return cat1Wins;
-  } else if ((cat1 - mouse) > (mouse - cat2)) {
-    let resultCat2 = cat2 - mouse;
-    let cat2Wins = 'cat2';
-    return cat2Wins;
+    resultDraw += 1;
+    resultArray.push(resultDraw, resultCat1, resultCat2);
   }
+  if ((cat1 - mouse) < (mouse - cat2)) {
+    resultCat1 += 1;
+    resultArray.push(resultDraw, resultCat1, resultCat2);
+  }
+  if ((cat1 - mouse) > (mouse - cat2)) {
+    resultCat2 += 1;
+    resultArray.push(resultDraw, resultCat1, resultCat2);
+  }
+  console.log(resultArray);
+  function finalResult(){
+    if (resultArray[0] !== 0) {
+      return equalDistance;
+    } else if (resultArray[1] !== 0) {
+      return cat1Wins;
+    } else if (resultArray[2] !== 0) {
+      return cat2Wins;
+    }
+  }
+  return (finalResult());
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
 }
 
