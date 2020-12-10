@@ -71,18 +71,18 @@ function fizzBuzz(array) {
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
 function encode(entrada) {
-  let resultado =' ';
+  let resultado = '';
   for (let index = 0; index < entrada.length; index += 1) {
     if (entrada[index] === 'a') {
-      resultado += '1'; 
+      resultado+= '1';
     } else if (entrada[index] === 'e') {
-      resultado += '2'; 
+      resultado+= '2';
     } else if (entrada[index] === 'i') {
-      resultado += '3'; 
+      resultado+= '3';
     } else if (entrada[index] === 'o') {
-      resultado += '4'; 
+      resultado+= '4';
     } else if (entrada[index] === 'u') {
-      resultado += '5'; 
+      resultado+= '5';
     } else {
       resultado += entrada[index];
     }
