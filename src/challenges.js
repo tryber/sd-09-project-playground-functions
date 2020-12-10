@@ -6,11 +6,13 @@ function compareTrue(value1, value2) {
   } 
     console.log(false);
 }
-
+console.log(compareTrue(3, 2));
 // Desafio 2
 function calcArea() {
   // seu código aqui
+  return (base * heigth)/2;
 }
+console.log(calcArea(3, 5));
 
 // Desafio 3
 function splitSentence() {
