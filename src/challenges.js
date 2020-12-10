@@ -68,8 +68,8 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  result = '';
-  for (pos = 0; pos < mouse; pos += 1) {
+  let result = '';
+  for (let pos = 0; pos < mouse; pos += 1) {
     if (cat1 <= mouse && cat1 > cat2) {
       result = 'cat1';
     }
