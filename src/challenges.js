@@ -3,11 +3,9 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if (value1 > 2 && value2 < 5) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+    console.log(false);
 }
-console.log(compareTrue(1,2)) ;
 
 // Desafio 2
 function calcArea() {
