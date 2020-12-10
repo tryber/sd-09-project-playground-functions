@@ -1,10 +1,13 @@
 // Desafio 1
-function compareTrue(value1, value2) {
+function compareTrue(today, date) {
   // seu código aqui
-  if (value1 && value2) {
-    return true;
-  } 
-    return false;
+  if (today === 'friday' && date === 13) {
+    let badLuck = true;
+    return badLuck;
+  } else{
+      let badLuck = false;
+      return badLuck;
+    }
 }
 
 // Desafio 2
