@@ -8,11 +8,10 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, heigth) {
   // seu código aqui
-  return (base * heigth)/2;
+  return ((base * heigth)/2);
 }
-console.log(calcArea(3, 5));
 
 // Desafio 3
 function splitSentence() {
