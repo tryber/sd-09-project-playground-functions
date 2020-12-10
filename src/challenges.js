@@ -137,18 +137,14 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let validateTriangle = false;
-  if (Math.abs(lineA) < (Math.abs(lineB) + Math.abs(lineC)) && Math.abs(lineA) > (Math.abs(lineB) - Math.abs(lineC))) {
-    validateTriangle = true;
-  } else if (Math.abs(lineB) < (Math.abs(lineA) + Math.abs(lineC)) && Math.abs(lineB) > (Math.abs(lineA) - Math.abs(lineC))) {
-    validateTriangle = true;
-  } else if (Math.abs(lineC) < (Math.abs(lineA) + Math.abs(lineB)) && Math.abs(lineC) > (Math.abs(lineA) - Math.abs(lineB))) {
-    validateTriangle = true;
-  } else {
-    validateTriangle = false;
+  if (lineA < Math.abs(lineB + lineC) && lineB < Math.abs(lineA + lineC) && lineC < Math.abs(lineA + lineB)) {
+    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+      validateTriangle = true;
+    }
   }
   return validateTriangle;
 }
-console.log(triangleCheck(10, 8, 8));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
