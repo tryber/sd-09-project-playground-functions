@@ -53,30 +53,22 @@ function catAndMouse(mouse, cat1, cat2) {
   if ((cat1 - mouse) === (mouse - cat2)) {
     resultDraw += 1;
     resultArray.push(resultDraw, resultCat1, resultCat2);
+    return equalDistance;
   }
   if ((cat1 - mouse) < (mouse - cat2)) {
     resultCat1 += 1;
     resultArray.push(resultDraw, resultCat1, resultCat2);
+    return cat1Wins;
   }
   if ((cat1 - mouse) > (mouse - cat2)) {
     resultCat2 += 1;
     resultArray.push(resultDraw, resultCat1, resultCat2);
+    return cat2Wins;
   }
-  console.log(resultArray);
-  function finalResult(){
-    if (resultArray[0] !== 0) {
-      return equalDistance;
-    } else if (resultArray[1] !== 0) {
-      return cat1Wins;
-    } else if (resultArray[2] !== 0) {
-      return cat2Wins;
-    }
-  }
-  return (finalResult());
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz() {
   // seu código aqui
 }
 
