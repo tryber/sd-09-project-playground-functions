@@ -1,5 +1,14 @@
-# O NOME DO ARQUIVO DEVE SER `.gitignore` (ATENTE-SE AO PONTO NO INÍCIO)
 
-# VSCode repo settings
-.vscode
-node_modules/
+.DS_Store
+
+# Created by https://www.toptal.com/developers/gitignore/api/code
+# Edit at https://www.toptal.com/developers/gitignore?templates=code
+
+### Code ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+# End of https://www.toptal.com/developers/gitignore/api/code
+
