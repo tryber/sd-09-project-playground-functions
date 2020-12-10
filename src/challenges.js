@@ -151,30 +151,38 @@ function techList(arrayTechnology, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayNumbers) {
-  let answer = '';
+function countHowManyTimesNumberRepeats(arrayNumbers) {
   let qttySameNumber = 0;
+  let mostRepeated = 0;
+
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     qttySameNumber = 0;
     for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
       if (arrayNumbers[index] === arrayNumbers[index2]) {
         qttySameNumber += 1;
       }
+      if (qttySameNumber > mostRepeated) {
+        mostRepeated = qttySameNumber;
+      }
     }
   }
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] > 9 || arrayNumbers[index] < 0 || qttySameNumber >= 3) {
-      answer = 'não é possível gerar um número de telefone com esses valores';
-    }
-    if (arrayNumbers.length !== 11) {
-      answer = 'Array com tamanho incorreto.';
-    } else {
-      answer = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
-    }
-  }
-  return answer;
+  return mostRepeated;
 }
-console.log(generatePhoneNumber([0,1,6,1,1]));
+
+function generatePhoneNumber(arrayNumbers) {
+  let phoneNumber = '';
+
+  for (let index = 0; index< arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > 9 || arrayNumbers[index] < 0 || countHowManyTimesNumberRepeats(arrayNumbers) >= 3) {
+      phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+    } else if (arrayNumbers.length === 11) {
+      phoneNumber = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
+    } else {
+      phoneNumber = 'Array com tamanho incorreto.';
+    }
+  }
+  return phoneNumber;
+}
 
 // Desafio 12
 function triangleCheck() {
