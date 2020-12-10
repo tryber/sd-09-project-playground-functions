@@ -143,16 +143,34 @@ function techList(arrayTechnology, name) {
   for (let index = 0; index < newOrderedList.length; index += 1) {
     finalList.push({
       tech: arrayTechnology[index],
-      name: name, })
+      name, 
+    })
   }
 
   return finalList;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumbers) {
+  let answer = '';
+  let qttySameNumber = 0;
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[0] === arrayNumbers[index]) {
+      qttySameNumber += 1;
+    }
+    if (arrayNumbers[index] > 9 || arrayNumbers[index] < 0 || qttySameNumber >= 3) {
+      answer = 'não é possível gerar um número de telefone com esses valores';
+    }
+    if (arrayNumbers.length !== 11) {
+      answer = 'Array com tamanho incorreto.';
+    } else {
+       answer = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
+    }
+  }
+  return answer;
 }
+//console.log(generatePhoneNumber([1,2,4,5,6,7,8,9,9,7,3]));
 
 // Desafio 12
 function triangleCheck() {
