@@ -166,9 +166,19 @@ console.log(triangleCheck(10, 14, 8));
 
 
         // Desafio 13
-        function hydrate() {
-          // seu código aqui
-        }
+function hydrate(param) {
+  let qtidade =0;
+  array = [];
+  
+  array.push(param.match(/(\d+)/g));
+  
+  for( let i = 0; i < array.length; i+=1 ){
+   qtidade += array[i];
+   return  array[i] + " copos de agua"
+  }
+
+}
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
         module.exports = {
