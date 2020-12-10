@@ -108,9 +108,20 @@ function fizzBuzz(arrayNumber) {
 //console.log(fizzBuzz([10, 20, 5, 3, 15, 6]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+/*function encode(textInput) {
+  let inputCodificate = ''
+  for (let index = 0; index < textInput.length; index += 1) {
+    if textInput.length(index)
+  }
+  return repetir o valor de entrada trocando as vogais minusculas por numeros
+
+}*/
+/*let teste = 'jose';
+let letra = ''
+if (teste.slice(0, 1) === 'j') {
+  letra = teste.slice(1, 2);
 }
+console.log(letra);*/
 
 function decode() {
   // seu código aqui
@@ -124,9 +135,21 @@ function generatePhoneNumber() {
   // seu código aqui
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let validateTriangle = false;
+  if (Math.abs(lineA) < (Math.abs(lineB) + Math.abs(lineC)) && Math.abs(lineA) > (Math.abs(lineB) - Math.abs(lineC))) {
+    validateTriangle = true;
+  } else if (Math.abs(lineB) < (Math.abs(lineA) + Math.abs(lineC)) && Math.abs(lineB) > (Math.abs(lineA) - Math.abs(lineC))) {
+    validateTriangle = true;
+  } else if (Math.abs(lineC) < (Math.abs(lineA) + Math.abs(lineB)) && Math.abs(lineC) > (Math.abs(lineA) - Math.abs(lineB))) {
+    validateTriangle = true;
+  } else {
+    validateTriangle = false;
+  }
+  return validateTriangle;
 }
+console.log(triangleCheck(10, 8, 8));
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
@@ -137,7 +160,7 @@ module.exports = {
   compareTrue,
   concatName,
   decode,
-  encode,
+//  encode,
   fizzBuzz,
   footballPoints,
   generatePhoneNumber,
