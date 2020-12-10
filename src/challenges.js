@@ -16,6 +16,8 @@ function calcArea(base, heigth) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+  let phrase = "Vasco é campeao!";
+  return phrase.split("", 3);
 }
 
 // Desafio 4
