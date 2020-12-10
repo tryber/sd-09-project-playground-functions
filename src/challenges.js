@@ -55,7 +55,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz(array) {
-  let mensage = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 15 === 0) {
       array[index] = 'fizzBuzz' ;
@@ -85,6 +84,7 @@ function encode(entrada) {
     } else if (entrada[index] === 'u') {
       resultado = entrada.replace(/u/g, '5');
     } else resultado = entrada[index];
+  }
   return resultado;
 }
 // exemplo de chamada da função:  encode("palavra");
@@ -102,6 +102,7 @@ function decode(saida) {
     } else if (saida[index] === '5') {
       amostra = saida.replace(/5/g, 'u');
     } else amostra = saida[index];
+  }
   return amostra;
 }
 // exemplo de chamada da função: decode('p1l1vr1');
