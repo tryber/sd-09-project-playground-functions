@@ -2,12 +2,9 @@
 function compareTrue(today, date) {
   // seu código aqui
   if (today === 'friday' && date === 13) {
-    let badLuck = true;
-    return badLuck;
-  } else{
-      let badLuck = false;
-      return badLuck;
-    }
+    return true;
+  } 
+  return false;
 }
 
 // Desafio 2
