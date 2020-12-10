@@ -1,51 +1,113 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bol, bole) {
+  return bol && bole;
 }
-
+// exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
-
+// exemplo de chamada da função: calcArea(10, 4);
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
-
+// exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let space = ', ';
+  return array[array.length - 1] + space + array[0];
 }
-
+// exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsForWin = 3;
+  let points = (wins * pointsForWin) + ties;
+  return points;
 }
-
+// exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maxNumber = Math.max(...array);
+  let repeatCounter = 0;
+  let index;
+  for (index = 0; index < array.length; index += 1) {
+    if (maxNumber === array[index]) {
+      repeatCounter += 1;
+    }
+  }
+  return repeatCounter;
 }
-
+// exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mCat1 = Math.abs(mouse - cat1);
+  let mCat2 = Math.abs(mouse - cat2);
+  let pow = 'os gatos trombam e o rato foge';
+  if (mCat1 < mCat2) {
+    return 'cat1';
+  }
+  if (mCat1 > mCat2) {
+    return 'cat2';
+  }
+  return pow;
 }
-
+// exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 15 === 0) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz';
+    } else if (array[index] % 5 === 0) {
+      array[index] = 'buzz';
+    } else {
+      array[index] = 'bug!';
+    }
+  }
+  return array;
 }
-
+// exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(entrada) {
+  let resultado = '';
+  for (let index = 0; index < entrada.length; index += 1) {
+    if (entrada[index] === 'a') {
+      resultado += 1;
+    } else if (entrada[index] === 'e') {
+      resultado += 2;
+    } else if (entrada[index] === 'i') {
+      resultado += 3;
+    } else if (entrada[index] === 'o') {
+      resultado += 4;
+    } else if (entrada[index] === 'u') {
+      resultado += 5;
+    } else {
+      resultado += entrada[index];
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+// exemplo de chamada da função:  encode("palavra");
+function decode(saida) {
+  let amostra;
+  for (let index = 0; index < saida.length; index += 1) {
+    if (saida[index] === 1) {
+      amostra = saida.replace(/1/g, 'a');
+    } else if (saida[index] === 2) {
+      amostra = saida.replace(/2/g, 'e');
+    } else if (saida[index] === 3) {
+      amostra = saida.replace(/3/g, 'i');
+    } else if (saida[index] === 4) {
+      amostra = saida.replace(/4/g, 'o');
+    } else if (saida[index] === 5) {
+      amostra = saida.replace(/5/g, 'u');
+    } else amostra = saida[index];
+  }
+  return amostra;
 }
-
+// exemplo de chamada da função: decode('p1l1vr1');
 // Desafio 10
 function techList() {
   // seu código aqui
