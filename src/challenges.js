@@ -83,10 +83,10 @@ function validateNumberDividedFor3Only(key, array, array2) {
   if (array[key] % 3 === 0 && array[key] % 5 !== 0) {
     array2.push('fizz');
   }
-  if (array[key] % 5 === 0 && array[key] % 3 !== 0) {
+  else if (array[key] % 5 === 0 && array[key] % 3 !== 0) {
     array2.push('buzz');
   }
-  if (array[key] % 3 === 0 && array[key] % 5 === 0) {
+  else if (array[key] % 3 === 0 && array[key] % 5 === 0) {
     array2.push('fizzBuzz');
   }
   return array2;
