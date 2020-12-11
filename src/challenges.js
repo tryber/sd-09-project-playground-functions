@@ -154,7 +154,29 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui  
+  let array = [lineA, lineB, lineC];
+  let biggestLine = array[0];
+  let smallestLine = array[0];
+  let sum = lineA + lineB + lineC;
+  let triangle = true;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > highestLine) {
+      biggestLine = array[index];
+    }
+    if (array[index] < biggestLine) {
+      smallestLine = array[index];
+    }
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    let middleLine = sum - biggesttLine;
+    if (
+      biggestLine > (sum - biggestLine) ||
+      smallestLine < Math.abs(biggestLine - middleLine)
+      ) {
+      triangle = false;
+    }
+  }
+  return triangle;
 }
 
 // Desafio 13
