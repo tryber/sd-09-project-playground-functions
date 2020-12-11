@@ -158,16 +158,16 @@ function validatePossibleNumber(array, trigger) {
   let count = [];
   trigger = false;
   for (let a = 0; a < array.length; a += 1) {
-      count = [];
-      for (let b = 0; b < array.length; b += 1) {
-          if (array[a] === array[b]) {
-              count.push(array[b])
-          }
+    count = [];
+    for (let b = 0; b < array.length; b += 1) {
+      if (array[a] === array[b]) {
+        count.push(array[b])
       }
-      if (count.length >= 3 || array[a] > 9 || array[a] < 0) {
-          trigger = true;
-          break;
-      }
+    }
+    if (count.length >= 3 || array[a] > 9 || array[a] < 0) {
+      trigger = true;
+      break;
+    }
   }
   return trigger;
 }
@@ -182,11 +182,11 @@ function generatePhoneNumber(array) {
   let result = generatingNumber(array);
   trigger = validatePossibleNumber(array, trigger);
   if (array.length > 11) {
-      return 'Array com tamanho incorreto.';
+    return 'Array com tamanho incorreto.';
   } else if (trigger) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return result;
+  return result;S
 }
 
 // Desafio 12
