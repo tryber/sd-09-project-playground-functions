@@ -152,12 +152,41 @@ function techList(arrayTech, name1) {
     return createObject(arrayTech, name1);
   }
   return 'Vazio!';
-
 }
-
 // Desafio 11
-function generatePhoneNumber() {
+function validatePossibleNumber(array, trigger) {
+  let count = [];
+  trigger = false;
+  for (let a = 0; a < array.length; a += 1) {
+      count = [];
+      for (let b = 0; b < array.length; b += 1) {
+          if (array[a] === array[b]) {
+              count.push(array[b])
+          }
+      }
+      if (count.length >= 3 || array[a] > 9 || array[a] < 0) {
+          trigger = true;
+          break;
+      }
+  }
+  return trigger;
+}
+function generatingNumber(array) {
+  let formater = '';
+  formater = '(' + array[0] + array[1] + ')' + array[2] + array[3] + array[4] + array[5] + '-' + array[6] + array[7] + array[8] + array[9] + array[10];
+  return formater;
+}
+function generatePhoneNumber(array) {
   // seu código aqui
+  let trigger = false;
+  let result = generatingNumber(array);
+  trigger = validatePossibleNumber(array, trigger);
+  if (array.length > 11) {
+      return 'Array com tamanho incorreto.';
+  } else if (trigger) {
+      return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return result;
 }
 
 // Desafio 12
