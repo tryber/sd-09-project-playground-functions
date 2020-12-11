@@ -111,11 +111,29 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function validateEncode(str2) {
+  str2 = str2.replace(/a/gi, '1');
+  str2 = str2.replace(/e/gi, '2');
+  str2 = str2.replace(/i/gi, '3');
+  str2 = str2.replace(/o/gi, '4');
+  str2 = str2.replace(/u/gi, '5');
+  return str2;
 }
-function decode() {
+function encode(str2) {
   // seu código aqui
+  return validateEncode(str2);
+}
+function validateDecode(str1) {
+  str1 = str1.replace(/1/gi, 'a');
+  str1 = str1.replace(/2/gi, 'e');
+  str1 = str1.replace(/3/gi, 'i');
+  str1 = str1.replace(/4/gi, 'o');
+  str1 = str1.replace(/5/gi, 'u');
+  return str1;
+}
+function decode(str1) {
+  // seu código aqui
+  return validateDecode(str1);
 }
 
 // Desafio 10
