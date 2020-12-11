@@ -181,12 +181,12 @@ function generatePhoneNumber(array) {
   let trigger = false;
   let result = generatingNumber(array);
   trigger = validatePossibleNumber(array, trigger);
-  if (array.length > 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (trigger) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return result;S
+  return result;
 }
 
 // Desafio 12
