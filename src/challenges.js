@@ -100,12 +100,20 @@ function decode(string) {
   }
   return stringArray.join('');
 }
-console.log(encode('Renan'));
-console.log(decode('R2n1n'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  array.sort();
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    array[index] = {
+      tech: array[index],
+      name: name
+    }
+  }
+  return array;
 }
 
 // Desafio 11
