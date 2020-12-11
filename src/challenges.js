@@ -136,10 +136,14 @@ function decode(str1) {
 function createObject(arrayTech, name) {
   let techObject = [];
   for (let key in arrayTech) {
-    techObject.push({
-      tech: arrayTech[key],
-      name: name,
-    })
+    try {
+      techObject.push({
+        tech: arrayTech[key],
+        name: name,
+      })
+    } catch {
+      return 'error...';
+    }
   }
   return techObject;
 }
