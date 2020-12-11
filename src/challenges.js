@@ -55,8 +55,12 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
-  let equalsCount = 0;
   numbers.sort(function (a, b) { return b - a });
+  let result = countEqualsNumbers(numbers);
+  return result;
+}
+function countEqualsNumbers(numbers) {
+  let equalsCount = 0;
   for (let pos = 0; pos < numbers.length; pos += 1) {
     if (numbers[0] === numbers[pos]) {
       equalsCount += 1;
@@ -65,20 +69,16 @@ function highestCount(numbers) {
   return equalsCount;
 }
 
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let result = '';
-  for (let pos = 0; pos < mouse; pos += 1) {
-    if (cat1 <= mouse && cat1 > cat2) {
-      result = 'cat1';
-    } else {
-      result = 'cat2';
-    }
-    if (cat1 === cat2) {
-      result = 'os gatos trombam e o rato foge';
-    }
+  let cat1Position = cat1 - mouse;
+  let cat2Position = cat2 - mouse;
+  if (cat1Position === cat2Position) {
+    return 'os gatos trombam e o rato foge'
   }
+  let result = cat1Position < cat2Position ? 'cat1' : 'cat2';
   return result;
 }
 
