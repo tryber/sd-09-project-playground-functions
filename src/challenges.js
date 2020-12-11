@@ -83,15 +83,9 @@ function validateNumberDividedFor3Only(key, array, array2) {
   if (array[key] % 3 === 0 && array[key] % 5 !== 0) {
     array2.push('fizz');
   }
-  return array2;
-}
-function validateNumberDividedFor5Only(key, array, array2) {
   if (array[key] % 5 === 0 && array[key] % 3 !== 0) {
     array2.push('buzz');
   }
-  return array2;
-}
-function validateNumberDividedFor3And5Together(key, array, array2) {
   if (array[key] % 3 === 0 && array[key] % 5 === 0) {
     array2.push('fizzBuzz');
   }
@@ -110,8 +104,6 @@ function fizzBuzz(array) {
   for (let key in array) {
     if (array !== []) {
       validateNumberDividedFor3Only(key, array, array2);
-      validateNumberDividedFor5Only(key, array, array2);
-      validateNumberDividedFor3And5Together(key, array, array2);
       validateNumberCanotDividedFor3And5(key, array, array2);
     }
   }
