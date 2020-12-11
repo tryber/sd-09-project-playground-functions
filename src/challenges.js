@@ -98,8 +98,10 @@ function decode(string) {
       }
     }
   }
-  return stringArray.join('');  
+  return stringArray.join('');
 }
+console.log(encode('Renan'));
+console.log(decode('R2n1n'));
 
 // Desafio 10
 function techList() {
