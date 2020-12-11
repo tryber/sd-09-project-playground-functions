@@ -108,7 +108,7 @@ function fizzBuzz(array) {
   // seu código aqui
   let array2 = [];
   for (let key in array) {
-    if (array2 = [] || array2 !== []) {
+    if (array !== []){
       validateNumberDividedFor3Only(key, array, array2);
       validateNumberDividedFor5Only(key, array, array2);
       validateNumberDividedFor3And5Together(key, array, array2);
