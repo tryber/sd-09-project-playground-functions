@@ -142,7 +142,6 @@ function generatePhoneNumber() {
   function wrongArrays(number, array) {
     let wrong = checkArrayLength(array.length);
     let message = '';
-  
     if (wrong !== '') {
       message = wrong;
     }
@@ -153,7 +152,6 @@ function generatePhoneNumber() {
   }
   function separator(number, index) {
     let phone = '';
-  
     if (index === 0) {
       phone += '(';
     }
@@ -164,28 +162,24 @@ function generatePhoneNumber() {
       phone += '-';
     }
     phone += number;
-  
     return phone;
   }
   function generatePhoneNumber(arrayPhone) {
     let message = '';
-    let error = '';
-  
+    let error = '';    
     wrong = wrongArrays('', arrayPhone);
-    if ((arrayPhone.length === 0) || (wrong !== '')) {
-      message = wrong;
-    }
-  
-    for (let index = 0; index < arrayPhone.length; index += 1) {
-      message += separator(arrayPhone[index], index);
-  
-      wrong = wrongArrays(arrayPhone[index], arrayPhone);
-      if (wrong !== '') {
+      if ((arrayPhone.length === 0) || (wrong !== '')) {
         message = wrong;
-        break;
       }
-    }
-    return message;
+      for (let index = 0; index < arrayPhone.length; index += 1) {
+        message += separator(arrayPhone[index], index);
+        wrong = wrongArrays(arrayPhone[index], arrayPhone);
+        if (wrong !== '') {
+          message = wrong;
+          break;
+        }
+      }
+      return message;
   }
 }
 
