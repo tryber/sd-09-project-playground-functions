@@ -69,8 +69,6 @@ function highestCount(numbers) {
   return result;
 }
 
-
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
