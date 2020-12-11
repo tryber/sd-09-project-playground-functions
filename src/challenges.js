@@ -133,26 +133,26 @@ function decode(str1) {
 }
 
 // Desafio 10
-function createObject(arrayTech, name) {
+function createObject(arrayTech, name1) {
   let techObject = [];
   for (let key in arrayTech) {
     if (arrayTech.length > 0) {
       techObject.push({
         tech: arrayTech[key],
-        name: name,
+        name: name1,
       })
     }
   }
   return techObject;
 }
-function techList(arrayTech, name) {
+function techList(arrayTech, name1) {
   // seu código aqui
   arrayTech.sort();
   if (arrayTech.length > 0) {
-    return createObject(arrayTech, name);
-  } else {
-    return 'Vazio!';
+    return createObject(arrayTech, name1);
   }
+  return 'Vazio!';
+
 }
 
 // Desafio 11
