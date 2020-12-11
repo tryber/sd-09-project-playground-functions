@@ -170,8 +170,8 @@ function decode(wor) {
 
 // Desafio 10
 function techList(tech, name) {
-  if (tech.length === 0){
-  return 'Vazio!';
+  if (tech.length === 0) {
+    return 'Vazio!';
   }
   let list = tech.sort();
   let objectList = [];
@@ -190,19 +190,19 @@ function generatePhoneNumber(numbers) {
   let result;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else{
-  let repeat = 0;
+  } else {
+    let repeat = 0;
     for (let index = 0; index < numbers.length; index += 1) {
       repeat = 0;
-      if ( numbers[index] < 0 || numbers[index] > 9){
+      if (numbers[index]<0||numbers[index]>9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
       for (let index1 = 0; index1 < numbers.length; index1 += 1) {
-        if ( numbers[index] === numbers[index1]){
+        if (numbers[index]===numbers[index1]) {
           repeat += 1;
-        } 
-      }   
-      if ( repeat >= 3){
+        }
+      }
+      if (repeat>=3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
@@ -213,7 +213,44 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  let base = [lineA, lineB, lineC];
+  let small = base[0];
+  let triangle;
+  let result = true;
+  let index;
+  let absolut = [];
+  let diference;
+  for (let counter = 0; counter < base.length; counter += 1) {
+    if ( base[counter] < small){
+      small = base[counter];
+      index = counter;
+    }
+  }
+  for (counter = 0; counter < base.length; counter += 1) {
+    if (counter !== index){
+      absolut.push(base[counter]);
+    }
+    if (counter === 1){
+      if (absolut[0] < absolut[1]){
+        diference = absolut[0] - absolut[1];
+      } else if(absolut[1] < absolut[0]){
+        diference = absolut[1] - absolut[0];
+      } else{
+        diference = 0;
+      }
+    }
+  }
+  console.log(diference)
+  triangle = base[0] + base[1] + base[2] - small;
+  if ( triangle < small){
+    result = false;
+  } else if(small < Math.abs(diference)){
+  result = false;
+  } else{
+    result = true;
+  }
+  return result;
   // seu código aqui
 }
 
