@@ -141,7 +141,8 @@ function createObject(arrayTech, name) {
         tech: arrayTech[key],
         name: name,
       })
-    } catch {
+    } 
+    catch {
       return 'error...';
     }
   }
