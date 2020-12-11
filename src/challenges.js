@@ -53,13 +53,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  // seu código aqui
-  numbers.sort(function (a, b) { return b - a });
-  let result = 0;
-  result = countEqualsNumbers(numbers);
-  return result;
-}
 function countEqualsNumbers(numbers) {
   let equalsCount = 0;
   for (let pos = 0; pos < numbers.length; pos += 1) {
@@ -69,6 +62,13 @@ function countEqualsNumbers(numbers) {
   }
   return equalsCount;
 }
+function highestCount(numbers) {
+  // seu código aqui
+  numbers.sort(function (a, b) { return b - a });
+  let result = countEqualsNumbers(numbers);
+  return result;
+}
+
 
 
 // Desafio 7
