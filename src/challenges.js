@@ -7,14 +7,12 @@ function compareTrue(bool1, bool2) {
   return check;
 }
 
-
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let result = (base * height) / 2;
   return result;
 }
-
 
 // Desafio 3
 function splitSentence(string) {
@@ -135,8 +133,24 @@ function decode(str1) {
 }
 
 // Desafio 10
-function techList() {
+function createObject(arrayTech, name) {
+  let techObject = [];
+  for (let key in arrayTech) {
+    techObject.push({
+      tech: arrayTech[key],
+      name: name,
+    })
+  }
+  return techObject;
+}
+function techList(arrayTech, name) {
   // seu código aqui
+  arrayTech.sort();
+  if (arrayTech.length > 0) {
+    return createObject(arrayTech, name);
+  } else {
+    return 'Vazio!';
+  }
 }
 
 // Desafio 11
