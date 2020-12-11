@@ -56,7 +56,8 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   numbers.sort(function (a, b) { return b - a });
-  let result = countEqualsNumbers(numbers);
+  let result = 0;
+  result = countEqualsNumbers(numbers);
   return result;
 }
 function countEqualsNumbers(numbers) {
