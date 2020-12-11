@@ -80,13 +80,13 @@ function catAndMouse(mouse, cat1, cat2) {
   return cat1Position < cat2Position ? 'cat1' : 'cat2';
 }
 function validateNumberDividedFor3Only(key, array, array2) {
-  if (array[key] % 3 === 0 && array[key] % 5 != 0) {
-    array2.push('fizz');    
+  if (array[key] % 3 === 0 && array[key] % 5 !== 0) {
+    array2.push('fizz');
   }
   return array2;
 }
 function validateNumberDividedFor5Only(key, array, array2) {
-  if (array[key] % 5 === 0 && array[key] % 3 != 0) {
+  if (array[key] % 5 === 0 && array[key] % 3 !== 0) {
     array2.push('buzz');
   }
   return array2;
@@ -98,7 +98,7 @@ function validateNumberDividedFor3And5Together(key, array, array2) {
   return array2;
 }
 function validateNumberCanotDividedFor3And5(key, array, array2) {
-  if (array[key] % 3 != 0 && array[key] % 5 != 0) {
+  if (array[key] % 3 !== 0 && array[key] % 5 !== 0) {
     array2.push('bug!');
   }
   return array2;
@@ -108,10 +108,12 @@ function fizzBuzz(array) {
   // seu código aqui
   let array2 = [];
   for (let key in array) {
-    validateNumberDividedFor3Only(key, array, array2);
-    validateNumberDividedFor5Only(key, array, array2);
-    validateNumberDividedFor3And5Together(key, array, array2);
-    validateNumberCanotDividedFor3And5(key, array, array2);
+    if (array2 = [] || array2 !== []) {
+      validateNumberDividedFor3Only(key, array, array2);
+      validateNumberDividedFor5Only(key, array, array2);
+      validateNumberDividedFor3And5Together(key, array, array2);
+      validateNumberCanotDividedFor3And5(key, array, array2);
+    }
   }
   return array2;
 }
