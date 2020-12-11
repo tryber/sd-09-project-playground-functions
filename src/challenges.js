@@ -129,14 +129,14 @@ function generatePhoneNumber(array) {
   }
   for (let index = 0; index < messages.phoneNumber.length; index += 1) {
     messages.phoneNumberArray[index] = messages.phoneNumber[index];
-    if (display.phoneNumber[index] === 'a') {
+    if (messages.phoneNumber[index] === 'a') {
       messages.phoneNumberArray[index] = array[messages.phoneIndex];
       messages.phoneIndex += 1;
     }
   }
   messages.displayMessage = messages.phoneNumberArray.join('');
   for (let index = 0; index < array.length; index += 1) {
-    display.repeatCount = 0;
+    messages.repeatCount = 0;
     for (let repeatIndex = 0; repeatIndex < array.length; repeatIndex += 1) {
       if (array[repeatIndex] === array[index]) {
         messages.repeatCount += 1;
@@ -149,15 +149,13 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     messages.displayMessage = messages.firstError;
   }
-  return display.displayMessage;
+  return messages.displayMessage;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-    
+  // seu código aqui  
 }
-
-
 
 // Desafio 13
 function hydrate() {
