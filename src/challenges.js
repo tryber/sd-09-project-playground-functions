@@ -117,76 +117,47 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  function checkArrayLength(array) {
-    if ((array !== 11)) {
-      return 'Array com tamanho incorreto.';
-    }
-    return '';
+function generatePhoneNumber(array) {
+  let messages = {
+    firstError: 'Array com tamanho incorreto.',
+    secondError: 'não é possível gerar um número de telefone com esses valores',
+    phoneNumber: '(aa) aaaaa-aaaa',
+    phoneNumberArray: [],
+    phoneIndex: 0,
+    repeatCount: 0,
+    displayMessage: '',
   }
-  function checkNumbers(numbers) {
-    if ((numbers < 0) || (numbers >= 10)) {
-      return true;
+  for (let index = 0; index < messages.phoneNumber.length; index += 1) {
+    messages.phoneNumberArray[index] = messages.phoneNumber[index];
+    if (display.phoneNumber[index] === 'a') {
+      messages.phoneNumberArray[index] = array[messages.phoneIndex];
+      messages.phoneIndex += 1;
     }
-    return false;
   }
-  function countNumberRepeat(array, number) {
-    let repeats = 0;
-    for (let index = 0; index < array.length; index += 1) {
-      if (number === array[index]) {
-        repeats += 1;
+  messages.displayMessage = messages.phoneNumberArray.join('');
+  for (let index = 0; index < array.length; index += 1) {
+    display.repeatCount = 0;
+    for (let repeatIndex = 0; repeatIndex < array.length; repeatIndex += 1) {
+      if (array[repeatIndex] === array[index]) {
+        messages.repeatCount += 1;
+      }
+      if (array[index] < 0 || array[index] > 9 || messages.repeatCount > 2) {
+        messages.displayMessage = messages.secondError;
       }
     }
-    return repeats;
   }
-  function wrongArrays(number, array) {
-    let wrong = checkArrayLength(array.length);
-    let message = '';
-    if (wrong !== '') {
-      message = wrong;
-    }
-    if (checkNumbers(numbers) || (countNumberRepeat(array, number) >= 3)) {
-      message = 'não é possível gerar um número de telefone com esses valores';
-    }
-    return message;
+  if (array.length !== 11) {
+    messages.displayMessage = messages.firstError;
   }
-  function separator(number, index) {
-    let phone = '';
-    if (index === 0) {
-      phone += '(';
-    }
-    if (index === 2) {
-      phone += ') ';
-    }
-    if (index === 7) {
-      phone += '-';
-    }
-    phone += number;
-    return phone;
-  }
-  function generatePhoneNumber(arrayPhone) {
-    let message = '';
-    let error = '';    
-    wrong = wrongArrays('', arrayPhone);
-      if ((arrayPhone.length === 0) || (wrong !== '')) {
-        message = wrong;
-      }
-      for (let index = 0; index < arrayPhone.length; index += 1) {
-        message += separator(arrayPhone[index], index);
-        wrong = wrongArrays(arrayPhone[index], arrayPhone);
-        if (wrong !== '') {
-          message = wrong;
-          break;
-        }
-      }
-      return message;
-  }
+  return display.displayMessage;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+    
 }
+
+
 
 // Desafio 13
 function hydrate() {
