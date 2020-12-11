@@ -160,7 +160,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let sum = lineA + lineB + lineC;
   let triangle = true;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > highestLine) {
+    if (array[index] > biggestLine) {
       biggestLine = array[index];
     }
     if (array[index] < biggestLine) {
@@ -168,7 +168,7 @@ function triangleCheck(lineA, lineB, lineC) {
     }
   }
   for (let index = 0; index < array.length; index += 1) {
-    let middleLine = sum - biggesttLine;
+    let middleLine = sum - biggestLine;
     if (
       biggestLine > (sum - biggestLine) ||
       smallestLine < Math.abs(biggestLine - middleLine)
