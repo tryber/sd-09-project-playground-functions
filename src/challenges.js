@@ -106,7 +106,7 @@ function fizzBuzz(array) {
   return array2;
 }
 
-// Desafio 9
+// Desafio 9// string = 'testando'
 function validateEncode(str2) {
   str2 = str2.replace(/a/gi, '1');
   str2 = str2.replace(/e/gi, '2');
@@ -216,7 +216,7 @@ function cond2Higher(a, b, c) {
   }
   return cond2;
 }
-function triangleCheck() {
+function triangleCheck(a, b, c) {
   // seu código aqui
   let result = false;
     let cond1 = cond1Lower(a, b, c);
