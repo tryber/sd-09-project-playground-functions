@@ -190,8 +190,41 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
+function cond1Lower(a, b, c) {
+  cond1 = true;
+  if (a > (b + c)) {
+      cond1 = false;
+  }
+  if (b > (a + c)) {
+      cond1 = false;
+  }
+  if (c > (a + b)) {
+      cond1 = false;
+  }
+  return cond1;
+}
+function cond2Higher(a, b, c) {
+  let cond2 = true;
+  if (a < Math.abs(b - c) && a < Math.abs(c - b)) {
+      cond2 = false;
+  }
+  if (b < Math.abs(a - c) && b < Math.abs(c - a)) {
+      cond2 = false;
+  }
+  if (c < Math.abs(a - c) && c < Math.abs(c - a)) {
+      cond2 = false;
+  }
+  return cond2;
+}
 function triangleCheck() {
   // seu código aqui
+  let result = false;
+    let cond1 = cond1Lower(a, b, c);
+    let cond2 = cond2Higher(a, b, c);
+    if (cond1 && cond2) {
+        result = true;
+    }
+    return result;
 }
 
 // Desafio 13
