@@ -230,6 +230,21 @@ function triangleCheck(a, b, c) {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  string = string.match(/\d/g);
+  let string2 = '';
+  let value = 0;
+  let result1 = '';
+  let result2 = '';
+  for (let key in string) {
+    string2 += string[key];
+    value += parseInt(string2[key])
+  }
+  result2 = ' copo';
+  if (value > 1) {
+    result2 = result2.replace(/copo/g, 'copos');
+  }
+  result1 = value + result2 + ' de água';
+  return result1;
 }
 
 
