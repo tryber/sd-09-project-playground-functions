@@ -191,7 +191,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function cond1Lower(a, b, c) {
-  cond1 = true;
+  let cond1 = true;
   if (a > (b + c)) {
     cond1 = false;
   }
@@ -236,8 +236,10 @@ function hydrate(string) {
   let result1 = '';
   let result2 = '';
   for (let key in string) {
-    string2 += string[key];
-    value += parseInt(string2[key])
+    if (string.length > 0) {
+      string2 += string[key];
+      value += parseInt(string2[key])
+    }
   }
   result2 = ' copo';
   if (value > 1) {
