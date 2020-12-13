@@ -228,7 +228,7 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
   string = string.match(/\d/g);
   let string2 = '';
