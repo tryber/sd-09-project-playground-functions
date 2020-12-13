@@ -238,14 +238,14 @@ function hydrate(string) {
   for (let key in string) {
     if (string.length > 0) {
       string2 += string[key];
-      value += parseInt(string2[key])
+      value += parseInt(string2[key], 10);
     }
   }
   result2 = ' copo';
   if (value > 1) {
     result2 = result2.replace(/copo/g, 'copos');
   }
-  result1 = value + result2 + ' de água';
+  result1 = `${value}${result2} de água`;
   return result1;
 }
 
