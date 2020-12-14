@@ -2,9 +2,9 @@
 function compareTrue(today, date) {
   // seu código aqui
   if (today === 'friday' && date === 13) {
-    return true;
+    return 'Bad luck!' + true;
   } 
-  return false;
+  return 'Bad luck!' + false;
 }
 
 // Desafio 2
@@ -16,6 +16,8 @@ function calcArea(base, heigth) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+  phrase = phrase.split(" ");
+  return phrase;
   
 }
 
