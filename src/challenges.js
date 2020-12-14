@@ -205,6 +205,7 @@ function generatePhoneNumber(array) {
       phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
     }
   }
+  return phoneNumber
 }
 
 // Desafio 12
@@ -228,17 +229,18 @@ function hydrate(string) {
   // seu código aqui
   let sumNumbers = 0;
   let numbers = string.match(/\d+/g);
+  let returnString = '';
 
   for (let index = 0; index < numbers.length; index += 1) {
     sumNumbers += parseInt(numbers[index], 10)
   }
   if (sumNumbers === 1) {
-    return `${sumNumbers} copo de água`
+    returnString = `${sumNumbers} copo de água`
   } else {
-    `${sumNumbers} copos de água`
+    returnString = `${sumNumbers} copos de água`
   }
+  return returnString
 }
-
 
 module.exports = {
   calcArea,
