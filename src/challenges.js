@@ -207,27 +207,38 @@ function generatePhoneNumber(array) {
   }
 
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
 
 // Desafio 12
-function checkResultA(lineA, lineB, lineC) {
+function checkA(lineA, lineB, lineC) {
   let resultA = Math.abs(lineB - lineC)
   let sumA = lineB + lineC
-  
   if (resultA < lineA && resultA < sumA) {
     return true
-  } 
+  }
+  return false
+}
+
+function checkB(lineA, lineB, lineC) {
+  let resultB = Math.abs(lineA - lineC)
+  let sumB = lineA + lineC
+  if (resultB < lineB && resultB < sumB) {
+    return true
+  }
+  return false
+}
+
+function checkC(lineA, lineB, lineC) {
+  let resultC = Math.abs(lineA - lineB)
+  let sumC = lineA + lineB
+  if (resultC < lineC && resultC < sumC) {
+    return true
+  }
   return false
 }
 
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let resultB = Math.abs(lineA - lineC)
-  let resultC = Math.abs(lineA - lineB)
-  let sumB = lineA + lineC
-  let sumC = lineA + lineB
-
-  if (checkResultA(lineA, lineB, lineC) && resultB < lineB && resultB < sumB && resultC < lineC && resultC < sumC) {
+  if (checkA(lineA, lineB, lineC) && checkB(lineA, lineB, lineC) && checkC(lineA, lineB, lineC)) {
     return true
   }
   return false
