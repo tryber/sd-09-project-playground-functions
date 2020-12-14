@@ -95,7 +95,6 @@ function fizzBuzz(array) {
   return newArray;
 }
 
-
 // Desafio 9
 function encode(string) {
   // seu código aqui
