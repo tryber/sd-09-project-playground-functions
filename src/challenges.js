@@ -74,8 +74,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function oneTest(number) {
   let oneTest = false
   if (number % 5 === 0 && number % 3 === 0) {
-    return true
+    oneTest = true
   }
+  return oneTest
 }
 
 function fizzBuzz(array) {
@@ -158,7 +159,7 @@ function techList(array, name) {
     return 0;
   })
   if (newArray.length > 0) {
-    return newArray;
+    newArray;
   } else {
     newArray = 'Vazio!'
   }
@@ -166,18 +167,23 @@ function techList(array, name) {
 }
 
 // Desafio 11
+function repeatedNumberTest(checkNumber, array) {
+  let count = 0
+  for (let twoIndex = 0; twoIndex < array.length; twoIndex += 1) {
+    if (checkNumber === array[twoIndex]) {
+      count += 1
+    }
+    return count
+  }
+}
+
 function repeatedNumber(array) {
   let trueOrFalse = false
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     let checkNumber = array[index]
-    for (let twoIndex = 0; twoIndex < array.length; twoIndex += 1) {
-      if (checkNumber === array[twoIndex]) {
-        count += 1
-      }
-      if (count >= 3) {
-        trueOrFalse = true
-      }
+    if (repeatedNumberTest(checkNumber, array) >= 3) {
+      trueOrFalse = true
     }
     count = 0;
   }
@@ -210,13 +216,11 @@ function generatePhoneNumber(array) {
   for (let index = 0; index <= array.length; index += 1) {
     if (lengthArray(array)) {
       phoneNumber = 'Array com tamanho incorreto.'
+    } else if (numberArray(array) || repeatedNumber(array)) {
+      phoneNumber = 'não é possível gerar um número de telefone com esses valores'
+    } else if (array.length === 11) {
+      phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
     }
-      else if (numberArray(array) || repeatedNumber(array)) {
-        phoneNumber = 'não é possível gerar um número de telefone com esses valores'
-      }
-        else if (array.length === 11) {
-          phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
-        }
   }
   return phoneNumber;
 }
