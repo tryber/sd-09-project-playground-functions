@@ -132,7 +132,7 @@ function techList(array, name) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < array) {
-      let outro = { tech: array[index], name: name }
+      let outro = { tech: array[index], name }
       newArray.push(outro)
     }
   }
@@ -148,7 +148,7 @@ function techList(array, name) {
   if (newArray.length > 0) {
     return newArray;
   } else {
-    return 'Vazio!'
+    'Vazio!'
   }
 }
 
@@ -183,24 +183,26 @@ function lengthArray(array) {
 
 function numberArray(array) {
   let vericacao = false
-  for (let index = 0; index < array.length; index += 1)
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       vericacao = true
     }
+  }
   return vericacao
 }
 
 function generatePhoneNumber(array) {
   // seu código aqui
+  let phoneNumber = '';
   for (let index = 0; index <= array.length; index += 1) {
     if (lengthArray(array)) {
-      return 'Array com tamanho incorreto.'
+      phoneNumber = 'Array com tamanho incorreto.'
     }
     else if (numberArray(array) || repeatedNumber(array)) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      phoneNumber = 'não é possível gerar um número de telefone com esses valores'
     }
     else if (array.length === 11) {
-      return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+      phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
     }
   }
 }
@@ -231,9 +233,9 @@ function hydrate(string) {
     sumNumbers += parseInt(numbers[index], 10)
   }
   if (sumNumbers === 1) {
-    return sumNumbers + ' copo de água'
+    return `${sumNumbers} copo de água`
   } else {
-    return sumNumbers + ' copos de água'
+    `${sumNumbers} copos de água`
   }
 }
 
