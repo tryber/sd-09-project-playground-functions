@@ -46,7 +46,7 @@ function highestCount(array) {
   }
   for (let key = 0; key < array.length; key += 1) {
     if (numberMax === array[key]) {
-    count += 1
+      count += 1
     }
   }
   return count;
@@ -138,11 +138,11 @@ function techList(array, name) {
   }
   newArray.sort(function (a, b) {
     if (a.tech > b.tech) {
-        return 1;
-      }
+      return 1;
+    }
     if (a.tech < b.tech) {
-        return -1;
-      }
+      return -1;
+    }
     return 0;
   })
   if (newArray.length > 0) {
@@ -158,7 +158,7 @@ function repeatedNumber(array) {
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     let checkNumber = array[index]
-    for (let index = 0; index < array.length; index += 1) {
+    for (index = 0; index < array.length; index += 1) {
       if (checkNumber === array[index]) {
         count += 1
       }
@@ -172,39 +172,38 @@ function repeatedNumber(array) {
 }
 
 function lengthArray(array) {
-    let verificando = false
-    if (array.length == 0) {
-      verificando = true
-    } else if (array.length !== 11) {
-      verificando = true
-    }
-    return verificando
+  let verificando = false
+  if (array.length === 0) {
+    verificando = true
+  } else if (array.length !== 11) {
+    verificando = true
+  }
+  return verificando
 }
 
-function numberArray (array) {
+function numberArray(array) {
   let vericacao = false
   for (let index = 0; index < array.length; index += 1)
-  if (array[index] < 0 || array[index] > 9) {
-    vericacao = true
-  }
+    if (array[index] < 0 || array[index] > 9) {
+      vericacao = true
+    }
   return vericacao
 }
 
 function generatePhoneNumber(array) {
   // seu código aqui
-  for (let index = 0; index <= array.length; index += 1) { 
+  for (let index = 0; index <= array.length; index += 1) {
     if (lengthArray(array)) {
-    return 'Array com tamanho incorreto.'
+      return 'Array com tamanho incorreto.'
     }
-      else if (numberArray(array) || repeatedNumber(array)) {
-        return 'não é possível gerar um número de telefone com esses valores'  
-      }  
-                 else if (array.length === 11) {
-                            return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
-                }
+    else if (numberArray(array) || repeatedNumber(array)) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+    else if (array.length === 11) {
+      return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+    }
   }
 }
-console.log(generatePhoneNumber([]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -229,12 +228,12 @@ function hydrate(string) {
   let numbers = string.match(/\d+/g);
 
   for (let index = 0; index < numbers.length; index += 1) {
-        sumNumbers += parseInt(numbers[index], 10)
+    sumNumbers += parseInt(numbers[index], 10)
   }
   if (sumNumbers === 1) {
-      return sumNumbers + ' copo de água'
+    return sumNumbers + ' copo de água'
   } else {
-      return sumNumbers + ' copos de água'
+    return sumNumbers + ' copos de água'
   }
 }
 
