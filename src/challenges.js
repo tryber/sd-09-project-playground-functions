@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function oneTest(number) {
   let oneTest = false
   if (number % 5 === 0 && number % 3 === 0) {
-    oneTest = true
+    oneTest
   }
   return oneTest
 }
@@ -159,7 +159,7 @@ function techList(array, name) {
     return 0;
   })
   if (newArray.length > 0) {
-    newArray;
+    return newArray;
   } else {
     newArray = 'Vazio!'
   }
@@ -167,23 +167,18 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function repeatedNumberTest(checkNumber, array) {
-  let count = 0
-  for (let twoIndex = 0; twoIndex < array.length; twoIndex += 1) {
-    if (checkNumber === array[twoIndex]) {
-      count += 1
-    }
-    return count
-  }
-}
-
 function repeatedNumber(array) {
   let trueOrFalse = false
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     let checkNumber = array[index]
-    if (repeatedNumberTest(checkNumber, array) >= 3) {
-      trueOrFalse = true
+    for (let twoIndex = 0; twoIndex < array.length; twoIndex += 1) {
+      if (checkNumber === array[twoIndex]) {
+        count += 1
+      }
+      if (count >= 3) {
+        trueOrFalse = true
+      }
     }
     count = 0;
   }
