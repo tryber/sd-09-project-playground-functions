@@ -48,13 +48,12 @@ function countNumber(numberMax, array) {
 function highestCount(array) {
   // seu código aqui
   let numberMax = 0;
-  let count = 0;
   for (let key = 0; key < array.length; key += 1) {
     if (array[key] > numberMax) {
       numberMax = array[key];
     }
   }
-  countNumber(numberMax, array);
+  count = countNumber(numberMax, array);
   return count;
 }
 
@@ -72,11 +71,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function oneTest(number) {
+  if (number % 5 === 0 && number % 3 === 0) {
+    return true
+  }
+}
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = []
+  let number = 0
   for (let key = 0; key < array.length; key += 1) {
-    if (array[key] % 5 === 0 && array[key] % 3 === 0) {
+    number = array[key]
+    if (oneTest(number)) {
       newArray.push('fizzBuzz');
     } else if (array[key] % 5 === 0) {
       newArray.push('buzz');
@@ -203,14 +209,13 @@ function generatePhoneNumber(array) {
     if (lengthArray(array)) {
       return 'Array com tamanho incorreto.'
     }
-    else if (numberArray(array) || repeatedNumber(array)) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-    else if (array.length === 11) {
-      return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
-    }
+      else if (numberArray(array) || repeatedNumber(array)) {
+        return 'não é possível gerar um número de telefone com esses valores'
+      }
+        else if (array.length === 11) {
+          return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+        }
   }
-
 }
 
 // Desafio 12
