@@ -148,8 +148,9 @@ function techList(array, name) {
   if (newArray.length > 0) {
     return newArray;
   } else {
-    'Vazio!'
+    newArray = 'Vazio!'
   }
+  return newArray;
 }
 
 // Desafio 11
@@ -182,30 +183,28 @@ function lengthArray(array) {
 }
 
 function numberArray(array) {
-  let vericacao = false
+  let verificacao = false
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      vericacao = true
+      verificacao = true
     }
   }
-  return vericacao
+  return verificacao
 }
 
 function generatePhoneNumber(array) {
   // seu código aqui
-  let phoneNumber = '';
   for (let index = 0; index <= array.length; index += 1) {
     if (lengthArray(array)) {
-      phoneNumber = 'Array com tamanho incorreto.'
+      return 'Array com tamanho incorreto.'
     }
     else if (numberArray(array) || repeatedNumber(array)) {
-      phoneNumber = 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     else if (array.length === 11) {
-      phoneNumber = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
+      return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
     }
   }
-  return phoneNumber
 }
 
 // Desafio 12
