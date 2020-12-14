@@ -1,37 +1,30 @@
 // Desafio 1
 function compareTrue(today, date) {
   // seu código aqui
-  if (today === 'friday' && date === 13) {
-    return true;
-  } 
+  if (today === true && date === true){
+    return true;} 
   return false;
 }
-
 // Desafio 2
 function calcArea(base, heigth) {
   // seu código aqui
-  return ((base * heigth)/2);
+  return( base * heigth ) /2;
 }
-
 // Desafio 3
-function splitSentence() {
+function splitSentence( phrase ) {
   // seu código aqui
-  phrase = phrase.split(" ");
-  return phrase;
-  
+  return phrase.split (" ");
 }
-
 // Desafio 4
 function concatName(sArray) {
   // seu código aqui
-  return sArray[sArray.length - 1] + ',' + sArray[0];
+  let backString = sArray[sArray.length - 1] + ',' + sArray[0];
+  return backString; 
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
