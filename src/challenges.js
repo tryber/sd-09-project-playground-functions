@@ -159,8 +159,8 @@ function repeatedNumber(array) {
   let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     let checkNumber = array[index]
-    for (index = 0; index < array.length; index += 1) {
-      if (checkNumber === array[index]) {
+    for (let twoIndex = 0; twoIndex < array.length; twoIndex += 1) {
+      if (checkNumber === array[twoIndex]) {
         count += 1
       }
       if (count >= 3) {
@@ -205,19 +205,29 @@ function generatePhoneNumber(array) {
       return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`
     }
   }
+
 }
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
 
 // Desafio 12
+function checkResultA(lineA, lineB, lineC) {
+  let resultA = Math.abs(lineB - lineC)
+  let sumA = lineB + lineC
+  
+  if (resultA < lineA && resultA < sumA) {
+    return true
+  } 
+  return false
+}
+
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let resultA = Math.abs(lineB - lineC)
   let resultB = Math.abs(lineA - lineC)
   let resultC = Math.abs(lineA - lineB)
-  let sumA = lineB + lineC
   let sumB = lineA + lineC
   let sumC = lineA + lineB
 
-  if (resultA < lineA && resultA < sumA && resultB < lineB && resultB < sumB && resultC < lineC && resultC < sumC) {
+  if (checkResultA(lineA, lineB, lineC) && resultB < lineB && resultB < sumB && resultC < lineC && resultC < sumC) {
     return true
   }
   return false
