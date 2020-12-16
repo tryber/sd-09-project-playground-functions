@@ -44,18 +44,21 @@ function footballPoints(wins, ties) {
   return (totalPointsWins + totalPointsTies);
 }
 // Desafio 6
-function highestCount(number) {
-  // seu código aqui
-  let arrayNumber = number;
-  let numberof;
-  for (let index = 0; index < number.length; index +=1){
-    for (let comparaIndex = 0; comparaIndex < arrayNumber; comparaIndex +=1){
-      if (number[index] >= arrayNumber[comparaIndex]){
-        numberof = numberof + 1;
-      }
+function highestCount(matrix) {
+  let number = matrix[0];
+  let counter = 0;
+  for (let index = 0; index < matrix.length; index += 1) {
+    if (number < matrix[index])  {
+        number = matrix[index];
+    } 
+  } 
+  for (let index = 0; index < matrix.length; index += 1) {
+    if (number === matrix[index])  {
+        counter +=1 ;
     }
   }
-}
+  return counter;
+}	
 
 // Desafio 7
 function catAndMouse() {
