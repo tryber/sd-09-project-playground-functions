@@ -25,7 +25,7 @@ function concatName(sArray) {
 function footballPoints(wins, ties) {
   // seu código aqui
       let pointsWins = 3;
-      let totalPointsWins = (Wins * pointsWins);
+      let totalPointsWins = (wins * pointsWins);
       let pointsTies = 1;
       let totalPointsTies = (ties * pointsTies);
       return (totalPointsWins + totalPointsTies);
