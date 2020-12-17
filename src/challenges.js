@@ -52,8 +52,8 @@ function highestCount(matrix) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanceCat1OfMouse = mouse - cat1;
-  let distanceCat2OfMouse = mouse - cat2;
+  let distanceCat1OfMouse = cat1 - mouse;
+  let distanceCat2OfMouse = cat2 - mouse;
   if(distanceCat1OfMouse < distanceCat2OfMouse){
     return 'cat1';
   } else if(distanceCat2OfMouse < distanceCat1OfMouse){
