@@ -54,6 +54,14 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1OfMouse = cat1 - mouse;
   let distanceCat2OfMouse = cat2 - mouse;
+
+  if(distanceCat1OfMouse < 0){
+    distanceCat1OfMouse = distanceCat1OfMouse * (-1);
+  }
+  if(distanceCat2OfMouse < 0){
+    distanceCat2OfMouse = distanceCat2OfMouse * (-1);
+  }
+
   if(distanceCat1OfMouse < distanceCat2OfMouse){
     return 'cat1';
   } else if(distanceCat2OfMouse < distanceCat1OfMouse){
