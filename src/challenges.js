@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(matrix1) {
   // seu código 
-    let newMatrix = matrix;
+    let newMatrix = matrix1[0];
     for (let index = 0; index < matrix1.length; index += 1) {
       if (matrix1[index] % 3 === 0 && matrix1[index] % 5 !== 0) {
         matrix1.push('fizz');
