@@ -80,11 +80,10 @@ function fizzBuzz(matrixx) {
     let buzz = matrixx[index] % 5;
     if (fizz === 0 && buzz !== 0) {
       newMatrix.push('fizz');
-    } 
-    if (fizz !== 0 && buzz === 0) {
+    } else if (fizz !== 0 && buzz === 0) {
       newMatrix.push('buzz');
     } 
-    if (fizz === 0 && buzz === 0) {
+    else if (fizz === 0 && buzz === 0) {
       newMatrix.push('fizzBuzz');
     }
     else {
