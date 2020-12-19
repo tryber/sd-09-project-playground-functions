@@ -72,24 +72,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(matrixx) {
+function fizzBuzz() {
   // seu código 
-  newMatrix = [];
-  for (let index = 0; i < matrixx.length; i += 1) {
-    let fizz = matrixx[index] % 3;
-    let buzz = matrixx[index] % 5;
-    if (fizz === 0 && buzz !== 0) {
-      newMatrix.push('fizz');
-    } else if (fizz !== 0 && buzz === 0) {
-      newMatrix.push('buzz');
-    } 
-    else if (fizz === 0 && buzz === 0) {
-      newMatrix.push('fizzBuzz');
-    }
-    else {
-      newMatrix.push('bug!');
-    }
-  
 }
 
 // Desafio 9
