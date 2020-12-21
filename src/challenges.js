@@ -72,10 +72,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(pow) {
   // seu código 
+  if (pow % 3 === 0 && pow % 5 !== 0){
+    return 'fizz';
+  } else if (pow % 5 === 0 && pow % 3 !== 0){
+    return 'buzz';
+  } else if (pow % 3 === 0 && pow % 5 === 0){
+    return 'fizzBuzz';
+  } else {
+    return 'bug';
+  }
 }
-
+doubler = numbers.map(fizzBuzz);
+console.log(doubler);
+numbers = [3,6,9,12,15,18,19,20,21,22,23,24,25];
 // Desafio 9
 function encode() {
   // seu código aqui
