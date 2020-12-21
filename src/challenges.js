@@ -84,9 +84,9 @@ function fizzBuzz(pow) {
     return 'bug';
   }
 }
-doubler = numbers.map(fizzBuzz);
-console.log(doubler);
-numbers = [3,6,9,12,15,18,19,20,21,22,23,24,25];
+//doubler = numbers.map(fizzBuzz);
+//console.log(doubler);
+//numbers = [3,6,9,12,15,18,19,20,21,22,23,24,25];
 // Desafio 9
 function encode() {
   // seu código aqui
