@@ -1,20 +1,18 @@
 // Desafio 1
-function compareTrue(number1, number2, number3) {
-  
-}
+function compareTrue(number1, number2, number3) {}
 
 // Desafio 2
 function calcArea(base, height) {
-  let resultado =(base * height)/2
+  let resultado =(base * height) / 2
   return resultado
 }
 
 // Desafio 3
-function splitSentence() {
-  let string = "go trybe"
-  let array = string.split('')
-  return array
-}
+function splitSentence(string) {
+  let string = "go trybe";
+  let array = string.split(', ');
+  return array;
+};
 
 // Desafio 4
 function concatName() {
