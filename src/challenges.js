@@ -2,14 +2,11 @@
 function compareTrue(number1, number2) {
   if (number1 === number2 && number2 === number1) {
     return true
-  } else {
-    return false
-  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let resultado = (base * height)/2
+  let resultado =(base * height)/2
   return resultado
 }
 
