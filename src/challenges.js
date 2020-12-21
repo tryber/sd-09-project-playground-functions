@@ -1,7 +1,6 @@
 // Desafio 1
-function compareTrue(number1, number2) {
-  if (number1 === number2 && number2 === number1) {
-    return true
+function compareTrue(number1, number2, number3) {
+  
 }
 
 // Desafio 2
@@ -12,7 +11,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let string = "go trybe"
+  let array = string.split('')
+  return array
 }
 
 // Desafio 4
