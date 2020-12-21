@@ -11,9 +11,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  let string = 'go trybe';
-  let array = string.split(' ');
-  return array;
+  let string = 'go trybe'
+  let array = string.split('', '')
+  return array
 };
 
 // Desafio 4
