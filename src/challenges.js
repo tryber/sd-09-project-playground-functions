@@ -2,7 +2,7 @@
 function compareTrue(number1, number2) {
   if (compareTrue === number1 && compareTrue === number2) {
     return true
-  }else{
+  } else {
     return false
   }
 }
