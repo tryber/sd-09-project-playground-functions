@@ -1,5 +1,11 @@
 // Desafio 1
-function compareTrue() {}
+function compareTrue(a, b) {
+  if (a && b === true) {
+    return true;
+} else {
+    return false;
+}
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -20,7 +26,7 @@ function concatName(array) {
   
   first = array[0];
   last =  array[array.length - 1];
-  return first + ", " + last
+  return last + ", " + first;
 }
 
 // Desafio 5
