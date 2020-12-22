@@ -148,8 +148,11 @@ function generatePhoneNumber(array) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(ladoA, ladoB, ladoC) {
+  if (ladoA < (ladoB + ladoC) && ladoA > Math.abs(ladoB - ladoC) || ladoB < (ladoA + ladoC) && ladoB > Math.abs(ladoA - ladoC) || ladoC < (ladoB + ladoA) && ladoC > Math.abs(ladoB - ladoA)) {
+    return true;
+} 
+    return false;
 }
 
 // Desafio 13
