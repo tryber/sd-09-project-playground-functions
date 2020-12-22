@@ -38,11 +38,11 @@ function highestCount(array) {
   let maior = Math.max(...array);
   
   for(let i = 0; i < array.length; i++){
-    if (array[i] === maior){
+    if (array[i] === maior) {
       quantidade ++;
     }
   }
-  return count;
+  return quantidade;
 }
 
 // Desafio 7
