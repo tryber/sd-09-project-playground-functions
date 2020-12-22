@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(number1, number2) {
   if (number1 && number2 === true) {
-  return true;
-}
+      return true;
+  }
   return false;
 }
 
@@ -24,7 +24,7 @@ function concatName(array) {
   let last;
   first = array[0];
   last = array[array.length - 1];
-  return last + ", " + first;
+  return last +  ","  + first;
 }
 
 // Desafio 5
