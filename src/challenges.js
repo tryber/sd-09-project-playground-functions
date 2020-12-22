@@ -60,20 +60,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let fizzBuzz = array
   for (let i = 0; i < fizzBuzz.length; i += 1) {
     if (fizzBuzz[i] % 3 === 0 && fizzBuzz[i] % 5 === 0) {
-     return fizzBuzz[i] = 'fizzBuzz';
+     return 'fizzBuzz';
     } else if (fizzBuzz[i] % 3 === 0) {
-      return fizzBuzz[i] = 'fizz';
+      return 'fizz';
     } else if (fizzBuzz[i] % 5 === 0) {
-      return fizzBuzz[i] = 'buzz';
-    } else {
-      return fizzBuzz[i] = 'bug!';
+      return 'buzz';
+    }
+      return 'bug!';
     }
   }
-  return fizzBuzz
-}
 
 // Desafio 9
 function encode(string) {
