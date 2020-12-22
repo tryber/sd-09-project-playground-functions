@@ -60,12 +60,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let i = 0; i < fizzBuzz.length; i += 1) {
-    if (fizzBuzz[i] % 3 === 0 && fizzBuzz[i] % 5 === 0) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
      return 'fizzBuzz';
-    } else if (fizzBuzz[i] % 3 === 0) {
+    } else if (array[i] % 3 === 0) {
       return 'fizz';
-    } else if (fizzBuzz[i] % 5 === 0) {
+    } else if (array[i] % 5 === 0) {
       return 'buzz';
     }
       return 'bug!';
