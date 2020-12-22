@@ -14,14 +14,14 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(strings) {
-  let {length, 0: first, [length-1]: last} = strings;
-  return strings
+function concatName(array) {
+  let {length, 0: first, [length-1]: last} = array
+  return array
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  
 }
 
 // Desafio 6
