@@ -131,7 +131,6 @@ function techList(array, name) {
   return 'Vazio!';
 }
 
-
 // Desafio 11
 function generatePhoneNumber(array) {
   let verificador = false;
