@@ -156,7 +156,7 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   let cups = string.replace(/\D/g, ''); // replace all leading non-digits with nothing
   let countW = 0;
   for (let i = 0; pos < cups.length; i += 1) {
@@ -168,7 +168,6 @@ function hydrate() {
     return `${countW} copos de água`;
   }
 }
-
 
 module.exports = {
   calcArea,
