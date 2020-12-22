@@ -24,7 +24,7 @@ function concatName(array) {
   let last;
   first = array[0];
   last = array[array.length - 1];
-  return last.concat(first);
+  return last + ' '  + first;
 }
 
 // Desafio 5
