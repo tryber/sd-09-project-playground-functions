@@ -55,6 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distancia2 < distancia1) {
     return 'cat2';
   }
+  return catAndMouse
 }
 
 // Desafio 8
