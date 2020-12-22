@@ -15,8 +15,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let {length, 0: first, [length-1]: last} = array
-  return array
+  let first;
+  let last;
+  
+  first = array[0];
+  last =  array[array.length - 1];
+  return `${first}, ${last}`;
 }
 
 // Desafio 5
