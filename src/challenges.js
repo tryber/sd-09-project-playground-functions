@@ -120,10 +120,9 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   let verificador = false;
   let verificador3 = false;
-
   if (array.length != 11) {
     return "Array com tamanho incorreto.";
   }
