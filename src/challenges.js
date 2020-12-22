@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === number2 && number2 === number1){
+    if (number1 === number2 && number2 === number1){
     return true
   } 
-  return false
-}
+    return false
+  }
 
 // Desafio 2
 function calcArea(base, height) {
