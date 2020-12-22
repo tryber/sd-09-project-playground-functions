@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(number1, number2) {
   if (number1 && number2 === true) {
-      return true;
+  return true;
   }
   return false;
 }
@@ -24,7 +24,7 @@ function concatName(array) {
   let last;
   first = array[0];
   last = array[array.length - 1];
-  return last +  ", "  + first;
+  return last + ", " + first;
 }
 
 // Desafio 5
@@ -36,12 +36,12 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let quantidade = 0;
   let maior = Math.max(...array)
-  for(i = 0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++){
     if (array[i] === maior){
-      quantidade++;
+      quantidade ++;
     }
   }
-  return count++
+  return count ++
 }
 
 // Desafio 7
