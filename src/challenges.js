@@ -62,13 +62,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {   
   for (let x in array) {
     if (array[x] % 3 === 0 && array[x] % 5 === 0) {
-      array.push('fizzBuzz');
+      array[x]('fizzBuzz');
     } else if (array[x] % 3 === 0) {
-      array.push('fizz');
+      array[x]('fizz');
     } else if (array[x] % 5 === 0) {
-      array.push('buzz');
+      array[x]('buzz');
     } else {
-      array.push('bug!');
+      array[x]('bug!');
     }
   }
   return array;
