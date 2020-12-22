@@ -74,8 +74,6 @@ function fizzBuzz(array) {
   return array;
 }
 
-
-
 // Desafio 9
 function encode(string) {
   let cripted = '';
