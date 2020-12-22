@@ -1,10 +1,9 @@
 // Desafio 1
-function compareTrue(a, b) {
-  if (a && b === true) {
+function compareTrue(number1, number2) {
+  if (number1 && number2 === true) {
     return true;
-} else {
-    return false;
-}
+  }
+return false;
 }
 
 // Desafio 2
@@ -23,15 +22,14 @@ function splitSentence(string) {
 function concatName(array) {
   let first;
   let last;
-  
   first = array[0];
-  last =  array[array.length - 1];
+  last = array[array.length - 1];
   return last + ", " + first;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
