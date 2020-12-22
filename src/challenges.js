@@ -66,49 +66,50 @@ function fizzBuzz(array) {
       fizzBuzz[i] = 'fizz';
     } else if (fizzBuzz[i] % 5 === 0) {
       fizzBuzz[i] = 'buzz';
-    } 
-    return fizzBuzz[i] = 'bug!';
     }
-    return fizzBuzz
+    return fizzBuzz[i] = 'bug!';
   }
+    return fizzBuzz
+}
 
 // Desafio 9
 function encode(string) {
-  let cripted = "";
-    for (let i = 0; i < string.length; i += 1) {
-        if (string[i] === "a") {
-            cripted += "1";
-        } else if (string[i] === "e") {
-            cripted += "2";
-        } else if (string[i] === "i") {
-            cripted += "3";
-        } else if (string[i] === "o") {
-            cripted += "4";
-        } else if (string[i] === "u") {
-            cripted += "5";
-        } else {
-            cripted += string[i];
-        }
+  let cripted = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
+      cripted += '1';
+    } else if (string[i] === 'e') {
+      cripted += "2";
+    } else if (string[i] === 'i') {
+      cripted += '3';
+    } else if (string[i] === 'o') {
+      cripted += '4';
+    } else if (string[i] === 'u') {
+      cripted += '5';
+    } else {
+      cripted += string[i];
     }
+  }
     return cripted;
 }
 function decode(string) {
-  let uncripted = "";
-    for (let i = 0; i < string.length; i += 1)
-        if (string[i] === "1") {
-        uncripted += "a";
-    } else if (string[i] === "2") {
-        uncripted += "e";
-    } else if (string[i] === "3") {
-        uncripted += "i";
-    } else if (string[i] === "4") {
-        uncripted += "o";
-    } else if (string[i] === "5") {
-        uncripted += "u";
+  let uncripted = '';
+  for (let i = 0; i < string.length; i += 1){
+    if (string[i] === '1') {
+      uncripted += 'a';
+    } else if (string[i] === '2') {
+      uncripted += 'e';
+    } else if (string[i] === '3') {
+      uncripted += 'i';
+    } else if (string[i] === '4') {
+      uncripted += 'o';
+    } else if (string[i] === '5') {
+      uncripted += 'u';
     } else {
-        uncripted += string[i];
+      uncripted += string[i];
     }
-    return uncripted;
+  }
+  return uncripted;
 }
 
 // Desafio 10
