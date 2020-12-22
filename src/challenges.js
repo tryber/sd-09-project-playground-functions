@@ -20,7 +20,7 @@ function concatName(array) {
   
   first = array[0];
   last =  array[array.length - 1];
-  return `${first}, ${last}`;
+  return first + ", " + last
 }
 
 // Desafio 5
