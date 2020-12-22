@@ -68,11 +68,9 @@ function fizzBuzz(array) {
     } else if (fizzBuzz[i] % 5 === 0) {
       fizzBuzz[i] = "buzz";
     } 
-      return fizzBuzz[i] = "bug!";  
+    return fizzBuzz[i] = "bug!";  
     }
   }
-  return fizzBuzz;
-}
 
 // Desafio 9
 function encode(string) {
