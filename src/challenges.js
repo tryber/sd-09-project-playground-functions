@@ -88,8 +88,38 @@ function fizzBuzz(pow) {
 //console.log(doubler);
 //numbers = [3,6,9,12,15,18,19,20,21,22,23,24,25];
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  // seu código 
+  let troca = '';
+  let i = 0;
+  while (i < string.length){
+    if ( string[i] === 'a' ){
+     troca = string.replace(/a/g, '1');
+      break;
+    }
+    if ( string[i] === 'e' ){
+      troca = string.replace(/e/g, '2');
+      break;
+    }
+    if ( string[i] === 'i' ){
+      troca = string.replace(/i/g, '3');
+       break;
+    }
+    if ( string[i] === 'o' ){
+      troca = string.replace(/o/g, '4');
+      break;
+    }
+    if ( string[i] === 'u' ){
+      troca = string.replace(/u/g, '5');
+      break;
+    }
+      
+  
+  
+  return troca;
+  
+} 
+
 }
 function decode() {
   // seu código aqui
