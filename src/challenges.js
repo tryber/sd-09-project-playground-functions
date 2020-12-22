@@ -67,8 +67,9 @@ function fizzBuzz(array) {
       array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
       array[i] = 'buzz';
+    } else{
+      return array[i] = 'bug!';
     }
-    return array[i] = 'bug!';
   }
   return array
 }
@@ -80,7 +81,7 @@ function encode(string) {
     if (string[i] === 'a') {
       cripted += '1';
     } else if (string[i] === 'e') {
-      cripted += "2";
+      cripted += '2';
     } else if (string[i] === 'i') {
       cripted += '3';
     } else if (string[i] === 'o') {
@@ -91,11 +92,11 @@ function encode(string) {
       cripted += string[i];
     }
   }
-    return cripted;
+  return cripted;
 }
 function decode(string) {
   let uncripted = '';
-  for (let i = 0; i < string.length; i += 1){
+  for (let i = 0; i < string.length; i += 1) {
     if (string[i] === '1') {
       uncripted += 'a';
     } else if (string[i] === '2') {
