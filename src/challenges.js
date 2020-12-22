@@ -159,7 +159,7 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 function hydrate(string) {
   let cups = string.replace(/\D/g, ''); // replace all leading non-digits with nothing
   let countW = 0;
-  for (let i = 0; pos < cups.length; i += 1) {
+  for (let i = 0; i < cups.length; i += 1) {
     countW += Number(cups[i]);
   }
   if (countW === 1) {
