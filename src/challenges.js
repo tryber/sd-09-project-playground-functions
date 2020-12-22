@@ -116,19 +116,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  let techArray = [];
-  let objeto = {};
-  if(array.length > 0){
-    for(let x = 0; x < array.length; x += 1){
-      objeto = {
-        'tech': array[x],
-        'name': name
-      }
-      techArray.push(objeto)
-    }
-    return techArray;
-  }
-  return 'Vazio!';
+
 }
 
 // Desafio 11
@@ -153,7 +141,7 @@ function generatePhoneNumber(array) {
     }
     }
   if (verificador3 === true || verificador === true) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
@@ -169,7 +157,16 @@ function triangleCheck(ladoA, ladoB, ladoC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  let cups = string.replace(/\D/g, ''); // replace all leading non-digits with nothing
+  let countW = 0;
+  for (let i = 0; pos < cups.length; i += 1) {
+    countW += Number(cups[i]);
+  }
+  if (countW === 1) {
+    return `${countW} copo de água`;
+  } else {
+    return `${countW} copos de água`;
+  }
 }
 
 
