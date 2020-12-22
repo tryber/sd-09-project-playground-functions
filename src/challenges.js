@@ -63,11 +63,11 @@ function fizzBuzz(array) {
   let fizzBuzz = array
   for (let i = 0; i < fizzBuzz.length; i += 1) {
     if (fizzBuzz[i] % 3 === 0 && fizzBuzz[i] % 5 === 0) {
-     fizzBuzz[i] = 'fizzBuzz';
+     return fizzBuzz[i] = 'fizzBuzz';
     } else if (fizzBuzz[i] % 3 === 0) {
-      fizzBuzz[i] = 'fizz';
+      return fizzBuzz[i] = 'fizz';
     } else if (fizzBuzz[i] % 5 === 0) {
-      fizzBuzz[i] = 'buzz';
+      return fizzBuzz[i] = 'buzz';
     } else {
       return fizzBuzz[i] = 'bug!';
     }
