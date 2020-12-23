@@ -16,11 +16,9 @@ function splitSentence( phrase ) {
   return phrase.split (" ");
 }
 // Desafio 4
-function concatName(sArray) {
-let first =   sArray[0];
-let backString = sArray[sArray.length - 1];
-let res = backString.concat(first);
-let resTo = res.toString();  
+function concatName(array) {
+let string = array[array.length - 1] + ',' + array [0];
+let resTo = string.toString();  
 return resTo; 
 }
 // Desafio 5
