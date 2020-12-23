@@ -115,7 +115,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(){
+function techList() {
 // Faça aqui seu codigo
 }
 
@@ -133,10 +133,10 @@ function generatePhoneNumber(array) {
     }
     for (let pos2 = 0; pos2 < array.length; pos2 += 1) {
       if (array[pos1] === array[pos2]) {
-      count3 += 1;
+        count3 += 1;
       }
       if (count3 >= 3) {
-      verificador3 = true;
+        verificador3 = true;
       }
     }
   }
@@ -165,8 +165,8 @@ function hydrate(string) {
   }
   if (countW === 1) {
     return `${countW} copo de água`;
-  } 
-    return `${countW} copos de água`;
+  }
+  return `${countW} copos de água`;
 }
 
 module.exports = {
