@@ -144,7 +144,7 @@ for (let index = 0; index < newArray.length; index += 1) {
 }
 return encoding;
 }	
-function decode() {	function decode(array) {
+function decode(array) {
 let newArray = [];
 for (let index = 0; index < array.length; index += 1) {
   newArray.push(array[index])
@@ -168,7 +168,7 @@ for (let index = 0; index < newArray.length; index += 1) {
 }
 
 return decoding
-}	}
+}	
 console.log(encode('hi there'))
 console.log(decode(encode('hi there')))
 
