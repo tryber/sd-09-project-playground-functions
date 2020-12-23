@@ -165,7 +165,6 @@ function hydrate(string) {
   } 
     return `${countW} copos de água`;
   }
-}
 
 module.exports = {
   calcArea,
