@@ -19,7 +19,7 @@ function splitSentence( phrase ) {
 function concatName(sArray) {
   // seu código aqui
   let backString = sArray[sArray.length - 1] + ',' + sArray[0];
-  return backString; 
+  return backString.toString(); 
 }
 // Desafio 5
 function footballPoints(wins, ties) {
