@@ -20,7 +20,8 @@ function concatName(sArray) {
 let first =   sArray[0];
 let backString = sArray[sArray.length - 1];
 let res = backString.concat(first);
-  return res; 
+let resTo = res.toString();  
+return resTo; 
 }
 // Desafio 5
 function footballPoints(wins, ties) {
