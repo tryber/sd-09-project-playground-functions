@@ -16,10 +16,13 @@ function splitSentence( phrase ) {
   return phrase.split (" ");
 }
 // Desafio 4
-function concatName(array) {
-  let matriz =`${array[array.length - 1]} , ${array[0]}`;
-  return matriz.toString();
-}
+function concatName(arrVar) {
+  arrVar[0] = 'Roberto';
+  arrVar[arrVar.length] = 'Paulo';
+ }
+ concatName(vetor);
+ 
+ console.log(vetor[vetor.length] + vetor[0]);
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
