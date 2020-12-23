@@ -17,9 +17,8 @@ function splitSentence( phrase ) {
 }
 // Desafio 4
 function concatName(array) {
-let string = array[array.length - 1] + ',' + array [0];
-let resTo = string.toString();  
-return resTo; 
+  let matriz =`${array[array.length - 1]} + ${array[0]}`;
+  return matriz;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
