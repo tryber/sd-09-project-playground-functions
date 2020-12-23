@@ -87,90 +87,11 @@ function fizzBuzz(pow) {
 
 
 // Desafio 9
-function encode(string) {
-  
-  let troca = '';
-  let i = 0;
-  while (i < string.length){
-    if ( string[i] === 'a' ){
-     troca = string.replace(/a/g, '1');
-      break;
-    }
-    if ( string[i] === 'e' ){
-      troca = string.replace(/e/g, '2');
-      break;
-    }
-    if ( string[i] === 'i' ){
-      troca = string.replace(/i/g, '3');
-       break;
-    }
-    if ( string[i] === 'o' ){
-      troca = string.replace(/o/g, '4');
-      break;
-    }
-    if ( string[i] === 'u' ){
-      troca = string.replace(/u/g, '5');
-      break;
-    }
-      
-  
-  
-  return troca;
-  
-} 
-
+function encode() {
 }
 function decode() {
-  let newArray = [];
-for (let index = 0; index < array.length; index += 1) {
-  newArray.push(array[index])
-}
-let encoding = [];
-for (let index = 0; index < divArray.length; index += 1) {
-  if (newArray[index] === 'a') {
-    newArray[index] = 1;
-  } else if (newArray[index] === 'e') {
-    newArray[index] = 2;
-  } else if (newArray[index] === 'i') {
-    newArray[index] = 3;
-  } else if (newArray[index] === 'o') {
-    newArray[index] = 4;
-  } else if (newArray[index] === 'u') {
-    newArray[index] = 5;
-  }
-}
-for (let index = 0; index < newArray.length; index += 1) {
-  encoding += newArray[index]
-}
-return encoding;
 }	
-function decode(array) {
-let newArray = [];
-for (let index = 0; index < array.length; index += 1) {
-  newArray.push(array[index])
-}
-let decoding = [];
-for (let index = 0; index < newArray.length; index += 1) {
-  if (newArray[index] === '1') {
-    newArray[index] = 'a';
-  } else if (newArray[index] === '2') {
-    newArray[index] = 'e';
-  } else if (newArray[index] === '3') {
-    newArray[index] = 'i';
-  } else if (newArray[index] === '4') {
-    newArray[index] = 'o';
-  } else if (newArray[index] === '5') {
-    newArray[index] = 'u';
-  }
-}
-for (let index = 0; index < newArray.length; index += 1) {
-  decoding += newArray[index]
-}
 
-return decoding
-}	
-console.log(encode('hi there'))
-console.log(decode(encode('hi there')))
 
 // Desafio 10
 function techList() {
