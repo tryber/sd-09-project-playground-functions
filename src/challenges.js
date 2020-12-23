@@ -87,10 +87,27 @@ function fizzBuzz(pow) {
 
 
 // Desafio 9
-function encode() {
+
+function encode(a) {
+  let m =a.replace(/a/g, '1');
+      m = m.replace(/e/g, '2');
+      m = m.replace(/i/g, '3');
+      m = m.replace(/o/g, '4');
+      m = m.replace(/u/g, '5');
+      
+      return m;
+      }
+
+function decode(m) {
+let a =m.replace(/1/g, 'a');
+a = a.replace(/2/g, 'e');
+a = a.replace(/3/g, 'i');
+a = a.replace(/4/g, 'o');
+a = a.replace(/5/g, 'u');
+
+return a;
 }
-function decode() {
-}	
+
 
 
 // Desafio 10
