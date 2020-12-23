@@ -115,7 +115,10 @@ function decode(string) {
 }
 
 // Desafio 10
-// Faça aqui 
+function techList(){
+// Faça aqui seu codigo
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
   let verificador = false;
