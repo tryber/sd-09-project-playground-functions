@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(pow) {
-  // seu código 
+  
   if (pow % 3 === 0 && pow % 5 !== 0){
     return 'fizz';
   } else if (pow % 5 === 0 && pow % 3 !== 0){
@@ -84,12 +84,11 @@ function fizzBuzz(pow) {
     return 'bug';
   }
 }
-//doubler = numbers.map(fizzBuzz);
-//console.log(doubler);
-//numbers = [3,6,9,12,15,18,19,20,21,22,23,24,25];
+
+
 // Desafio 9
 function encode(string) {
-  // seu código 
+  
   let troca = '';
   let i = 0;
   while (i < string.length){
@@ -122,8 +121,56 @@ function encode(string) {
 
 }
 function decode() {
-  // seu código aqui
+  let newArray = [];
+for (let index = 0; index < array.length; index += 1) {
+  newArray.push(array[index])
 }
+let encoding = [];
+for (let index = 0; index < divArray.length; index += 1) {
+  if (newArray[index] === 'a') {
+    newArray[index] = 1;
+  } else if (newArray[index] === 'e') {
+    newArray[index] = 2;
+  } else if (newArray[index] === 'i') {
+    newArray[index] = 3;
+  } else if (newArray[index] === 'o') {
+    newArray[index] = 4;
+  } else if (newArray[index] === 'u') {
+    newArray[index] = 5;
+  }
+}
+for (let index = 0; index < newArray.length; index += 1) {
+  encoding += newArray[index]
+}
+return encoding;
+}	
+function decode() {	function decode(array) {
+let newArray = [];
+for (let index = 0; index < array.length; index += 1) {
+  newArray.push(array[index])
+}
+let decoding = [];
+for (let index = 0; index < newArray.length; index += 1) {
+  if (newArray[index] === '1') {
+    newArray[index] = 'a';
+  } else if (newArray[index] === '2') {
+    newArray[index] = 'e';
+  } else if (newArray[index] === '3') {
+    newArray[index] = 'i';
+  } else if (newArray[index] === '4') {
+    newArray[index] = 'o';
+  } else if (newArray[index] === '5') {
+    newArray[index] = 'u';
+  }
+}
+for (let index = 0; index < newArray.length; index += 1) {
+  decoding += newArray[index]
+}
+
+return decoding
+}	}
+console.log(encode('hi there'))
+console.log(decode(encode('hi there')))
 
 // Desafio 10
 function techList() {
