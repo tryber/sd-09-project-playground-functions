@@ -116,7 +116,7 @@ function decode(string) {
 
 // Desafio 10
 function techList()
-// Faça aqui 
+// Faça aqui
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -145,7 +145,6 @@ function generatePhoneNumber(array) {
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 
-
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
   if (ladoA < (ladoB + ladoC) && ladoA > Math.abs(ladoB - ladoC) || ladoB < (ladoA + ladoC) && ladoB > Math.abs(ladoA - ladoC) || ladoC < (ladoB + ladoA) && ladoC > Math.abs(ladoB - ladoA)) {
@@ -163,7 +162,7 @@ function hydrate(string) {
   }
   if (countW === 1) {
     return `${countW} copo de água`;
-  } 
+  }
   return `${countW} copos de água`;
 }
 
