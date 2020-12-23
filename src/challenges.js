@@ -18,11 +18,12 @@ function splitSentence( phrase ) {
 // Desafio 4
 function concatName(arrVar) {
   arrVar[0] = 'Roberto';
-  arrVar[arrVar.length] = 'Paulo';
+  arrVar[arrVar.length -1] = 'Paulo';
  }
  concatName(vetor);
- 
- console.log(vetor[vetor.length] + vetor[0]);
+ let tudo = vetor[vetor.length -1] + vetor[0];
+ let res = tudo.toString();
+ console.log(res);
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
