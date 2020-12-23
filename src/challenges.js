@@ -17,9 +17,10 @@ function splitSentence( phrase ) {
 }
 // Desafio 4
 function concatName(sArray) {
-  // seu código aqui
-  let backString = sArray[sArray.length - 1] + ',' + sArray[0];
-  return backString.toString(); 
+let first =   sArray[0];
+let backString = sArray[sArray.length - 1];
+let res = backString.concat(first);
+  return res; 
 }
 // Desafio 5
 function footballPoints(wins, ties) {
