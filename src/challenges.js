@@ -119,32 +119,7 @@ function techList()
 // Faça aqui
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let verificador = false;
-  let verificador3 = false;
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  for (let pos1 = 0; pos1 < array.length; pos1 += 1) {
-    let count3 = 0;
-    if (array[pos1] < 0 || array[pos1] > 9) {
-      verificador = true;
-    }
-    for (let pos2 = 0; pos2 < array.length; pos2 += 1) {
-      if (array[pos1] === array[pos2]) {
-        count3 += 1;
-      }
-      if (count3 >= 3) {
-        verificador3 = true;
-      }
-    }
-  }
-  if (verificador3 === true || verificador === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-}
-
+function generatePhoneNumber(array) {}
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
   if (ladoA < (ladoB + ladoC) && ladoA > Math.abs(ladoB - ladoC) || ladoB < (ladoA + ladoC) && ladoB > Math.abs(ladoA - ladoC) || ladoC < (ladoB + ladoA) && ladoC > Math.abs(ladoB - ladoA)) {
