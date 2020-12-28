@@ -16,7 +16,8 @@ function splitSentence( phrase ) {
   return phrase.split (" ");
 }
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  return array[array.length -1] + ',' + array[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -69,20 +70,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(pow) {
-  
-  if (pow % 3 === 0 && pow % 5 !== 0){
-    return 'fizz';
-  } else if (pow % 5 === 0 && pow % 3 !== 0){
-    return 'buzz';
-  } else if (pow % 3 === 0 && pow % 5 === 0){
-    return 'fizzBuzz';
-  } else {
-    return 'bug';
+function fizzBuzz() {
+  for (let index = 0; index <= array.length; index +=1){
+    if (array[index] % 15 === 0){
+        array[index] = 'fizzBuzz';
+    } 
+      else if (array[index] % 3 === 0) {
+          array[index] = 'fizz'; 
+      } else if (array[index] % 5 === 0 ){
+          array[index] = 'buzz';
+        }
   }
+    return array;
 }
-
-
 // Desafio 9
 
 function encode(a) {
