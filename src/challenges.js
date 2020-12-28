@@ -199,12 +199,14 @@ function encode() {
   // seu código aqui
 }
 
-function decode(stringDecode) {
+function decode() {
+  // seu código aquii
 }
 
 
+objetoTech = techList()
 // Desafio 10
-function techList(arrayTech) {
+function techList(arrayTech, arrayTech) {
   // seu código aqui
   const arrayTechSort = arrayTecno.sort();
   let tamanhoTechSort = arrayTechSort.length;
@@ -219,8 +221,8 @@ function techList(arrayTech) {
   return objetoResultado;
 }
 
-function criaObj(tecnologia, pessoa) {
-  let objeto = `{tech: ${tecnologia}, name: ${pessoa}}`
+function criaObj(tecnologia, pesarrayTechsoa) {
+  let objeto = `{tech: ${tecnologia}, name: ${arrayTech}}`
   return objeto;
 }
 
