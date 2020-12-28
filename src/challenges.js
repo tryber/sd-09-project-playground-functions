@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   for (let index = 0; index <= array.length; index +=1){
     if (array[index] % 15 === 0){
         array[index] = 'fizzBuzz';
