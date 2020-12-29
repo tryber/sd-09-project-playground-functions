@@ -20,11 +20,12 @@ function concatName(array) {
   
    let firstName = array[0];
      let lastName = array[array.length - 1];
-     let resumo = lastName.concat(firstName); 
+     let resumo = lastName.concat(', ', firstName); 
 
-  return resumo.toString;
+  return resumo;
   
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
