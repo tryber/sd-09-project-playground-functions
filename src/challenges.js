@@ -20,7 +20,7 @@ function concatName(array) {
   
    let firstName = array[0];
      let lastName = array[array.length - 1];
-     let resumo = lastName + ',' + firstName; 
+     let resumo = lastName.concat(firstName); 
 
   return resumo.toString;
   
