@@ -17,7 +17,8 @@ function splitSentence( phrase ) {
 }
 // Desafio 4
 function concatName(array) {
-  return array[array.length -1] + ',' + array[0];
+  let resultado = array[array.length -1] + ',' + array[0];
+  return resultado;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -80,8 +81,8 @@ function fizzBuzz(array) {
       } else if (array[index] % 5 === 0 ){
           array[index] = 'buzz';
         } else {
-          array[index] = 'bug';
-        }
+           array[index] = 'bug';
+          }
   }
     return array;
 }
