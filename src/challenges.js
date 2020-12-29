@@ -150,8 +150,19 @@ function decode(param2) {
 }
 
 // Desafio 10
-function techList() {
+let myTechs = ['Git', 'HTML', 'CSS', 'JavaScript', 'React'];
+let name = 'Jean';
+function techList(myTechs, name) {
   // seu código aqui
+  for(let index = 0; index < myTechs.length; index += 1){
+    let objeto = {
+      tech: index,
+      name: name
+    }
+    myTechs[index] = objeto;
+    console.log(objeto);
+  }
+  return objeto;
 }
 
 // Desafio 11
