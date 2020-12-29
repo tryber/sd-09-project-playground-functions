@@ -17,11 +17,11 @@ function splitSentence( phrase ) {
 }
 // Desafio 4
 function concatName(array) {
-  let person ={
-    firstName: array[0],
-    lastName: array[array.length - 1]
-  };
-  return person.lastName + ',' + person.firstName; 
+  
+   let firstName = array[0];
+     let lastName = array[array.length - 1];
+
+  return lastName + ',' + firstName; 
   
 }
 // Desafio 5
