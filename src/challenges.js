@@ -83,7 +83,7 @@ function fizzBuzz(array) {
         } else {
            array[index] = 'bug';
           }
-  }
+        }
     return array;
 }
 // Desafio 9
