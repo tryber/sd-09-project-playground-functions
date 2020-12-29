@@ -16,7 +16,12 @@ function splitSentence( phrase ) {
   return phrase.split (" ");
 }
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  let person ={
+    firstName: array[0],
+    lastName: array[array.length - 1]
+  };
+  return person.lastName + ',' + person.firstName; 
   
 }
 // Desafio 5
