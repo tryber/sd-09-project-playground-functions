@@ -20,8 +20,9 @@ function concatName(array) {
   
    let firstName = array[0];
      let lastName = array[array.length - 1];
+     let resumo = lastName + ',' + firstName; 
 
-  return lastName + ',' + firstName; 
+  return resumo.toString;
   
 }
 // Desafio 5
