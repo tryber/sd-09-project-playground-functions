@@ -88,7 +88,7 @@ function fizzBuzz(array) {
       } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
         novoArray.push('fizzBuzz');
       } else {
-        novoArray.push('bug');
+        novoArray.push('bug!');
       }
   }
   return novoArray;
