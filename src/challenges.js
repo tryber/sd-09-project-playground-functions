@@ -1,43 +1,10 @@
-// Minhas funções
-
-function biggestNumber(numbers) {
-  let biggest = 0;
-
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > biggest) {
-      biggest = numbers[index];
-    }
-  }
-  return biggest;
-}
-
-function encodeDecode(string, input, output) {
-  let newString = '';
-
-  for (let key of string) {
-    if (key === input[0]) {
-      newString += output[0];
-    } else if (key === input[1]) {
-      newString += output[1];
-    } else if (key === input[2]) {
-      newString += output[2];
-    } else if (key === input[3]) {
-      newString += output[3];
-    } else if (key === input[4]) {
-      newString += output[4];
-    } else {
-      newString += key;
-    }
-  }
-  return newString;
-}
-
 // Desafio 1
 function compareTrue(value1, value2) {
+  let check = false;
   if ((value1 === true) && (value2 === true)) {
-    return true;
+    check = true;
   }
-  return false;
+  return check;
 }
 
 // Desafio 2
@@ -61,9 +28,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function biggestNumber(numbers) {
+  let biggest = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > biggest) {
+      biggest = numbers[index];
+    }
+  }
+  return biggest;
+}
+
 function highestCount(array) {
   let total = 0;
-
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === biggestNumber(array)) {
       total += 1;
@@ -74,10 +50,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  const distance1 = Math.abs(cat1 - mouse);
+  const distance2 = Math.abs(cat2 - mouse);
   let closerCat;
-  let distance1 = Math.abs(cat1 - mouse);
-  let distance2 = Math.abs(cat2 - mouse);
-
   if (distance1 < distance2) {
     closerCat = 'cat1';
   } else if (distance2 < distance1) {
@@ -105,14 +80,34 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function encodeDecode(string, input, output) {
+  let newString = '';
+  for (let key of string) {
+    if (key === input[0]) {
+      newString += output[0];
+    } else if (key === input[1]) {
+      newString += output[1];
+    } else if (key === input[2]) {
+      newString += output[2];
+    } else if (key === input[3]) {
+      newString += output[3];
+    } else if (key === input[4]) {
+      newString += output[4];
+    } else {
+      newString += key;
+    }
+  }
+  return newString;
+}
+
 function encode(phrase) {
-  let input = ['a', 'e', 'i', 'o', 'u'];
-  let output = ['1', '2', '3', '4', '5']
+  const input = ['a', 'e', 'i', 'o', 'u'];
+  const output = ['1', '2', '3', '4', '5']
   return encodeDecode(phrase, input, output);
 }
 function decode(phrase) {
-  let input = ['1', '2', '3', '4', '5']
-  let output = ['a', 'e', 'i', 'o', 'u'];
+  const input = ['1', '2', '3', '4', '5']
+  const output = ['a', 'e', 'i', 'o', 'u'];
   return encodeDecode(phrase, input, output);
 }
 
@@ -121,7 +116,6 @@ function techList(array, name) {
   if (array.length > 0) {
     let newArray = [];
     array.sort();
-
     for (let index = 0; index < array.length; index += 1) {
       newArray[index] = {
         tech: array[index],
@@ -136,21 +130,22 @@ function techList(array, name) {
 // Desafio 11
 // PRIMEIRO TESTE
 function testNumberArray(array) {
+  let check = false;
   if (array.length === 11) {
-    return true;
+    check = true;
   }
-  return false;
+  return check;
 }
 // SEGUNDO TESTE
 function testNumberRange(array) {
-  let test = false;
+  let check = false;
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      test = true;
+      check = true;
     }
   }
-  return test;
+  return check;
 }
 // TERCEIRO TESTE
 function testRepeatedNumber(array) {
@@ -184,14 +179,16 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let check = false;
+
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    return true;
+    check = true;
   } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    return true;
+    check = true;
   } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
-    return true;
+    check = true;
   }
-  return false;
+  return check;
 }
 
 // Desafio 13
