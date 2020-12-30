@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  let check = false;
-  if ((value1 === true) && (value2 === true)) {
-    check = true;
-  }
-  return check;
+  return ((value1 === true) && (value2 === true)) ;
 }
 
 // Desafio 2
@@ -66,14 +62,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let key in array) {
-    if ((array[key] % 3 === 0) && (array[key] % 5 === 0)) {
-      array[key] = 'fizzBuzz';
-    } else if (array[key] % 3 === 0) {
-      array[key] = 'fizz';
-    } else if (array[key] % 5 === 0) {
-      array[key] = 'buzz';
-    } else {
-      array[key] = 'bug!';
+    switch (true) {
+      case ((array[key] % 3 === 0) && (array[key] % 5 === 0)):
+        array[key] = 'fizzBuzz';
+        break;
+      case (array[key] % 3 === 0):
+        array[key] = 'fizz';
+        break;
+      case (array[key] % 5 === 0):
+        array[key] = 'buzz';
+        break;
+      default:
+        array[key] = 'bug!';
+        break;
     }
   }
   return array;
@@ -130,16 +131,11 @@ function techList(array, name) {
 // Desafio 11
 // PRIMEIRO TESTE
 function testNumberArray(array) {
-  let check = false;
-  if (array.length === 11) {
-    check = true;
-  }
-  return check;
+  return (array.length === 11);
 }
 // SEGUNDO TESTE
 function testNumberRange(array) {
   let check = false;
-
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       check = true;
@@ -150,7 +146,6 @@ function testNumberRange(array) {
 // TERCEIRO TESTE
 function testRepeatedNumber(array) {
   let repeatedNumbers = [];
-
   for (let number1 of array) {
     let counter = 0;
     for (let number2 = 0; number2 < array.length; number2 += 1) {
@@ -179,23 +174,13 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let check = false;
-
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    check = true;
-  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    check = true;
-  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
-    check = true;
-  }
-  return check;
+  return (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC));
 }
 
 // Desafio 13
 function hydrate(string) {
   let array = string.match(/\d+/g);
   let waterCups = 0;
-
   for (let index = 0; index < array.length; index += 1) {
     waterCups += parseInt(array[index], 10);
   }
@@ -204,7 +189,6 @@ function hydrate(string) {
   }
   return `${waterCups} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
