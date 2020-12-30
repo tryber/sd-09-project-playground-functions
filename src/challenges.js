@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return ((value1 === true) && (value2 === true)) ;
+  return ((value1 === true) && (value2 === true));
 }
 
 // Desafio 2
@@ -61,19 +61,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let key in array) {
+  for (let index = 0; index < array.length; index += 1) {
     switch (true) {
-      case ((array[key] % 3 === 0) && (array[key] % 5 === 0)):
-        array[key] = 'fizzBuzz';
+      case ((array[index] % 3 === 0) && (array[index] % 5 === 0)):
+        array[index] = 'fizzBuzz';
         break;
-      case (array[key] % 3 === 0):
-        array[key] = 'fizz';
+      case (array[index] % 3 === 0):
+        array[index] = 'fizz';
         break;
-      case (array[key] % 5 === 0):
-        array[key] = 'buzz';
+      case (array[index] % 5 === 0):
+        array[index] = 'buzz';
         break;
       default:
-        array[key] = 'bug!';
+        array[index] = 'bug!';
         break;
     }
   }
