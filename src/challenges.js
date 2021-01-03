@@ -141,7 +141,7 @@ function generatePhoneNumber(aray) {
             return novoAray;
 
           } else if (aray[index] < 0 || aray[index] > 9){
-               novoAray =  'nao é possivel gerar um numero de telefone com esses valores.';
+               novoAray =  'não é possivel gerar um número de telefone com esses valores.';
                return novoAray;
             } 
               else if (contador === aray[index]) {
@@ -149,7 +149,7 @@ function generatePhoneNumber(aray) {
               } 
       }
       if (i >= 3){
-        return 'nao é possivel gerar um numero de telefone com esses valores.';
+        return 'não é possivel gerar um número de telefone com esses valores.';
       } else {
        
       novoAray = aray;
