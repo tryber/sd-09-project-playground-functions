@@ -77,6 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
 function fizzBuzz(array) {
   
   let novoArray = [];
@@ -92,7 +93,11 @@ function fizzBuzz(array) {
       }
   }
   return novoArray;
+  
 }
+
+console.log(1,2,3,4,5,6,7,8,9,11);
+
 // Desafio 9
 
 function encode(a) {
@@ -118,13 +123,39 @@ return a;
 
 
 // Desafio 10
-function techList() {
+function techList(aray) {
   // seu código aqui
+  novaVar = [];
+  
 }
+console.log([])
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  let novoAray = [];
+      let contador = aray[0];
+      let i =0;
+      for (let index = 0; index < aray.length; index +=1){
+          if(aray.length !== 11){
+            novoAray = 'Array com tamanho incorreto.' 
+            return novoAray;
+
+          } else if (aray[index] < 0 || aray[index] > 9){
+               novoAray =  'nao é possivel gerar um numero de telefone com esses valores.';
+               return novoAray;
+            } 
+              else if (contador === aray[index]) {
+                 i = i +1;
+              } 
+      }
+      if (i >= 3){
+        return 'nao é possivel gerar um numero de telefone com esses valores.';
+      } else {
+       
+      novoAray = aray;
+let k = '(' + novoAray[0] + novoAray[1] + ')' + ' ' + novoAray[2] + novoAray[3] + novoAray[4] + novoAray[5] + '-' + novoAray[6] + novoAray[7] + novoAray[8] + novoAray[9];
+        return k;
+      }
 }
 
 // Desafio 12
