@@ -41,7 +41,7 @@ function footballPoints(wins,ties) {
     return total;
   }  
 }
-console.log(footballPoints(total));
+console.log(footballPoints);
 
 // Desafio 6
 function highestCount(arrayDNumeros) {
