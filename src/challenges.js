@@ -131,7 +131,7 @@ function techList(aray) {
 console.log([])
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(aray) {
   let novoAray = [];
       let contador = aray[0];
       let i =0;
