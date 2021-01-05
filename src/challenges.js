@@ -220,8 +220,34 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let foneNumber = '';
+  let test = array.sort();
+  if (array.length === 11) {
+    for (let index = 0; index < array; index += 1) {
+      
+    }
+    foneNumber += '(';
+    for (let index = 0; index < array.length; index += 1) {
+      if (foneNumber[index] < 0 || foneNumber[index] > 9) {
+        foneNumber = 'não é possível gerar um número de telefone com esses valores';
+      } else {
+        if (foneNumber.length === 3) {
+          foneNumber += ') ';
+          index -= 1;
+        } else if (foneNumber.length === 10) {
+          foneNumber += '-';
+          index -= 1;
+        } else {
+          foneNumber += array[index];
+        }
+      }
+    }
+  } else {
+    foneNumber = 'Array com tamanho incorreto.';
+  }
+  console.log(`Desafio 11: ${foneNumber}`);
+  return foneNumber;
 }
 
 // Desafio 12
@@ -263,5 +289,6 @@ fizzBuzz([2, 15, 7, 9, 45, 25])
 encode('Boa noite meu consagrado')
 decode('B41 n43t2 m25 c4ns1gr1d4')
 techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Willian')
+generatePhoneNumber([1, 9, 9, 9, 2, 5, 0, 4, 9, 0, 0])
 
 // Aooba, não é que tem um segredo no Lession Learned?!
