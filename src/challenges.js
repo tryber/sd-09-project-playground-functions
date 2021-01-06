@@ -169,7 +169,7 @@ function generatePhoneNumber (array){
   
 }
 
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,1,2,3]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
