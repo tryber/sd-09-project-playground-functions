@@ -96,7 +96,7 @@ function fizzBuzz(array) {
   
 }
 
-  
+
 
 // Desafio 9
 
@@ -153,10 +153,10 @@ function generatePhoneNumber (array){
       indices.push(idx);
       idx = array.indexOf(elemento, idx + 1);
       contando = contando + 1;
-      if (contando >= 3){
-          return  "não é possível gerar um número de telefone com esses valores";
-      }
       
+      }
+      if (contando >= 3){
+        return  "não é possível gerar um número de telefone com esses valores";
   }
   ax = array.join('');
   let ddd = ax.slice(0,2);
@@ -169,7 +169,7 @@ function generatePhoneNumber (array){
   
 }
 
-/*console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,]));*/
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,1,2,3]));
 
 // Desafio 12
 function triangleCheck() {
