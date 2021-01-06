@@ -131,49 +131,45 @@ function techList() {
 
 
 // Desafio 11
-function generatePhoneNumber(array) {
+function generatePhoneNumber (array){
+
   for (let index = 0; index < array.length; index ++){
-    if (array.length !== 11){
-        
-        return "Array com tamanho incorreto.";
-    }
-    if( array[index] < 0){
-        return "não é possível gerar um número de telefone com esses valores";
-    }
-    if (array[index] > 9){
-        return "não é possível gerar um numero de telefone com esses valores";
-    }
+      if (array.length !== 11){
+          
+          return "Array com tamanho incorreto.";
+      }
+      if( array[index] < 0){
+          return "não é possível gerar um número de telefone com esses valores";
+      }
+      if (array[index] > 9){
+          return "não é possível gerar um numero de telefone com esses valores";
+      }
+  }
+  let indices = [];
+  let elemento = 1;
+  let contando = 0;
+  let idx = array.indexOf(elemento);
+  while (idx != -1){
+      indices.push(idx);
+      idx = array.indexOf(elemento, idx + 1);
+      contando = contando + 1;
+      if (contando >= 3){
+          return  "não é possível gerar um numero de telefone com esses valores";
+      }
+      
+  }
+  ax = array.join('');
+  let ddd = ax.slice(0,2);
+  let tel = ax.slice(2,7);
+  let tell = ax.slice(7,12);
+  
+  narray = `(${ddd}) ${tel}-${tell}`;
+  
+  return narray;
+  
 }
-let indices = [];
-let elemento = 1;
-let contando = 0;
-let idx = array.indexOf(elemento);
-while (idx != -1){
-    indices.push(idx);
-    idx = array.indexOf(elemento, idx + 1);
-    contando = contando + 1;
-    if (contando >= 3){
-        return  "não é possível gerar um numero de telefone com esses valores";
-    }
-    
-}
-ax = array.join('');
-let ddd = ax.slice(0,2);
-let tel = ax.slice(2,7);
-let tell = ax.slice(7,12);
 
-narray = `(${ddd}) ${tel}-${tell}`;
-
-return narray;
-
-}
-
-
-let singer = {
-  nome : 'Milton', 
-  lastname : 'Nascimento'
-};
-console.table(singer);
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,2]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
