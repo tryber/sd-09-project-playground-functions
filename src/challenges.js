@@ -123,41 +123,57 @@ return a;
 
 
 // Desafio 10
-function techList(aray) {
+function techList() {
   // seu código aqui
-  novaVar = [];
+  
   
 }
-console.log([])
+
 
 // Desafio 11
-function generatePhoneNumber(aray) {
-  let novoAray = [];
-      let contador = aray[0];
-      let i =0;
-      for (let index = 0; index < aray.length; index +=1){
-          if(aray.length !== 11){
-            novoAray = 'Array com tamanho incorreto.' 
-            return novoAray;
+function generatePhoneNumber(array) {
+  for (let index = 0; index < array.length; index ++){
+    if (array.length !== 11){
+        
+        return "Array com tamanho incorreto.";
+    }
+    if( array[index] < 0){
+        return "não é possível gerar um número de telefone com esses valores";
+    }
+    if (array[index] > 9){
+        return "não é possível gerar um numero de telefone com esses valores";
+    }
+}
+let indices = [];
+let elemento = 1;
+let contando = 0;
+let idx = array.indexOf(elemento);
+while (idx != -1){
+    indices.push(idx);
+    idx = array.indexOf(elemento, idx + 1);
+    contando = contando + 1;
+    if (contando >= 3){
+        return  "não é possível gerar um numero de telefone com esses valores";
+    }
+    
+}
+ax = array.join('');
+let ddd = ax.slice(0,2);
+let tel = ax.slice(2,7);
+let tell = ax.slice(7,12);
 
-          } else if (aray[index] < 0 || aray[index] > 9){
-               novoAray =  'não é possivel gerar um número de telefone com esses valores.';
-               return novoAray;
-            } 
-              else if (contador === aray[index]) {
-                 i = i +1;
-              } 
-      }
-      if (i >= 3){
-        return 'não é possivel gerar um número de telefone com esses valores.';
-      } else {
-       
-      novoAray = aray;
-let k = '(' + novoAray[0] + novoAray[1] + ')' + ' ' + novoAray[2] + novoAray[3] + novoAray[4] + novoAray[5] + '-' + novoAray[6] + novoAray[7] + novoAray[8] + novoAray[9];
-        return k;
-      }
+narray = `(${ddd}) ${tel}-${tell}`;
+
+return narray;
+
 }
 
+
+let singer = {
+  nome : 'Milton', 
+  lastname : 'Nascimento'
+};
+console.table(singer);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
