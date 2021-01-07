@@ -141,10 +141,10 @@ function generatePhoneNumber (array){
   for (let index = 0; index < array.length; index ++){
      
       if( array[index] < 0){
-          return "não é possível gerar um número de telefone com esses valores!";
+          return "não é possível gerar um número de telefone com esses valores";
       }
       if (array[index] > 9){
-          return "não é possível gerar um número de telefone com esses valores@";
+          return "não é possível gerar um número de telefone com esses valores";
       }
   }
   /*let indices = [];
@@ -164,8 +164,8 @@ function generatePhoneNumber (array){
              contador = contador + 1;
              
           }
-          /*if (contador >= 3){
-            return  "não é possível gerar um número de telefone com esses valores#";*/
+          if (contador >= 3){
+            return  "não é possível gerar um número de telefone com esses valores";
             
         }
         
