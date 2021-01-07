@@ -131,63 +131,64 @@ function techList() {
 
 
 // Desafio 11
-
 function generatePhoneNumber (array){
-  if (array.length !== 11){
-          
-    return "Array com tamanho incorreto.";
-  }
+  let tamArray = testarTamanhoArray(array);
+  let testaValorIguais = testarWaloresIguais(array);
+  let testa = testarArray(array);
+  let numTelefone = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 
-  for (let index = 0; index < array.length; index ++){
-     
-      if( array[index] < 0){
-          return "não é possível gerar um número de telefone com esses valores";
-      }
-      if (array[index] > 9){
-          return "não é possível gerar um número de telefone com esses valores";
-      }
-  }
-  /*let indices = [];
-  let elemento = 1;
-  let contando = 0;
-  let idx = array.indexOf(elemento);
-  while (idx != -1){
-      indices.push(idx);
-      idx = array.indexOf(elemento, idx + 1);
-      contando = contando + 1;*/
+  if (tamArray === true) {
+    numTelefone = "Array com tamanho incorreto.";
+  } else
+  if (testaValorIguais === true) {
+    numTelefone = 'não é possível gerar um número de telefone com esses valores';
+  } else 
 
-      let s = array;
-      let contador = 0;
-      for (let i = 0; i < array.length; i++){
-        for (let j = 0; j < s.length; j++){
-          if (array[i] === s[j]){
-             contador = contador + 1;
-             
-          }
-          if (contador >= 3){
-            return  "não é possível gerar um número de telefone com esses valores";
-            
-        }
-        
-      }
-      return contador;
-      
-      
-      
-      
-  
-  ax = array.join('');
-  let ddd = ax.slice(0,2);
-  let tel = ax.slice(2,7);
-  let tell = ax.slice(7,12);
-  
-  narray = `(${ddd}) ${tel}-${tell}`;
-  
-  return narray;
-  
+  if (testa === true) {
+    numTelefone = 'não é possível gerar um número de telefone com esses valores';
+  }
+  return numTelefone;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
+
+function testarArray(array){
+  let verifica = false;
+    for (let index = 0; index < array.length; index ++){
+        
+       if( array[index] < 0 || array[index] > 9){
+          verifica = true;
+       }
+  
+    }
+    return verifica;
+}
+
+function testarTamanhoArray(array){
+          
+    return array.length !== 11;
+  }
+function testarWaloresIguais(array){
+  let numRepetidos = [];
+  let s = [];
+    for (let num1 of array){
+      let contar = 0;
+      for (let num2 = 0; num2 < array.length; num2++){
+        if (num1 === array[num2]){
+          contar ++;
+        }
+      }
+      if (contar >= 3){
+        numRepetidos.push(contar);
+    }
+    if (numRepetidos.length >= 3){
+        s = true;
+    }
+  }
+  return s;
+}
+
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]));
 
 // Desafio 12
 function triangleCheck() {
