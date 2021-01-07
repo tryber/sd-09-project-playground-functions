@@ -195,9 +195,7 @@ function triangleCheck(num3, num4, num5) {
   // seu código aqui
   let somaLado = num4 + num5;
   let fun = Math.abs(num4 - num5);
-  if (num3 < somaLado && num3 > fun){
-    return true;
-  }
+  return (num3 < somaLado && num3 > fun);
 }
 
 // Desafio 13
