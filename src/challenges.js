@@ -191,8 +191,13 @@ function testarWaloresIguais(array){
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(num3, num4, num5) {
   // seu código aqui
+  let somaLado = num4 + num5;
+  let fun = Math.abs(num4 - num5);
+  if (num3 < somaLado && num3 > fun){
+    return true;
+  }
 }
 
 // Desafio 13
