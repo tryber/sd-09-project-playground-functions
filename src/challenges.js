@@ -199,10 +199,18 @@ function triangleCheck(num3, num4, num5) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
-}
 
+  let num9 = /[1-9]/g;
+  let result = string.match(num9);
+  let total = 0;
+  /*for (let i = 0; i < result.length; i++){
+    total = total + result[i];
+  }*/
+  return result;
+}
+console.log(hydrate(['5 cerveja', '6 coca']));
 
 module.exports = {
   calcArea,
