@@ -203,14 +203,21 @@ function hydrate(string) {
   // seu código aqui
 
   let num9 = /[1-9]/g;
-  let result = string.match(num9);
+  let result = string.match(/\d+/g);
   let total = 0;
-  /*for (let i = 0; i < result.length; i++){
-    total = total + result[i];
-  }*/
-  return result;
+  let resultado;
+  for (let i = 0; i < result.length; i++){
+    total = total + parseInt(result[i], 10);
+  }
+
+  if (total === 1) {
+    resultado = `${total} copo de água`;
+    return resultado;
+  
+  } 
+  resultado = `${total} copos de água`;
+  return resultado;
 }
-console.log(hydrate(['5 cerveja', '6 coca']));
 
 module.exports = {
   calcArea,
