@@ -163,15 +163,42 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > (lineB + lineC)) {
+    if (lineA > Math.abs(lineB-lineC) || lineA > Math.abs(lineC-lineB)) {
+    return false;
+    }
+  }
+
+  if (lineB > (lineA + lineC)) {
+    if (lineB > Math.abs(lineA-lineC) || lineB > Math.abs(lineC-lineA)) {
+    return false;
+    }
+  }
+
+  if (lineC > (lineB + lineA)) {
+    if (lineC > Math.abs(lineB-lineA) || lineC > Math.abs(lineA-lineB)) {
+    return false;
+    }
+  }
+
+  return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  bebida = bebida.match(/\d/g);
+  let somaBebida = 0;
+  for (index = 0; index < bebida.length; index += 1) {
+    somaBebida += parseInt(bebida[index], 10);
+  }
+  if (somaBebida == 1) {
+    return somaBebida + 'copo de água';
+  }
+  else {
+  return somaBebida + 'copos de água';
+  }
 }
-
 
 module.exports = {
   calcArea,
