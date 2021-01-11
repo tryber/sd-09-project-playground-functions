@@ -130,7 +130,7 @@ function techList(technologies, name) {
 function generatePhoneNumber(phoneNumber) {
   
   if (phoneNumber.length !== 11) {
-    return 'não é possivel';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   for (index = 0; index < phoneNumber.length; index += 1) {
     let teste0 = 0;
