@@ -193,10 +193,10 @@ function hydrate(bebida) {
     somaBebida += parseInt(bebida[index], 10);
   }
   if (somaBebida == 1) {
-    return somaBebida + 'copo de água';
+    return somaBebida + ' copo de água';
   }
   else {
-  return somaBebida + 'copos de água';
+  return somaBebida + ' copos de água';
   }
 }
 
