@@ -92,11 +92,22 @@ function fizzBuzz(vd8) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  phrase = phrase.replace(/a/gi, '1');
+  phrase = phrase.replace(/e/gi, '2');
+  phrase = phrase.replace(/i/gi, '3');
+  phrase = phrase.replace(/o/gi, '4');
+  phrase = phrase.replace(/u/gi, '5');
+  return phrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  phrase = phrase.replace(/1/gi, 'a');
+  phrase = phrase.replace(/2/gi, 'e');
+  phrase = phrase.replace(/3/gi, 'i');
+  phrase = phrase.replace(/4/gi, 'o');
+  phrase = phrase.replace(/5/gi, 'u');
+  return phrase;
 }
 
 // Desafio 10
