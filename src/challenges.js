@@ -127,8 +127,39 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  
+  if (phoneNumber.length !== 11) {
+    return 'não é possivel';
+  }
+  for (index = 0; index < phoneNumber.length; index += 1) {
+    let teste0 = 0;
+    let teste9 = 9;
+    let repeticao = 0;
+
+    if (phoneNumber[index] < teste0 || phoneNumber[index] > teste9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    for (index2 = 0; index2 < phoneNumber.length; index2 += 1) {
+      if (phoneNumber[index] === phoneNumber[index2]) {
+        repeticao += 1;
+        if (repeticao >= 3) {
+          return'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+  }
+
+  phoneNumber.splice(0, 0, '(');
+  phoneNumber.splice(3, 0, ')');
+  phoneNumber.splice(4, 0, ' ');
+  phoneNumber.splice(10, 0, '-');
+
+  let teste = '';
+  teste = phoneNumber+'';
+  teste = phoneNumber.join();
+  teste = teste.replace(/,/gi, '');
+  return teste;
 }
 
 // Desafio 12
