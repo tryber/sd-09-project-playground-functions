@@ -26,9 +26,12 @@ function splitSentence(string) {
 console.log(splitSentence('Agora vai !!!'))
 
 // Desafio 4
-function concatName() {
+function concatName(nomes) {
   // seu código aqui
+  let concatenacao = nomes[nomes.length - 1] + ', ' + nomes[0]
+  return concatenacao
 }
+console.log(concatName(['Thiago', 'Beatriz', 'Pedro', 'Barbára']))
 
 // Desafio 5
 function footballPoints() {
