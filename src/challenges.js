@@ -102,7 +102,8 @@ function encode(string) {
     u: 5,
   };
   for (let key in string) {
-    if (string[key] === 'a' || string[key] === 'e' || string[key] === 'i' || string[key] === 'o' || string[key] === 'u') {
+    if (string.includes('a') || string.includes('e') ||
+    string.includes('i') || string.includes('o') || string.includes('u')) {
       newString += vowels[string[key]];
     } else {
       newString += string[key];
@@ -160,7 +161,7 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  const countNumber = array.map(element => {
+  const counterNumber = array.map((element) => {
     return array.reduce((count, number) => {
       if (number === element) {
         count += 1
@@ -169,7 +170,7 @@ function repeatedNumber(array) {
     }, 0);
   });
 
-  return countNumber.some(number => number >= 3);
+  return counterNumber.some((number) => number >= 3);
 }
 
 function lengthArray(array) {
