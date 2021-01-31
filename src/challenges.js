@@ -75,8 +75,8 @@ function fizzBuzz(array) {
   // seu código aqui
   const newArray = [];
 
-  array.forEach(element => {
-    if (element % 5 === 0  && element % 3 === 0) {
+  array.forEach((element) => {
+    if (element % 5 === 0 && element % 3 === 0) {
       newArray.push('fizzBuzz');
     } else if (element % 3 === 0) {
       newArray.push('fizz');
@@ -151,7 +151,7 @@ function techList(array, name) {
     return 0;
   })
   if (newArray.length > 0) {
-    return newArray;
+    newArray;
   } else {
     newArray = 'Vazio!'
   }
@@ -160,21 +160,16 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  let trueOrFalse = false
-  let count = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    let checkNumber = array[index]
-    for (let twoIndex = 0; twoIndex < array.length; twoIndex += 1) {
-      if (checkNumber === array[twoIndex]) {
+  const countNumber = array.map(element => {
+    return array.reduce((count, number) => {
+      if (number === element) {
         count += 1
       }
-      if (count >= 3) {
-        trueOrFalse = true
-      }
-    }
-    count = 0;
-  }
-  return trueOrFalse
+      return count;
+    }, 0);
+  });
+
+  return countNumber.some(number => number >= 3);
 }
 
 function lengthArray(array) {
