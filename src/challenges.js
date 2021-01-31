@@ -71,30 +71,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function oneTest(number) {
-  let oneTest = false
-  if (number % 5 === 0 && number % 3 === 0) {
-    oneTest
-  }
-  return oneTest
-}
-
 function fizzBuzz(array) {
   // seu código aqui
-  let newArray = []
-  let number = 0
-  for (let key = 0; key < array.length; key += 1) {
-    number = array[key]
-    if (oneTest(number)) {
+  const newArray = [];
+
+  array.forEach(element => {
+    if (element % 5 === 0  && element % 3 === 0) {
       newArray.push('fizzBuzz');
-    } else if (array[key] % 5 === 0) {
-      newArray.push('buzz');
-    } else if (array[key] % 3 === 0) {
+    } else if (element % 3 === 0) {
       newArray.push('fizz');
+    } else if (element % 5 === 0) {
+      newArray.push('buzz');
     } else {
       newArray.push('bug!');
     }
-  }
+  });
+
   return newArray;
 }
 
