@@ -91,45 +91,39 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  // seu código aqui
+const code = (string, changeFor, switchTo) => {
   let newString = '';
-  let vowels = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  for (let key in string) {
-    if (string.includes('a') || string.includes('e') ||
-    string.includes('i') || string.includes('o') || string.includes('u')) {
-      newString += vowels[string[key]];
+
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === changeFor) {
+      newString += switchTo;
     } else {
-      newString += string[key];
+      newString += string[index];
     }
   }
   return newString;
 }
 
+function encode(string) {
+  // seu código aqui
+  string = code(string, 'e', '2');
+  string = code(string, 'u', '5');
+  string = code(string, 'i', '3');
+  string = code(string, 'a', '1');
+  string = code(string, 'o', '4');
+
+  return string;
+}
+
 function decode(string) {
   // seu código aqui
-  let newString = '';
-  let vowels = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-  for (let key in string) {
-    if (string[key] === '1' || string[key] === '2' || string[key] === '3' || string[key] === '4' || string[key] === '5') {
-      newString += vowels[string[key]];
-    } else {
-      newString += string[key];
-    }
-  }
-  return newString;
+  string = code(string, '1', 'a');
+  string = code(string, '4', 'o');
+  string = code(string, '2', 'e');
+  string = code(string, '5', 'u');
+  string = code(string, '3', 'i');
+
+  return string;
 }
 
 // Desafio 10
@@ -138,21 +132,14 @@ function techList(array, name) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < array) {
-      let outro = { tech: array[index], name }
-      newArray.push(outro)
+      let object = { tech: array[index], name }
+      newArray.push(object)
     }
   }
-  newArray.sort(function (a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    }
-    if (a.tech < b.tech) {
-      return -1;
-    }
-    return 0;
-  })
+  newArray.sort((a, b) => a.tech - b.tech);
+
   if (newArray.length > 0) {
-    newArray;
+    return newArray;
   } else {
     newArray = 'Vazio!'
   }
@@ -161,16 +148,14 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  const counterNumber = array.map((element) => {
+  return array.map((element) => {
     return array.reduce((count, number) => {
       if (number === element) {
         count += 1
       }
       return count;
     }, 0);
-  });
-
-  return counterNumber.some((number) => number >= 3);
+  }).some((number) => number >= 3);
 }
 
 function lengthArray(array) {
@@ -211,11 +196,15 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function checkA(lineA, lineB, lineC) {
   let resultA = Math.abs(lineB - lineC)
-  let sumA = lineB + lineC
-  if (resultA < lineA && resultA < sumA) {
-    return true
+  let sumA = lineB + lineC;
+  let array = [resultA, sumA, lineA];
+
+  array.sort((a, b) => a + b);
+
+  if (array[0] === resultA) {
+    return true;
   }
-  return false
+  return false;
 }
 
 function checkB(lineA, lineB, lineC) {
@@ -228,12 +217,12 @@ function checkB(lineA, lineB, lineC) {
 }
 
 function checkC(lineA, lineB, lineC) {
-  let resultC = Math.abs(lineA - lineB)
-  let sumC = lineA + lineB
-  if (resultC < lineC && resultC < sumC) {
-    return true
-  }
-  return false
+  let resultC = Math.abs(lineA - lineB);
+  let sumC = lineA + lineB;
+
+  let array = [resultC, sumC, lineC];
+
+  return array.some(element => !array.every(line => line > element));
 }
 
 function triangleCheck(lineA, lineB, lineC) {
