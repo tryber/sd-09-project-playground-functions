@@ -117,13 +117,22 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  string = code(string, '1', 'a');
-  string = code(string, '4', 'o');
-  string = code(string, '2', 'e');
-  string = code(string, '5', 'u');
-  string = code(string, '3', 'i');
-
-  return string;
+  let newString = '';
+  let vowels = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let key in string) {
+    if (string[key] === '1' || string[key] === '2' || string[key] === '3' || string[key] === '4' || string[key] === '5') {
+      newString += vowels[string[key]];
+    } else {
+      newString += string[key];
+    }
+  }
+  return newString;
 }
 
 // Desafio 10
@@ -194,40 +203,18 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function checkA(lineA, lineB, lineC) {
-  let resultA = Math.abs(lineB - lineC)
-  let sumA = lineB + lineC;
-  let array = [resultA, sumA, lineA];
-
-  array.sort((a, b) => a + b);
-
-  if (array[0] === resultA) {
-    return true;
-  }
-  return false;
-}
-
-function checkB(lineA, lineB, lineC) {
-  let resultB = Math.abs(lineA - lineC)
-  let sumB = lineA + lineC
-  if (resultB < lineB && resultB < sumB) {
+function checkValidade(line, lineTwo, lineThree) {
+  let result = Math.abs(lineTwo - lineThree)
+  let sum = lineTwo + lineThree
+  if (result < line && result < sum) {
     return true
   }
   return false
 }
 
-function checkC(lineA, lineB, lineC) {
-  let resultC = Math.abs(lineA - lineB);
-  let sumC = lineA + lineB;
-
-  let array = [resultC, sumC, lineC];
-
-  return array.some(element => !array.every(line => line > element));
-}
-
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (checkA(lineA, lineB, lineC) && checkB(lineA, lineB, lineC) && checkC(lineA, lineB, lineC)) {
+  if (checkValidade(lineA, lineB, lineC) && checkValidade(lineB, lineA, lineC) && checkValidade(lineC, lineB, lineA)) {
     return true
   }
   return false
