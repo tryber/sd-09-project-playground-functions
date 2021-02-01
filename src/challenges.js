@@ -145,7 +145,7 @@ function techList(array, name) {
   }
 
   array.sort()
-    .forEach(element => {
+    .forEach((element) => {
       newArray.push({ tech: element, name })
     });
 
@@ -154,7 +154,7 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  return array.map(element => {
+  const repeat = array.map((element) => {
     return array.reduce((count, number) => {
       if (number === element) {
         count += 1
@@ -162,6 +162,8 @@ function repeatedNumber(array) {
       return count;
     }, 0);
   }).some(number => number >= 3);
+
+  return repeat;
 }
 
 function lengthArray(array) {
@@ -211,10 +213,16 @@ function checkValidade(line, lineTwo, lineThree) {
 
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if (checkValidade(lineA, lineB, lineC) && checkValidade(lineB, lineA, lineC) && checkValidade(lineC, lineB, lineA)) {
-    return true
+  let check = false;
+  if (checkValidade(lineA, lineB, lineC) && checkValidade(lineC, lineB, lineA)) {
+    check = true;
   }
-  return false
+
+  if (checkValidade(lineB, lineA, lineC)) {
+    check = true;
+  }
+
+  return check;
 }
 
 // Desafio 13
