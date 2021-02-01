@@ -154,7 +154,7 @@ function techList(array, name) {
 
 // Desafio 11
 function repeatedNumber(array) {
-  const repeat = array.map((element) => {
+  const repeat = array.map(element => {
     return array.reduce((count, number) => {
       if (number === element) {
         count += 1
@@ -214,13 +214,10 @@ function checkValidade(line, lineTwo, lineThree) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let check = false;
-  if (checkValidade(lineA, lineB, lineC) && checkValidade(lineC, lineB, lineA)) {
-    check = true;
-  }
 
-  if (checkValidade(lineB, lineA, lineC)) {
-    check = true;
-  }
+  check = checkValidade(lineA, lineB, lineC);
+  check = checkValidade(lineB, lineA, lineC);
+  check = checkValidade(lineC, lineB, lineA);
 
   return check;
 }
