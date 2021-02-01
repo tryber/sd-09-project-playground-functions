@@ -155,13 +155,13 @@ function techList(array, name) {
 // Desafio 11
 function repeatedNumber(array) {
   const repeat = array
-    .map(( element ) => {
-      return array.reduce((count, number) => {
+    .map((element) => {
+      return (array.reduce((count, number) => {
         if (number === element) {
           count += 1
         }
         return count;
-      }, 0);
+      }, 0));
     }).some(number => number >= 3);
 
   return repeat;
