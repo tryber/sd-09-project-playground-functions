@@ -139,32 +139,29 @@ function decode(string) {
 function techList(array, name) {
   // seu código aqui
   let newArray = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < array) {
-      let object = { tech: array[index], name }
-      newArray.push(object)
-    }
-  }
-  newArray.sort((a, b) => a.tech - b.tech);
 
-  if (newArray.length > 0) {
-    return newArray;
-  } else {
-    newArray = 'Vazio!'
+  if (array.length === 0) {
+    return 'Vazio!';
   }
+
+  array.sort()
+    .forEach(element => {
+      newArray.push({ tech: element, name })
+    });
+
   return newArray;
 }
 
 // Desafio 11
 function repeatedNumber(array) {
-  return array.map((element) => {
+  return array.map(element => {
     return array.reduce((count, number) => {
       if (number === element) {
         count += 1
       }
       return count;
     }, 0);
-  }).some((number) => number >= 3);
+  }).some(number => number >= 3);
 }
 
 function lengthArray(array) {
