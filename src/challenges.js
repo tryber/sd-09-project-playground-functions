@@ -155,7 +155,7 @@ function techList(array, name) {
 // Desafio 11
 function repeatedNumber(array) {
   const repeat = array
-    .map((element) => {
+    .map(element => {
       return (array.reduce((count, number) => {
         if (number === element) {
           count += 1
