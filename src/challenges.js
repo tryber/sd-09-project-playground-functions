@@ -123,16 +123,27 @@ if (teste.slice(0, 1) === 'j') {
 }
 console.log(letra);*/
 
-function decode() {
-  // seu código aqui
+function checkFizz(fizz) {
+  if (fizz === 0) {
+    return true;
+  }
+  return false;
+}
+function checkBuzz(buzz) {
+  if (buzz === 0) {
+    return true;
+  }
+  return false;
 }
 // Desafio 10
 function techList() {
   // seu código aqui
 }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayPhone) {
+  let answerPhone;
+  if (arrayPhone.length < 10 )
+  return answerPhone;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
