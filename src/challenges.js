@@ -300,6 +300,7 @@ function generatePhoneNumber(numArray) {
 // --------------------------------------------------------------------
 
 
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let cond1 = (lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC));
