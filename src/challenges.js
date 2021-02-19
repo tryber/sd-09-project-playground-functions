@@ -72,10 +72,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 
 function highestNum(array) {
-  let highestNum = 0;
+  let highest = 0;
   for (let key in array) {
-    if (array[key] > highestNum) {
-      highestNum = array[key]
+    if (array[key] > highest) {
+      highest = array[key]
     }
   }
 }
