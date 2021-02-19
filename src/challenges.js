@@ -70,6 +70,16 @@ function footballPoints(wins, ties) {
 // --------------------------------------------------------------------
 
 // Desafio 6
+
+function highestNum(array) {
+  let highestNum = 0;
+  for (let key in array) {
+    if (array[key] > highestNum) {
+      highestNum = array[key]
+    }
+  }
+}
+
 function highestCount(numArray) {
   let counter = 0;
   highestNum(numArray);
@@ -79,15 +89,6 @@ function highestCount(numArray) {
     }
   }
   return counter;
-}
-
-function highestNum(array) {
-  let highestNum = 0;
-  for (let key in numArray) {
-    if (numArray[key] > highestNum) {
-      highestNum = numArray[key]
-    }
-  }
 }
 
 // console.log(highestCount([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
@@ -318,7 +319,7 @@ function hydrate(string) {
   let numbers = string.match(regex);
   let waterCup = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    waterCup += parseInt(numbers[index]);
+    waterCup += parseInt(numbers[index], 10);
   }
   if (waterCup === 1) {
     return `${waterCup} copo de água`;
