@@ -83,9 +83,9 @@ function highestNum(array) {
 
 function highestCount(numArray) {
   let counter = 0;
-  highestNum(numArray);
+  const hNum = highestNum(numArray);
   for (let key2 in numArray) {
-    if (numArray[key2] === highest) {
+    if (numArray[key2] === hNum) {
       counter += 1;
     }
   }
