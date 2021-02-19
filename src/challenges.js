@@ -78,13 +78,14 @@ function highestNum(array) {
       highest = array[key]
     }
   }
+  return highest;
 }
 
 function highestCount(numArray) {
   let counter = 0;
   highestNum(numArray);
   for (let key2 in numArray) {
-    if (numArray[key2] === highestNum) {
+    if (numArray[key2] === highest) {
       counter += 1;
     }
   }
