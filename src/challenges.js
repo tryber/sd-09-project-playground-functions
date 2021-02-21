@@ -30,7 +30,7 @@ console.log(concatName(arrays));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 + ties);
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
