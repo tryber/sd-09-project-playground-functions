@@ -19,9 +19,14 @@ function splitSentence(stringSentence) {
 }console.log(splitSentence('vqv trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let arrays = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(names) {
+  let primeiroNome = names[0];
+  let ultimoNome = names[names.length - 1];
+  let concatenacao = ultimoNome + ', ' + primeiroNome;
+    return concatenacao;  
 }
+console.log(concatName(arrays));
 
 // Desafio 5
 function footballPoints() {
