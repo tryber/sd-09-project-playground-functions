@@ -139,10 +139,10 @@ function techList(techs, name) {
     return 'Vazio!'
   }
   let listaObjetos = [];
-  for (let index = 0; index < arrayTechs.length; index += 1){
+  for (let index = 0; index < arrayTechs.length; index += 1) {
     listaObjetos[index] = {
-      tech:arrayTechs[index],
-      name: name,}
+      tech: arrayTechs[index],
+      name: name }
   }
   return listaObjetos
 }
