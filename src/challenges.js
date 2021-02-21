@@ -6,7 +6,7 @@ function compareTrue(diaUtil, haveraAula) {
   } else {
     return false;
   }
-} console.log(compareTrue(true, true))
+} console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
