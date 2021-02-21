@@ -133,8 +133,18 @@ function decode(decodifica) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let arrayTechs = techs.sort()
+  if (arrayTechs.length === 0){
+    return 'Vazio!'
+  }
+  let listaObjetos = [];
+  for (let index = 0; index < arrayTechs.length; index += 1){
+    listaObjetos[index] = {
+      tech:arrayTechs[index],
+      name: name,}
+  }
+  return listaObjetos
 }
 
 // Desafio 11
