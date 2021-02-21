@@ -24,7 +24,7 @@ function concatName(names) {
   let primeiroNome = names[0];
   let ultimoNome = names[names.length - 1];
   let concatenacao = ultimoNome + ', ' + primeiroNome;
-return concatenacao;
+  return concatenacao;
 }
 console.log(concatName(arrays));
 
@@ -44,9 +44,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let resultadoArray = [];
+  for (let fizzDivisible in arrayDeNumeros) {
+    if (arrayDeNumeros[fizzDivisible] % 3 === 0 && arrayDeNumeros[fizzDivisible] % 5 === 0) {
+      resultadoArray.push('fizzBuzz');
+    } else if (arrayDeNumeros[fizzDivisible] % 3 === 0) {
+      resultadoArray.push('fizz'); 
+    } else if (arrayDeNumeros[fizzDivisible] % 5 === 0) {
+      resultadoArray.push('buzz');
+    } else {
+      resultadoArray.push('bug!')
+    }
+  }
+  return resultadoArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
