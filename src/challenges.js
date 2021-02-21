@@ -50,7 +50,7 @@ function fizzBuzz(arrayDeNumeros) {
     if (arrayDeNumeros[fizzDivisible] % 3 === 0 && arrayDeNumeros[fizzDivisible] % 5 === 0) {
       resultadoArray.push('fizzBuzz');
     } else if (arrayDeNumeros[fizzDivisible] % 3 === 0) {
-      resultadoArray.push('fizz'); 
+      resultadoArray.push('fizz');
     } else if (arrayDeNumeros[fizzDivisible] % 5 === 0) {
       resultadoArray.push('buzz');
     } else {
