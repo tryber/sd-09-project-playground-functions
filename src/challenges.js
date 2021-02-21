@@ -1,95 +1,46 @@
-
 // Desafio 1
 function compareTrue(diaUtil, haveraAula) {
-  if (diaUtil && haveraAula === true){
-    return true;
-  } else {
-    return false;
-  }
-} console.log(compareTrue(true, true));
+    if (diaUtil && haveraAula === true){
+      return true;
+    } else {
+      return false;
+    }
+  } console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea(base, height) {
-  return base * height / 2;
+function calcArea() {
+  // seu código aqui
 }
-  console.log(calcArea(5, 6));
 
 // Desafio 3
-let arraySentence = [];
-function splitSentence(stringSentence) {
-  arraySentence = stringSentence.split(' ');
-  return arraySentence;
+function splitSentence() {
+  // seu código aqui
 }
-  console.log(splitSentence('vqv trybe'));
 
 // Desafio 4
-let arrays = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-function concatName(names) {
-  let primeiroNome = names[0];
-  let ultimoNome = names[names.length - 1];
-  let concatenacao = ultimoNome + ', ' + primeiroNome;
-    return concatenacao;  
+function concatName() {
+  // seu código aqui
 }
-console.log(concatName(arrays));
 
 // Desafio 5
-function footballPoints(wins,ties) {
- let vitoria = 3;
- let empate = 1;
- let total = vitoria + empate;
-  if (wins === vitoria && ties === empate) {
-    return total;
-  }  
+function footballPoints() {
+  // seu código aqui
 }
-console.log(footballPoints);
 
 // Desafio 6
-function highestCount(arrayDNumeros) {
-  let highestNumArray = arrayDNumeros[index -1];
-  let highestNumCount = 0;
-  for (let index = 1; index < arrayDNumeros.length; index += 1) {
-    if (arrayDNumeros[index] >= arrayDNumeros[index -1]) {
-      highestNumArray = arrayDNumeros[index]
-    }
-  }
-  for (let index = 0; index < arrayDNumeros.length; index += 1) {
-    if (arrayDNumeros[index] === highestNumArray) {
-      highestNumCount += 1;
-    }
-  } return highestNumCount;
+function highestCount() {
+  // seu código aqui
 }
-console.log(arrayDNumeros([9, 1, 2, 3, 9, 5, 7]));
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = Math.abs(cat1 - mouse);
-  let distanciaCat2 = Math.abs(cat2 - mouse);
-  if (distanciaCat1 === distanciaCat2) {
-    return 'os gatos trombam e o rato foge';
-  } else if (distanciaCat1 < distanciaCat2) {
-    return 'cat1';
-  }
-  return 'cat2';
+function catAndMouse() {
+  // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz(arrayDeNumeros) {
-  let resultadoArray = [];
-  for (let fizzDivisible in arrayDeNumeros) {
-    if (arrayDeNumeros[fizzDivisible] % 3 === 0 && arrayDeNumeros[fizzDivisible] % 5 === 0) {
-      resultadoArray.push('fizzBuzz');
-    } else if (arrayDeNumeros[fizzDivisible] % 3 === 0) {
-      resultadoArray.push('fizz'); 
-    } else if (arrayDeNumeros[fizzDivisible] % 5 === 0) {
-      resultadoArray.push('buzz');
-    } else {
-      resultadoArray.push('bug!')
-    }
-  }
-  return resultadoArray;
+function fizzBuzz() {
+  // seu código aqui
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
