@@ -135,7 +135,7 @@ function decode(decodifica) {
 // Desafio 10
 function techList(techs, name) {
   let arrayTechs = techs.sort()
-  if (arrayTechs.length === 0){
+  if (arrayTechs.length === 0) {
     return 'Vazio!'
   }
   let listaObjetos = [];
