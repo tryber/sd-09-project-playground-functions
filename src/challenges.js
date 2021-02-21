@@ -16,7 +16,7 @@ function calcArea(base, height) {
 function splitSentence(stringSentence) {
   arraySentence = stringSentence.split(' ');
   return arraySentence;
-  }console.log(splitSentence('vqv trybe'));
+}console.log(splitSentence('vqv trybe'));
 
 // Desafio 4
 function concatName() {
