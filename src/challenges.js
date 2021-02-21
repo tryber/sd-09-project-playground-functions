@@ -13,9 +13,10 @@ function calcArea(base, height) {
 } console.log(calcArea(5, 6));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(stringSentence) {
+  arraySentence = stringSentence.split(' ');
+  return arraySentence;
+  }console.log(splitSentence('vqv trybe'));
 
 // Desafio 4
 function concatName() {
