@@ -24,7 +24,7 @@ function concatName(names) {
   let primeiroNome = names[0];
   let ultimoNome = names[names.length - 1];
   let concatenacao = ultimoNome + ', ' + primeiroNome;
-    return concatenacao;  
+return concatenacao;
 }
 console.log(concatName(arrays));
 
