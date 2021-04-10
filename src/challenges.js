@@ -29,23 +29,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let repeat = 1;
-  for (let index = 1; index < array.length; index += 1) {
-    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
-      if (array[index] < array[secondIndex]) {
-        let position = array[index];
-        array[index] = array[secondIndex];
-        array[secondIndex] = position;
-        array.sort().reverse()
-      }
-    }
-  }    
-  for (let index = 1; index < array.length; index += 1) {
-    if (array[0] / array[index] === 1) {
-      repeat +=1;
+  let arraySorted = array.sort();
+  let arrayReverse = arraySorted.reverse();
+  let maior = arrayReverse[0];
+  let qtidade = 1;
+  for (let i = 1; i < array.length; i += 1) {
+    if (arrayReverse[i] > maior) {
+      maior = arrayReverse[i];
+    } else if (arrayReverse[i] < maior) {
+      maior = maior;
+    } else {
+      qtidade += 1;
     }
   }
-  return repeat;
+  return qtidade;
 }
 highestCount([9, 1, 1, 1, 9, 9, 1]);
 // Desafio 7
@@ -167,8 +164,9 @@ function triangleCheck(param1, param2, param3) {
 console.log(triangleCheck(10, 14, 8));
 
 
-        // Desafio 13
-function hydrate() {
+ // Desafio 13
+ function hydrate() {
+  // seu código aqui
 }
 
         module.exports = {
