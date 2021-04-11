@@ -5,7 +5,7 @@ const compareTrue = (valor1, valor2) =>  {
   }
   return false;
 };
-// Desafio 2
+/*// Desafio 2
 const calcArea = (base, height) => (base * height) / 2;
 
 console.log(calcArea(5,4));
@@ -156,7 +156,7 @@ let qtidade = 0;
   }else if(array[i] ==0 || array[0]>9){
     return 
   }
-}*/
+}
 }
 
 // Desafio 12
@@ -186,7 +186,7 @@ function hydrate(param) {
 
 }
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
-
+ */
 
         module.exports = {
           calcArea,
