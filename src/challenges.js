@@ -16,7 +16,7 @@ const splitSentence = (string) => string.split(' ');
 function concatName(array) {
   let arrayFirst = array[0];
   let arrayLast = array.reverse()[0];
-  return (arrayLast + ', ' + arrayFirst);
+  return (arrayLast + ' , ' + arrayFirst);
 }
 
 // Desafio 5
