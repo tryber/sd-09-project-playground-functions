@@ -1,24 +1,22 @@
 // Desafio 1
-const compareTrue = (valor1, valor2) => {
+const compareTrue = (valor1, valor2) =>  {
   if (valor1 === true && valor2 === true) {
     return true;
   }
   return false;
 };
-
 // Desafio 2
 const calcArea = (base, height) => (base * height) / 2;
 
-console.log(calcArea(5, 4));
-
+console.log(calcArea(5,4));
 // Desafio 3
-const splitSentence = string => string.split(' ');
+const splitSentence = (string) => string.split(' ');
 
 // Desafio 4
 function concatName(array) {
   let arrayFirst = array[0];
   let arrayLast = array.reverse()[0];
-  return (arrayLast + ' , ' + arrayFirst);
+  return (arrayLast + ', ' + arrayFirst);
 }
 
 // Desafio 5
@@ -44,7 +42,6 @@ function highestCount(array) {
   }
   return qtidade;
 }
-highestCount([9, 1, 1, 1, 9, 9, 1]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distM1 = Math.abs(cat1 - mouse);
@@ -100,7 +97,7 @@ function encode(param) {
         newString.push(key);
     }
   }
-  return newString.join('').toString()
+  return newString.join('').toString();
 };
 
 function decode(param) {
@@ -148,7 +145,18 @@ function techList(param, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {/*
+let qtidade = 0;
+
+  for (let i in array){
+    let primeiroItem = array[0];
+    if array[i] == array
+  if (array.length > 11){
+    return 'Array com tamanho incorreto';
+  }else if(array[i] ==0 || array[0]>9){
+    return 
+  }
+}*/
 }
 
 // Desafio 12
@@ -164,10 +172,21 @@ function triangleCheck(param1, param2, param3) {
 console.log(triangleCheck(10, 14, 8));
 
 
- // Desafio 13
- function hydrate() {
-  // seu código aqui
+        // Desafio 13
+function hydrate(param) {
+  let qtidade =0;
+  
+  
+  let b = param.match(/(\d+)/g);
+  
+  for( let i = 0; i < b; i+=1 ){
+   qtidade += b[i];
+   return qtidade + " copos de agua"
+  }
+
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+
 
         module.exports = {
           calcArea,
