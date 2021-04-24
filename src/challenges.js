@@ -22,13 +22,13 @@ function splitSentence(string) {
 // Desafio 4
 let lista = ['a', 'b', 'c'];
 function concatName(arrayRetorno) {
-  lista = arrayRetorno = arrayRetorno[arrayRetorno.length - 1] + ", " + arrayRetorno[0];
+  lista = arrayRetorno = arrayRetorno[arrayRetorno.length - 1] + ', ' + arrayRetorno[0];
   return lista;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos= (wins * 3) + ties;
+  let pontos = (wins * 3) + ties;
   return pontos;
 }
 
@@ -37,7 +37,7 @@ function highestCount(numeros) {
   let maior = 0;
   let repeticao = 0;
   for (let contador = 0; contador < numeros.length; contador+=1) {
-    if (numeros[contador] > maior){
+    if (numeros[contador] > maior) {
       maior = numeros[contador];
       repeticao = 1;
     } else if (numeros[contador] === maior) {
@@ -52,29 +52,29 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato1 = Math.abs(mouse - cat1);
   let distanciaGato2 = Math.abs(mouse - cat2);
   let retorno1 = [];
-if (distanciaGato1 < distanciaGato2) {
-  retorno1 = 'cat1';
-} else if (distanciaGato2 < distanciaGato1) {
-  retorno1 = 'cat2';
-} else {
-  retorno1 = 'os gatos trombam e o rato foge';
-}
-  return retorno1;
+  if (distanciaGato1 < distanciaGato2) {
+    retorno1 = 'cat1';
+  } else if (distanciaGato2 < distanciaGato1) {
+    retorno1 = 'cat2';
+  } else {
+    retorno1 = 'os gatos trombam e o rato foge';
+  }
+    return retorno1;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let retorno = [];
-  for (let contador3 = 0; contador3 < numbers.length; contador3 +=1 ) {
-if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0) {
-  retorno.push('fizz');
-}else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !=0) {
-  retorno.push ('buzz')
-} else if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 === 0) {
-  retorno.push ('fizzBuzz')
-} else {
-retorno.push ('bug!')
-}
+  for (let contador3 = 0; contador3 < numbers.length; contador3 += 1 ) {
+    if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0) {
+      retorno.push('fizz');
+    } else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !== 0) {
+      retorno.push('buzz')
+    } else if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 === 0) {
+      retorno.push('fizzBuzz')
+    } else {
+      retorno.push('bug!')
+    }
   }
   return retorno;
 }
@@ -88,9 +88,9 @@ function encode(string) {
   return resultado;
 }
 function decode(string) {
-  let trocaLetras = { 1: "a", 2: "e", 3: "i", 4: "o", 5: "u" };
-  let resultado = "";
-  resultado = string.replace(/[12345]/gi, (m) => trocaLetras[m]);
+  let trocaLetras = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let resultado = '';
+  resultado = string.replace(/[12345]/gi, m => trocaLetras[m]);
   return resultado;
 }
 
