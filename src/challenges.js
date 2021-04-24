@@ -1,47 +1,47 @@
 // Desafio 1
 function compareTrue(operador1, operador2) {
   if (operador1 === true && operador2 === true) {
-        return true;
+    return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2 ergerdgrtg
 function calcArea(base, height) {
-  let area = (base*height) / 2
+  let area = (base * height) / 2
   return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let frase = " "
-  frase = string.split(" ");
+  let frase = ' '
+  frase = string.split(' ');
   return frase;
 }
 
 // Desafio 4
-let lista = ["a","b","c"];
+let lista = ['a', 'b', 'c'];
 function concatName(arrayRetorno) {
-  lista = arrayRetorno = arrayRetorno[arrayRetorno.length-1] + ", " + arrayRetorno[0];
+  lista = arrayRetorno = arrayRetorno[arrayRetorno.length - 1] + ", " + arrayRetorno[0];
   return lista;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos= (wins*3) + ties;
-    return pontos;
+  let pontos= (wins * 3) + ties;
+  return pontos;
 }
 
 // Desafio 6.
 function highestCount(numeros) {
   let maior = 0;
   let repeticao = 0;
-  for (let contador=0;contador<numeros.length;contador++){
-    if (numeros[contador]>maior){
+  for (let contador = 0; contador < numeros.length; contador+=1) {
+    if (numeros[contador] > maior){
       maior = numeros[contador];
       repeticao = 1;
-    } else if(numeros[contador]===maior){
-      repeticao +=1;
+    } else if (numeros[contador] === maior) {
+      repeticao += 1;
     }
   }
   return repeticao;
@@ -49,15 +49,15 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaGato1= Math.abs(mouse-cat1);
-  let distanciaGato2= Math.abs(mouse-cat2);
-  let retorno1= [];
-if(distanciaGato1<distanciaGato2) {
-  retorno1= "cat1";
-} else if (distanciaGato2<distanciaGato1) {
-  retorno1= "cat2";
-}else{
-  retorno1= "os gatos trombam e o rato foge";
+  let distanciaGato1 = Math.abs(mouse - cat1);
+  let distanciaGato2 = Math.abs(mouse - cat2);
+  let retorno1 = [];
+if (distanciaGato1 < distanciaGato2) {
+  retorno1 = 'cat1';
+} else if (distanciaGato2 < distanciaGato1) {
+  retorno1 = 'cat2';
+} else {
+  retorno1 = 'os gatos trombam e o rato foge';
 }
   return retorno1;
 }
@@ -65,15 +65,15 @@ if(distanciaGato1<distanciaGato2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let retorno = [];
-  for(let contador3=0;contador3<numbers.length;contador3++){
-if(numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0){
-  retorno.push("fizz");
+  for (let contador3 = 0; contador3 < numbers.length; contador3 +=1 ) {
+if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0) {
+  retorno.push('fizz');
 }else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !=0) {
-  retorno.push ("buzz")
+  retorno.push ('buzz')
 } else if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 === 0) {
-  retorno.push ("fizzBuzz")
+  retorno.push ('fizzBuzz')
 } else {
-retorno.push ("bug!")
+retorno.push ('bug!')
 }
   }
   return retorno;
@@ -83,7 +83,7 @@ retorno.push ("bug!")
 // solução encontrada no stackoverflow.
 function encode(string) {
   let trocaLetras = { a: "1", e: "2", i: "3", o: "4", u: "5"};
-  let resultado = "";
+  let resultado = '';
   resultado = string.replace(/[aeiou]/gi, (m) => trocaLetras[m]);
   return resultado;
 }
