@@ -7,7 +7,7 @@ function compareTrue(operador1, operador2) {
     }
 }
 
-// Desafio 2
+// Desafio 2 ergerdgrtg
 function calcArea(base, height) {
   let area= (base*height)/2
 return area;
