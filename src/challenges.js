@@ -94,14 +94,15 @@ function makeAnswer(fizz, buzz) {
   } return resposta;
 }
 function fizzBuzz(array) {
-  let retorno = [];
+  let arrayAnswer = [];
   for (let index = 0; index < array.length; index += 1) {
     let fizz = array[index] % 3;
     let buzz = array[index] % 5;
 
-    retorno.push(makeAnswer(fizz, buzz));
+    arrayAnswer.push(makeAnswer(fizz, buzz));
   }
-  return retorno;
+  return arrayAnswer;
+}
 // Desafio 9
 // solução encontrada no stackoverflow.
 function encode(string) {
@@ -160,5 +161,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
 }
