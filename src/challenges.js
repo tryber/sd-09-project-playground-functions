@@ -63,22 +63,45 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function checkFizzBuzz(fizz, buzz) {
+  if (fizz === 0 && buzz === 0) {
+    return true;
+  }
+  return false;
+}
+function checkFizz(fizz) {
+  if (fizz === 0) {
+    return true;
+  }
+  return false;
+}
+function checkBuzz(buzz) {
+  if (buzz === 0) {
+    return true;
+  }
+  return false;
+}
+function makeAnswer(fizz, buzz) {
+  let resposta;
+  if (checkFizzBuzz(fizz, buzz)) {
+    resposta = 'fizzBuzz';
+  } else if (checkFizz(fizz)) {
+    resposta = 'fizz';
+  } else if (checkBuzz(buzz)) {
+    resposta = 'buzz';
+  } else {
+    resposta = 'bug!';
+  } return resposta;
+}
+function fizzBuzz(array) {
   let retorno = [];
-  for (let contador3 = 0; contador3 < numbers.length; contador3 += 1) {
-    if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 !== 0) {
-      retorno.push('fizz');
-    } else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !== 0) {
-      retorno.push('buzz')
-    } else if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 === 0) {
-      retorno.push('fizzBuzz')
-    } else {
-      retorno.push('bug!')
-    }
+  for (let index = 0; index < array.length; index += 1) {
+    let fizz = array[index] % 3;
+    let buzz = array[index] % 5;
+
+    retorno.push(makeAnswer(fizz, buzz));
   }
   return retorno;
-}
-
 // Desafio 9
 // solução encontrada no stackoverflow.
 function encode(string) {
