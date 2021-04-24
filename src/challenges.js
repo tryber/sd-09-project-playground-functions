@@ -79,7 +79,6 @@ retorno.push ("bug!")
 }
   }
   return retorno;
- 
 }
 
 // Desafio 9
@@ -104,7 +103,7 @@ function techList(tech, name) {
       tecnologia: element,
       nome: name,
      }
-     return object;
+    return object;
     });
     return elemenTech;
 }
