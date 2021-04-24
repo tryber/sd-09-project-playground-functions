@@ -98,21 +98,18 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(nomeTech, name) {
-  let ordem = nomeTech.sort();
-  let skills = ["Javascript","HTML","CSS"];
-  if (nomeTech.length === 0) {
-    return "Vazio!"
-  }
-  for (let techName of ordem) {
-    skills.push({
-      tech: techName,
-      name: name,
+function techList(tech, name) {
+  const elemenTech = tech.map((element) => {
+    let object = {
+      tecnologia: element,
+      nome: name,
+     }
+     return object;
     });
-  }
-  return skills;
+    return elemenTech;
 }
 
+console.log(techList(['React','JS'], 'lalano'));
 
 // Desafio 11
 function generatePhoneNumber() {
