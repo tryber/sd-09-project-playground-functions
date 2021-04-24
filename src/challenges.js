@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   let maior = 0;
   let repeticao = 0;
-  for (let contador = 0; contador < numeros.length; contador+=1) {
+  for (let contador = 0; contador < numeros.length; contador += 1) {
     if (numeros[contador] > maior) {
       maior = numeros[contador];
       repeticao = 1;
@@ -59,14 +59,14 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     retorno1 = 'os gatos trombam e o rato foge';
   }
-    return retorno1;
+  return retorno1;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let retorno = [];
-  for (let contador3 = 0; contador3 < numbers.length; contador3 += 1 ) {
-    if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 != 0) {
+  for (let contador3 = 0; contador3 < numbers.length; contador3 += 1) {
+    if (numbers[contador3] % 3 === 0 && numbers[contador3] % 5 !== 0) {
       retorno.push('fizz');
     } else if (numbers[contador3] % 5 === 0 && numbers[contador3] % 3 !== 0) {
       retorno.push('buzz')
@@ -82,9 +82,9 @@ function fizzBuzz(numbers) {
 // Desafio 9
 // solução encontrada no stackoverflow.
 function encode(string) {
-  let trocaLetras = { a: "1", e: "2", i: "3", o: "4", u: "5"};
+  let trocaLetras = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let resultado = '';
-  resultado = string.replace(/[aeiou]/gi, (m) => trocaLetras[m]);
+  resultado = string.replace(/[aeiou]/gi, m => trocaLetras[m]);
   return resultado;
 }
 function decode(string) {
@@ -100,13 +100,11 @@ function techList(tech, name) {
     let object = {
       tecnologia: element,
       nome: name,
-      }
+    }
     return object;
-    });
-    return elemenTech;
+  });
+  return elemenTech;
 }
-
-console.log(techList(['React','JS'], 'lalano'));
 
 // Desafio 11
 function generatePhoneNumber() {
