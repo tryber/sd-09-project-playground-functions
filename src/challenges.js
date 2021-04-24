@@ -1,16 +1,15 @@
 // Desafio 1
 function compareTrue(operador1, operador2) {
-  if (operador1 === true && operador2 === true){
+  if (operador1 === true && operador2 === true) {
         return true;
-    } else {
-        return false;
-    }
+  }
+    return false;
 }
 
 // Desafio 2 ergerdgrtg
 function calcArea(base, height) {
-  let area= (base*height)/2
-return area;
+  let area = (base*height) / 2
+  return area;
 }
 
 // Desafio 3
@@ -23,7 +22,7 @@ function splitSentence(string) {
 // Desafio 4
 let lista = ["a","b","c"];
 function concatName(arrayRetorno) {
-  lista= arrayRetorno = arrayRetorno[arrayRetorno.length-1] + ", " + arrayRetorno[0];
+  lista = arrayRetorno = arrayRetorno[arrayRetorno.length-1] + ", " + arrayRetorno[0];
   return lista;
 }
 
@@ -53,16 +52,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato1= Math.abs(mouse-cat1);
   let distanciaGato2= Math.abs(mouse-cat2);
   let retorno1= [];
-if(distanciaGato1<distanciaGato2){
-retorno1= "cat1";
-} else if (distanciaGato2<distanciaGato1){
-retorno1= "cat2";
+if(distanciaGato1<distanciaGato2) {
+  retorno1= "cat1";
+} else if (distanciaGato2<distanciaGato1) {
+  retorno1= "cat2";
 }else{
-retorno1= "os gatos trombam e o rato foge";
+  retorno1= "os gatos trombam e o rato foge";
 }
-return retorno1;
+  return retorno1;
 }
-
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -102,7 +100,7 @@ function techList(tech, name) {
     let object = {
       tecnologia: element,
       nome: name,
-     }
+      }
     return object;
     });
     return elemenTech;
