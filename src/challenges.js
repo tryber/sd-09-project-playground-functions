@@ -24,7 +24,7 @@ function concatName(paramName) {
   // seu código aqui
   let nameString = '';
   for (let index = 0; index < paramName.length; index += 1) {
-    nameString = paramName[paramName.length - 1] + ', ' + paramName[0]
+    nameString = `${paramName[paramName.length - 1]}, ${paramName[0]}`
   }
   return nameString;
 }
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(cat1 - mouse) > Math.abs(mouse - cat2)
     || Math.abs(mouse - cat1) > Math.abs(cat2 - mouse)) {
     return 'cat2'
-  } 
+  }
   return 'cat1';
 }
 
