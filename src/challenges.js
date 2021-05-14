@@ -36,8 +36,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(paramNumbers) {
-  // seu código aqui
+function handleHighestCount(paramNumbers) {
   let compar = 0;
   let arr = [];
   for (let i = 0; i < paramNumbers.length; i += 1) {
@@ -45,6 +44,12 @@ function highestCount(paramNumbers) {
       compar = paramNumbers[i]
     }
   }
+  return compar;
+}
+
+function highestCount(paramNumbers) {
+  // seu código aqui
+  let compar = handleHighestCount();
   for (let j = 0; j < paramNumbers.length; j += 1) {
     if (paramNumbers[j] === compar) {
       arr.push(paramNumbers[j])
@@ -54,20 +59,20 @@ function highestCount(paramNumbers) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(/*mouse, cat1, cat2*/) {
   // seu código aqui
-  if ((Math.abs(cat1 - mouse) === Math.abs(mouse - cat2))
-    || Math.abs(mouse - cat1) === Math.abs(cat2 - mouse)) {
-    return 'os gatos trombam e o rato foge';
-  } else if (Math.abs(cat1 > mouse) && Math.abs(cat1 > cat2)) {
-    return 'cat2';
-  } else if (Math.abs(cat1 < mouse) && Math.abs(cat1 < cat2)) {
-    return 'cat2';
-  } else if (Math.abs(cat1 - mouse) > Math.abs(mouse - cat2)
-    || Math.abs(mouse - cat1) > Math.abs(cat2 - mouse)) {
-    return 'cat2'
-  }
-  return 'cat1';
+  // if ((Math.abs(cat1 - mouse) === Math.abs(mouse - cat2))
+  //   || Math.abs(mouse - cat1) === Math.abs(cat2 - mouse)) {
+  //   return 'os gatos trombam e o rato foge';
+  // } else if (Math.abs(cat1 > mouse) && Math.abs(cat1 > cat2)) {
+  //   return 'cat2';
+  // } else if (Math.abs(cat1 < mouse) && Math.abs(cat1 < cat2)) {
+  //   return 'cat2';
+  // } else if (Math.abs(cat1 - mouse) > Math.abs(mouse - cat2)
+  //   || Math.abs(mouse - cat1) > Math.abs(cat2 - mouse)) {
+  //   return 'cat2'
+  // }
+  // return 'cat1';
 }
 
 // Desafio 8
